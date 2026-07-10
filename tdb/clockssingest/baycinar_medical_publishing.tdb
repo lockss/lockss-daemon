@@ -22,9 +22,9 @@
     param[base_url] = https://agridergisi.com/
 
     au < crawling ; exists ; 2000 ; Ağrı Journal Volume 12 ; 12 ; >
-    au < testing ; exists ; 2001 ; Ağrı Journal Volume 13 ; 13 ; >
-    au < testing ; exists ; 2002 ; Ağrı Journal Volume 14 ; 14 ; >
-    au < testing ; exists ; 2003 ; Ağrı Journal Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 2001 ; Ağrı Journal Volume 13 [abstract only] ; 13 ; >
+    au < doNotProcess ; exists ; 2002 ; Ağrı Journal Volume 14 [abstract only] ; 14 ; >
+    au < doesNotExist ; doesNotExist ; 2003 ; Ağrı Journal Volume 15 ; 15 ; >
     au < crawling ; exists ; 2004 ; Ağrı Journal Volume 16 ; 16 ; >
     au < crawling ; exists ; 2005 ; Ağrı Journal Volume 17 ; 17 ; >
     au < crawling ; exists ; 2006 ; Ağrı Journal Volume 18 ; 18 ; >
