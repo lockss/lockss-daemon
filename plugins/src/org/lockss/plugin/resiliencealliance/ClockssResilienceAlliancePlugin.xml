@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>11</string>
+        <string>12</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -222,6 +222,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>text/html_filter_factory</string>
         <string>org.lockss.plugin.resiliencealliance.ResilienceAllianceHashFilterFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_crawl_filter_factory</string>
+        <string>org.lockss.plugin.resiliencealliance.ResilienceAllianceCrawlFilterFactory</string>
     </entry>
     <entry>
         <string>text/javascript_link_rewriter_factory</string>
