@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>188</string>
+    <string>190</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -156,11 +156,12 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>2,"^https?://%s/.*/Author_guidelines$", url_host(base_url)</string>
       <!-- Exclude these 500 errror files, publisher confirmed it-->
       <string>2,"^https://psychiatryonline\.org/products/app/releasedAssets/css/.*data:image/svg\+xml"</string>
+      <!--This is a statistics data collection javascript we do not need-->
+      <string>2,"^https://static\.cloudflareinsights\.com/beacon\.min\.js/"</string>
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?$", url_host(base_url)</string>
       <string>1,"^https?://((fonts|ajax)\.googleapis\.com)/"</string>
       <string>1,"^https?://(cdn\.nejm\.org)/."</string>
       <string>1,"^https?://faseb-prod-cdn\.literatumonline\.com/journals/content/fasebj/"</string>
-      <string>1,"^https?://static\.cloudflareinsights\.com/"</string>
       <!-- 15:32:20.525: Warning: 5-BaseUrlFetcher: Redirected to excluded URL: 
       https://faseb-prod-cdn.literatumonline.com/journals/content/fasebj/2018/fasebj.2018.32.issue-3/fj.201700767r/20180309/suppl/fj.201700767r.sd1
       .docx?b92b4ad1b4f274c70877518616abb28b5e60edcaa0d0d74615663cb6c98b26ea6fea4c67eff0c60316078c20dc3769af5f07d482336e6f4d26936c4e73b5f281744b9559753e
@@ -171,14 +172,15 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s\.global\.prod\.fastly\.net/[^?]*\.(css|gif|jpe?g|js|png)$", url_host(base_url)</string>
       <string>1,"^https?://%s/na[0-9]+/home/literatum/publisher/[^/]+/journals/[^/]+/%s/", url_host(base_url), journal_id</string>
       <!--royal society publishing has 'year' in their toc url: https://royalsocietypublishing.org/toc/rsos/2019/6/10-->
-      <string>1,"^https?://%s/toc/%s(\.[0-9]+)?(/\d{4})?/%s($|/)", url_host(base_url), journal_id, volume_name</string>
+      <!--https://www.euppublishing.com/toc/brs/1/1 - old Au manifest page -->
+      <string>1,^https?://%s/toc/%s(\.[0-9]+)?(/\d{4})?/%s(/\d+)?($|/)", url_host(base_url), journal_id, volume_name</string>
       <!--
          https://royalsocietypublishing.org/toc/rspa/2019/475/2232
          https://royalsocietypublishing.org/toc/rsta/2019/377/2161
          https://royalsocietypublishing.org/toc/rspb/2019/286/1894
          https://royalsocietypublishing.org/toc/rstb/2019/374/1763
       -->
-      <string>1,"^https?://%s/toc/%s([^/]+)?(/\d{4})?/%s($|/)", url_host(base_url), journal_id, volume_name</string>
+      <string>1,"^https?://%s/toc/%s([^/]+)?(/\d{4})?/%s(/\d+)?($|/)", url_host(base_url), journal_id, volume_name</string>
       <!--
       https://www.liverpooluniversitypress.co.uk/toc/labourhistory/120/1 - 2021
       Liverpools moved from Atypon to Cloudpublishing and moved back to Atypon, but keep older issue using different url
@@ -429,7 +431,6 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>d1bxh8uas1mnw7\.cloudfront\.net</string>
       <string>play\.cadmore\.media</string>
       <string>widgets\.figshare\.com</string>
-      <string>static\.cloudflareinsights\.com</string>
     </list>
   </entry>
   <!--  versioning or variants for style support -->
