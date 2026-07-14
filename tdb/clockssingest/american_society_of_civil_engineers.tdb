@@ -27,7 +27,7 @@
     au < finished ; manifest ; 2023 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 1 ; 1 ; https://ascelibrary.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 2 ; 2 ; https://ascelibrary.org/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 3 ; 3 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2026 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 4 ; 4 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2026 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 4 ; 4 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -339,7 +339,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Bridge Engineering Volume 28 ; 28 ; https://ascelibrary.org/ ; >
       au < finished ; manifest ; 2024 ; Journal of Bridge Engineering Volume 29 ; 29 ; https://ascelibrary.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; Journal of Bridge Engineering Volume 30 ; 30 ; https://ascelibrary.org/ ; >
-      au < ready ; exists ; 2026 ; Journal of Bridge Engineering Volume 31 ; 31 ; https://ascelibrary.org/ ; >
+      au < crawling ; exists ; 2026 ; Journal of Bridge Engineering Volume 31 ; 31 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -435,7 +435,7 @@
     au < deepCrawl ; exists ; 2023 ; Journal of Performance of Constructed Facilities Volume 37 ; 37 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2024 ; Journal of Performance of Constructed Facilities Volume 38 ; 38 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2025 ; Journal of Performance of Constructed Facilities Volume 39 ; 39 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2026 ; Journal of Performance of Constructed Facilities Volume 40 ; 40 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2026 ; Journal of Performance of Constructed Facilities Volume 40 ; 40 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -492,7 +492,7 @@
     au < deepCrawl ; exists ; 2023 ; Journal of Construction Engineering and Management Volume 149 ; 149 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2024 ; Journal of Construction Engineering and Management Volume 150 ; 150 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2025 ; Journal of Construction Engineering and Management Volume 151 ; 151 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2026 ; Journal of Construction Engineering and Management Volume 152 ; 152 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2026 ; Journal of Construction Engineering and Management Volume 152 ; 152 ; https://ascelibrary.org/ ; >
 
   }
 
