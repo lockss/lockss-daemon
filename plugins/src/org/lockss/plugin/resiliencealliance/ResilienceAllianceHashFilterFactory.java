@@ -70,7 +70,8 @@ public class ResilienceAllianceHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "ms_uparrow"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "authors"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "ms_keywords"),
-        HtmlNodeFilters.tagWithAttribute("div", "id", "responses_block")
+        HtmlNodeFilters.tagWithAttribute("div", "id", "responses_block"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "article__social-share")
     };
 
     @Override
