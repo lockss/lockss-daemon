@@ -17,7 +17,7 @@ mkdir -p $tpath
   #do not look at Springer AUids.
   diff $tpath/glnlist $tpath/clocksslist | grep "< " | sed 's/..//' | grep -v springer > $tpath/notclockss
   #Add these files to be processed because they are different enough from the clockss version.
-  echo "american_medical_association.tdb" >> $tpath/notclockss
+  #echo "american_medical_association.tdb" >> $tpath/notclockss
   #echo "purdue_university_press.tdb" >> $tpath/notclockss
   #echo "centro_de_filosofia_da_universidade_de_lisboa.tdb" >> $tpath/notclockss
   #  diff $tpath/glnlist $tpath/notclockss | grep "< " | sed 's/..//' > $tpath/glnAndclockss
@@ -26,7 +26,7 @@ mkdir -p $tpath
   echo "" > $tpath/glntest_a #clear the file.
   for file in `cat $tpath/notclockss`
   do
-    scripts/tdb/tdbout -M -t publisher,plugin,auid,publisher:info[tester],status,year tdb/prod/$file >> $tpath/glntest_a #don't clear the file in the loop
+    scripts/tdb/tdbout -MW -t publisher,plugin,auid,publisher:info[tester],status,year tdb/prod/$file >> $tpath/glntest_a #don't clear the file in the loop
   done
 
 #Report specific publishers AUs in the gln marked manifest that do have an equivalent in clockss.
