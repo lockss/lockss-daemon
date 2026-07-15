@@ -238,7 +238,7 @@
     au < deepCrawl ; exists ; 2023 ; Journal of Architectural Engineering Volume 29 ; 29 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2024 ; Journal of Architectural Engineering Volume 30 ; 30 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2025 ; Journal of Architectural Engineering Volume 31 ; 31 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2026 ; Journal of Architectural Engineering Volume 32 ; 32 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2026 ; Journal of Architectural Engineering Volume 32 ; 32 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -712,7 +712,7 @@
     au < deepCrawl ; exists ; 2023 ; Journal of Engineering Mechanics Volume 149 ; 149 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2024 ; Journal of Engineering Mechanics Volume 150 ; 150 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2025 ; Journal of Engineering Mechanics Volume 151 ; 151 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2026 ; Journal of Engineering Mechanics Volume 152 ; 152 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2026 ; Journal of Engineering Mechanics Volume 152 ; 152 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -1336,7 +1336,7 @@
     au < deepCrawl ; exists ; 2023 ; Journal of Civil Engineering Education Volume 149 ; 149 ; https://ascelibrary.org/ ; >
     au < finished ; manifest ; 2024 ; Journal of Civil Engineering Education Volume 150 ; 150 ; https://ascelibrary.org/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Journal of Civil Engineering Education Volume 151 ; 151 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2026 ; Journal of Civil Engineering Education Volume 152 ; 152 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2026 ; Journal of Civil Engineering Education Volume 152 ; 152 ; https://ascelibrary.org/ ; >
 
     }
   }
@@ -1875,7 +1875,7 @@
     #continues = 1084-0680
 
     au < ready ; exists ; 2025 ; Journal of Structural Design and Construction Practice Volume 30 ; 30 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2026 ; Journal of Structural Design and Construction Practice Volume 31 ; 31 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2026 ; Journal of Structural Design and Construction Practice Volume 31 ; 31 ; https://ascelibrary.org/ ; >
 
   }
 
