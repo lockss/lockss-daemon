@@ -149,6 +149,7 @@ public class SageIosBitsSchemaHelper implements SourceXmlSchemaHelper{
     private static String BITS_series_title = BITS_book + "/collection-meta/title-group/title";
     private static String BITS_eissn = BITS_book + "/collection-meta/issn[@publication-format=\"electronic\"]";
     private static String BITS_issn = BITS_book + "/collection-meta/issn[@publication-format=\"print\"]";
+    public static String BITS_isbn = BITS_book + "/book-meta/isbn[@publication-format=\"print\"]";
     public static String BITS_eisbn = BITS_book + "/book-meta/isbn[@publication-format=\"electronic\"]";
     private static String BITS_contrib = BITS_book + "/book-meta/contrib-group/contrib/name";
     private static String BITS_doi = BITS_book + "/book-meta/book-id[@book-id-type=\"doi\"]";
@@ -169,6 +170,7 @@ public class SageIosBitsSchemaHelper implements SourceXmlSchemaHelper{
         BITS_articleMap.put(BITS_series_title, XmlDomMetadataExtractor.TEXT_VALUE);
         BITS_articleMap.put(BITS_eissn, XmlDomMetadataExtractor.TEXT_VALUE);
         BITS_articleMap.put(BITS_issn, XmlDomMetadataExtractor.TEXT_VALUE);
+        BITS_articleMap.put(BITS_isbn, XmlDomMetadataExtractor.TEXT_VALUE);
         BITS_articleMap.put(BITS_eisbn, XmlDomMetadataExtractor.TEXT_VALUE);
         BITS_articleMap.put(BITS_contrib, BITS_AUTHOR_VALUE);
         BITS_articleMap.put(BITS_doi, XmlDomMetadataExtractor.TEXT_VALUE);
@@ -189,6 +191,7 @@ public class SageIosBitsSchemaHelper implements SourceXmlSchemaHelper{
         cookMap.put(BITS_series_title, MetadataField.FIELD_SERIES_TITLE);
         cookMap.put(BITS_eissn, MetadataField.FIELD_EISSN);
         cookMap.put(BITS_issn, MetadataField.FIELD_ISSN);
+        cookMap.put(BITS_isbn, MetadataField.FIELD_ISBN);
         cookMap.put(BITS_eisbn, MetadataField.FIELD_EISBN);
         cookMap.put(BITS_contrib, MetadataField.FIELD_AUTHOR);
         cookMap.put(BITS_doi, MetadataField.FIELD_DOI);
