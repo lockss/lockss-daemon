@@ -37,7 +37,7 @@
       au < doesNotExist ; doesNotExist ; 2023 ; ; Absinthe: World Literature in Translation Volume 2023 ; 2023 ; > # Volumes actually published in 2024.
       au < finished ; manifest ; 2024 ; ; Absinthe: World Literature in Translation Volume 2024 ; 2024 ; reingest2.clockss.org:8085 >
       au < doesNotExist ; doesNotExist ; 2025 ; ; Absinthe: World Literature in Translation Volume 2025 ; 2025 ; >
-      au < ready ; exists ; 2026 ; ; Absinthe: World Literature in Translation Volume 2026 ; 2026 ; >
+      au < crawling ; exists ; 2026 ; ; Absinthe: World Literature in Translation Volume 2026 ; 2026 ; >
 
   }
 
@@ -56,7 +56,7 @@
       au < finished ; manifest ; 2023 ; ; Ars Orientalis Volume 2023 ; 2023 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; ; Ars Orientalis Volume 2024 ; 2024 ; reingest5.clockss.org:8082 >
       au < doesNotExist ; doesNotExist ; 2025 ; ; Ars Orientalis Volume 2025 ; 2025 ; >
-      au < ready ; exists ; 2026 ; ; Ars Orientalis Volume 2026 ; 2026 ; >
+      au < crawling ; exists ; 2026 ; ; Ars Orientalis Volume 2026 ; 2026 ; >
 
   }
 
@@ -254,7 +254,7 @@
       au < finished ; manifest ; 2023 ; 26 ; Journal of Electronic Publishing Volume 2023 ; 2023 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 27 ; Journal of Electronic Publishing Volume 2024 ; 2024 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2025 ; 28 ; Journal of Electronic Publishing Volume 2025 ; 2025 ; >
-      au < ready ; exists ; 2026 ; 29 ; Journal of Electronic Publishing Volume 2026 ; 2026 ; >
+      au < crawling ; exists ; 2026 ; 29 ; Journal of Electronic Publishing Volume 2026 ; 2026 ; >
 
   }
 
@@ -814,7 +814,7 @@
       au < finished ; manifest ; 2023 ; 3 ; Global Storytelling: Journal of Digital and Moving Images Volume 2023 ; 2023 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 4 ; Global Storytelling: Journal of Digital and Moving Images Volume 2024 ; 2024 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2025 ; 5 ; Global Storytelling: Journal of Digital and Moving Images Volume 2025 ; 2025 ; >
-      au < ready ; exists ; 2026 ; 6 ; Global Storytelling: Journal of Digital and Moving Images Volume 2026 ; 2026 ; >
+      au < crawling ; exists ; 2026 ; 6 ; Global Storytelling: Journal of Digital and Moving Images Volume 2026 ; 2026 ; >
 
   }
 

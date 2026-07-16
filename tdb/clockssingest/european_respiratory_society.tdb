@@ -228,7 +228,7 @@
     au < ers.ClockssERSScolarisPlugin ; doNotProcess ; exists ; 2023 ; European Respiratory Review Volume 32 ; 32 ; https://publications.ersnet.org/ ; >
     au < ers.ClockssERSScolarisPlugin ; frozen ; exists ; 2024 ; European Respiratory Review Volume 33 ; 33 ; https://publications.ersnet.org/ ; >
     au < ers.ClockssERSScolarisPlugin ; deepCrawl ; exists ; 2025 ; European Respiratory Review Volume 34 ; 34 ; https://publications.ersnet.org/ ; >
-    au < ers.ClockssERSScolarisPlugin ; ready ; exists ; 2026 ; European Respiratory Review Volume 35 ; 35 ; https://publications.ersnet.org/ ; >
+    au < ers.ClockssERSScolarisPlugin ; crawling ; exists ; 2026 ; European Respiratory Review Volume 35 ; 35 ; https://publications.ersnet.org/ ; >
     }
 
   }
