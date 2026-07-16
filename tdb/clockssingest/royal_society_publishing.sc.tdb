@@ -136,7 +136,7 @@
     param[journal_id] = rsbl
 
     au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Biology Letters Volume 1 ; 1 ; >
-#    au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; Biology Letters Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; Biology Letters Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Biology Letters Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Biology Letters Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Biology Letters Volume 5 ; 5 ; >
@@ -150,6 +150,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Biology Letters Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Biology Letters Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Biology Letters Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Biology Letters Volume 15 [2019] ; 2019 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Biology Letters Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Biology Letters Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Biology Letters Volume 18 ; 18 ; >
@@ -182,6 +183,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Interface Focus Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Interface Focus Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Interface Focus Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Interface Focus Volume 9 [2019] ; 2019 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Interface Focus Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Interface Focus Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Interface Focus Volume 11 ; 11 ; >
@@ -219,6 +221,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of the Royal Society Interface Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of the Royal Society Interface Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of the Royal Society Interface Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Journal of the Royal Society Interface Volume 16 [2019] ; 2019 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Journal of the Royal Society Interface Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Journal of the Royal Society Interface Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of the Royal Society Interface Volume 18 ; 18 ; >
@@ -247,14 +250,22 @@
     au < doNotProcess ; doNotProcess ; 1939 ; 1939 ; Notes and Records of the Royal Society Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 1940 ; 1940 ; Notes and Records of the Royal Society Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 1946 ; 1946 ; Notes and Records of the Royal Society Volume 4 ; 4 ; >
-    au < doNotProcess ; doNotProcess ; 1947-1948 ; 1947-1948 ; Notes and Records of the Royal Society Volume 5 ; 5 ; >
-    au < doNotProcess ; doNotProcess ; 1948-1949 ; 1948-1949 ; Notes and Records of the Royal Society Volume 6 ; 6 ; >
-    au < doNotProcess ; doNotProcess ; 1949-1950 ; 1949-1950 ; Notes and Records of the Royal Society Volume 7 ; 7 ; >
-    au < doNotProcess ; doNotProcess ; 1950-1951 ; 1950-1951 ; Notes and Records of the Royal Society Volume 8 ; 8 ; >
-    au < doNotProcess ; doNotProcess ; 1951-1952 ; 1951-1952 ; Notes and Records of the Royal Society Volume 9 ; 9 ; >
-    au < doNotProcess ; doNotProcess ; 1952-1953 ; 1952-1953 ; Notes and Records of the Royal Society Volume 10 ; 10 ; >
-    au < doNotProcess ; doNotProcess ; 1954-1955 ; 1954-1955 ; Notes and Records of the Royal Society Volume 11 ; 11 ; >
-    au < doNotProcess ; doNotProcess ; 1956-1957 ; 1956-1957 ; Notes and Records of the Royal Society Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 1947 ; 1947 ; Notes and Records of the Royal Society Volume 5 [1947] ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 1948 ; 1948 ; Notes and Records of the Royal Society Volume 5 [1948] ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 1948 ; 1948 ; Notes and Records of the Royal Society Volume 6 [1948] ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 1949 ; 1949 ; Notes and Records of the Royal Society Volume 6 [1949] ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 1949 ; 1949 ; Notes and Records of the Royal Society Volume 7 [1949] ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 1950 ; 1950 ; Notes and Records of the Royal Society Volume 7 [1950] ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 1950 ; 1950 ; Notes and Records of the Royal Society Volume 8 [1950] ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 1951 ; 1951 ; Notes and Records of the Royal Society Volume 8 [1951] ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 1951 ; 1951 ; Notes and Records of the Royal Society Volume 9 [1951] ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 1952 ; 1952 ; Notes and Records of the Royal Society Volume 9 [1952] ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 1952 ; 1952 ; Notes and Records of the Royal Society Volume 10 [1952] ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 1953 ; 1953 ; Notes and Records of the Royal Society Volume 10 [1953] ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 1954 ; 1954 ; Notes and Records of the Royal Society Volume 11 [1954] ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 1955 ; 1955 ; Notes and Records of the Royal Society Volume 11 [1955] ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 1956 ; 1956 ; Notes and Records of the Royal Society Volume 12 [1955] ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 1957 ; 1957 ; Notes and Records of the Royal Society Volume 12 [1957] ; 12 ; >
     au < doNotProcess ; doNotProcess ; 1958 ; 1958 ; Notes and Records of the Royal Society Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 1959 ; 1959 ; Notes and Records of the Royal Society Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 1960 ; 1960 ; Notes and Records of the Royal Society Volume 15 ; 15 ; >
@@ -269,21 +280,21 @@
     au < doNotProcess ; doNotProcess ; 1969 ; 1969 ; Notes and Records of the Royal Society Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 1970 ; 1970 ; Notes and Records of the Royal Society Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 1971 ; 1971 ; Notes and Records of the Royal Society Volume 26 ; 26 ; >
-    au < doNotProcess ; doNotProcess ; 1972-1973 ; 1972-1973 ; Notes and Records of the Royal Society Volume 27 ; 27 ; >
-    au < doNotProcess ; doNotProcess ; 1973-1974 ; 1973-1974 ; Notes and Records of the Royal Society Volume 28 ; 28 ; >
-    au < doNotProcess ; doNotProcess ; 1974-1975 ; 1974-1975 ; Notes and Records of the Royal Society Volume 29 ; 29 ; >
-    au < doNotProcess ; doNotProcess ; 1975-1976 ; 1975-1976 ; Notes and Records of the Royal Society Volume 30 ; 30 ; >
-    au < doNotProcess ; doNotProcess ; 1976-1977 ; 1976-1977 ; Notes and Records of the Royal Society Volume 31 ; 31 ; >
-    au < doNotProcess ; doNotProcess ; 1977-1978 ; 1977-1978 ; Notes and Records of the Royal Society Volume 32 ; 32 ; >
-    au < doNotProcess ; doNotProcess ; 1978-1979 ; 1978-1979 ; Notes and Records of the Royal Society Volume 33 ; 33 ; >
-    au < doNotProcess ; doNotProcess ; 1979-1980 ; 1979-1980 ; Notes and Records of the Royal Society Volume 34 ; 34 ; >
-    au < doNotProcess ; doNotProcess ; 1980-1981 ; 1980-1981 ; Notes and Records of the Royal Society Volume 35 ; 35 ; >
-    au < doNotProcess ; doNotProcess ; 1981-1982 ; 1981-1982 ; Notes and Records of the Royal Society Volume 36 ; 36 ; >
-    au < doNotProcess ; doNotProcess ; 1982-1983 ; 1982-1983 ; Notes and Records of the Royal Society Volume 37 ; 37 ; >
-    au < doNotProcess ; doNotProcess ; 1983-1984 ; 1983-1984 ; Notes and Records of the Royal Society Volume 38 ; 38 ; >
-    au < doNotProcess ; doNotProcess ; 1984-1985 ; 1984-1985 ; Notes and Records of the Royal Society Volume 39 ; 39 ; >
-    au < doNotProcess ; doNotProcess ; 1985-1986 ; 1985-1986 ; Notes and Records of the Royal Society Volume 40 ; 40 ; >
-    au < doNotProcess ; doNotProcess ; 1986-1987 ; 1986-1987 ; Notes and Records of the Royal Society Volume 41 ; 41 ; >
+    #au < doNotProcess ; doNotProcess ; 1972-1973 ; Notes and Records of the Royal Society Volume 27 ; 27 ; >
+    #au < doNotProcess ; doNotProcess ; 1973-1974 ; Notes and Records of the Royal Society Volume 28 ; 28 ; >
+    #au < doNotProcess ; doNotProcess ; 1974-1975 ; Notes and Records of the Royal Society Volume 29 ; 29 ; >
+    #au < doNotProcess ; doNotProcess ; 1975-1976 ; Notes and Records of the Royal Society Volume 30 ; 30 ; >
+    #au < doNotProcess ; doNotProcess ; 1976-1977 ; Notes and Records of the Royal Society Volume 31 ; 31 ; >
+    #au < doNotProcess ; doNotProcess ; 1977-1978 ; Notes and Records of the Royal Society Volume 32 ; 32 ; >
+    #au < doNotProcess ; doNotProcess ; 1978-1979 ; Notes and Records of the Royal Society Volume 33 ; 33 ; >
+    #au < doNotProcess ; doNotProcess ; 1979-1980 ; Notes and Records of the Royal Society Volume 34 ; 34 ; >
+    #au < doNotProcess ; doNotProcess ; 1980-1981 ; Notes and Records of the Royal Society Volume 35 ; 35 ; >
+    #au < doNotProcess ; doNotProcess ; 1981-1982 ; Notes and Records of the Royal Society Volume 36 ; 36 ; >
+    #au < doNotProcess ; doNotProcess ; 1982-1983 ; Notes and Records of the Royal Society Volume 37 ; 37 ; >
+    #au < doNotProcess ; doNotProcess ; 1983-1984 ; Notes and Records of the Royal Society Volume 38 ; 38 ; >
+    #au < doNotProcess ; doNotProcess ; 1984-1985 ; Notes and Records of the Royal Society Volume 39 ; 39 ; >
+    #au < doNotProcess ; doNotProcess ; 1985-1986 ; Notes and Records of the Royal Society Volume 40 ; 40 ; >
+    #au < doNotProcess ; doNotProcess ; 1986-1987 ; Notes and Records of the Royal Society Volume 41 ; 41 ; >
     }
     {
     param[journal_id] = rsnr
@@ -319,6 +330,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Notes and Records the Royal Society Journal of the History of Science Volume 70 ; 70 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Notes and Records the Royal Society Journal of the History of Science Volume 71 ; 71 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Notes and Records the Royal Society Journal of the History of Science Volume 72 ; 72 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Notes and Records the Royal Society Journal of the History of Science Volume 73 [2019] ; 2019 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Notes and Records the Royal Society Journal of the History of Science Volume 73 ; 73 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Notes and Records the Royal Society Journal of the History of Science Volume 74 ; 74 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Notes and Records the Royal Society Journal of the History of Science Volume 75 ; 75 ; >
@@ -349,6 +361,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Open Biology Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Open Biology Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Open Biology Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Open Biology Volume 9 [2019] ; 2019 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Open Biology Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Open Biology Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Open Biology Volume 11 ; 11 ; >
@@ -440,104 +453,104 @@
     {
     param[journal_id] = rsta1934
     
-    au < doNotProcess ; doNotProcess ; 1934-1935 ; 1934-1935 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 234 ; 234 ; >
-    au < doNotProcess ; doNotProcess ; 1935-1936 ; 1935-1936 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 235 ; 235 ; >
-    au < doNotProcess ; doNotProcess ; 1936-1938 ; 1936-1938 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 236 ; 236 ; >
-    au < doNotProcess ; doNotProcess ; 1938-1939 ; 1938-1939 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 237 ; 237 ; >
-    au < doNotProcess ; doNotProcess ; 1939-1940 ; 1939-1940 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 238 ; 238 ; >
-    au < doNotProcess ; doNotProcess ; 1940-1946 ; 1940-1946 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 239 ; 239 ; >
-    au < doNotProcess ; doNotProcess ; 1946-1948 ; 1946-1948 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 240 ; 240 ; >
-    au < doNotProcess ; doNotProcess ; 1948-1949 ; 1948-1949 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 241 ; 241 ; >
-    au < doNotProcess ; doNotProcess ; 1949-1950 ; 1949-1950 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 242 ; 242 ; >
-    au < doNotProcess ; doNotProcess ; 1950-1951 ; 1950-1951 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 243 ; 243 ; >
-    au < doNotProcess ; doNotProcess ; 1951-1952 ; 1951-1952 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 244 ; 244 ; >
-    au < doNotProcess ; doNotProcess ; 1952-1953 ; 1952-1953 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 245 ; 245 ; >
-    au < doNotProcess ; doNotProcess ; 1953-1954 ; 1953-1954 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 246 ; 246 ; >
-    au < doNotProcess ; doNotProcess ; 1954-1955 ; 1954-1955 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 247 ; 247 ; >
-    au < doNotProcess ; doNotProcess ; 1955-1956 ; 1955-1956 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 248 ; 248 ; >
-    au < doNotProcess ; doNotProcess ; 1956-1957 ; 1956-1957 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 249 ; 249 ; >
-    au < doNotProcess ; doNotProcess ; 1957-1958 ; 1957-1958 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 250 ; 250 ; >
-    au < doNotProcess ; doNotProcess ; 1958-1959 ; 1958-1959 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 251 ; 251 ; >
-    au < doNotProcess ; doNotProcess ; 1959-1960 ; 1959-1960 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 252 ; 252 ; >
-    au < doNotProcess ; doNotProcess ; 1960-1961 ; 1960-1961 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 253 ; 253 ; >
-    au < doNotProcess ; doNotProcess ; 1961-1962 ; 1961-1962 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 254 ; 254 ; >
-    au < doNotProcess ; doNotProcess ; 1962-1963 ; 1962-1963 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 255 ; 255 ; >
-    au < doNotProcess ; doNotProcess ; 1963-1964 ; 1963-1964 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 256 ; 256 ; >
-    au < doNotProcess ; doNotProcess ; 1964-1965 ; 1964-1965 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 257 ; 257 ; >
-    au < doNotProcess ; doNotProcess ; 1965 ; 1965 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 258 ; 258 ; >
-    au < doNotProcess ; doNotProcess ; 1965-1966 ; 1965-1966 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 259 ; 259 ; >
-    au < doNotProcess ; doNotProcess ; 1966 ; 1966 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 260 ; 260 ; >
-    au < doNotProcess ; doNotProcess ; 1966-1967 ; 1966-1967 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 261 ; 261 ; >
-    au < doNotProcess ; doNotProcess ; 1967-1968 ; 1967-1968 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 262 ; 262 ; >
-    au < doNotProcess ; doNotProcess ; 1968-1969 ; 1968-1969 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 263 ; 263 ; >
-    au < doNotProcess ; doNotProcess ; 1969 ; 1969 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 264 ; 264 ; >
-    au < doNotProcess ; doNotProcess ; 1969 ; 1969 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 265 ; 265 ; >
-    au < doNotProcess ; doNotProcess ; 1970 ; 1970 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 266 ; 266 ; >
-    au < doNotProcess ; doNotProcess ; 1970 ; 1970 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 267 ; 267 ; >
-    au < doNotProcess ; doNotProcess ; 1970-1971 ; 1970-1971 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 268 ; 268 ; >
-    au < doNotProcess ; doNotProcess ; 1970-1971 ; 1970-1971 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 269 ; 269 ; >
-    au < doNotProcess ; doNotProcess ; 1971 ; 1971 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 270 ; 270 ; >
-    au < doNotProcess ; doNotProcess ; 1971-1972 ; 1971-1972 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 271 ; 271 ; >
-    au < doNotProcess ; doNotProcess ; 1972 ; 1972 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 272 ; 272 ; >
-    au < doNotProcess ; doNotProcess ; 1972-1973 ; 1972-1973 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 273 ; 273 ; >
-    au < doNotProcess ; doNotProcess ; 1973 ; 1973 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 274 ; 274 ; >
-    au < doNotProcess ; doNotProcess ; 1973-1974 ; 1973-1974 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 275 ; 275 ; >
-    au < doNotProcess ; doNotProcess ; 1974 ; 1974 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 276 ; 276 ; >
-    au < doNotProcess ; doNotProcess ; 1974-1975 ; 1974-1975 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 277 ; 277 ; >
-    au < doNotProcess ; doNotProcess ; 1975 ; 1975 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 278 ; 278 ; >
-    au < doNotProcess ; doNotProcess ; 1975 ; 1975 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 279 ; 279 ; >
-    au < doNotProcess ; doNotProcess ; 1975-1976 ; 1975-1976 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 280 ; 280 ; >
-    au < doNotProcess ; doNotProcess ; 1976 ; 1976 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 281 ; 281 ; >
-    au < doNotProcess ; doNotProcess ; 1976 ; 1976 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 282 ; 282 ; >
-    au < doNotProcess ; doNotProcess ; 1976 ; 1976 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 283 ; 283 ; >
-    au < doNotProcess ; doNotProcess ; 1976-1977 ; 1976-1977 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 284 ; 284 ; >
-    au < doNotProcess ; doNotProcess ; 1977 ; 1977 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 285 ; 285 ; >
-    au < doNotProcess ; doNotProcess ; 1977 ; 1977 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 286 ; 286 ; >
-    au < doNotProcess ; doNotProcess ; 1977-1978 ; 1977-1978 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 287 ; 287 ; >
-    au < doNotProcess ; doNotProcess ; 1978 ; 1978 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 288 ; 288 ; >
-    au < doNotProcess ; doNotProcess ; 1978 ; 1978 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 289 ; 289 ; >
-    au < doNotProcess ; doNotProcess ; 1978-1979 ; 1978-1979 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 290 ; 290 ; >
-    au < doNotProcess ; doNotProcess ; 1978-1979 ; 1978-1979 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 291 ; 291 ; >
-    au < doNotProcess ; doNotProcess ; 1979 ; 1979 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 292 ; 292 ; >
-    au < doNotProcess ; doNotProcess ; 1979-1980 ; 1979-1980 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 293 ; 293 ; >
-    au < doNotProcess ; doNotProcess ; 1980 ; 1980 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 294 ; 294 ; >
-    au < doNotProcess ; doNotProcess ; 1980 ; 1980 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 295 ; 295 ; >
-    au < doNotProcess ; doNotProcess ; 1980 ; 1980 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 296 ; 296 ; >
-    au < doNotProcess ; doNotProcess ; 1980 ; 1980 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 297 ; 297 ; >
-    au < doNotProcess ; doNotProcess ; 1980-1981 ; 1980-1981 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 298 ; 298 ; >
-    au < doNotProcess ; doNotProcess ; 1981 ; 1981 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 299 ; 299 ; >
-    au < doNotProcess ; doNotProcess ; 1981 ; 1981 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 300 ; 300 ; >
-    au < doNotProcess ; doNotProcess ; 1981 ; 1981 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 301 ; 301 ; >
-    au < doNotProcess ; doNotProcess ; 1981 ; 1981 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 302 ; 302 ; >
-    au < doNotProcess ; doNotProcess ; 1981 ; 1981 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 303 ; 303 ; >
-    au < doNotProcess ; doNotProcess ; 1982 ; 1982 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 304 ; 304 ; >
-    au < doNotProcess ; doNotProcess ; 1982 ; 1982 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 305 ; 305 ; >
-    au < doNotProcess ; doNotProcess ; 1982 ; 1982 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 306 ; 306 ; >
-    au < doNotProcess ; doNotProcess ; 1982 ; 1982 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 307 ; 307 ; >
-    au < doNotProcess ; doNotProcess ; 1982-1983 ; 1982-1983 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 308 ; 308 ; >
-    au < doNotProcess ; doNotProcess ; 1983 ; 1983 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 309 ; 309 ; >
-    au < doNotProcess ; doNotProcess ; 1983-1984 ; 1983-1984 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 310 ; 310 ; >
-    au < doNotProcess ; doNotProcess ; 1984 ; 1984 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 311 ; 311 ; >
-    au < doNotProcess ; doNotProcess ; 1984 ; 1984 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 312 ; 312 ; >
-    au < doNotProcess ; doNotProcess ; 1984-1985 ; 1984-1985 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 313 ; 313 ; >
-    au < doNotProcess ; doNotProcess ; 1985 ; 1985 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 314 ; 314 ; >
-    au < doNotProcess ; doNotProcess ; 1985 ; 1985 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 315 ; 315 ; >
-    au < doNotProcess ; doNotProcess ; 1985-1986 ; 1985-1986 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 316 ; 316 ; >
-    au < doNotProcess ; doNotProcess ; 1986 ; 1986 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 317 ; 317 ; >
-    au < doNotProcess ; doNotProcess ; 1986 ; 1986 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 318 ; 318 ; >
-    au < doNotProcess ; doNotProcess ; 1986 ; 1986 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 319 ; 319 ; >
-    au < doNotProcess ; doNotProcess ; 1986 ; 1986 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 320 ; 320 ; >
-    au < doNotProcess ; doNotProcess ; 1987 ; 1987 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 321 ; 321 ; >
-    au < doNotProcess ; doNotProcess ; 1987 ; 1987 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 322 ; 322 ; >
-    au < doNotProcess ; doNotProcess ; 1987 ; 1987 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 323 ; 323 ; >
-    au < doNotProcess ; doNotProcess ; 1987-1988 ; 1987-1988 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 324 ; 324 ; >
-    au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 325 ; 325 ; >
-    au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 326 ; 326 ; >
-    au < doNotProcess ; doNotProcess ; 1988-1989 ; 1988-1989 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 327 ; 327 ; >
-    au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 328 ; 328 ; >
-    au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 329 ; 329 ; >
-    au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 330 ; 330 ; >
-    au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 331 ; 331 ; >
+    #au < doNotProcess ; doNotProcess ; 1934-1935 ; 1934-1935 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 234 ; 234 ; >
+    #au < doNotProcess ; doNotProcess ; 1935-1936 ; 1935-1936 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 235 ; 235 ; >
+    #au < doNotProcess ; doNotProcess ; 1936-1938 ; 1936-1938 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 236 ; 236 ; >
+    #au < doNotProcess ; doNotProcess ; 1938-1939 ; 1938-1939 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 237 ; 237 ; >
+    #au < doNotProcess ; doNotProcess ; 1939-1940 ; 1939-1940 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 238 ; 238 ; >
+    #au < doNotProcess ; doNotProcess ; 1940-1946 ; 1940-1946 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 239 ; 239 ; >
+    #au < doNotProcess ; doNotProcess ; 1946-1948 ; 1946-1948 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 240 ; 240 ; >
+    #au < doNotProcess ; doNotProcess ; 1948-1949 ; 1948-1949 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 241 ; 241 ; >
+    #au < doNotProcess ; doNotProcess ; 1949-1950 ; 1949-1950 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 242 ; 242 ; >
+    #au < doNotProcess ; doNotProcess ; 1950-1951 ; 1950-1951 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 243 ; 243 ; >
+    #au < doNotProcess ; doNotProcess ; 1951-1952 ; 1951-1952 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 244 ; 244 ; >
+    #au < doNotProcess ; doNotProcess ; 1952-1953 ; 1952-1953 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 245 ; 245 ; >
+    #au < doNotProcess ; doNotProcess ; 1953-1954 ; 1953-1954 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 246 ; 246 ; >
+    #au < doNotProcess ; doNotProcess ; 1954-1955 ; 1954-1955 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 247 ; 247 ; >
+    #au < doNotProcess ; doNotProcess ; 1955-1956 ; 1955-1956 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 248 ; 248 ; >
+    #au < doNotProcess ; doNotProcess ; 1956-1957 ; 1956-1957 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 249 ; 249 ; >
+    #au < doNotProcess ; doNotProcess ; 1957-1958 ; 1957-1958 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 250 ; 250 ; >
+    #au < doNotProcess ; doNotProcess ; 1958-1959 ; 1958-1959 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 251 ; 251 ; >
+    #au < doNotProcess ; doNotProcess ; 1959-1960 ; 1959-1960 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 252 ; 252 ; >
+    #au < doNotProcess ; doNotProcess ; 1960-1961 ; 1960-1961 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 253 ; 253 ; >
+    #au < doNotProcess ; doNotProcess ; 1961-1962 ; 1961-1962 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 254 ; 254 ; >
+    #au < doNotProcess ; doNotProcess ; 1962-1963 ; 1962-1963 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 255 ; 255 ; >
+    #au < doNotProcess ; doNotProcess ; 1963-1964 ; 1963-1964 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 256 ; 256 ; >
+    #au < doNotProcess ; doNotProcess ; 1964-1965 ; 1964-1965 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 257 ; 257 ; >
+    #au < doNotProcess ; doNotProcess ; 1965 ; 1965 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 258 ; 258 ; >
+    #au < doNotProcess ; doNotProcess ; 1965-1966 ; 1965-1966 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 259 ; 259 ; >
+    #au < doNotProcess ; doNotProcess ; 1966 ; 1966 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 260 ; 260 ; >
+    #au < doNotProcess ; doNotProcess ; 1966-1967 ; 1966-1967 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 261 ; 261 ; >
+    #au < doNotProcess ; doNotProcess ; 1967-1968 ; 1967-1968 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 262 ; 262 ; >
+    #au < doNotProcess ; doNotProcess ; 1968-1969 ; 1968-1969 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 263 ; 263 ; >
+    #au < doNotProcess ; doNotProcess ; 1969 ; 1969 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 264 ; 264 ; >
+    #au < doNotProcess ; doNotProcess ; 1969 ; 1969 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 265 ; 265 ; >
+    #au < doNotProcess ; doNotProcess ; 1970 ; 1970 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 266 ; 266 ; >
+    #au < doNotProcess ; doNotProcess ; 1970 ; 1970 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 267 ; 267 ; >
+    #au < doNotProcess ; doNotProcess ; 1970-1971 ; 1970-1971 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 268 ; 268 ; >
+    #au < doNotProcess ; doNotProcess ; 1970-1971 ; 1970-1971 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 269 ; 269 ; >
+    #au < doNotProcess ; doNotProcess ; 1971 ; 1971 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 270 ; 270 ; >
+    #au < doNotProcess ; doNotProcess ; 1971-1972 ; 1971-1972 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 271 ; 271 ; >
+    #au < doNotProcess ; doNotProcess ; 1972 ; 1972 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 272 ; 272 ; >
+    #au < doNotProcess ; doNotProcess ; 1972-1973 ; 1972-1973 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 273 ; 273 ; >
+    #au < doNotProcess ; doNotProcess ; 1973 ; 1973 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 274 ; 274 ; >
+    #au < doNotProcess ; doNotProcess ; 1973-1974 ; 1973-1974 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 275 ; 275 ; >
+    #au < doNotProcess ; doNotProcess ; 1974 ; 1974 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 276 ; 276 ; >
+    #au < doNotProcess ; doNotProcess ; 1974-1975 ; 1974-1975 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 277 ; 277 ; >
+    #au < doNotProcess ; doNotProcess ; 1975 ; 1975 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 278 ; 278 ; >
+    #au < doNotProcess ; doNotProcess ; 1975 ; 1975 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 279 ; 279 ; >
+    #au < doNotProcess ; doNotProcess ; 1975-1976 ; 1975-1976 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 280 ; 280 ; >
+    #au < doNotProcess ; doNotProcess ; 1976 ; 1976 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 281 ; 281 ; >
+    #au < doNotProcess ; doNotProcess ; 1976 ; 1976 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 282 ; 282 ; >
+    #au < doNotProcess ; doNotProcess ; 1976 ; 1976 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 283 ; 283 ; >
+    #au < doNotProcess ; doNotProcess ; 1976-1977 ; 1976-1977 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 284 ; 284 ; >
+    #au < doNotProcess ; doNotProcess ; 1977 ; 1977 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 285 ; 285 ; >
+    #au < doNotProcess ; doNotProcess ; 1977 ; 1977 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 286 ; 286 ; >
+    #au < doNotProcess ; doNotProcess ; 1977-1978 ; 1977-1978 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 287 ; 287 ; >
+    #au < doNotProcess ; doNotProcess ; 1978 ; 1978 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 288 ; 288 ; >
+    #au < doNotProcess ; doNotProcess ; 1978 ; 1978 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 289 ; 289 ; >
+    #au < doNotProcess ; doNotProcess ; 1978-1979 ; 1978-1979 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 290 ; 290 ; >
+    #au < doNotProcess ; doNotProcess ; 1978-1979 ; 1978-1979 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 291 ; 291 ; >
+    #au < doNotProcess ; doNotProcess ; 1979 ; 1979 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 292 ; 292 ; >
+    #au < doNotProcess ; doNotProcess ; 1979-1980 ; 1979-1980 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 293 ; 293 ; >
+    #au < doNotProcess ; doNotProcess ; 1980 ; 1980 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 294 ; 294 ; >
+    #au < doNotProcess ; doNotProcess ; 1980 ; 1980 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 295 ; 295 ; >
+    #au < doNotProcess ; doNotProcess ; 1980 ; 1980 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 296 ; 296 ; >
+    #au < doNotProcess ; doNotProcess ; 1980 ; 1980 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 297 ; 297 ; >
+    #au < doNotProcess ; doNotProcess ; 1980-1981 ; 1980-1981 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 298 ; 298 ; >
+    #au < doNotProcess ; doNotProcess ; 1981 ; 1981 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 299 ; 299 ; >
+    #au < doNotProcess ; doNotProcess ; 1981 ; 1981 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 300 ; 300 ; >
+    #au < doNotProcess ; doNotProcess ; 1981 ; 1981 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 301 ; 301 ; >
+    #au < doNotProcess ; doNotProcess ; 1981 ; 1981 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 302 ; 302 ; >
+    #au < doNotProcess ; doNotProcess ; 1981 ; 1981 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 303 ; 303 ; >
+    #au < doNotProcess ; doNotProcess ; 1982 ; 1982 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 304 ; 304 ; >
+    #au < doNotProcess ; doNotProcess ; 1982 ; 1982 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 305 ; 305 ; >
+    #au < doNotProcess ; doNotProcess ; 1982 ; 1982 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 306 ; 306 ; >
+    #au < doNotProcess ; doNotProcess ; 1982 ; 1982 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 307 ; 307 ; >
+    #au < doNotProcess ; doNotProcess ; 1982-1983 ; 1982-1983 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 308 ; 308 ; >
+    #au < doNotProcess ; doNotProcess ; 1983 ; 1983 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 309 ; 309 ; >
+    #au < doNotProcess ; doNotProcess ; 1983-1984 ; 1983-1984 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 310 ; 310 ; >
+    #au < doNotProcess ; doNotProcess ; 1984 ; 1984 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 311 ; 311 ; >
+    #au < doNotProcess ; doNotProcess ; 1984 ; 1984 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 312 ; 312 ; >
+    #au < doNotProcess ; doNotProcess ; 1984-1985 ; 1984-1985 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 313 ; 313 ; >
+    #au < doNotProcess ; doNotProcess ; 1985 ; 1985 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 314 ; 314 ; >
+    #au < doNotProcess ; doNotProcess ; 1985 ; 1985 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 315 ; 315 ; >
+    #au < doNotProcess ; doNotProcess ; 1985-1986 ; 1985-1986 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 316 ; 316 ; >
+    #au < doNotProcess ; doNotProcess ; 1986 ; 1986 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 317 ; 317 ; >
+    #au < doNotProcess ; doNotProcess ; 1986 ; 1986 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 318 ; 318 ; >
+    #au < doNotProcess ; doNotProcess ; 1986 ; 1986 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 319 ; 319 ; >
+    #au < doNotProcess ; doNotProcess ; 1986 ; 1986 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 320 ; 320 ; >
+    #au < doNotProcess ; doNotProcess ; 1987 ; 1987 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 321 ; 321 ; >
+    #au < doNotProcess ; doNotProcess ; 1987 ; 1987 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 322 ; 322 ; >
+    #au < doNotProcess ; doNotProcess ; 1987 ; 1987 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 323 ; 323 ; >
+    #au < doNotProcess ; doNotProcess ; 1987-1988 ; 1987-1988 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 324 ; 324 ; >
+    #au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 325 ; 325 ; >
+    #au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 326 ; 326 ; >
+    #au < doNotProcess ; doNotProcess ; 1988-1989 ; 1988-1989 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 327 ; 327 ; >
+    #au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 328 ; 328 ; >
+    #au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 329 ; 329 ; >
+    #au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 330 ; 330 ; >
+    #au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 331 ; 331 ; >
     }
     {
     param[journal_id] = rsta1990
@@ -867,28 +880,38 @@
 
     param[journal_id] = rstl
 
-    au < doNotProcess ; doNotProcess ; 1665-1666 ; 1665-1666 ; Philosophical Transactions of the Royal Society of London Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 1666-1667 ; 1666-1667 ; Philosophical Transactions of the Royal Society of London Volume 2 ; 2 ; >
-    au < doNotProcess ; doNotProcess ; 1668 ; 1668 ; Philosophical Transactions of the Royal Society of London Volume 3 ; 3 ; >
-    au < doNotProcess ; doNotProcess ; 1669 ; 1669 ; Philosophical Transactions of the Royal Society of London Volume 4 ; 4 ; >
-    au < doNotProcess ; doNotProcess ; 1670 ; 1670 ; Philosophical Transactions of the Royal Society of London Volume 5 ; 5 ; >
-    au < doNotProcess ; doNotProcess ; 1671 ; 1671 ; Philosophical Transactions of the Royal Society of London Volume 6 ; 6 ; >
-    au < doNotProcess ; doNotProcess ; 1672 ; 1672 ; Philosophical Transactions of the Royal Society of London Volume 7 ; 7 ; >
-    au < doNotProcess ; doNotProcess ; 1673 ; 1673 ; Philosophical Transactions of the Royal Society of London Volume 8 ; 8 ; >
-    au < doNotProcess ; doNotProcess ; 1674 ; 1674 ; Philosophical Transactions of the Royal Society of London Volume 9 ; 9 ; >
-    au < doNotProcess ; doNotProcess ; 1675 ; 1675 ; Philosophical Transactions of the Royal Society of London Volume 10 ; 10 ; >
-    au < doNotProcess ; doNotProcess ; 1676 ; 1676 ; Philosophical Transactions of the Royal Society of London Volume 11 ; 11 ; >
-    au < doNotProcess ; doNotProcess ; 1677-1679 ; 1677-1679 ; Philosophical Transactions of the Royal Society of London Volume 12 ; 12 ; >
-    #During this period Philosophical Collections was published. Review for dates
-    #au < doNotProcess ; doNotProcess ; 1683 ; Philosophical Transactions of the Royal Society of London Volume 13 ; 13 ; >
-    #au < doNotProcess ; doNotProcess ; 1684 ; Philosophical Transactions of the Royal Society of London Volume 14 ; 14 ; >
-    #au < doNotProcess ; doNotProcess ; 1685 ; Philosophical Transactions of the Royal Society of London Volume 15 ; 15 ; >
-    #au < doNotProcess ; doNotProcess ; 1686-1692 ; Philosophical Transactions of the Royal Society of London Volume 16 ; 16 ; >
-    #au < doNotProcess ; doNotProcess ; 1693 ; Philosophical Transactions of the Royal Society of London Volume 17 ; 17 ; >
-    #au < doNotProcess ; doNotProcess ; 1694 ; Philosophical Transactions of the Royal Society of London Volume 18 ; 18 ; >
-    #au < doNotProcess ; doNotProcess ; 1695-1697 ; Philosophical Transactions of the Royal Society of London Volume 19 ; 19 ; >
-    #au < doNotProcess ; doNotProcess ; 1698 ; Philosophical Transactions of the Royal Society of London Volume 20 ; 20 ; >
-    #au < doNotProcess ; doNotProcess ; 1699 ; Philosophical Transactions of the Royal Society of London Volume 21 ; 21 ; >
+    #au < doNotProcess ; doNotProcess ; 1665-1666 ; 1665-1666 ; Philosophical Transactions of the Royal Society of London Volume 1 ; 1 ; >
+    #au < doNotProcess ; doNotProcess ; 1666-1667 ; 1666-1667 ; Philosophical Transactions of the Royal Society of London Volume 2 ; 2 ; >
+    #au < doNotProcess ; doNotProcess ; 1668 ; 1668 ; Philosophical Transactions of the Royal Society of London Volume 3 ; 3 ; >
+    #au < doNotProcess ; doNotProcess ; 1669 ; 1669 ; Philosophical Transactions of the Royal Society of London Volume 4 ; 4 ; >
+    #au < doNotProcess ; doNotProcess ; 1670 ; 1670 ; Philosophical Transactions of the Royal Society of London Volume 5 ; 5 ; >
+    #au < doNotProcess ; doNotProcess ; 1671 ; 1671 ; Philosophical Transactions of the Royal Society of London Volume 6 ; 6 ; >
+    #au < doNotProcess ; doNotProcess ; 1672 ; 1672 ; Philosophical Transactions of the Royal Society of London Volume 7 ; 7 ; >
+    #au < doNotProcess ; doNotProcess ; 1673 ; 1673 ; Philosophical Transactions of the Royal Society of London Volume 8 ; 8 ; >
+    #au < doNotProcess ; doNotProcess ; 1674 ; 1674 ; Philosophical Transactions of the Royal Society of London Volume 9 ; 9 ; >
+    #au < doNotProcess ; doNotProcess ; 1675 ; 1675 ; Philosophical Transactions of the Royal Society of London Volume 10 ; 10 ; >
+    #au < doNotProcess ; doNotProcess ; 1676 ; 1676 ; Philosophical Transactions of the Royal Society of London Volume 11 ; 11 ; >
+    #au < doNotProcess ; doNotProcess ; 1677 ; 1677 ; Philosophical Transactions of the Royal Society of London Volume 12 [1677] ; 12 ; >
+    #au < doNotProcess ; doNotProcess ; 1678 ; 1678 ; Philosophical Transactions of the Royal Society of London Volume 12 [1678] ; 12 ; >
+    #au < doNotProcess ; doNotProcess ; 1679 ; 1679 ; Philosophical Transactions of the Royal Society of London Volume 12 [1679] ; 12 ; >
+    ##During this period Philosophical Collections was published. Review for dates
+    #au < doNotProcess ; doNotProcess ; 1683 ; 1683 ; Philosophical Transactions of the Royal Society of London Volume 13 ; 13 ; >
+    #au < doNotProcess ; doNotProcess ; 1684 ; 1684 ; Philosophical Transactions of the Royal Society of London Volume 14 ; 14 ; >
+    #au < doNotProcess ; doNotProcess ; 1685 ; 1685 ; Philosophical Transactions of the Royal Society of London Volume 15 ; 15 ; >
+    #au < doNotProcess ; doNotProcess ; 1686 ; 1686 ; Philosophical Transactions of the Royal Society of London Volume 16 [1686] ; 16 ; >
+    #au < doNotProcess ; doNotProcess ; 1687 ; 1687 ; Philosophical Transactions of the Royal Society of London Volume 16 [1687] ; 16 ; >
+    #au < doNotProcess ; doNotProcess ; 1688 ; 1688 ; Philosophical Transactions of the Royal Society of London Volume 16 [1688] ; 16 ; >
+    #au < doNotProcess ; doNotProcess ; 1689 ; 1689 ; Philosophical Transactions of the Royal Society of London Volume 16 [1689] ; 16 ; >
+    #au < doNotProcess ; doNotProcess ; 1690 ; 1690 ; Philosophical Transactions of the Royal Society of London Volume 16 [1690] ; 16 ; >
+    #au < doNotProcess ; doNotProcess ; 1691 ; 1691 ; Philosophical Transactions of the Royal Society of London Volume 16 [1691] ; 16 ; >
+    #au < doNotProcess ; doNotProcess ; 1692 ; 1692 ; Philosophical Transactions of the Royal Society of London Volume 16 [1692] ; 16 ; >
+    #au < doNotProcess ; doNotProcess ; 1693 ; 1693 ; Philosophical Transactions of the Royal Society of London Volume 17 [1693] ; 17 ; >
+    #au < doNotProcess ; doNotProcess ; 1694 ; 1694 ; Philosophical Transactions of the Royal Society of London Volume 18 [1694] ; 18 ; >
+    #au < doNotProcess ; doNotProcess ; 1695 ; 1695 ; Philosophical Transactions of the Royal Society of London Volume 19 [1695] ; 19 ; >
+    #au < doNotProcess ; doNotProcess ; 1696 ; 1696 ; Philosophical Transactions of the Royal Society of London Volume 19 [1696] ; 19 ; >
+    #au < doNotProcess ; doNotProcess ; 1697 ; 1697 ; Philosophical Transactions of the Royal Society of London Volume 19 [1697] ; 19 ; >
+    #au < doNotProcess ; doNotProcess ; 1698 ; 1698 ; Philosophical Transactions of the Royal Society of London Volume 20 ; 20 ; >
+    #au < doNotProcess ; doNotProcess ; 1699 ; 1699 ; Philosophical Transactions of the Royal Society of London Volume 21 ; 21 ; >
     #au < doNotProcess ; doNotProcess ; 1700-1701 ; Philosophical Transactions of the Royal Society of London Volume 22 ; 22 ; >
     #au < doNotProcess ; doNotProcess ; 1702-1703 ; Philosophical Transactions of the Royal Society of London Volume 23 ; 23 ; >
     #au < doNotProcess ; doNotProcess ; 1704-1705 ; Philosophical Transactions of the Royal Society of London Volume 24 ; 24 ; >
@@ -1887,6 +1910,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Royal Society Open Science Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Royal Society Open Science Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Royal Society Open Science Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Royal Society Open Science Volume 6 [2019] ; 2019 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Royal Society Open Science Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Royal Society Open Science Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Royal Society Open Science Volume 8 ; 8 ; >
