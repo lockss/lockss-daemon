@@ -520,8 +520,23 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                 TableTag table = (TableTag)children.elementAt(i);
                 for(int j = 0; j < table.getChildCount(); j++){
                   if(table.getChild(j).toPlainTextString().contains("Journal URL") || table.getChild(j).toPlainTextString().contains("Publisher Email")){
-                    log.debug3("Removing row: " + table.getChild(j).toPlainTextString());
-                    table.removeChild(j);
+                    TableRow tr = (TableRow)table.getChild(j);
+                    TableColumn[] tcs = tr.getColumns();
+                    for(int k = 0; k < tcs.length; k++){
+                      log.debug3("Current column: " + tcs[k].toPlainTextString());
+                      if(tcs[k].toPlainTextString().contains("Journal URL")){
+                        if(tcs[k+1] != null){
+                          Node urlNode = tcs[k+1];
+                          NodeList urlChildren = urlNode.getChildren();
+                          if(urlNode.getFirstChild() instanceof LinkTag){
+                            LinkTag urlLink = (LinkTag)urlNode.getFirstChild();
+                            String urlText = urlLink.getLink();
+                            urlChildren.removeAll();
+                            urlChildren.add(new TextNode(urlText));
+                          }
+                        }
+                      }
+                    }
                   }
                 }
               }
