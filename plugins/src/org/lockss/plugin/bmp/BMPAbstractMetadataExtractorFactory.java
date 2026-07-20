@@ -65,6 +65,7 @@ public class BMPAbstractMetadataExtractorFactory implements FileMetadataExtracto
     static {
         tagMap.put("citation_author", MetadataField.FIELD_AUTHOR); 
         tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
+        tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
         tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
         tagMap.put("citation_issue", MetadataField.FIELD_ISSUE); 
         tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
