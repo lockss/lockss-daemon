@@ -623,7 +623,7 @@
 
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://www.genealogy-critique.net/
-      #volume 15-20 processed on Ubiquity platform as Le foucaldien
+      #volume 1-6 processed on Ubiquity platform as Le foucaldien
 
       au < doNotProcess ; exists ; 2015 ; 1 ; Genealogy+Critique Volume 1 ; 2015 ; >
       au < doNotProcess ; exists ; 2016 ; 2 ; Genealogy+Critique Volume 2 ; 2016 ; >
@@ -649,7 +649,7 @@
 
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://www.genealogy-critique.net/
-      #volume 15-20 processed on Ubiquity platform as Le foucaldien
+      #volume 1-6 processed on Ubiquity platform as Le foucaldien
 
       au < doNotProcess ; doNotProcess ; 2015 ; 1 ; Le foucaldien Volume 2015 ; 2015 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2 ; Le foucaldien Volume 2016 ; 2016 ; >
