@@ -21,26 +21,26 @@
       param[base_url] = https://jeps.squ.edu.om/
       param[journal_abbr] = journal
 
-      au < crawling ; exists ; 2007 ; Journal of Educational and Psychological Studies Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2008 ; Journal of Educational and Psychological Studies Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2009 ; Journal of Educational and Psychological Studies Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2007 ; Journal of Educational and Psychological Studies Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2008 ; Journal of Educational and Psychological Studies Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2009 ; Journal of Educational and Psychological Studies Volume 3 ; 3 ; >
       au < finished ; manifest ; 2010 ; Journal of Educational and Psychological Studies Volume 4 ; 4 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; Journal of Educational and Psychological Studies Volume 5 ; 5 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2012 ; Journal of Educational and Psychological Studies Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2013 ; Journal of Educational and Psychological Studies Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2014 ; Journal of Educational and Psychological Studies Volume 8 ; 8 ; >
-      au < crawling ; exists ; 2015 ; Journal of Educational and Psychological Studies Volume 9 ; 9 ; >
-      au < crawling ; exists ; 2016 ; Journal of Educational and Psychological Studies Volume 10 ; 10 ; >
-      au < crawling ; exists ; 2017 ; Journal of Educational and Psychological Studies Volume 11 ; 11 ; >
-      au < crawling ; exists ; 2018 ; Journal of Educational and Psychological Studies Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2012 ; Journal of Educational and Psychological Studies Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2013 ; Journal of Educational and Psychological Studies Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2014 ; Journal of Educational and Psychological Studies Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2015 ; Journal of Educational and Psychological Studies Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2016 ; Journal of Educational and Psychological Studies Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2017 ; Journal of Educational and Psychological Studies Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2018 ; Journal of Educational and Psychological Studies Volume 12 ; 12 ; >
       au < finished ; manifest ; 2019 ; Journal of Educational and Psychological Studies Volume 13 ; 13 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2020 ; Journal of Educational and Psychological Studies Volume 14 ; 14 ; >
-      au < crawling ; exists ; 2021 ; Journal of Educational and Psychological Studies Volume 15 ; 15 ; >
-      au < crawling ; exists ; 2022 ; Journal of Educational and Psychological Studies Volume 16 ; 16 ; >
-      au < crawling ; exists ; 2023 ; Journal of Educational and Psychological Studies Volume 17 ; 17 ; >
-      au < crawling ; exists ; 2024 ; Journal of Educational and Psychological Studies Volume 18 ; 18 ; >
-      au < crawling ; exists ; 2025 ; Journal of Educational and Psychological Studies Volume 19 ; 19 ; >
-      au < crawling ; exists ; 2026 ; Journal of Educational and Psychological Studies Volume 20 ; 20 ; >
+      au < frozen ; exists ; 2020 ; Journal of Educational and Psychological Studies Volume 14 ; 14 ; >
+      au < frozen ; exists ; 2021 ; Journal of Educational and Psychological Studies Volume 15 ; 15 ; >
+      au < frozen ; exists ; 2022 ; Journal of Educational and Psychological Studies Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2023 ; Journal of Educational and Psychological Studies Volume 17 ; 17 ; >
+      au < frozen ; exists ; 2024 ; Journal of Educational and Psychological Studies Volume 18 ; 18 ; >
+      au < frozen ; exists ; 2025 ; Journal of Educational and Psychological Studies Volume 19 ; 19 ; >
+      au < frozen ; exists ; 2026 ; Journal of Educational and Psychological Studies Volume 20 ; 20 ; >
 
   }
 
@@ -54,36 +54,36 @@
       param[base_url] = https://squjs.squ.edu.om/
       param[journal_abbr] = squjs
 
-      au < crawling ; exists ; 1996 ; Sultan Qaboos University Journal for Science Volume 1 ; 1 ; >
-      au < crawling ; exists ; 1997 ; Sultan Qaboos University Journal for Science Volume 2 ; 2 ; >
-      au < crawling ; exists ; 1998 ; Sultan Qaboos University Journal for Science Volume 3 ; 3 ; >
-      au < crawling ; exists ; 1999 ; Sultan Qaboos University Journal for Science Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2000 ; Sultan Qaboos University Journal for Science Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2001 ; Sultan Qaboos University Journal for Science Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2002 ; Sultan Qaboos University Journal for Science Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2003 ; Sultan Qaboos University Journal for Science Volume 8 ; 8 ; >
-      au < crawling ; exists ; 2004 ; Sultan Qaboos University Journal for Science Volume 9 ; 9 ; >
-      au < crawling ; exists ; 2005 ; Sultan Qaboos University Journal for Science Volume 10 ; 10 ; >
-      au < crawling ; exists ; 2006 ; Sultan Qaboos University Journal for Science Volume 11 ; 11 ; >
-      au < crawling ; exists ; 2007 ; Sultan Qaboos University Journal for Science Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2008 ; Sultan Qaboos University Journal for Science Volume 13 ; 13 ; >
-      au < crawling ; exists ; 2009 ; Sultan Qaboos University Journal for Science Volume 14 ; 14 ; >
-      au < crawling ; exists ; 2010 ; Sultan Qaboos University Journal for Science Volume 15 ; 15 ; >
-      au < crawling ; exists ; 2011 ; Sultan Qaboos University Journal for Science Volume 16 ; 16 ; >
-      au < crawling ; exists ; 2012 ; Sultan Qaboos University Journal for Science Volume 17 ; 17 ; >
-      au < crawling ; exists ; 2013 ; Sultan Qaboos University Journal for Science Volume 18 ; 18 ; >
-      au < crawling ; exists ; 2014 ; Sultan Qaboos University Journal for Science Volume 19 ; 19 ; >
-      au < crawling ; exists ; 2015 ; Sultan Qaboos University Journal for Science Volume 20 ; 20 ; >
-      au < crawling ; exists ; 2016 ; Sultan Qaboos University Journal for Science Volume 21 ; 21 ; >
-      au < crawling ; exists ; 2017 ; Sultan Qaboos University Journal for Science Volume 22 ; 22 ; >
-      au < crawling ; exists ; 2018 ; Sultan Qaboos University Journal for Science Volume 23 ; 23 ; >
-      au < crawling ; exists ; 2019 ; Sultan Qaboos University Journal for Science Volume 24 ; 24 ; >
-      au < crawling ; exists ; 2020 ; Sultan Qaboos University Journal for Science Volume 25 ; 25 ; >
-      au < crawling ; exists ; 2021 ; Sultan Qaboos University Journal for Science Volume 26 ; 26 ; >
-      au < crawling ; exists ; 2022 ; Sultan Qaboos University Journal for Science Volume 27 ; 27 ; >
-      au < crawling ; exists ; 2023 ; Sultan Qaboos University Journal for Science Volume 28 ; 28 ; >
-      au < crawling ; exists ; 2024 ; Sultan Qaboos University Journal for Science Volume 29 ; 29 ; >
-      au < crawling ; exists ; 2025 ; Sultan Qaboos University Journal for Science Volume 30 ; 30 ; >
+      au < frozen ; exists ; 1996 ; Sultan Qaboos University Journal for Science Volume 1 ; 1 ; >
+      au < frozen ; exists ; 1997 ; Sultan Qaboos University Journal for Science Volume 2 ; 2 ; >
+      au < frozen ; exists ; 1998 ; Sultan Qaboos University Journal for Science Volume 3 ; 3 ; >
+      au < frozen ; exists ; 1999 ; Sultan Qaboos University Journal for Science Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2000 ; Sultan Qaboos University Journal for Science Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2001 ; Sultan Qaboos University Journal for Science Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2002 ; Sultan Qaboos University Journal for Science Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2003 ; Sultan Qaboos University Journal for Science Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2004 ; Sultan Qaboos University Journal for Science Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2005 ; Sultan Qaboos University Journal for Science Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2006 ; Sultan Qaboos University Journal for Science Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2007 ; Sultan Qaboos University Journal for Science Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2008 ; Sultan Qaboos University Journal for Science Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2009 ; Sultan Qaboos University Journal for Science Volume 14 ; 14 ; >
+      au < frozen ; exists ; 2010 ; Sultan Qaboos University Journal for Science Volume 15 ; 15 ; >
+      au < frozen ; exists ; 2011 ; Sultan Qaboos University Journal for Science Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2012 ; Sultan Qaboos University Journal for Science Volume 17 ; 17 ; >
+      au < frozen ; exists ; 2013 ; Sultan Qaboos University Journal for Science Volume 18 ; 18 ; >
+      au < frozen ; exists ; 2014 ; Sultan Qaboos University Journal for Science Volume 19 ; 19 ; >
+      au < frozen ; exists ; 2015 ; Sultan Qaboos University Journal for Science Volume 20 ; 20 ; >
+      au < frozen ; exists ; 2016 ; Sultan Qaboos University Journal for Science Volume 21 ; 21 ; >
+      au < frozen ; exists ; 2017 ; Sultan Qaboos University Journal for Science Volume 22 ; 22 ; >
+      au < frozen ; exists ; 2018 ; Sultan Qaboos University Journal for Science Volume 23 ; 23 ; >
+      au < frozen ; exists ; 2019 ; Sultan Qaboos University Journal for Science Volume 24 ; 24 ; >
+      au < frozen ; exists ; 2020 ; Sultan Qaboos University Journal for Science Volume 25 ; 25 ; >
+      au < frozen ; exists ; 2021 ; Sultan Qaboos University Journal for Science Volume 26 ; 26 ; >
+      au < frozen ; exists ; 2022 ; Sultan Qaboos University Journal for Science Volume 27 ; 27 ; >
+      au < frozen ; exists ; 2023 ; Sultan Qaboos University Journal for Science Volume 28 ; 28 ; >
+      au < frozen ; exists ; 2024 ; Sultan Qaboos University Journal for Science Volume 29 ; 29 ; >
+      au < frozen ; exists ; 2025 ; Sultan Qaboos University Journal for Science Volume 30 ; 30 ; >
       au < crawling ; exists ; 2026 ; Sultan Qaboos University Journal for Science Volume 31 ; 31 ; >
 
   }
@@ -99,29 +99,29 @@
       param[journal_abbr] = home
 
       au < finished ; manifest ; 1999 ; Sultan Qaboos University Medical Journal Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2000 ; Sultan Qaboos University Medical Journal Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2001 ; Sultan Qaboos University Medical Journal Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2000 ; Sultan Qaboos University Medical Journal Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2001 ; Sultan Qaboos University Medical Journal Volume 3 ; 3 ; >
       au < finished ; manifest ; 2002 ; Sultan Qaboos University Medical Journal Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2003 ; Sultan Qaboos University Medical Journal Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2006 ; Sultan Qaboos University Medical Journal Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2003 ; Sultan Qaboos University Medical Journal Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2006 ; Sultan Qaboos University Medical Journal Volume 6 ; 6 ; >
       au < finished ; manifest ; 2007 ; Sultan Qaboos University Medical Journal Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; Sultan Qaboos University Medical Journal Volume 8 ; 8 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2009 ; Sultan Qaboos University Medical Journal Volume 9 ; 9 ; >
-      au < crawling ; exists ; 2010 ; Sultan Qaboos University Medical Journal Volume 10 ; 10 ; >
-      au < crawling ; exists ; 2011 ; Sultan Qaboos University Medical Journal Volume 11 ; 11 ; >
-      au < crawling ; exists ; 2012 ; Sultan Qaboos University Medical Journal Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2013 ; Sultan Qaboos University Medical Journal Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2009 ; Sultan Qaboos University Medical Journal Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2010 ; Sultan Qaboos University Medical Journal Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2011 ; Sultan Qaboos University Medical Journal Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2012 ; Sultan Qaboos University Medical Journal Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2013 ; Sultan Qaboos University Medical Journal Volume 13 ; 13 ; >
       au < finished ; manifest ; 2014 ; Sultan Qaboos University Medical Journal Volume 14 ; 14 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2015 ; Sultan Qaboos University Medical Journal Volume 15 ; 15 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2016 ; Sultan Qaboos University Medical Journal Volume 16 ; 16 ; >
-      au < crawling ; exists ; 2017 ; Sultan Qaboos University Medical Journal Volume 17 ; 17 ; >
+      au < frozen ; exists ; 2016 ; Sultan Qaboos University Medical Journal Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2017 ; Sultan Qaboos University Medical Journal Volume 17 ; 17 ; >
       au < finished ; manifest ; 2018 ; Sultan Qaboos University Medical Journal Volume 18 ; 18 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; Sultan Qaboos University Medical Journal Volume 19 ; 19 ; >
+      au < frozen ; exists ; 2019 ; Sultan Qaboos University Medical Journal Volume 19 ; 19 ; >
       au < finished ; manifest ; 2020 ; Sultan Qaboos University Medical Journal Volume 20 ; 20 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2021 ; Sultan Qaboos University Medical Journal Volume 21 ; 21 ; >
-      au < crawling ; exists ; 2022 ; Sultan Qaboos University Medical Journal Volume 22 ; 22 ; >
-      au < crawling ; exists ; 2023 ; Sultan Qaboos University Medical Journal Volume 23 ; 23 ; >
-      au < crawling ; exists ; 2024 ; Sultan Qaboos University Medical Journal Volume 24 ; 24 ; >
+      au < frozen ; exists ; 2021 ; Sultan Qaboos University Medical Journal Volume 21 ; 21 ; >
+      au < frozen ; exists ; 2022 ; Sultan Qaboos University Medical Journal Volume 22 ; 22 ; >
+      au < frozen ; exists ; 2023 ; Sultan Qaboos University Medical Journal Volume 23 ; 23 ; >
+      au < frozen ; exists ; 2024 ; Sultan Qaboos University Medical Journal Volume 24 ; 24 ; >
       au < crawling ; exists ; 2025 ; Sultan Qaboos University Medical Journal Volume 25 ; 25 ; >
       au < crawling ; exists ; 2026 ; Sultan Qaboos University Medical Journal Volume 26 ; 26 ; >
 
@@ -137,9 +137,9 @@
       param[base_url] = https://squlsj.squ.edu.om/
       param[journal_abbr] = journal
 
-      au < crawling ; exists ; 2022 ; Sultan Qaboos University Legal Studies Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2023 ; Sultan Qaboos University Legal Studies Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2024 ; Sultan Qaboos University Legal Studies Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2022 ; Sultan Qaboos University Legal Studies Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2023 ; Sultan Qaboos University Legal Studies Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2024 ; Sultan Qaboos University Legal Studies Volume 3 ; 3 ; >
       au < crawling ; exists ; 2025 ; Sultan Qaboos University Legal Studies Volume 4 ; 4 ; >
       au < crawling ; exists ; 2026 ; Sultan Qaboos University Legal Studies Volume 5 ; 5 ; >
 
@@ -155,26 +155,26 @@
       param[base_url] = https://tjer.squ.edu.om/
       param[journal_abbr] = journal
 
-      au < crawling ; exists ; 2004 ; The Journal of Engineering Research Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2005 ; The Journal of Engineering Research Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2006 ; The Journal of Engineering Research Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2007 ; The Journal of Engineering Research Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2008 ; The Journal of Engineering Research Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2009 ; The Journal of Engineering Research Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2010 ; The Journal of Engineering Research Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2004 ; The Journal of Engineering Research Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2005 ; The Journal of Engineering Research Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2006 ; The Journal of Engineering Research Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2007 ; The Journal of Engineering Research Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2008 ; The Journal of Engineering Research Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2009 ; The Journal of Engineering Research Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2010 ; The Journal of Engineering Research Volume 7 ; 7 ; >
       au < finished ; manifest ; 2011 ; The Journal of Engineering Research Volume 8 ; 8 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2012 ; The Journal of Engineering Research Volume 9 ; 9 ; >
-      au < crawling ; exists ; 2013 ; The Journal of Engineering Research Volume 10 ; 10 ; >
-      au < crawling ; exists ; 2014 ; The Journal of Engineering Research Volume 11 ; 11 ; >
-      au < crawling ; exists ; 2015 ; The Journal of Engineering Research Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2016 ; The Journal of Engineering Research Volume 13 ; 13 ; >
-      au < crawling ; exists ; 2017 ; The Journal of Engineering Research Volume 14 ; 14 ; >
-      au < crawling ; exists ; 2018 ; The Journal of Engineering Research Volume 15 ; 15 ; >
-      au < crawling ; exists ; 2019 ; The Journal of Engineering Research Volume 16 ; 16 ; >
-      au < crawling ; exists ; 2020 ; The Journal of Engineering Research Volume 17 ; 17 ; >
-      au < crawling ; exists ; 2021 ; The Journal of Engineering Research Volume 18 ; 18 ; >
-      au < crawling ; exists ; 2022 ; The Journal of Engineering Research Volume 19 ; 19 ; >
-      au < crawling ; exists ; 2023 ; The Journal of Engineering Research Volume 20 ; 20 ; >
+      au < frozen ; exists ; 2012 ; The Journal of Engineering Research Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2013 ; The Journal of Engineering Research Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2014 ; The Journal of Engineering Research Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2015 ; The Journal of Engineering Research Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2016 ; The Journal of Engineering Research Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2017 ; The Journal of Engineering Research Volume 14 ; 14 ; >
+      au < frozen ; exists ; 2018 ; The Journal of Engineering Research Volume 15 ; 15 ; >
+      au < frozen ; exists ; 2019 ; The Journal of Engineering Research Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2020 ; The Journal of Engineering Research Volume 17 ; 17 ; >
+      au < frozen ; exists ; 2021 ; The Journal of Engineering Research Volume 18 ; 18 ; >
+      au < frozen ; exists ; 2022 ; The Journal of Engineering Research Volume 19 ; 19 ; >
+      au < frozen ; exists ; 2023 ; The Journal of Engineering Research Volume 20 ; 20 ; >
       au < finished ; manifest ; 2024 ; The Journal of Engineering Research Volume 21 ; 21 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2025 ; The Journal of Engineering Research Volume 22 ; 22 ; >
       au < crawling ; exists ; 2026 ; The Journal of Engineering Research Volume 23 ; 23 ; >
@@ -191,36 +191,36 @@
       param[base_url] = https://jams.squ.edu.om/
       param[journal_abbr] = home
 
-      au < crawling ; exists ; 1996 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 1 ; 1 ; >
-      au < crawling ; exists ; 1997 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 2 ; 2 ; >
-      au < crawling ; exists ; 1998 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 3 ; 3 ; >
-      au < crawling ; exists ; 1999 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2000 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2001 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2002 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2003 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 8 ; 8 ; >
-      au < crawling ; exists ; 2004 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 9 ; 9 ; >
-      au < crawling ; exists ; 2005 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 10 ; 10 ; >
-      au < crawling ; exists ; 2006 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 11 ; 11 ; >
-      au < crawling ; exists ; 2007 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2008 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 13 ; 13 ; >
-      au < crawling ; exists ; 2009 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 14 ; 14 ; >
-      au < crawling ; exists ; 2010 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 15 ; 15 ; >
-      au < crawling ; exists ; 2011 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 16 ; 16 ; >
-      au < crawling ; exists ; 2012 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 17 ; 17 ; >
-      au < crawling ; exists ; 2013 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 18 ; 18 ; >
-      au < crawling ; exists ; 2014 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 19 ; 19 ; >
-      au < crawling ; exists ; 2015 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 20 ; 20 ; >
+      au < frozen ; exists ; 1996 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 1 ; 1 ; >
+      au < frozen ; exists ; 1997 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 2 ; 2 ; >
+      au < frozen ; exists ; 1998 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 3 ; 3 ; >
+      au < frozen ; exists ; 1999 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2000 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2001 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2002 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2003 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2004 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2005 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2006 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2007 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2008 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2009 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 14 ; 14 ; >
+      au < frozen ; exists ; 2010 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 15 ; 15 ; >
+      au < frozen ; exists ; 2011 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2012 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 17 ; 17 ; >
+      au < frozen ; exists ; 2013 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 18 ; 18 ; >
+      au < frozen ; exists ; 2014 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 19 ; 19 ; >
+      au < frozen ; exists ; 2015 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 20 ; 20 ; >
       au < ready ; exists ; 2016 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 21 ; 21 ; >
-      au < crawling ; exists ; 2017 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 22 ; 22 ; >
-      au < crawling ; exists ; 2018 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 23 ; 23 ; >
-      au < crawling ; exists ; 2019 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 24 ; 24 ; >
-      au < crawling ; exists ; 2020 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 25 ; 25 ; >
-      au < crawling ; exists ; 2021 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 26 ; 26 ; >
-      au < crawling ; exists ; 2022 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 27 ; 27 ; >
-      au < crawling ; exists ; 2023 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 28 ; 28 ; >
-      au < crawling ; exists ; 2024 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 29 ; 29 ; >
-      au < crawling ; exists ; 2025 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 30 ; 30 ; >
+      au < frozen ; exists ; 2017 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 22 ; 22 ; >
+      au < frozen ; exists ; 2018 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 23 ; 23 ; >
+      au < frozen ; exists ; 2019 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 24 ; 24 ; >
+      au < frozen ; exists ; 2020 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 25 ; 25 ; >
+      au < frozen ; exists ; 2021 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 26 ; 26 ; >
+      au < frozen ; exists ; 2022 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 27 ; 27 ; >
+      au < frozen ; exists ; 2023 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 28 ; 28 ; >
+      au < frozen ; exists ; 2024 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 29 ; 29 ; >
+      au < frozen ; exists ; 2025 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 30 ; 30 ; >
       au < crawling ; exists ; 2026 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 31 ; 31 ; >
 
   }
