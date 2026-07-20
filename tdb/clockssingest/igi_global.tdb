@@ -1266,7 +1266,7 @@
     au < finished ; manifest ; 2023 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 14 ; 14 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 15 ; 15 ; https://www.igi-global.com/ ; >
     au < deepCrawl ; exists ; 2025 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 16 ; 16 ; https://www.igi-global.com/ ; >
-    au < ready ; exists ; 2026 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 17 ; 17 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2026 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 17 ; 17 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -1461,7 +1461,7 @@
     au < finished ; manifest ; 2023 ; International Journal of Electronic Government Research (IJEGR) Volume 19 ; 19 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; International Journal of Electronic Government Research (IJEGR) Volume 20 ; 20 ; https://www.igi-global.com/ ; >
     au < deepCrawl ; exists ; 2025 ; International Journal of Electronic Government Research (IJEGR) Volume 21 ; 21 ; https://www.igi-global.com/ ; >
-    au < ready ; exists ; 2026 ; International Journal of Electronic Government Research (IJEGR) Volume 22 ; 22 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2026 ; International Journal of Electronic Government Research (IJEGR) Volume 22 ; 22 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -2386,7 +2386,7 @@
     au < finished ; manifest ; 2023 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 19 ; 19 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 20 ; 20 ; https://www.igi-global.com/ ; >
     au < deepCrawl ; exists ; 2025 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 21 ; 21 ; https://www.igi-global.com/ ; >
-    au < ready ; exists ; 2026 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 22 ; 22 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2026 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 22 ; 22 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -3925,7 +3925,7 @@
     au < finished ; manifest ; 2023 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 13 ; 13 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 14 ; 14 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2025 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 15 ; 15 ; https://www.igi-global.com/ ; >
-    au < ready ; exists ; 2026 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 16 ; 16 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2026 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 16 ; 16 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -4381,7 +4381,7 @@
     au < finished ; manifest ; 2023 ; Journal of Organizational and End User Computing (JOEUC) Volume 35 ; 35 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; Journal of Organizational and End User Computing (JOEUC) Volume 36 ; 36 ; https://www.igi-global.com/ ; >
     au < notReady ; exists ; 2025 ; Journal of Organizational and End User Computing (JOEUC) Volume 37 ; 37 ; https://www.igi-global.com/ ; > #URL MIME type mismatch, https://www.igi-global.com/pdf.aspx?tid=382135&ptid=362090&ctid=16&t=Retraction+Notice%3A+RETRACTED%3A+Sentiment+Analysis+and+Consumer+Purchase+Intention+Prediction+Based+on+BERT+and+DBLSTM&isxn=9798337311579
-    au < ready ; exists ; 2026 ; Journal of Organizational and End User Computing (JOEUC) Volume 38 ; 38 ; https://www.igi-global.com/ ; > #URL MIME type mismatch, https://www.igi-global.com/pdf.aspx?tid=382135&ptid=362090&ctid=16&t=Retraction+Notice%3A+RETRACTED%3A+Sentiment+Analysis+and+Consumer+Purchase+Intention+Prediction+Based+on+BERT+and+DBLSTM&isxn=9798338311579
+    au < crawling ; exists ; 2026 ; Journal of Organizational and End User Computing (JOEUC) Volume 38 ; 38 ; https://www.igi-global.com/ ; > #URL MIME type mismatch, https://www.igi-global.com/pdf.aspx?tid=382135&ptid=362090&ctid=16&t=Retraction+Notice%3A+RETRACTED%3A+Sentiment+Analysis+and+Consumer+Purchase+Intention+Prediction+Based+on+BERT+and+DBLSTM&isxn=9798338311579
 
   }
 
@@ -5224,7 +5224,7 @@
       au < finished ; manifest ; 2023 ; International Journal of Software Innovation (IJSI) Volume 11 ; 11 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2024 ; International Journal of Software Innovation (IJSI) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2025 ; International Journal of Software Innovation (IJSI) Volume 13 ; 13 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2026 ; International Journal of Software Innovation (IJSI) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2026 ; International Journal of Software Innovation (IJSI) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
 
   }
 
