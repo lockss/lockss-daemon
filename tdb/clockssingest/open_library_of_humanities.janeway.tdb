@@ -576,11 +576,11 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 15 ; Digital Medievalist Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 16 ; Digital Medievalist Volume 2020 ; 2020 ; >
       au < finished ; manifest ; 2021 ; 17 ; Digital Medievalist Volume 2021 ; 2021 ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2022 ; 18 ; Digital Medievalist Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2022 ; 18 ; Digital Medievalist Volume 2022 ; 2022 ; >
       au < finished ; manifest ; 2023 ; 19 ; Digital Medievalist Volume 2023 ; 2023 ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2024 ; 20 ; Digital Medievalist Volume 2024 ; 2024 ; >
-      au < deepCrawl ; exists ; 2025 ; 21 ; Digital Medievalist Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; 22 ; Digital Medievalist Volume 2026 ; 2026 ; >
+      au < frozen ; exists ; 2024 ; 20 ; Digital Medievalist Volume 2024 ; 2024 ; >
+      au < frozen ; exists ; 2025 ; 21 ; Digital Medievalist Volume 2025 ; 2025 ; >
+      #Moved to Open Edition See https://journals.openedition.org/digitalmedievalist/
 
   }
 
@@ -623,7 +623,7 @@
 
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://www.genealogy-critique.net/
-      #volume 15-20 processed as Ubiquity platform
+      #volume 15-20 processed on Ubiquity platform as Le foucaldien
 
       au < doNotProcess ; exists ; 2015 ; 1 ; Genealogy+Critique Volume 1 ; 2015 ; >
       au < doNotProcess ; exists ; 2016 ; 2 ; Genealogy+Critique Volume 2 ; 2016 ; >
@@ -649,6 +649,7 @@
 
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://www.genealogy-critique.net/
+      #volume 15-20 processed on Ubiquity platform as Le foucaldien
 
       au < doNotProcess ; doNotProcess ; 2015 ; 1 ; Le foucaldien Volume 2015 ; 2015 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2 ; Le foucaldien Volume 2016 ; 2016 ; >
@@ -792,39 +793,380 @@
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://quakerstudies.openlibhums.org/
 
-      #Not added to contract. Match with GLN file for now. If added, process 2021 and forward
+      #Process 2021 and forward
 
-      au < doNotProcess ; exists ; 1996 ; 1 ; Quaker Studies Volume 1996 ; 1996 ; > #Articles dated 2014
-      au < doNotProcess ; exists ; 1997 ; 2 ; Quaker Studies Volume 1997 ; 1997 ; > #Articles dated 2014
-      au < doNotProcess ; exists ; 1998 ; 3 ; Quaker Studies Volume 1998 ; 1998 ; > #Articles dated 2014
-      au < doNotProcess ; exists ; 1999 ; 4 ; Quaker Studies Volume 1999 ; 1999 ; > #Articles dated 2014
-      au < doNotProcess ; exists ; 2000 ; 5 ; Quaker Studies Volume 2000 ; 2000 ; > #Articles dated 2014
-      au < doNotProcess ; exists ; 2001 ; 6 ; Quaker Studies Volume 2001 ; 2001 ; > #Articles dated 2014
-      au < doNotProcess ; exists ; 2002 ; 7 ; Quaker Studies Volume 2002 ; 2002 ; > #Articles dated 2014
-      au < doNotProcess ; exists ; 2003 ; 8 ; Quaker Studies Volume 2003 ; 2003 ; > #Articles dated 2014
-      au < doNotProcess ; exists ; 2004 ; 9 ; Quaker Studies Volume 2004 ; 2004 ; > #Articles dated 2014
-      au < doNotProcess ; exists ; 2005 ; 10 ; Quaker Studies Volume 2005 ; 2005 ; > #Articles dated 2014
-      au < doNotProcess ; exists ; 2006 ; 11 ; Quaker Studies Volume 2006 ; 2006 ; > #Articles dated 2014
-      au < doNotProcess ; exists ; 2007 ; 12 ; Quaker Studies Volume 2007 ; 2007 ; >
-      au < doNotProcess ; exists ; 2008 ; 13 ; Quaker Studies Volume 2008 ; 2008 ; >
-      au < doNotProcess ; exists ; 2009 ; 14 ; Quaker Studies Volume 2009 ; 2009 ; >
-      au < doNotProcess ; exists ; 2010 ; 15 ; Quaker Studies Volume 2010 ; 2010 ; >
-      au < doNotProcess ; exists ; 2011 ; 16 ; Quaker Studies Volume 2011 ; 2011 ; >
-      au < doNotProcess ; exists ; 2012 ; 17 ; Quaker Studies Volume 2012 ; 2012 ; >
-      au < doNotProcess ; exists ; 2013 ; 18 ; Quaker Studies Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 19 ; Quaker Studies Volume 2014 ; 2014 ; >
+      au < doNotProcess ; exists ; 1996 ;  ; Quaker Studies Volume 1996 ; 1996 ; > #Articles dated 2014. V 01
+      au < doNotProcess ; exists ; 1997 ;  ; Quaker Studies Volume 1997 ; 1997 ; > #Articles dated 2014. V 02
+      au < doNotProcess ; exists ; 1998 ;  ; Quaker Studies Volume 1998 ; 1998 ; > #Articles dated 2014. V 03
+      au < doNotProcess ; exists ; 1999 ;  ; Quaker Studies Volume 1999 ; 1999 ; > #Articles dated 2014. V 04
+      au < doNotProcess ; exists ; 2000 ;  ; Quaker Studies Volume 2000 ; 2000 ; > #Articles dated 2014. V 05
+      au < doNotProcess ; exists ; 2001 ;  ; Quaker Studies Volume 2001 ; 2001 ; > #Articles dated 2014. V 06
+      au < doNotProcess ; exists ; 2002 ;  ; Quaker Studies Volume 2002 ; 2002 ; > #Articles dated 2014. V 07
+      au < doNotProcess ; exists ; 2003 ;  ; Quaker Studies Volume 2003 ; 2003 ; > #Articles dated 2014. V 08
+      au < doNotProcess ; exists ; 2004 ;  ; Quaker Studies Volume 2004 ; 2004 ; > #Articles dated 2014. V 09
+      au < doNotProcess ; exists ; 2005 ;  ; Quaker Studies Volume 2005 ; 2005 ; > #Articles dated 2014. V 10
+      au < doNotProcess ; exists ; 2006 ;  ; Quaker Studies Volume 2006 ; 2006 ; > #Articles dated 2014. V 11
+      au < doNotProcess ; exists ; 2007 ;  ; Quaker Studies Volume 2007 ; 2007 ; > # V 12
+      au < doNotProcess ; exists ; 2008 ;  ; Quaker Studies Volume 2008 ; 2008 ; > # V 13
+      au < doNotProcess ; exists ; 2009 ;  ; Quaker Studies Volume 2009 ; 2009 ; > # V 14
+      au < doNotProcess ; exists ; 2010 ;  ; Quaker Studies Volume 2010 ; 2010 ; > # V 15
+      au < doNotProcess ; exists ; 2011 ;  ; Quaker Studies Volume 2011 ; 2011 ; > # V 16
+      au < doNotProcess ; exists ; 2012 ;  ; Quaker Studies Volume 2012 ; 2012 ; > # V 17
+      au < doNotProcess ; exists ; 2013 ;  ; Quaker Studies Volume 2013 ; 2013 ; > # V 18
+      au < doNotProcess ; exists ; 2014 ;  ; Quaker Studies Volume 2014 ; 2014 ; > # V 19
       au < doNotProcess ; exists ; 2015 ; 20 ; Quaker Studies Volume 2015 ; 2015 ; >
       au < doNotProcess ; exists ; 2016 ; 21 ; Quaker Studies Volume 2016 ; 2016 ; >
       au < doNotProcess ; exists ; 2017 ; 22 ; Quaker Studies Volume 2017 ; 2017 ; >
       au < doNotProcess ; exists ; 2018 ; 23 ; Quaker Studies Volume 2018 ; 2018 ; >
       au < doNotProcess ; exists ; 2019 ; 24 ; Quaker Studies Volume 2019 ; 2019 ; >
       au < doNotProcess ; exists ; 2020 ; 25 ; Quaker Studies Volume 2020 ; 2020 ; >
-      au < doNotProcess ; exists ; 2021 ; 26 ; Quaker Studies Volume 2021 ; 2021 ; >
-      au < doNotProcess ; exists ; 2022 ; 27 ; Quaker Studies Volume 2022 ; 2022 ; > # Does not pass MPC
-      au < doNotProcess ; exists ; 2023 ; 28 ; Quaker Studies Volume 2023 ; 2023 ; > # Does not pass MPC
-      au < doNotProcess ; exists ; 2024 ; 29 ; Quaker Studies Volume 2024 ; 2024 ; >
-      au < doNotProcess ; exists ; 2025 ; 30 ; Quaker Studies Volume 2025 ; 2025 ; >
-      au < doNotProcess ; exists ; 2026 ; 31 ; Quaker Studies Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2021 ; 26 ; Quaker Studies Volume 2021 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; 27 ; Quaker Studies Volume 2022 ; 2022 ; > # Does not pass MPC
+      au < manifest ; exists ; 2023 ; 28 ; Quaker Studies Volume 2023 ; 2023 ; > # Does not pass MPC
+      au < manifest ; exists ; 2024 ; 29 ; Quaker Studies Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; 30 ; Quaker Studies Volume 2025 ; 2025 ; >
+      au < exists ; exists ; 2026 ; 31 ; Quaker Studies Volume 2026 ; 2026 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = [in]Transition ;
+        eissn = 2469-4312
+      >
+
+      #published 2014-2026
+      param[base_url] = https://intransition.openlibhums.org/
+
+      au < manifest ; exists ; 2014 ; 1 ; [in]Transition Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; 2 ; [in]Transition Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; 3 ; [in]Transition Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; 4 ; [in]Transition Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; 5 ; [in]Transition Volume 2018 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; 6 ; [in]Transition Volume 2019 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; 7 ; [in]Transition Volume 2020 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; 8 ; [in]Transition Volume 2021 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; 9 ; [in]Transition Volume 2022 ; 2022 ; >
+      au < manifest ; exists ; 2023 ; 10 ; [in]Transition Volume 2023 ; 2023 ; >
+      au < manifest ; exists ; 2024 ; 11 ; [in]Transition Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; 12 ; [in]Transition Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 13 ; [in]Transition Volume 2026 ; 2026 ; >
+
+  }
+
+  {
+
+      title <
+        name = Free & Equal: A Journal of Ethics and Public Affairs ;
+        eissn = 2977-5930
+      >
+
+      #published 2025-2026
+      param[base_url] = https://freeandequaljournal.org/
+
+      au < manifest ; exists ; 2025 ; 1 ; Free & Equal: A Journal of Ethics and Public Affairs Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 2 ; Free & Equal: A Journal of Ethics and Public Affairs Volume 2026 ; 2026 ; >
+
+  }
+
+  {
+
+      title <
+        name = International Labour Review ;
+        eissn = 1564-913X
+      >
+
+      #published 1921-2026
+      param[base_url] = https://en.ilr-rit.org/
+
+      au < manifest ; exists ; 1921 ; 1 ; International Labour Review Volume 1921 ; 1921 ; >
+      au < manifest ; exists ; 1922 ; 2 ; International Labour Review Volume 1922 ; 1922 ; >
+      au < manifest ; exists ; 1923 ; 3 ; International Labour Review Volume 1923 ; 1923 ; >
+      au < manifest ; exists ; 1924 ; 4 ; International Labour Review Volume 1924 ; 1924 ; >
+      au < manifest ; exists ; 1925 ; 5 ; International Labour Review Volume 1925 ; 1925 ; >
+      au < manifest ; exists ; 1926 ; 6 ; International Labour Review Volume 1926 ; 1926 ; >
+      au < manifest ; exists ; 1927 ; 7 ; International Labour Review Volume 1927 ; 1927 ; >
+      au < manifest ; exists ; 1928 ; 8 ; International Labour Review Volume 1928 ; 1928 ; >
+      au < manifest ; exists ; 1929 ; 9 ; International Labour Review Volume 1929 ; 1929 ; >
+      au < manifest ; exists ; 1930 ; 10 ; International Labour Review Volume 1930 ; 1930 ; >
+      au < manifest ; exists ; 1931 ; 11 ; International Labour Review Volume 1931 ; 1931 ; >
+      au < manifest ; exists ; 1932 ; 12 ; International Labour Review Volume 1932 ; 1932 ; >
+      au < manifest ; exists ; 1933 ; 13 ; International Labour Review Volume 1933 ; 1933 ; >
+      au < manifest ; exists ; 1934 ; 14 ; International Labour Review Volume 1934 ; 1934 ; >
+      au < manifest ; exists ; 1935 ; 15 ; International Labour Review Volume 1935 ; 1935 ; >
+      au < manifest ; exists ; 1936 ; 16 ; International Labour Review Volume 1936 ; 1936 ; >
+      au < manifest ; exists ; 1937 ; 17 ; International Labour Review Volume 1937 ; 1937 ; >
+      au < manifest ; exists ; 1938 ; 18 ; International Labour Review Volume 1938 ; 1938 ; >
+      au < manifest ; exists ; 1939 ; 19 ; International Labour Review Volume 1939 ; 1939 ; >
+      au < manifest ; exists ; 1940 ; 20 ; International Labour Review Volume 1940 ; 1940 ; >
+      au < manifest ; exists ; 1941 ; 21 ; International Labour Review Volume 1941 ; 1941 ; >
+      au < manifest ; exists ; 1942 ; 22 ; International Labour Review Volume 1942 ; 1942 ; >
+      au < manifest ; exists ; 1943 ; 23 ; International Labour Review Volume 1943 ; 1943 ; >
+      au < manifest ; exists ; 1944 ; 24 ; International Labour Review Volume 1944 ; 1944 ; >
+      au < manifest ; exists ; 1945 ; 25 ; International Labour Review Volume 1945 ; 1945 ; >
+      au < manifest ; exists ; 1946 ; 26 ; International Labour Review Volume 1946 ; 1946 ; >
+      au < manifest ; exists ; 1947 ; 27 ; International Labour Review Volume 1947 ; 1947 ; >
+      au < manifest ; exists ; 1948 ; 28 ; International Labour Review Volume 1948 ; 1948 ; >
+      au < manifest ; exists ; 1949 ; 29 ; International Labour Review Volume 1949 ; 1949 ; >
+      au < manifest ; exists ; 1950 ; 30 ; International Labour Review Volume 1950 ; 1950 ; >
+      au < manifest ; exists ; 1951 ; 31 ; International Labour Review Volume 1951 ; 1951 ; >
+      au < manifest ; exists ; 1952 ; 32 ; International Labour Review Volume 1952 ; 1952 ; >
+      au < manifest ; exists ; 1953 ; 33 ; International Labour Review Volume 1953 ; 1953 ; >
+      au < manifest ; exists ; 1954 ; 34 ; International Labour Review Volume 1954 ; 1954 ; >
+      au < manifest ; exists ; 1955 ; 35 ; International Labour Review Volume 1955 ; 1955 ; >
+      au < manifest ; exists ; 1956 ; 36 ; International Labour Review Volume 1956 ; 1956 ; >
+      au < manifest ; exists ; 1957 ; 37 ; International Labour Review Volume 1957 ; 1957 ; >
+      au < manifest ; exists ; 1958 ; 38 ; International Labour Review Volume 1958 ; 1958 ; >
+      au < manifest ; exists ; 1959 ; 39 ; International Labour Review Volume 1959 ; 1959 ; >
+      au < manifest ; exists ; 1960 ; 40 ; International Labour Review Volume 1960 ; 1960 ; >
+      au < manifest ; exists ; 1961 ; 41 ; International Labour Review Volume 1961 ; 1961 ; >
+      au < manifest ; exists ; 1962 ; 42 ; International Labour Review Volume 1962 ; 1962 ; >
+      au < manifest ; exists ; 1963 ; 43 ; International Labour Review Volume 1963 ; 1963 ; >
+      au < manifest ; exists ; 1964 ; 44 ; International Labour Review Volume 1964 ; 1964 ; >
+      au < manifest ; exists ; 1965 ; 45 ; International Labour Review Volume 1965 ; 1965 ; >
+      au < manifest ; exists ; 1966 ; 46 ; International Labour Review Volume 1966 ; 1966 ; >
+      au < manifest ; exists ; 1967 ; 47 ; International Labour Review Volume 1967 ; 1967 ; >
+      au < manifest ; exists ; 1968 ; 48 ; International Labour Review Volume 1968 ; 1968 ; >
+      au < manifest ; exists ; 1969 ; 49 ; International Labour Review Volume 1969 ; 1969 ; >
+      au < manifest ; exists ; 1970 ; 50 ; International Labour Review Volume 1970 ; 1970 ; >
+      au < manifest ; exists ; 1971 ; 51 ; International Labour Review Volume 1971 ; 1971 ; >
+      au < manifest ; exists ; 1972 ; 52 ; International Labour Review Volume 1972 ; 1972 ; >
+      au < manifest ; exists ; 1973 ; 53 ; International Labour Review Volume 1973 ; 1973 ; >
+      au < manifest ; exists ; 1974 ; 54 ; International Labour Review Volume 1974 ; 1974 ; >
+      au < manifest ; exists ; 1975 ; 55 ; International Labour Review Volume 1975 ; 1975 ; >
+      au < manifest ; exists ; 1976 ; 56 ; International Labour Review Volume 1976 ; 1976 ; >
+      au < manifest ; exists ; 1977 ; 57 ; International Labour Review Volume 1977 ; 1977 ; >
+      au < manifest ; exists ; 1978 ; 58 ; International Labour Review Volume 1978 ; 1978 ; >
+      au < manifest ; exists ; 1979 ; 59 ; International Labour Review Volume 1979 ; 1979 ; >
+      au < manifest ; exists ; 1980 ; 60 ; International Labour Review Volume 1980 ; 1980 ; >
+      au < manifest ; exists ; 1981 ; 61 ; International Labour Review Volume 1981 ; 1981 ; >
+      au < manifest ; exists ; 1982 ; 62 ; International Labour Review Volume 1982 ; 1982 ; >
+      au < manifest ; exists ; 1983 ; 63 ; International Labour Review Volume 1983 ; 1983 ; >
+      au < manifest ; exists ; 1984 ; 64 ; International Labour Review Volume 1984 ; 1984 ; >
+      au < manifest ; exists ; 1985 ; 65 ; International Labour Review Volume 1985 ; 1985 ; >
+      au < manifest ; exists ; 1986 ; 66 ; International Labour Review Volume 1986 ; 1986 ; >
+      au < manifest ; exists ; 1987 ; 67 ; International Labour Review Volume 1987 ; 1987 ; >
+      au < manifest ; exists ; 1988 ; 68 ; International Labour Review Volume 1988 ; 1988 ; >
+      au < manifest ; exists ; 1989 ; 69 ; International Labour Review Volume 1989 ; 1989 ; >
+      au < manifest ; exists ; 1990 ; 70 ; International Labour Review Volume 1990 ; 1990 ; >
+      au < manifest ; exists ; 1991 ; 71 ; International Labour Review Volume 1991 ; 1991 ; >
+      au < manifest ; exists ; 1992 ; 72 ; International Labour Review Volume 1992 ; 1992 ; >
+      au < manifest ; exists ; 1993 ; 73 ; International Labour Review Volume 1993 ; 1993 ; >
+      au < manifest ; exists ; 1994 ; 74 ; International Labour Review Volume 1994 ; 1994 ; >
+      au < manifest ; exists ; 1995 ; 75 ; International Labour Review Volume 1995 ; 1995 ; >
+      au < manifest ; exists ; 1996 ; 76 ; International Labour Review Volume 1996 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; 77 ; International Labour Review Volume 1997 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; 78 ; International Labour Review Volume 1998 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; 79 ; International Labour Review Volume 1999 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; 80 ; International Labour Review Volume 2000 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; 81 ; International Labour Review Volume 2001 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 82 ; International Labour Review Volume 2002 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 83 ; International Labour Review Volume 2003 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 84 ; International Labour Review Volume 2004 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 85 ; International Labour Review Volume 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 86 ; International Labour Review Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 87 ; International Labour Review Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 88 ; International Labour Review Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 89 ; International Labour Review Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 90 ; International Labour Review Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 91 ; International Labour Review Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 92 ; International Labour Review Volume 2012 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; 93 ; International Labour Review Volume 2013 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; 94 ; International Labour Review Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; 95 ; International Labour Review Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; 96 ; International Labour Review Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; 97 ; International Labour Review Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; 98 ; International Labour Review Volume 2018 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; 99 ; International Labour Review Volume 2019 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; 100 ; International Labour Review Volume 2020 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; 101 ; International Labour Review Volume 2021 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; 102 ; International Labour Review Volume 2022 ; 2022 ; >
+      au < manifest ; exists ; 2023 ; 103 ; International Labour Review Volume 2023 ; 2023 ; >
+      au < manifest ; exists ; 2024 ; 104 ; International Labour Review Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; 105 ; International Labour Review Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 106 ; International Labour Review Volume 2026 ; 2026 ; >
+
+  }
+
+  {
+
+      title <
+        name = Philosophical Logic ;
+        eissn = 2979-1030
+      >
+
+      #published 2026-2026
+      param[base_url] = https://www.philosophical-logic.org/
+
+      au < expected ; exists ; 2026 ; 1 ; Philosophical Logic Volume 2026 ; 2026 ; >
+
+  }
+
+  {
+
+      title <
+        name = Political Philosophy ;
+        eissn = 3033-3830
+      >
+
+      #published 2024-2026
+      param[base_url] = https://politicalphilosophyjournal.org/
+
+      au < exists ; exists ; 2024 ; 1 ; Political Philosophy Volume 2024 ; 2024 ; >
+      au < exists ; exists ; 2025 ; 2 ; Political Philosophy Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 3 ; Political Philosophy Volume 2026 ; 2026 ; >
+
+  }
+
+  {
+
+      title <
+        name = Regeneration: Environment, Art, Culture ;
+        eissn = 3029-0279
+      >
+
+      #published 2024-2026
+      param[base_url] = https://www.regeneration-journal.org/
+
+      au < exists ; exists ; 2024 ; 1 ; Regeneration: Environment, Art, Culture Volume 2024 ; 2024 ; >
+      au < exists ; exists ; 2025 ; 2 ; Regeneration: Environment, Art, Culture Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 3 ; Regeneration: Environment, Art, Culture Volume 2026 ; 2026 ; >
+
+  }
+
+  {
+
+      title <
+        name = Review of the History of Economic Thought and Methodology ;
+        eissn = 3049-9542
+      >
+
+      #published 2024-2026
+      param[base_url] = https://rhetm.org/
+
+      au < exists ; exists ; 2024 ; 1 ; Review of the History of Economic Thought and Methodology Volume 2024 ; 2024 ; >
+      au < exists ; exists ; 2025 ; 2 ; Review of the History of Economic Thought and Methodology Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 3 ; Review of the History of Economic Thought and Methodology Volume 2026 ; 2026 ; >
+
+  }
+
+  {
+
+      title <
+        name = Syntactic Theory and Research ;
+        eissn = 3049-8228
+      >
+
+      #published 2025-2026
+      param[base_url] = https://star-linguistics.org/
+
+      au < exists ; exists ; 2025 ; 1 ; Syntactic Theory and Research Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 2 ; Syntactic Theory and Research Volume 2026 ; 2026 ; >
+
+  }
+
+  {
+
+      title <
+        name = The Hythe Review ;
+        eissn = 2979-2762
+      >
+
+      #published 2026-2026
+      param[base_url] = https://thehythereview.co.uk/
+
+      au < expected ; exists ; 2026 ; 1 ; The Hythe Review Volume 2026 ; 2026 ; >
+
+  }
+
+  {
+
+      title <
+        name = Theory and Social Inquiry ;
+        eissn = 3049-5881
+      >
+
+      #published 2025-2026
+      param[base_url] = https://www.theoryandsocialinquiry.org/
+
+      au < exists ; exists ; 2025 ; 1 ; Theory and Social Inquiry Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 2 ; Theory and Social Inquiry Volume 2026 ; 2026 ; >
+
+  }
+
+  {
+
+      title <
+        name = Zygon: Journal of Religion and Science ;
+        eissn = 1467-9744
+      >
+
+      #published 1966-2026
+      param[base_url] = https://www.zygonjournal.org/
+
+      au < manifest ; exists ; 1966 ; 1 ; Zygon: Journal of Religion and Science Volume 1966 ; 1966 ; >
+      au < manifest ; exists ; 1967 ; 2 ; Zygon: Journal of Religion and Science Volume 1967 ; 1967 ; >
+      au < manifest ; exists ; 1968 ; 3 ; Zygon: Journal of Religion and Science Volume 1968 ; 1968 ; >
+      au < manifest ; exists ; 1969 ; 4 ; Zygon: Journal of Religion and Science Volume 1969 ; 1969 ; >
+      au < manifest ; exists ; 1970 ; 5 ; Zygon: Journal of Religion and Science Volume 1970 ; 1970 ; >
+      au < manifest ; exists ; 1971 ; 6 ; Zygon: Journal of Religion and Science Volume 1971 ; 1971 ; >
+      au < manifest ; exists ; 1972 ; 7 ; Zygon: Journal of Religion and Science Volume 1972 ; 1972 ; >
+      au < manifest ; exists ; 1973 ; 8 ; Zygon: Journal of Religion and Science Volume 1973 ; 1973 ; >
+      au < manifest ; exists ; 1974 ; 9 ; Zygon: Journal of Religion and Science Volume 1974 ; 1974 ; >
+      au < manifest ; exists ; 1975 ; 10 ; Zygon: Journal of Religion and Science Volume 1975 ; 1975 ; >
+      au < manifest ; exists ; 1976 ; 11 ; Zygon: Journal of Religion and Science Volume 1976 ; 1976 ; >
+      au < manifest ; exists ; 1977 ; 12 ; Zygon: Journal of Religion and Science Volume 1977 ; 1977 ; >
+      au < manifest ; exists ; 1978 ; 13 ; Zygon: Journal of Religion and Science Volume 1978 ; 1978 ; >
+      au < manifest ; exists ; 1979 ; 14 ; Zygon: Journal of Religion and Science Volume 1979 ; 1979 ; >
+      au < manifest ; exists ; 1980 ; 15 ; Zygon: Journal of Religion and Science Volume 1980 ; 1980 ; >
+      au < manifest ; exists ; 1981 ; 16 ; Zygon: Journal of Religion and Science Volume 1981 ; 1981 ; >
+      au < manifest ; exists ; 1982 ; 17 ; Zygon: Journal of Religion and Science Volume 1982 ; 1982 ; >
+      au < manifest ; exists ; 1983 ; 18 ; Zygon: Journal of Religion and Science Volume 1983 ; 1983 ; >
+      au < manifest ; exists ; 1984 ; 19 ; Zygon: Journal of Religion and Science Volume 1984 ; 1984 ; >
+      au < manifest ; exists ; 1985 ; 20 ; Zygon: Journal of Religion and Science Volume 1985 ; 1985 ; >
+      au < manifest ; exists ; 1986 ; 21 ; Zygon: Journal of Religion and Science Volume 1986 ; 1986 ; >
+      au < manifest ; exists ; 1987 ; 22 ; Zygon: Journal of Religion and Science Volume 1987 ; 1987 ; >
+      au < manifest ; exists ; 1988 ; 23 ; Zygon: Journal of Religion and Science Volume 1988 ; 1988 ; >
+      au < manifest ; exists ; 1989 ; 24 ; Zygon: Journal of Religion and Science Volume 1989 ; 1989 ; >
+      au < manifest ; exists ; 1990 ; 25 ; Zygon: Journal of Religion and Science Volume 1990 ; 1990 ; >
+      au < manifest ; exists ; 1991 ; 26 ; Zygon: Journal of Religion and Science Volume 1991 ; 1991 ; >
+      au < manifest ; exists ; 1992 ; 27 ; Zygon: Journal of Religion and Science Volume 1992 ; 1992 ; >
+      au < manifest ; exists ; 1993 ; 28 ; Zygon: Journal of Religion and Science Volume 1993 ; 1993 ; >
+      au < manifest ; exists ; 1994 ; 29 ; Zygon: Journal of Religion and Science Volume 1994 ; 1994 ; >
+      au < manifest ; exists ; 1995 ; 30 ; Zygon: Journal of Religion and Science Volume 1995 ; 1995 ; >
+      au < manifest ; exists ; 1996 ; 31 ; Zygon: Journal of Religion and Science Volume 1996 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; 32 ; Zygon: Journal of Religion and Science Volume 1997 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; 33 ; Zygon: Journal of Religion and Science Volume 1998 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; 34 ; Zygon: Journal of Religion and Science Volume 1999 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; 35 ; Zygon: Journal of Religion and Science Volume 2000 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; 36 ; Zygon: Journal of Religion and Science Volume 2001 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 37 ; Zygon: Journal of Religion and Science Volume 2002 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 38 ; Zygon: Journal of Religion and Science Volume 2003 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 39 ; Zygon: Journal of Religion and Science Volume 2004 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 40 ; Zygon: Journal of Religion and Science Volume 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 41 ; Zygon: Journal of Religion and Science Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 42 ; Zygon: Journal of Religion and Science Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 43 ; Zygon: Journal of Religion and Science Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 44 ; Zygon: Journal of Religion and Science Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 45 ; Zygon: Journal of Religion and Science Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 46 ; Zygon: Journal of Religion and Science Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 47 ; Zygon: Journal of Religion and Science Volume 2012 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; 48 ; Zygon: Journal of Religion and Science Volume 2013 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; 49 ; Zygon: Journal of Religion and Science Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; 50 ; Zygon: Journal of Religion and Science Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; 51 ; Zygon: Journal of Religion and Science Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; 52 ; Zygon: Journal of Religion and Science Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; 53 ; Zygon: Journal of Religion and Science Volume 2018 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; 54 ; Zygon: Journal of Religion and Science Volume 2019 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; 55 ; Zygon: Journal of Religion and Science Volume 2020 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; 56 ; Zygon: Journal of Religion and Science Volume 2021 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; 57 ; Zygon: Journal of Religion and Science Volume 2022 ; 2022 ; >
+      au < manifest ; exists ; 2023 ; 58 ; Zygon: Journal of Religion and Science Volume 2023 ; 2023 ; >
+      au < manifest ; exists ; 2024 ; 59 ; Zygon: Journal of Religion and Science Volume 2024 ; 2024 ; >
+      au < exists ; exists ; 2025 ; 60 ; Zygon: Journal of Religion and Science Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 61 ; Zygon: Journal of Religion and Science Volume 2026 ; 2026 ; >
 
   }
 
