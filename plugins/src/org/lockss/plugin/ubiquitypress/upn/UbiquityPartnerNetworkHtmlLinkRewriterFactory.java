@@ -518,21 +518,30 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                 }
               }else if(children.elementAt(i) instanceof TableTag){
                 TableTag table = (TableTag)children.elementAt(i);
-                for(int j = 0; j < table.getChildCount(); j++){
-                  if(table.getChild(j).toPlainTextString().contains("Journal URL") || table.getChild(j).toPlainTextString().contains("Publisher Email")){
-                    TableRow tr = (TableRow)table.getChild(j);
-                    TableColumn[] tcs = tr.getColumns();
-                    for(int k = 0; k < tcs.length; k++){
-                      log.debug3("Current column: " + tcs[k].toPlainTextString());
-                      if(tcs[k].toPlainTextString().contains("Journal URL")){
-                        if(tcs[k+1] != null){
-                          Node urlNode = tcs[k+1];
-                          NodeList urlChildren = urlNode.getChildren();
-                          if(urlNode.getFirstChild() instanceof LinkTag){
-                            LinkTag urlLink = (LinkTag)urlNode.getFirstChild();
-                            String urlText = urlLink.getLink();
-                            urlChildren.removeAll();
-                            urlChildren.add(new TextNode(urlText));
+                //find table that contains dead links on manifest pages
+                if("data".equals(table.getAttribute("class"))){
+                  //iterate through rows
+                  for(int j = 0; j < table.getRowCount(); j++){
+                    //these two rows of Journal URL and Publisher email contains the dead links
+                    if(table.getRow(j).toPlainTextString().contains("Journal URL") || table.getRow(j).toPlainTextString().contains("Publisher Email")){
+                      TableRow tr = table.getRow(j);
+                      TableColumn[] tcs = tr.getColumns();
+                      //iterate through columns
+                      for(int k = 0; k < tcs.length; k++){
+                        log.debug3("Current column: " + tcs[k].toPlainTextString());
+                        if("label".equals(tcs[k].getAttribute("class"))){
+                          //next column should be corresponding value 
+                          if(tcs[k+1] != null && "value".equals(tcs[k+1].getAttribute("class"))){
+                            NodeList urlChildren = tcs[k+1].getChildren();
+                            //get dead link
+                            if(urlChildren != null && urlChildren.elementAt(0) instanceof LinkTag){
+                              LinkTag deadLink = (LinkTag)urlChildren.elementAt(0);
+                              String deadLinkText = deadLink.getStringText();
+                              //remove dead link and replace with dead link text
+                              log.debug3("Removing dead link and replacing with text: " + deadLinkText);
+                              urlChildren.removeAll();
+                              urlChildren.add(new TextNode(deadLinkText));
+                            }
                           }
                         }
                       }
