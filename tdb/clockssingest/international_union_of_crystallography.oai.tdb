@@ -542,7 +542,7 @@
     au < deepCrawl ; exists ; 2024 ; 11 ; IUCrJ Volume 11 (09/2024) ; 2024-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < deepCrawl ; exists ; 2024 ; 11 ; IUCrJ Volume 11 (10/2024) ; 2024-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < deepCrawl ; exists ; 2024 ; 11 ; IUCrJ Volume 11 (11/2024) ; 2024-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; exists ; 2024 ; 11 ; IUCrJ Volume 11 (12/2024) ; 2024-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < doesNotExist ; doesNotExist ; 2024 ; 11 ; IUCrJ Volume 11 (12/2024) ; 2024-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
     au < deepCrawl ; exists ; 2025 ; 12 ; IUCrJ Volume 12 (01/2025) ; 2025-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < deepCrawl ; exists ; 2025 ; 12 ; IUCrJ Volume 12 (02/2025) ; 2025-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
@@ -554,8 +554,8 @@
     au < deepCrawl ; exists ; 2025 ; 12 ; IUCrJ Volume 12 (08/2025) ; 2025-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < deepCrawl ; exists ; 2025 ; 12 ; IUCrJ Volume 12 (09/2025) ; 2025-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < deepCrawl ; exists ; 2025 ; 12 ; IUCrJ Volume 12 (10/2025) ; 2025-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; exists ; 2025 ; 12 ; IUCrJ Volume 12 (11/2025) ; 2025-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; exists ; 2025 ; 12 ; IUCrJ Volume 12 (12/2025) ; 2025-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < doesNotExist ; doesNotExist ; 2025 ; 12 ; IUCrJ Volume 12 (11/2025) ; 2025-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < doesNotExist ; doesNotExist ; 2025 ; 12 ; IUCrJ Volume 12 (12/2025) ; 2025-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
     au < testing ; exists ; 2026 ; 13 ; IUCrJ Volume 13 (01/2026) ; 2026-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < testing ; exists ; 2026 ; 13 ; IUCrJ Volume 13 (02/2026) ; 2026-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
