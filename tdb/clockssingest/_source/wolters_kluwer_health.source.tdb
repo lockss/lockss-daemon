@@ -32,7 +32,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/wolterskluwer-released/
 
     au < readySource ; finished ; 2023 ; Wolters Kluwer Health Source Content 2023 ; 2023 >
-    au < readySource ; frozen ; 2024 ; Wolters Kluwer Health Source Content 2024 ; 2024 >
+    au < readySource ; finished ; 2024 ; Wolters Kluwer Health Source Content 2024 ; 2024 >
     #No more AUs. Moving from year to directory.
     }
 
