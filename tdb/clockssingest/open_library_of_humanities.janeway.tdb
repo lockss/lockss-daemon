@@ -825,7 +825,7 @@
       au < manifest ; exists ; 2023 ; 28 ; Quaker Studies Volume 2023 ; 2023 ; > # Does not pass MPC
       au < manifest ; exists ; 2024 ; 29 ; Quaker Studies Volume 2024 ; 2024 ; >
       au < manifest ; exists ; 2025 ; 30 ; Quaker Studies Volume 2025 ; 2025 ; >
-      au < exists ; exists ; 2026 ; 31 ; Quaker Studies Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2026 ; 31 ; Quaker Studies Volume 2026 ; 2026 ; >
 
   }
 
@@ -852,7 +852,7 @@
       au < manifest ; exists ; 2023 ; 10 ; [in]Transition Volume 2023 ; 2023 ; >
       au < manifest ; exists ; 2024 ; 11 ; [in]Transition Volume 2024 ; 2024 ; >
       au < manifest ; exists ; 2025 ; 12 ; [in]Transition Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; 13 ; [in]Transition Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2026 ; 13 ; [in]Transition Volume 2026 ; 2026 ; >
 
   }
 
@@ -867,7 +867,7 @@
       param[base_url] = https://freeandequaljournal.org/
 
       au < manifest ; exists ; 2025 ; 1 ; Free & Equal: A Journal of Ethics and Public Affairs Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; 2 ; Free & Equal: A Journal of Ethics and Public Affairs Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2026 ; 2 ; Free & Equal: A Journal of Ethics and Public Affairs Volume 2026 ; 2026 ; >
 
   }
 
@@ -986,7 +986,7 @@
       au < manifest ; exists ; 2023 ; 103 ; International Labour Review Volume 2023 ; 2023 ; >
       au < manifest ; exists ; 2024 ; 104 ; International Labour Review Volume 2024 ; 2024 ; >
       au < manifest ; exists ; 2025 ; 105 ; International Labour Review Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; 106 ; International Labour Review Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2026 ; 106 ; International Labour Review Volume 2026 ; 2026 ; >
 
   }
 
@@ -1000,7 +1000,7 @@
       #published 2026-2026
       param[base_url] = https://www.philosophical-logic.org/
 
-      au < expected ; exists ; 2026 ; 1 ; Philosophical Logic Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2026 ; 1 ; Philosophical Logic Volume 2026 ; 2026 ; >
 
   }
 
@@ -1014,9 +1014,9 @@
       #published 2024-2026
       param[base_url] = https://politicalphilosophyjournal.org/
 
-      au < exists ; exists ; 2024 ; 1 ; Political Philosophy Volume 2024 ; 2024 ; >
-      au < exists ; exists ; 2025 ; 2 ; Political Philosophy Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; 3 ; Political Philosophy Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2024 ; 1 ; Political Philosophy Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; 2 ; Political Philosophy Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2026 ; 3 ; Political Philosophy Volume 2026 ; 2026 ; >
 
   }
 
@@ -1030,9 +1030,9 @@
       #published 2024-2026
       param[base_url] = https://www.regeneration-journal.org/
 
-      au < exists ; exists ; 2024 ; 1 ; Regeneration: Environment, Art, Culture Volume 2024 ; 2024 ; >
-      au < exists ; exists ; 2025 ; 2 ; Regeneration: Environment, Art, Culture Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; 3 ; Regeneration: Environment, Art, Culture Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2024 ; 1 ; Regeneration: Environment, Art, Culture Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; 2 ; Regeneration: Environment, Art, Culture Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2026 ; 3 ; Regeneration: Environment, Art, Culture Volume 2026 ; 2026 ; >
 
   }
 
@@ -1046,9 +1046,9 @@
       #published 2024-2026
       param[base_url] = https://rhetm.org/
 
-      au < exists ; exists ; 2024 ; 1 ; Review of the History of Economic Thought and Methodology Volume 2024 ; 2024 ; >
-      au < exists ; exists ; 2025 ; 2 ; Review of the History of Economic Thought and Methodology Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; 3 ; Review of the History of Economic Thought and Methodology Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2024 ; 1 ; Review of the History of Economic Thought and Methodology Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; 2 ; Review of the History of Economic Thought and Methodology Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2026 ; 3 ; Review of the History of Economic Thought and Methodology Volume 2026 ; 2026 ; >
 
   }
 
@@ -1062,8 +1062,8 @@
       #published 2025-2026
       param[base_url] = https://star-linguistics.org/
 
-      au < exists ; exists ; 2025 ; 1 ; Syntactic Theory and Research Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; 2 ; Syntactic Theory and Research Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2025 ; 1 ; Syntactic Theory and Research Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2026 ; 2 ; Syntactic Theory and Research Volume 2026 ; 2026 ; >
 
   }
 
@@ -1077,7 +1077,7 @@
       #published 2026-2026
       param[base_url] = https://thehythereview.co.uk/
 
-      au < expected ; exists ; 2026 ; 1 ; The Hythe Review Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2026 ; 1 ; The Hythe Review Volume 2026 ; 2026 ; >
 
   }
 
@@ -1091,8 +1091,8 @@
       #published 2025-2026
       param[base_url] = https://www.theoryandsocialinquiry.org/
 
-      au < exists ; exists ; 2025 ; 1 ; Theory and Social Inquiry Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; 2 ; Theory and Social Inquiry Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2025 ; 1 ; Theory and Social Inquiry Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2026 ; 2 ; Theory and Social Inquiry Volume 2026 ; 2026 ; >
 
   }
 
@@ -1165,8 +1165,8 @@
       au < manifest ; exists ; 2022 ; 57 ; Zygon: Journal of Religion and Science Volume 2022 ; 2022 ; >
       au < manifest ; exists ; 2023 ; 58 ; Zygon: Journal of Religion and Science Volume 2023 ; 2023 ; >
       au < manifest ; exists ; 2024 ; 59 ; Zygon: Journal of Religion and Science Volume 2024 ; 2024 ; >
-      au < exists ; exists ; 2025 ; 60 ; Zygon: Journal of Religion and Science Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; 61 ; Zygon: Journal of Religion and Science Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2025 ; 60 ; Zygon: Journal of Religion and Science Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2026 ; 61 ; Zygon: Journal of Religion and Science Volume 2026 ; 2026 ; >
 
   }
 
