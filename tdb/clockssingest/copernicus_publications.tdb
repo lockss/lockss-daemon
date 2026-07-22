@@ -358,7 +358,7 @@
       au < deepCrawl ; exists ; 2023 ; 2023 ; Atmospheric Chemistry and Physics Volume 23 ; 23 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Atmospheric Chemistry and Physics Volume 24 ; 24 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Atmospheric Chemistry and Physics Volume 25 ; 25 ; >
-      au < ready ; exists ; 2026 ; 2026 ; Atmospheric Chemistry and Physics Volume 26 ; 26 ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Atmospheric Chemistry and Physics Volume 26 ; 26 ; >
 
   }
 
@@ -571,7 +571,7 @@
       au < deepCrawl ; exists ; 2023 ; 2023 ; Earth System Dynamics Volume 14 ; 14 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Earth System Dynamics Volume 15 ; 15 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Earth System Dynamics Volume 16 ; 16 ; >
-      au < ready ; exists ; 2026 ; 2026 ; Earth System Dynamics Volume 17 ; 17 ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Earth System Dynamics Volume 17 ; 17 ; >
 
   }
 
@@ -852,7 +852,7 @@
       au < deepCrawl ; exists ; 2023 ; 2023 ; Geographica Helvetica Volume 78 ; 78 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Geographica Helvetica Volume 79 ; 79 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Geographica Helvetica Volume 80 ; 80 ; >
-      au < ready ; exists ; 2026 ; 2026 ; Geographica Helvetica Volume 81 ; 81 ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Geographica Helvetica Volume 81 ; 81 ; >
 
   }
 
@@ -874,7 +874,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Geoscience Communication Volume 6 ; 6 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Geoscience Communication Volume 7 ; 7 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Geoscience Communication Volume 8 ; 8 ; >
-      au < ready ; exists ; 2026 ; 2026 ; Geoscience Communication Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Geoscience Communication Volume 9 ; 9 ; >
 
   }
 
@@ -1180,7 +1180,7 @@
       au < deepCrawl ; exists ; 2023 ; 2023 ; Mechanical Sciences Volume 14 ; 14 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Mechanical Sciences Volume 15 ; 15 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Mechanical Sciences Volume 16 ; 16 ; >
-      au < ready ; exists ; 2026 ; 2026 ; Mechanical Sciences Volume 17 ; 17 ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Mechanical Sciences Volume 17 ; 17 ; >
 
   }
 
@@ -1393,7 +1393,7 @@
       au < finished ; finished ; 2021 ; 2021 ; Proceedings of the International Association of Hydrological Sciences Volume 384 ; 384 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Proceedings of the International Association of Hydrological Sciences Volume 385 ; 385 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Proceedings of the International Association of Hydrological Sciences Volume 386 ; 386 ; >
-      au < ready ; exists ; 2026 ; 2026 ; Proceedings of the International Association of Hydrological Sciences Volume 387 ; 387 ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Proceedings of the International Association of Hydrological Sciences Volume 387 ; 387 ; >
 
   }
 
@@ -1708,7 +1708,7 @@
       param[base_url] = https://jecats.copernicus.org/
       param[home_url] = https://www.jecats.net/
 
-      au < ready ; exists ; 2026 ; 2026 ; Journal of Environmentally Compatible Air Transport System Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Journal of Environmentally Compatible Air Transport System Volume 1 ; 1 ; >
 
   }
 

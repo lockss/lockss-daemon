@@ -234,7 +234,7 @@
     au < finished ; manifest ; 2023 ; The Cambridge Journal of Anthropology Volume 41 ; 41 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2024 ; The Cambridge Journal of Anthropology Volume 42 ; 42 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2025 ; The Cambridge Journal of Anthropology Volume 43 ; 43 ; >
-    au < ready ; exists ; 2026 ; The Cambridge Journal of Anthropology Volume 44 ; 44 ; >
+    au < crawling ; exists ; 2026 ; The Cambridge Journal of Anthropology Volume 44 ; 44 ; >
 
   }
 
@@ -289,7 +289,7 @@
     au < finished ; manifest ; 2023 ; Contention Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Contention Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Contention Volume 13 ; 13 ; >
-    au < ready ; exists ; 2026 ; Contention Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2026 ; Contention Volume 14 ; 14 ; >
 
   }
 
@@ -691,7 +691,7 @@
     au < finished ; manifest ; 2023 ; Girlhood Studies Volume 16 ; 16 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; Girlhood Studies Volume 17 ; 17 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Girlhood Studies Volume 18 ; 18 ; >
-    au < ready ; exists ; 2026 ; Girlhood Studies Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2026 ; Girlhood Studies Volume 19 ; 19 ; >
 
   }
 
@@ -920,7 +920,7 @@
     au < finished ; manifest ; 2023 ; Learning and Teaching (LATISS) Volume 16 ; 16 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Learning and Teaching (LATISS) Volume 17 ; 17 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2025 ; Learning and Teaching (LATISS) Volume 18 ; 18 ; >
-    au < ready ; exists ; 2026 ; Learning and Teaching (LATISS) Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2026 ; Learning and Teaching (LATISS) Volume 19 ; 19 ; >
 
   }
 
