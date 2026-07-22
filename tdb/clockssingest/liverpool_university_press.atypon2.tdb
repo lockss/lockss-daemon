@@ -295,7 +295,7 @@
     au < finished ; manifest ; 2023 ; The Byron Journal Volume 51 ; 51 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2024 ; The Byron Journal Volume 52 ; 52 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2025 ; The Byron Journal Volume 53 ; 53 ; >
-    au < manifest ; exists ; 2026 ; The Byron Journal Volume 54 ; 54 ; >
+    au < expected ; exists ; 2026 ; The Byron Journal Volume 54 ; 54 ; >
 
   }
 
@@ -351,7 +351,7 @@
     au < finished ; manifest ; 2001 ; Catalan Review Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2002 ; Catalan Review Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2003 ; Catalan Review Volume 17 ; 17 ; reingest3.clockss.org:8083 >
-    au < exists ; exists ; 2004 ; Catalan Review Volume 18 ; 18 ; >
+    au < doesNotExist ; doesNotExist ; 2004 ; Catalan Review Volume 18 ; 18 ; >
     au < finished ; manifest ; 2005 ; Catalan Review Volume 19 ; 19 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2006 ; Catalan Review Volume 20 ; 20 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2007 ; Catalan Review Volume 21 ; 21 ; reingest4.clockss.org:8082 >
@@ -417,7 +417,7 @@
     au < finished ; manifest ; 2023 ; Contemporary French Civilization Volume 48 ; 48 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2024 ; Contemporary French Civilization Volume 49 ; 49 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2025 ; Contemporary French Civilization Volume 50 ; 50 ; >
-    au < manifest ; exists ; 2026 ; Contemporary French Civilization Volume 51 ; 51 ; >
+    au < expected ; exists ; 2026 ; Contemporary French Civilization Volume 51 ; 51 ; >
 
   }
 
