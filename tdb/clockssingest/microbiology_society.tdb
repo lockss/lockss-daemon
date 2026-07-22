@@ -132,7 +132,7 @@
       au < deepCrawl ; exists ; 2023 ; International Journal of Systematic and Evolutionary Microbiology Volume 73 ; 73 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2024 ; International Journal of Systematic and Evolutionary Microbiology Volume 74 ; 74 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2025 ; International Journal of Systematic and Evolutionary Microbiology Volume 75 ; 75 ; https://www.microbiologyresearch.org/ ; >
-      au < testing ; exists ; 2026 ; International Journal of Systematic and Evolutionary Microbiology Volume 76 ; 76 ; https://www.microbiologyresearch.org/ ; >
+      au < ready ; exists ; 2026 ; International Journal of Systematic and Evolutionary Microbiology Volume 76 ; 76 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
@@ -405,7 +405,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of General Virology Volume 104 ; 104 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of General Virology Volume 105 ; 105 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of General Virology Volume 106 ; 106 ; https://www.microbiologyresearch.org/ ; >
-      au < testing ; exists ; 2026 ; Journal of General Virology Volume 107 ; 107 ; https://www.microbiologyresearch.org/ ; >
+      au < ready ; exists ; 2026 ; Journal of General Virology Volume 107 ; 107 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
@@ -496,7 +496,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Medical Microbiology Volume 72 ; 72 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Medical Microbiology Volume 73 ; 73 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Medical Microbiology Volume 74 ; 74 ; https://www.microbiologyresearch.org/ ; >
-      au < testing ; exists ; 2026 ; Journal of Medical Microbiology Volume 75 ; 75 ; https://www.microbiologyresearch.org/ ; >
+      au < ready ; exists ; 2026 ; Journal of Medical Microbiology Volume 75 ; 75 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
@@ -545,7 +545,7 @@
       au < frozen ; exists ; 2023 ; Microbial Genomics Volume 9 ; 9 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Microbial Genomics Volume 10 ; 10 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2025 ; Microbial Genomics Volume 11 ; 11 ; https://www.microbiologyresearch.org/ ; >
-      au < testing ; exists ; 2026 ; Microbial Genomics Volume 12 ; 12 ; https://www.microbiologyresearch.org/ ; >
+      au < ready ; exists ; 2026 ; Microbial Genomics Volume 12 ; 12 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
@@ -562,11 +562,11 @@
       param[journal_id] = micro
 
       au < manifest ; exists ; 1994 ; Microbiology Volume 140 ; 140 ; https://www.microbiologyresearch.org/ ; >
-      au < manifest ; exists ; 1995 ; Microbiology Volume 141 ; 141 ; https://www.microbiologyresearch.org/ ; >
+      au < ready ; exists ; 1995 ; Microbiology Volume 141 ; 141 ; https://www.microbiologyresearch.org/ ; >
       au < manifest ; exists ; 1996 ; Microbiology Volume 142 ; 142 ; https://www.microbiologyresearch.org/ ; >
-      au < manifest ; exists ; 1997 ; Microbiology Volume 143 ; 143 ; https://www.microbiologyresearch.org/ ; >
-      au < testing ; exists ; 1998 ; Microbiology Volume 144 ; 144 ; https://www.microbiologyresearch.org/ ; >
-      au < testing ; exists ; 1999 ; Microbiology Volume 145 ; 145 ; https://www.microbiologyresearch.org/ ; >
+      au < ready ; exists ; 1997 ; Microbiology Volume 143 ; 143 ; https://www.microbiologyresearch.org/ ; >
+      au < ready ; exists ; 1998 ; Microbiology Volume 144 ; 144 ; https://www.microbiologyresearch.org/ ; >
+      au < ready ; exists ; 1999 ; Microbiology Volume 145 ; 145 ; https://www.microbiologyresearch.org/ ; >
       au < frozen ; exists ; 2000 ; Microbiology Volume 146 ; 146 ; https://www.microbiologyresearch.org/ ; >
       au < frozen ; exists ; 2001 ; Microbiology Volume 147 ; 147 ; https://www.microbiologyresearch.org/ ; >
       au < frozen ; exists ; 2002 ; Microbiology Volume 148 ; 148 ; https://www.microbiologyresearch.org/ ; >
@@ -594,7 +594,7 @@
       au < deepCrawl ; exists ; 2023 ; Microbiology Volume 169 ; 169 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Microbiology Volume 170 ; 170 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2025 ; Microbiology Volume 171 ; 171 ; https://www.microbiologyresearch.org/ ; >
-      au < testing ; exists ; 2026 ; Microbiology Volume 172 ; 172 ; https://www.microbiologyresearch.org/ ; >
+      au < ready ; exists ; 2026 ; Microbiology Volume 172 ; 172 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
