@@ -418,7 +418,7 @@
       au < finished ; manifest ; 2023 ; Learning & Memory Volume 30 ; 30 ; https://learnmem.cshlp.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Learning & Memory Volume 31 ; 31 ; https://learnmem.cshlp.org/ ; >
       au < deepCrawl ; exists ; 2025 ; Learning & Memory Volume 32 ; 32 ; https://learnmem.cshlp.org/ ; >
-      au < notReady ; exists ; 2026 ; Learning & Memory Volume 33 ; 33 ; https://learnmem.cshlp.org/ ; > #Unable to fetch probe permission page, https://learnmem.cshlp.org/content/33/1/a054164.long
+      au < notReady ; exists ; 2026 ; Learning & Memory Volume 33 ; 33 ; https://learnmem.cshlp.org/ ; > #Change platform, Unable to fetch probe permission page, https://learnmem.cshlp.org/content/33/1/a054164.long
 
     }
 
