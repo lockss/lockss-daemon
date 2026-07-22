@@ -79,4 +79,9 @@ public class ClockssNRCResearchPressHtmlHashFilterFactory extends BaseAtyponHtml
     return super.createFilteredInputStream(au, in, encoding, nrcfilters);
   }
 
+  @Override
+  public boolean doTagIDFiltering() {
+    return true;
+  }
+
 }
