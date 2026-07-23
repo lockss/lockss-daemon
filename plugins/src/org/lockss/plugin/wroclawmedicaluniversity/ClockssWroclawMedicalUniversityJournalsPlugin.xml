@@ -3,6 +3,7 @@
         <string>plugin_status</string>
         <string>ready</string>
         <!-- https transition enabled -->
+        <!-- 2026 July: http manifest url return 404 and the decision is made to maintain https only -->
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -10,7 +11,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>2</string>
+        <string>3</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -93,7 +94,6 @@
         <!--http://www.dmp.umed.wroc.pl/en/archive/-->
         <string>au_start_url</string>
         <list>
-            <string>"http://%s/en/archive/", url_host(base_url)</string>
             <string>"https://%s/en/archive/", url_host(base_url)</string>
         </list>
     </entry>
@@ -103,6 +103,7 @@
             <string>"https?://%s/pdf/%d/%s/[^/]+/[^/]+.pdf$", url_host(base_url), year, volume_name</string>
         </list>
     </entry>
+    <!--
     <entry>
         <string>plugin_url_consumer_factory</string>
         <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
@@ -115,12 +116,13 @@
         <string>au_url_normalizer</string>
         <string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>
     </entry>
+    -->
     <entry>
         <string>au_permitted_host_pattern</string>
         <list>
             <string>(fonts|ajax)\.googleapis\.com</string>
-            <string>"cdnjs\.cloudflare\.com"</string>
-            <string>"fonts\.gstatic\.com</string>
+            <string>cdnjs\.cloudflare\.com</string>
+            <string>fonts\.gstatic\.com</string>
         </list>
     </entry>
     <entry>
