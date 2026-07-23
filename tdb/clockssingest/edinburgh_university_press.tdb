@@ -271,7 +271,7 @@
     au < deepCrawl ; exists ; 2023 ; CounterText Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2024 ; CounterText Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2025 ; CounterText Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 2026 ; CounterText Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 2026 ; CounterText Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -478,7 +478,7 @@
     au < finished ; manifest ; 2023 ; Ben Jonson Journal Volume 30 ; 30 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Ben Jonson Journal Volume 31 ; 31 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2025 ; Ben Jonson Journal Volume 32 ; 32 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 2026 ; Ben Jonson Journal Volume 33 ; 33 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 2026 ; Ben Jonson Journal Volume 33 ; 33 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -1273,7 +1273,7 @@
     au < deepCrawl ; exists ; 2023 ; International Research in Children's Literature Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2024 ; International Research in Children's Literature Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2025 ; International Research in Children's Literature Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 2026 ; International Research in Children's Literature Volume 19 ; 19 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 2026 ; International Research in Children's Literature Volume 19 ; 19 ; https://www.euppublishing.com/ ; >
 
   }
 
