@@ -361,7 +361,7 @@
       au < doNotProcess ; 2013 ; 2013 ; Theoretical Roman Archaeology Conference Volume 2013 ; 2013 >
       au < doNotProcess ; 2014 ; 2014 ; Theoretical Roman Archaeology Conference Volume 2014 ; 2014 >
       au < doNotProcess ; 2015 ; 2015 ; Theoretical Roman Archaeology Conference Volume 2015 ; 2015 >
-      au < exists ; 2016 ; 2016 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 >
+      au < manifest ; 2016 ; 2016 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 >
       au < released ; 2017 ; 2017 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 >
       au < doNotProcess ; 2018 ; 1 ; Theoretical Roman Archaeology Journal Volume 1 ; 2018 >
       au < doNotProcess ; 2019 ; 2 ; Theoretical Roman Archaeology Journal Volume 2 ; 2019 >
@@ -825,19 +825,19 @@
       #published 2014-2026
       param[base_url] = https://intransition.openlibhums.org/
 
-      au < exists ; 2014 ; 2014 ; [in]Transition Volume 2014 ; 2014 >
-      au < exists ; 2015 ; 2015 ; [in]Transition Volume 2015 ; 2015 >
-      au < exists ; 2016 ; 2016 ; [in]Transition Volume 2016 ; 2016 >
-      au < exists ; 2017 ; 2017 ; [in]Transition Volume 2017 ; 2017 >
-      au < exists ; 2018 ; 2018 ; [in]Transition Volume 2018 ; 2018 >
-      au < exists ; 2019 ; 2019 ; [in]Transition Volume 2019 ; 2019 >
-      au < exists ; 2020 ; 2020 ; [in]Transition Volume 2020 ; 2020 >
-      au < exists ; 2021 ; 2021 ; [in]Transition Volume 2021 ; 2021 >
-      au < exists ; 2022 ; 2022 ; [in]Transition Volume 2022 ; 2022 >
-      au < exists ; 2023 ; 2023 ; [in]Transition Volume 2023 ; 2023 >
-      au < exists ; 2024 ; 2024 ; [in]Transition Volume 2024 ; 2024 >
-      au < exists ; 2025 ; 2025 ; [in]Transition Volume 2025 ; 2025 >
-      au < expected ; 2026 ; 2026 ; [in]Transition Volume 2026 ; 2026 >
+      au < manifest ; 2014 ; 2014 ; [in]Transition Volume 2014 ; 2014 >
+      au < manifest ; 2015 ; 2015 ; [in]Transition Volume 2015 ; 2015 >
+      au < manifest ; 2016 ; 2016 ; [in]Transition Volume 2016 ; 2016 >
+      au < manifest ; 2017 ; 2017 ; [in]Transition Volume 2017 ; 2017 >
+      au < manifest ; 2018 ; 2018 ; [in]Transition Volume 2018 ; 2018 >
+      au < manifest ; 2019 ; 2019 ; [in]Transition Volume 2019 ; 2019 >
+      au < manifest ; 2020 ; 2020 ; [in]Transition Volume 2020 ; 2020 >
+      au < manifest ; 2021 ; 2021 ; [in]Transition Volume 2021 ; 2021 >
+      au < manifest ; 2022 ; 2022 ; [in]Transition Volume 2022 ; 2022 >
+      au < manifest ; 2023 ; 2023 ; [in]Transition Volume 2023 ; 2023 >
+      au < manifest ; 2024 ; 2024 ; [in]Transition Volume 2024 ; 2024 >
+      au < manifest ; 2025 ; 2025 ; [in]Transition Volume 2025 ; 2025 >
+      au < manifest ; 2026 ; 2026 ; [in]Transition Volume 2026 ; 2026 >
 
   }
 
@@ -851,8 +851,8 @@
       #published 2025-2026
       param[base_url] = https://freeandequaljournal.org/
 
-      au < exists ; 2025 ; 2025 ; Free & Equal: A Journal of Ethics and Public Affairs Volume 2025 ; 2025 >
-      au < expected ; 2026 ; 2026 ; Free & Equal: A Journal of Ethics and Public Affairs Volume 2026 ; 2026 >
+      au < manifest ; 2025 ; 2025 ; Free & Equal: A Journal of Ethics and Public Affairs Volume 2025 ; 2025 >
+      au < manifest ; 2026 ; 2026 ; Free & Equal: A Journal of Ethics and Public Affairs Volume 2026 ; 2026 >
 
   }
 
@@ -947,17 +947,17 @@
       au < exists ; 1999 ; 1999 ; International Labour Review Volume 1999 ; 1999 >
       au < exists ; 2000 ; 2000 ; International Labour Review Volume 2000 ; 2000 >
       au < exists ; 2001 ; 2001 ; International Labour Review Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 2002 ; International Labour Review Volume 2002 ; 2002 >
+      au < manifest ; 2002 ; 2002 ; International Labour Review Volume 2002 ; 2002 >
       au < exists ; 2003 ; 2003 ; International Labour Review Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 2004 ; International Labour Review Volume 2004 ; 2004 >
+      au < manifest ; 2004 ; 2004 ; International Labour Review Volume 2004 ; 2004 >
       au < exists ; 2005 ; 2005 ; International Labour Review Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 2006 ; International Labour Review Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 2007 ; International Labour Review Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 2008 ; International Labour Review Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 2009 ; International Labour Review Volume 2009 ; 2009 >
+      au < manifest ; 2006 ; 2006 ; International Labour Review Volume 2006 ; 2006 >
+      au < manifest ; 2007 ; 2007 ; International Labour Review Volume 2007 ; 2007 >
+      au < manifest ; 2008 ; 2008 ; International Labour Review Volume 2008 ; 2008 >
+      au < manifest ; 2009 ; 2009 ; International Labour Review Volume 2009 ; 2009 >
       au < exists ; 2010 ; 2010 ; International Labour Review Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 2011 ; International Labour Review Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 2012 ; International Labour Review Volume 2012 ; 2012 >
+      au < manifest ; 2011 ; 2011 ; International Labour Review Volume 2011 ; 2011 >
+      au < manifest ; 2012 ; 2012 ; International Labour Review Volume 2012 ; 2012 >
       au < exists ; 2013 ; 2013 ; International Labour Review Volume 2013 ; 2013 >
       au < exists ; 2014 ; 2014 ; International Labour Review Volume 2014 ; 2014 >
       au < exists ; 2015 ; 2015 ; International Labour Review Volume 2015 ; 2015 >
@@ -970,8 +970,8 @@
       au < exists ; 2022 ; 2022 ; International Labour Review Volume 2022 ; 2022 >
       au < exists ; 2023 ; 2023 ; International Labour Review Volume 2023 ; 2023 >
       au < exists ; 2024 ; 2024 ; International Labour Review Volume 2024 ; 2024 >
-      au < exists ; 2025 ; 2025 ; International Labour Review Volume 2025 ; 2025 >
-      au < expected ; 2026 ; 2026 ; International Labour Review Volume 2026 ; 2026 >
+      au < manifest ; 2025 ; 2025 ; International Labour Review Volume 2025 ; 2025 >
+      au < manifest ; 2026 ; 2026 ; International Labour Review Volume 2026 ; 2026 >
 
   }
 
@@ -985,7 +985,7 @@
       #published 2026-2026
       param[base_url] = https://www.philosophical-logic.org/
 
-      au < expected ; 2026 ; 2026 ; Philosophical Logic Volume 2026 ; 2026 >
+      au < manifest ; 2026 ; 2026 ; Philosophical Logic Volume 2026 ; 2026 >
 
   }
 
@@ -999,9 +999,9 @@
       #published 2024-2026
       param[base_url] = https://politicalphilosophyjournal.org/
 
-      au < exists ; 2024 ; 2024 ; Political Philosophy Volume 2024 ; 2024 >
-      au < exists ; 2025 ; 2025 ; Political Philosophy Volume 2025 ; 2025 >
-      au < expected ; 2026 ; 2026 ; Political Philosophy Volume 2026 ; 2026 >
+      au < manifest ; 2024 ; 2024 ; Political Philosophy Volume 2024 ; 2024 >
+      au < manifest ; 2025 ; 2025 ; Political Philosophy Volume 2025 ; 2025 >
+      au < manifest ; 2026 ; 2026 ; Political Philosophy Volume 2026 ; 2026 >
 
   }
 
@@ -1015,9 +1015,9 @@
       #published 2024-2026
       param[base_url] = https://www.regeneration-journal.org/
 
-      au < exists ; 2024 ; 2024 ; Regeneration: Environment, Art, Culture Volume 2024 ; 2024 >
-      au < exists ; 2025 ; 2025 ; Regeneration: Environment, Art, Culture Volume 2025 ; 2025 >
-      au < expected ; 2026 ; 2026 ; Regeneration: Environment, Art, Culture Volume 2026 ; 2026 >
+      au < manifest ; 2024 ; 2024 ; Regeneration: Environment, Art, Culture Volume 2024 ; 2024 >
+      au < manifest ; 2025 ; 2025 ; Regeneration: Environment, Art, Culture Volume 2025 ; 2025 >
+      au < manifest ; 2026 ; 2026 ; Regeneration: Environment, Art, Culture Volume 2026 ; 2026 >
 
   }
 
@@ -1031,9 +1031,9 @@
       #published 2024-2026
       param[base_url] = https://rhetm.org/
 
-      au < exists ; 2024 ; 2024 ; Review of the History of Economic Thought and Methodology Volume 2024 ; 2024 >
-      au < exists ; 2025 ; 2025 ; Review of the History of Economic Thought and Methodology Volume 2025 ; 2025 >
-      au < expected ; 2026 ; 2026 ; Review of the History of Economic Thought and Methodology Volume 2026 ; 2026 >
+      au < manifest ; 2024 ; 2024 ; Review of the History of Economic Thought and Methodology Volume 2024 ; 2024 >
+      au < manifest ; 2025 ; 2025 ; Review of the History of Economic Thought and Methodology Volume 2025 ; 2025 >
+      au < manifest ; 2026 ; 2026 ; Review of the History of Economic Thought and Methodology Volume 2026 ; 2026 >
 
   }
 
@@ -1047,8 +1047,8 @@
       #published 2025-2026
       param[base_url] = https://star-linguistics.org/
 
-      au < exists ; 2025 ; 2025 ; Syntactic Theory and Research Volume 2025 ; 2025 >
-      au < expected ; 2026 ; 2026 ; Syntactic Theory and Research Volume 2026 ; 2026 >
+      au < manifest ; 2025 ; 2025 ; Syntactic Theory and Research Volume 2025 ; 2025 >
+      au < manifest ; 2026 ; 2026 ; Syntactic Theory and Research Volume 2026 ; 2026 >
 
   }
 
@@ -1062,7 +1062,7 @@
       #published 2026-2026
       param[base_url] = https://thehythereview.co.uk/
 
-      au < expected ; 2026 ; 2026 ; The Hythe Review Volume 2026 ; 2026 >
+      au < manifest ; 2026 ; 2026 ; The Hythe Review Volume 2026 ; 2026 >
 
   }
 
@@ -1076,8 +1076,8 @@
       #published 2025-2026
       param[base_url] = https://www.theoryandsocialinquiry.org/
 
-      au < exists ; 2025 ; 2025 ; Theory and Social Inquiry Volume 2025 ; 2025 >
-      au < expected ; 2026 ; 2026 ; Theory and Social Inquiry Volume 2026 ; 2026 >
+      au < manifest ; 2025 ; 2025 ; Theory and Social Inquiry Volume 2025 ; 2025 >
+      au < manifest ; 2026 ; 2026 ; Theory and Social Inquiry Volume 2026 ; 2026 >
 
   }
 
@@ -1091,67 +1091,67 @@
       #published 1966-2026
       param[base_url] = https://www.zygonjournal.org/
 
-      au < exists ; 1966 ; 1966 ; Zygon: Journal of Religion and Science Volume 1966 ; 1966 >
-      au < exists ; 1967 ; 1967 ; Zygon: Journal of Religion and Science Volume 1967 ; 1967 >
-      au < exists ; 1968 ; 1968 ; Zygon: Journal of Religion and Science Volume 1968 ; 1968 >
-      au < exists ; 1969 ; 1969 ; Zygon: Journal of Religion and Science Volume 1969 ; 1969 >
-      au < exists ; 1970 ; 1970 ; Zygon: Journal of Religion and Science Volume 1970 ; 1970 >
-      au < exists ; 1971 ; 1971 ; Zygon: Journal of Religion and Science Volume 1971 ; 1971 >
-      au < exists ; 1972 ; 1972 ; Zygon: Journal of Religion and Science Volume 1972 ; 1972 >
-      au < exists ; 1973 ; 1973 ; Zygon: Journal of Religion and Science Volume 1973 ; 1973 >
-      au < exists ; 1974 ; 1974 ; Zygon: Journal of Religion and Science Volume 1974 ; 1974 >
-      au < exists ; 1975 ; 1975 ; Zygon: Journal of Religion and Science Volume 1975 ; 1975 >
-      au < exists ; 1976 ; 1976 ; Zygon: Journal of Religion and Science Volume 1976 ; 1976 >
-      au < exists ; 1977 ; 1977 ; Zygon: Journal of Religion and Science Volume 1977 ; 1977 >
-      au < exists ; 1978 ; 1978 ; Zygon: Journal of Religion and Science Volume 1978 ; 1978 >
-      au < exists ; 1979 ; 1979 ; Zygon: Journal of Religion and Science Volume 1979 ; 1979 >
-      au < exists ; 1980 ; 1980 ; Zygon: Journal of Religion and Science Volume 1980 ; 1980 >
-      au < exists ; 1981 ; 1981 ; Zygon: Journal of Religion and Science Volume 1981 ; 1981 >
-      au < exists ; 1982 ; 1982 ; Zygon: Journal of Religion and Science Volume 1982 ; 1982 >
-      au < exists ; 1983 ; 1983 ; Zygon: Journal of Religion and Science Volume 1983 ; 1983 >
-      au < exists ; 1984 ; 1984 ; Zygon: Journal of Religion and Science Volume 1984 ; 1984 >
-      au < exists ; 1985 ; 1985 ; Zygon: Journal of Religion and Science Volume 1985 ; 1985 >
-      au < exists ; 1986 ; 1986 ; Zygon: Journal of Religion and Science Volume 1986 ; 1986 >
-      au < exists ; 1987 ; 1987 ; Zygon: Journal of Religion and Science Volume 1987 ; 1987 >
-      au < exists ; 1988 ; 1988 ; Zygon: Journal of Religion and Science Volume 1988 ; 1988 >
-      au < exists ; 1989 ; 1989 ; Zygon: Journal of Religion and Science Volume 1989 ; 1989 >
-      au < exists ; 1990 ; 1990 ; Zygon: Journal of Religion and Science Volume 1990 ; 1990 >
-      au < exists ; 1991 ; 1991 ; Zygon: Journal of Religion and Science Volume 1991 ; 1991 >
-      au < exists ; 1992 ; 1992 ; Zygon: Journal of Religion and Science Volume 1992 ; 1992 >
-      au < exists ; 1993 ; 1993 ; Zygon: Journal of Religion and Science Volume 1993 ; 1993 >
-      au < exists ; 1994 ; 1994 ; Zygon: Journal of Religion and Science Volume 1994 ; 1994 >
-      au < exists ; 1995 ; 1995 ; Zygon: Journal of Religion and Science Volume 1995 ; 1995 >
-      au < exists ; 1996 ; 1996 ; Zygon: Journal of Religion and Science Volume 1996 ; 1996 >
-      au < exists ; 1997 ; 1997 ; Zygon: Journal of Religion and Science Volume 1997 ; 1997 >
-      au < exists ; 1998 ; 1998 ; Zygon: Journal of Religion and Science Volume 1998 ; 1998 >
-      au < exists ; 1999 ; 1999 ; Zygon: Journal of Religion and Science Volume 1999 ; 1999 >
-      au < exists ; 2000 ; 2000 ; Zygon: Journal of Religion and Science Volume 2000 ; 2000 >
-      au < exists ; 2001 ; 2001 ; Zygon: Journal of Religion and Science Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 2002 ; Zygon: Journal of Religion and Science Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 2003 ; Zygon: Journal of Religion and Science Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 2004 ; Zygon: Journal of Religion and Science Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 2005 ; Zygon: Journal of Religion and Science Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 2006 ; Zygon: Journal of Religion and Science Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 2007 ; Zygon: Journal of Religion and Science Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 2008 ; Zygon: Journal of Religion and Science Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 2009 ; Zygon: Journal of Religion and Science Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 2010 ; Zygon: Journal of Religion and Science Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 2011 ; Zygon: Journal of Religion and Science Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 2012 ; Zygon: Journal of Religion and Science Volume 2012 ; 2012 >
-      au < exists ; 2013 ; 2013 ; Zygon: Journal of Religion and Science Volume 2013 ; 2013 >
-      au < exists ; 2014 ; 2014 ; Zygon: Journal of Religion and Science Volume 2014 ; 2014 >
-      au < exists ; 2015 ; 2015 ; Zygon: Journal of Religion and Science Volume 2015 ; 2015 >
-      au < exists ; 2016 ; 2016 ; Zygon: Journal of Religion and Science Volume 2016 ; 2016 >
-      au < exists ; 2017 ; 2017 ; Zygon: Journal of Religion and Science Volume 2017 ; 2017 >
-      au < exists ; 2018 ; 2018 ; Zygon: Journal of Religion and Science Volume 2018 ; 2018 >
-      au < exists ; 2019 ; 2019 ; Zygon: Journal of Religion and Science Volume 2019 ; 2019 >
-      au < exists ; 2020 ; 2020 ; Zygon: Journal of Religion and Science Volume 2020 ; 2020 >
-      au < exists ; 2021 ; 2021 ; Zygon: Journal of Religion and Science Volume 2021 ; 2021 >
-      au < exists ; 2022 ; 2022 ; Zygon: Journal of Religion and Science Volume 2022 ; 2022 >
-      au < exists ; 2023 ; 2023 ; Zygon: Journal of Religion and Science Volume 2023 ; 2023 >
-      au < exists ; 2024 ; 2024 ; Zygon: Journal of Religion and Science Volume 2024 ; 2024 >
-      au < exists ; 2025 ; 2025 ; Zygon: Journal of Religion and Science Volume 2025 ; 2025 >
-      au < expected ; 2026 ; 2026 ; Zygon: Journal of Religion and Science Volume 2026 ; 2026 >
+      au < manifest ; 1966 ; 1966 ; Zygon: Journal of Religion and Science Volume 1966 ; 1966 >
+      au < manifest ; 1967 ; 1967 ; Zygon: Journal of Religion and Science Volume 1967 ; 1967 >
+      au < manifest ; 1968 ; 1968 ; Zygon: Journal of Religion and Science Volume 1968 ; 1968 >
+      au < manifest ; 1969 ; 1969 ; Zygon: Journal of Religion and Science Volume 1969 ; 1969 >
+      au < manifest ; 1970 ; 1970 ; Zygon: Journal of Religion and Science Volume 1970 ; 1970 >
+      au < manifest ; 1971 ; 1971 ; Zygon: Journal of Religion and Science Volume 1971 ; 1971 >
+      au < manifest ; 1972 ; 1972 ; Zygon: Journal of Religion and Science Volume 1972 ; 1972 >
+      au < manifest ; 1973 ; 1973 ; Zygon: Journal of Religion and Science Volume 1973 ; 1973 >
+      au < manifest ; 1974 ; 1974 ; Zygon: Journal of Religion and Science Volume 1974 ; 1974 >
+      au < manifest ; 1975 ; 1975 ; Zygon: Journal of Religion and Science Volume 1975 ; 1975 >
+      au < manifest ; 1976 ; 1976 ; Zygon: Journal of Religion and Science Volume 1976 ; 1976 >
+      au < manifest ; 1977 ; 1977 ; Zygon: Journal of Religion and Science Volume 1977 ; 1977 >
+      au < manifest ; 1978 ; 1978 ; Zygon: Journal of Religion and Science Volume 1978 ; 1978 >
+      au < manifest ; 1979 ; 1979 ; Zygon: Journal of Religion and Science Volume 1979 ; 1979 >
+      au < manifest ; 1980 ; 1980 ; Zygon: Journal of Religion and Science Volume 1980 ; 1980 >
+      au < manifest ; 1981 ; 1981 ; Zygon: Journal of Religion and Science Volume 1981 ; 1981 >
+      au < manifest ; 1982 ; 1982 ; Zygon: Journal of Religion and Science Volume 1982 ; 1982 >
+      au < manifest ; 1983 ; 1983 ; Zygon: Journal of Religion and Science Volume 1983 ; 1983 >
+      au < manifest ; 1984 ; 1984 ; Zygon: Journal of Religion and Science Volume 1984 ; 1984 >
+      au < manifest ; 1985 ; 1985 ; Zygon: Journal of Religion and Science Volume 1985 ; 1985 >
+      au < manifest ; 1986 ; 1986 ; Zygon: Journal of Religion and Science Volume 1986 ; 1986 >
+      au < manifest ; 1987 ; 1987 ; Zygon: Journal of Religion and Science Volume 1987 ; 1987 >
+      au < manifest ; 1988 ; 1988 ; Zygon: Journal of Religion and Science Volume 1988 ; 1988 >
+      au < manifest ; 1989 ; 1989 ; Zygon: Journal of Religion and Science Volume 1989 ; 1989 >
+      au < manifest ; 1990 ; 1990 ; Zygon: Journal of Religion and Science Volume 1990 ; 1990 >
+      au < manifest ; 1991 ; 1991 ; Zygon: Journal of Religion and Science Volume 1991 ; 1991 >
+      au < manifest ; 1992 ; 1992 ; Zygon: Journal of Religion and Science Volume 1992 ; 1992 >
+      au < manifest ; 1993 ; 1993 ; Zygon: Journal of Religion and Science Volume 1993 ; 1993 >
+      au < manifest ; 1994 ; 1994 ; Zygon: Journal of Religion and Science Volume 1994 ; 1994 >
+      au < manifest ; 1995 ; 1995 ; Zygon: Journal of Religion and Science Volume 1995 ; 1995 >
+      au < manifest ; 1996 ; 1996 ; Zygon: Journal of Religion and Science Volume 1996 ; 1996 >
+      au < manifest ; 1997 ; 1997 ; Zygon: Journal of Religion and Science Volume 1997 ; 1997 >
+      au < manifest ; 1998 ; 1998 ; Zygon: Journal of Religion and Science Volume 1998 ; 1998 >
+      au < manifest ; 1999 ; 1999 ; Zygon: Journal of Religion and Science Volume 1999 ; 1999 >
+      au < manifest ; 2000 ; 2000 ; Zygon: Journal of Religion and Science Volume 2000 ; 2000 >
+      au < manifest ; 2001 ; 2001 ; Zygon: Journal of Religion and Science Volume 2001 ; 2001 >
+      au < manifest ; 2002 ; 2002 ; Zygon: Journal of Religion and Science Volume 2002 ; 2002 >
+      au < manifest ; 2003 ; 2003 ; Zygon: Journal of Religion and Science Volume 2003 ; 2003 >
+      au < manifest ; 2004 ; 2004 ; Zygon: Journal of Religion and Science Volume 2004 ; 2004 >
+      au < manifest ; 2005 ; 2005 ; Zygon: Journal of Religion and Science Volume 2005 ; 2005 >
+      au < manifest ; 2006 ; 2006 ; Zygon: Journal of Religion and Science Volume 2006 ; 2006 >
+      au < manifest ; 2007 ; 2007 ; Zygon: Journal of Religion and Science Volume 2007 ; 2007 >
+      au < manifest ; 2008 ; 2008 ; Zygon: Journal of Religion and Science Volume 2008 ; 2008 >
+      au < manifest ; 2009 ; 2009 ; Zygon: Journal of Religion and Science Volume 2009 ; 2009 >
+      au < manifest ; 2010 ; 2010 ; Zygon: Journal of Religion and Science Volume 2010 ; 2010 >
+      au < manifest ; 2011 ; 2011 ; Zygon: Journal of Religion and Science Volume 2011 ; 2011 >
+      au < manifest ; 2012 ; 2012 ; Zygon: Journal of Religion and Science Volume 2012 ; 2012 >
+      au < manifest ; 2013 ; 2013 ; Zygon: Journal of Religion and Science Volume 2013 ; 2013 >
+      au < manifest ; 2014 ; 2014 ; Zygon: Journal of Religion and Science Volume 2014 ; 2014 >
+      au < manifest ; 2015 ; 2015 ; Zygon: Journal of Religion and Science Volume 2015 ; 2015 >
+      au < manifest ; 2016 ; 2016 ; Zygon: Journal of Religion and Science Volume 2016 ; 2016 >
+      au < manifest ; 2017 ; 2017 ; Zygon: Journal of Religion and Science Volume 2017 ; 2017 >
+      au < manifest ; 2018 ; 2018 ; Zygon: Journal of Religion and Science Volume 2018 ; 2018 >
+      au < manifest ; 2019 ; 2019 ; Zygon: Journal of Religion and Science Volume 2019 ; 2019 >
+      au < manifest ; 2020 ; 2020 ; Zygon: Journal of Religion and Science Volume 2020 ; 2020 >
+      au < manifest ; 2021 ; 2021 ; Zygon: Journal of Religion and Science Volume 2021 ; 2021 >
+      au < manifest ; 2022 ; 2022 ; Zygon: Journal of Religion and Science Volume 2022 ; 2022 >
+      au < manifest ; 2023 ; 2023 ; Zygon: Journal of Religion and Science Volume 2023 ; 2023 >
+      au < manifest ; 2024 ; 2024 ; Zygon: Journal of Religion and Science Volume 2024 ; 2024 >
+      au < manifest ; 2025 ; 2025 ; Zygon: Journal of Religion and Science Volume 2025 ; 2025 >
+      au < manifest ; 2026 ; 2026 ; Zygon: Journal of Religion and Science Volume 2026 ; 2026 >
 
   }
 
