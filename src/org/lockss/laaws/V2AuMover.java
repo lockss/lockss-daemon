@@ -134,7 +134,8 @@ public class V2AuMover {
    * higher than typical harvest AUs, which can cause the repo's
    * background temp -> perm WARC copies to fall behind on a slow (e.g.,
    * network) filesystem, causing finishBulk to block for a long time
-   * (days).
+   * (days), resulting in a long period where a bunch of large artifacts
+   * have been copied to permanent WARCs but not indexed.
    */
   public static final String PARAM_USE_BULK_MODE = PREFIX + "useBulkMode";
   public static final UseBulkMode DEFAULT_USE_BULK_MODE = UseBulkMode.NON_SOURCE;
