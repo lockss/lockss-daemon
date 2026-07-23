@@ -1335,14 +1335,14 @@
     #move from OUP in 2026, Volume 27
 
     au < manifest ; 1999 ; The Library Volume s6-21 ; s6-21 >
-    au < manifest ; 2000 ; The Library Volume 1 ; 1 >
-    au < manifest ; 2001 ; The Library Volume 2 ; 2 >
-    au < manifest ; 2002 ; The Library Volume 3 ; 3 >
-    au < manifest ; 2003 ; The Library Volume 4 ; 4 >
-    au < manifest ; 2004 ; The Library Volume 5 ; 5 >
-    au < manifest ; 2005 ; The Library Volume 6 ; 6 >
-    au < manifest ; 2006 ; The Library Volume 7 ; 7 >
-    au < manifest ; 2007 ; The Library Volume 8 ; 8 >
+    au < ready ; 2000 ; The Library Volume 1 ; 1 >
+    au < ready ; 2001 ; The Library Volume 2 ; 2 >
+    au < ready ; 2002 ; The Library Volume 3 ; 3 >
+    au < ready ; 2003 ; The Library Volume 4 ; 4 >
+    au < ready ; 2004 ; The Library Volume 5 ; 5 >
+    au < ready ; 2005 ; The Library Volume 6 ; 6 >
+    au < ready ; 2006 ; The Library Volume 7 ; 7 >
+    au < ready ; 2007 ; The Library Volume 8 ; 8 >
     au < manifest ; 2008 ; The Library Volume 9 ; 9 >
     au < manifest ; 2009 ; The Library Volume 10 ; 10 >
     au < manifest ; 2010 ; The Library Volume 11 ; 11 >
@@ -2911,7 +2911,7 @@
     au < doNotProcess ; 2022 ; Journal of Transport Economics and Policy Volume 56 ; 56 >
     au < doNotProcess ; 2023 ; Journal of Transport Economics and Policy Volume 57 ; 57 >
     au < doNotProcess ; 2024 ; Journal of Transport Economics and Policy Volume 58 ; 58 >
-    au < manifest ; 2025 ; Journal of Transport Economics and Policy Volume 59 ; 59 >
+    au < ready ; 2025 ; Journal of Transport Economics and Policy Volume 59 ; 59 >
     au < manifest ; 2026 ; Journal of Transport Economics and Policy Volume 60 ; 60 >
 
   }
