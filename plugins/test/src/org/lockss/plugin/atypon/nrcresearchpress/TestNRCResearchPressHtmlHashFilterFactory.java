@@ -238,11 +238,11 @@ public class TestNRCResearchPressHtmlHashFilterFactory extends LockssTestCase{
           "</div>" +
           "     " +
           "    " +
-          "<div id=\"wrapper\"> " +
+          "<div > " +
           "" +
-          "<div id=\"main\"> " +
-          "<div id=\"content\">" +
-          "        <div id='background' style=\"display:none\"></div>" +
+          "<div > " +
+          "<div >" +
+          "        <div  style=\"display:none\"></div>" +
           "<div class=\"border-gray\">" +
           "    <div class=\"box-pad\">" +
           "       " +
@@ -250,14 +250,14 @@ public class TestNRCResearchPressHtmlHashFilterFactory extends LockssTestCase{
           "<ul class=\"icon-list-vertical box-gray-border box-pad clear\"><li><a class=\"icon-abstract\" title=\"View the Abstract\" href=\"/doi/abs/10.1139/blah\">" +
           "<span>Abstract</span></a></li><li><a class=\"icon-pdf\" href=\"/doi/pdf/10.1139/blah\">" +
           "</a></li><li><a class=\"icon-pdf-plus\" href=\"/doi/pdfplus/10.1139/blah\">" +
-          "</a></li><li><a class=\"icon-figures\" id=\"figures\" href=\"javascript:void(0);\">Figures</a></li>" +
+          "</a></li><li><a class=\"icon-figures\"  href=\"javascript:void(0);\">Figures</a></li>" +
           "<li><a class=\"icon-references\" href=\"#ttl5\">References</a></li><li></li>" +
           "<li></li>" +
           "<li></li>" +
           "<li><a href=\"/doi/abs/10.1139/blah\" class=\"icon-related\">Corrected article</a></li>" +
           "</ul>" +
-          "<h2 id=\"ttl12\">References</h2><ul class=\"no-bullet no-padding\">" +
-          "<li id=\"ref1\"><span class=\"numbering\"></span>" +
+          "<h2 >References</h2><ul class=\"no-bullet no-padding\">" +
+          "<li ><span class=\"numbering\"></span>" +
           "</li>" +
           "</ul>" +
           "</div>" +
