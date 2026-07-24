@@ -52,7 +52,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; H2Open Journal Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; H2Open Journal Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; H2Open Journal Volume 8 ; 8 ; >
-    au < ready ; exists ; 2026 ; 2026 ; H2Open Journal Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2026 ; 2026 ; H2Open Journal Volume 9 ; 9 ; >
 
   }
   
@@ -156,7 +156,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Water and Climate Change Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Water and Climate Change Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Journal of Water and Climate Change Volume 16 ; 16 ; >
-    au < ready ; exists ; 2026 ; 2026 ; Journal of Water and Climate Change Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2026 ; 2026 ; Journal of Water and Climate Change Volume 17 ; 17 ; >
 
   }
 
@@ -215,7 +215,7 @@
     au < deepCrawl ; exists ; 2023 ; 2023 ; Water Reuse Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Water Reuse Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Water Reuse Volume 15 ; 15 ; >
-    au < ready ; exists ; 2026 ; 2026 ; Water Reuse Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2026 ; 2026 ; Water Reuse Volume 16 ; 16 ; >
 
   }
 
@@ -270,7 +270,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Water, Sanitation and Hygiene for Development Volume 13 ; 13 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Water, Sanitation and Hygiene for Development Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Journal of Water, Sanitation and Hygiene for Development Volume 15 ; 15 ; >
-    au < ready ; exists ; 2026 ; 2026 ; Journal of Water, Sanitation and Hygiene for Development Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2026 ; 2026 ; Journal of Water, Sanitation and Hygiene for Development Volume 16 ; 16 ; >
 
   }
 
