@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2026, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -270,11 +270,11 @@ public class OJS2ArticleIteratorFactory
           //InputSource iSource = new InputSource(iReaderPair.getLeft());
           //iSource.setEncoding(iReaderPair.getRight());
           processToc(tocCu.getUnfilteredInputStream(), iReaderPair.getRight(), tocCu.getUrl());
-        } catch (UnsupportedEncodingException e) {
+        } catch (IOException ioe) {
           log.error(String.format(
                   "Error processing TOC in: %s ProcessToc URL: %s Encoding: %s",
                   au.getName(), tocCu.getUrl(), encoding
-          ), e);
+          ), ioe);
         }
 
 

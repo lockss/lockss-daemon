@@ -1,7 +1,6 @@
 /*
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2026, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -48,6 +47,7 @@ import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.w3c.dom.*;
 import org.xml.sax.*;
+import org.apache.commons.io.ByteOrderMark;
 import org.apache.commons.io.input.BOMInputStream;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
@@ -601,7 +601,7 @@ public class XPathXmlMetadataParser  {
    *  -if it's UTF8, remove any leading BOM characters
    *  return the reader with the charset set
    */
-  protected Pair<Reader, String> makeInputSourceReader(CachedUrl cu) throws UnsupportedEncodingException {
+  protected Pair<Reader, String> makeInputSourceReader(CachedUrl cu) throws IOException {
 
     String guessed_cset = cu.getEncoding(); // set a default
     try {
@@ -627,7 +627,11 @@ public class XPathXmlMetadataParser  {
     if (guessed_cset == Constants.ENCODING_UTF_8) {
       /* this is utf-8, so clear out any initial BOM chars */
       log.debug3("UTF-8 input stream - remove any BOM chars");
-      BOMInputStream cuInputStream = new BOMInputStream(cu.getUnfilteredInputStream());
+      BOMInputStream cuInputStream = BOMInputStream.builder()
+                                                   .setInputStream(cu.getUnfilteredInputStream())
+                                                   .setInclude(false)
+                                                   .setByteOrderMarks(ByteOrderMark.UTF_8)
+                                                   .get();
       inputReader = new InputStreamReader(cuInputStream, Constants.ENCODING_UTF_8);
     } else {
       log.debug3("Not UTF-8; create reader, possibly doing XML filtering.");

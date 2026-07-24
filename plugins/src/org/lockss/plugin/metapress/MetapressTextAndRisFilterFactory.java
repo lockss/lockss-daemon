@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2026, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -32,8 +32,9 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.metapress;
 
-import java.io.InputStream;
+import java.io.*;
 
+import org.apache.commons.io.ByteOrderMark;
 import org.apache.commons.io.input.BOMInputStream;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
@@ -53,7 +54,16 @@ public class MetapressTextAndRisFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    return new BOMInputStream(in, false);
+    try {
+      return BOMInputStream.builder()
+                           .setInputStream(in)
+                           .setInclude(false)
+                           .setByteOrderMarks(ByteOrderMark.UTF_8)
+                           .get();
+    }
+    catch (IOException ioe) {
+      throw new PluginException(ioe);
+    }
   }
 
 }
