@@ -256,7 +256,7 @@ Args:
   <property name="commons.codec.jar" value="${lib}/commons-codec-1.22.0.jar" />
   <property name="commons.collections.jar" value="${lib}/commons-collections-3.2.2.jar" />
   <property name="commons.collections4.jar" value="${lib}/commons-collections4-4.5.0.jar" />
-  <property name="commons.compress.jar" value="${lib}/commons-compress-1.27.1.jar" />
+  <property name="commons.compress.jar" value="${lib}/commons-compress-1.28.0.jar" />
   <property name="commons.configuration.jar" value="${lib}/commons-configuration-1.10.jar" />
   <property name="commons.csv.jar" value="${lib}/commons-csv-1.14.0.jar" />
   <!-- commons-dbcp2 -->
