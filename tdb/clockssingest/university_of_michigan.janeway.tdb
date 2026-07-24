@@ -26,18 +26,14 @@
       #published 2015-present
       param[journal_id] = absinthe
 
-      au < doesNotExist ; doesNotExist ; 2015 ; ; Absinthe: World Literature in Translation Volume 2015 ; 2015 ; >
-      au < ready ; exists ; 2016 ; ; Absinthe: World Literature in Translation Volume 2016 ; 2016 ; >
-      au < ready ; exists ; 2017 ; ; Absinthe: World Literature in Translation Volume 2017 ; 2017 ; >
-      au < ready ; exists ; 2018 ; ; Absinthe: World Literature in Translation Volume 2018 ; 2018 ; >
-      au < ready ; exists ; 2019 ; ; Absinthe: World Literature in Translation Volume 2019 ; 2019 ; >
-      au < doesNotExist ; doesNotExist ; 2020 ; ; Absinthe: World Literature in Translation Volume 2020 ; 2020 ; >
-      au < finished ; manifest ; 2021 ; ; Absinthe: World Literature in Translation Volume 2021 ; 2021 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2022 ; ; Absinthe: World Literature in Translation Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
-      au < doesNotExist ; doesNotExist ; 2023 ; ; Absinthe: World Literature in Translation Volume 2023 ; 2023 ; > # Volumes actually published in 2024.
-      au < finished ; manifest ; 2024 ; ; Absinthe: World Literature in Translation Volume 2024 ; 2024 ; reingest2.clockss.org:8085 >
-      au < doesNotExist ; doesNotExist ; 2025 ; ; Absinthe: World Literature in Translation Volume 2025 ; 2025 ; >
-      au < crawling ; exists ; 2026 ; ; Absinthe: World Literature in Translation Volume 2026 ; 2026 ; >
+      au < ready ; exists ; 2015 ; 22 ; Absinthe: World Literature in Translation Volume 2015 ; 2016 ; >
+      au < ready ; exists ; 2015-2018 ; 22-24 ; Absinthe: World Literature in Translation Volume 2015-2018 ; 2017 ; >
+      au < ready ; exists ; 2019 ; 25 ; Absinthe: World Literature in Translation Volume 2019 ; 2018 ; >
+      au < ready ; exists ; 2020 ; 26 ; Absinthe: World Literature in Translation Volume 2020 ; 2019 ; >
+      au < finished ; manifest ; 2021 ; 27 ; Absinthe: World Literature in Translation Volume 2021 ; 2021 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; 28 ; Absinthe: World Literature in Translation Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2023-2024 ; 29-30 ; Absinthe: World Literature in Translation Volume 2023-2024 ; 2024 ; reingest2.clockss.org:8085 >
+      au < crawling ; exists ; 2025 ; 31 ; Absinthe: World Literature in Translation Volume 2025 ; 2026 ; >
 
   }
 

@@ -1614,8 +1614,9 @@ while (my $line = <>) {
       #printf("URL: %s\n", $perm_url); #debug
       $vol_title = $perm_url ;
     #start_url for all OAI queries https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
-    #$url = sprintf("%sapi/oai/?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", #<- not well formed, returns all articles
-    $url = sprintf("%sapi/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=%d-01-01&until=%d-12-31", #better formed, returns articles from this year
+    #$url = sprintf("%sapi/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=%d-01-01&until=%d-12-31", #<- not well formed, returns all articles
+    $url = sprintf("%sapi/oai/?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", #<- not well formed, returns all articles
+    #$url = sprintf("%sapi/oai/?verb=ListRecords&metadataPrefix=jats&from=%d-01-01&until=%d-12-31", #better formed, returns articles from this year
       $param{base_url}, $param{year}, $param{year});
     $man_url = uri_unescape($url);
     my $req_p = HTTP::Request->new(GET, $perm_url);
@@ -1633,9 +1634,11 @@ while (my $line = <>) {
 #        if (defined($perm_contents) && ($perm_contents =~ m/$clockss_tag/s) && ($perm_contents =~ m/$lockss_tag/s)) {
             if ($resp_s->is_success) {
                 if ($resp_s->content =~ m/results in an empty (set|list)/is) {
-                    $result = "--EMPTY_LIST--"
-                } elsif ($resp_s->content !~ m/<dc:date>$param{year}/ ) {
-                    $result = "--MISSING-YEAR--"
+                    $result = "--EMPTY_LIST--";
+                } elsif ($resp_s->content !~ m/<dc:date>$param{year}/ 
+                    #<pub-date date-type="pub" iso-8601-date="2019-11-22" publication-format="electronic">
+                    && $resp_s->content !~ m/<pub-date date-type="pub" iso-8601-date="$param{year}-..-.." /) {
+                    $result = "--MISSING-YEAR--";
                 } else {
                     $result = "Manifest";
                 }

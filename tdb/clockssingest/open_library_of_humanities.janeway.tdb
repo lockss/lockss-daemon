@@ -793,27 +793,28 @@
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://quakerstudies.openlibhums.org/
 
-      #Process 2021 and forward
+      #Process 2021 and forward and "V2014" which has content from V1-11.
+      #V12 - V25 processed on Liverpool U Press
 
-      au < doNotProcess ; exists ; 1996 ;  ; Quaker Studies Volume 1996 ; 1996 ; > #Articles dated 2014. V 01
-      au < doNotProcess ; exists ; 1997 ;  ; Quaker Studies Volume 1997 ; 1997 ; > #Articles dated 2014. V 02
-      au < doNotProcess ; exists ; 1998 ;  ; Quaker Studies Volume 1998 ; 1998 ; > #Articles dated 2014. V 03
-      au < doNotProcess ; exists ; 1999 ;  ; Quaker Studies Volume 1999 ; 1999 ; > #Articles dated 2014. V 04
-      au < doNotProcess ; exists ; 2000 ;  ; Quaker Studies Volume 2000 ; 2000 ; > #Articles dated 2014. V 05
-      au < doNotProcess ; exists ; 2001 ;  ; Quaker Studies Volume 2001 ; 2001 ; > #Articles dated 2014. V 06
-      au < doNotProcess ; exists ; 2002 ;  ; Quaker Studies Volume 2002 ; 2002 ; > #Articles dated 2014. V 07
-      au < doNotProcess ; exists ; 2003 ;  ; Quaker Studies Volume 2003 ; 2003 ; > #Articles dated 2014. V 08
-      au < doNotProcess ; exists ; 2004 ;  ; Quaker Studies Volume 2004 ; 2004 ; > #Articles dated 2014. V 09
-      au < doNotProcess ; exists ; 2005 ;  ; Quaker Studies Volume 2005 ; 2005 ; > #Articles dated 2014. V 10
-      au < doNotProcess ; exists ; 2006 ;  ; Quaker Studies Volume 2006 ; 2006 ; > #Articles dated 2014. V 11
-      au < doNotProcess ; exists ; 2007 ;  ; Quaker Studies Volume 2007 ; 2007 ; > # V 12
-      au < doNotProcess ; exists ; 2008 ;  ; Quaker Studies Volume 2008 ; 2008 ; > # V 13
-      au < doNotProcess ; exists ; 2009 ;  ; Quaker Studies Volume 2009 ; 2009 ; > # V 14
-      au < doNotProcess ; exists ; 2010 ;  ; Quaker Studies Volume 2010 ; 2010 ; > # V 15
-      au < doNotProcess ; exists ; 2011 ;  ; Quaker Studies Volume 2011 ; 2011 ; > # V 16
-      au < doNotProcess ; exists ; 2012 ;  ; Quaker Studies Volume 2012 ; 2012 ; > # V 17
-      au < doNotProcess ; exists ; 2013 ;  ; Quaker Studies Volume 2013 ; 2013 ; > # V 18
-      au < doNotProcess ; exists ; 2014 ;  ; Quaker Studies Volume 2014 ; 2014 ; > # V 19
+      au < doNotProcess ; exists ; 1996 ; 1 ; Quaker Studies Volume 1996 ; 1996 ; > #Articles dated 2014. V 01
+      au < doNotProcess ; exists ; 1997 ; 2 ; Quaker Studies Volume 1997 ; 1997 ; > #Articles dated 2014. V 02
+      au < doNotProcess ; exists ; 1998 ; 3 ; Quaker Studies Volume 1998 ; 1998 ; > #Articles dated 2014. V 03
+      au < doNotProcess ; exists ; 1999 ; 4 ; Quaker Studies Volume 1999 ; 1999 ; > #Articles dated 2014. V 04
+      au < doNotProcess ; exists ; 2000 ; 5 ; Quaker Studies Volume 2000 ; 2000 ; > #Articles dated 2014. V 05
+      au < doNotProcess ; exists ; 2001 ; 6 ; Quaker Studies Volume 2001 ; 2001 ; > #Articles dated 2014. V 06
+      au < doNotProcess ; exists ; 2002 ; 7 ; Quaker Studies Volume 2002 ; 2002 ; > #Articles dated 2014. V 07
+      au < doNotProcess ; exists ; 2003 ; 8 ; Quaker Studies Volume 2003 ; 2003 ; > #Articles dated 2014. V 08
+      au < doNotProcess ; exists ; 2004 ; 9 ; Quaker Studies Volume 2004 ; 2004 ; > #Articles dated 2014. V 09
+      au < doNotProcess ; exists ; 2005 ; 10 ; Quaker Studies Volume 2005 ; 2005 ; > #Articles dated 2014. V 10
+      au < doNotProcess ; exists ; 2006 ; 11 ; Quaker Studies Volume 2006 ; 2006 ; > #Articles dated 2014. V 11
+      au < doNotProcess ; exists ; 2007 ; 12 ; Quaker Studies Volume 2007 ; 2007 ; > # V 12
+      au < doNotProcess ; exists ; 2008 ; 13 ; Quaker Studies Volume 2008 ; 2008 ; > # V 13
+      au < doNotProcess ; exists ; 2009 ; 14 ; Quaker Studies Volume 2009 ; 2009 ; > # V 14
+      au < doNotProcess ; exists ; 2010 ; 15 ; Quaker Studies Volume 2010 ; 2010 ; > # V 15
+      au < doNotProcess ; exists ; 2011 ; 16 ; Quaker Studies Volume 2011 ; 2011 ; > # V 16
+      au < doNotProcess ; exists ; 2012 ; 17 ; Quaker Studies Volume 2012 ; 2012 ; > # V 17
+      au < doNotProcess ; exists ; 2013 ; 18 ; Quaker Studies Volume 2013 ; 2013 ; > # V 18
+      au < manifest ; exists ; 1996-2006 ; 1-11 ; Quaker Studies Volume 1-11 ; 2014 ; > # V 19 included with UoLiverpool material
       au < doNotProcess ; exists ; 2015 ; 20 ; Quaker Studies Volume 2015 ; 2015 ; >
       au < doNotProcess ; exists ; 2016 ; 21 ; Quaker Studies Volume 2016 ; 2016 ; >
       au < doNotProcess ; exists ; 2017 ; 22 ; Quaker Studies Volume 2017 ; 2017 ; >
