@@ -81,6 +81,10 @@ public class NoPauseCrawlManagerImpl extends CrawlManagerImpl {
     }
 
     @Override
+    public void updateMultipliers() {
+    }
+
+    @Override
     public void pauseBeforeFetch(String url, String previousContentType) {
       log.debug3("NoPausing: " + url + ", prev: " + previousContentType);
       pauseCounter++;

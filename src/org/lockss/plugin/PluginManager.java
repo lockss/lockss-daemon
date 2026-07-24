@@ -32,10 +32,16 @@ import java.io.*;
 import java.net.*;
 import java.security.KeyStore;
 import java.util.*;
+import java.util.Iterator;
 import java.util.function.Consumer;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.jar.*;
 import java.util.regex.*;
+import java.util.stream.Collectors;
+
+import org.apache.commons.csv.*;
 import org.apache.commons.collections.map.*;
 import org.lockss.alert.*;
 import org.lockss.app.*;
@@ -46,6 +52,8 @@ import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.poller.PollSpec;
 import org.lockss.state.AuState;
 import org.lockss.util.*;
+import org.lockss.util.SemaphoreMap;
+import org.lockss.util.SemaphoreMap.SemaphoreLock;
 
 /**
  * Plugin global functionality
@@ -357,6 +365,29 @@ public class PluginManager
   // lock for AU additions/deletions
   Object auAddDelLock = new Object();
 
+  // Per-plugin coordination lock used to serialize plugin reload (here in
+  // PluginManager) against in-flight V2 AU migrations (in V2AuMover).  Both
+  // sides acquire the same per-plugin SemaphoreLock for the duration of a
+  // single plugin's batch.
+  private final SemaphoreMap<String> pluginRestartCoordLocks =
+      new SemaphoreMap<>();
+
+  /** Accessor for the per-plugin coord locks.  Public so V2AuMover (in
+   *  package org.lockss.laaws) can call it. */
+  public SemaphoreMap<String> getPluginRestartCoordLocks() {
+    return pluginRestartCoordLocks;
+  }
+
+  // Off-thread scheduler for plugin restart batches.  processRegistryAus is
+  // called from auContentChanged on a crawler thread, which must not block
+  // on a long-held per-plugin coord lock.  The 10s busy-loop runs here.
+  private final ExecutorService pluginRestartExecutor =
+      Executors.newCachedThreadPool(r -> {
+        Thread t = new Thread(r, "PluginRestartScheduler");
+        t.setDaemon(true);
+        return t;
+      });
+
   private static Map<String,String> configurablePluginNameMap = new HashMap();
   static {
     configurablePluginNameMap.put(".*ExplodedPlugin$",
@@ -369,10 +400,20 @@ public class PluginManager
   }
 
   /* ------- LockssManager implementation ------------------ */
+
+  @Override
+  // Some tests rely on PluginManager accessing ConfigManager without
+  // having been started
+  public void initService(LockssDaemon daemon) {
+    super.initService(daemon);
+    configMgr = getDaemon().getConfigManager();
+  }
+
   /**
    * start the plugin manager.
    * @see org.lockss.app.LockssManager#startService()
    */
+  @Override
   public void startService() {
     super.startService();
     configMgr = getDaemon().getConfigManager();
@@ -427,6 +468,15 @@ public class PluginManager
   public void startLoadablePlugins() {
     if (loadablePluginsReady) {
       return;
+    }
+
+    try {
+      if (processAuTxtJournal()) {
+        configMgr.reloadAndWait();
+      }
+    } catch (IOException e) {
+      // Q: What else can we do?
+      log.error("Couldn't process AU config journal", e);
     }
 
     Configuration config = CurrentConfig.getCurrentConfig();
@@ -1011,6 +1061,7 @@ public class PluginManager
     try {
       ArchivalUnit au = plugin.createAu(auConf);
       inactiveAuIds.remove(au.getAuId());
+      configMgr.removeMigratedAuid(au.getAuId());
       log.debug("Created AU " + au);
       try {
 	getDaemon().startOrReconfigureAuManagers(au, auConf);
@@ -1102,7 +1153,7 @@ public class PluginManager
     @Override public void auContentChanged(AuEvent event, ArchivalUnit au,
 					   AuEventHandler.ChangeInfo info) {
       if (loadablePluginsReady && isRegistryAu(au)) {
-	processRegistryAus(ListUtil.list(au), true);
+	processRegistryAusAsync(ListUtil.list(au), true, null);
       }
       if (shouldFlush404Cache(au, info)) {
 	flush404Cache(au);
@@ -1492,85 +1543,70 @@ public class PluginManager
     }
   }
 
+  /**
+   * Delete an AU from the running daemon and journal the au.txt update for
+   * later batch processing.
+   * @param au the ArchivalUnit to be deleted
+   * @throws IOException
+   */
+  public void deleteAuForMigration(ArchivalUnit au) throws IOException {
+    synchronized (auAddDelLock) {
+      log.debug("Journal deleting AU: " + au);
+      String auid = au.getAuId();
+      stopAu(au, new AuEvent(AuEvent.Type.Delete, false).setMigration(true));
+      inactiveAuIds.remove(auid);
+      configMgr.addMigratedAuid(auid);
+      appendAuTxtJournal("DELETE", auid);
+    }
+  }
+
+  public boolean isMigratedAuid(String auid) {
+    return configMgr.isMigratedAuid(auid);
+  }
+
+  /**
+   * Deactivate an AU from the running daemon and journal the au.txt update for
+   * later batch processing.
+   * @param au the ArchivalUnit to be deactivated
+   * @throws IOException
+   */
+  public void deactivateAuForMigration(ArchivalUnit au) throws IOException {
+    synchronized (auAddDelLock) {
+      log.debug("Journal deactivating AU: " + au);
+      String auid = au.getAuId();
+      stopAu(au, new AuEvent(AuEvent.Type.Deactivate, false).setMigration(true));
+      inactiveAuIds.add(auid);
+      appendAuTxtJournal("DEACTIVATE", auid);
+    }
+  }
+
+  private void appendAuTxtJournal(String action, String auid)
+      throws IOException {
+    File journal =
+        configMgr.getCacheConfigFile(ConfigManager.CONFIG_FILE_AU_CONFIG_JOURNAL);
+    try (FileOutputStream fos = new FileOutputStream(journal, true);
+         OutputStreamWriter osw = new OutputStreamWriter(fos, "UTF-8");
+         CSVPrinter printer = new CSVPrinter(osw, CSVFormat.DEFAULT)) {
+      printer.printRecord(action, auid);
+      printer.flush();
+      fos.getFD().sync();
+    }
+  }
+
+  /**
+   * Apply and remove the AU config journal, if present.
+   * @return true if a journal was found and applied
+   * @throws IOException
+   */
+  public boolean processAuTxtJournal() throws IOException {
+    synchronized (auAddDelLock) {
+      return configMgr.processAuTxtJournal();
+    }
+  }
+
   public boolean isRemoveStoppedAus() {
     return CurrentConfig.getBooleanParam(PARAM_REMOVE_STOPPED_AUS,
 					 DEFAULT_REMOVE_STOPPED_AUS);
-  }
-
-  // Stops and restarts a set of AUs so that they start using the current
-  // version of their plugin.  Waits a little while between stopping and
-  // starting to allow existing processes to exit.  It's expected that this
-  // will cause lots of errors to be logged
-  void restartAus(Collection<ArchivalUnit> aus) {
-    if (paramRestartAus) {
-      log.info("Restarting " + aus.size() + " AUs to use updated plugins.  Exiting processes may log errors; they should be harmless");
-      synchronized (auAddDelLock) {
-	Map<String, Configuration> configMap =
-	    new HashMap<String, Configuration>();
-	for (ArchivalUnit au : aus) {
-	  String auid = au.getAuId();
-	  Configuration auConf = au.getConfiguration();
-	  configMap.put(auid, auConf);
-	  numAusRestarting++;
-	  stopAu(au, new AuEvent(AuEvent.Type.RestartDelete, false));
-	}
-	try {
-	  Deadline.in(auRestartSleep(aus.size())).sleep();
-	} catch (InterruptedException ex) {
-	}
-
-	// The number of remaining AUs to be processed.
-	int remainingAus = configMap.entrySet().size();
-
-	// The event used to signal that an AU needs to be added to the batch of
-	// AUs to be marked for re-indexing.
-	AuEvent batchEvent = new AuEvent(AuEvent.Type.RestartCreate, true);
-
-	// The event used to signal that an AU needs to be added to the batch of
-	// AUs to be marked for re-indexing and the current batch needs to be
-	// executed afterwards.
-	AuEvent executeEvent = new AuEvent(AuEvent.Type.RestartCreate, false);
-
-	AuEvent auEvent = null;
-	ArchivalUnit newAu = null;
-	    
-	for (Map.Entry<String,Configuration> ent : configMap.entrySet()) {
-	  String auid = ent.getKey();
-	  Configuration auConf = ent.getValue();
-	  String pkey = pluginKeyFromId(pluginIdFromAuId(auid));
-	  Plugin plug = getPlugin(pkey);
-
-	  // To find the last AU.
-	  remainingAus--;
-
-	  // Check whether this is the last AU and therefore the batch of AUs to
-	  // be marked for re-indexing needs to be executed.
-	  if (remainingAus <= 0) {
-	    // Yes.
-	    auEvent = executeEvent;
-	  } else {
-	    // No.
-	    auEvent = batchEvent;
-	  }
-
-	  try {
-	    newAu = createAu(plug, auConf, auEvent);
-	    numAusRestarting--;
-	  } catch (ArchivalUnit.ConfigurationException e) {
-	    log.error("Failed to restart: " + auid);
-
-	    // Check whether the failure happened when trying to execute the
-	    // batch.
-	    if (!auEvent.isInBatch()) {
-	      // Yes: Execute the batch with the last successfully-created AU.
-	      signalAuEvent(newAu, auEvent, null);
-	    }
-	  }
-	}
-	numFailedAuRestarts += numAusRestarting;
-	numAusRestarting = 0;
-      }
-    }
   }
 
   long auRestartSleep(int n) {
@@ -2833,7 +2869,7 @@ public class PluginManager
 		  "Remaining registry URL list: " + regCallback.getRegistryUrls());
     }
 
-    processRegistryAus(loadAus);
+    processRegistryAusSync(loadAus);
   }
 
   RegistryPlugin getRegistryPlugin() {
@@ -3117,16 +3153,42 @@ public class PluginManager
     return plugins;
   }
 
-  public synchronized void processRegistryAus(List registryAus) {
-    processRegistryAus(registryAus, false);
+  /** Synchronous entry point: dispatches the work off-thread to
+   *  pluginRestartExecutor and waits on the returned semaphore so that on
+   *  return the new plugins/AUs are installed and visible. */
+  public void processRegistryAusSync(List registryAus) {
+    processRegistryAusSync(registryAus, false);
+  }
+
+  public void processRegistryAusSync(List registryAus, boolean startAus) {
+    BinarySemaphore done = processRegistryAusAsync(registryAus, startAus, null);
+    if (done == null) {
+      return;
+    }
+    try {
+      done.take(Deadline.MAX);
+    } catch (InterruptedException ie) {
+      Thread.currentThread().interrupt();
+      log.warning("Interrupted waiting for plugin restart batch", ie);
+    }
   }
 
   /**
    * Run through the list of Registry AUs and verify and load any JARs
-   * that need to be loaded.
+   * that need to be loaded.  Dispatches the per-plugin restart work
+   * off-thread to {@link #pluginRestartExecutor} and returns immediately.
+   * The returned BinarySemaphore is given when the scheduler completes;
+   * callers that need synchronous semantics should call
+   * {@link BinarySemaphore#take} on it.  Crawler-thread callers (e.g.
+   * auContentChanged) must <i>not</i> wait, since the per-plugin coord
+   * locks may be held by V2AuMover for the duration of a migration.
+   *
+   * @return a BinarySemaphore signaled when the dispatched work
+   *         completes, or null if no work was dispatched.
    */
-  public synchronized void processRegistryAus(List registryAus,
-					      boolean startAus) {
+  public synchronized BinarySemaphore processRegistryAusAsync(List registryAus,
+                                                              boolean startAus,
+                                                              LockssWatchdog wdog) {
 
     if (jarValidator == null) {
       jarValidator = new JarValidator(keystore, pluginDir);
@@ -3135,7 +3197,7 @@ public class PluginManager
     jarValidator.checkAllEntries(validateAllJarEntries);
 
     // Create temporary plugin and classloader maps
-    HashMap<String,PluginInfo> tmpMap = new HashMap<String,PluginInfo>();
+    HashMap<String,PluginInfo> tmpMap = new LinkedHashMap<String,PluginInfo>();
 
     for (Iterator iter = registryAus.iterator(); iter.hasNext(); ) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
@@ -3146,34 +3208,16 @@ public class PluginManager
       }
     }
 
-    // After the temporary plugin map has been built, install it into
-    // the global maps.
-    List classloaders = new ArrayList();
-
-    // AUs running under plugins that have been replaced by new versions.
-    List<ArchivalUnit> needRestartAus = new ArrayList();
-    List<String> changedPluginKeys = new ArrayList<String>();
-
+    // After the temporary plugin map has been built, build a list of
+    // pending per-plugin batches.  pluginfoMap.put / setPlugin and the
+    // capture of oldPlug.getAllAus() are deferred into runRestartBatch,
+    // which runs under the per-plugin coord lock so it cannot race with
+    // an in-flight V2AuMover migration.
+    final List<PendingPluginBatch> batches = new ArrayList<>();
     for (Map.Entry<String,PluginInfo> entry : tmpMap.entrySet()) {
       String key = entry.getKey();
       log.debug2("Adding to plugin map: " + key);
-      PluginInfo info = entry.getValue();
-      pluginfoMap.put(key, info);
-      classloaders.add(info.getClassLoader());
-
-      Plugin oldPlug = getPlugin(key);
-      if (oldPlug != null && paramRestartAus) {
-	Collection aus = oldPlug.getAllAus();
-	if (aus != null) {
-	  needRestartAus.addAll(aus);
-	}
-      }
-
-      Plugin newPlug = info.getPlugin();
-      setPlugin(key, newPlug);
-      if (startAus && newPlug != oldPlug) {
-	changedPluginKeys.add(key);
-      }
+      batches.add(new PendingPluginBatch(key, entry.getValue()));
     }
 
     // Title DBs bundled with plugin jars are currently disabled.  To work
@@ -3189,15 +3233,257 @@ public class PluginManager
     tmpMap.clear();
     tmpMap = null;
 
-    if (!needRestartAus.isEmpty()) {
-      restartAus(needRestartAus);
+    if (batches.isEmpty()) {
+      return null;
     }
 
+    // Hand the batches off to the single-threaded restart executor and
+    // return immediately.  The caller (e.g. auContentChanged on a crawler
+    // thread) must not block on the per-plugin coord locks, which may be
+    // held by V2AuMover for the duration of a migration.  Sync callers
+    // wait on the returned semaphore.
+    final boolean fStartAus = startAus;
+    final LockssWatchdog fWdog = wdog;
+    final BinarySemaphore done = new BinarySemaphore();
+    pluginRestartExecutor.submit(new LockssRunnable("AU Restarter") {
+      @Override
+      public void lockssRun() {
+        try {
+          runRestartScheduler(batches, fWdog, fStartAus);
+        } finally {
+          done.give();
+        }
+      }
+    });
+    return done;
+  }
+
+  /** Pending plugin reload batch: identifies the plugin and the new
+   *  PluginInfo to install for it.  The set of AUs to restart is captured
+   *  later, inside the per-plugin coord lock, to reflect live state at
+   *  restart time. */
+  private static class PendingPluginBatch {
+    final String pkey;
+    final PluginInfo newInfo;
+    PendingPluginBatch(String pkey, PluginInfo newInfo) {
+      this.pkey = pkey;
+      this.newInfo = newInfo;
+    }
+
+    public String getPluginKey() {
+      return pkey;
+    }
+  }
+
+  /** Non-blocking-first scheduler for plugin restart batches.  Runs on
+   *  pluginRestartExecutor.  For each remaining batch, tries to acquire
+   *  the per-plugin coord lock without blocking; if any batch was acquired
+   *  this pass, runs it.  If every remaining batch was contended, sleeps
+   *  10s (poking wdog) and retries. */
+  void runRestartScheduler(List<PendingPluginBatch> batches,
+                           LockssWatchdog wdog, boolean startAus) {
+    if (log.isDebug()) {
+      List<String> pids = new ArrayList<>();
+      for (PendingPluginBatch b : batches) {
+        pids.add(PluginManager.pluginNameFromKey(b.pkey));
+      }
+      log.debug("runRestartScheduler start, batches=" + pids);
+    }
+
+    List<String> changedPluginKeys = new ArrayList<>();
+    int restartAttempts = 0;
+
+    while (!batches.isEmpty()) {
+      boolean processedSome = false;
+      for (Iterator<PendingPluginBatch> it = batches.iterator();
+           it.hasNext(); ) {
+        PendingPluginBatch b = it.next();
+        SemaphoreLock lock = pluginRestartCoordLocks.tryGetLock(b.pkey);
+        if (lock != null) {
+          if (restartAttempts > 0) {
+            log.info("Got plugin lock for: " + PluginManager.pluginNameFromKey(b.pkey));
+          }
+          try {
+            runRestartBatch(b, wdog, startAus, changedPluginKeys);
+          } finally {
+            try {
+              lock.close();
+            } catch (IOException ioe) {
+              // SemaphoreLock.close() does not actually throw IOException
+              log.warning("Unexpected IOException releasing coord lock for "
+                          + b.pkey, ioe);
+            }
+          }
+          it.remove();
+          processedSome = true;
+        }
+      }
+
+      // Pause then retry to get remaining locks
+      if (!processedSome && !batches.isEmpty()) {
+        if (wdog != null) {
+          wdog.pokeWDog();
+        }
+        if (restartAttempts++ % 1000 == 0) {
+          List<String> waitingForPlugins = batches.stream()
+              .map((b) -> PluginManager.pluginNameFromKey(b.pkey))
+              .collect(Collectors.toList());
+          log.info("Waiting for plugins locked by migrator: " + waitingForPlugins);
+        }
+        try {
+          Thread.sleep(10_000L);
+        } catch (InterruptedException ie) {
+          Thread.currentThread().interrupt();
+          break;
+        }
+      }
+    }
     if (startAus && !changedPluginKeys.isEmpty()) {
       // Try to start any AUs configured for changed plugins, that didn't
       // previously start (either because the plugin didn't exist, or the
       // AU didn't successfully start with the old definition)
       configurePlugins(changedPluginKeys);
+    }
+    if (log.isDebug()) {
+      List<String> changedPluginNames = changedPluginKeys.stream()
+          .map(PluginManager::pluginNameFromKey)
+          .collect(Collectors.toList());
+      log.debug("runRestartScheduler end, changedPluginKeys="
+                + changedPluginNames);
+    }
+  }
+
+  /** Run a single plugin's reload batch.  Must be called with the
+   *  per-plugin coord lock for b.pkey held.  Captures the live AU set,
+   *  installs the new PluginInfo + Plugin, and restarts the plugin's AUs. */
+  void runRestartBatch(PendingPluginBatch b, LockssWatchdog wdog,
+                       boolean startAus, List<String> changedPluginKeys) {
+    String pkey = b.pkey;
+    Plugin oldPlug = getPlugin(pkey);
+    Collection<ArchivalUnit> oldAus;
+    if (oldPlug != null && paramRestartAus) {
+      Collection<ArchivalUnit> live = oldPlug.getAllAus();
+      oldAus = (live != null) ? new ArrayList<>(live)
+                              : Collections.<ArchivalUnit>emptyList();
+    } else {
+      oldAus = Collections.<ArchivalUnit>emptyList();
+    }
+    Plugin newPlug = b.newInfo.getPlugin();
+    // pluginfoMap is Collections.synchronizedMap(new HashMap()), so the put
+    // is already thread-safe; no extra synchronization needed.
+    pluginfoMap.put(pkey, b.newInfo);
+    setPlugin(pkey, newPlug);
+    if (startAus && newPlug != oldPlug) {
+      changedPluginKeys.add(pkey);
+    }
+    if (!oldAus.isEmpty()) {
+      restartAusForPlugin(pkey, oldAus, wdog);
+    }
+  }
+
+  /** Fill in any of the plugin's non-def params that are missing from the AU
+   * config with values from the tdb.  Allows existing AUs to pick up non-def
+   * params added to a plugin after the AU was first configured.  Does nothing
+   * for non-BasePlugin plugins. */
+  Configuration addTdbNonDefParams(Plugin plugin, Configuration auConf,
+				   String auid) {
+    if (plugin instanceof org.lockss.plugin.base.BasePlugin) {
+      return ((org.lockss.plugin.base.BasePlugin)plugin)
+	.addNonDefParams(auConf, auid);
+    }
+    return auConf;
+  }
+
+  // Stops and restarts a single plugin's set of AUs so that they start using
+  // the current version of their plugin.  Waits a little while between
+  // stopping and starting to allow existing processes to exit.  It's
+  // expected that this will cause lots of errors to be logged.  Called from
+  // runRestartBatch() while holding the per-plugin coord lock for pkey.
+  void restartAusForPlugin(String pkey,
+                           Collection<ArchivalUnit> aus,
+                           LockssWatchdog wdog) {
+    if (paramRestartAus) {
+      log.info("Restarting " + aus.size() + " AUs of plugin " + PluginManager.pluginNameFromKey(pkey)
+          + " to use updated plugin.  Exiting processes may log errors;"
+          + " they should be harmless");
+      synchronized (auAddDelLock) {
+        Map<String, Configuration> configMap =
+            new HashMap<String, Configuration>();
+        for (ArchivalUnit au : aus) {
+          String auid = au.getAuId();
+          Configuration auConf = au.getConfiguration();
+          configMap.put(auid, auConf);
+          numAusRestarting++;
+          stopAu(au, new AuEvent(AuEvent.Type.RestartDelete, false));
+          if (wdog != null) {
+            wdog.pokeWDog();
+          }
+        }
+        try {
+          Deadline.in(auRestartSleep(aus.size())).sleep();
+        } catch (InterruptedException ex) {
+        }
+
+        // The number of remaining AUs to be processed.
+        int remainingAus = configMap.entrySet().size();
+
+        // The event used to signal that an AU needs to be added to the batch of
+        // AUs to be marked for re-indexing.
+        AuEvent batchEvent = new AuEvent(AuEvent.Type.RestartCreate, true);
+
+        // The event used to signal that an AU needs to be added to the batch of
+        // AUs to be marked for re-indexing and the current batch needs to be
+        // executed afterwards.
+        AuEvent executeEvent = new AuEvent(AuEvent.Type.RestartCreate, false);
+
+        AuEvent auEvent = null;
+        ArchivalUnit newAu = null;
+        Plugin plug = getPlugin(pkey);
+
+        for (Map.Entry<String,Configuration> ent : configMap.entrySet()) {
+          String auid = ent.getKey();
+          Configuration auConf = ent.getValue();
+
+          // The plugin may have been reloaded with a newer definition that
+          // added non-def params; fill in any that are missing from the tdb.
+          // (This restart path uses createAu() with a RestartCreate batch
+          // event, so it can't go through configureAu() as the startup path
+          // does.)
+          auConf = addTdbNonDefParams(plug, auConf, auid);
+
+          // To find the last AU.
+          remainingAus--;
+
+          // Check whether this is the last AU and therefore the batch of AUs to
+          // be marked for re-indexing needs to be executed.
+          if (remainingAus <= 0) {
+            // Yes.
+            auEvent = executeEvent;
+          } else {
+            // No.
+            auEvent = batchEvent;
+          }
+
+          try {
+            newAu = createAu(plug, auConf, auEvent);
+            numAusRestarting--;
+            if (wdog != null) {
+              wdog.pokeWDog();
+            }
+          } catch (ArchivalUnit.ConfigurationException e) {
+            log.error("Failed to restart: " + auid);
+
+            // Check whether the failure happened when trying to execute the
+            // batch.
+            if (!auEvent.isInBatch()) {
+              // Yes: Execute the batch with the last successfully-created AU.
+              signalAuEvent(newAu, auEvent, null);
+            }
+          }
+        }
+        numFailedAuRestarts += numAusRestarting;
+        numAusRestarting = 0;
+      }
     }
   }
 

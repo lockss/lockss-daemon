@@ -46,10 +46,25 @@ public abstract class BaseCrawlRateLimiter implements CrawlRateLimiter {
   static Logger log = Logger.getLogger("BaseCrawlRateLimiter");
 
   protected Set<Crawler> crawlers = new HashSet<Crawler>();
+  protected double multiplier = RateLimiter.NO_MULTIPLIER;
   protected int pauseCounter = 0;
 
   public BaseCrawlRateLimiter() {
   }
+
+  /** Multiply the rate of all included RateLimiters by the specified
+   * amount.  See {@link
+   * org.lockss.util.RateLimiter#setMultiplier(double)}
+   */
+  public CrawlRateLimiter setMultiplier(double multiplier) {
+    this.multiplier = multiplier;
+    updateMultipliers();
+    return this;
+  }
+
+  /** Subclasses must implement this to update all included
+   * RateLimiters with the new multiplier */
+  abstract void updateMultipliers();
 
   /** Add a crawler to the list of those using this CrawlRateLimiter */
   public void addCrawler(Crawler c) {
@@ -99,7 +114,7 @@ public abstract class BaseCrawlRateLimiter implements CrawlRateLimiter {
   public void pauseBeforeFetch(String url, String  previousContentType) {
     RateLimiter limiter = getRateLimiterFor(url, previousContentType);
     try {
-      if (log.isDebug3()) log.debug3("Pausing: " + limiter.rateString());
+      if (log.isDebug3()) log.debug3("Pausing: " + limiter.getEffectiveRate());
       pauseCounter++;
       limiter.fifoWaitAndSignalEvent();
     } catch (InterruptedException ignore) {

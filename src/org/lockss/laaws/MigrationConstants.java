@@ -60,17 +60,25 @@ public class MigrationConstants {
   public static final boolean V2_DEFAULT_IS_IN_MIGRATION_MODE = false;
   public static final String V2_PARAM_ACTUAL_V3_LCAP_PORT =
     Configuration.PREFIX + "config.actualV3LcapPort";
+  public static final String V2_PARAM_PROXY_IN_MIGRATION_MODE =
+    Configuration.PREFIX + "config.proxyInMigrationMode";
+  public static final boolean V2_DEFAULT_PROXY_IN_MIGRATION_MODE = false;
+  public static final String V2_PARAM_MIGRATION_PROXY_PORT =
+    Configuration.PREFIX + "config.migrationProxyPort";
+  public static final int V2_DEFAULT_MIGRATION_PROXY_PORT = 8083;
+
+  public static final String V2_TARGET_DB_VERSION = "30";
 
   public static final boolean V2_DEFAULT_PROXYMANAGER_START = false;
   public static final boolean V2_DEFAULT_CONTENTSERVLETMANAGER_START = false;
 
 
-  public static final int V2_DEFAULT_CFGSVC_UI_PORT = 24621;
-  public static final int V2_DEFAULT_PROXY_PORT = 24670;
-  public static final int V2_DEFAULT_PROXY_SSL_PORT = 24671;
-  public static final int V2_DEFAULT_AUDIT_PROXY_PORT = 24672;
-  public static final int V2_DEFAULT_AUDIT_PROXY_SSL_PORT = 24673;
-  public static final int V2_DEFAULT_CONTENTSERVLET_PORT = 24680;
+  public static final int V2_DEFAULT_CFGSVC_UI_PORT = 24602;
+  public static final int V2_DEFAULT_PROXY_PORT = 24630;
+  public static final int V2_DEFAULT_PROXY_SSL_PORT = 24633;
+  public static final int V2_DEFAULT_AUDIT_PROXY_PORT = 24631;
+  public static final int V2_DEFAULT_AUDIT_PROXY_SSL_PORT = 24634;
+  public static final int V2_DEFAULT_CONTENTSERVLET_PORT = 24640;
   public static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_CLASSNAME =
       EmbeddedDataSource.class.getCanonicalName();
   public static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_SERVERNAME = "localhost";

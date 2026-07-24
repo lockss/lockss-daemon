@@ -318,8 +318,7 @@ public class AdminServletManager extends BaseServletManager {
           BatchAuConfig.class,
           "AU Configuration",
           (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-           | ServletDescr.NEED_ROLE_AU_ADMIN
-           | ServletDescr.MIGRATION_DISALLOW),
+           | ServletDescr.NEED_ROLE_AU_ADMIN),
           "Manage archival units in this LOCKSS box");
   // XXXUI Development version
 //  protected static final ServletDescr SERVLET_BATCH_AU_CONFIG_NEW =
@@ -333,8 +332,7 @@ public class AdminServletManager extends BaseServletManager {
           new ServletDescr("AuConfig",
           AuConfig.class,
           "Manual AU Configuration",
-          (ServletDescr.IN_UIHOME | ServletDescr.NEED_ROLE_AU_ADMIN
-           | ServletDescr.MIGRATION_DISALLOW),
+          (ServletDescr.IN_UIHOME | ServletDescr.NEED_ROLE_AU_ADMIN),
           "Manually edit single AU configuration");
   protected static final ServletDescr SERVLET_ADMIN_ACCESS_CONTROL =
           new ServletDescr("AdminIpAccess",
@@ -423,14 +421,12 @@ public class AdminServletManager extends BaseServletManager {
           new ServletDescr("AddContent",
           AddContent.class,
           "Add Content",
-          (ServletDescr.NEED_ROLE_CONTENT_ACCESS
-           | ServletDescr.MIGRATION_DISALLOW));
+          (ServletDescr.NEED_ROLE_CONTENT_ACCESS));
   public static final ServletDescr SERVLET_ADD_CONTENT_TAB =
           new ServletDescr("AddContentTab",
           AddContentTab.class,
           "Add Content Tab",
-          (ServletDescr.NEED_ROLE_CONTENT_ACCESS
-           | ServletDescr.MIGRATION_DISALLOW));
+          (ServletDescr.NEED_ROLE_CONTENT_ACCESS));
   // XXXUI New servlet
   public static final ServletDescr SERVLET_SERVE_CONTENT =
           new ServletDescr("ServeContent",

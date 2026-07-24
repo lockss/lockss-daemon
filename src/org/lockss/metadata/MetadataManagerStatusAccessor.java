@@ -217,10 +217,13 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
         case Rescheduled:
           status = "Rescheduled";
           break;
+        case Cancelled:
+          status = "Cancelled";
+          break;
         default:
           status = reindexingStatus.toString();
       }
-  
+
       res.add(new StatusTable.SummaryInfo(
           "Status",
           ColumnDescriptor.TYPE_STRING,
@@ -498,7 +501,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
         // invisible keys for sorting
         row.put(SORT_KEY1, SORT_BASE_WAITING);
         row.put(SORT_KEY2, rowNum);
-      } if (startUpdateTime == 0) {
+      } else if (startUpdateTime == 0) {
         // task is running but hasn't finished indexing yet
         row.put(START_TIME_COL_NAME, startTime);
         row.put(INDEX_DURATION_COL_NAME, curTime-startTime);
@@ -536,6 +539,9 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
             break;
           case Rescheduled:
             status = "Rescheduled";
+            break;
+          case Cancelled:
+            status = "Cancelled";
             break;
           default:
             status = indexStatus.toString();

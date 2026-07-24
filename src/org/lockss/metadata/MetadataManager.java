@@ -59,7 +59,6 @@ import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.Plugin.Feature;
 import org.lockss.plugin.PluginManager;
-import org.lockss.scheduler.Schedule;
 import org.lockss.util.Constants;
 import org.lockss.util.KeyPair;
 import org.lockss.util.Logger;
@@ -304,7 +303,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     Running, // if the reindexing task is running
     Success, // if the reindexing task was successful
     Failed, // if the reindexing task failed
-    Rescheduled // if the reindexing task was rescheduled
+    Rescheduled, // if the reindexing task was rescheduled to be retried later
+    Cancelled // if the reindexing task was aborted by request without committing
   };
 
   // The SQL code executor.
@@ -435,7 +435,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @param enable
    *          A boolean with the new enabled state of this manager.
    */
-  void setIndexingEnabled(boolean enable) {
+  public void setIndexingEnabled(boolean enable) {
     final String DEBUG_HEADER = "setIndexingEnabled(): ";
     log.debug(DEBUG_HEADER + "enabled: " + enable);
 
@@ -560,12 +560,21 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         + activeReindexingTasks.size());
 
     // Quit any running reindexing tasks.
+    //
+    // Do NOT clear() activeReindexingTasks here. cancel() only requests
+    // cancellation; the worker runs on its own thread and may not observe that
+    // for some time (e.g. while blocked in DB/buffer I/O), so the AU is still
+    // being indexed after this returns. activeReindexingTasks is the sole dedup
+    // guard (startReindexing skips AUs already in it) and also enforces the
+    // maxReindexingTasks limit. Clearing it here releases the slot out from under
+    // the still-live worker, so a concurrent crawl-completion can relaunch the
+    // same AU -> two indexers for one AU. Each task removes its own entry when it
+    // actually finishes (ReindexingTask.cleanup), which keeps the AU deduped
+    // until the worker truly stops.
     synchronized (activeReindexingTasks) {
       for (ReindexingTask task : activeReindexingTasks.values()) {
         task.cancel();
       }
-
-      activeReindexingTasks.clear();
     }
   }
 
@@ -576,6 +585,23 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   public boolean abortAuIndexing(ArchivalUnit au) {
     return cancelAuTask(au.getAuId());
+  }
+
+  boolean isRealMigrationMode() {
+    return getDaemon().getMigrationManager().isRealMigrationMode();
+  }
+
+  /**
+   * Removes an AU from the pending reindexing queue without deleting its
+   * metadata. Intended for use when an AU is removed via migration.
+   *
+   * @param conn  A Connection with the database connection to be used.
+   * @param auId  A String with the AU identifier.
+   * @throws DbException if any problem occurred accessing the database.
+   */
+  public void removeAuFromPendingQueue(Connection conn, String auId)
+      throws DbException {
+    pendingAusCount = mdManagerSql.removeFromPendingAus(conn, auId);
   }
 
   /**
@@ -663,7 +689,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	  if (log.isDebug3()) log.debug3("au = " + au);
 
           // Check whether it does not exist.
-          if (au == null) {
+          if (au == null  && !isRealMigrationMode()) {
 	    // Yes: Cancel any running tasks associated with the AU and delete
 	    // the AU metadata.
             try {
@@ -672,7 +698,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	      log.error("Error removing AU for auId " + auIdToReindex.auId
 		  + " from the database", dbe);
             }
-          } else {
+          } else if (au != null) {
             // No: Get the metadata extractor.
             ArticleMetadataExtractor ae = getMetadataExtractor(au);
 
@@ -882,8 +908,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   private void runReindexingTask(final ReindexingTask task) {
     /*
-     * Temporarily running task in its own thread rather than using SchedService
-     * 
+     * The task is run directly on its own thread rather than through the
+     * SchedService. ReindexingTask owns its entire lifecycle (setup, metadata
+     * extraction, and the database update); the runnable only provides the
+     * watchdog and thread name.
+     *
      * @todo Update SchedService to handle this case
      */
     LockssRunnable runnable =
@@ -893,14 +922,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	    startWDog(WDOG_PARAM_INDEXER, WDOG_DEFAULT_INDEXER);
 	    task.setWDog(this);
 
-	    task.handleEvent(Schedule.EventType.START);
-
-	    while (!task.isFinished()) {
-	      task.step(Integer.MAX_VALUE);
+	    try {
+	      task.reindex();
+	    } finally {
+	      stopWDog();
 	    }
-
-	    task.handleEvent(Schedule.EventType.FINISH);
-	    stopWDog();
 	  }
 	};
 
@@ -1103,6 +1129,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *         database.
    */
   public long getArticleCount() {
+    if (isRealMigrationMode()) {
+      try {
+        return mdManagerSql.getArticleCount();
+      } catch (DbException ex) {
+        log.error("getArticleCount", ex);
+        return 0;
+      }
+    }
     return metadataArticleCount;
   }
   
@@ -1112,7 +1146,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @return the number of distinct publications in the metadata database
    */
   public long getPublicationCount() {
-    if (metadataPublicationCount < 0) {
+    if (isRealMigrationMode() || metadataPublicationCount < 0) {
       try {
         metadataPublicationCount = mdManagerSql.getPublicationCount();
       } catch (DbException ex) {
@@ -1128,7 +1162,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @return the number of distinct publishers in the metadata database
    */
   public long getPublisherCount() {
-    if (metadataPublisherCount < 0) {
+    if (isRealMigrationMode() || metadataPublisherCount < 0) {
       try {
         metadataPublisherCount = mdManagerSql.getPublisherCount();
       } catch (DbException ex) {
@@ -1144,7 +1178,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @return the number of distinct providers in the metadata database
    */
   public long getProviderCount() {
-    if (metadataProviderCount < 0) {
+    if (isRealMigrationMode() || metadataProviderCount < 0) {
       try {
         metadataProviderCount = mdManagerSql.getProviderCount();
       } catch (DbException ex) {
@@ -3972,6 +4006,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   void persistUnconfiguredAu(ArchivalUnit au) {
     final String DEBUG_HEADER = "persistUnconfiguredAu(): ";
+    if (isRealMigrationMode()) {
+      log.debug2(DEBUG_HEADER + "Skipping unconfigured AU write in migration mode: " + au);
+      return;
+    }
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "au = " + au);
 
     Connection conn = null;
@@ -4570,6 +4608,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   public boolean deletePublicationIssn(Long mdItemSeq, String issn,
       String issnType) throws DbException {
+    if (isRealMigrationMode()) {
+      throw new DbException(
+          "Metadata control operations are disabled in migration mode");
+    }
     return getMetadataManagerSql().deletePublicationIssn(mdItemSeq, issn,
 	issnType);
   }
@@ -4686,6 +4728,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *           if any problem occurred accessing the database.
    */
   public boolean deleteDbAu(Long auSeq, String auKey) throws DbException {
+    if (isRealMigrationMode()) {
+      throw new DbException(
+          "Metadata control operations are disabled in migration mode");
+    }
     return getMetadataManagerSql().removeAu(auSeq, auKey);
   }
 

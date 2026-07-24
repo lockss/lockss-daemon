@@ -57,11 +57,8 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.io.Serializable;
-import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -79,22 +76,24 @@ public class ImportStatus implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_WARC_ID = "warcId";
-  @SerializedName(SERIALIZED_NAME_WARC_ID) private String warcId;
+  @SerializedName(SERIALIZED_NAME_WARC_ID) @javax.annotation.Nullable private String warcId;
 
   public static final String SERIALIZED_NAME_OFFSET = "offset";
-  @SerializedName(SERIALIZED_NAME_OFFSET) private Long offset;
+  @SerializedName(SERIALIZED_NAME_OFFSET) @javax.annotation.Nullable private Long offset;
 
   public static final String SERIALIZED_NAME_URL = "url";
-  @SerializedName(SERIALIZED_NAME_URL) private String url;
+  @SerializedName(SERIALIZED_NAME_URL) @javax.annotation.Nullable private String url;
 
   public static final String SERIALIZED_NAME_ARTIFACT_UUID = "artifactUuid";
-  @SerializedName(SERIALIZED_NAME_ARTIFACT_UUID) private String artifactUuid;
+  @SerializedName(SERIALIZED_NAME_ARTIFACT_UUID)
+  @javax.annotation.Nullable
+  private String artifactUuid;
 
   public static final String SERIALIZED_NAME_DIGEST = "digest";
-  @SerializedName(SERIALIZED_NAME_DIGEST) private String digest;
+  @SerializedName(SERIALIZED_NAME_DIGEST) @javax.annotation.Nullable private String digest;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
-  @SerializedName(SERIALIZED_NAME_VERSION) private Integer version;
+  @SerializedName(SERIALIZED_NAME_VERSION) @javax.annotation.Nullable private Integer version;
 
   /**
    * Gets or Sets status
@@ -103,7 +102,11 @@ public class ImportStatus implements Serializable {
   public enum StatusEnum {
     OK("OK"),
 
-    ERROR("ERROR");
+    ERROR("ERROR"),
+
+    DUPLICATE("DUPLICATE"),
+
+    EXCLUDED("EXCLUDED");
 
     private String value;
 
@@ -142,17 +145,24 @@ public class ImportStatus implements Serializable {
         return StatusEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonObject(JsonElement jsonObject) throws IOException {
+      String value = jsonObject.getAsString();
+      StatusEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS) private StatusEnum status;
+  @SerializedName(SERIALIZED_NAME_STATUS) @javax.annotation.Nullable private StatusEnum status;
 
   public static final String SERIALIZED_NAME_STATUS_MESSAGE = "statusMessage";
-  @SerializedName(SERIALIZED_NAME_STATUS_MESSAGE) private String statusMessage;
+  @SerializedName(SERIALIZED_NAME_STATUS_MESSAGE)
+  @javax.annotation.Nullable
+  private String statusMessage;
 
   public ImportStatus() {}
 
-  public ImportStatus warcId(String warcId) {
+  public ImportStatus warcId(@javax.annotation.Nullable String warcId) {
     this.warcId = warcId;
     return this;
   }
@@ -162,17 +172,15 @@ public class ImportStatus implements Serializable {
    * @return warcId
    **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public String getWarcId() {
     return warcId;
   }
 
-  public void setWarcId(String warcId) {
+  public void setWarcId(@javax.annotation.Nullable String warcId) {
     this.warcId = warcId;
   }
 
-  public ImportStatus offset(Long offset) {
+  public ImportStatus offset(@javax.annotation.Nullable Long offset) {
     this.offset = offset;
     return this;
   }
@@ -180,19 +188,17 @@ public class ImportStatus implements Serializable {
   /**
    * Get offset
    * @return offset
-   **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public Long getOffset() {
     return offset;
   }
 
-  public void setOffset(Long offset) {
+  public void setOffset(@javax.annotation.Nullable Long offset) {
     this.offset = offset;
   }
 
-  public ImportStatus url(String url) {
+  public ImportStatus url(@javax.annotation.Nullable String url) {
     this.url = url;
     return this;
   }
@@ -202,17 +208,15 @@ public class ImportStatus implements Serializable {
    * @return url
    **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public String getUrl() {
     return url;
   }
 
-  public void setUrl(String url) {
+  public void setUrl(@javax.annotation.Nullable String url) {
     this.url = url;
   }
 
-  public ImportStatus artifactUuid(String artifactUuid) {
+  public ImportStatus artifactUuid(@javax.annotation.Nullable String artifactUuid) {
     this.artifactUuid = artifactUuid;
     return this;
   }
@@ -222,17 +226,15 @@ public class ImportStatus implements Serializable {
    * @return artifactUuid
    **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public String getArtifactUuid() {
     return artifactUuid;
   }
 
-  public void setArtifactUuid(String artifactUuid) {
+  public void setArtifactUuid(@javax.annotation.Nullable String artifactUuid) {
     this.artifactUuid = artifactUuid;
   }
 
-  public ImportStatus digest(String digest) {
+  public ImportStatus digest(@javax.annotation.Nullable String digest) {
     this.digest = digest;
     return this;
   }
@@ -240,19 +242,17 @@ public class ImportStatus implements Serializable {
   /**
    * Get digest
    * @return digest
-   **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public String getDigest() {
     return digest;
   }
 
-  public void setDigest(String digest) {
+  public void setDigest(@javax.annotation.Nullable String digest) {
     this.digest = digest;
   }
 
-  public ImportStatus version(Integer version) {
+  public ImportStatus version(@javax.annotation.Nullable Integer version) {
     this.version = version;
     return this;
   }
@@ -262,17 +262,15 @@ public class ImportStatus implements Serializable {
    * @return version
    **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public Integer getVersion() {
     return version;
   }
 
-  public void setVersion(Integer version) {
+  public void setVersion(@javax.annotation.Nullable Integer version) {
     this.version = version;
   }
 
-  public ImportStatus status(StatusEnum status) {
+  public ImportStatus status(@javax.annotation.Nullable StatusEnum status) {
     this.status = status;
     return this;
   }
@@ -282,17 +280,15 @@ public class ImportStatus implements Serializable {
    * @return status
    **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public StatusEnum getStatus() {
     return status;
   }
 
-  public void setStatus(StatusEnum status) {
+  public void setStatus(@javax.annotation.Nullable StatusEnum status) {
     this.status = status;
   }
 
-  public ImportStatus statusMessage(String statusMessage) {
+  public ImportStatus statusMessage(@javax.annotation.Nullable String statusMessage) {
     this.statusMessage = statusMessage;
     return this;
   }
@@ -302,13 +298,11 @@ public class ImportStatus implements Serializable {
    * @return statusMessage
    **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public String getStatusMessage() {
     return statusMessage;
   }
 
-  public void setStatusMessage(String statusMessage) {
+  public void setStatusMessage(@javax.annotation.Nullable String statusMessage) {
     this.statusMessage = statusMessage;
   }
 
@@ -379,7 +373,7 @@ public class ImportStatus implements Serializable {
     openapiFields.add("statusMessage");
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
   /**
@@ -436,6 +430,10 @@ public class ImportStatus implements Serializable {
       throw new IllegalArgumentException(String.format(
           "Expected the field `status` to be a primitive type in the JSON string but got `%s`",
           jsonObj.get("status").toString()));
+    }
+    // validate the optional field `status`
+    if (jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) {
+      StatusEnum.validateJsonObject(jsonObj.get("status"));
     }
     if ((jsonObj.get("statusMessage") != null && !jsonObj.get("statusMessage").isJsonNull())
         && !jsonObj.get("statusMessage").isJsonPrimitive()) {

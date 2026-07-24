@@ -90,6 +90,16 @@ public class ProxyManager extends BaseProxyManager {
     Configuration.PREFIX + "proxy.connectAddr";
   static final String DEFAULT_CONNECT_ADDR = "127.0.0.1";
 
+  /** IP addrs or subnets (semicolon-separated) that are allowed to issue
+   * CONNECT requests through us.  IP's that match will get normal
+   * CONNECT behavior, rather than the CONNECT-to-loopback hack (if
+   * enabled by setting {@value
+   * org.lockss.proxy.ProxyManager#PARAM_SSL_PORT}).
+   */
+  public static final String PARAM_CONNECT_ALLOWED_FROM =
+    Configuration.PREFIX + "proxy.connectAllowedFrom";
+  static final List<String> DEFAULT_CONNECT_ALLOWED_FROM = null;
+
   /** Name of managed keystore to use (see
    * org.lockss.keyMgr.keystore.<i>id</i>.name) */
   public static final String PARAM_SSL_KEYSTORE_NAME =
@@ -324,6 +334,7 @@ public class ProxyManager extends BaseProxyManager {
     DEFAULT_ALLOW_BIND_LOCAL_ADDRESSES;
   private boolean paramNormalizeAuidRequest =
     DEFAULT_NORMALIZE_AUID_REQUEST;
+  private IpFilter connectAllowedIpFilter;
 
   public HostPortParser getForwardProxy() {
     return forwardProxy;
@@ -473,6 +484,9 @@ public class ProxyManager extends BaseProxyManager {
       setConnectAddr(config.get(PARAM_CONNECT_ADDR, DEFAULT_CONNECT_ADDR),
 		     sslPort);
 
+      setConnectAllowedFrom(config.getList(PARAM_CONNECT_ALLOWED_FROM,
+                                           DEFAULT_CONNECT_ALLOWED_FROM));
+
       if (start) {
 	if (!isServerRunning() && getDaemon().isDaemonRunning()) {
 	  startProxy();
@@ -480,6 +494,31 @@ public class ProxyManager extends BaseProxyManager {
       } else if (isServerRunning()) {
 	stopProxy();
       }
+    }
+  }
+
+  private void setConnectAllowedFrom(List<String> ipInclude) {
+    if (ipInclude == null) {
+      connectAllowedIpFilter = null;
+    } else {
+      IpFilter filter = new IpFilter();
+      try {
+        filter.setFilters(ipInclude, Collections.emptyList());
+        connectAllowedIpFilter = filter;
+      } catch (IpFilter.MalformedException e) {
+        log.error("Couldn't parse " + PARAM_CONNECT_ALLOWED_FROM, e);
+        connectAllowedIpFilter = null;
+      }
+    }
+  }
+
+  protected boolean isConnectAllowedFrom(String ip) {
+    try {
+      return connectAllowedIpFilter != null &&
+        connectAllowedIpFilter.isIpAllowed(ip);
+    } catch (IpFilter.MalformedException e) {
+      log.error("Couldn't parse IP addr to check for CONNECT" + PARAM_CONNECT_ALLOWED_FROM, e);
+      return false;
     }
   }
 

@@ -561,6 +561,16 @@ public class SqlConstants {
   public static final String UNKNOWN_PROVIDER_NAME = "UNKNOWN PROVIDER";
 
   /**
+   * The name of the metadata write lock table.
+   */
+  public static final String METADATA_WRITE_LOCK_TABLE = "metadata_write_lock";
+
+  /**
+   * The column for the lock identifier in the metadata write lock table.
+   */
+  public static final String LOCK_ID_COLUMN = "lock_id";
+
+  /**
    * The standard type of a name that is primary.
    */
   public static final String PRIMARY_NAME_TYPE = "primary";

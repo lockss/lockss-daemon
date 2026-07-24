@@ -55,10 +55,10 @@ public class TestCuChecker extends LockssTestCase {
 //TODO: Test goes here... 
   }
 
-  /**
-   * Method: getAllCuArtifacts(ArchivalUnit au, String url)
-   */
-  public void testGetAllCuArtifacts() throws Exception {
-//TODO: Test goes here... 
-  }
+//   /**
+//    * Method: getAllCuArtifacts(ArchivalUnit au, String url)
+//    */
+//   public void testGetAllCuArtifacts() throws Exception {
+// //TODO: Test goes here...
+//   }
 }

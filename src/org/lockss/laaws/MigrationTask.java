@@ -29,6 +29,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.laaws;
 
 import java.util.function.*;
+import java.util.Arrays;
+import java.util.EnumSet;
 import org.apache.commons.lang3.builder.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
@@ -45,7 +47,6 @@ public class MigrationTask {
     COPY_CU_VERSIONS,
     CHECK_CU_VERSIONS,
     COPY_AU_STATE,
-    CHECK_AU_STATE,
     FINISH_AU_BULK,
     FINISH_ALL;
 
@@ -55,13 +56,19 @@ public class MigrationTask {
       COPY_CU_VERSIONS.phase = V2AuMover.Phase.COPY;
       CHECK_CU_VERSIONS.phase = V2AuMover.Phase.VERIFY;
       COPY_AU_STATE.phase = V2AuMover.Phase.COPY_STATE;
-      CHECK_AU_STATE.phase = V2AuMover.Phase.CHECK_STATE;
       FINISH_AU_BULK.phase = V2AuMover.Phase.INDEX;
     }
 
     public V2AuMover.Phase getTaskPhase() {
       return phase;
     }
+  }
+
+  /** Task options */
+  public enum Option {
+    RECORD_ERRORS,
+    REPORT_ERRORS,
+    RETRY_PHASE
   }
 
   V2AuMover auMover;
@@ -73,17 +80,16 @@ public class MigrationTask {
   CountUpDownLatch countDownLatch;
   CountUpDownLatch waitLatch;
   BiConsumer completionAction;
+  EnumSet<Option> options = EnumSet.of(Option.REPORT_ERRORS);
 
   public String toString() {
     switch (type) {
     case COPY_CU_VERSIONS:
-      return "Copy " + cu.getUrl();
+      return (options.contains(Option.RETRY_PHASE) ? "Retry " : "Copy ") + cu.getUrl();
     case CHECK_CU_VERSIONS:
       return "Verify " + cu.getUrl();
     case COPY_AU_STATE:
-      return "Copy state " + au.getName();
-    case CHECK_AU_STATE:
-      return "Verify state " + au.getName();
+      return "Copy/check state " + au.getName();
     case FINISH_AU_BULK:
       return "Finish bulk " + au.getName();
     case FINISH_ALL:
@@ -114,12 +120,26 @@ public class MigrationTask {
     return new MigrationTask(mover, TaskType.COPY_CONFIG_FILES);
   }
 
-  public static MigrationTask copyCuVersions(V2AuMover mover,
-                                             ArchivalUnit au,
-                                             CachedUrl cu) {
+  private static MigrationTask newCopyTask(V2AuMover mover,
+                                           ArchivalUnit au,
+                                           CachedUrl cu) {
     return new MigrationTask(mover, TaskType.COPY_CU_VERSIONS)
       .setCu(cu)
       .setAu(cu.getArchivalUnit());
+  }
+
+  public static MigrationTask copyCuVersions(V2AuMover mover,
+                                             ArchivalUnit au,
+                                             CachedUrl cu) {
+    return newCopyTask(mover, au, cu)
+      .setOptions(Option.RECORD_ERRORS);
+  }
+
+  public static MigrationTask retryCuVersions(V2AuMover mover,
+                                              ArchivalUnit au,
+                                              CachedUrl cu) {
+    return newCopyTask(mover, au, cu)
+      .setOptions(Option.REPORT_ERRORS, Option.RETRY_PHASE);
   }
 
   public static MigrationTask checkCuVersions(V2AuMover mover,
@@ -132,11 +152,6 @@ public class MigrationTask {
   public static MigrationTask copyAuState(V2AuMover mover, ArchivalUnit au) {
     return new MigrationTask(mover, TaskType.COPY_AU_STATE)
       .setAu(au);
-  }
-
-  public static MigrationTask checkAuState(V2AuMover mover, ArchivalUnit au) {
-    return new MigrationTask(mover, TaskType.CHECK_AU_STATE)
-        .setAu(au);
   }
 
   public static MigrationTask finishAuBulk(V2AuMover mover, ArchivalUnit au) {
@@ -163,6 +178,16 @@ public class MigrationTask {
     return this;
   }
 
+  public MigrationTask setOptions(Option ... opts) {
+    // Why can't I just pass opts to EnumSet.of() ?
+    this.options = EnumSet.copyOf(Arrays.asList(opts));
+    return this;
+  }
+
+  public boolean isOption(Option opt) {
+    return options.contains(opt);
+  }
+
   public MigrationTask setAuStatus(AuStatus stat) {
     this.auStat = stat;
     return this;
@@ -187,6 +212,10 @@ public class MigrationTask {
     this.auStat.addError(msg);
   }
 
+  public void addWarning(String msg) {
+    this.auStat.addWarning(msg);
+  }
+
   public Counters getCounters() {
     return counters;
   }
@@ -205,6 +234,10 @@ public class MigrationTask {
 
   public CachedUrl getCu() {
     return cu;
+  }
+
+  public EnumSet<Option> getOptions() {
+    return options;
   }
 
   public TaskType getType() {

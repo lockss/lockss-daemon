@@ -56,6 +56,10 @@ public class FileTypeCrawlRateLimiter extends BaseCrawlRateLimiter {
       this.pat = pat;
       this.limiter = limiter;
     }
+
+    public String toString() {
+      return "[PatElem: pat: " + pat + ", " + "rl: " + limiter + "]";
+    }
   }
 
   public class UrlLimiters extends ArrayList<PatElem>{
@@ -82,12 +86,27 @@ public class FileTypeCrawlRateLimiter extends BaseCrawlRateLimiter {
     }
   }
 
+  @Override
+  protected void updateMultipliers() {
+    defaultLimiter.setMultiplier(multiplier);
+    if (urlLimiters != null) {
+      for (PatElem pe : urlLimiters) {
+        pe.limiter.setMultiplier(multiplier);
+      }
+    }
+    if (mimeLimiterMap != null) {
+      for (RateLimiter rl : mimeLimiterMap.values()) {
+        rl.setMultiplier(multiplier);
+      }
+    }
+  }
+
   protected RateLimiter newRateLimiter(String rate) {
-    return new RateLimiter(rate);
+    return new RateLimiter(rate).setMultiplier(multiplier);
   }
 
   protected RateLimiter newRateLimiter(int events, long interval) {
-    return new RateLimiter(events, interval);
+    return new RateLimiter(events, interval).setMultiplier(multiplier);
   }
 
   /** Convert URL -> rate map to list of Pattern,RateLimiter pairs */
@@ -149,5 +168,11 @@ public class FileTypeCrawlRateLimiter extends BaseCrawlRateLimiter {
       return res;
     }
     return defaultLimiter;
+  }
+
+  @Override
+  public String toString() {
+    return "[FTCRL: default: " + defaultLimiter + ", urlMap: " +
+      urlLimiters + "mimeMap: " + mimeLimiterMap + "]";
   }
 }

@@ -1309,14 +1309,16 @@ public class RemoteApi
       } else {
 	try {
  	  String auid = tc.getAuId(pluginMgr, pluginp.getPlugin());
-	  stat =
-	    batchProcessOneAu(false, BATCH_ADD_ADD, pluginp,
-			      auid, tc.getConfig(), null);
-	  stat.setTitleConfig(tc);
-	  if ("Unknown".equalsIgnoreCase(stat.getName())) {
-	    stat.setName(tc.getDisplayName(), pluginp);
-	  }
-          bas.add(stat);
+          if (!pluginMgr.isMigratedAuid(auid)) {
+            stat =
+              batchProcessOneAu(false, BATCH_ADD_ADD, pluginp,
+                                auid, tc.getConfig(), null);
+            stat.setTitleConfig(tc);
+            if ("Unknown".equalsIgnoreCase(stat.getName())) {
+              stat.setName(tc.getDisplayName(), pluginp);
+            }
+            bas.add(stat);
+          }
 	} catch (RuntimeException e) {
 	  log.warning("Can't generate auid for: " + tc, e);
 	}

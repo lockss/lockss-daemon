@@ -160,6 +160,10 @@ public class LockssDaemon extends LockssApp {
     new ManagerDesc(MISC_MANAGER, "org.lockss.daemon.MiscSetupManager"),
     new ManagerDesc(RANDOM_MANAGER, "org.lockss.daemon.RandomManager"),
     new ManagerDesc(RESOURCE_MANAGER, DEFAULT_RESOURCE_MANAGER),
+    // This must precede any manager whose setConfig calls
+    // MigrationManager methods.  In particular, RepositoryManager
+    new ManagerDesc(MIGRATION_MANAGER,
+	"org.lockss.laaws.MigrationManager"),
     new ManagerDesc(MAIL_SERVICE, DEFAULT_MAIL_SERVICE),
     new ManagerDesc(ALERT_MANAGER, "org.lockss.alert.AlertManagerImpl"),
     new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),
@@ -195,8 +199,6 @@ public class LockssDaemon extends LockssApp {
     // Start the subscription manager.
     new ManagerDesc(SUBSCRIPTION_MANAGER,
 	"org.lockss.subscription.SubscriptionManager"),
-    new ManagerDesc(MIGRATION_MANAGER,
-	"org.lockss.laaws.MigrationManager"),
     // Start the COUNTER reports manager.
     new ManagerDesc(FETCH_TIME_EXPORT_MANAGER,
 	"org.lockss.exporter.FetchTimeExportManager"),

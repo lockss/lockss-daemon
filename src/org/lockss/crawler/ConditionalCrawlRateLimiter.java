@@ -59,13 +59,25 @@ public class ConditionalCrawlRateLimiter extends BaseCrawlRateLimiter {
       this.window = window;
       this.crl = crl;
     }
+
+    public String toString() {
+      return "[Clause: window: " + window + ", " + "crl: " + crl + "]";
+    }
   }
 
   public ConditionalCrawlRateLimiter(RateLimiterInfo rli) {
     for (Map.Entry<CrawlWindow,RateLimiterInfo> ent :
  	   rli.getCond().entrySet()) {
       clauses.add(new Clause(ent.getKey(),
- 			     CrawlRateLimiter.Util.forRli(ent.getValue())));
+ 			     CrawlRateLimiter.Util.forRli(ent.getValue())
+                             .setMultiplier(multiplier)));
+    }
+  }
+
+  @Override
+  protected void updateMultipliers() {
+    for (Clause claws : clauses) {
+      claws.crl.setMultiplier(multiplier);
     }
   }
 
@@ -108,5 +120,10 @@ public class ConditionalCrawlRateLimiter extends BaseCrawlRateLimiter {
       super.pauseBeforeFetch(url, previousContentType);
     }
     didChangeWindow = false;
+  }
+
+  @Override
+  public String toString() {
+    return "[CCRL: windows: " + clauses + "]";
   }
 }

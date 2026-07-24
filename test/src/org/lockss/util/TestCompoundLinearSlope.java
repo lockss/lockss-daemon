@@ -159,6 +159,7 @@ public class TestCompoundLinearSlope extends LockssTestCase {
     CompoundLinearSlope c = new CompoundLinearSlope("[0,100]");
     assertEquals(100.0, c.getY(0));
     assertEquals(100.0, c.getY(10));
+    assertEquals(100.0, c.getY(Integer.MAX_VALUE));
     assertEquals(100.0, c.getY(-Integer.MAX_VALUE));
   }
 

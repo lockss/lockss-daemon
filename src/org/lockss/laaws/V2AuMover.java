@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2021-2024 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2021-2026 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +32,10 @@ import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 import com.google.gson.Gson;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.builder.*;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.time.FastDateFormat;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
@@ -42,7 +45,7 @@ import org.lockss.laaws.MigrationManager.OpType;
 import org.lockss.laaws.api.rs.StreamingArtifactsApi;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.V2RestClient;
-import org.lockss.laaws.model.rs.AuidPageInfo;
+import org.lockss.laaws.model.rs.*;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.*;
 import org.lockss.poller.PollManager;
@@ -61,6 +64,7 @@ import java.nio.file.Files;
 import java.text.*;
 import java.util.*;
 import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -106,13 +110,35 @@ public class V2AuMover {
   public static final boolean DEFAULT_GENERATE_TEST_ERRORS = false;
 
   /**
-   * If true, lots of errors will be recorded (for testing UI)
+   * If true, compare content (if so configured) even if versions
+   * don't line up
    */
   public static final String PARAM_COMPARE_EVEN_IF_VERSION_MISMATCH = PREFIX +
     "compare_even_if_version_mismatch";
   public static final boolean DEFAULT_COMPARE_EVEN_IF_VERSION_MISMATCH = true;
 
   public static final String EXEC_PREFIX = PREFIX + "executor.";
+
+  /** Select which AUs to use bulk mode for index updates. */
+  enum UseBulkMode {
+    NEVER,
+    ALWAYS,
+    NON_SOURCE;        // only for non-source AUs
+  }
+
+  /**
+   * Use Buik mode ALWAYS, NEVER, or only for NON_SOURCE content.
+   * Source AUs typically have a relatively small number of huge files.
+   * The benefits of bulk mode are much less because the index update
+   * time isn't significant, but the aggregate transfer rate is much
+   * higher than typical harvest AUs, which can cause the repo's
+   * background temp -> perm WARC copies to fall behind on a slow (e.g.,
+   * network) filesystem, causing finishBulk to block for a long time
+   * (days), resulting in a long period where a bunch of large artifacts
+   * have been copied to permanent WARCs but not indexed.
+   */
+  public static final String PARAM_USE_BULK_MODE = PREFIX + "useBulkMode";
+  public static final UseBulkMode DEFAULT_USE_BULK_MODE = UseBulkMode.NON_SOURCE;
 
   /**
    * Executor Spec:
@@ -128,7 +154,7 @@ public class V2AuMover {
    */
   public static final String PARAM_COPY_EXECUTOR_SPEC =
     EXEC_PREFIX + "copy.spec";
-  public static final String DEFAULT_COPY_EXECUTOR_SPEC = "1000;10";
+  public static final String DEFAULT_COPY_EXECUTOR_SPEC = "1000;20";
 
   /**
    * Verify task Executor.  Queue should be large to reduce waiting
@@ -144,7 +170,19 @@ public class V2AuMover {
    */
   public static final String PARAM_COPY_ITER_EXECUTOR_SPEC =
     EXEC_PREFIX + "copyIter.spec";
-  public static final String DEFAULT_COPY_ITER_EXECUTOR_SPEC = "2;4";
+  public static final String DEFAULT_COPY_ITER_EXECUTOR_SPEC = "2;10";
+
+  /**
+   * Retry CU iterators run in this Executor.  Separate from
+   * copyIterExecutor to prevent deadlock: if COPY and RETRY shared
+   * the same pool, the COPY phase-ending latch's runAtZero callback
+   * would try to submit RETRY work back into the pool it's running
+   * on, blocking on queue.put() inside its own task when the queue
+   * is full.
+   */
+  public static final String PARAM_RETRY_ITER_EXECUTOR_SPEC =
+    EXEC_PREFIX + "retryIter.spec";
+  public static final String DEFAULT_RETRY_ITER_EXECUTOR_SPEC = "2;10";
 
   /**
    * Verify CU iterators run in this Executor.  Controls the number of
@@ -152,7 +190,7 @@ public class V2AuMover {
    */
   public static final String PARAM_VERIFY_ITER_EXECUTOR_SPEC =
     EXEC_PREFIX + "verifyIter.spec";
-  public static final String DEFAULT_VERIFY_ITER_EXECUTOR_SPEC = "10;2";
+  public static final String DEFAULT_VERIFY_ITER_EXECUTOR_SPEC = "10;16";
 
   /**
    * Index Executor.  Controls max simulataneous finishBulk operations
@@ -162,18 +200,11 @@ public class V2AuMover {
   public static final String DEFAULT_INDEX_EXECUTOR_SPEC = "50;5";
 
   /**
-   * State copy Executor, runs AU State copy.
+   * State Executor, runs AU state processing.
    */
   public static final String PARAM_STATE_COPY_EXECUTOR_SPEC =
     EXEC_PREFIX + "stateCopy.spec";
   public static final String DEFAULT_STATE_COPY_EXECUTOR_SPEC = "50;10";
-
-  /**
-   * State verify Executor, runs AU State verify.
-   */
-  public static final String PARAM_STATE_VERIFY_EXECUTOR_SPEC =
-    EXEC_PREFIX + "stateVerify.spec";
-  public static final String DEFAULT_STATE_VERIFY_EXECUTOR_SPEC = "50;10";
 
   /**
    * Misc Executor, runs finishall.
@@ -189,6 +220,13 @@ public class V2AuMover {
   public static final long DEFAULT_THREAD_TIMEOUT = 30 * Constants.SECOND;
 
   /**
+   * Full Executor retry interval
+   */
+  public static final String PARAM_EXECUTOR_RETRY_INTERVAL =
+    PREFIX + "executorRetryInterval";
+  public static final long DEFAULT_EXECUTOR_RETRY_INTERVAL = Constants.SECOND;
+
+  /**
    * V2 namespace to migrate into
    */
   public static final String V2_PARAM_NAMESPACE
@@ -200,25 +238,25 @@ public class V2AuMover {
    * Repository service port
    */
   public static final String PARAM_RS_PORT = PREFIX + "rs.port";
-  public static final int DEFAULT_RS_PORT = 24610;
+  public static final int DEFAULT_RS_PORT = 24611;
 
   /**
    * Configuration service port
    */
   public static final String PARAM_CFG_PORT = PREFIX + "cfg.port";
-  public static final int DEFAULT_CFG_PORT = 24620;
+  public static final int DEFAULT_CFG_PORT = 24612;
 
   /**
    * Configuration service port
    */
   public static final String PARAM_CFG_UI_PORT = PREFIX + "cfg.ui.port";
-  public static final int DEFAULT_CFG_UI_PORT = 24621;
+  public static final int DEFAULT_CFG_UI_PORT = 24602;
 
   /**
    * Maximum number of retries for REST request failures
    */
   public static final String PARAM_MAX_RETRY_COUNT = PREFIX + "max.retries";
-  public static final int DEFAULT_MAX_RETRY_COUNT = 4;
+  public static final int DEFAULT_MAX_RETRY_COUNT = 2;
 
   /**
    * Backoff between REST request retries
@@ -262,6 +300,12 @@ public class V2AuMover {
   public static final long DEFAULT_STATUS_READ_TIMEOUT =  19 * Constants.SECOND;
 
   /**
+   * API status Read/write timeout
+   */
+  public static final String PARAM_DB_COPY_TIMEOUT = PREFIX + "dbCopy.timeout";
+  public static final long DEFAULT_DB_COPY_TIMEOUT = 3*Constants.DAY;
+
+  /**
    * Path to directory holding daemon logs
    */
   public static final String PARAM_REPORT_DIR =
@@ -283,8 +327,10 @@ public class V2AuMover {
 
   /**
    * If true, partial copies will be done for AUs some of whose
-   * content already exists in the V2 repo.  If false, AUs having any
-   * content in V2 will be skipped.
+   * content already exists in the V2 repo.  If false, AUs having
+   * <i>any</i> content in V2 will be skipped.  <b>Setting this false
+   * risks missing some files if migration is reatarted after being
+   * interrupted
    */
   public static final String PARAM_CHECK_MISSING_CONTENT =
     PREFIX + "check.missing.content";
@@ -301,8 +347,17 @@ public class V2AuMover {
    */
   public static final String PARAM_DETAILED_STATS = PREFIX + "detailedStats";
   public static final boolean DEFAULT_DETAILED_STATS = true;
-  long dbBytesCopied;
-  long dbBytesTotal;
+
+  /**
+   * Inject an arbitary delay between queueing AUs for migration
+   */
+  public static final String PARAM_INTER_AU_DELAY = PREFIX + "interAuDelay";
+  public static final long DEFAULT_INTER_AU_DELAY = 0;
+
+  volatile long dbCopyTimeout;
+  volatile long dbBytesCopied = 0;
+  volatile long dbBytesTotal;
+  volatile String dbCopyDuration;
 
   enum UseFetchUrl {
     NONE,
@@ -317,6 +372,70 @@ public class V2AuMover {
   public static final String PARAM_INSTRUMENTATION = PREFIX + "instrumentation";
   public static final boolean DEFAULT_INSTRUMENTATION = false;
 
+  /** Curve controlling number of xferred bytes after which free space
+   * will be refetched, as a function of the amount of free space */
+  public static final String PARAM_DISK_SPACE_BYTES_CURVE =
+    PREFIX + "diskSpaceBytesCurve";
+  public static final String DEFAULT_DISK_SPACE_BYTES_CURVE =
+    // below 10K: 1K
+    "[10000,1000]," +
+    // 10K-100K: 10K
+    "[10000,10000],[100000,10000]," +
+    // 100K-1M: 100K
+    "[100000,100000],[1000000,100000]," +
+    // 1M-10M: 1M
+    "[1000000,1000000],[10000000,1000000]," +
+    // 10M0-100M: 10M
+    "[10000000,10000000],[100000000,10000000]," +
+    // 100M0-1G: 100M
+    "[100000000,100000000],[1000000000,100000000]," +
+    // 1G-10G: 200M
+    "[1000000000,200000000],[10000000000,200000000]," +
+    // above 10G: 500M
+    "[10000000000,500000000]";
+
+  /** Curve controlling number of xferred artifacts after which free
+   * space will be refetched, as a function of the amount of free
+   * index space.  (On a machine with typical crawled AUs, each
+   * artifact takes ~860 bytes of index DB space.) */
+  public static final String PARAM_DISK_SPACE_ARTIFACTS_CURVE =
+    PREFIX + "diskSpaceArtifactsCurve";
+  public static final String DEFAULT_DISK_SPACE_ARTIFACTS_CURVE =
+    // below 1M: 100
+    "[1000000,100]," +
+    // 1M-10M: 1K
+    "[1000000,1000],[10000000,1000]," +
+    // 10M-100M: 10K
+    "[10000000,10000],[100000000,10000]," +
+    // above 100M0: 100K
+    "[100000000,100000]";
+
+  /** Curve controlling the interval at which to check V2's DB size,
+   * as a function of the amount of current size */
+  public static final String PARAM_DB_SIZE_CHECK_CURVE =
+    PREFIX + "dbSizeCheckCurve";
+  public static final String DEFAULT_DB_SIZE_CHECK_CURVE =
+    // below 1G: 2 sec
+    "[1000000000,2s]," +
+    // 1G-10G: 10 sec
+    "[1000000000,10s],[10000000000,10s]," +
+    // above 10G, 30 sec
+    "[10000000000,30s]";
+
+  /** The interval at which to fetch disk usage stats from V2, if not
+   * triggered by amount of data xferred */
+  public static final String PARAM_DISK_SPACE_INTERVAL =
+    PREFIX + "diskSpaceInterval";
+  public static final long DEFAULT_DISK_SPACE_INTERVAL = 5 * Constants.MINUTE;
+
+  /** If true, exclude from the active task list tasks that have been
+   * created and queued but haven't started executing.  With large
+   * executor queues there can be 100s of these which pollute the
+   * status display.  But they're sometimes useful for diagnostics. */
+  public static final String PARAM_EXCLUDE_QUEUED_TASKS =
+    PREFIX + "excludeQueuedTasks";
+  public static final boolean DEFAULT_EXCLUDE_QUEUED_TASKS = true;
+
 
   //////////////////////////////////////////////////////////////////////
   // Constants
@@ -330,6 +449,11 @@ public class V2AuMover {
   private static final String STATUS_DONE_COPYING_CONFIG = "Finished copying config files";
   private static final String STATUS_COPYING_USER_ACCOUNTS = "Copying user accounts";
   private static final String STATUS_DONE_COPYING_SYSTEM_SETTINGS = "Finished copying system settings";
+
+  /** Minimum V2 version that has all the features needed by this
+   * version of the migrator */
+  private static final DaemonVersion MIN_V2_REPO_VERSION =
+    new DaemonVersion("2.0.90-beta2");
 
   public static final ThreadLocal<NumberFormat> TH_BIGINT_FMT =
     new ThreadLocal<NumberFormat>() {
@@ -361,14 +485,18 @@ public class V2AuMover {
   /** V2 repo REST status api client */
   private org.lockss.laaws.api.rs.StatusApi repoStatusApiClient;
 
-  /** V2 repo REST namespace api client */
+  /** V2 repo REST artifacts api client */
   private StreamingArtifactsApi repoArtifactsApiClient;
-  /** V2 repo REST namespace api client with long timeout */
+  /** V2 repo REST artifacts api client with long timeout */
   private StreamingArtifactsApi repoArtifactsApiLongCallClient;
 
+  /** V2 repo REST aus api client */
   private org.lockss.laaws.api.rs.AusApi repoAusApiClient;
-  /** V2 repo REST aus  api client with long timeout */
+  /** V2 repo REST aus api client with long timeout */
   private org.lockss.laaws.api.rs.AusApi repoAusApiLongCallClient;
+
+  /** V2 repo REST repo api client (info, namespaces, etc.) */
+  private org.lockss.laaws.api.rs.RepoApi repoRepoApiClient;
 
   /** Repository service port */
   private int repoPort;
@@ -418,11 +546,25 @@ public class V2AuMover {
   private OpType opType;
 
   private boolean isPartialContent = false;
-  private boolean checkMissingContent;
+  private boolean checkMissingContent = DEFAULT_CHECK_MISSING_CONTENT;
 
   private boolean isCompareBytes;
   private UseFetchUrl useFetchUrl = DEFAULT_USE_FETCH_URL;
+  private UseBulkMode useBulkMode = DEFAULT_USE_BULK_MODE;
   private boolean isShowInstrumentation = DEFAULT_INSTRUMENTATION;
+  private long diskSpaceFetchInterval = DEFAULT_DISK_SPACE_INTERVAL;
+  private boolean excludeQueuedTasks = DEFAULT_EXCLUDE_QUEUED_TASKS;
+  private long interAuDelay = DEFAULT_INTER_AU_DELAY;
+  private CompoundLinearSlope diskSpaceXferBytesCurve;
+  private CompoundLinearSlope diskSpaceXferArtifactsCurve;
+  private CompoundLinearSlope dbSizeCheckIntervalCurve;
+
+  private long nextDiskSpaceFetchTime;  // next time to fetch disk space
+  private long nextDiskSpaceFetchBytes; // next byte count to fetch disk space
+  private long nextDiskSpaceFetchArtifacts; // next artifact count to fetch disk space
+  private String currentDiskSpace;
+  private long diskFreeContent;
+  private long diskFreeIndex;
 
   private boolean isGenerateTestErrors;
   private boolean isCompareEvenIfVersionMismatch;
@@ -451,13 +593,14 @@ public class V2AuMover {
 
   // Thread pool for each activity, each with its own queue.
   private ThreadPoolExecutor copyIterExecutor;
+  private ThreadPoolExecutor retryIterExecutor;
   private ThreadPoolExecutor verifyIterExecutor;
   private ThreadPoolExecutor copyExecutor;
   private ThreadPoolExecutor verifyExecutor;
   private ThreadPoolExecutor stateCopyExecutor;
-  private ThreadPoolExecutor stateVerifyExecutor;
   private ThreadPoolExecutor miscExecutor;
   private ThreadPoolExecutor indexExecutor;
+  private long executorRetryInterval;
 
   //////////////////////////////////////////////////////////////////////
   // State vars
@@ -468,7 +611,11 @@ public class V2AuMover {
 
   /** All AUIDs known to V2 repo at start of execution */
   private final ArrayList<String> v2Aus = new ArrayList<>();
-  private final LinkedHashSet<ArchivalUnit> auMoveQueue = new LinkedHashSet<>();
+  // Primary AU move queue.  Holds AUIDs not AUs to make plugin-reload
+  // AU restart less disruptive.  Grouped by plugin key so the scheduler
+  // can take per-plugin restart-coordination locks one plugin at a time.
+  private final LinkedHashMap<String, LinkedHashSet<String>>
+      auMoveQueueByPlugin = new LinkedHashMap<>();
 
   /** Counts down to zero when all AUs in request are finished */
   private CountUpDownLatch ausLatch;
@@ -477,6 +624,7 @@ public class V2AuMover {
 
   private boolean failed = false;
   private boolean globalAbort = false;
+  private String abortReason = null;
 
   ConfigManager cfgManager;
   PluginManager pluginManager;
@@ -547,6 +695,8 @@ public class V2AuMover {
                                               DEFAULT_STATUS_CONNECTION_TIMEOUT);
       statusReadTimeout = config.getTimeInterval(PARAM_STATUS_READ_TIMEOUT,
                                            DEFAULT_STATUS_READ_TIMEOUT);
+      dbCopyTimeout = config.getTimeInterval(PARAM_DB_COPY_TIMEOUT,
+        DEFAULT_DB_COPY_TIMEOUT);
 
       maxRetryCount = config.getInt(PARAM_MAX_RETRY_COUNT,
                                     DEFAULT_MAX_RETRY_COUNT);
@@ -558,6 +708,9 @@ public class V2AuMover {
       useFetchUrl = config.getEnumIgnoreCase(UseFetchUrl.class,
                                              PARAM_USE_FETCH_URL,
                                              DEFAULT_USE_FETCH_URL);
+      useBulkMode = config.getEnumIgnoreCase(UseBulkMode.class,
+                                             PARAM_USE_BULK_MODE,
+                                             DEFAULT_USE_BULK_MODE);
       isShowInstrumentation =
         config.getBoolean(PARAM_INSTRUMENTATION, DEFAULT_INSTRUMENTATION);
 
@@ -570,6 +723,10 @@ public class V2AuMover {
         createOrReConfigureExecutor(copyIterExecutor, config,
                                     PARAM_COPY_ITER_EXECUTOR_SPEC,
                                     DEFAULT_COPY_ITER_EXECUTOR_SPEC);
+      retryIterExecutor =
+        createOrReConfigureExecutor(retryIterExecutor, config,
+                                    PARAM_RETRY_ITER_EXECUTOR_SPEC,
+                                    DEFAULT_RETRY_ITER_EXECUTOR_SPEC);
       verifyIterExecutor =
         createOrReConfigureExecutor(verifyIterExecutor, config,
                                     PARAM_VERIFY_ITER_EXECUTOR_SPEC,
@@ -587,13 +744,58 @@ public class V2AuMover {
         createOrReConfigureExecutor(stateCopyExecutor, config,
                                     PARAM_STATE_COPY_EXECUTOR_SPEC,
                                     DEFAULT_STATE_COPY_EXECUTOR_SPEC);
-      stateVerifyExecutor =
-        createOrReConfigureExecutor(stateVerifyExecutor, config,
-                                    PARAM_STATE_VERIFY_EXECUTOR_SPEC,
-                                    DEFAULT_STATE_VERIFY_EXECUTOR_SPEC);
       miscExecutor = createOrReConfigureExecutor(miscExecutor, config,
                                                  PARAM_MISC_EXECUTOR_SPEC,
                                                  DEFAULT_MISC_EXECUTOR_SPEC);
+
+      executorRetryInterval =
+        config.getTimeInterval(PARAM_EXECUTOR_RETRY_INTERVAL,
+                               DEFAULT_EXECUTOR_RETRY_INTERVAL);
+
+      if (changedKeys.contains(PARAM_DISK_SPACE_BYTES_CURVE)) {
+        String curve = config.get(PARAM_DISK_SPACE_BYTES_CURVE,
+                                  DEFAULT_DISK_SPACE_BYTES_CURVE);
+        try {
+          diskSpaceXferBytesCurve = new CompoundLinearSlope(curve);
+        } catch (Exception e) {
+          log.warning("Malformed diskSpaceBytesCurve: " + curve, e);
+          diskSpaceXferBytesCurve =
+            new CompoundLinearSlope(DEFAULT_DISK_SPACE_BYTES_CURVE);
+        }
+      }
+      if (changedKeys.contains(PARAM_DISK_SPACE_ARTIFACTS_CURVE)) {
+        String curve = config.get(PARAM_DISK_SPACE_ARTIFACTS_CURVE,
+                                  DEFAULT_DISK_SPACE_ARTIFACTS_CURVE);
+        try {
+          diskSpaceXferArtifactsCurve = new CompoundLinearSlope(curve);
+        } catch (Exception e) {
+          log.warning("Malformed diskSpaceArtifactsCurve: " + curve, e);
+          diskSpaceXferArtifactsCurve =
+            new CompoundLinearSlope(DEFAULT_DISK_SPACE_ARTIFACTS_CURVE);
+        }
+      }
+      if (changedKeys.contains(PARAM_DB_SIZE_CHECK_CURVE)) {
+        String curve = config.get(PARAM_DB_SIZE_CHECK_CURVE,
+                                  DEFAULT_DB_SIZE_CHECK_CURVE);
+        try {
+          dbSizeCheckIntervalCurve = new CompoundLinearSlope(curve);
+        } catch (Exception e) {
+          log.warning("Malformed diskSpaceBytesCurve: " + curve, e);
+          diskSpaceXferBytesCurve =
+            new CompoundLinearSlope(DEFAULT_DB_SIZE_CHECK_CURVE);
+        }
+      }
+
+      diskSpaceFetchInterval =
+        config.getTimeInterval(PARAM_DISK_SPACE_INTERVAL,
+                               DEFAULT_DISK_SPACE_INTERVAL);
+
+      excludeQueuedTasks =
+        config.getBoolean(PARAM_EXCLUDE_QUEUED_TASKS,
+                          DEFAULT_EXCLUDE_QUEUED_TASKS);
+
+      interAuDelay = config.getTimeInterval(PARAM_INTER_AU_DELAY,
+                                            DEFAULT_INTER_AU_DELAY);
     }
   }
 
@@ -655,7 +857,8 @@ public class V2AuMover {
       }
       // Create a new RepoClient
       repoClient = makeV2RestClient();
-      setTimeouts(repoClient, "repo", connectTimeout, readTimeout);
+//       setTimeouts(repoClient, "repo", connectTimeout, readTimeout);
+      setTimeouts(repoClient, "repo", connectTimeout, longReadTimeout);
       repoLongCallClient = makeV2RestClient(repoClient);
       setTimeouts(repoLongCallClient, "index", connectTimeout, longReadTimeout);
       setClientParams(repoClient, userName, userPass, userAgent,
@@ -673,8 +876,10 @@ public class V2AuMover {
       repoStatusApiClient =
           new org.lockss.laaws.api.rs.StatusApi(repoApiStatusClient);
       repoArtifactsApiClient = new StreamingArtifactsApi(repoClient);
+      repoArtifactsApiLongCallClient = new StreamingArtifactsApi(repoLongCallClient);
       repoAusApiClient = new org.lockss.laaws.api.rs.AusApi(repoClient);
       repoAusApiLongCallClient = new org.lockss.laaws.api.rs.AusApi(repoLongCallClient);
+      repoRepoApiClient = new org.lockss.laaws.api.rs.RepoApi(repoClient);
     }
     catch (MalformedURLException mue) {
       totalCounters.addError("Error parsing REST Configuration Service URL: " + mue.getMessage());
@@ -695,7 +900,10 @@ public class V2AuMover {
     // Must be called after config & args are processed
     initPhaseMap();
     if (whichAus != null) {
-      logReport("Moving: " + whichAus);
+      logReport("Selected: " + whichAus);
+    }
+    if (args.skippedAuids != null && !args.skippedAuids.isEmpty()) {
+      logReport("AUIDs requested but not found, skipped: " + args.skippedAuids);
     }
   }
 
@@ -749,6 +957,7 @@ public class V2AuMover {
 
   public void executeRequests(List<Args> argsLst)
       throws MigrationTaskFailedException {
+    finalStatus = null;
     if (argsLst.size() > 1) {
       log.debug(argsLst.size() +
                 " operations requested, using client configuration from the first");
@@ -756,14 +965,23 @@ public class V2AuMover {
     Args firstArgs = argsLst.get(0);
     initBatch(firstArgs);
     currentStatus = "Checking V2 services";
+
     try {
       checkV2ServicesAvailable();
       openReportFiles(firstArgs); // must follow checkV2ServicesAvailable
-      if (!isDryRun() &&
+      DaemonVersion v2RepoVer = new DaemonVersion(getRepoSvcVersion());
+      if (v2RepoVer.compareTo(MIN_V2_REPO_VERSION) < 0) {
+        currentStatus = "Failed - target is running version " + v2RepoVer +
+          ", version " + MIN_V2_REPO_VERSION + " or higher is required.";
+        failed = true;
+      }
+      else if (!isDryRun() &&
           !migrationMgr.isTargetInMigrationMode(hostName, cfgUiPort,
                                                 userName, userPass)) {
         currentStatus = "Failed - target is not in migration mode";
+        failed = true;
       } else {
+        migrationMgr.setInMigrationMode(true);
         for (Args args : argsLst) {
           try {
             executeRequest(args);
@@ -779,8 +997,16 @@ public class V2AuMover {
       log.error(msg, e);
       logReportAndError(msg);
     } finally {
+      processAuTxtJournal();
+      fetchDiskSpace();
       running = false;
+      buildFinalStatus();
       closeReports();
+      try {
+        copyReportsToTarget();
+      } catch (Exception e) {
+        log.error("Failed to copy migration reports to target", e);
+      }
     }
   }
 
@@ -811,6 +1037,9 @@ public class V2AuMover {
         if (args.au != null) {
           // If an AU was supplied, copy it
           moveOneAu(args);
+        } else if (args.aus != null) {
+          // If a list of AUs was supplied, copy them
+          moveAus(args);
         } else if (args.plugins != null) {
           // If a plugin was supplied, copy its AUs
           movePluginAus(args);
@@ -829,8 +1058,9 @@ public class V2AuMover {
     }
   }
 
-  public void abortCopy() {
-    log.info("Abort requested");
+  public void abortCopy(String reason) {
+    log.info("Abort requested: " + reason);
+    abortReason = reason;
     globalAbort = true;
   }
 
@@ -862,7 +1092,7 @@ public class V2AuMover {
     initAuRequest(args, ("AU: " + args.au.getName()));
     // get the aus known to the v2 repository
     getV2Aus();
-    auMoveQueue.add(args.au);
+    addToAuMoveQueue(args.au);
     moveQueuedAus();
   }
 
@@ -884,14 +1114,14 @@ public class V2AuMover {
         continue;
       }
       // Filter by selection pattern if set
-      if (!(args.selPatterns == null || args.selPatterns.isEmpty() ||
-            isMatch(au.getAuId(), args.selPatterns))) {
+      if (args.selPatterns != null && !args.selPatterns.isEmpty() &&
+          !isMatch(au.getAuId(), args.selPatterns)) {
         continue;
       }
       if (isSkipFinished(args, au)) {
         continue;
       }
-      auMoveQueue.add(au);
+      addToAuMoveQueue(au);
     }
     moveQueuedAus();
   }
@@ -918,8 +1148,28 @@ public class V2AuMover {
       // Don't copy internal AUs (test probably unnecessary here)
       .filter(au -> !pluginManager.isInternalAu(au))
       .filter(au -> !isSkipFinished(args, au))
-      .forEach(au -> auMoveQueue.add(au));
+      .forEach(au -> addToAuMoveQueue(au));
 
+    moveQueuedAus();
+  }
+
+  private void addToAuMoveQueue(ArchivalUnit au) {
+    String auid = au.getAuId();
+    String pkey = PluginManager.pluginKeyFromId(
+                    PluginManager.pluginIdFromAuId(auid));
+    auMoveQueueByPlugin.computeIfAbsent(pkey, k -> new LinkedHashSet<>())
+                       .add(auid);
+  }
+
+  /** Move all AUs specified by uploaded AUIDs file */
+  public void moveAus(Args args) throws IOException {
+    startTotalTimers();
+    for (ArchivalUnit au : args.aus) {
+      addToAuMoveQueue(au);
+    }
+    initAuRequest(args, "AUIDs from file: " + args.auidsFilename);
+    // get the aus known to the v2 repo
+    getV2Aus();
     moveQueuedAus();
   }
 
@@ -938,23 +1188,91 @@ public class V2AuMover {
     totalTimers.start(Phase.VERIFY);
   }
 
-  /** Start/enqueue all AUs in auMoveQueue */
+  /** Start/enqueue all AUs in auMoveQueueByPlugin */
   private void moveQueuedAus() throws IOException {
-    migrationMgr.setInMigrationMode(true);
     ausLatch = new CountUpDownLatch(1, "AU");
     currentStatus = STATUS_RUNNING;
-    totalAusToMove = auMoveQueue.size();
-    log.debug("Moving " + totalAusToMove + " aus.");
+    totalAusToMove = auMoveQueueByPlugin.values().stream()
+        .mapToInt(Set::size).sum();
+    String msg = "Processing " + StringUtil.numberOfUnits(totalAusToMove, "AU");
+    log.debug(msg);
+    logReport(msg + "\n");
 
-    for (ArchivalUnit au : auMoveQueue) {
-      if (isAbort()) {
-        break;
+    // Schedule batches per plugin, taking the per-plugin restart-coord
+    // lock first so that all AUs of one plugin migrate as a group while
+    // a plugin reload is held off.  Use tryGetLock to avoid blocking on
+    // any one plugin and prefer making progress on whichever plugins are
+    // currently free.
+    List<Map.Entry<String, LinkedHashSet<String>>> remaining =
+        new ArrayList<>(auMoveQueueByPlugin.entrySet());
+    int restartAttempts = 0;
+    while (!remaining.isEmpty() && !isAbort()) {
+      boolean processedSome = false;
+      for (Iterator<Map.Entry<String, LinkedHashSet<String>>> it =
+               remaining.iterator(); it.hasNext(); ) {
+        Map.Entry<String, LinkedHashSet<String>> e = it.next();
+        SemaphoreMap<String>.SemaphoreLock lock =
+            pluginManager.getPluginRestartCoordLocks().tryGetLock(e.getKey());
+        if (lock != null) {
+          waitingMsg = null;
+          if (restartAttempts > 0) {
+            log.info("Got plugin lock for: " + PluginManager.pluginNameFromKey(e.getKey()));
+          }
+          scheduleMigrationBatch(e.getKey(), e.getValue(), lock);
+          it.remove();
+          processedSome = true;
+        }
       }
-      ausLatch.countUp();
-      moveAu(au);
+      // Pause then retry to get remaining locks
+      if (!processedSome && !remaining.isEmpty() && !isAbort()) {
+        waitingMsg = "Waiting for plugin reloading to complete";
+        if (restartAttempts++ % 1000 == 0) {
+          List<String> waitingForPlugins = remaining.stream()
+              .map((ent) -> PluginManager.pluginNameFromKey(ent.getKey()))
+              .collect(Collectors.toList());
+          log.info("Waiting for plugins locked by PluginManager: " + waitingForPlugins);
+        }
+        try { Thread.sleep(10_000); }
+        catch (InterruptedException ie) {
+          Thread.currentThread().interrupt(); break;
+        }
+      }
     }
     ausLatch.countDown();
     enqueueFinishAll();
+  }
+
+  /**
+   * Schedule all AUs in one per-plugin batch.  The supplied lock is
+   * wrapped in a {@link BatchLockToken} whose ref-count starts at 1
+   * (the scheduler's own ref).  Each scheduled AU bumps the count, and
+   * the corresponding {@code Action.FinishAu} drops it.  After
+   * scheduling all AUs we release the scheduler's ref so the lock is
+   * freed when the last AU finishes (or immediately if none were
+   * scheduled).
+   */
+  private void scheduleMigrationBatch(String pkey, Set<String> auids,
+      SemaphoreMap<String>.SemaphoreLock lock) {
+    BatchLockToken token = new BatchLockToken(pkey, lock);
+    try {
+      for (String auid : auids) {
+        if (isAbort()) {
+          break;
+        }
+        ArchivalUnit au = pluginManager.getAuFromId(auid);
+        if (au == null) {
+          log.warning("AU has been deleted/deactivated: " + auid);
+          continue;
+        }
+        token.increment();
+        ausLatch.countUp();
+        moveAu(au, token);
+      }
+    } finally {
+      // Drop the scheduler's self-ref.  If no AUs were scheduled this
+      // also releases the underlying lock immediately.
+      token.decrement();
+    }
   }
 
   public boolean isDryRun() {
@@ -962,7 +1280,8 @@ public class V2AuMover {
   }
 
   private void setAuMigrationState(ArchivalUnit au,
-                                   AuState.MigrationState state) {
+                                   AuState.MigrationState state,
+                                   AuStatus auStat) {
     // Do nothing if dry run mode
     if (isDryRun()) {
       return;
@@ -992,13 +1311,22 @@ public class V2AuMover {
         break;
       case Finished:
         // Optionally delete the AU from the system
-        if (!isDryRun()) {
+        if (opType.isCopy() && !isDryRun()) {
           try {
             if (migrationMgr.isDeleteMigratedAus()) {
-              // Remove AU from LOCKSS
-              pluginManager.deleteAu(au);
+              if (auHasErrors(auStat)) {
+                log.warning("AU has errors, deactivating instead of deleting: "
+                            + au.getName());
+                pluginManager.deactivateAuForMigration(au);
+              } else {
+                pluginManager.deleteAuForMigration(au);
+              }
             } else {
-              pluginManager.deactivateAu(au);
+              if (auHasErrors(auStat)) {
+                log.warning("AU has errors, deactivating anyway: "
+                            + au.getName());
+              }
+              pluginManager.deactivateAuForMigration(au);
             }
           } catch (IOException e) {
             throw new RuntimeException(e);
@@ -1006,6 +1334,53 @@ public class V2AuMover {
         }
     }
   }
+
+  private boolean auHasErrors(AuStatus auStat) {
+    Counters ctrs = auStat.getCounters();
+    return ctrs.getVal(CounterType.URLS_FAILED_COPY) != 0 ||
+      ctrs.getVal(CounterType.URLS_FAILED_VERIFY) != 0;
+  }
+
+  private void processAuTxtJournal() {
+    try {
+      if (pluginManager.processAuTxtJournal()) {
+        cfgManager.reloadAndWait();
+      }
+    } catch (IOException e) {
+      log.error("Failed to process AU config journal", e);
+      addError("Failed to process AU config journal: " + e);
+    }
+  }
+
+  private String auErrorsDetail(AuStatus auStat) {
+    if (!auHasErrors(auStat)) {
+      return null;
+    }
+    Counters ctrs = auStat.getCounters();
+    StringBuilder sb = new StringBuilder();
+    long cUrls = ctrs.getVal(CounterType.URLS_FAILED_COPY);
+    long vUrls = ctrs.getVal(CounterType.URLS_FAILED_VERIFY);
+    long cArts = ctrs.getVal(CounterType.ARTIFACTS_FAILED_COPY);
+    long vArts = ctrs.getVal(CounterType.ARTIFACTS_FAILED_VERIFY);
+    if (cUrls > 0 || vArts > 0) {
+      sb.append(auStat.getAuName());
+      sb.append(": ");
+      List<String> lst = new ArrayList<>();
+      if (cUrls > 0) {
+        lst.add(String.format("%s of %s failed copy",
+                              StringUtil.numberOfUnits(cArts, "version"),
+                              StringUtil.numberOfUnits(cUrls, "URL")));
+      }
+      if (vUrls > 0) {
+        lst.add(String.format("%s of %s failed verify",
+                              StringUtil.numberOfUnits(vArts, "version"),
+                              StringUtil.numberOfUnits(vUrls, "URL")));
+      }
+      StringUtil.separatedString(lst, "", ", ", "", sb);
+    }
+    return sb.toString();
+  }
+
   private void moveDatabase(Args args) throws MigrationTaskFailedException {
     currentStatus = STATUS_MIGRATING_DATABASE;
 
@@ -1078,16 +1453,19 @@ public class V2AuMover {
 // //   }
 
   /**
-   * Start the state machine for an AU
+   * Start the state machine for an AU, attaching the per-plugin batch
+   * lock token so the lock survives until the AU's FinishAu action.
    */
-  protected void moveAu(ArchivalUnit au) {
+  protected void moveAu(ArchivalUnit au, BatchLockToken token) {
     log.debug2("Starting " + au.getName());
+    interAuDelay();
     AuStatus auStat = new AuStatus(this, au);
+    auStat.setBatchToken(token);
     auStat.getCounters().setParent(totalCounters);
     String auName = au.getName();
     log.debug("Starting state machine for AU: " + auName);
 
-    setAuMigrationState(au, AuState.MigrationState.InProgress);
+    setAuMigrationState(au, AuState.MigrationState.InProgress, auStat);
     auStat.setPhase(Phase.QUEUE);       // For display purposes only,
                                         // unlikely to be seen.
     switch (opType) {
@@ -1096,16 +1474,16 @@ public class V2AuMover {
         addActiveAu(au, auStat);
         enterPhase(auStat, Phase.VERIFY);
       } catch (Exception ex) {
-        log.error("Unexpect exception starting AU verify", ex);
+        log.error("Unexpected exception starting AU verify", ex);
         updateReport(auStat);
-        totalAusWithErrors++;
-        String err = "Attempt to verify AU failed: " + auName +
-          ": " + ex.getMessage();
+        String err = String.format("Failed to start AU verify phase (%s): %s",
+                                   ex.toString(), auName);
         auStat.addError(err);
+        addAuError(err);
         setFailed(true);
       }
       break;
-      case CopyOnly:
+    case CopyOnly:
     case CopyAndVerify:
       if (existsInV2(au)) {
         if (!checkMissingContent) {
@@ -1114,7 +1492,7 @@ public class V2AuMover {
           enterPhase(auStat, Phase.FINISH);
           return;
         } else {
-          log.debug2("V2 Repo already has au " + au.getName() + ", added to check for unmoved content.");
+          log.debug2("V2 Repo already has au " + au.getName() + ", enqueueing anyway to check for uncopied content.");
         }
       }
 
@@ -1123,14 +1501,15 @@ public class V2AuMover {
         log.debug("Enqueueing: " + auName);
         // Bulk mode works correctly only if the AU is completely absent
         // from the V2 repo
-        if (!existsInV2(au)) {
+        if (useBulkMode(au)) {
           // Might be better to delay startBulk() until first copy task runs
           try {
             startBulk(namespace, auStat.getAuId());
             auStat.setIsBulk(true); // remember to finishBulk for this AU
           } catch (UnsupportedOperationException e) {
             // Expected if not running against a V2 repo configured to
-            // use the hybrid Volatile/Solr index
+            // use DispatchingArtifactIndex wrapping a Volatile &
+            // normal index
             log.debug2("startBulk() not supported, continuing.");
           }
         }
@@ -1140,13 +1519,36 @@ public class V2AuMover {
       } catch (Exception ex) {
         log.error("Unexpect exception starting AU copy", ex);
         updateReport(auStat);
-        totalAusWithErrors++;
-        String err = "Attempt to move AU failed: " + auName +
-          ": " + ex.getMessage();
+        String err = String.format("Failed to start AU copy phase (%s): %s",
+                                   ex.toString(), auName);
         auStat.addError(err);
+        addAuError(err);
         setFailed(true);
       }
       break;
+    }
+  }
+
+  // Inject artificial delay for testing
+  void interAuDelay() {
+    if (interAuDelay > 0) {
+      log.debug("Pausing for " + StringUtil.timeIntervalToString(interAuDelay));
+      try { Thread.sleep(interAuDelay); }
+      catch (InterruptedException ie) {
+        Thread.currentThread().interrupt();
+      }
+    }
+  }
+
+  boolean useBulkMode(ArchivalUnit au) {
+    if (existsInV2(au)) {
+      return false;
+    }
+    switch (useBulkMode) {
+    case NEVER: return false;
+    case ALWAYS: return true;
+    case NON_SOURCE: return !au.isBulkContent();
+    default: return false;
     }
   }
 
@@ -1176,11 +1578,11 @@ public class V2AuMover {
   enum Phase {
     QUEUE("Queued"),                    // First phase
     START("Starting"),
-    COPY("Copying", "Copied"),
+    COPY("Copying", "Examined"),
+    RETRY("Retrying failed copies", "Retried"),
     INDEX("Indexing"),
     VERIFY("Checking", "Checked"),
-    COPY_STATE("Copying State"),
-    CHECK_STATE("Checking State"),
+    COPY_STATE("Processing State", "Processed"),
     FINISH("Finishing"),
     DONE(""),                           // Last phase
     ABORT("Aborted"),
@@ -1219,20 +1621,21 @@ public class V2AuMover {
   Map<Phase,PD> pdMap;
 
   Phase firstStatePhase() {
-    return opType.isCopy() ? Phase.COPY_STATE : Phase.CHECK_STATE;
+    return Phase.COPY_STATE;
   }
 
   void initPhaseMap() {
     pdMap =
       MapUtil.
       map(
-          Phase.COPY, new PD(Action.EnqCopy, copyIterExecutor, Phase.INDEX),
-          Phase.INDEX, new PD(Action.EnqIndex, null/*indexExecutor*/,
+//           Phase.COPY, new PD(Action.EnqCopy, copyIterExecutor, Phase.INDEX),
+          Phase.COPY, new PD(Action.EnqCopy, copyIterExecutor, Phase.RETRY),
+          Phase.RETRY, new PD(Action.EnqRetry, retryIterExecutor, Phase.INDEX),
+          Phase.INDEX, new PD(Action.EnqIndex, null,
                               opType.isVerify() ? Phase.VERIFY : firstStatePhase()),
           Phase.VERIFY, new PD(Action.EnqVerify, verifyIterExecutor,
                                firstStatePhase()),
-          Phase.COPY_STATE, new PD(Action.EnqCopyState, null, Phase.CHECK_STATE),
-          Phase.CHECK_STATE, new PD(Action.EnqCheckState, null, Phase.FINISH),
+          Phase.COPY_STATE, new PD(Action.EnqCopyState, null, Phase.FINISH),
           Phase.FINISH, new PD(Action.FinishAu, null, Phase.DONE)
           );
   }
@@ -1292,7 +1695,25 @@ public class V2AuMover {
   void enterPhase(AuStatus auStat, Phase phase) {
     if (getEnterExecutor(phase) != null) {
       log.debug2("enqueueEnterPhase("+phase+")");
-      getEnterExecutor(phase).execute(() -> doEnterPhase(auStat, phase));
+      getEnterExecutor(phase).execute(() -> {
+          try {
+            doEnterPhase(auStat, phase);
+          } catch (Exception | OutOfMemoryError e) {
+            auStat.abortAu();
+            log.error("Exception entering phase " + phase +
+                      " for " + auStat.getAuName(), e);
+            auStat.addError("Failed entering phase " + phase +
+                            ": " + e.toString());
+            // Ensure the AU doesn't get stuck -- advance to FINISH/ABORT
+            try {
+              auStat.abortAu();
+              enterPhase(auStat, Phase.FINISH);
+            } catch (Exception e2) {
+              log.error("Failed to abort AU after phase entry failure", e2);
+              ausLatch.countDown(); // last resort: unblock the global latch
+            }
+          }
+        });
     } else {
       doEnterPhase(auStat, phase);
     }
@@ -1328,7 +1749,11 @@ public class V2AuMover {
   // State transition actions
   //////////////////////////////////////////////////////////////////////
 
-  enum Action { EnqCopy, EnqVerify, EnqCopyState, EnqCheckState, EnqIndex, FinishAu }
+  enum Action {
+    EnqCopy, EnqRetry, EnqVerify,
+    EnqCopyState,
+    EnqIndex, FinishAu
+  }
 
   void doAction(AuStatus auStat, Action action) {
     ArchivalUnit au = auStat.getAu();
@@ -1337,6 +1762,10 @@ public class V2AuMover {
     case EnqCopy:
       log.debug2("Enqueueing copy AU: " + auName);
       enqueueCopyAuContent(auStat);
+      break;
+    case EnqRetry:
+      log.debug2("Enqueueing copy AU retries: " + auName);
+      enqueueRetryCopyAuContent(auStat);
       break;
     case EnqVerify:
       if (opType.isVerify()) {
@@ -1348,12 +1777,8 @@ public class V2AuMover {
       }
       break;
     case EnqCopyState:
-      log.debug2("Enqueueing copy AU state: " + auName);
+      log.debug2("Enqueueing AU state processing: " + auName);
       enqueueTask(MigrationTask.copyAuState(this, au), auStat, stateCopyExecutor);
-      break;
-    case EnqCheckState:
-      log.debug2("Enqueueing check AU state: " + auName);
-      enqueueTask(MigrationTask.checkAuState(this, au), auStat, stateVerifyExecutor);
       break;
     case EnqIndex:
       if (auStat.isBulk()) {
@@ -1366,13 +1791,21 @@ public class V2AuMover {
     case FinishAu:
       log.debug2("Finishing AU: " + auName);
       removeActiveAu(au);
+      BatchLockToken bt = auStat.getBatchToken();
+      if (bt != null) bt.decrement();
       updateReport(auStat);
+      if (!auStat.hasV1Content()) {
+        totalAusEmpty++;
+      }
       if (auStat.isAbort()) {
-        setAuMigrationState(au, AuState.MigrationState.Aborted);
+        setAuMigrationState(au, AuState.MigrationState.Aborted, auStat);
         enterPhase(auStat, Phase.ABORT);
       } else {
-        setAuMigrationState(au, AuState.MigrationState.Finished);
+        setAuMigrationState(au, AuState.MigrationState.Finished, auStat);
         totalAusMoved++;
+        if (auHasErrors(auStat)) {
+          addAuError(auErrorsDetail(auStat));
+        }
         if (checkMissingContent && existsInV2(auStat.getAuId())) {
           Counters ctrs = auStat.getCounters();
           if (ctrs != null) {
@@ -1426,19 +1859,19 @@ public class V2AuMover {
           if (auStat.isAbort()) {
             break;
           }
-          log.debug2("Moving CU: " + task.getCu());
+          log.debug3("Moving CU: " + task.getCu());
           long startC = now();
           CuMover mover = new CuMover(v2Mover, task);
           mover.run();
           task.getCounters().add(CounterType.COPY_TIME, now() - startC);
 
-          log.debug2("Moved CU: " + task.getCu());
+          log.debug3("Moved CU: " + task.getCu());
           break;
         case CHECK_CU_VERSIONS:
           if (auStat.isAbort()) {
             break;
           }
-          log.debug2("Checking CU: " + task.getCu());
+          log.debug3("Checking CU: " + task.getCu());
           long startCh = now();
           CuChecker checker = new CuChecker(v2Mover, task);
           checker.run();
@@ -1446,7 +1879,7 @@ public class V2AuMover {
           if (isGenerateTestErrors) {
             task.addError("No error on " + task.getCu());
           }
-          log.debug2("Checked CU: " + task.getCu());
+          log.debug3("Checked CU: " + task.getCu());
           break;
         case FINISH_AU_BULK:
           // Currently don't check for abort here, as want to return
@@ -1471,23 +1904,16 @@ public class V2AuMover {
           if (auStat.isAbort()) {
             break;
           }
-          log.debug2("Moving AU state: " + auStat.getAuName());
+          log.debug2("Processing AU state: " + auStat.getAuName());
           long startS = now();
           AuStateMover stateMover = new AuStateMover(v2Mover, task);
-          stateMover.run();
+          AuStateChecker stateChecker = new AuStateChecker(v2Mover, task);
+          stateMover.moveAuStateObjects(auStat.getAu());
+          stateChecker.checkAuStateObjects(auStat.getAu());
+          stateMover.moveAuConfig(auStat.getAu());
+          stateChecker.checkAuConfig(auStat.getAu());
           task.getCounters().add(CounterType.STATE_TIME, now() - startS);
-          log.debug2("Moved AU state: " + auStat.getAuName());
-          break;
-        case CHECK_AU_STATE:
-          if (auStat.isAbort()) {
-            break;
-          }
-          log.debug2("Checking AU state: " + auStat.getAuName());
-          long startCH = now();
-          AuStateChecker asChecker = new AuStateChecker(v2Mover, task);
-          asChecker.run();
-          task.getCounters().add(CounterType.STATE_TIME, now() - startCH);
-          log.debug2("Checked AU state: " + auStat.getAuName());
+          log.debug2("Processed AU state: " + auStat.getAuName());
           break;
         case FINISH_ALL:
           log.debug2("FINISH_ALL: wait");
@@ -1525,7 +1951,7 @@ public class V2AuMover {
 //       return;
 //     }
     Phase phase = task.getTaskPhase();
-    log.debug2("enqueueTask "+task.getType() + ", phase: " + phase);
+    log.debug3("enqueueTask "+task.getType() + ", phase: " + phase);
     CountUpDownLatch latch = null;
     if (phase != null) {
       if (auStat.getLatch(phase) == null) {
@@ -1563,6 +1989,40 @@ public class V2AuMover {
       latch.countUp();
       copyExecutor.execute(new TaskRunner(this, task));
     }
+    latch.countDown();
+  }
+
+  /**
+   * Like enqueueCopyAuContent() but enqueue a copy task for each
+   * failed CU */
+  void enqueueRetryCopyAuContent(AuStatus auStat) {
+    List<FailedCu> failedCus = getAuFailedCus(auStat.getAuId());
+    if (failedCus == null || failedCus.isEmpty()) {
+      log.debug("No CU copy retries to enqueue: " + auStat.getAuName());
+      exitPhase(auStat);
+      return;                           // shouldn't get here
+    }
+    CountUpDownLatch latch = makePhaseEndingLatch(auStat, "CopyRetry");
+    auStat.setLatch(Phase.RETRY, latch);
+    ArchivalUnit au = auStat.getAu();
+    log.debug("Enqueueing CU copy retries: " + au.getName());
+    // Queue copies for all failed CUs in the AU.
+    for (ListIterator<FailedCu> iter = failedCus.listIterator(); iter.hasNext();) {
+      FailedCu fcu = iter.next();
+      CachedUrl cu = fcu.noVerCu;
+      if (auStat.isAbort()) {
+        break;
+      }
+      // Remove FailedCu items as they're processed.  Might matter if
+      // we add Failed CU processing to verify phase
+      iter.remove();
+      MigrationTask task = MigrationTask.retryCuVersions(this, au, cu)
+        .setCounters(auStat.getCounters())
+        .setAuStatus(auStat)
+        .setCountDownLatch(latch);
+      latch.countUp();
+      copyExecutor.execute(new TaskRunner(this, task));
+      }
     latch.countDown();
   }
 
@@ -1625,20 +2085,33 @@ public class V2AuMover {
    * @throws IOException if server is unable to return status.
    */
   void checkV2ServicesAvailable() throws IOException {
+    String checking = null;
     try {
       log.info("Checking V2 Repository Status");
+      checking = "V2 Repository Service";
       repoStatus = repoStatusApiClient.getStatus();
       if (repoStatus == null || !repoStatus.getReady()) {
         throw new IOException("V2 Repository Service is not ready");
       }
       log.info("Checking V2 Configuration Status");
+      checking = "V2 Configuration Service";
       cfgStatus = cfgStatusApiClient.getStatus();
       if (cfgStatus == null || !cfgStatus.getReady()) {
         throw new IOException("V2 Configuration Service is not ready");
       }
+      fetchDiskSpace();
     } catch (Exception e) {
+      if (checking != null) {
+        currentStatus = checking + " not ready";
+      } else {
+        currentStatus = "V2 services not ready";
+      }
       throw new ServiceUnavailableException("Couldn't fetch service status", e);
     }
+  }
+
+  public String getTargetHostName() {
+    return hostName;
   }
 
   public String getCfgSvcVersion() {
@@ -1709,7 +2182,7 @@ public class V2AuMover {
       LockssRestHttpException lrhe = null;
       String msgPrefix = "Exceeded retries: ";
       while ((response == null || (!response.isSuccessful()) && tryCount < maxRetryCount)) {
-        if (isAbort()) {
+        if (tryCount > 0 && isAbort()) {
           throw new IOException("Aborted");
         }
         tryCount++;
@@ -1725,7 +2198,7 @@ public class V2AuMover {
             lrhe = gson.fromJson(bodyStr,
                                  LockssRestHttpException.class);
             logErrorBody(response, bodyStr, lrhe);
-            if (isNonRetryableResponse(errCode)) {
+            if (isNonRetryableResponse(errCode, lrhe)) {
               // no retries
               msgPrefix = "Unretryable error: ";
               break;
@@ -1759,11 +2232,13 @@ public class V2AuMover {
             throw ioe;
           }
         }
-        // sleep before retrying
-        try {
-          Thread.sleep(retryBackoffDelay * tryCount);
-        } catch (InterruptedException e1) {
-          throw new RuntimeException(e1);
+        if (tryCount < maxRetryCount) {
+          // sleep before retrying
+          try {
+            Thread.sleep(retryBackoffDelay * tryCount);
+          } catch (InterruptedException e1) {
+            throw new RuntimeException(e1);
+          }
         }
       }
       //We've run out of retries and it is not IOException.
@@ -1779,7 +2254,8 @@ public class V2AuMover {
       throw new IOException(msg);
     }
 
-    private boolean isNonRetryableResponse(int errCode) {
+    private boolean isNonRetryableResponse(int errCode,
+                                           LockssRestHttpException lrhe) {
       switch (errCode) {
       case 400:
       case 401:
@@ -1787,10 +2263,17 @@ public class V2AuMover {
       case 404:
       case 501:
         return true;
+      case 500:
+      case 507:                         // Insufficient Storage
+        return (isNoSpaceMessage(lrhe.getMessage()));
       default:
         return false;
       }
     }
+  }
+
+  public boolean isNoSpaceMessage(String msg) {
+    return StringUtils.containsIgnoreCase(msg, "No space");
   }
 
   void logErrorBody(Response response, String bodyStr,
@@ -1824,6 +2307,74 @@ public class V2AuMover {
   }
 
   //////////////////////////////////////////////////////////////////////
+  // Failed CU record keeping
+  //////////////////////////////////////////////////////////////////////
+
+  /** A versionless CU some of whose versions failed, with the list of
+   * specific failures. */
+  static class FailedCu {
+    CachedUrl noVerCu;
+    List<FailedCuVer> failedCus = new ArrayList<>(2);
+
+    FailedCu(CachedUrl cu) {
+      this.noVerCu = cu;
+    }
+
+    void addFailedCuVer(FailedCuVer fcuv) {
+      failedCus.add(fcuv);
+    }
+
+    public String toString() {
+      return "[failed: " + noVerCu + failedCus + "]";
+    }
+  }
+
+  static class FailedCuVer {
+    String auid;
+    CachedUrl cu;
+    String v2Url;
+    String namespace;
+    long collectionDate;
+    Type failType;
+
+    enum Type {Copy, Verify}
+
+    FailedCuVer(String auid, CachedUrl cu, String v2Url, String namespace,
+             long collectionDate, Type failType) {
+      this.auid = auid;
+      this.cu = cu;
+      this.v2Url = v2Url;
+      this.namespace = namespace;
+      this.collectionDate = collectionDate;
+      this.failType = failType;
+    }
+
+    public String toString() {
+      return "[fcus: " + cu + "]";
+    }
+  }
+
+  // Maps AUID to list of FailedCus
+  private Map<String,List<FailedCu>> failedCuMap = new HashMap<>();
+
+  void addAuFailedCu(String auid, FailedCu fcu) {
+    synchronized (failedCuMap) {
+      List<FailedCu> lst = failedCuMap.get(auid);
+      if (lst == null) {
+        lst = new ArrayList<>();
+        failedCuMap.put(auid, lst);
+      }
+      lst.add(fcu);
+    }
+  }
+
+  List<FailedCu> getAuFailedCus(String auid) {
+    return failedCuMap.get(auid);
+  }
+
+
+
+  //////////////////////////////////////////////////////////////////////
   // Accessors
   //////////////////////////////////////////////////////////////////////
 
@@ -1837,6 +2388,10 @@ public class V2AuMover {
 
   StreamingArtifactsApi getRepoArtifactsApiClient() {
     return repoArtifactsApiClient;
+  }
+
+  StreamingArtifactsApi getRepoArtifactsApiLongCallClient() {
+    return repoArtifactsApiLongCallClient;
   }
 
   public String getNamespace() {
@@ -1864,9 +2419,58 @@ public class V2AuMover {
     return v2Aus;
   }
 
+  public long getDbCopyTimeout() {
+    return dbCopyTimeout;
+  }
+
+  public CompoundLinearSlope getDbSizeCheckIntervalCurve() {
+    return dbSizeCheckIntervalCurve;
+  }
+
   //////////////////////////////////////////////////////////////////////
   // Utility classes
   //////////////////////////////////////////////////////////////////////
+
+  /**
+   * Reference-counted holder for a per-plugin restart-coordination lock.
+   * Created by the batch scheduler with an initial count of 1 (the
+   * scheduler's own ref) and one additional increment per AU scheduled.
+   * Each AU's {@code Action.FinishAu} calls {@link #decrement()}; the
+   * scheduler also calls {@link #decrement()} once after enqueuing its
+   * batch.  When the count hits 0 the underlying
+   * {@link SemaphoreMap.SemaphoreLock} is closed, releasing the
+   * per-plugin lock so plugin reload (or another batch on the same
+   * plugin) can proceed.
+   */
+  public static class BatchLockToken {
+    private final String pkey;
+    private final SemaphoreMap<String>.SemaphoreLock lock;
+    private final AtomicInteger count = new AtomicInteger(1);
+
+    public BatchLockToken(String pkey, SemaphoreMap<String>.SemaphoreLock lock) {
+      this.pkey = pkey;
+      this.lock = lock;
+    }
+
+    public String getPkey() {
+      return pkey;
+    }
+
+    public void increment() {
+      count.incrementAndGet();
+    }
+
+    /**
+     * Decrement; release the underlying lock when count reaches 0.
+     */
+    public void decrement() {
+      if (count.decrementAndGet() == 0) {
+        try {
+          lock.close();
+        } catch (IOException e) { /* never */ }
+      }
+    }
+  }
 
   /** Argument block from MigrateContent servlet */
   public static class Args {
@@ -1876,13 +2480,21 @@ public class V2AuMover {
     OpType opType;
     boolean isCompareContent;
     boolean isSkipFinished;
+    ArchivalUnit au;
     List<Pattern> selPatterns;
     Collection<Plugin> plugins;
-    ArchivalUnit au;
+    Collection<ArchivalUnit> aus;
+    Collection<String> auids;
+    Collection<String> skippedAuids;
+    String auidsFilename;
+    String pluginSel;
 
     public Args setHost(String host) {
       this.host = host;
       return this;
+    }
+    public String getHost() {
+      return host;
     }
     public Args setUname(String uname) {
       this.uname = uname;
@@ -1896,18 +2508,34 @@ public class V2AuMover {
       this.opType = type;
       return this;
     }
+    public OpType getOpType() {
+      return opType;
+    }
     public Args setCompareContent(boolean val) {
       this.isCompareContent = val;
       return this;
+    }
+    public boolean getCompareContent() {
+      return isCompareContent;
     }
     public Args setSkipFinished(boolean val) {
       this.isSkipFinished = val;
       return this;
     }
+    public boolean getSkipFinished() {
+      return isSkipFinished;
+    }
     public Args setPlugins(Collection<Plugin> plugs) {
       this.plugins = plugs;
       this.selPatterns = null;
       return this;
+    }
+    public Args setPluginSel(String pluginSel) {
+      this.pluginSel = pluginSel;
+      return this;
+    }
+    public String getPluginSel() {
+      return pluginSel;
     }
     public Args setSelPatterns(List<Pattern> selPatterns) {
       this.selPatterns = selPatterns;
@@ -1916,6 +2544,29 @@ public class V2AuMover {
     }
     public Args setAu(ArchivalUnit au) {
       this.au = au;
+      return this;
+    }
+
+    public Args setAus(Collection<ArchivalUnit> aus) {
+      this.aus = aus;
+      return this;
+    }
+
+    public Args setAuids(Collection<String> auids) {
+      this.auids = auids;
+      return this;
+    }
+
+    public Args setAuidsFilename(String auidsFilename) {
+      this.auidsFilename = auidsFilename;
+      return this;
+    }
+
+    public Args addSkippedAuid(String auid) {
+      if (skippedAuids == null) {
+        skippedAuids = new ArrayList<>();
+      }
+      skippedAuids.add(auid);
       return this;
     }
 
@@ -1999,28 +2650,54 @@ public class V2AuMover {
   public ThreadPoolExecutor makeExecutor(int queueMax, long threadTimeout,
                                          int coreThreads, int maxThreads) {
     ThreadPoolExecutor exec =
-      new ThreadPoolExecutor(coreThreads, maxThreads,
-                             threadTimeout, TimeUnit.MILLISECONDS,
-                             new LinkedBlockingQueue<>(queueMax));
+      new BlockingThreadPoolExecutor(coreThreads, maxThreads,
+                                     threadTimeout, TimeUnit.MILLISECONDS,
+                                     new LinkedBlockingQueue<>(queueMax));
     exec.allowCoreThreadTimeOut(true);
-    exec.setRejectedExecutionHandler(new RejectedExecutionHandler() {
-        @Override
-        public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
+    return exec;
+  }
+
+  /** A ThreadPoolExecutor that blocks submitters until their request
+   * can be accepted (i.e., there is room in the queue), by sleeping
+   * and looping until execute() succeeds.  The Semaphore ensures that
+   * execute() calls succeed in the order they were made.  Without it,
+   * threads in the retry loop could get stuck artibrarily long
+   * repeatedly sleep()ing while others make successful requests
+   * (either initially or as retries) and refill the queue.
+   */
+  class BlockingThreadPoolExecutor extends ThreadPoolExecutor {
+    Semaphore sem = new Semaphore(1, true);
+
+    public BlockingThreadPoolExecutor(int corePoolSize,
+                                      int maximumPoolSize,
+                                      long keepAliveTime,
+                                      TimeUnit unit,
+                                      BlockingQueue<Runnable> workQueue) {
+      super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue);
+    }
+
+    @Override
+    public void execute(Runnable command) {
+      try {
+        while (true) {
           try {
-            // block until there's room
-            executor.getQueue().put(r);
-            // check afterwards and throw if pool shutdown
-            if (executor.isShutdown()) {
-              throw new RejectedExecutionException("Task " + r +
-                                                   " rejected from because shutdown");
+            super.execute(command);
+            return;
+          } catch (RejectedExecutionException e) {
+            if (isShutdown()) {
+              throw e;
             }
-          } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-            throw new RejectedExecutionException("Producer interrupted", e);
+            Thread.sleep(executorRetryInterval);
+            if (isShutdown()) {
+              throw e;
+            }
           }
         }
-      });
-    return exec;
+      } catch (InterruptedException ie) {
+        Thread.currentThread().interrupt();
+        throw new RejectedExecutionException("Producer interrupted", ie);
+      }
+    }
   }
 
   //////////////////////////////////////////////////////////////////////
@@ -2034,12 +2711,12 @@ public class V2AuMover {
   public List<String> getInstruments() {
     List<String> res = new ArrayList<>();
     res.add(getExecutorStats("CopyIter", copyIterExecutor));
+    res.add(getExecutorStats("RetryIter", retryIterExecutor));
     res.add(getExecutorStats("VerifyIter", verifyIterExecutor));
     res.add(getExecutorStats("Copy", copyExecutor));
     res.add(getExecutorStats("Verify", verifyExecutor));
     res.add(getExecutorStats("Index", indexExecutor));
     res.add(getExecutorStats("StateCopy", stateCopyExecutor));
-    res.add(getExecutorStats("StateVerify", stateVerifyExecutor));
     res.add(getExecutorStats("Misc", miscExecutor));
     return res;
   }
@@ -2080,6 +2757,8 @@ public class V2AuMover {
   private PrintWriter errorWriter;
 
   private String currentStatus;
+  private String waitingMsg;
+  private String finalStatus;
   private String whichAus;
   private boolean running = true; // init true avoids race while starting
   private boolean hasBeenStarted = false;
@@ -2088,8 +2767,9 @@ public class V2AuMover {
   private long totalAusMoved = 0;
   private long totalAusPartiallyMoved = 0; // also included in totalAusMoved
   private long totalAusSkipped = 0;
-  // XXX s.b. incremented by tasks that get errors, isn't
+  private long totalAusEmpty = 0;
   private long totalAusWithErrors = 0;
+  private StringBuilder auErrorReport = new StringBuilder();
   private OpTimers totalTimers = new OpTimers(this);
   private Counters totalCounters = totalTimers.getCounters();
 
@@ -2113,6 +2793,8 @@ public class V2AuMover {
       sb.append(StringUtil.sizeToString(dbBytesCopied));
       sb.append( " of ");
       sb.append(StringUtil.sizeToString(dbBytesTotal));
+      sb.append(" in ");
+      sb.append(dbCopyDuration);
       res.add(sb.toString());
     }
     else if (STATUS_RUNNING.equals(currentStatus)) {
@@ -2148,6 +2830,9 @@ public class V2AuMover {
         sb.append(errstat);
       }
       res.add(sb.toString());
+      if (waitingMsg != null) {
+        res.add(waitingMsg);
+      }
       sb = new StringBuilder();
       totalTimers.addCounterStatus(sb, opType);
       res.add(sb.toString());
@@ -2160,26 +2845,57 @@ public class V2AuMover {
       res.add(sb.toString());
       res.add(currentStatus);
     }
+    if (totalCounters.getVal(CounterType.CONTENT_BYTES_MOVED) >
+        nextDiskSpaceFetchBytes ||
+        totalCounters.getVal(CounterType.ARTIFACTS_MOVED) >
+        nextDiskSpaceFetchArtifacts ||
+        TimeBase.nowMs() > nextDiskSpaceFetchTime) {
+      fetchDiskSpace();
+    }
+    if (finalStatus != null) {
+      res.add(finalStatus);
+    }
+    if (currentDiskSpace != null) {
+      res.add(currentDiskSpace);
+    }
     return res;
   }
 
   String getIdleStatus() {
     if (isAbort()) {
-      return "Aborted";
+      if (!StringUtil.isNullString(abortReason)) {
+        return abortReason;
+      } else {
+        return "Aborted";
+      }
     }
     if (hasBeenStarted) {
       if (isFailed()) {
         return "Failed";
+      } else if (isRunning()) {
+        return "Starting";
       } else {
         return "Done";
       }
+    }
+    // Pretty kludgey
+    if ("Checking V2 services".equals(currentStatus)) {
+      return "Starting";
     }
     return "Idle";
   }
 
   String getErrorStatus() {
-    int n = getErrors().size();
-    return n == 0 ? "" : StringUtil.numberOfUnits(n, "error");
+    int errors = totalCounters.getErrorCount();
+    int warnings = totalCounters.getWarningCount();
+    List<String> lst = new ArrayList<>(2);
+    if (errors != 0) {
+      lst.add(StringUtil.numberOfUnits(errors, "error"));
+    }
+    if (warnings != 0) {
+      lst.add(StringUtil.numberOfUnits(warnings, "warning"));
+    }
+    return StringUtil.separatedString(lst, ", ");
   }
 
   public List<String> getActiveStatusList() {
@@ -2189,7 +2905,7 @@ public class V2AuMover {
     }
     List<String> res = new ArrayList<>();
     for (AuStatus auStat : auStats.values()) {
-      String one = getOneAuStatus(auStat);
+      String one = getOneAuStatus(auStat, excludeQueuedTasks);
       if (one != null) {
         res.add(one);
       }
@@ -2204,7 +2920,7 @@ public class V2AuMover {
 //     }
 //     List<String> res = new ArrayList<>();
 //     for (AuStatus auStat : auStats.values()) {
-//       String one = getOneAuStatus(auStat);
+//       String one = getOneAuStatus(auStat, true);
 //       if (one != null) {
 //         res.add(one);
 //       }
@@ -2244,7 +2960,7 @@ public class V2AuMover {
           break;
         }
         if (ix++ >= index) {
-          String one = getOneAuStatus(auStat);
+          String one = getOneAuStatus(auStat, false);
           if (one != null) {
             res.add(one);
             ctr++;
@@ -2256,7 +2972,7 @@ public class V2AuMover {
   }
 
   // XXX need to enhance to account for verify phase
-  private String getOneAuStatus(AuStatus auStat) {
+  private String getOneAuStatus(AuStatus auStat, boolean excludeQueued) {
     Counters ctrs = auStat.getCounters();
     StringBuilder sb = new StringBuilder();
     Phase phase = auStat.getPhase();
@@ -2269,8 +2985,12 @@ public class V2AuMover {
         break;
       case COPY:
       case VERIFY:
+      case COPY_STATE:
       case INDEX:
         if (!auStat.hasStarted(phase)) {
+          if (excludeQueued) {
+            return null;
+          }
           phaseName = phase.verb() + " queued";
         }
         break;
@@ -2293,10 +3013,81 @@ public class V2AuMover {
         sb.append(": No V1 content");
         break;
       }
+    case QUEUE:
+      if (excludeQueued) {
+        return null;
+      }
+      // fall through
     default:
       auStat.addCounterStatus(sb, opType, ": ");
     }
     return sb.toString();
+  }
+
+  RepositoryInfo getRepoInfo() throws ApiException {
+    // This can get called early
+    if (repoRepoApiClient == null) {
+      return null;
+    }
+    RepositoryInfo ri = repoRepoApiClient.getRepositoryInformation();
+    log.debug3("repoinfo: " + ri);
+    return ri;
+  }
+
+  void fetchDiskSpace() {
+    try {
+      RepositoryInfo ri = getRepoInfo();
+      if (ri == null) {
+        currentDiskSpace = null;
+        return;
+      }
+      StorageInfo data = ri.getStoreInfo();
+      StorageInfo index = ri.getIndexInfo();
+
+      // Record the current free content space and index space
+      diskFreeContent = data.getAvailKB() + 1024;
+      diskFreeIndex = index.getAvailKB() + 1024;
+      // Comp;ute the number of bytes and artifacts at which to next
+      // fetch free space
+      nextDiskSpaceFetchBytes =
+        totalCounters.getVal(CounterType.CONTENT_BYTES_MOVED) +
+        (long)diskSpaceXferBytesCurve.getY(diskFreeContent);
+      nextDiskSpaceFetchArtifacts =
+        totalCounters.getVal(CounterType.ARTIFACTS_MOVED) +
+        (long)diskSpaceXferArtifactsCurve.getY(diskFreeIndex);
+      // And the next time to fetch this data
+      nextDiskSpaceFetchTime = TimeBase.nowMs() + diskSpaceFetchInterval;
+
+      // We have no good way to determine whether content & index are
+      // on the same device, so we resort to guessing that if the two
+      // StorageInfos are the same, they're the same device.  But,
+      // while migration is in progress, the two StorageInfos may
+      // differ slightly as they recorded a few milliseconds apart, so
+      // we compare the string representations, which usually use much
+      // larger units.
+      String contentStr =
+        String.format("%s used, %s free",
+                      data.getPercentUsedString(),
+                      StringUtil.sizeKBToString(data.getAvailKB()));
+      String indexStr =
+        String.format("%s used, %s free",
+                      index.getPercentUsedString(),
+                      StringUtil.sizeKBToString(index.getAvailKB()));
+      if (contentStr.equals(indexStr)) {
+        currentDiskSpace = String.format("Target disk space: %s", contentStr);
+      } else {
+        currentDiskSpace = String.format("Target disk space: Content: %s, Index: %s",
+                                         contentStr, indexStr);
+      }
+    } catch (ApiException e) {
+      log.error("Can't get disk space", e);
+    }
+  }
+
+  private void addAuError(String msg) {
+    totalAusWithErrors++;
+    auErrorReport.append(msg);
+    auErrorReport.append("\n");
   }
 
   public boolean isRunning() {
@@ -2433,7 +3224,9 @@ public class V2AuMover {
     if (reportWriter == null) {
       deferredReports.add(msg);
     } else {
-      reportWriter.println(msg);
+      synchronized (reportWriter) {
+        reportWriter.println(msg);
+      }
     }
   }
 
@@ -2441,7 +3234,9 @@ public class V2AuMover {
     if (errorWriter == null) {
       deferredErrorReports.add(msg);
     } else {
-      errorWriter.println(msg);
+      synchronized (errorWriter) {
+        errorWriter.println(msg);
+      }
     }
   }
 
@@ -2464,49 +3259,34 @@ public class V2AuMover {
                 new Throwable());
       return;
     }
-    if (auStat == null) {
-      log.error("updateReport called with AU that's not running: " +
-                auStat.getAuName(),
-                new Throwable());
-      reportWriter.println("updateReport called with AU that's not running: " +
-                           auStat.getAuName());
-      return;
-    }
-    StringBuilder sb = new StringBuilder();
-    auStat.addCounterStatus(sb, opType);
-    String auData = sb.toString();
-    reportWriter.println("AU Name: " + auStat.getAuName());
-    reportWriter.println("AU ID: " + auStat.getAuId());
-    if (auStat.isAbort()) {
-      reportWriter.print("Aborted after ");
-    }
-    reportWriter.println(auData);
-//       else {
-//         if (isPartialContent) {
-//           if (auArtifactsMoved > 0) {// if we moved something
-//             reportWriter.println("Moved remaining unmigrated au content.");
-//             reportWriter.println(auData);
-//           }
-//           else {
-//             reportWriter.println("All au content already migrated.");
-//             reportWriter.println(auData);
-//           }
-//         }
-//         else {
-//           reportWriter.println(auData);
-//         }
-//       }
-    if (!auStat.getErrors().isEmpty()) {
-      writeErrors(reportWriter, auStat);
-      errorWriter.println("Errors in AU: " + auStat.getAuName());
-      errorWriter.println("AU ID: " + auStat.getAuId());
-      writeErrors(errorWriter, auStat);
-    }
-    if (auStat.getErrorCount() > 0) {
-    }
-    reportWriter.println();
-    if (reportWriter.checkError()) {
-      log.warning("Error writing report file.");
+    synchronized (reportWriter) {
+      if (auStat == null) {
+        log.error("updateReport called with AU that's not running: " +
+                  auStat.getAuName(),
+                  new Throwable());
+        reportWriter.println("updateReport called with AU that's not running: " +
+                             auStat.getAuName());
+        return;
+      }
+      StringBuilder sb = new StringBuilder();
+      auStat.addCounterStatus(sb, opType);
+      String auData = sb.toString();
+      reportWriter.println("AU Name: " + auStat.getAuName());
+      reportWriter.println("AU ID: " + auStat.getAuId());
+      if (auStat.isAbort()) {
+        reportWriter.print("Aborted after ");
+      }
+      reportWriter.println(auData);
+      if (!auStat.getErrors().isEmpty()) {
+        writeErrors(reportWriter, auStat);
+        errorWriter.println("Errors in AU: " + auStat.getAuName());
+        errorWriter.println("AU ID: " + auStat.getAuId());
+        writeErrors(errorWriter, auStat);
+      }
+      reportWriter.println();
+      if (reportWriter.checkError()) {
+        log.warning("Error writing report file.");
+      }
     }
   }
 
@@ -2528,50 +3308,70 @@ public class V2AuMover {
     String now = nowTimestamp();
     closeReport(reportWriter, now);
     closeReport(errorWriter, now);
-
   }
 
   void appendTotalSummary(StringBuilder sb) {
     if (opType.isVerifyOnly()) {
-      sb.append(StringUtil.bigNumberOfUnits(totalAusMoved, "AU") + " checked");
+      sb.append("Checked ");
     } else {
-      sb.append(StringUtil.bigNumberOfUnits(totalAusMoved, "AU") + " copied");
-      if (totalAusPartiallyMoved > 0 || totalAusSkipped > 0) {
-        sb.append(" (");
-        if (totalAusSkipped > 0) {
-          sb.append(bigIntFormat(totalAusSkipped));
-          sb.append(" previously");
-          if (totalAusPartiallyMoved > 0) {
-            sb.append(", ");
-          }
-        }
-        if (totalAusPartiallyMoved > 0) {
-          sb.append(bigIntFormat(totalAusPartiallyMoved));
-          sb.append(" partially");
-        }
-        sb.append(")");
-      }
+      sb.append("Copied ");
       if (opType.isVerify()) {
-        sb.append(" and checked");
+        sb.append("and checked ");
       }
+    }
+    sb.append(StringUtil.bigNumberOfUnits(totalAusMoved, "AU"));
+    if (totalAusPartiallyMoved > 0 ||
+        totalAusSkipped > 0 ||
+        totalAusWithErrors > 0) {
+      List<String> lst = new ArrayList<>();
+      if (totalAusSkipped > 0 && opType.isCopy()) {
+        lst.add(bigIntFormat(totalAusSkipped) + " previously");
+      }
+      if (totalAusPartiallyMoved > 0) {
+        lst.add(bigIntFormat(totalAusPartiallyMoved) + " partially");
+      }
+      if (totalAusEmpty > 0) {
+        lst.add(bigIntFormat(totalAusEmpty) + " empty");
+      }
+      if (totalAusWithErrors > 0) {
+        lst.add(bigIntFormat(totalAusWithErrors) + " had errors");
+      }
+      StringUtil.separatedString(lst, " (", ", ", ")", sb);
+    }
+  }
+
+  void buildFinalStatus() {
+    if (opType != null) {
+      StringBuilder sb = new StringBuilder();
+      appendTotalSummary(sb);
+      currentStatus = sb.toString();
+
+      sb = new StringBuilder();
+      totalTimers.addCounterStatus(sb, opType);
+      finalStatus = sb.toString();
     }
   }
 
   void closeReport(PrintWriter writer, String now) {
-    StringBuilder sb = new StringBuilder();
-    if (opType != null) {
-      appendTotalSummary(sb);
-      totalTimers.addCounterStatus(sb, opType, ": ");
-      currentStatus = sb.toString();
-    }
-    running = false;
     if (writer != null) {
       writer.println("--------------------------------------------------");
-      writer.println((isAbort() ? " Aborted" : "  Finished") + " with " +
+      writer.println((isAbort() ? "Aborted" : "Finished") + " with " +
                      StringUtil.bigNumberOfUnits(totalTimers.getErrorCount(),
                                                  "error") +
                      " at " + now);
       writer.println(currentStatus);
+      writer.println(finalStatus);
+      if (totalAusWithErrors > 0) {
+        writer.println("");
+        writer.print(StringUtil.bigNumberOfUnits(totalAusWithErrors, "AU"));
+        writer.print(" had errors");
+        if (migrationMgr.isDeleteMigratedAus()) {
+          writer.print(" and were not deleted");
+        }
+        writer.println(":");
+        writer.println(auErrorReport.toString());
+        writer.println("");
+      }
       writer.println("--------------------------------------------------");
       writer.println("");
       if (writer.checkError()) {
@@ -2581,6 +3381,38 @@ public class V2AuMover {
       writer.close();
     }
     log.info(currentStatus);
+  }
+
+  private void copyReportsToTarget() throws IOException, ApiException {
+    copyReportFileToTarget(reportFile);
+    copyReportFileToTarget(errorFile);
+  }
+
+  static String MIGRATION_REPORTS_NAMESPACE = "internal";
+  static String MIGRATION_REPORTS_AUID =
+    "org|lockss|plugin|NamedPlugin&handle~Migration+Reports";
+
+  private void copyReportFileToTarget(File file)
+      throws IOException, ApiException {
+    // Artifact properties
+    Map<String, String> props = new HashMap<>();
+    props.put(ArtifactProperties.SERIALIZED_NAME_NAMESPACE,
+              MIGRATION_REPORTS_NAMESPACE);
+    props.put(ArtifactProperties.SERIALIZED_NAME_AUID, MIGRATION_REPORTS_AUID);
+    props.put(ArtifactProperties.SERIALIZED_NAME_URI, file.getName());
+    Gson gson = new Gson();
+    String prop_str = gson.toJson(props);
+
+    log.debug("Storing " + file.getName() + " in V2 repo");
+    Artifact uncommitted =
+      getRepoArtifactsApiClient().createArtifact(prop_str, file, null);
+    if (uncommitted != null) {
+      Artifact committed =
+        getRepoArtifactsApiClient().updateArtifact(uncommitted.getUuid(),
+                                                   true,
+                                                   uncommitted.getNamespace());
+      log.debug("Committed " + file.getName() + " to V2 repo");
+    }
   }
 
   //////////////////////////////////////////////////////////////////////
@@ -2601,6 +3433,16 @@ public class V2AuMover {
 
   public static String percentFormat(double x) {
     return TH_PERCENT_FMT.get().format(x);
+  }
+
+  public static final Format mdDateFmt =
+    FastDateFormat.getInstance("MM/dd/yyyy HH:mm:ss.SSS");
+
+  public static String dateStr(long val) {
+    if (val < 1000L) {
+      return Long.toString(val);
+    }
+    return mdDateFmt.format(val);
   }
 
   long now() {
@@ -2648,10 +3490,10 @@ public class V2AuMover {
       }
       if (!StringUtil.equalStrings(v2Url, v1Url)) {
         if (isEqualUpToFinalSlash(v1Url, v2Url)) {
-          log.debug2("Using fetch URL with slash (" + v2Url +
+          log.debug3("Using fetch URL with slash (" + v2Url +
                      ") in place of CU URL (" + v1Url + ")");
         } else {
-          log.debug2("Using fetch URL (" + v2Url +
+          log.debug3("Using fetch URL (" + v2Url +
                      ") in place of CU URL (" + v1Url + ")");
         }
       }
@@ -2725,8 +3567,8 @@ public class V2AuMover {
 //     totalErrorCount = errors;
   }
 
-  LinkedHashSet<ArchivalUnit> getAuMoveQueue() {
-    return auMoveQueue;
+  LinkedHashMap<String, LinkedHashSet<String>> getAuMoveQueueByPlugin() {
+    return auMoveQueueByPlugin;
   }
 
   String getUserName() {

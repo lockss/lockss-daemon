@@ -58,7 +58,7 @@ public class DbManager extends BaseLockssDaemonManager
   private static final Logger log = Logger.getLogger(DbManager.class);
 
   // Prefix for the database manager configuration entries.
-  private static final String PREFIX = Configuration.PREFIX + "dbManager.";
+  public static final String PREFIX = Configuration.PREFIX + "dbManager.";
 
   // Prefix for the Derby configuration entries.
   private static final String DERBY_ROOT = PREFIX + "derby";
@@ -204,6 +204,32 @@ public class DbManager extends BaseLockssDaemonManager
   public static final String PARAM_FETCH_SIZE = PREFIX + "fetchSize";
   public static final int DEFAULT_FETCH_SIZE = 5000;
 
+  /**
+   * When true, defer all DB initialization to an external process and wait.
+   * Set automatically when v1 switches to the v2 database.
+   */
+  public static final String PARAM_WAIT_FOR_EXTERNAL_SETUP =
+      PREFIX + "waitForExternalSetup";
+  public static final boolean DEFAULT_WAIT_FOR_EXTERNAL_SETUP = false;
+
+  /**
+   * The target DB version managed by the external process. v1 waits until
+   * this version is reached before proceeding. Only consulted when
+   * PARAM_WAIT_FOR_EXTERNAL_SETUP is true.
+   */
+  public static final String PARAM_TARGET_DB_VERSION =
+      PREFIX + "targetDbVersion";
+  public static final int DEFAULT_TARGET_DB_VERSION = 28;
+
+  // Interval between polls when waiting for external DB setup.
+  static final long WAIT_FOR_EXTERNAL_SETUP_INTERVAL = 15 * Constants.SECOND;
+
+  // Name of the subsystem column added to the version table by v2.
+  static final String EXTERNAL_DB_SUBSYSTEM_COLUMN = "subsystem";
+
+  // Name of the v2 MetadataDbManager subsystem, whose version v1 waits for.
+  static final String EXTERNAL_DB_SUBSYSTEM = "MetadataDbManager";
+
   // Derby SQL state of exception thrown on successful database shutdown.
   private static final String SHUTDOWN_SUCCESS_STATE_CODE = "08006";
 
@@ -239,7 +265,7 @@ public class DbManager extends BaseLockssDaemonManager
   // After this service has started successfully, this is the version of the
   // database that will be in place, as long as the database version prior to
   // starting the service was not higher already.
-  private int targetDatabaseVersion = 28;
+  private int targetDatabaseVersion = 29;
 
   // The database version updates that are performed asynchronously.
   private int[] asynchronousUpdates = new int[] {10, 15, 17, 20, 22};
@@ -288,14 +314,13 @@ public class DbManager extends BaseLockssDaemonManager
   }
 
   public void restartService() {
-    Configuration cur = ConfigManager.getCurrentConfig();
-    if (cur.get(PARAM_DATASOURCE_CLASSNAME) == null) {
+    if (dataSourceConfig.get("className") == null) {
       log.debug("Restarting, was default DB");
     } else {
       log.debug("Restarting, was "
-                + cur.get(PARAM_DATASOURCE_CLASSNAME)
-                + ", " + cur.get(PARAM_DATASOURCE_SERVERNAME)
-                + ":" + cur.get(PARAM_DATASOURCE_PORTNUMBER));
+                + dataSourceConfig.get("className")
+                + ", " + dataSourceConfig.get("serverName")
+                + ":" + dataSourceConfig.get("portNumber"));
     }
     stopService();
     resetConfig();
@@ -608,10 +633,15 @@ public class DbManager extends BaseLockssDaemonManager
     if (!ready) {
       throw new DbException("DbManager has not been initialized.");
     }
+    return staticPrepareStatement(conn, sql, maxRetryCount, retryDelay, fetchSize);
+  }
 
+  static  PreparedStatement staticPrepareStatement(Connection conn, String sql,
+                                                   int maxRetryCount, long retryDelay, int fetchSize)
+      throws DbException {
     try {
-      return dbManagerSql.prepareStatement(conn, sql, maxRetryCount,
-	retryDelay);
+      return DbManagerSql.staticPrepareStatement(conn, sql, maxRetryCount,
+                                                 retryDelay, fetchSize);
     } catch (SQLException sqle) {
       String message = "Cannot prepare statement";
       log.error(message, sqle);
@@ -713,9 +743,15 @@ public class DbManager extends BaseLockssDaemonManager
     if (!ready) {
       throw new DbException("DbManager has not been initialized.");
     }
+    return staticExecuteUpdate(statement, maxRetryCount, retryDelay);
+  }
 
+  static int staticExecuteUpdate(PreparedStatement statement,
+                                 int maxRetryCount, long retryDelay)
+      throws DbException {
     try {
-      return dbManagerSql.executeUpdate(statement, maxRetryCount, retryDelay);
+      return DbManagerSql.staticExecuteUpdate(statement, maxRetryCount,
+                                              retryDelay);
     } catch (SQLException sqle) {
       throw new DbException("Cannot execute update", sqle);
     } catch (RuntimeException re) {
@@ -876,6 +912,7 @@ public class DbManager extends BaseLockssDaemonManager
    * @return <code>true</code> if the database was successfully set up,
    *         <code>false</code> otherwise.
    */
+  // Used only by tests
   boolean setUpDatabase(int finalVersion) {
     final String DEBUG_HEADER = "setUpDatabase(): ";
     if (log.isDebug2())
@@ -1639,10 +1676,35 @@ public class DbManager extends BaseLockssDaemonManager
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "targetDbVersion = " + targetDbVersion);
 
+    boolean waitForExternalSetup = ConfigManager.getCurrentConfig().getBoolean(
+        PARAM_WAIT_FOR_EXTERNAL_SETUP, DEFAULT_WAIT_FOR_EXTERNAL_SETUP);
+        log.debug3(DEBUG_HEADER + "waitForExternalSetup = " + waitForExternalSetup);
+
     Connection conn = null;
 
     try {
       conn = dbManagerSql.getConnection();
+
+      if (waitForExternalSetup) {
+        int externalDbTargetVersion =
+            ConfigManager.getCurrentConfig().getInt(
+                PARAM_TARGET_DB_VERSION,
+                DEFAULT_TARGET_DB_VERSION);
+        log.info("Waiting for externally managed database to be at version " +
+                 externalDbTargetVersion);
+
+        // Wait for the version table to be created by the external process.
+        waitForVersionTable(conn);
+
+        // Wait for v2 to add the subsystem column before querying by subsystem.
+        waitForVersionSubsystemColumn(conn);
+
+        // Wait until the external process brings the target subsystem to the
+        // required version.
+        int existingDbVersion = waitForDatabaseUpdate(conn, externalDbTargetVersion);
+        log.info("Externally managed database at version " + existingDbVersion);
+        return;
+      }
 
       // Find the current database version.
       int existingDbVersion = 0;
@@ -1761,8 +1823,96 @@ public class DbManager extends BaseLockssDaemonManager
   }
 
   /**
+   * Waits until the version table of the database exists.
+   *
+   * @param conn A Connection with the database connection to be used.
+   * @throws SQLException if any problem occurred accessing the database.
+   */
+  private void waitForVersionTable(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "waitForVersionTable(): ";
+    log.debug2(DEBUG_HEADER + "Starting...");
+
+    while (!dbManagerSql.tableExists(conn, VERSION_TABLE)) {
+      log.debug(DEBUG_HEADER + "Table '" + VERSION_TABLE
+          + "' does not exist. Waiting for external DB setup...");
+
+      try {
+        Thread.sleep(WAIT_FOR_EXTERNAL_SETUP_INTERVAL);
+      } catch (InterruptedException ie) {
+        // Expected.
+      }
+    }
+
+    log.debug3(DEBUG_HEADER + VERSION_TABLE + " table exists.");
+    log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Waits until the subsystem column exists in the version table.
+   *
+   * @param conn A Connection with the database connection to be used.
+   * @throws SQLException if any problem occurred accessing the database.
+   */
+  private void waitForVersionSubsystemColumn(Connection conn)
+      throws SQLException {
+    final String DEBUG_HEADER = "waitForVersionSubsystemColumn(): ";
+    log.debug2(DEBUG_HEADER + "Starting...");
+
+    while (!dbManagerSql.columnExists(conn, VERSION_TABLE,
+        EXTERNAL_DB_SUBSYSTEM_COLUMN)) {
+      log.debug(DEBUG_HEADER + "Column '"
+          + EXTERNAL_DB_SUBSYSTEM_COLUMN + "' in table '" + VERSION_TABLE
+          + "' does not exist. Waiting for external DB setup...");
+
+      try {
+        Thread.sleep(WAIT_FOR_EXTERNAL_SETUP_INTERVAL);
+      } catch (InterruptedException ie) {
+        // Expected.
+      }
+    }
+
+    log.debug3(DEBUG_HEADER + "Column '"
+        + EXTERNAL_DB_SUBSYSTEM_COLUMN + "' in table '" + VERSION_TABLE
+        + "' exists.");
+
+    log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Waits until the database has been updated to the target version for the
+   * external subsystem.
+   *
+   * @param conn             A Connection with the database connection to be used.
+   * @param targetDbVersion  An int with the target database version to wait for.
+   * @return An int with the database version once the target is reached.
+   * @throws SQLException if any problem occurred accessing the database.
+   */
+  private int waitForDatabaseUpdate(Connection conn, int targetDbVersion) throws SQLException {
+    final String DEBUG_HEADER = "waitForDatabaseUpdate(): ";
+    log.debug2(DEBUG_HEADER + "targetDbVersion = " + targetDbVersion);
+
+    while (true) {
+      int currentDbVersion =
+        dbManagerSql.getHighestNumberedDatabaseVersionForSubsystem(conn, EXTERNAL_DB_SUBSYSTEM);
+
+      if (currentDbVersion >= targetDbVersion) {
+        log.debug2(DEBUG_HEADER + "currentDbVersion = " + currentDbVersion);
+        return currentDbVersion;
+      }
+      log.debug2(DEBUG_HEADER + "currentDbVersion = "
+                 + currentDbVersion + " < targetDbVersion = " + targetDbVersion
+                 + ". Waiting for external DB setup...");
+      try {
+        Thread.sleep(WAIT_FOR_EXTERNAL_SETUP_INTERVAL);
+      } catch (InterruptedException ie) {
+        // Expected.
+      }
+    }
+  }
+
+  /**
    * Performs database updates that have not been recorded as finished.
-   * 
+   *
    * @param conn
    *          A Connection with the database connection to be used.
    * @param recordedVersions
@@ -1921,6 +2071,8 @@ public class DbManager extends BaseLockssDaemonManager
 	  dbManagerSql.updateDatabaseFrom26To27(conn);
 	} else if (from == 27) {
 	  dbManagerSql.updateDatabaseFrom27To28(conn);
+	} else if (from == 28) {
+	  dbManagerSql.updateDatabaseFrom28To29(conn);
 	} else {
 	  throw new DbException("Non-existent method to update the database "
 	      + "from version " + from + ".");
@@ -2034,6 +2186,37 @@ public class DbManager extends BaseLockssDaemonManager
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "count = " + count);
     return count;
+  }
+
+  /**
+   * Acquires an exclusive database lock to serialize metadata write operations.
+   * Blocks until no other transaction holds the lock. The lock is released when
+   * the connection's transaction is committed or rolled back.
+   *
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public void lockMetadataWrite(Connection conn) throws DbException {
+    final String DEBUG_HEADER = "lockMetadataWrite(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    staticLockMetadataWrite(conn, maxRetryCount, retryDelay, fetchSize);
+    return;
+  }
+
+  public static void staticLockMetadataWrite(Connection conn, int maxRetryCount, long retryDelay, int fetchSize)
+      throws DbException {
+    final String DEBUG_HEADER = "lockMetadataWrite(): ";
+    PreparedStatement stmt = null;
+
+    try {
+      stmt = staticPrepareStatement(conn, DbManagerSql.LOCK_METADATA_WRITE_QUERY, maxRetryCount, retryDelay, fetchSize);
+      staticExecuteUpdate(stmt, maxRetryCount, retryDelay);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    } finally {
+      DbManager.safeCloseStatement(stmt);
+    }
   }
 
   /**

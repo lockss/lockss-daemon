@@ -66,7 +66,10 @@ public class MetadataControlServiceImpl implements MetadataControlService {
 
     MetadataControlResult result = null;
 
-    if (mdItemSeq == null) {
+    if (isInRealMigrationMode()) {
+      result = new MetadataControlResult(Boolean.FALSE,
+          "Metadata control operations are disabled in migration mode");
+    } else if (mdItemSeq == null) {
       result = new MetadataControlResult(Boolean.FALSE,
 	  "The publication identifier cannot be null");
     } else if (issn == null || issn.trim().length() == 0) {
@@ -113,7 +116,10 @@ public class MetadataControlServiceImpl implements MetadataControlService {
 
     MetadataControlResult result = null;
 
-    if (auSeq == null) {
+    if (isInRealMigrationMode()) {
+      result = new MetadataControlResult(Boolean.FALSE,
+          "Metadata control operations are disabled in migration mode");
+    } else if (auSeq == null) {
       result = new MetadataControlResult(Boolean.FALSE,
 	  "The Archival Unit database identifier cannot be null");
     } else if (auKey == null || auKey.trim().length() == 0) {
@@ -143,5 +149,10 @@ public class MetadataControlServiceImpl implements MetadataControlService {
   private MetadataManager getMetadataManager() {
     return (MetadataManager) LockssDaemon
 	.getManager(LockssDaemon.METADATA_MANAGER);
+  }
+
+  private boolean isInRealMigrationMode() {
+    return LockssDaemon.getLockssDaemon().getMigrationManager()
+        .isRealMigrationMode();
   }
 }

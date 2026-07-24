@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2025 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -81,7 +81,7 @@ import org.lockss.config.*;
  *
  * <li><b>isMigrationInDebugMode</b> - Enables additional UI buttons,
  * allows combinations of actions and state that should normally be
- * prohibited, prevent AUs from being deleted. </li>
+ * prohibited.  Does not otherwise change migrator behavior. </li>
  */
 public class MigrationManager extends BaseLockssDaemonManager
   implements ConfigurableManager  {
@@ -119,6 +119,7 @@ public class MigrationManager extends BaseLockssDaemonManager
 
   private V2AuMover mover;
   private Runner runner;
+  private List<V2AuMover.Args> moverArgs;
   LockssUrlConnectionPool connectionPool;
   private String idleError;
   private long startTime = 0;
@@ -152,12 +153,17 @@ public class MigrationManager extends BaseLockssDaemonManager
     return isInMigrationMode;
   }
 
+  /** True iff a real (non-dry-run) migration is active. */
+  public boolean isRealMigrationMode() {
+    return isInMigrationMode && !isDryRun;
+  }
+
   public boolean isMigrationInDebugMode() {
     return isMigrationInDebugMode;
   }
 
   public boolean isDeleteMigratedAus() {
-    return !isMigrationInDebugMode && isInMigrationMode && isDeleteMigratedAus;
+    return isInMigrationMode && isDeleteMigratedAus;
   }
 
   public boolean isDeactivateMigratedAus() {
@@ -205,8 +211,8 @@ public class MigrationManager extends BaseLockssDaemonManager
     Configuration mCfg = cfgMgr.newConfiguration();
     mCfg.put(MigrationManager.PARAM_IS_IN_MIGRATION_MODE,
              String.valueOf(inMigrationMode));
-    updateMigrationConfigFile(mCfg);
     this.isInMigrationMode = inMigrationMode;
+    updateMigrationConfigFile(mCfg);
   }
 
   public void setIsDbMoved(boolean isDbMoved) throws IOException {
@@ -214,14 +220,6 @@ public class MigrationManager extends BaseLockssDaemonManager
       log.debug("Not setting isDbMoved in dry run mode");
       return;
     }
-    if (isMigrationInDebugMode()) {
-      log.debug("Not setting isDbMoved because in debug mode");
-      return;
-    }
-//     if (isMigrationInDebugMode()) {
-//       log.debug("Not setting isDbMoved because in debug mode");
-//       return;
-//     }
     Configuration mCfg = cfgMgr.newConfiguration();
     mCfg.put(MigrationManager.PARAM_IS_DB_MOVED, String.valueOf(isDbMoved));
     updateMigrationConfigFile(mCfg);
@@ -327,6 +325,13 @@ public class MigrationManager extends BaseLockssDaemonManager
     return mover != null && mover.isRunning();
   }
 
+  public List<V2AuMover.Args> getMoverArgs() {
+    if (mover != null) {
+      return moverArgs;
+    }
+    return null;
+  }
+
   public synchronized void startRunner(List<V2AuMover.Args> args)
       throws IOException, IllegalStateException {
     if (isRunning()) {
@@ -339,11 +344,11 @@ public class MigrationManager extends BaseLockssDaemonManager
     new Thread(runner).start();
   }
 
-  public synchronized void abortCopy() throws IOException {
+  public synchronized void abortCopy(String reason) throws IOException {
     if (!isRunning()) {
       throw new IllegalStateException("Not running");
     }
-    mover.abortCopy();
+    mover.abortCopy(reason);
   }
 
   public void resetAllMigrationState()
@@ -357,8 +362,13 @@ public class MigrationManager extends BaseLockssDaemonManager
         aus.setMigrationState(MigrationState.NotStarted);
       }
     }
-    setIsDbMoved(false);
-    setInMigrationMode(false);
+    isInMigrationMode = false;
+    Configuration mCfg = cfgMgr.newConfiguration();
+    mCfg.put(MigrationManager.PARAM_IS_DB_MOVED, "false");
+    mCfg.put(MigrationManager.PARAM_IS_IN_MIGRATION_MODE, "false");
+    mCfg.put(DbManager.PARAM_WAIT_FOR_EXTERNAL_SETUP, "false");
+    mCfg.put(DbManager.PARAM_TARGET_DB_VERSION, "");
+    updateMigrationConfigFile(mCfg);
   }
 
   /**
@@ -495,6 +505,7 @@ public class MigrationManager extends BaseLockssDaemonManager
       idleError = null;
       try {
         if (args.size() > 0) {
+          moverArgs = args;
           log.debug("Starting mover");
           mover.executeRequests(args);
           log.debug("Mover returned");
@@ -515,9 +526,9 @@ public class MigrationManager extends BaseLockssDaemonManager
     CopyDatabase("Copy Metadata & Subscription Databases", COPY_BIT),
     CopyConfig("Copy Misc. Config", COPY_BIT),
     CopySystemSettings("Copy System Settings", COPY_BIT),
-    CopyOnly("Copy Content", COPY_BIT),
-    CopyAndVerify("Copy and Verify Content", COPY_BIT | VERIFY_BIT),
-    VerifyOnly("Verify Content", VERIFY_BIT);
+    CopyOnly("Copy Only", COPY_BIT),
+    CopyAndVerify("Copy and Verify", COPY_BIT | VERIFY_BIT),
+    VerifyOnly("Verify Only", VERIFY_BIT);
 
     private String label;
     private int bits;

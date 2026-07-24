@@ -37,6 +37,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import org.apache.commons.lang3.builder.*;
+import org.lockss.laaws.V2AuMover;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.Plugin.Feature;
 import org.lockss.state.AuState;
@@ -730,7 +731,8 @@ public class V2AuStateBean implements Diffable<V2AuStateBean> {
     // No need for null check, as NullPointerException correct if obj is null
     return new DiffBuilder(this, obj, ToStringStyle.SHORT_PREFIX_STYLE)
       .append("accessType", this.accessType, obj.accessType)
-      .append("auCreationTime", this.auCreationTime, obj.auCreationTime)
+      .append("auCreationTime", V2AuMover.dateStr(this.auCreationTime),
+              V2AuMover.dateStr(obj.auCreationTime))
       .append("auId", this.auId, obj.auId)
       .append("averageHashDuration", this.averageHashDuration, obj.averageHashDuration)
       .append("cdnStems", this.cdnStems, obj.cdnStems)
@@ -739,22 +741,29 @@ public class V2AuStateBean implements Diffable<V2AuStateBean> {
       .append("highestV3Agreement", this.highestV3Agreement, obj.highestV3Agreement)
       .append("isMetadataExtractionEnabled", this.isMetadataExtractionEnabled, obj.isMetadataExtractionEnabled)
       .append("lastContentChange", this.lastContentChange, obj.lastContentChange)
-      .append("lastCrawlAttempt", this.lastCrawlAttempt, obj.lastCrawlAttempt)
+      .append("lastCrawlAttempt", V2AuMover.dateStr(this.lastCrawlAttempt),
+              V2AuMover.dateStr(obj.lastCrawlAttempt))
       .append("lastCrawlResult", this.lastCrawlResult, obj.lastCrawlResult)
       .append("lastCrawlResultMsg", this.lastCrawlResultMsg, obj.lastCrawlResultMsg)
-      .append("lastCrawlTime", this.lastCrawlTime, obj.lastCrawlTime)
-      .append("lastDeepCrawlAttempt", this.lastDeepCrawlAttempt, obj.lastDeepCrawlAttempt)
+      .append("lastCrawlTime", V2AuMover.dateStr(this.lastCrawlTime),
+              V2AuMover.dateStr(obj.lastCrawlTime))
+      .append("lastDeepCrawlAttempt", V2AuMover.dateStr(this.lastDeepCrawlAttempt),
+              V2AuMover.dateStr(obj.lastDeepCrawlAttempt))
       .append("lastDeepCrawlDepth", this.lastDeepCrawlDepth, obj.lastDeepCrawlDepth)
       .append("lastDeepCrawlResult", this.lastDeepCrawlResult, obj.lastDeepCrawlResult)
       .append("lastDeepCrawlResultMsg", this.lastDeepCrawlResultMsg, obj.lastDeepCrawlResultMsg)
-      .append("lastDeepCrawlTime", this.lastDeepCrawlTime, obj.lastDeepCrawlTime)
+      .append("lastDeepCrawlTime", V2AuMover.dateStr(this.lastDeepCrawlTime),
+              V2AuMover.dateStr(obj.lastDeepCrawlTime))
       .append("lastLocalHashScan", this.lastLocalHashScan, obj.lastLocalHashScan)
       .append("lastMetadataIndex", this.lastMetadataIndex, obj.lastMetadataIndex)
       .append("lastPollResult", this.lastPollResult, obj.lastPollResult)
-      .append("lastPollStart", this.lastPollStart, obj.lastPollStart)
-      .append("lastPoPPoll", this.lastPoPPoll, obj.lastPoPPoll)
+      .append("lastPollStart", V2AuMover.dateStr(this.lastPollStart),
+              V2AuMover.dateStr(obj.lastPollStart))
+      .append("lastPoPPoll", V2AuMover.dateStr(this.lastPoPPoll),
+              V2AuMover.dateStr(obj.lastPoPPoll))
       .append("lastPoPPollResult", this.lastPoPPollResult, obj.lastPoPPollResult)
-      .append("lastTopLevelPollTime", this.lastTopLevelPollTime, obj.lastTopLevelPollTime)
+      .append("lastTopLevelPollTime", V2AuMover.dateStr(this.lastTopLevelPollTime),
+              V2AuMover.dateStr(obj.lastTopLevelPollTime))
       .append("metadataVersion", this.metadataVersion, obj.metadataVersion)
       .append("numAgreePeersLastPoR", this.numAgreePeersLastPoR, obj.numAgreePeersLastPoR)
       .append("numCurrentSuspectVersions", this.numCurrentSuspectVersions, obj.numCurrentSuspectVersions)

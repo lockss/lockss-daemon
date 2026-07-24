@@ -43,8 +43,6 @@ import org.lockss.plugin.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 
-import static org.lockss.laaws.MigrationManager.DEFAULT_DRY_RUN_ENABLED;
-import static org.lockss.laaws.MigrationManager.PARAM_DRY_RUN_ENABLED;
 
 /**
  * RepositoryManager is the center of the per AU repositories.  It manages
@@ -205,6 +203,8 @@ public class RepositoryManager
 	  moveAuDir(event, au);
 	}};
     pluginMgr.registerAuEventHandler(auEventHandler);
+
+    resetConfig();        // ensure migration-related params processed
   }
 
   /** Optionally rename the repository dir(s) belonging to a deleted AU to
@@ -445,29 +445,22 @@ public class RepositoryManager
         deleteThreadDeadline.expire();
       }
 
-      if (changedKeys.contains(MigrationManager.PARAM_IS_IN_MIGRATION_MODE) ||
-          changedKeys.contains(MigrateContent.PARAM_DELETE_AFTER_MIGRATION) ||
-          changedKeys.contains(PARAM_MOVE_DELETED_AUS_TO)) {
+      if (isInited()) {
+        if (changedKeys.contains(MigrationManager.PARAM_IS_IN_MIGRATION_MODE) ||
+            changedKeys.contains(MigrateContent.PARAM_DELETE_AFTER_MIGRATION) ||
+            changedKeys.contains(PARAM_MOVE_DELETED_AUS_TO)) {
 
-        boolean isDryRun = config.getBoolean(
-            PARAM_DRY_RUN_ENABLED,
-            DEFAULT_DRY_RUN_ENABLED);
+          boolean deleteAusAfterMigration =
+            config.getBoolean(MigrateContent.PARAM_DELETE_AFTER_MIGRATION,
+                              MigrateContent.DEFAULT_DELETE_AFTER_MIGRATION);
 
-        boolean inMigrationMode = config.getBoolean(
-            MigrationManager.PARAM_IS_IN_MIGRATION_MODE,
-            MigrationManager.DEFAULT_IS_IN_MIGRATION_MODE);
-
-        boolean deleteAusAfterMigration = config.getBoolean(
-            MigrateContent.PARAM_DELETE_AFTER_MIGRATION,
-            MigrateContent.DEFAULT_DELETE_AFTER_MIGRATION);
-
-        if (inMigrationMode
-            && !isDryRun
-            && deleteAusAfterMigration
-            && !StringUtil.isNullString(paramMoveDeletedAusTo)) {
-          startOrKickDeleteAusThread();
-        } else {
-          stopDeleteAusThread();
+          if (getDaemon().getMigrationManager().isRealMigrationMode()
+              && deleteAusAfterMigration
+              && !StringUtil.isNullString(paramMoveDeletedAusTo)) {
+            startOrKickDeleteAusThread();
+          } else {
+            stopDeleteAusThread();
+          }
         }
       }
     }

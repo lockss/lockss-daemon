@@ -60,11 +60,11 @@ public class ConfigFileMover extends Worker {
   private static final Logger log = Logger.getLogger(ConfigFileMover.class);
 
   static final String COPIED_CONTENT_MARKER_TEMPLATE =
-    "### Copied from LOCKSS %s to LOCKSS %s by migrator, %s";
+    "### Copied from %s (%s) to %s (%s) by migrator, %s";
   static final Pattern COPIED_CONTENT_MARKER_PATTERN =
-    Pattern.compile("### Copied from LOCKSS .* to LOCKSS .* by migrator");
+    Pattern.compile("### Copied from .* to .* by migrator");
   static final String TRANSFORMED_CONTENT_SERVERS_TEMPLATE =
-    "### Adapted from LOCKSS %s to LOCKSS %s by migrator, %s";
+    "### Adapted from %s (%s) to %s (%s) by migrator, %s";
 
 
   private static final Map<String, String> configSectionMap =
@@ -235,7 +235,7 @@ public class ConfigFileMover extends Worker {
         break;
       }
     } catch (ApiException | IOException e) {
-      logError("Couldn't store LOCKSS 2.0 config section: " + section, e);
+      logError("Couldn't store LOCKSS 2.x config section: " + section, e);
     }
   }
 
@@ -249,7 +249,9 @@ public class ConfigFileMover extends Worker {
 
   String copiedConfigComment(String template) {
     return String.format(template,
+                         PlatformUtil.getLocalHostname(),
                          auMover.getLocalVersion(),
+                         auMover.getTargetHostName(),
                          auMover.getCfgSvcVersion(),
                          auMover.nowTimestamp());
   }
@@ -349,12 +351,12 @@ public class ConfigFileMover extends Worker {
       return res;
     } catch (ApiException e) {
       if (e.getCode() == 404) {
-        log.debug("LOCKSS 2.0 config file not found: " + section);
+        log.debug("LOCKSS 2.x config file not found: " + section);
         return null;
       }
       return null;
     } catch (IOException e) {
-      logError("Couldn't read LOCKSS 2.0 config file: " + section, e);
+      logError("Couldn't read LOCKSS 2.x config file: " + section, e);
       return null;
     }
   }

@@ -115,9 +115,14 @@ public class AuSuspectUrlVersions implements LockssSerializable {
   }
 
   private Set<SuspectUrlVersion> suspectVersions =
-    new HashSet<SuspectUrlVersion>();
+    makeSuspectVersionsSet();
 
-  protected AuSuspectUrlVersions() {
+  /** Overridable by test class */
+  protected Set<SuspectUrlVersion> makeSuspectVersionsSet() {
+    return new HashSet<SuspectUrlVersion>();
+  }
+
+  public AuSuspectUrlVersions() {
   }
 
   /**

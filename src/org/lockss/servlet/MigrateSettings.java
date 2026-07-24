@@ -1,5 +1,38 @@
+/*
+
+Copyright (c) 2000-2026, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+*/
+
 package org.lockss.servlet;
 
+import org.apache.commons.text.StringEscapeUtils;
 import org.lockss.util.RandomUtil;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
@@ -14,14 +47,13 @@ import org.lockss.protocol.LcapRouter;
 import org.lockss.proxy.ProxyManager;
 import org.lockss.repository.RepositoryManager;
 import org.lockss.util.*;
-import org.lockss.util.urlconn.LockssUrlConnection;
 import org.mortbay.html.*;
 import org.mortbay.http.HttpRequest;
 
 import javax.servlet.ServletException;
 import java.io.*;
 import java.net.*;
-import java.util.Properties;
+import java.util.*;
 
 import static org.lockss.laaws.MigrationConstants.*;
 
@@ -30,14 +62,8 @@ import static org.lockss.laaws.MigrationConstants.*;
  * can enter the daemon into migration mode.
  */
 public class MigrateSettings extends LockssServlet {
-  static Logger log = Logger.getLogger("MigrateSettings");
+  static Logger log = Logger.getLogger(MigrateSettings.class);
 
-  private static final String FOOTNOTE_HOST_URL =
-      "The target REST Service host name (localhost by default).";
-  private static final String FOOTNOTE_USERNAME =
-      "The username used to connect to the rest interface/admin UI of the target services.";
-  private static final String FOOTNOTE_PASSWORD =
-      "The password used to connect to the rest interface/admin UI of the target services.";
   static final String RESET_CONFIRMATION_MSG = "If migration is resumed it will start over from the beginning.  %sDo you want to proceed?";
   static final String RESET_ALREADY_DELETED = "Any AUs already deleted after migration will not be included.  ";
 
@@ -61,6 +87,33 @@ public class MigrateSettings extends LockssServlet {
   static final String ACTION_NEXT = "Next";
   static final String ACTION_RESET_MIGRATION_STATE = "Reset Migration State";
 
+  static final String HEADING_TARGET = "LOCKSS 2.x Target";
+  static final String HEADING_DATABASE = "Metadata Database";
+  static final String HEADING_OPTIONS = "Migration Options";
+
+  static final String LABEL_TARGET_HOSTNAME = "Hostname";
+  static final String LABEL_TARGET_PORT = "Configuration Service Web UI Port";
+  static final String LABEL_TARGET_USERNAME = "Web UI Username";
+  static final String LABEL_TARGET_PASSWORD = "Web UI Password";
+  
+  static final String LABEL_DATABASE_HOSTNAME = "Database Hostname";
+  static final String LABEL_DATABASE_PORT = "Database Port";
+  static final String LABEL_DATABASE_TYPE = "Database Type";
+  static final String LABEL_DATABASE_NAME = "Database Name";
+  static final String LABEL_DATABASE_USER = "Database User";
+  static final String LABEL_DATABASE_PASSWORD = "Database Password";
+  
+  static final String LABEL_DRY_RUN = "Perform dry run migration";
+  static final String LABEL_DELETE_EACH_AU = "Delete each AU after migration";
+
+  static final String POPUP_DELETE_EACH_AU =
+      "The \"" + LABEL_DELETE_EACH_AU + "\" option causes content to be " +
+      "permanently deleted from LOCKSS 1.x as the migration progresses. It " +
+      "should only be used in a same-host migration with insufficient " +
+      "storage space to hold two copies of the content. See \"Same-Host " +
+      "Migration With Incremental Reclamation\" in the LOCKSS 1.x to 2.x " +
+      "Migration Guide.";
+  
   LockssDaemon theDaemon;
   MigrationManager migrationMgr;
 
@@ -264,6 +317,9 @@ public class MigrateSettings extends LockssServlet {
 
     if (requestMethod.equals(HttpRequest.__POST)) {
       String action = getParameter(KEY_ACTION);
+      if (StringUtil.isNullString(action)) {
+        action = getParameter(ACTION_TAG);
+      }
       switch (action) {
         case ACTION_LOAD_V2_CFG:
           try {
@@ -317,7 +373,7 @@ public class MigrateSettings extends LockssServlet {
                        migrationMgr.isTargetInMigrationMode(hostname, cfgUiPort,
                                                             userName, userPass)) {
               errMsg = "Dry run migration cannot be performed when target is in migration mode";
-            } else if (!migrationMgr.isInMigrationMode() || migrationMgr.isMigrationInDebugMode()) {
+            } else if (!migrationMgr.isInMigrationMode()) {
               // Populate remaining migration configuration parameters
               mCfg.put(V2_DOT + DbManager.PARAM_DATASOURCE_PASSWORD, dbPass);
               mCfg.put(MigrationManager.PARAM_DRY_RUN_ENABLED,
@@ -402,8 +458,7 @@ public class MigrateSettings extends LockssServlet {
     addCssLocations(page);
     layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page, "");
-    page.add(!migrationMgr.isMigrationInDebugMode() &&
-             (!dryRunEnabled && migrationMgr.isInMigrationMode()) ?
+    page.add(migrationMgr.isRealMigrationMode() ?
         makeDisplayCfg() : makeForm());
     endPage(page);
   }
@@ -418,69 +473,69 @@ public class MigrateSettings extends LockssServlet {
     Composite comp = new Composite();
     Form frm = new Form(srvURL(myServletDescr()));
     frm.method("POST");
+    frm.add(new Input(Input.Hidden, ACTION_TAG));
     Table tbl = new Table(0, "align=center cellspacing=2 cellpadding=0");
 
-    addSection(tbl, "Migration Target");
+    addSection(tbl, HEADING_TARGET);
 
     addInputToTable(tbl,
-        "Target Hostname" + addFootnote(FOOTNOTE_HOST_URL),
+        LABEL_TARGET_HOSTNAME,
         KEY_HOSTNAME, hostname, 40);
     addInputToTable(tbl,
-        "Target Configuration Service Port",
+        LABEL_TARGET_PORT,
         KEY_CFGSVC_UI_PORT, String.valueOf(cfgUiPort), 20);
     addInputToTable(tbl,
-        "Username" + addFootnote(FOOTNOTE_USERNAME),
+        LABEL_TARGET_USERNAME,
         KEY_V2_USERNAME, userName, 20);
     addHiddenInputToTable(tbl,
-        "Password" + addFootnote(FOOTNOTE_PASSWORD),
+        LABEL_TARGET_PASSWORD,
         KEY_V2_PASSWORD, userPass, 20);
 
     tbl.newRow();
     tbl.newCell(CENTERED_CELL);
-    tbl.add(new Input(Input.Submit, KEY_ACTION, ACTION_LOAD_V2_CFG));
+    tbl.add(submitButton(ACTION_LOAD_V2_CFG, ACTION_LOAD_V2_CFG));
 
     if (!StringUtil.isNullString(fetchError)) {
       displayInputError(tbl, fetchError);
     }
 
-    addSubsection(tbl, "Metadata Database");
+    addSubsection(tbl, HEADING_DATABASE);
 
     Configuration v2cfg = mCfg.getConfigTree(V2_PREFIX);
 
-    addFieldToTable(tbl, "Hostname", v2cfg.get(DbManager.PARAM_DATASOURCE_SERVERNAME));
-    addFieldToTable(tbl, "Port", v2cfg.get(DbManager.PARAM_DATASOURCE_PORTNUMBER));
-    addFieldToTable(tbl, "Database Type",
+    addFieldToTable(tbl, LABEL_DATABASE_HOSTNAME, v2cfg.get(DbManager.PARAM_DATASOURCE_SERVERNAME));
+    addFieldToTable(tbl, LABEL_DATABASE_PORT, v2cfg.get(DbManager.PARAM_DATASOURCE_PORTNUMBER));
+    addFieldToTable(tbl, LABEL_DATABASE_TYPE,
         getHumanReadableDatabaseType(v2cfg.get(DbManager.PARAM_DATASOURCE_CLASSNAME)));
-    addFieldToTable(tbl, "Database Name",
+    addFieldToTable(tbl, LABEL_DATABASE_NAME,
         getShortenedDatabaseName(v2cfg.get(DbManager.PARAM_DATASOURCE_DATABASENAME)));
-    addFieldToTable(tbl, "Database User", v2cfg.get(DbManager.PARAM_DATASOURCE_USER));
+    addFieldToTable(tbl, LABEL_DATABASE_USER, v2cfg.get(DbManager.PARAM_DATASOURCE_USER));
 
     // Only prompt for a database password if we've fetched its other details
     if (isTargetConfigFetched) {
       addHiddenInputToTable(tbl,
-          "Database Password",
+          LABEL_DATABASE_PASSWORD,
           KEY_DATABASE_PASS, v2cfg.get(DbManager.PARAM_DATASOURCE_PASSWORD, dbPass), 20);
     } else {
-      addFieldToTable(tbl, "Database Password", v2cfg.get(DbManager.PARAM_DATASOURCE_PASSWORD));
+      addFieldToTable(tbl, LABEL_DATABASE_PASSWORD, v2cfg.get(DbManager.PARAM_DATASOURCE_PASSWORD));
     }
 
     if (!StringUtil.isNullString(dbError)) {
       displayInputError(tbl, dbError);
     }
 
-    addSection(tbl, "Migration Options");
+    addSection(tbl, HEADING_OPTIONS);
 
-    Input dryRunCheckbox = addCheckboxToTable(tbl, "Perform dry run migration",
+    Input dryRunCheckbox = addCheckboxToTable(tbl, LABEL_DRY_RUN,
         KEY_DRY_RUN_ENABLED, dryRunEnabled);
 
-    Input deleteAfterCheckbox = addCheckboxToTable(tbl, "Delete AUs after migration",
+    Input deleteAfterCheckbox = addCheckboxToTable(tbl, LABEL_DELETE_EACH_AU,
         KEY_DELETE_AUS, isDeleteAusEnabled);
+    deleteAfterCheckbox.attribute("onclick", "if(this.checked){alert(\"" + StringEscapeUtils.escapeEcmaScript(POPUP_DELETE_EACH_AU) + "\")}");
 
-    if (!migrationMgr.isMigrationInDebugMode()) {
-      // Do not allow user to select dry run once migration has started
-      if (!dryRunEnabled && migrationMgr.isInMigrationMode()) {
-        dryRunCheckbox.attribute("disabled");
-      }
+    // Do not allow user to select dry run once migration has started
+    if (migrationMgr.isRealMigrationMode()) {
+      dryRunCheckbox.attribute("disabled");
     }
     if (dryRunEnabled) {
       deleteAfterCheckbox.attribute("disabled");
@@ -547,31 +602,31 @@ public class MigrateSettings extends LockssServlet {
     frm.method("POST");
     Table tbl = new Table(0, "align=center cellspacing=2 cellpadding=0");
 
-    addSection(tbl, "Migration Target");
+    addSection(tbl, HEADING_TARGET);
 
-    addFieldToTable(tbl, "Target Hostname", hostname);
-    addFieldToTable(tbl, "Target Configuration Service Port", String.valueOf(cfgUiPort));
-    addFieldToTable(tbl, "Username", userName);
-    addHiddenFieldToTable(tbl, "Password", "********");
+    addFieldToTable(tbl, LABEL_TARGET_HOSTNAME, hostname);
+    addFieldToTable(tbl, LABEL_TARGET_PORT, String.valueOf(cfgUiPort));
+    addFieldToTable(tbl, LABEL_TARGET_USERNAME, userName);
+    addHiddenFieldToTable(tbl, LABEL_DATABASE_PASSWORD, "********");
 
-    addSubsection(tbl, "Metadata Database");
+    addSubsection(tbl, HEADING_DATABASE);
 
     Configuration v2cfg = mCfg.getConfigTree(V2_PREFIX);
 
-    addFieldToTable(tbl, "Hostname", v2cfg.get(DbManager.PARAM_DATASOURCE_SERVERNAME));
-    addFieldToTable(tbl, "Port", v2cfg.get(DbManager.PARAM_DATASOURCE_PORTNUMBER));
-    addFieldToTable(tbl, "Database Type",
+    addFieldToTable(tbl, LABEL_DATABASE_HOSTNAME, v2cfg.get(DbManager.PARAM_DATASOURCE_SERVERNAME));
+    addFieldToTable(tbl, LABEL_DATABASE_PORT, v2cfg.get(DbManager.PARAM_DATASOURCE_PORTNUMBER));
+    addFieldToTable(tbl, LABEL_DATABASE_TYPE,
         getHumanReadableDatabaseType(v2cfg.get(DbManager.PARAM_DATASOURCE_CLASSNAME)));
-    addFieldToTable(tbl, "Database Name",
+    addFieldToTable(tbl, LABEL_DATABASE_NAME,
         getShortenedDatabaseName(v2cfg.get(DbManager.PARAM_DATASOURCE_DATABASENAME)));
-    addFieldToTable(tbl, "Database User", v2cfg.get(DbManager.PARAM_DATASOURCE_USER));
-    addHiddenFieldToTable(tbl, "Database Password", "********");
+    addFieldToTable(tbl, LABEL_DATABASE_USER, v2cfg.get(DbManager.PARAM_DATASOURCE_USER));
+    addHiddenFieldToTable(tbl, LABEL_DATABASE_PASSWORD, "********");
 
-    addSection(tbl, "Migration Options");
+    addSection(tbl, HEADING_OPTIONS);
 
-    addDisabledCheckboxToTable(tbl, "Perform dry run migration",
+    addDisabledCheckboxToTable(tbl, LABEL_DRY_RUN,
         KEY_DRY_RUN_ENABLED, dryRunEnabled);
-    addDisabledCheckboxToTable(tbl, "Delete AUs after migration",
+    addDisabledCheckboxToTable(tbl, LABEL_DELETE_EACH_AU,
         KEY_DELETE_AUS, isDeleteAusEnabled);
 
     // Advanced migration options - only in debug mode
@@ -751,11 +806,11 @@ public class MigrateSettings extends LockssServlet {
                                V2_DEFAULT_CONTENTSERVLET_PORT));
 
     // LCAP forwarding settings
+    String targetIdentity = targetCfg.get(V2_PARAM_LOCAL_V3_IDENTITY);
+    String targetIp = null;
     int targetLcapPort = targetCfg.getInt(V2_PARAM_ACTUAL_V3_LCAP_PORT, -1);
     if (targetLcapPort > 0) {
-      String targetIdentity = targetCfg.get(V2_PARAM_LOCAL_V3_IDENTITY);      
-      String targetIp = getLcapForwardAddr(targetHost, targetIdentity,
-                                           targetCfg);
+      targetIp = getLcapForwardAddr(targetHost, targetIdentity, targetCfg);
       String migTo = IDUtil.ipAddrToKey(targetIp, targetLcapPort);
       v2Cfg.put(LcapRouter.PARAM_MIGRATE_TO, migTo);
       log.info("Configuring to forward LCAP to: " + migTo);
@@ -763,14 +818,51 @@ public class MigrateSettings extends LockssServlet {
       log.error("Target didn't supply " + V2_PARAM_ACTUAL_V3_LCAP_PORT);
     }
 
+    // If V2 will route crawls back through V1's HTTP proxy during
+    // migration (so publisher allowlists keep recognizing V1's IP),
+    // ensure V1's proxy is started on the agreed port and that V2's IP
+    // is on the access list.  These v2.* keys are promoted to the
+    // unprefixed params when V1 enters migration mode (see
+    // ConfigManager.setMigrationParams).
+    if (targetCfg.getBoolean(V2_PARAM_PROXY_IN_MIGRATION_MODE,
+                             V2_DEFAULT_PROXY_IN_MIGRATION_MODE)) {
+      int proxyPort = targetCfg.getInt(V2_PARAM_MIGRATION_PROXY_PORT,
+                                       V2_DEFAULT_MIGRATION_PROXY_PORT);
+      v2Cfg.put(ProxyManager.PARAM_START, "true");
+      v2Cfg.put(ProxyManager.PARAM_PORT, String.valueOf(proxyPort));
+
+      if (targetIp == null) {
+        try {
+          targetIp = getLcapForwardAddr(targetHost, targetIdentity, targetCfg);
+        } catch (IllegalArgumentException e) {
+          log.warning("Couldn't determine V2 IP for proxy access list: " +
+                      e.getMessage());
+        }
+      }
+      if (targetIp != null) {
+        Configuration currentCfg = ConfigManager.getCurrentConfig();
+        java.util.List<String> ips = new ArrayList<String>(
+            currentCfg.getList(ProxyManager.PARAM_IP_INCLUDE));
+        ips.add(targetIp);
+        v2Cfg.put(ProxyManager.PARAM_IP_INCLUDE,
+                  StringUtil.separatedString(ips, Constants.LIST_DELIM));
+
+        // Also allow it to use the CONNECT method
+        v2Cfg.put(ProxyManager.PARAM_CONNECT_ALLOWED_FROM, targetIp);
+      }
+    }
+
+    // DbManager configuration
+    v2Cfg.put(DbManager.PARAM_WAIT_FOR_EXTERNAL_SETUP, "true");
+    v2Cfg.put(DbManager.PARAM_TARGET_DB_VERSION, V2_TARGET_DB_VERSION);
+
     // Datasource configuration
     Configuration dsCfg = ConfigManager.newConfiguration();
     dsCfg.copyFrom(targetCfg.getConfigTree(V2_PARAM_METADATADBMANAGER_DATASOURCE_ROOT));
     String dsClassName = dsCfg.get("className");
 
     // Throw if target is using anything other than PostgreSQL
-    if (!migrationMgr.isMigrationInDebugMode() &&
-        !DbManagerSql.isTypePostgresql(dsClassName)) {
+    if (!DbManagerSql.isTypePostgresql(dsClassName)) {
       throw new MigrationManager.UnsupportedConfigurationException("Only PostgreSQL database supported");
     }
 

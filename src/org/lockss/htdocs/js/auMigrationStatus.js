@@ -98,6 +98,7 @@ class AuMigrationStatus extends React.Component {
   componentDidMount() {
     this.__loadStatus();
     this.interval = setInterval(this.__loadStatus, this.state.delay);
+    this.disableSomeButtons();
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -111,17 +112,22 @@ class AuMigrationStatus extends React.Component {
 
     // FIXME: Replace with a jQuery solution?
     if (prevState.running != this.state.running) {
-      for (const e of document.querySelectorAll("input[type='submit'],input[type='button']")) {
-        if (e.value == "Abort") {
-          this.disableIfRunning = false;
-        } else {
-          this.disableIfRunning = true;
-        }
-        if (this.state.running == this.disableIfRunning) {
-          e.setAttribute("disabled", "disabled");
-        } else {
-          e.removeAttribute("disabled");
-        }
+      this.disableSomeButtons();
+    }
+  }
+
+  disableSomeButtons() {
+    console.log("disableSomeButtons: " + this.state.running);
+    for (const e of document.querySelectorAll("input[type='submit'],input[type='button'],button[type='submit']")) {
+      if (e.value == "Abort") {
+        this.disableIfRunning = false;
+      } else {
+        this.disableIfRunning = true;
+      }
+      if (this.state.running == this.disableIfRunning) {
+        e.setAttribute("disabled", "disabled");
+      } else {
+        e.removeAttribute("disabled");
       }
     }
   }
@@ -148,7 +154,9 @@ class AuMigrationStatus extends React.Component {
            ((e.scrollHeight <= e.clientHeight) ||
             (e.scrollHeight - e.clientHeight) <= e.scrollTop + 5));
 
-    this.setState({
+    const startTimeChanged = prevStartTime != result.start_time;
+
+    this.setState((prevState) => ({
       running: result.running,
       fetchError: false,
       statusList: result.status_list,
@@ -159,33 +167,27 @@ class AuMigrationStatus extends React.Component {
       delay: result.running ? 1000 : 5000,
       startTime: result.start_time,
       wasAtBottom: wasAtBottom,
+      finishedData: startTimeChanged ? [] : prevState.finishedData,
+    }), () => {
+      if (this.state.finishedCount != this.state.finishedData.length) {
+        fetch("/MigrateContent?reqfreq=high&output=json&status=finished" +
+              "&index=" + this.state.finishedData.length +
+              "&size=" + (this.state.finishedCount - this.state.finishedData.length))
+          .then(response => response.json())
+          .then(
+            (result) => {
+              this.setState((prevState) => ({
+                finishedData: addFinishedPage(prevState.finishedData,
+                                              result.finished_page,
+                                              result.finished_index),
+              }));
+            },
+            (error) => {
+              console.error("Could not fetch finished AU page: " + error);
+            }
+          );
+      }
     });
-    if (prevStartTime != this.state.startTime) {
-      this.setState({
-        finishedData: [],
-      });
-    }
-
-    if (this.state.finishedCount != this.state.finishedData.length) {
-      fetch("/MigrateContent?output=json&status=finished" +
-            "&index=" + this.state.finishedData.length +
-            "&size=" + (this.state.finishedCount - this.state.finishedData.length))
-        .then(response => response.json())
-        .then(
-          (result) => {
-            this.setState({
-              finishedData: addFinishedPage(this.state.finishedData,
-                                            result.finished_page,
-                                            result.finished_index),
-            });
-
-          },
-          (error) => {
-            console.error("Could not fetch finished AU page: " + error);
-          }
-        );
-
-    }
   }
 
   __loadStatus = () => {
@@ -202,7 +204,7 @@ class AuMigrationStatus extends React.Component {
 
           this.setState({
             fetchError: true,
-            statusList: [ "Status source (classic LOCKSS daemon) not responding" ],
+            statusList: [ "Waiting for status from LOCKSS 1.0 daemon" ],
             delay: 5000,
           });
         }

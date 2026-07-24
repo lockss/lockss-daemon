@@ -462,6 +462,46 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals(au1, mgr.getAuFromId(mauauid1));
   }
 
+  // When a plugin is reloaded with a newer version that adds a non-def
+  // param, restarting its running AUs (restartAusForPlugin()) must fill in
+  // the new param from the tdb.  The restart path uses createAu() (not
+  // configureAu(), because of its RestartCreate batch events), so it applies
+  // the params explicitly.
+  public void testRestartAusAddsNonDefParamsFromTdb() throws Exception {
+    mgr.startService();
+    doConfig();
+    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
+    // The running AU was configured before the plugin knew about nondefp1,
+    // so its config lacks it.
+    ArchivalUnit au = mgr.getAuFromId(mauauid1);
+    assertNotNull(au);
+    assertEquals(null, au.getConfiguration().get("nondefp1"));
+
+    // Simulate reloading the plugin with a newer version that adds a non-def
+    // param, plus a tdb that supplies its value for this AU.
+    ConfigParamDescr nondef =
+      new ConfigParamDescr("nondefp1").setDefinitional(false);
+    mpi.setAuConfigDescrs(ListUtil.list(ConfigParamDescr.BASE_URL,
+					ConfigParamDescr.VOLUME_NUMBER,
+					nondef));
+    TitleConfig tc = new TitleConfig("title1", mpi);
+    tc.setParams(ListUtil.list(
+	new ConfigParamAssignment(ConfigParamDescr.BASE_URL, "val1"),
+	new ConfigParamAssignment(ConfigParamDescr.VOLUME_NUMBER, "val2"),
+	new ConfigParamAssignment(nondef, "barbar")));
+    mpi.setTitleConfigMap(MapUtil.map("title1", tc),
+			  MapUtil.map(mauauid1, tc));
+
+    // Restart the AU as the plugin-reload path does.
+    mgr.restartAusForPlugin(mockPlugKey, ListUtil.list(au), null);
+
+    ArchivalUnit au2 = mgr.getAuFromId(mauauid1);
+    assertNotNull(au2);
+    assertNotSame(au, au2);
+    // The non-def param added by the reloaded plugin is filled in from the tdb.
+    assertEquals("barbar", au2.getConfiguration().get("nondefp1"));
+  }
+
   List createEvents = new ArrayList();
   List deleteEvents = new ArrayList();
   List reconfigEvents = new ArrayList();
@@ -686,6 +726,85 @@ public class TestPluginManager extends LockssTestCase {
     } catch (Exception e) {
       fail("Deleting AU should not have thrown", e);
     }
+  }
+
+  public void testDeactivateAuWithJournal() throws Exception {
+    mgr.startService();
+    minimalConfig();
+    String pid = new ThrowingMockPlugin().getPluginId();
+    String key = PluginManager.pluginKeyFromId(pid);
+
+    assertTrue(mgr.ensurePluginLoaded(key));
+    ThrowingMockPlugin plugin = (ThrowingMockPlugin) mgr.getPlugin(key);
+    Properties props = new Properties();
+    props.put("a", "journal-deactivate");
+
+    ArchivalUnit au = mgr.createAndSaveAuConfiguration(plugin, props);
+    assertTrue(mgr.isActiveAu(au));
+    String auid = au.getAuId();
+    String prefix = PluginManager.auConfigPrefix(auid);
+    assertFalse(mgr.isMigratedAuid(auid));
+
+    mgr.deactivateAuForMigration(au);
+
+    // Assert state pre-processAuTextJournal()
+    assertFalse(mgr.isActiveAu(au));
+    assertTrue(mgr.isInactiveAuId(auid));
+    assertEquals("journal-deactivate",
+        mgr.getStoredAuConfiguration(auid).get("a"));
+    assertFalse(mgr.getStoredAuConfiguration(auid)
+        .getBoolean(PluginManager.AU_PARAM_DISABLED, true));
+    assertTrue(new File(theDaemon.getConfigManager().getCacheConfigDir(),
+        ConfigManager.CONFIG_FILE_AU_CONFIG_JOURNAL).exists());
+    assertFalse(mgr.isMigratedAuid(auid));
+
+    assertTrue(mgr.processAuTxtJournal());
+
+    // Assert state post-processAuTextJournal()
+    Configuration config = theDaemon.getConfigManager().readAuConfigFile();
+    assertEquals("journal-deactivate", config.get(prefix + ".a"));
+    assertEquals("true",
+        config.get(prefix + "." + PluginManager.AU_PARAM_DISABLED));
+    assertFalse(new File(theDaemon.getConfigManager().getCacheConfigDir(),
+        ConfigManager.CONFIG_FILE_AU_CONFIG_JOURNAL).exists());
+    assertFalse(mgr.isMigratedAuid(auid));
+  }
+
+  public void testDeleteAuWithJournal() throws Exception {
+    mgr.startService();
+    minimalConfig();
+    String pid = new ThrowingMockPlugin().getPluginId();
+    String key = PluginManager.pluginKeyFromId(pid);
+
+    assertTrue(mgr.ensurePluginLoaded(key));
+    ThrowingMockPlugin plugin = (ThrowingMockPlugin) mgr.getPlugin(key);
+    Properties props = new Properties();
+    props.put("a", "journal-delete");
+
+    ArchivalUnit au = mgr.createAndSaveAuConfiguration(plugin, props);
+    assertTrue(mgr.isActiveAu(au));
+    String auid = au.getAuId();
+    String prefix = PluginManager.auConfigPrefix(auid);
+    assertFalse(mgr.isMigratedAuid(auid));
+
+    mgr.deleteAuForMigration(au);
+
+    // Assert state pre-processAuTextJournal()
+    assertFalse(mgr.isActiveAu(au));
+    assertFalse(mgr.isInactiveAuId(auid));
+    assertEquals("journal-delete",
+        mgr.getStoredAuConfiguration(auid).get("a"));
+    assertTrue(mgr.isMigratedAuid(auid));
+
+    theDaemon.getConfigManager().resetMigratedAuids();
+    assertFalse(mgr.isMigratedAuid(auid));
+
+    assertTrue(mgr.processAuTxtJournal());
+
+    // Assert state post-processAuTextJournal()
+    Configuration config = theDaemon.getConfigManager().readAuConfigFile();
+    assertTrue(config.getConfigTree(prefix).isEmpty());
+    assertTrue(mgr.isMigratedAuid(auid));
   }
 
   // ensure getAllAus() returns AUs in title sorted order
@@ -1728,7 +1847,7 @@ public class TestPluginManager extends LockssTestCase {
     MyMockRegistryArchivalUnit mmau = new MyMockRegistryArchivalUnit(plugins);
     List registryAus = ListUtil.list(mmau);
     assertNull(mgr.getPlugin(pluginKey));
-    mgr.processRegistryAus(registryAus);
+    mgr.processRegistryAusSync(registryAus);
     Plugin mockPlugin = mgr.getPlugin(pluginKey);
     assertNotNull(mockPlugin);
     assertEquals(preferLoadable, mgr.isLoadablePlugin(mockPlugin));
@@ -1766,7 +1885,7 @@ public class TestPluginManager extends LockssTestCase {
     MyMockRegistryArchivalUnit mmau2 =
       new MyMockRegistryArchivalUnit(ListUtil.list(badplug, pluginJar));
     assertNull(mgr.getPlugin(pluginKey));
-    mgr.processRegistryAus(ListUtil.list(mmau1, mmau2));
+    mgr.processRegistryAusSync(ListUtil.list(mmau1, mmau2));
     // ensure that the one plugin was still loaded
     Plugin mockPlugin = mgr.getPlugin(pluginKey);
     assertNotNull(mockPlugin);
@@ -1803,7 +1922,7 @@ public class TestPluginManager extends LockssTestCase {
     MyMockRegistryArchivalUnit mmau1 =
       new MyMockRegistryArchivalUnit(ListUtil.list(pluginJar));
     assertNull(mgr.getPlugin(pluginKey));
-    mgr.processRegistryAus(ListUtil.list(mmau1));
+    mgr.processRegistryAusSync(ListUtil.list(mmau1));
     Plugin plugin1 = mgr.getPlugin(pluginKey);
     assertNotNull(plugin1);
     assertTrue(mgr.isLoadablePlugin(plugin1));
@@ -1829,7 +1948,7 @@ public class TestPluginManager extends LockssTestCase {
     MyMockRegistryArchivalUnit mmau2 =
       new MyMockRegistryArchivalUnit(ListUtil.list(pluginJar, pluginJarV2));
     assertSame(au1, mgr.getAuFromId(auid));
-    mgr.processRegistryAus(ListUtil.list(mmau2));
+    mgr.processRegistryAusSync(ListUtil.list(mmau2));
 
     // Ensure the new plugin was installed, the AU is now running as part
     // of that plugin, and the AU's definition has changed appropriately
@@ -1863,7 +1982,7 @@ public class TestPluginManager extends LockssTestCase {
     MyMockRegistryArchivalUnit mmau1 =
       new MyMockRegistryArchivalUnit(ListUtil.list(pluginJar));
     assertNull(mgr.getPlugin(pluginKey));
-    mgr.processRegistryAus(ListUtil.list(mmau1));
+    mgr.processRegistryAusSync(ListUtil.list(mmau1));
     Plugin plugin1 = mgr.getPlugin(pluginKey);
     assertNotNull(plugin1);
     assertTrue(mgr.isLoadablePlugin(plugin1));
@@ -1893,7 +2012,7 @@ public class TestPluginManager extends LockssTestCase {
       new MyMockRegistryArchivalUnit(ListUtil.list(pluginJarV3, pluginJarV2),
                                      2);
     assertSame(au1, mgr.getAuFromId(auid));
-    mgr.processRegistryAus(ListUtil.list(mmau2));
+    mgr.processRegistryAusSync(ListUtil.list(mmau2));
 
     // Ensure the new plugin was installed, the AU is now running as part
     // of that plugin, and the AU's definition has changed appropriately
@@ -2045,7 +2164,7 @@ public class TestPluginManager extends LockssTestCase {
     MyMockRegistryArchivalUnit mmau1 =
       new MyMockRegistryArchivalUnit(ListUtil.list(pluginJar));
     assertNull(mgr.getPlugin(pluginKey));
-    mgr.processRegistryAus(ListUtil.list(mmau1), true);
+    mgr.processRegistryAusSync(ListUtil.list(mmau1), true);
     Plugin plugin1 = mgr.getPlugin(pluginKey);
     assertNotNull(plugin1);
     assertTrue(mgr.isLoadablePlugin(plugin1));

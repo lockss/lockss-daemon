@@ -206,6 +206,10 @@ public class FetchTimeExportManager extends BaseLockssDaemonManager implements
     return true;
   }
 
+  boolean isRealMigrationMode() {
+    return getDaemon().getMigrationManager().isRealMigrationMode();
+  }
+
   /**
    * Schedules the recurring task of exporting fetch data.
    */

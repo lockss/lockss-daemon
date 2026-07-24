@@ -300,6 +300,12 @@ public class BaseUrlFetcher implements UrlFetcher {
   }
   
   protected void consume(FetchedUrlData fud) throws IOException {
+    if (crawlFacade != null && crawlFacade.isAborted()) {
+      String msg = "Crawl was aborted; not processing fetched url: " +
+        fud.fetchUrl;
+      log.debug(msg);
+      throw new IOException(msg);
+    }
     getUrlConsumerFactory().createUrlConsumer(crawlFacade, fud).consume();
   }
 

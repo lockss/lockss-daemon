@@ -132,11 +132,17 @@ public class TestDaemonVersion extends LockssTestCase {
     DaemonVersion b = new DaemonVersion("2.3.6");
     DaemonVersion c = new DaemonVersion("2.4.0");
     DaemonVersion e = new DaemonVersion("2.3.5-test"); // should equal a
+    DaemonVersion f = new DaemonVersion("2.0.84-beta1");
+    DaemonVersion g = new DaemonVersion("2.0.90-beta2");
 
     assertTrue(a.compareTo(a) == 0);
     assertTrue(a.compareTo(e) == 0);
     assertTrue(a.compareTo(b) == -1);
     assertTrue(b.compareTo(a) == 1);
+    // The 2.x comparision needed by V2AuMover
+    assertTrue(g.compareTo(f) >= 0);
+    assertTrue(g.compareTo(g) >= 0);
+    assertFalse(f.compareTo(g) >= 0);
   }
 
 }

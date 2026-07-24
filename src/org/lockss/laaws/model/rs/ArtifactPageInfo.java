@@ -61,7 +61,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.io.Serializable;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -81,17 +80,22 @@ import org.lockss.laaws.model.rs.PageInfo;
 @ApiModel(description = "A display page of artifacts")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ArtifactPageInfo implements Serializable {
+
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_ARTIFACTS = "artifacts";
-  @SerializedName(SERIALIZED_NAME_ARTIFACTS) private List<Artifact> artifacts = new ArrayList<>();
+  @SerializedName(SERIALIZED_NAME_ARTIFACTS)
+  @javax.annotation.Nonnull
+  private List<Artifact> artifacts = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PAGE_INFO = "pageInfo";
-  @SerializedName(SERIALIZED_NAME_PAGE_INFO) private PageInfo pageInfo;
+  @SerializedName(SERIALIZED_NAME_PAGE_INFO)
+  @javax.annotation.Nonnull
+  private PageInfo pageInfo;
 
   public ArtifactPageInfo() {}
 
-  public ArtifactPageInfo artifacts(List<Artifact> artifacts) {
+  public ArtifactPageInfo artifacts(@javax.annotation.Nonnull List<Artifact> artifacts) {
     this.artifacts = artifacts;
     return this;
   }
@@ -112,11 +116,11 @@ public class ArtifactPageInfo implements Serializable {
     return artifacts;
   }
 
-  public void setArtifacts(List<Artifact> artifacts) {
+  public void setArtifacts(@javax.annotation.Nonnull List<Artifact> artifacts) {
     this.artifacts = artifacts;
   }
 
-  public ArtifactPageInfo pageInfo(PageInfo pageInfo) {
+  public ArtifactPageInfo pageInfo(@javax.annotation.Nonnull PageInfo pageInfo) {
     this.pageInfo = pageInfo;
     return this;
   }
@@ -132,7 +136,7 @@ public class ArtifactPageInfo implements Serializable {
     return pageInfo;
   }
 
-  public void setPageInfo(PageInfo pageInfo) {
+  public void setPageInfo(@javax.annotation.Nonnull PageInfo pageInfo) {
     this.pageInfo = pageInfo;
   }
 
