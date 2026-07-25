@@ -453,7 +453,7 @@ Args:
   <property name="FastInfoset.jar" value="${lib}/FastInfoset-1.2.9.jar" />
   <property name="jaxb-impl.jar" value="${lib}/jaxb-impl-2.2.5.jar" />
   <property name="jaxb-xjc.jar" value="${lib}/jaxb-xjc-2.2.5.jar" />
-  <property name="mimepull.jar" value="${lib}/mimepull-1.7.jar" />
+  <property name="mimepull.jar" value="${lib}/mimepull-1.9.11.jar" />
   <property name="neethi.jar" value="${lib}/neethi-3.0.2.jar" />
   <property name="spring-aop.jar" value="${lib}/spring-aop-3.0.7.RELEASE.jar" />
   <property name="spring-asm.jar" value="${lib}/spring-asm-3.0.7.RELEASE.jar" />
