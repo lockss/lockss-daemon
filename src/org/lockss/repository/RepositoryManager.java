@@ -134,7 +134,7 @@ public class RepositoryManager
       PREFIX + "deleteAusInterval";
   public static final long DEFAULT_DELETEAUS_INTERVAL = Constants.HOUR;
   static final String PRIORITY_PARAM_DELETEAUS_THREAD = "DeleteAusThread";
-  static final int PRIORITY_DEFAULT_DELETEAUS_THREAD = Thread.NORM_PRIORITY + 1;
+  static final int PRIORITY_DEFAULT_DELETEAUS_THREAD = Thread.NORM_PRIORITY + 2;
 
   static final String WDOG_PARAM_SIZE_CALC = "SizeCalc";
   static final long WDOG_DEFAULT_SIZE_CALC = Constants.DAY;
