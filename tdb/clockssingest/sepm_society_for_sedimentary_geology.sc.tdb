@@ -116,7 +116,7 @@
       au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Sedimentary Research Volume 92 ; 92 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Journal of Sedimentary Research Volume 93 ; 93 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Sedimentary Research Volume 94 ; 94 ; >
-      au < crawling ; exists ; 2025 ; 2025 ; Journal of Sedimentary Research Volume 95 ; 95 ; >
+      au < deepCrawl ; exists ; 2025 ; 2025 ; Journal of Sedimentary Research Volume 95 ; 95 ; >
       au < crawling ; exists ; 2026 ; 2026 ; Journal of Sedimentary Research Volume 96 ; 96 ; >
 
   }
@@ -166,11 +166,11 @@
       au < finished ; finished ; 2018 ; 2018 ; PALAIOS Volume 33 ; 33 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2019 ; 2019 ; PALAIOS Volume 34 ; 34 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; 2020 ; PALAIOS Volume 35 ; 35 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2021 ; 2021 ; PALAIOS Volume 36 ; 36 ; > #400 Bad Request on javascript file
+      au < deepCrawl ; exists ; 2021 ; 2021 ; PALAIOS Volume 36 ; 36 ; > #400 Bad Request on javascript file
       au < deepCrawl ; exists ; 2022 ; 2022 ; PALAIOS Volume 37 ; 37 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; PALAIOS Volume 38 ; 38 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; PALAIOS Volume 39 ; 39 ; >
-      au < crawling ; exists ; 2025 ; 2025 ; PALAIOS Volume 40 ; 40 ; >
+      au < deepCrawl ; exists ; 2025 ; 2025 ; PALAIOS Volume 40 ; 40 ; >
       au < crawling ; exists ; 2026 ; 2026 ; PALAIOS Volume 41 ; 41 ; >
 
   }
