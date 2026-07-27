@@ -904,7 +904,7 @@
       au < deepCrawl ; exists ; 2023 ; 2023 ; Geoscientific Instrumentation, Methods and Data Systems Volume 12 ; 12 ; >
       au < finished ; manifest ; 2024 ; 2024 ; Geoscientific Instrumentation, Methods and Data Systems Volume 13 ; 13 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Geoscientific Instrumentation, Methods and Data Systems Volume 14 ; 14 ; >
-      au < ready ; exists ; 2026 ; 2026 ; Geoscientific Instrumentation, Methods and Data Systems Volume 15 ; 15 ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Geoscientific Instrumentation, Methods and Data Systems Volume 15 ; 15 ; >
 
   }
 
@@ -938,7 +938,7 @@
       au < deepCrawl ; exists ; 2023 ; 2023 ; Geoscientific Model Development Volume 16 ; 16 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Geoscientific Model Development Volume 17 ; 17 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Geoscientific Model Development Volume 18 ; 18 ; >
-      au < ready ; exists ; 2026 ; 2026 ; Geoscientific Model Development Volume 19 ; 19 ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Geoscientific Model Development Volume 19 ; 19 ; >
 
   }
 
@@ -1221,7 +1221,7 @@
       au < deepCrawl ; exists ; 2023 ; 2023 ; Natural Hazards and Earth System Sciences Volume 23 ; 23 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Natural Hazards and Earth System Sciences Volume 24 ; 24 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Natural Hazards and Earth System Sciences Volume 25 ; 25 ; >
-      au < ready ; exists ; 2026 ; 2026 ; Natural Hazards and Earth System Sciences Volume 26 ; 26 ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Natural Hazards and Earth System Sciences Volume 26 ; 26 ; >
 
   }
 
@@ -1269,7 +1269,7 @@
       au < deepCrawl ; exists ; 2023 ; 2023 ; Nonlinear Processes in Geophysics Volume 30 ; 30 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Nonlinear Processes in Geophysics Volume 31 ; 31 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Nonlinear Processes in Geophysics Volume 32 ; 32 ; >
-      au < ready ; exists ; 2026 ; 2026 ; Nonlinear Processes in Geophysics Volume 33 ; 33 ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Nonlinear Processes in Geophysics Volume 33 ; 33 ; >
 
   }
 
@@ -1455,7 +1455,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Scientific Drilling Volume 27 ; 27 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Scientific Drilling Volume 28 ; 28 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Scientific Drilling Volume 29 ; 29 ; >
-      au < ready ; exists ; 2026 ; 2026 ; Scientific Drilling Volume 30 ; 30 ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Scientific Drilling Volume 30 ; 30 ; >
 
   }
 
@@ -1695,7 +1695,7 @@
       param[base_url] = https://eo.copernicus.org/
       param[home_url] = https://www.earth-observation.net/
 
-      au < ready ; exists ; 2026 ; 2026 ; Earth Observation Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Earth Observation Volume 1 ; 1 ; >
 
   }
 
@@ -1729,7 +1729,7 @@
       au < deepCrawl ; exists ; 2023 ; 2023 ; Geochronology: Advances in Gechronological Science Volume 5 ; 5 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Geochronology: Advances in Gechronological Science Volume 6 ; 6 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Geochronology: Advances in Gechronological Science Volume 7 ; 7 ; >
-      au < ready ; exists ; 2026 ; 2026 ; Geochronology: Advances in Gechronological Science Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Geochronology: Advances in Gechronological Science Volume 8 ; 8 ; >
 
   }#title
   
