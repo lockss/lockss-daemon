@@ -183,12 +183,12 @@
       au < crawling ; exists ; 1979 ; Florida Entomologist Volume 63 ; 63 ; 1979 ; >
       au < crawling ; exists ; 1980 ; Florida Entomologist Volume 64 ; 64 ; 1980 ; >
       au < crawling ; exists ; 1981 ; Florida Entomologist Volume 65 ; 65 ; 1981 ; >
-      au < crawling ; exists ; 1982 ; Florida Entomologist Volume 66 ; 66 ; 1982 ; >
-      au < crawling ; exists ; 1983 ; Florida Entomologist Volume 67 ; 67 ; 1983 ; >
+      au < frozen ; exists ; 1982 ; Florida Entomologist Volume 66 ; 66 ; 1982 ; >
+      au < frozen ; exists ; 1983 ; Florida Entomologist Volume 67 ; 67 ; 1983 ; >
       au < frozen ; exists ; 1984 ; Florida Entomologist Volume 68 ; 68 ; 1984 ; >
       au < crawling ; exists ; 1985 ; Florida Entomologist Volume 69 ; 69 ; 1985 ; >
       au < crawling ; exists ; 1986 ; Florida Entomologist Volume 70 ; 70 ; 1986 ; >
-      au < crawling ; exists ; 1987 ; Florida Entomologist Volume 71 ; 71 ; 1987 ; >
+      au < frozen ; exists ; 1987 ; Florida Entomologist Volume 71 ; 71 ; 1987 ; >
       au < crawling ; exists ; 1988 ; Florida Entomologist Volume 72 ; 72 ; 1988 ; >
       au < crawling ; exists ; 1989 ; Florida Entomologist Volume 73 ; 73 ; 1989 ; >
       au < crawling ; exists ; 1990 ; Florida Entomologist Volume 74 ; 74 ; 1990 ; >
@@ -238,7 +238,7 @@
       param[journal_id] = FLAIRS
 
       au < frozen ; exists ; 1988 ; The International FLAIRS Conference Proceedings Volume 1 ; 1 ; 1988 ; >
-      au < crawling ; exists ; 1989 ; The International FLAIRS Conference Proceedings Volume 2 ; 2 ; 1989 ; >
+      au < frozen ; exists ; 1989 ; The International FLAIRS Conference Proceedings Volume 2 ; 2 ; 1989 ; >
       au < frozen ; exists ; 1990 ; The International FLAIRS Conference Proceedings Volume 3 ; 3 ; 1990 ; >
       au < frozen ; exists ; 1991 ; The International FLAIRS Conference Proceedings Volume 4 ; 4 ; 1991 ; >
       au < frozen ; exists ; 1992 ; The International FLAIRS Conference Proceedings Volume 5 ; 5 ; 1992 ; >
@@ -442,7 +442,7 @@
       au < crawling ; exists ; 1974 ; Studies in African Linguistics Volume 5 ; 5 ; 1974 ; >
       au < crawling ; exists ; 1975 ; Studies in African Linguistics Volume 6 ; 6 ; 1975 ; >
       au < frozen ; exists ; 1976 ; Studies in African Linguistics Volume 7 ; 7 ; 1976 ; >
-      au < crawling ; exists ; 1977 ; Studies in African Linguistics Volume 8 ; 8 ; 1977 ; >
+      au < frozen ; exists ; 1977 ; Studies in African Linguistics Volume 8 ; 8 ; 1977 ; >
       au < crawling ; exists ; 1978 ; Studies in African Linguistics Volume 9 ; 9 ; 1978 ; >
       au < crawling ; exists ; 1979 ; Studies in African Linguistics Volume 10 ; 10 ; 1979 ; >
       au < crawling ; exists ; 1980 ; Studies in African Linguistics Volume 11 ; 11 ; 1980 ; >
@@ -562,7 +562,7 @@
       au < doesNotExist ; doesNotExist ; 1893 ; Proceedings of the Florida State Horticultural Society Volume 6 ; 6 ; 1893 ; >
       au < doesNotExist ; doesNotExist ; 1894 ; Proceedings of the Florida State Horticultural Society Volume 7 ; 7 ; 1894 ; >
       au < frozen ; exists ; 1895 ; Proceedings of the Florida State Horticultural Society Volume 8 ; 8 ; 1895 ; >
-      au < crawling ; exists ; 1896 ; Proceedings of the Florida State Horticultural Society Volume 9 ; 9 ; 1896 ; >
+      au < frozen ; exists ; 1896 ; Proceedings of the Florida State Horticultural Society Volume 9 ; 9 ; 1896 ; >
       au < frozen ; exists ; 1897 ; Proceedings of the Florida State Horticultural Society Volume 10 ; 10 ; 1897 ; >
       au < crawling ; exists ; 1898 ; Proceedings of the Florida State Horticultural Society Volume 11 ; 11 ; 1898 ; >
       au < crawling ; exists ; 1899 ; Proceedings of the Florida State Horticultural Society Volume 12 ; 12 ; 1899 ; >

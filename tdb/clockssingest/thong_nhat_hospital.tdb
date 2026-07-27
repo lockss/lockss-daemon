@@ -27,14 +27,14 @@
     {
       param[journal_id] = bvtn/en
 
-      au < crawling ; exists ; 2025 ; Journal of Health and Aging Volume 2025 [English] ; 1 ; 2025 ; >
+      au < frozen ; exists ; 2025 ; Journal of Health and Aging Volume 2025 [English] ; 1 ; 2025 ; >
       au < manifest ; exists ; 2026 ; Journal of Health and Aging Volume 2026 [English] ; 2 ; 2026 ; >
     }
 
     {
       param[journal_id] = bvtn/vi
 
-      au < crawling ; exists ; 2025 ; Journal of Health and Aging Volume 2025 [Vietnamese] ; 1 ; 2025 ; >
+      au < frozen ; exists ; 2025 ; Journal of Health and Aging Volume 2025 [Vietnamese] ; 1 ; 2025 ; >
       au < manifest ; exists ; 2026 ; Journal of Health and Aging Volume 2026 [Vietnamese] ; 2 ; 2026 ; >
     }
   }
