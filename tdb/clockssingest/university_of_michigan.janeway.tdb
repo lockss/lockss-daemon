@@ -70,7 +70,7 @@
       au < finished ; manifest ; 2022 ; 1 ; Circus: Arts, Life and Sciences Volume 2022 ; 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; 2 ; Circus: Arts, Life and Sciences Volume 2023 ; 2023 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 3 ; Circus: Arts, Life and Sciences Volume 2024 ; 2024 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2025 ; 4 ; Circus: Arts, Life and Sciences Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; 4 ; Circus: Arts, Life and Sciences Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 5 ; Circus: Arts, Life and Sciences Volume 2026 ; 2026 ; >
 
   }
@@ -138,7 +138,7 @@
       au < ready ; exists ; 2012 ; 3 ; Deaf Studies Digital Journal Volume 2012 ; 2012 ; >
       au < ready ; exists ; 2014 ; 4 ; Deaf Studies Digital Journal Volume 2014 ; 2014 ; >
       au < doesNotExist ; doesNotExist ; 2020 ; 5 ; Deaf Studies Digital Journal Volume 2020 ; 2020 ; >
-      au < crawling ; exists ; 2025 ; 6 ; Deaf Studies Digital Journal Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; 6 ; Deaf Studies Digital Journal Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 7 ; Deaf Studies Digital Journal Volume 2026 ; 2026 ; >
 
   }
@@ -186,7 +186,7 @@
       au < finished ; manifest ; 2022 ; ; Ergo Volume 2022 ; 2022 ; reingest5.clockss.org:8082 >
       au < manifest ; exists ; 2023 ; ; Ergo Volume 2023 ; 2023 ; >
       au < finished ; manifest ; 2024 ; ; Ergo Volume 2024 ; 2024 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2025 ; ; Ergo Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; ; Ergo Volume 2025 ; 2025 ; >
       au < crawling ; exists ; 2026 ; ; Ergo Volume 2026 ; 2026 ; >
 
   }
@@ -249,7 +249,7 @@
       au < finished ; manifest ; 2022 ; 25 ; Journal of Electronic Publishing Volume 2022 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; 26 ; Journal of Electronic Publishing Volume 2023 ; 2023 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 27 ; Journal of Electronic Publishing Volume 2024 ; 2024 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2025 ; 28 ; Journal of Electronic Publishing Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; 28 ; Journal of Electronic Publishing Volume 2025 ; 2025 ; >
       au < crawling ; exists ; 2026 ; 29 ; Journal of Electronic Publishing Volume 2026 ; 2026 ; >
 
   }
@@ -268,7 +268,7 @@
       au < finished ; manifest ; 2022 ; 9 ; Media Industries Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 10 ; Media Industries Volume 2023 ; 2023 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 11 ; Media Industries Volume 2024 ; 2024 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2025 ; 12 ; Media Industries Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; 12 ; Media Industries Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 13 ; Media Industries Volume 2026 ; 2026 ; >
 
   }
@@ -314,7 +314,7 @@
       au < finished ; manifest ; 2022 ; 28 ; Michigan Journal of Community Service Learning Volume 2022 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; 29 ; Michigan Journal of Community Service Learning Volume 2023 ; 2023 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2024 ; 30 ; Michigan Journal of Community Service Learning Volume 2024 ; 2024 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2025 ; 31 ; Michigan Journal of Community Service Learning Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; 31 ; Michigan Journal of Community Service Learning Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 32 ; Michigan Journal of Community Service Learning Volume 2026 ; 2026 ; >
 
   }
@@ -333,7 +333,7 @@
       au < doesNotExist ; doesNotExist ; 2022 ; ; Michigan Journal of Medicine Volume 2022 ; 2022 ; > #2022 content is dated 2023
       au < finished ; manifest ; 2023 ; ; Michigan Journal of Medicine Volume 2023 ; 2023 ; reingest1.clockss.org:8082 > #2023 content is dated 2024
       au < finished ; manifest ; 2024 ; ; Michigan Journal of Medicine Volume 2024 ; 2024 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2025 ; ; Michigan Journal of Medicine Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; ; Michigan Journal of Medicine Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; ; Michigan Journal of Medicine Volume 2026 ; 2026 ; >
 
   }
@@ -366,7 +366,7 @@
       au < finished ; manifest ; 2022 ; 16 ; Music & Politics Volume 2022 ; 2022 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 17 ; Music & Politics Volume 2023 ; 2023 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 18 ; Music & Politics Volume 2024 ; 2024 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2025 ; 19 ; Music & Politics Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; 19 ; Music & Politics Volume 2025 ; 2025 ; >
       au < crawling ; exists ; 2026 ; 20 ; Music & Politics Volume 2026 ; 2026 ; >
 
   }
@@ -420,7 +420,7 @@
       au < doesNotExist ; doesNotExist ; 2022 ; 37 ; NASIG Proceedings Volume 2022 ; 2022 ; > #2022 content dated 2023
       au < finished ; manifest ; 2023 ; ; NASIG Proceedings Volume 2023 ; 2023 ; reingest3.clockss.org:8083 > #2023 content dated 2024
       au < finished ; manifest ; 2024 ; ; NASIG Proceedings Volume 2024 ; 2024 ; reingest1.clockss.org:8082 > #2024 content dated 2025
-      au < crawling ; exists ; 2025 ; ; NASIG Proceedings Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; ; NASIG Proceedings Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; ; NASIG Proceedings Volume 2026 ; 2026 ; >
 
   }
@@ -436,7 +436,7 @@
       param[journal_id] = par
 
       au < finished ; manifest ; 2024 ; 36 ; Performing Arts Resources Volume 2024 ; 2024 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2025 ; 37 ; Performing Arts Resources Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; 37 ; Performing Arts Resources Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 38 ; Performing Arts Resources Volume 2026 ; 2026 ; >
 
   }
@@ -475,7 +475,7 @@
       au < finished ; manifest ; 2022 ; 22 ; Philosophers' Imprint Volume 2022 ; 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; 23 ; Philosophers' Imprint Volume 2023 ; 2023 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2024 ; 24 ; Philosophers' Imprint Volume 2024 ; 2024 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2025 ; 25 ; Philosophers' Imprint Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; 25 ; Philosophers' Imprint Volume 2025 ; 2025 ; >
       au < crawling ; exists ; 2026 ; 26 ; Philosophers' Imprint Volume 2026 ; 2026 ; >
 
   }
@@ -507,7 +507,7 @@
       au < finished ; manifest ; 2022 ; 14 ; Philosophy, Theory, and Practice in Biology Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 15 ; Philosophy, Theory, and Practice in Biology Volume 2023 ; 2023 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 16 ; Philosophy, Theory, and Practice in Biology Volume 2024 ; 2024 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2025 ; 17 ; Philosophy, Theory, and Practice in Biology Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; 17 ; Philosophy, Theory, and Practice in Biology Volume 2025 ; 2025 ; >
       au < ready ; exists ; 2026 ; 18 ; Philosophy, Theory, and Practice in Biology Volume 2026 ; 2026 ; >
 
   }
@@ -552,7 +552,7 @@
       au < doesNotExist ; doesNotExist ; 2022 ; 27 ; Saksaha: A Journal of Manchu Studies Volume 2022 ; 2022 ; >
       au < finished ; manifest ; 2023 ; 28 ; Saksaha: A Journal of Manchu Studies Volume 2023 ; 2023 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 29 ; Saksaha: A Journal of Manchu Studies Volume 2024 ; 2024 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2025 ; 30 ; Saksaha: A Journal of Manchu Studies Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; 30 ; Saksaha: A Journal of Manchu Studies Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 31 ; Saksaha: A Journal of Manchu Studies Volume 2026 ; 2026 ; >
 
   }
@@ -630,7 +630,7 @@
       au < finished ; manifest ; 2022 ; 41 ; To Improve the Academy: A Journal of Educational Development Volume 2022 ; 2022 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 42 ; To Improve the Academy: A Journal of Educational Development Volume 2023 ; 2023 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 43 ; To Improve the Academy: A Journal of Educational Development Volume 2024 ; 2024 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2025 ; 44 ; To Improve the Academy: A Journal of Educational Development Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; 44 ; To Improve the Academy: A Journal of Educational Development Volume 2025 ; 2025 ; >
       au < crawling ; exists ; 2026 ; 45 ; To Improve the Academy: A Journal of Educational Development Volume 2026 ; 2026 ; >
 
   }
@@ -657,7 +657,7 @@
       au < doesNotExist ; doesNotExist ; 2022 ; 10 ; Translating the Americas Volume 2022 ; 2022 ; >
       au < doesNotExist ; doesNotExist ; 2023 ; 11 ; Translating the Americas Volume 2023 ; 2023 ; >
       au < doesNotExist ; doesNotExist ; 2024 ; 12 ; Translating the Americas Volume 2024 ; 2024 ; >
-      au < crawling ; exists ; 2025 ; 13 ; Translating the Americas Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; 13 ; Translating the Americas Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 14 ; Translating the Americas Volume 2026 ; 2026 ; >
 
   }
@@ -675,7 +675,7 @@
       au < finished ; manifest ; 2022 ; 6 ; Undergraduate Journal of Public Health Volume 2022 ; 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; 7 ; Undergraduate Journal of Public Health Volume 2023 ; 2023 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2024 ; 8 ; Undergraduate Journal of Public Health Volume 2024 ; 2024 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2025 ; 9 ; Undergraduate Journal of Public Health Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; 9 ; Undergraduate Journal of Public Health Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 10 ; Undergraduate Journal of Public Health Volume 2026 ; 2026 ; >
 
   }
@@ -828,7 +828,7 @@
       au < finished ; manifest ; 2022 ; 61 ; The Great Lakes Botanist Volume 2022 ; 2022 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 62 ; The Great Lakes Botanist Volume 2023 ; 2023 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2024 ; 63 ; The Great Lakes Botanist Volume 2024 ; 2024 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2025 ; 64 ; The Great Lakes Botanist Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; 64 ; The Great Lakes Botanist Volume 2025 ; 2025 ; >
       au < crawling ; exists ; 2026 ; 65 ; The Great Lakes Botanist Volume 2026 ; 2026 ; >
 
   }
@@ -845,7 +845,7 @@
       param[journal_id] = jgs
 
       au < doesNotExist ; doesNotExist ; 2024 ; 66 ; Journal of Glass Studies Volume 2024 ; 2024 ; > #2024 content dated 2025
-      au < crawling ; exists ; 2025 ; 66 ; Journal of Glass Studies Volume 2025 ; 2025 ; > #2024 content dated 2025
+      au < deepCrawl ; exists ; 2025 ; 66 ; Journal of Glass Studies Volume 2025 ; 2025 ; > #2024 content dated 2025
       au < expected ; exists ; 2026 ; 67 ; Journal of Glass Studies Volume 2026 ; 2026 ; > #2024 content dated 2026
 
   }
@@ -865,7 +865,7 @@
       au < finished ; manifest ; 2022 ; 16 ; Journal of Muslim Mental Health Volume 2022 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; 17 ; Journal of Muslim Mental Health Volume 2023 ; 2023 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2024 ; 18 ; Journal of Muslim Mental Health Volume 2024 ; 2024 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2025 ; 19 ; Journal of Muslim Mental Health Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; 19 ; Journal of Muslim Mental Health Volume 2025 ; 2025 ; >
       au < crawling ; exists ; 2026 ; 20 ; Journal of Muslim Mental Health Volume 2026 ; 2026 ; >
 
   }
@@ -885,7 +885,7 @@
       au < finished ; manifest ; 2022 ; 10 ; Journal of Practical Ethics Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 11 ; Journal of Practical Ethics Volume 2023 ; 2023 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 12 ; Journal of Practical Ethics Volume 2024 ; 2024 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2025 ; 13 ; Journal of Practical Ethics Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; 13 ; Journal of Practical Ethics Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 14 ; Journal of Practical Ethics Volume 2026 ; 2026 ; >
 
   }
