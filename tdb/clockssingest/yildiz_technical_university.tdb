@@ -21,16 +21,16 @@
       param[base_url] = https://commons.yildiz.edu.tr/
       param[journal_abbr] = jscmt
 
-      au < crawling ; exists ; 2016 ; Journal of Sustainable Construction Materials and Technologies Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2016 ; Journal of Sustainable Construction Materials and Technologies Volume 1 ; 1 ; >
       au < frozen ; exists ; 2017 ; Journal of Sustainable Construction Materials and Technologies Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2018 ; Journal of Sustainable Construction Materials and Technologies Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2019 ; Journal of Sustainable Construction Materials and Technologies Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2020 ; Journal of Sustainable Construction Materials and Technologies Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2021 ; Journal of Sustainable Construction Materials and Technologies Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2022 ; Journal of Sustainable Construction Materials and Technologies Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2018 ; Journal of Sustainable Construction Materials and Technologies Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2019 ; Journal of Sustainable Construction Materials and Technologies Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2020 ; Journal of Sustainable Construction Materials and Technologies Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2021 ; Journal of Sustainable Construction Materials and Technologies Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2022 ; Journal of Sustainable Construction Materials and Technologies Volume 7 ; 7 ; >
       au < frozen ; exists ; 2023 ; Journal of Sustainable Construction Materials and Technologies Volume 8 ; 8 ; >
-      au < crawling ; exists ; 2024 ; Journal of Sustainable Construction Materials and Technologies Volume 9 ; 9 ; >
-      au < crawling ; exists ; 2025 ; Journal of Sustainable Construction Materials and Technologies Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2024 ; Journal of Sustainable Construction Materials and Technologies Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2025 ; Journal of Sustainable Construction Materials and Technologies Volume 10 ; 10 ; >
       au < crawling ; exists ; 2026 ; Journal of Sustainable Construction Materials and Technologies Volume 11 ; 11 ; >
 
   }
@@ -46,9 +46,9 @@
       param[journal_abbr] = seatific
 
       au < frozen ; exists ; 2021 ; Seatific Journal Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2022 ; Seatific Journal Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2022 ; Seatific Journal Volume 2 ; 2 ; >
       au < frozen ; exists ; 2023 ; Seatific Journal Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2024 ; Seatific Journal Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2024 ; Seatific Journal Volume 4 ; 4 ; >
       au < crawling ; exists ; 2025 ; Seatific Journal Volume 5 ; 5 ; >
       au < crawling ; exists ; 2026 ; Seatific Journal Volume 6 ; 6 ; >
 

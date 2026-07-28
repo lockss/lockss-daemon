@@ -569,12 +569,12 @@
       au < crawling ; exists ; 1900 ; Proceedings of the Florida State Horticultural Society Volume 13 ; 13 ; 1900 ; >
       au < crawling ; exists ; 1901 ; Proceedings of the Florida State Horticultural Society Volume 14 ; 14 ; 1901 ; >
       au < crawling ; exists ; 1902 ; Proceedings of the Florida State Horticultural Society Volume 15 ; 15 ; 1902 ; >
-      au < crawling ; exists ; 1903 ; Proceedings of the Florida State Horticultural Society Volume 16 ; 16 ; 1903 ; >
+      au < frozen ; exists ; 1903 ; Proceedings of the Florida State Horticultural Society Volume 16 ; 16 ; 1903 ; >
       au < crawling ; exists ; 1904 ; Proceedings of the Florida State Horticultural Society Volume 17 ; 17 ; 1904 ; >
       au < crawling ; exists ; 1905 ; Proceedings of the Florida State Horticultural Society Volume 18 ; 18 ; 1905 ; >
       au < crawling ; exists ; 1906 ; Proceedings of the Florida State Horticultural Society Volume 19 ; 19 ; 1906 ; >
       au < crawling ; exists ; 1907 ; Proceedings of the Florida State Horticultural Society Volume 20 ; 20 ; 1907 ; >
-      au < crawling ; exists ; 1908 ; Proceedings of the Florida State Horticultural Society Volume 21 ; 21 ; 1908 ; >
+      au < frozen ; exists ; 1908 ; Proceedings of the Florida State Horticultural Society Volume 21 ; 21 ; 1908 ; >
       au < crawling ; exists ; 1909 ; Proceedings of the Florida State Horticultural Society Volume 22 ; 22 ; 1909 ; >
       au < crawling ; exists ; 1910 ; Proceedings of the Florida State Horticultural Society Volume 23 ; 23 ; 1910 ; >
       au < crawling ; exists ; 1911 ; Proceedings of the Florida State Horticultural Society Volume 24 ; 24 ; 1911 ; >
@@ -585,7 +585,7 @@
       au < doesNotExist ; doesNotExist ; 1916 ; Proceedings of the Florida State Horticultural Society Volume 29 ; 29 ; 1916 ; >
       au < crawling ; exists ; 1917 ; Proceedings of the Florida State Horticultural Society Volume 30 ; 30 ; 1917 ; >
       au < crawling ; exists ; 1918 ; Proceedings of the Florida State Horticultural Society Volume 31 ; 31 ; 1918 ; >
-      au < crawling ; exists ; 1919 ; Proceedings of the Florida State Horticultural Society Volume 32 ; 32 ; 1919 ; >
+      au < frozen ; exists ; 1919 ; Proceedings of the Florida State Horticultural Society Volume 32 ; 32 ; 1919 ; >
       au < crawling ; exists ; 1920 ; Proceedings of the Florida State Horticultural Society Volume 33 ; 33 ; 1920 ; >
       au < crawling ; exists ; 1921 ; Proceedings of the Florida State Horticultural Society Volume 34 ; 34 ; 1921 ; >
       au < crawling ; exists ; 1922 ; Proceedings of the Florida State Horticultural Society Volume 35 ; 35 ; 1922 ; >
@@ -595,7 +595,7 @@
       au < crawling ; exists ; 1926 ; Proceedings of the Florida State Horticultural Society Volume 39 ; 39 ; 1926 ; >
       au < crawling ; exists ; 1927 ; Proceedings of the Florida State Horticultural Society Volume 40 ; 40 ; 1927 ; >
       au < crawling ; exists ; 1928 ; Proceedings of the Florida State Horticultural Society Volume 41 ; 41 ; 1928 ; >
-      au < crawling ; exists ; 1929 ; Proceedings of the Florida State Horticultural Society Volume 42 ; 42 ; 1929 ; >
+      au < frozen ; exists ; 1929 ; Proceedings of the Florida State Horticultural Society Volume 42 ; 42 ; 1929 ; >
       au < crawling ; exists ; 1930 ; Proceedings of the Florida State Horticultural Society Volume 43 ; 43 ; 1930 ; >
       au < crawling ; exists ; 1931 ; Proceedings of the Florida State Horticultural Society Volume 44 ; 44 ; 1931 ; >
       au < crawling ; exists ; 1932 ; Proceedings of the Florida State Horticultural Society Volume 45 ; 45 ; 1932 ; >
@@ -614,7 +614,7 @@
       au < crawling ; exists ; 1945 ; Proceedings of the Florida State Horticultural Society Volume 58 ; 58 ; 1945 ; >
       au < crawling ; exists ; 1946 ; Proceedings of the Florida State Horticultural Society Volume 59 ; 59 ; 1946 ; >
       au < crawling ; exists ; 1947 ; Proceedings of the Florida State Horticultural Society Volume 60 ; 60 ; 1947 ; >
-      au < crawling ; exists ; 1948 ; Proceedings of the Florida State Horticultural Society Volume 61 ; 61 ; 1948 ; >
+      au < frozen ; exists ; 1948 ; Proceedings of the Florida State Horticultural Society Volume 61 ; 61 ; 1948 ; >
       au < frozen ; exists ; 1949 ; Proceedings of the Florida State Horticultural Society Volume 62 ; 62 ; 1949 ; >
       au < crawling ; exists ; 1950 ; Proceedings of the Florida State Horticultural Society Volume 63 ; 63 ; 1950 ; >
       au < crawling ; exists ; 1951 ; Proceedings of the Florida State Horticultural Society Volume 64 ; 64 ; 1951 ; >
@@ -711,7 +711,7 @@
       au < finished ; manifest ; 2022 ; Yorùbá Studies Review Volume 6 ; 6 ; 2022 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Yorùbá Studies Review Volume 7 ; 7 ; 2023 ; >
       au < finished ; manifest ; 2024 ; Yorùbá Studies Review Volume 8 ; 8 ; 2024 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2025 ; Yorùbá Studies Review Volume 9 ; 9 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; Yorùbá Studies Review Volume 9 ; 9 ; 2025 ; >
       au < testing ; exists ; 2026 ; Yorùbá Studies Review Volume 10 ; 10 ; 2026 ; >
 
   }
@@ -746,7 +746,7 @@
       au < crawling ; exists ; 1994 ; Holarctic Lepidoptera Volume 1 ; 1 ; 1994 ; >
       au < frozen ; exists ; 1995 ; Holarctic Lepidoptera Volume 2 ; 2 ; 1995 ; >
       au < frozen ; exists ; 1996 ; Holarctic Lepidoptera Volume 3 ; 3 ; 1996 ; >
-      au < crawling ; exists ; 1997 ; Holarctic Lepidoptera Volume 4 ; 4 ; 1997 ; >
+      au < frozen ; exists ; 1997 ; Holarctic Lepidoptera Volume 4 ; 4 ; 1997 ; >
       au < frozen ; exists ; 1998 ; Holarctic Lepidoptera Volume 5 ; 5 ; 1998 ; >
       au < frozen ; exists ; 1999 ; Holarctic Lepidoptera Volume 6 ; 6 ; 1999 ; >
       au < frozen ; exists ; 2000 ; Holarctic Lepidoptera Volume 7 ; 7 ; 2000 ; >
@@ -800,7 +800,7 @@
       au < frozen ; exists ; 2002 ; EDIS Volume 2002 ; 2002 ; 2002 ; >
       au < frozen ; exists ; 2003 ; EDIS Volume 2003 ; 2003 ; 2003 ; >
       au < crawling ; exists ; 2004 ; EDIS Volume 2004 ; 2004 ; 2004 ; >
-      au < crawling ; exists ; 2005 ; EDIS Volume 2005 ; 2005 ; 2005 ; >
+      au < frozen ; exists ; 2005 ; EDIS Volume 2005 ; 2005 ; 2005 ; >
       au < crawling ; exists ; 2006 ; EDIS Volume 2006 ; 2006 ; 2006 ; >
       au < frozen ; exists ; 2007 ; EDIS Volume 2007 ; 2007 ; 2007 ; >
       au < crawling ; exists ; 2008 ; EDIS Volume 2008 ; 2008 ; 2008 ; >
@@ -820,7 +820,7 @@
       au < finished ; manifest ; 2022 ; EDIS Volume 2022 ; 2022 ; 2022 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; EDIS Volume 2023 ; 2023 ; 2023 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; EDIS Volume 2024 ; 2024 ; 2024 ; >
-      au < crawling ; exists ; 2025 ; EDIS Volume 2025 ; 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; EDIS Volume 2025 ; 2025 ; 2025 ; >
       au < testing ; exists ; 2026 ; EDIS Volume 2026 ; 2026 ; 2026 ; >
 
   }
