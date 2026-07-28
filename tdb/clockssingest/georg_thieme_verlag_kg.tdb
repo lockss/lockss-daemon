@@ -27,7 +27,9 @@
     param[journal_id] = 10.1055/s-00000001
     comment[years] = 1991-current
     #continues = 0174-1837
+    #Volumes confirmed
 
+    #1980-1990 included below
     au < finished ; finished ; 1991 ; 1991 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 26 ; 26 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1992 ; 1992 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 27 ; 27 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 1993 ; 1993 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 28 ; 28 ; reingest4.clockss.org:8082 >
@@ -78,6 +80,7 @@
     comment[years] = 1980-1990
     comment[eissn] = no eissn 1980-1990
     #continued_by = 0939-2661
+    #Volumes confirmed
 
     au < finished ; finished ; 1980 ; 1980 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 1981 ; 1981 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 16 ; 16 ; reingest5.clockss.org:8082 >
@@ -1286,23 +1289,24 @@
     >
     param[journal_id] = 10.1055/s-00000145
     comment[years] = 2007-2022
+    #Volumes confirmed
 
-   au < finished ; frozen ; 2007 ; 2007 ; Dialyse aktuell Volume 2 ; 2 ; reingest4.clockss.org:8082 >
-   au < finished ; finished ; 2008 ; 2008 ; Dialyse aktuell Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2009 ; 2009 ; Dialyse aktuell Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 2010 ; 2010 ; Dialyse aktuell Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-   au < finished ; finished ; 2011 ; 2011 ; Dialyse aktuell Volume 6 ; 6 ; >
-   au < finished ; finished ; 2012 ; 2012 ; Dialyse aktuell Volume 7 ; 7 ; >
-   au < finished ; finished ; 2013 ; 2013 ; Dialyse aktuell Volume 8 ; 8 ; >
-   au < finished ; finished ; 2014 ; 2014 ; Dialyse aktuell Volume 9 ; 9 ; >
-   au < finished ; finished ; 2015 ; 2015 ; Dialyse aktuell Volume 10 ; 10 ; reingest5.clockss.org:8082 >
-   au < finished ; manifest ; 2016 ; 2016 ; Dialyse aktuell Volume 11 ; 11 ; reingest3.clockss.org:8083 >
-   au < finished ; frozen ; 2017 ; 2017 ; Dialyse aktuell Volume 12 ; 12 ; reingest4.clockss.org:8082 >
-   au < finished ; crawling ; 2018 ; 2018 ; Dialyse aktuell Volume 13 ; 13 ; reingest2.clockss.org:8085 >
-   au < finished ; finished ; 2019 ; 2019 ; Dialyse aktuell Volume 14 ; 14 ; reingest2.clockss.org:8085 >
-   au < finished ; manifest ; 2020 ; 2020 ; Dialyse aktuell Volume 15 ; 15 ; reingest2.clockss.org:8085 >
-   au < finished ; manifest ; 2021 ; 2021 ; Dialyse aktuell Volume 16 ; 16 ; reingest5.clockss.org:8082 >
-   au < deepCrawl ; exists ; 2022 ; 2022 ; Dialyse aktuell Volume 17 ; 17 ; >
+   au < finished ; frozen ; 2007 ; 2007 ; Dialyse aktuell Volume 11 ; 11 ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 2008 ; 2008 ; Dialyse aktuell Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2009 ; 2009 ; Dialyse aktuell Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2010 ; 2010 ; Dialyse aktuell Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2011 ; 2011 ; Dialyse aktuell Volume 15 ; 15 ; >
+   au < finished ; finished ; 2012 ; 2012 ; Dialyse aktuell Volume 16 ; 16 ; >
+   au < finished ; finished ; 2013 ; 2013 ; Dialyse aktuell Volume 17 ; 17 ; >
+   au < finished ; finished ; 2014 ; 2014 ; Dialyse aktuell Volume 18 ; 18 ; >
+   au < finished ; finished ; 2015 ; 2015 ; Dialyse aktuell Volume 19 ; 19 ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 2016 ; 2016 ; Dialyse aktuell Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+   au < finished ; frozen ; 2017 ; 2017 ; Dialyse aktuell Volume 21 ; 21 ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2018 ; 2018 ; Dialyse aktuell Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2019 ; 2019 ; Dialyse aktuell Volume 23 ; 23 ; reingest2.clockss.org:8085 >
+   au < finished ; manifest ; 2020 ; 2020 ; Dialyse aktuell Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+   au < finished ; manifest ; 2021 ; 2021 ; Dialyse aktuell Volume 25 ; 25 ; reingest5.clockss.org:8082 >
+   au < deepCrawl ; exists ; 2022 ; 2022 ; Dialyse aktuell Volume 26 ; 26 ; >
 
   }
 
