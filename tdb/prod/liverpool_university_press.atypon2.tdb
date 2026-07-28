@@ -556,6 +556,21 @@
   {
 
     title <
+      name = Essays in Long Late Antiquity ;
+      eissn = 3049-5199 ;
+      issnl = 3049-5199
+    >
+
+    param[journal_id] = ella
+    #Published 2026-present
+
+    au < exists ; 2026 ; Essays in Long Late Antiquity Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
       name = Essays in Romanticism ;
       issn = 2049-6699 ;
       eissn = 2049-6702 ;
