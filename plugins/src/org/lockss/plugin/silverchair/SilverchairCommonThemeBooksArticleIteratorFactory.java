@@ -42,24 +42,14 @@ public class SilverchairCommonThemeBooksArticleIteratorFactory implements Articl
     https://pubs.geoscienceworld.org/books/monograph/chapter-pdf/5431935/csp-14-1.pdf
     https://pubs.geoscienceworld.org/sepm/books/monograph/2330/Coccolithophores-Cenozoic-Discoasterales-Biology
     https://iwaponline.com/ebooks/book/769/Microplastics-in-Water-and-Wastewater
-
-
-    For Emerald books, resource_id is different, it is using doi
      */
     private static String ROOT_TEMPLATE = "\"%s\", base_url";
-    private static String PATTERN_TEMPLATE = "\"%s%s\", base_url, resource_id";
+    private static String PATTERN_TEMPLATE =  "\"%s%s\", base_url, resource_id";
 
-    private static Pattern PDF_LANDING_PAGE_PATTERN = Pattern.compile(
-            "/(?:[^/]+/)?(books|ebooks)/(book|edited-volume|monograph)/([^/]+)/([^/]+)(?:/chapter(?:-pdf)?/([^/]+)/([^/?]+))?$",
-            Pattern.CASE_INSENSITIVE);
+
+    private static Pattern PDF_LANDING_PAGE_PATTERN = Pattern.compile("/([^/]+)/(books|ebooks)/(book|edited-volume|monograph)/([^\\.]+)$", Pattern.CASE_INSENSITIVE);
 
     private static String PDF_LANDING_PAGE_REPLACEMENT = "/$1/$2/$3/$4";
-
-    private static Pattern BOOK_PDF_PATTERN = Pattern.compile(
-            "/(?:[^/]+/)?books/monograph-pdf/([^/]+)/([^/?]+\\.pdf)$",
-            Pattern.CASE_INSENSITIVE);
-    private static String BOOK_PDF_REPLACEMENT = "/books/monograph-pdf/$1/$2";
-
 
     protected static Logger getLog() {
         return Logger.getLogger(SilverchairCommonThemeBooksArticleIteratorFactory.class);
@@ -80,10 +70,6 @@ public class SilverchairCommonThemeBooksArticleIteratorFactory implements Articl
                             PDF_LANDING_PAGE_REPLACEMENT,
                             ArticleFiles.ROLE_FULL_TEXT_HTML,
                             ArticleFiles.ROLE_ARTICLE_METADATA);
-
-        builder.addAspect(  BOOK_PDF_PATTERN,
-                BOOK_PDF_REPLACEMENT,
-                ArticleFiles.ROLE_FULL_TEXT_PDF);
 
         return builder.getSubTreeArticleIterator();
     }
