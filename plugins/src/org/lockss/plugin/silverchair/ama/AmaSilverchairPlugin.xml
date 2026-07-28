@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>28</string>
+    <string>29</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -185,6 +185,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
       <!--  Not collecting audio/video/interactive content
       <string>1,"^%slearning/(audio|video)-player/[^./]+$", base_url</string> -->
+      <string>1, "^%sjournals/%s/articlepdf/\d+/[^/]+\.pdf$", base_url, journal_id</string>
     </list>
   </entry>
   <entry>
@@ -229,10 +230,14 @@ POSSIBILITY OF SUCH DAMAGE.
     <!--
        https://jamanetwork.com/ama/content_public/journal/cardiology/938625/jamacardiology_rubin_2020_oi_200065_1610043959.42043.pdf
        https://cdn.jamanetwork.com/ama/content_public/journal/cardiology/938625/hoi200065supp1_prod_1610043959.42043.pdf?Expires=2147483647&Signature=um5ghwH1p8UUQYXxyUXF4~y2~69kKe4Qt5urkA0e5jtdnhufvHP0MZ66PAFwjuVGqoHIEumKzAkv3-m2PZl5N04LhPZgwYZslOMgC13vKxmM-0v-aJCRpxuofZFfg8hufMXezOYMONq~qh1zKqrO6OrY8h6hllseh6B9uuWKq6u28yenrNAtsQcgY1aD1G7XTkg1fPwkjHJhlof2NA9q-FMW0m8bTGCeXdxOCPqmJqVbao4ir4zDzqQhB7f2Nc5-HnM8yJLrzF3-vPffoEtDFSy0xlcAwdHzIFiKuN-U2aF9st7El3SlKzE50tXjQzx~Q67q3qkT6MxvEzchU0oJ7A__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
+       http://jamanetwork.com/journals/jamasurgery/articlepdf/1358220/sps120006_72_75.pdf - collected on July 22, 2026
+       http://jamanetwork.com/journals/jamasurgery/articlepdf/1379762/soa120053_118_126.pdf - collected on July 22, 2026
+       The none PDF pattern was added long time ago, maybe for historical reason
     -->
     <list>
       <string>"^%sjournals/%s/fullarticle/\d+$", base_url, journal_id</string>
       <string>"^%sjournals/%s/data/journals/[^/]+/[^.]+\.pdf$", base_url, journal_id</string>
+      <string>"^https?://%s/journals/%s/articlepdf/\d+/[^/]+\.pdf$", url_host(base_url), journal_id</string>
     </list>
   </entry>
   <entry>
