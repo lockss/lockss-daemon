@@ -4,7 +4,7 @@
     name = Incorporated Trustees of Pan Atlantic University Foundation ;
     info[contract] = 2026 ;
     info[back] = 2024 ;
-    info[tester] = 5 ;
+    info[tester] = X ;
     info[platform] = Open Journal Systems 3.5.0.3
   >
 
@@ -21,9 +21,9 @@
       param[base_url] = https://journal.pau.edu.ng/
       param[journal_id] = jcm
 
-      au < manifest ; exists ; 2024 ; Journal of Creative Media Volume 1 ; 1 ; 2024 ; >
-      au < manifest ; exists ; 2025 ; Journal of Creative Media Volume 2 ; 2 ; 2025 ; >
-      au < manifest ; exists ; 2026 ; Journal of Creative Media Volume 3 ; 3 ; 2026 ; >
+      au < testing ; exists ; 2024 ; Journal of Creative Media Volume 1 ; 1 ; 2024 ; >
+      au < testing ; exists ; 2025 ; Journal of Creative Media Volume 2 ; 2 ; 2025 ; >
+      au < testing ; exists ; 2026 ; Journal of Creative Media Volume 3 ; 3 ; 2026 ; >
   }
 
 }
