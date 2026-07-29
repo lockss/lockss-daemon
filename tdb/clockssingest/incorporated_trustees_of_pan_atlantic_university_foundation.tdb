@@ -1,0 +1,29 @@
+{
+
+  publisher <
+    name = Incorporated Trustees of Pan Atlantic University Foundation ;
+    info[contract] = 2026 ;
+    info[back] = 2024 ;
+    info[tester] = 5 ;
+    info[platform] = Open Journal Systems 3.5.0.3
+  >
+
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+
+  {
+  
+    title < 
+      name = Journal of Creative Media ;
+      eissn = 1596-0269 
+    >
+      param[base_url] = https://journal.pau.edu.ng/
+      param[journal_id] = jcm
+
+      au < exists ; exists ; 2024 ; Journal of Creative Media Volume 1 ; 1 ; 2024 ; >
+      au < exists ; exists ; 2025 ; Journal of Creative Media Volume 2 ; 2 ; 2025 ; >
+      au < exists ; exists ; 2026 ; Journal of Creative Media Volume 3 ; 3 ; 2026 ; >
+  }
+
+}
