@@ -625,7 +625,7 @@
       au < finished ; manifest ; 2023 ; Mediterranean Studies Volume 31 ; 31 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Mediterranean Studies Volume 32 ; 32 ; 2024 ; >
       au < deepCrawl ; exists ; 2025 ; Mediterranean Studies Volume 33 ; 33 ; 2025 ; >
-      au < ready ; exists ; 2026 ; Mediterranean Studies Volume 34 ; 34 ; 2026 ; >
+      au < crawling ; exists ; 2026 ; Mediterranean Studies Volume 34 ; 34 ; 2026 ; >
 
   }
 
@@ -894,7 +894,7 @@
       au < finished ; manifest ; 2023 ; Studies in American Jewish Literature Volume 42 ; 42 ; 2023 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Studies in American Jewish Literature Volume 43 ; 43 ; 2024 ; >
       au < deepCrawl ; exists ; 2025 ; Studies in American Jewish Literature Volume 44 ; 44 ; 2025 ; >
-      au < ready ; exists ; 2026 ; Studies in American Jewish Literature Volume 45 ; 45 ; 2026 ; >
+      au < crawling ; exists ; 2026 ; Studies in American Jewish Literature Volume 45 ; 45 ; 2026 ; >
 
   }
 
@@ -953,7 +953,7 @@
       au < finished ; manifest ; 2023 ; Utopian Studies Volume 34 ; 34 ; 2023 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Utopian Studies Volume 35 ; 35 ; 2024 ; >
       au < notReady ; exists ; 2025 ; Utopian Studies Volume 36 ; 36 ; 2025 ; > #400 bad request, https://scholarlypublishingcollective.org/psup/utopian-studies/article/36/1/60/401355/https/:www.youtube.com/watch?v=t4DT3tQqgRM
-      au < ready ; exists ; 2026 ; Utopian Studies Volume 37 ; 37 ; 2026 ; > #400 bad request, https://scholarlypublishingcollective.org/psup/utopian-studies/article/37/1/60/401355/https/:www.youtube.com/watch?v=t4DT3tQqgRM
+      au < crawling ; exists ; 2026 ; Utopian Studies Volume 37 ; 37 ; 2026 ; > #400 bad request, https://scholarlypublishingcollective.org/psup/utopian-studies/article/37/1/60/401355/https/:www.youtube.com/watch?v=t4DT3tQqgRM
 
   }
 
@@ -1711,7 +1711,7 @@
       au < finished ; manifest ; 2023 ; Studies in American Humor Volume 9 ; 9 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Studies in American Humor Volume 10 ; 10 ; 2024 ; >
       au < deepCrawl ; exists ; 2025 ; Studies in American Humor Volume 11 ; 11 ; 2025 ; >
-      au < ready ; exists ; 2026 ; Studies in American Humor Volume 12 ; 12 ; 2026 ; >
+      au < crawling ; exists ; 2026 ; Studies in American Humor Volume 12 ; 12 ; 2026 ; >
 
   }
 
@@ -2056,7 +2056,7 @@
       au < finished ; manifest ; 2023 ; Journal of African Development Volume 24 ; 24 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Journal of African Development Volume 25 ; 25 ; 2024 ; >
       au < deepCrawl ; exists ; 2025 ; Journal of African Development Volume 26 ; 26 ; 2025 ; >
-      au < ready ; exists ; 2026 ; Journal of African Development Volume 27 ; 27 ; 2026 ; >
+      au < crawling ; exists ; 2026 ; Journal of African Development Volume 27 ; 27 ; 2026 ; >
 
   }
 
