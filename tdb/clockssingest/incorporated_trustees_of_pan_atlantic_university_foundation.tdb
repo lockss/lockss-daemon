@@ -21,9 +21,9 @@
       param[base_url] = https://journal.pau.edu.ng/
       param[journal_id] = jcm
 
-      au < exists ; exists ; 2024 ; Journal of Creative Media Volume 1 ; 1 ; 2024 ; >
-      au < exists ; exists ; 2025 ; Journal of Creative Media Volume 2 ; 2 ; 2025 ; >
-      au < exists ; exists ; 2026 ; Journal of Creative Media Volume 3 ; 3 ; 2026 ; >
+      au < manifest ; exists ; 2024 ; Journal of Creative Media Volume 1 ; 1 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; Journal of Creative Media Volume 2 ; 2 ; 2025 ; >
+      au < manifest ; exists ; 2026 ; Journal of Creative Media Volume 3 ; 3 ; 2026 ; >
   }
 
 }
