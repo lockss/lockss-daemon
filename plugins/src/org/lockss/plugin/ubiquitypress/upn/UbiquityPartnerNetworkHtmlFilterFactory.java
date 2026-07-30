@@ -63,6 +63,8 @@ public class UbiquityPartnerNetworkHtmlFilterFactory implements FilterFactory {
   protected static Pattern PNG_WITH_TIMESTAMP_AND_WIDTH = UbiquityPartnerNetworkUrlNormalizer.PNG_WITH_TIMESTAMP_AND_WIDTH;
   protected static Pattern JPG_WITH_TIMESTAMP_AND_WIDTH = UbiquityPartnerNetworkUrlNormalizer.JPG_WITH_TIMESTAMP_AND_WIDTH;
   protected static Pattern JPG_WITH_TIMESTAMP = UbiquityPartnerNetworkUrlNormalizer.JPG_WITH_TIMESTAMP; 
+  protected static Pattern SVG_WITH_TIMESTAMP_AND_WIDTH = UbiquityPartnerNetworkUrlNormalizer.SVG_WITH_TIMESTAMP_AND_WIDTH;
+  protected static Pattern SVG_WITH_TIMESTAMP = UbiquityPartnerNetworkUrlNormalizer.SVG_WITH_TIMESTAMP; 
 
   /**
    * A B(old) tag.  Registered with PrototypicalNodeFactory to cause B
@@ -177,6 +179,12 @@ public class UbiquityPartnerNetworkHtmlFilterFactory implements FilterFactory {
                 }else if(PNG_WITH_TIMESTAMP_AND_WIDTH.matcher(srcurl).find()){
                   String newUrl = PNG_WITH_TIMESTAMP_AND_WIDTH.matcher(srcurl).replaceFirst(".png?w=");
                   tag.setAttribute("src", newUrl);
+                }else if(SVG_WITH_TIMESTAMP.matcher(srcurl).find()){
+                  String newUrl = SVG_WITH_TIMESTAMP.matcher(srcurl).replaceFirst(".svg");
+                  tag.setAttribute("src", newUrl);
+                }else if(SVG_WITH_TIMESTAMP_AND_WIDTH.matcher(srcurl).find()){
+                  String newUrl = SVG_WITH_TIMESTAMP_AND_WIDTH.matcher(srcurl).replaceFirst(".svg?w=");
+                  tag.setAttribute("src", newUrl);
                 }
                 log.debug3("the NEW source of image tag is " + tag.getAttribute("src"));
               }
@@ -194,6 +202,12 @@ public class UbiquityPartnerNetworkHtmlFilterFactory implements FilterFactory {
                   tag.setAttribute("srcSet", newUrl);
                 }else if(PNG_WITH_TIMESTAMP_AND_WIDTH.matcher(srcSetUrl).find()){
                   String newUrl = PNG_WITH_TIMESTAMP_AND_WIDTH.matcher(srcSetUrl).replaceAll(".png?w=");
+                  tag.setAttribute("srcSet", newUrl);
+                }else if(SVG_WITH_TIMESTAMP.matcher(srcSetUrl).find()){
+                  String newUrl = SVG_WITH_TIMESTAMP.matcher(srcSetUrl).replaceFirst(".svg");
+                  tag.setAttribute("srcSet", newUrl);
+                }else if(SVG_WITH_TIMESTAMP_AND_WIDTH.matcher(srcSetUrl).find()){
+                  String newUrl = SVG_WITH_TIMESTAMP_AND_WIDTH.matcher(srcSetUrl).replaceFirst(".svg?w=");
                   tag.setAttribute("srcSet", newUrl);
                 }
                 log.debug3("the NEW sourceSet of image tag is " + tag.getAttribute("srcSet"));
