@@ -65,6 +65,7 @@ public class Ojs3CrawlSeedFactory implements CrawlSeedFactory {
 
   private static final Logger log = Logger.getLogger(Ojs3CrawlSeedFactory.class);
   private static final String APS_JN_JRNL = "://revistas.udea.edu.co/";
+  private static final String BON_VIEW_JRNL = "://ojs.bonviewpress.com/";
 
   public static class AddStemCrawlSeed extends BaseCrawlSeed {
 
@@ -96,7 +97,7 @@ public class Ojs3CrawlSeedFactory implements CrawlSeedFactory {
     public Collection<String> doGetPermissionUrls() throws ConfigurationException,
         PluginException, IOException {
           Collection<String> pUrls = Ojs3StartStemHelper.addStartStem(au, super.doGetPermissionUrls());
-          if(baseUrl.contains(APS_JN_JRNL)){
+          if(baseUrl.contains(APS_JN_JRNL) || (baseUrl.contains(BON_VIEW_JRNL))){
             Collection<String> uUrls = new ArrayList<String>(pUrls.size() * 2);
             for (Iterator<String> iter = pUrls.iterator(); iter.hasNext();) {
               String url = iter.next();
@@ -113,7 +114,7 @@ public class Ojs3CrawlSeedFactory implements CrawlSeedFactory {
     public Collection<String> doGetStartUrls() throws ConfigurationException,
         PluginException, IOException {
         Collection<String> sUrls = addLocale(Ojs3StartStemHelper.addStartStem(au, super.doGetStartUrls()));
-        if(baseUrl.contains(APS_JN_JRNL)){
+        if(baseUrl.contains(APS_JN_JRNL) || baseUrl.contains(BON_VIEW_JRNL)){
           Collection<String> uUrls = new ArrayList<String>(sUrls.size() * 2);
           for (Iterator<String> iter = sUrls.iterator(); iter.hasNext();) {
             String url = iter.next();
