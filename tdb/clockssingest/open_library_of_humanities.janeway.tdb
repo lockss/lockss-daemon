@@ -480,7 +480,7 @@
       au < notReady ; exists ; 2023 ; 8 ; Glossa: a journal of general linguistics Volume 2023 ; 2023 ; > #XML Parsing Error: no root element found ~ org.xml.sax.SAXParseException; Premature end of file. https://www.glossa-journal.org/article/5823/galley/23046/download/
       au < deepCrawl ; exists ; 2024 ; 9 ; Glossa: a journal of general linguistics Volume 2024 ; 2024 ; >
       au < deepCrawl ; exists ; 2025 ; 10 ; Glossa: a journal of general linguistics Volume 2025 ; 2025 ; >
-      au < ready ; exists ; 2026 ; 11 ; Glossa: a journal of general linguistics Volume 2026 ; 2026 ; >
+      au < crawling ; exists ; 2026 ; 11 ; Glossa: a journal of general linguistics Volume 2026 ; 2026 ; >
 
   }
 
@@ -502,7 +502,7 @@
       au < deepCrawl ; exists ; 2023 ; 6 ; Open Screens Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 7 ; Open Screens Volume 2024 ; 2024 ; >
       au < deepCrawl ; exists ; 2025 ; 8 ; Open Screens Volume 2025 ; 2025 ; >
-      au < ready ; exists ; 2026 ; 9 ; Open Screens Volume 2026 ; 2026 ; >
+      au < crawling ; exists ; 2026 ; 9 ; Open Screens Volume 2026 ; 2026 ; >
 
   }
 
@@ -610,7 +610,7 @@
       au < deepCrawl ; exists ; 2023 ; 2023 ; Digital Studies / Le champ numérique Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Digital Studies / Le champ numérique Volume 2024 ; 2024 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Digital Studies / Le champ numérique Volume 2025 ; 2025 ; >
-      au < ready ; exists ; 2026 ; 2026 ; Digital Studies / Le champ numérique Volume 2026 ; 2026 ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Digital Studies / Le champ numérique Volume 2026 ; 2026 ; >
 
   }
 
