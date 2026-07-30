@@ -20,18 +20,18 @@
     param[base_url] = https://sdj.univsul.edu.iq/
 
     au < manifest ; exists ; 2014 ; 2014 ; Sulaimani Dental Journal Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Sulaimani Dental Journal Volume 2 ; 2 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Sulaimani Dental Journal Volume 2 ; 2 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Sulaimani Dental Journal Volume 3 ; 3 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Sulaimani Dental Journal Volume 4 ; 4 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Sulaimani Dental Journal Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Sulaimani Dental Journal Volume 6 ; 6 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Sulaimani Dental Journal Volume 6 ; 6 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Sulaimani Dental Journal Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Sulaimani Dental Journal Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; Sulaimani Dental Journal Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2023 ; 2023 ; Sulaimani Dental Journal Volume 10 ; 10 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Sulaimani Dental Journal Volume 8 ; 8 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Sulaimani Dental Journal Volume 9 ; 9 ; >
+    au < ready ; exists ; 2023 ; 2023 ; Sulaimani Dental Journal Volume 10 ; 10 ; >
     au < frozen ; exists ; 2024 ; 2024 ; Sulaimani Dental Journal Volume 11 ; 11 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Sulaimani Dental Journal Volume 12 ; 12 ; >
-    au < testing ; exists ; 2026 ; 2026 ; Sulaimani Dental Journal Volume 13 ; 13 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Sulaimani Dental Journal Volume 12 ; 12 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Sulaimani Dental Journal Volume 13 ; 13 ; >
 
   }
 }
