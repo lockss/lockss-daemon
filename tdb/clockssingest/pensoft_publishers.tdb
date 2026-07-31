@@ -207,7 +207,7 @@
     au < finished ; manifest ; 2023 ; 95-96 ; Journal of Hymenoptera Research Volume 2023 ; 2023 ; https://jhr.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 97 ; Journal of Hymenoptera Research Volume 2024 ; 2024 ; https://jhr.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2025 ; 98 ; Journal of Hymenoptera Research Volume 2025 ; 2025 ; https://jhr.pensoft.net/ ; >
-    au < ready ; exists ; 2026 ; 99 ; Journal of Hymenoptera Research Volume 2026 ; 2026 ; https://jhr.pensoft.net/ ; >
+    au < crawling ; exists ; 2026 ; 99 ; Journal of Hymenoptera Research Volume 2026 ; 2026 ; https://jhr.pensoft.net/ ; >
 
    }
   
@@ -475,7 +475,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Alpine Entomology Volume 2023 ; 2023 ; https://alpineentomology.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Alpine Entomology Volume 2024 ; 2024 ; https://alpineentomology.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Alpine Entomology Volume 2025 ; 2025 ; https://alpineentomology.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Alpine Entomology Volume 2026 ; 2026 ; https://alpineentomology.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Alpine Entomology Volume 2026 ; 2026 ; https://alpineentomology.pensoft.net/ ; >
 
   }
 
@@ -559,7 +559,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Biodiversity Information Science and Standards Volume 2023 ; 2023 ; https://biss.pensoft.net/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Biodiversity Information Science and Standards Volume 2024 ; 2024 ; https://biss.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Biodiversity Information Science and Standards Volume 2025 ; 2025 ; https://biss.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Biodiversity Information Science and Standards Volume 2026 ; 2026 ; https://biss.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Biodiversity Information Science and Standards Volume 2026 ; 2026 ; https://biss.pensoft.net/ ; >
 
   }
 
@@ -782,7 +782,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2023 ; 2023 ; https://mab-online.nl/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2024 ; 2024 ; https://mab-online.nl/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2025 ; 2025 ; https://mab-online.nl/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2026 ; 2026 ; https://mab-online.nl/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2026 ; 2026 ; https://mab-online.nl/ ; >
 
   }
 
@@ -1657,7 +1657,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Aquatic Invasions Volume 2023 ; 2023 ; https://aquaticinvasions.arphahub.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Aquatic Invasions Volume 2024 ; 2024 ; https://aquaticinvasions.arphahub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Aquatic Invasions Volume 2025 ; 2025 ; https://aquaticinvasions.arphahub.com/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Aquatic Invasions Volume 2026 ; 2026 ; https://aquaticinvasions.arphahub.com/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Aquatic Invasions Volume 2026 ; 2026 ; https://aquaticinvasions.arphahub.com/ ; >
 
   }
 
@@ -1720,7 +1720,7 @@
 
       au < finished ; manifest ; 2024 ; 2024 ; Estuarine Management and Technologies Volume 2024 ; 2024 ; https://emt.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Estuarine Management and Technologies Volume 2025 ; 2025 ; https://emt.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Estuarine Management and Technologies Volume 2026 ; 2026 ; https://emt.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Estuarine Management and Technologies Volume 2026 ; 2026 ; https://emt.pensoft.net/ ; >
 
   }
 
@@ -1945,7 +1945,7 @@
       param[au_oai_set] = phytolbalcan
 
       au < ready ; exists ; 2025 ; 2025 ; Phytologia Balcanica Volume 2025 ; 2025 ; https://phytolbalcan.arphahub.com/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Phytologia Balcanica Volume 2026 ; 2026 ; https://phytolbalcan.arphahub.com/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Phytologia Balcanica Volume 2026 ; 2026 ; https://phytolbalcan.arphahub.com/ ; >
 
   }
 
@@ -1996,7 +1996,7 @@
       param[au_oai_set] = saddi
 
       au < ready ; exists ; 2025 ; 2025 ; Scientific Annals of the Danube Delta Institute Volume 2025 ; 2025 ; https://saddi.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Scientific Annals of the Danube Delta Institute Volume 2026 ; 2026 ; https://saddi.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Scientific Annals of the Danube Delta Institute Volume 2026 ; 2026 ; https://saddi.pensoft.net/ ; >
 
   }
 
