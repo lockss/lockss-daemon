@@ -1335,7 +1335,7 @@
     au < released ; 2022 ; Judicial Panel on Multidistrict Litigation ; USCOURTS_jpml 2022 ; USCOURTS ; jpml ; 2022 >
     au < released ; 2023 ; Judicial Panel on Multidistrict Litigation ; USCOURTS_jpml 2023 ; USCOURTS ; jpml ; 2023 >
     au < released ; 2024 ; Judicial Panel on Multidistrict Litigation ; USCOURTS_jpml 2024 ; USCOURTS ; jpml ; 2024 >
-    au < manifest ; 2025 ; Judicial Panel on Multidistrict Litigation ; USCOURTS_jpml 2025 ; USCOURTS ; jpml ; 2025 >
+    au < ready ; 2025 ; Judicial Panel on Multidistrict Litigation ; USCOURTS_jpml 2025 ; USCOURTS ; jpml ; 2025 >
     au < doNotProcess ; 2006 ; United States District Court District of Kansas ; USCOURTS_ksd 2006 ; USCOURTS ; ksd ; 2006 >
     au < doNotProcess ; 2007 ; United States District Court District of Kansas ; USCOURTS_ksd 2007 ; USCOURTS ; ksd ; 2007 >
     au < doNotProcess ; 2008 ; United States District Court District of Kansas ; USCOURTS_ksd 2008 ; USCOURTS ; ksd ; 2008 >
@@ -1728,15 +1728,15 @@
     au < released ; 2024 ; United States District Court Western District of Michigan ; USCOURTS_miwd 2024 ; USCOURTS ; miwd ; 2024 >
     au < ready ; 2025 ; United States District Court Western District of Michigan ; USCOURTS_miwd 2025 ; USCOURTS ; miwd ; 2025 >
     au < ready ; 2013 ; United States Bankruptcy Court District of Minnesota ; USCOURTS_mnb 2013 ; USCOURTS ; mnb ; 2013 >
-    au < manifest ; 2014 ; United States Bankruptcy Court District of Minnesota ; USCOURTS_mnb 2014 ; USCOURTS ; mnb ; 2014 >
+    au < ready ; 2014 ; United States Bankruptcy Court District of Minnesota ; USCOURTS_mnb 2014 ; USCOURTS ; mnb ; 2014 >
     au < released ; 2015 ; United States Bankruptcy Court District of Minnesota ; USCOURTS_mnb 2015 ; USCOURTS ; mnb ; 2015 >
-    au < manifest ; 2016 ; United States Bankruptcy Court District of Minnesota ; USCOURTS_mnb 2016 ; USCOURTS ; mnb ; 2016 >
-    au < manifest ; 2017 ; United States Bankruptcy Court District of Minnesota ; USCOURTS_mnb 2017 ; USCOURTS ; mnb ; 2017 >
+    au < ready ; 2016 ; United States Bankruptcy Court District of Minnesota ; USCOURTS_mnb 2016 ; USCOURTS ; mnb ; 2016 >
+    au < ready ; 2017 ; United States Bankruptcy Court District of Minnesota ; USCOURTS_mnb 2017 ; USCOURTS ; mnb ; 2017 >
     au < released ; 2018 ; United States Bankruptcy Court District of Minnesota ; USCOURTS_mnb 2018 ; USCOURTS ; mnb ; 2018 >
     au < released ; 2019 ; United States Bankruptcy Court District of Minnesota ; USCOURTS_mnb 2019 ; USCOURTS ; mnb ; 2019 >
     au < ready ; 2020 ; United States Bankruptcy Court District of Minnesota ; USCOURTS_mnb 2020 ; USCOURTS ; mnb ; 2020 >
     au < released ; 2021 ; United States Bankruptcy Court District of Minnesota ; USCOURTS_mnb 2021 ; USCOURTS ; mnb ; 2021 >
-    au < manifest ; 2022 ; United States Bankruptcy Court District of Minnesota ; USCOURTS_mnb 2022 ; USCOURTS ; mnb ; 2022 >
+    au < ready ; 2022 ; United States Bankruptcy Court District of Minnesota ; USCOURTS_mnb 2022 ; USCOURTS ; mnb ; 2022 >
     au < released ; 2023 ; United States Bankruptcy Court District of Minnesota ; USCOURTS_mnb 2023 ; USCOURTS ; mnb ; 2023 >
     au < released ; 2024 ; United States Bankruptcy Court District of Minnesota ; USCOURTS_mnb 2024 ; USCOURTS ; mnb ; 2024 >
     au < ready ; 2025 ; United States Bankruptcy Court District of Minnesota ; USCOURTS_mnb 2025 ; USCOURTS ; mnb ; 2025 >
@@ -2391,7 +2391,7 @@
     au < released ; 2022 ; United States District Court Northern District of Ohio ; USCOURTS_ohnd 2022 ; USCOURTS ; ohnd ; 2022 >
     au < released ; 2023 ; United States District Court Northern District of Ohio ; USCOURTS_ohnd 2023 ; USCOURTS ; ohnd ; 2023 >
     au < released ; 2024 ; United States District Court Northern District of Ohio ; USCOURTS_ohnd 2024 ; USCOURTS ; ohnd ; 2024 >
-    au < manifest ; 2025 ; United States District Court Northern District of Ohio ; USCOURTS_ohnd 2025 ; USCOURTS ; ohnd ; 2025 >
+    au < ready ; 2025 ; United States District Court Northern District of Ohio ; USCOURTS_ohnd 2025 ; USCOURTS ; ohnd ; 2025 >
     au < released ; 2010 ; United States Bankruptcy Court Southern District of Ohio ; USCOURTS_ohsb 2010 ; USCOURTS ; ohsb ; 2010 >
     au < released ; 2011 ; United States Bankruptcy Court Southern District of Ohio ; USCOURTS_ohsb 2011 ; USCOURTS ; ohsb ; 2011 >
     au < released ; 2012 ; United States Bankruptcy Court Southern District of Ohio ; USCOURTS_ohsb 2012 ; USCOURTS ; ohsb ; 2012 >
@@ -2432,7 +2432,7 @@
     au < released ; 2022 ; United States District Court Southern District of Ohio ; USCOURTS_ohsd 2022 ; USCOURTS ; ohsd ; 2022 >
     au < released ; 2023 ; United States District Court Southern District of Ohio ; USCOURTS_ohsd 2023 ; USCOURTS ; ohsd ; 2023 >
     au < released ; 2024 ; United States District Court Southern District of Ohio ; USCOURTS_ohsd 2024 ; USCOURTS ; ohsd ; 2024 >
-    au < manifest ; 2025 ; United States District Court Southern District of Ohio ; USCOURTS_ohsd 2025 ; USCOURTS ; ohsd ; 2025 >
+    au < ready ; 2025 ; United States District Court Southern District of Ohio ; USCOURTS_ohsd 2025 ; USCOURTS ; ohsd ; 2025 >
     au < released ; 2010 ; United States Bankruptcy Court Eastern District of Oklahoma ; USCOURTS_okeb 2010 ; USCOURTS ; okeb ; 2010 >
     au < released ; 2011 ; United States Bankruptcy Court Eastern District of Oklahoma ; USCOURTS_okeb 2011 ; USCOURTS ; okeb ; 2011 >
     au < released ; 2012 ; United States Bankruptcy Court Eastern District of Oklahoma ; USCOURTS_okeb 2012 ; USCOURTS ; okeb ; 2012 >
@@ -2448,7 +2448,7 @@
     au < released ; 2022 ; United States Bankruptcy Court Eastern District of Oklahoma ; USCOURTS_okeb 2022 ; USCOURTS ; okeb ; 2022 >
     au < released ; 2023 ; United States Bankruptcy Court Eastern District of Oklahoma ; USCOURTS_okeb 2023 ; USCOURTS ; okeb ; 2023 >
     au < released ; 2024 ; United States Bankruptcy Court Eastern District of Oklahoma ; USCOURTS_okeb 2024 ; USCOURTS ; okeb ; 2024 >
-    au < manifest ; 2025 ; United States Bankruptcy Court Eastern District of Oklahoma ; USCOURTS_okeb 2025 ; USCOURTS ; okeb ; 2025 >
+    au < ready ; 2025 ; United States Bankruptcy Court Eastern District of Oklahoma ; USCOURTS_okeb 2025 ; USCOURTS ; okeb ; 2025 >
     au < released ; 1994 ; United States District Court Eastern District of Oklahoma ; USCOURTS_oked 1994 ; USCOURTS ; oked ; 1994 >
     au < released ; 1995 ; United States District Court Eastern District of Oklahoma ; USCOURTS_oked 1995 ; USCOURTS ; oked ; 1995 >
     au < released ; 1998 ; United States District Court Eastern District of Oklahoma ; USCOURTS_oked 1998 ; USCOURTS ; oked ; 1998 >
@@ -2486,7 +2486,7 @@
     au < released ; 2022 ; United States Bankruptcy Court Northern District of Oklahoma ; USCOURTS_oknb 2022 ; USCOURTS ; oknb ; 2022 >
     au < released ; 2023 ; United States Bankruptcy Court Northern District of Oklahoma ; USCOURTS_oknb 2023 ; USCOURTS ; oknb ; 2023 >
     au < released ; 2024 ; United States Bankruptcy Court Northern District of Oklahoma ; USCOURTS_oknb 2024 ; USCOURTS ; oknb ; 2024 >
-    au < manifest ; 2025 ; United States Bankruptcy Court Northern District of Oklahoma ; USCOURTS_oknb 2025 ; USCOURTS ; oknb ; 2025 >
+    au < ready ; 2025 ; United States Bankruptcy Court Northern District of Oklahoma ; USCOURTS_oknb 2025 ; USCOURTS ; oknb ; 2025 >
     au < doNotProcess ; 2005 ; United States Bankruptcy Court Western District of Oklahoma ; USCOURTS_okwb 2005 ; USCOURTS ; okwb ; 2005 >
     au < doNotProcess ; 2012 ; United States Bankruptcy Court Western District of Oklahoma ; USCOURTS_okwb 2012 ; USCOURTS ; okwb ; 2012 >
     au < released ; 2015 ; United States Bankruptcy Court Western District of Oklahoma ; USCOURTS_okwb 2015 ; USCOURTS ; okwb ; 2015 >
@@ -2499,7 +2499,7 @@
     au < released ; 2022 ; United States Bankruptcy Court Western District of Oklahoma ; USCOURTS_okwb 2022 ; USCOURTS ; okwb ; 2022 >
     au < released ; 2023 ; United States Bankruptcy Court Western District of Oklahoma ; USCOURTS_okwb 2023 ; USCOURTS ; okwb ; 2023 >
     au < released ; 2024 ; United States Bankruptcy Court Western District of Oklahoma ; USCOURTS_okwb 2024 ; USCOURTS ; okwb ; 2024 >
-    au < manifest ; 2025 ; United States Bankruptcy Court Western District of Oklahoma ; USCOURTS_okwb 2025 ; USCOURTS ; okwb ; 2025 >
+    au < ready ; 2025 ; United States Bankruptcy Court Western District of Oklahoma ; USCOURTS_okwb 2025 ; USCOURTS ; okwb ; 2025 >
     au < released ; 2010 ; United States District Court Western District of Oklahoma ; USCOURTS_okwd 2010 ; USCOURTS ; okwd ; 2010 >
     au < released ; 2011 ; United States District Court Western District of Oklahoma ; USCOURTS_okwd 2011 ; USCOURTS ; okwd ; 2011 >
     au < released ; 2012 ; United States District Court Western District of Oklahoma ; USCOURTS_okwd 2012 ; USCOURTS ; okwd ; 2012 >
@@ -2528,7 +2528,7 @@
     au < released ; 2022 ; United States Bankruptcy Court District of Oregon ; USCOURTS_orb 2022 ; USCOURTS ; orb ; 2022 >
     au < released ; 2023 ; United States Bankruptcy Court District of Oregon ; USCOURTS_orb 2023 ; USCOURTS ; orb ; 2023 >
     au < released ; 2024 ; United States Bankruptcy Court District of Oregon ; USCOURTS_orb 2024 ; USCOURTS ; orb ; 2024 >
-    au < manifest ; 2025 ; United States Bankruptcy Court District of Oregon ; USCOURTS_orb 2025 ; USCOURTS ; orb ; 2025 >
+    au < ready ; 2025 ; United States Bankruptcy Court District of Oregon ; USCOURTS_orb 2025 ; USCOURTS ; orb ; 2025 >
     au < released ; 1996 ; United States District Court District of Oregon ; USCOURTS_ord 1996 ; USCOURTS ; ord ; 1996 >
     au < released ; 2010 ; United States District Court District of Oregon ; USCOURTS_ord 2010 ; USCOURTS ; ord ; 2010 >
     au < released ; 2011 ; United States District Court District of Oregon ; USCOURTS_ord 2011 ; USCOURTS ; ord ; 2011 >
@@ -2545,7 +2545,7 @@
     au < released ; 2022 ; United States District Court District of Oregon ; USCOURTS_ord 2022 ; USCOURTS ; ord ; 2022 >
     au < released ; 2023 ; United States District Court District of Oregon ; USCOURTS_ord 2023 ; USCOURTS ; ord ; 2023 >
     au < released ; 2024 ; United States District Court District of Oregon ; USCOURTS_ord 2024 ; USCOURTS ; ord ; 2024 >
-    au < manifest ; 2025 ; United States District Court District of Oregon ; USCOURTS_ord 2025 ; USCOURTS ; ord ; 2025 >
+    au < ready ; 2025 ; United States District Court District of Oregon ; USCOURTS_ord 2025 ; USCOURTS ; ord ; 2025 >
     au < doNotProcess ; 2005 ; United States Bankruptcy Court Eastern District of Pennsylvania ; USCOURTS_paeb 2005 ; USCOURTS ; paeb ; 2005 >
     au < doNotProcess ; 2006 ; United States Bankruptcy Court Eastern District of Pennsylvania ; USCOURTS_paeb 2006 ; USCOURTS ; paeb ; 2006 >
     au < doNotProcess ; 2007 ; United States Bankruptcy Court Eastern District of Pennsylvania ; USCOURTS_paeb 2007 ; USCOURTS ; paeb ; 2007 >
@@ -2566,7 +2566,7 @@
     au < released ; 2022 ; United States Bankruptcy Court Eastern District of Pennsylvania ; USCOURTS_paeb 2022 ; USCOURTS ; paeb ; 2022 >
     au < released ; 2023 ; United States Bankruptcy Court Eastern District of Pennsylvania ; USCOURTS_paeb 2023 ; USCOURTS ; paeb ; 2023 >
     au < released ; 2024 ; United States Bankruptcy Court Eastern District of Pennsylvania ; USCOURTS_paeb 2024 ; USCOURTS ; paeb ; 2024 >
-    au < manifest ; 2025 ; United States Bankruptcy Court Eastern District of Pennsylvania ; USCOURTS_paeb 2025 ; USCOURTS ; paeb ; 2025 >
+    au < ready ; 2025 ; United States Bankruptcy Court Eastern District of Pennsylvania ; USCOURTS_paeb 2025 ; USCOURTS ; paeb ; 2025 >
     au < doNotProcess ; 2005 ; United States District Court Eastern District of Pennsylvania ; USCOURTS_paed 2005 ; USCOURTS ; paed ; 2005 >
     au < doNotProcess ; 2006 ; United States District Court Eastern District of Pennsylvania ; USCOURTS_paed 2006 ; USCOURTS ; paed ; 2006 >
     au < doNotProcess ; 2007 ; United States District Court Eastern District of Pennsylvania ; USCOURTS_paed 2007 ; USCOURTS ; paed ; 2007 >
@@ -2587,7 +2587,7 @@
     au < released ; 2022 ; United States District Court Eastern District of Pennsylvania ; USCOURTS_paed 2022 ; USCOURTS ; paed ; 2022 >
     au < released ; 2023 ; United States District Court Eastern District of Pennsylvania ; USCOURTS_paed 2023 ; USCOURTS ; paed ; 2023 >
     au < released ; 2024 ; United States District Court Eastern District of Pennsylvania ; USCOURTS_paed 2024 ; USCOURTS ; paed ; 2024 >
-    au < manifest ; 2025 ; United States District Court Eastern District of Pennsylvania ; USCOURTS_paed 2025 ; USCOURTS ; paed ; 2025 >
+    au < ready ; 2025 ; United States District Court Eastern District of Pennsylvania ; USCOURTS_paed 2025 ; USCOURTS ; paed ; 2025 >
     au < doNotProcess ; 2004 ; United States Bankruptcy Court Middle District of Pennsylvania ; USCOURTS_pamb 2004 ; USCOURTS ; pamb ; 2004 >
     au < doNotProcess ; 2005 ; United States Bankruptcy Court Middle District of Pennsylvania ; USCOURTS_pamb 2005 ; USCOURTS ; pamb ; 2005 >
     au < doNotProcess ; 2006 ; United States Bankruptcy Court Middle District of Pennsylvania ; USCOURTS_pamb 2006 ; USCOURTS ; pamb ; 2006 >
@@ -2609,7 +2609,7 @@
     au < released ; 2022 ; United States Bankruptcy Court Middle District of Pennsylvania ; USCOURTS_pamb 2022 ; USCOURTS ; pamb ; 2022 >
     au < released ; 2023 ; United States Bankruptcy Court Middle District of Pennsylvania ; USCOURTS_pamb 2023 ; USCOURTS ; pamb ; 2023 >
     au < released ; 2024 ; United States Bankruptcy Court Middle District of Pennsylvania ; USCOURTS_pamb 2024 ; USCOURTS ; pamb ; 2024 >
-    au < manifest ; 2025 ; United States Bankruptcy Court Middle District of Pennsylvania ; USCOURTS_pamb 2025 ; USCOURTS ; pamb ; 2025 >
+    au < ready ; 2025 ; United States Bankruptcy Court Middle District of Pennsylvania ; USCOURTS_pamb 2025 ; USCOURTS ; pamb ; 2025 >
     au < released ; 2010 ; United States District Court Middle District of Pennsylvania ; USCOURTS_pamd 2010 ; USCOURTS ; pamd ; 2010 >
     au < released ; 2011 ; United States District Court Middle District of Pennsylvania ; USCOURTS_pamd 2011 ; USCOURTS ; pamd ; 2011 >
     au < released ; 2012 ; United States District Court Middle District of Pennsylvania ; USCOURTS_pamd 2012 ; USCOURTS ; pamd ; 2012 >
@@ -2625,7 +2625,7 @@
     au < released ; 2022 ; United States District Court Middle District of Pennsylvania ; USCOURTS_pamd 2022 ; USCOURTS ; pamd ; 2022 >
     au < released ; 2023 ; United States District Court Middle District of Pennsylvania ; USCOURTS_pamd 2023 ; USCOURTS ; pamd ; 2023 >
     au < released ; 2024 ; United States District Court Middle District of Pennsylvania ; USCOURTS_pamd 2024 ; USCOURTS ; pamd ; 2024 >
-    au < manifest ; 2025 ; United States District Court Middle District of Pennsylvania ; USCOURTS_pamd 2025 ; USCOURTS ; pamd ; 2025 >
+    au < ready ; 2025 ; United States District Court Middle District of Pennsylvania ; USCOURTS_pamd 2025 ; USCOURTS ; pamd ; 2025 >
     au < released ; 2010 ; United States Bankruptcy Court Western District of Pennsylvania ; USCOURTS_pawb 2010 ; USCOURTS ; pawb ; 2010 >
     au < released ; 2011 ; United States Bankruptcy Court Western District of Pennsylvania ; USCOURTS_pawb 2011 ; USCOURTS ; pawb ; 2011 >
     au < released ; 2012 ; United States Bankruptcy Court Western District of Pennsylvania ; USCOURTS_pawb 2012 ; USCOURTS ; pawb ; 2012 >
@@ -2641,7 +2641,7 @@
     au < released ; 2022 ; United States Bankruptcy Court Western District of Pennsylvania ; USCOURTS_pawb 2022 ; USCOURTS ; pawb ; 2022 >
     au < released ; 2023 ; United States Bankruptcy Court Western District of Pennsylvania ; USCOURTS_pawb 2023 ; USCOURTS ; pawb ; 2023 >
     au < released ; 2024 ; United States Bankruptcy Court Western District of Pennsylvania ; USCOURTS_pawb 2024 ; USCOURTS ; pawb ; 2024 >
-    au < manifest ; 2025 ; United States Bankruptcy Court Western District of Pennsylvania ; USCOURTS_pawb 2025 ; USCOURTS ; pawb ; 2025 >
+    au < ready ; 2025 ; United States Bankruptcy Court Western District of Pennsylvania ; USCOURTS_pawb 2025 ; USCOURTS ; pawb ; 2025 >
     au < doNotProcess ; 2005 ; United States District Court Western District of Pennsylvania ; USCOURTS_pawd 2005 ; USCOURTS ; pawd ; 2005 >
     au < doNotProcess ; 2006 ; United States District Court Western District of Pennsylvania ; USCOURTS_pawd 2006 ; USCOURTS ; pawd ; 2006 >
     au < doNotProcess ; 2007 ; United States District Court Western District of Pennsylvania ; USCOURTS_pawd 2007 ; USCOURTS ; pawd ; 2007 >
@@ -2662,7 +2662,7 @@
     au < released ; 2022 ; United States District Court Western District of Pennsylvania ; USCOURTS_pawd 2022 ; USCOURTS ; pawd ; 2022 >
     au < released ; 2023 ; United States District Court Western District of Pennsylvania ; USCOURTS_pawd 2023 ; USCOURTS ; pawd ; 2023 >
     au < released ; 2024 ; United States District Court Western District of Pennsylvania ; USCOURTS_pawd 2024 ; USCOURTS ; pawd ; 2024 >
-    au < manifest ; 2025 ; United States District Court Western District of Pennsylvania ; USCOURTS_pawd 2025 ; USCOURTS ; pawd ; 2025 >
+    au < ready ; 2025 ; United States District Court Western District of Pennsylvania ; USCOURTS_pawd 2025 ; USCOURTS ; pawd ; 2025 >
     au < doNotProcess ; 2005 ; United States Bankruptcy Court District of Puerto Rico ; USCOURTS_prb 2005 ; USCOURTS ; prb ; 2005 >
     au < doNotProcess ; 2006 ; United States Bankruptcy Court District of Puerto Rico ; USCOURTS_prb 2006 ; USCOURTS ; prb ; 2006 >
     au < doNotProcess ; 2007 ; United States Bankruptcy Court District of Puerto Rico ; USCOURTS_prb 2007 ; USCOURTS ; prb ; 2007 >
@@ -2683,7 +2683,7 @@
     au < released ; 2022 ; United States Bankruptcy Court District of Puerto Rico ; USCOURTS_prb 2022 ; USCOURTS ; prb ; 2022 >
     au < released ; 2023 ; United States Bankruptcy Court District of Puerto Rico ; USCOURTS_prb 2023 ; USCOURTS ; prb ; 2023 >
     au < released ; 2024 ; United States Bankruptcy Court District of Puerto Rico ; USCOURTS_prb 2024 ; USCOURTS ; prb ; 2024 >
-    au < manifest ; 2025 ; United States Bankruptcy Court District of Puerto Rico ; USCOURTS_prb 2025 ; USCOURTS ; prb ; 2025 >
+    au < ready ; 2025 ; United States Bankruptcy Court District of Puerto Rico ; USCOURTS_prb 2025 ; USCOURTS ; prb ; 2025 >
     au < doNotProcess ; 1999 ; United States District Court District of Puerto Rico ; USCOURTS_prd 1999 ; USCOURTS ; prd ; 1999 >
     au < doNotProcess ; 2005 ; United States District Court District of Puerto Rico ; USCOURTS_prd 2005 ; USCOURTS ; prd ; 2005 >
     au < doNotProcess ; 2006 ; United States District Court District of Puerto Rico ; USCOURTS_prd 2006 ; USCOURTS ; prd ; 2006 >
@@ -2705,7 +2705,7 @@
     au < released ; 2022 ; United States District Court District of Puerto Rico ; USCOURTS_prd 2022 ; USCOURTS ; prd ; 2022 >
     au < released ; 2023 ; United States District Court District of Puerto Rico ; USCOURTS_prd 2023 ; USCOURTS ; prd ; 2023 >
     au < released ; 2024 ; United States District Court District of Puerto Rico ; USCOURTS_prd 2024 ; USCOURTS ; prd ; 2024 >
-    au < manifest ; 2025 ; United States District Court District of Puerto Rico ; USCOURTS_prd 2025 ; USCOURTS ; prd ; 2025 >
+    au < ready ; 2025 ; United States District Court District of Puerto Rico ; USCOURTS_prd 2025 ; USCOURTS ; prd ; 2025 >
     au < doNotProcess ; 2004 ; United States Bankruptcy Court District of Rhode Island ; USCOURTS_rib 2004 ; USCOURTS ; rib ; 2004 >
     au < doNotProcess ; 2005 ; United States Bankruptcy Court District of Rhode Island ; USCOURTS_rib 2005 ; USCOURTS ; rib ; 2005 >
     au < doNotProcess ; 2006 ; United States Bankruptcy Court District of Rhode Island ; USCOURTS_rib 2006 ; USCOURTS ; rib ; 2006 >
@@ -2724,7 +2724,7 @@
     au < released ; 2019 ; United States Bankruptcy Court District of Rhode Island ; USCOURTS_rib 2019 ; USCOURTS ; rib ; 2019 >
     au < released ; 2020 ; United States Bankruptcy Court District of Rhode Island ; USCOURTS_rib 2020 ; USCOURTS ; rib ; 2020 >
     au < released ; 2021 ; United States Bankruptcy Court District of Rhode Island ; USCOURTS_rib 2021 ; USCOURTS ; rib ; 2021 >
-    au < manifest ; 2025 ; United States Bankruptcy Court District of Rhode Island ; USCOURTS_rib 2025 ; USCOURTS ; rib ; 2025 >
+    au < ready ; 2025 ; United States Bankruptcy Court District of Rhode Island ; USCOURTS_rib 2025 ; USCOURTS ; rib ; 2025 >
     au < doNotProcess ; 2005 ; United States District Court District of Rhode Island ; USCOURTS_rid 2005 ; USCOURTS ; rid ; 2005 >
     au < doNotProcess ; 2006 ; United States District Court District of Rhode Island ; USCOURTS_rid 2006 ; USCOURTS ; rid ; 2006 >
     au < doNotProcess ; 2007 ; United States District Court District of Rhode Island ; USCOURTS_rid 2007 ; USCOURTS ; rid ; 2007 >
@@ -2745,7 +2745,7 @@
     au < released ; 2022 ; United States District Court District of Rhode Island ; USCOURTS_rid 2022 ; USCOURTS ; rid ; 2022 >
     au < released ; 2023 ; United States District Court District of Rhode Island ; USCOURTS_rid 2023 ; USCOURTS ; rid ; 2023 >
     au < released ; 2024 ; United States District Court District of Rhode Island ; USCOURTS_rid 2024 ; USCOURTS ; rid ; 2024 >
-    au < manifest ; 2025 ; United States District Court District of Rhode Island ; USCOURTS_rid 2025 ; USCOURTS ; rid ; 2025 >
+    au < ready ; 2025 ; United States District Court District of Rhode Island ; USCOURTS_rid 2025 ; USCOURTS ; rid ; 2025 >
     au < doNotProcess ; 2006 ; United States Bankruptcy Court District of South Carolina ; USCOURTS_scb 2006 ; USCOURTS ; scb ; 2006 >
     au < doNotProcess ; 2007 ; United States Bankruptcy Court District of South Carolina ; USCOURTS_scb 2007 ; USCOURTS ; scb ; 2007 >
     au < doNotProcess ; 2008 ; United States Bankruptcy Court District of South Carolina ; USCOURTS_scb 2008 ; USCOURTS ; scb ; 2008 >
@@ -2765,7 +2765,7 @@
     au < released ; 2022 ; United States Bankruptcy Court District of South Carolina ; USCOURTS_scb 2022 ; USCOURTS ; scb ; 2022 >
     au < released ; 2023 ; United States Bankruptcy Court District of South Carolina ; USCOURTS_scb 2023 ; USCOURTS ; scb ; 2023 >
     au < released ; 2024 ; United States Bankruptcy Court District of South Carolina ; USCOURTS_scb 2024 ; USCOURTS ; scb ; 2024 >
-    au < manifest ; 2025 ; United States Bankruptcy Court District of South Carolina ; USCOURTS_scb 2025 ; USCOURTS ; scb ; 2025 >
+    au < ready ; 2025 ; United States Bankruptcy Court District of South Carolina ; USCOURTS_scb 2025 ; USCOURTS ; scb ; 2025 >
     au < doNotProcess ; 2005 ; United States Bankruptcy Court District of South Dakota ; USCOURTS_sdb 2005 ; USCOURTS ; sdb ; 2005 >
     au < doNotProcess ; 2006 ; United States Bankruptcy Court District of South Dakota ; USCOURTS_sdb 2006 ; USCOURTS ; sdb ; 2006 >
     au < doNotProcess ; 2007 ; United States Bankruptcy Court District of South Dakota ; USCOURTS_sdb 2007 ; USCOURTS ; sdb ; 2007 >
@@ -2783,7 +2783,7 @@
     au < released ; 2021 ; United States Bankruptcy Court District of South Dakota ; USCOURTS_sdb 2021 ; USCOURTS ; sdb ; 2021 >
     au < released ; 2023 ; United States Bankruptcy Court District of South Dakota ; USCOURTS_sdb 2023 ; USCOURTS ; sdb ; 2023 >
     au < released ; 2024 ; United States Bankruptcy Court District of South Dakota ; USCOURTS_sdb 2024 ; USCOURTS ; sdb ; 2024 >
-    au < manifest ; 2025 ; United States Bankruptcy Court District of South Dakota ; USCOURTS_sdb 2025 ; USCOURTS ; sdb ; 2025 >
+    au < ready ; 2025 ; United States Bankruptcy Court District of South Dakota ; USCOURTS_sdb 2025 ; USCOURTS ; sdb ; 2025 >
     au < released ; 2010 ; United States District Court District of South Dakota ; USCOURTS_sdd 2010 ; USCOURTS ; sdd ; 2010 >
     au < released ; 2011 ; United States District Court District of South Dakota ; USCOURTS_sdd 2011 ; USCOURTS ; sdd ; 2011 >
     au < released ; 2012 ; United States District Court District of South Dakota ; USCOURTS_sdd 2012 ; USCOURTS ; sdd ; 2012 >
@@ -2818,7 +2818,7 @@
     au < released ; 2022 ; United States Bankruptcy Court Eastern District of Tennessee ; USCOURTS_tneb 2022 ; USCOURTS ; tneb ; 2022 >
     au < released ; 2023 ; United States Bankruptcy Court Eastern District of Tennessee ; USCOURTS_tneb 2023 ; USCOURTS ; tneb ; 2023 >
     au < released ; 2024 ; United States Bankruptcy Court Eastern District of Tennessee ; USCOURTS_tneb 2024 ; USCOURTS ; tneb ; 2024 >
-    au < manifest ; 2025 ; United States Bankruptcy Court Eastern District of Tennessee ; USCOURTS_tneb 2025 ; USCOURTS ; tneb ; 2025 >
+    au < ready ; 2025 ; United States Bankruptcy Court Eastern District of Tennessee ; USCOURTS_tneb 2025 ; USCOURTS ; tneb ; 2025 >
     au < released ; 1970 ; United States District Court Eastern District of Tennessee ; USCOURTS_tned 1970 ; USCOURTS ; tned ; 1970 >
     au < doNotProcess ; 2004 ; United States District Court Eastern District of Tennessee ; USCOURTS_tned 2004 ; USCOURTS ; tned ; 2004 >
     au < doNotProcess ; 2005 ; United States District Court Eastern District of Tennessee ; USCOURTS_tned 2005 ; USCOURTS ; tned ; 2005 >
@@ -2841,7 +2841,7 @@
     au < released ; 2022 ; United States District Court Eastern District of Tennessee ; USCOURTS_tned 2022 ; USCOURTS ; tned ; 2022 >
     au < released ; 2023 ; United States District Court Eastern District of Tennessee ; USCOURTS_tned 2023 ; USCOURTS ; tned ; 2023 >
     au < released ; 2024 ; United States District Court Eastern District of Tennessee ; USCOURTS_tned 2024 ; USCOURTS ; tned ; 2024 >
-    au < manifest ; 2025 ; United States District Court Eastern District of Tennessee ; USCOURTS_tned 2025 ; USCOURTS ; tned ; 2025 >
+    au < ready ; 2025 ; United States District Court Eastern District of Tennessee ; USCOURTS_tned 2025 ; USCOURTS ; tned ; 2025 >
     au < doNotProcess ; 2004 ; United States Bankruptcy Court Middle District of Tennessee ; USCOURTS_tnmb 2004 ; USCOURTS ; tnmb ; 2004 >
     au < doNotProcess ; 2005 ; United States Bankruptcy Court Middle District of Tennessee ; USCOURTS_tnmb 2005 ; USCOURTS ; tnmb ; 2005 >
     au < doNotProcess ; 2006 ; United States Bankruptcy Court Middle District of Tennessee ; USCOURTS_tnmb 2006 ; USCOURTS ; tnmb ; 2006 >
@@ -2863,7 +2863,7 @@
     au < released ; 2022 ; United States Bankruptcy Court Middle District of Tennessee ; USCOURTS_tnmb 2022 ; USCOURTS ; tnmb ; 2022 >
     au < released ; 2023 ; United States Bankruptcy Court Middle District of Tennessee ; USCOURTS_tnmb 2023 ; USCOURTS ; tnmb ; 2023 >
     au < released ; 2024 ; United States Bankruptcy Court Middle District of Tennessee ; USCOURTS_tnmb 2024 ; USCOURTS ; tnmb ; 2024 >
-    au < manifest ; 2025 ; United States Bankruptcy Court Middle District of Tennessee ; USCOURTS_tnmb 2025 ; USCOURTS ; tnmb ; 2025 >
+    au < ready ; 2025 ; United States Bankruptcy Court Middle District of Tennessee ; USCOURTS_tnmb 2025 ; USCOURTS ; tnmb ; 2025 >
     au < released ; 1970 ; United States District Court Middle District of Tennessee ; USCOURTS_tnmd 1970 ; USCOURTS ; tnmd ; 1970 >
     au < doNotProcess ; 2005 ; United States District Court Middle District of Tennessee ; USCOURTS_tnmd 2005 ; USCOURTS ; tnmd ; 2005 >
     au < doNotProcess ; 2006 ; United States District Court Middle District of Tennessee ; USCOURTS_tnmd 2006 ; USCOURTS ; tnmd ; 2006 >
@@ -2885,7 +2885,7 @@
     au < released ; 2022 ; United States District Court Middle District of Tennessee ; USCOURTS_tnmd 2022 ; USCOURTS ; tnmd ; 2022 >
     au < released ; 2023 ; United States District Court Middle District of Tennessee ; USCOURTS_tnmd 2023 ; USCOURTS ; tnmd ; 2023 >
     au < released ; 2024 ; United States District Court Middle District of Tennessee ; USCOURTS_tnmd 2024 ; USCOURTS ; tnmd ; 2024 >
-    au < manifest ; 2025 ; United States District Court Middle District of Tennessee ; USCOURTS_tnmd 2025 ; USCOURTS ; tnmd ; 2025 >
+    au < ready ; 2025 ; United States District Court Middle District of Tennessee ; USCOURTS_tnmd 2025 ; USCOURTS ; tnmd ; 2025 >
     au < doNotProcess ; 2005 ; United States District Court Western District of Tennessee ; USCOURTS_tnwd 2005 ; USCOURTS ; tnwd ; 2005 >
     au < doNotProcess ; 2006 ; United States District Court Western District of Tennessee ; USCOURTS_tnwd 2006 ; USCOURTS ; tnwd ; 2006 >
     au < doNotProcess ; 2007 ; United States District Court Western District of Tennessee ; USCOURTS_tnwd 2007 ; USCOURTS ; tnwd ; 2007 >
@@ -3377,7 +3377,7 @@
     au < manifest ; 2026 ; United States District Court for the District of Hawaii ; USCOURTS_hid 2026 ; USCOURTS ; hid ; 2026 >
     au < manifest ; 2026 ; United States Bankruptcy Court for the Northern District of Iowa ; USCOURTS_ianb 2026 ; USCOURTS ; ianb ; 2026 >
     au < manifest ; 2026 ; United States District Court for the Northern District of Iowa ; USCOURTS_iand 2026 ; USCOURTS ; iand ; 2026 >
-    au < manifest ; 2026 ; United States District and Bankruptcy Courts for the District of Idaho ; USCOURTS_idd 2026 ; USCOURTS ; idd ; 2026 >
+    au < manifest ; 2026 ; United States District Courts for the District of Idaho ; USCOURTS_idd 2026 ; USCOURTS ; idd ; 2026 >
     au < manifest ; 2026 ; United States Bankruptcy Court for the District of Central Illinois ; USCOURTS_ilcb 2026 ; USCOURTS ; ilcb ; 2026 >
     au < manifest ; 2026 ; United States Bankruptcy Court for the District of Northern Illinois ; USCOURTS_ilnb 2026 ; USCOURTS ; ilnb ; 2026 >
     au < manifest ; 2026 ; United States Bankruptcy Court for the District of Southern Illinois ; USCOURTS_ilsb 2026 ; USCOURTS ; ilsb ; 2026 >
@@ -3508,6 +3508,38 @@
 
     au < manifest ; 2026 ; United States Bankruptcy Court for the District of Arizona ; USCOURTS_azb 2026 ; USCOURTS ; azb ; 2026 >
     au < manifest ; 2026 ; United States Bankruptcy Court for the District of North Dakota ; USCOURTS_ndb 2026 ; USCOURTS ; ndb ; 2026 >
+
+    au < manifest ; 2018 ; United States District Court for the Southern District of Alabama ; USCOURTS_alsd 2018 ; USCOURTS ; alsd ; 2018 >
+    au < manifest ; 2019 ; United States District Court for the Southern District of Alabama ; USCOURTS_alsd 2019 ; USCOURTS ; alsd ; 2019 >
+    au < manifest ; 2025 ; United States District Court for the Southern District of Alabama ; USCOURTS_alsd 2025 ; USCOURTS ; alsd ; 2025 >
+    au < manifest ; 2026 ; United States District Court for the Southern District of Alabama ; USCOURTS_alsd 2026 ; USCOURTS ; alsd ; 2026 >
+    au < manifest ; 2026 ; United States Court of Appeals for the Second Circuit ; USCOURTS_ca2 2026 ; USCOURTS ; ca2 ; 2026 >
+    au < manifest ; 2024 ; United States District Court for the Northern District of Florida ; USCOURTS_flnd 2024 ; USCOURTS ; flnd ; 2024 >
+    au < manifest ; 2025 ; United States District Court for the Northern District of Florida ; USCOURTS_flnd 2025 ; USCOURTS ; flnd ; 2025 >
+    au < manifest ; 2026 ; United States District Court for the Northern District of Florida ; USCOURTS_flnd 2026 ; USCOURTS ; flnd ; 2026 >
+    au < manifest ; 2026 ; United States Bankruptcy Court for the Eastern District of Missouri ; USCOURTS_moeb 2026 ; USCOURTS ; moeb ; 2026 >
+    au < manifest ; 2025 ; United States District Court for the Eastern District of Oklahoma ; USCOURTS_oked 2025 ; USCOURTS ; oked ; 2025 >
+    au < manifest ; 2026 ; United States District Court for the Eastern District of Oklahoma ; USCOURTS_oked 2026 ; USCOURTS ; oked ; 2026 >
+    au < manifest ; 2026 ; United States District Court for the District of Utah ; USCOURTS_utd 2026 ; USCOURTS ; utd ; 2026 >
+    au < manifest ; 2026 ; United States District Court for the Eastern District of Washington ; USCOURTS_waed 2026 ; USCOURTS ; waed ; 2026 >
+    au < manifest ; 2010 ; United States Bankruptcy Courts for the District of Idaho ; USCOURTS_idb 2010 ; USCOURTS ; idb ; 2010 >
+    au < manifest ; 2011 ; United States Bankruptcy Courts for the District of Idaho ; USCOURTS_idb 2011 ; USCOURTS ; idb ; 2011 >
+    au < manifest ; 2012 ; United States Bankruptcy Courts for the District of Idaho ; USCOURTS_idb 2012 ; USCOURTS ; idb ; 2012 >
+    au < manifest ; 2013 ; United States Bankruptcy Courts for the District of Idaho ; USCOURTS_idb 2013 ; USCOURTS ; idb ; 2013 >
+    au < manifest ; 2014 ; United States Bankruptcy Courts for the District of Idaho ; USCOURTS_idb 2014 ; USCOURTS ; idb ; 2014 >
+    au < manifest ; 2015 ; United States Bankruptcy Courts for the District of Idaho ; USCOURTS_idb 2015 ; USCOURTS ; idb ; 2015 >
+    au < manifest ; 2016 ; United States Bankruptcy Courts for the District of Idaho ; USCOURTS_idb 2016 ; USCOURTS ; idb ; 2016 >
+    au < manifest ; 2017 ; United States Bankruptcy Courts for the District of Idaho ; USCOURTS_idb 2017 ; USCOURTS ; idb ; 2017 >
+    au < manifest ; 2018 ; United States Bankruptcy Courts for the District of Idaho ; USCOURTS_idb 2018 ; USCOURTS ; idb ; 2018 >
+    au < manifest ; 2019 ; United States Bankruptcy Courts for the District of Idaho ; USCOURTS_idb 2019 ; USCOURTS ; idb ; 2019 >
+    au < manifest ; 2020 ; United States Bankruptcy Courts for the District of Idaho ; USCOURTS_idb 2020 ; USCOURTS ; idb ; 2020 >
+    au < manifest ; 2021 ; United States Bankruptcy Courts for the District of Idaho ; USCOURTS_idb 2021 ; USCOURTS ; idb ; 2021 >
+    au < manifest ; 2022 ; United States Bankruptcy Courts for the District of Idaho ; USCOURTS_idb 2022 ; USCOURTS ; idb ; 2022 >
+    au < manifest ; 2023 ; United States Bankruptcy Courts for the District of Idaho ; USCOURTS_idb 2023 ; USCOURTS ; idb ; 2023 >
+    au < manifest ; 2024 ; United States Bankruptcy Courts for the District of Idaho ; USCOURTS_idb 2024 ; USCOURTS ; idb ; 2024 >
+    au < manifest ; 2025 ; United States Bankruptcy Courts for the District of Idaho ; USCOURTS_idb 2025 ; USCOURTS ; idb ; 2025 >
+    au < manifest ; 2026 ; United States Bankruptcy Courts for the District of Idaho ; USCOURTS_idb 2026 ; USCOURTS ; idb ; 2026 >
+
 
   }
 

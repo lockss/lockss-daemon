@@ -8,6 +8,8 @@ tpath="/home/$LOGNAME/tmp"
 #mkdir -p $tpath
 
 # Read the CSV file and store mappings in an associative array
+# libguides.uakron.edu/bluebook/federalabbreviations
+# www.govinfo.gov/app/collection/uscourts/
 declare -A acronym_map
 while IFS=',' read -r acronym name; do
     acronym_map["$acronym"]="$name"
