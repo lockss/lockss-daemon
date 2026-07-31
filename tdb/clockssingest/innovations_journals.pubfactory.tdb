@@ -1,0 +1,95 @@
+{
+
+  publisher <
+    name = Innovations Journals ;
+    info[contract] = 2021 ;
+    info[back] = 2018 ;
+    info[tester] = 8 ;
+    info[platform] = PubFactory
+  >
+
+  plugin = needs.plugin
+  #plugin = org.lockss.plugin.pubfactory.manchesteruniversitypress.ClockssManchesterUniversityPressPlugin #Trial Plugin
+  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] > #pubfactory
+
+  {
+
+    title <
+      name = Journal of Immunotherapy and Precision Oncology ;
+      issn = 2666-2345 ;
+      eissn = 2590-017X 
+    >
+
+    param[base_url] = https://innovationsjournals-jipo.kglmeridian.com/
+    param[journal_id] = jipo
+
+    au < doNotProcess ; exists ; 2018 ; Journal of Immunotherapy and Precision Oncology Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2019 ; Journal of Immunotherapy and Precision Oncology Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2020 ; Journal of Immunotherapy and Precision Oncology Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 2021 ; Journal of Immunotherapy and Precision Oncology Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 2022 ; Journal of Immunotherapy and Precision Oncology Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 2023 ; Journal of Immunotherapy and Precision Oncology Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 2024 ; Journal of Immunotherapy and Precision Oncology Volume 7 ; 7 ; >
+    au < exists ; exists ; 2025 ; Journal of Immunotherapy and Precision Oncology Volume 8 ; 8 ; >
+    au < exists ; exists ; 2026 ; Journal of Immunotherapy and Precision Oncology Volume 9 ; 9 ; >
+
+  }
+  {
+
+    title <
+      name = Global Journal on Quality and Safety in Healthcare ;
+      issn = 2666-2353 ;
+      eissn = 2589-9449 
+    >
+
+    param[base_url] = https://innovationsjournals-jqsh.kglmeridian.com/
+    param[journal_id] = jqsh
+
+    au < doNotProcess ; exists ; 2018 ; Global Journal on Quality and Safety in Healthcare Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2019 ; Global Journal on Quality and Safety in Healthcare Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2020 ; Global Journal on Quality and Safety in Healthcare Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 2021 ; Global Journal on Quality and Safety in Healthcare Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 2022 ; Global Journal on Quality and Safety in Healthcare Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 2023 ; Global Journal on Quality and Safety in Healthcare Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 2024 ; Global Journal on Quality and Safety in Healthcare Volume 7 ; 7 ; >
+    au < exists ; exists ; 2025 ; Global Journal on Quality and Safety in Healthcare Volume 8 ; 8 ; >
+    au < exists ; exists ; 2026 ; Global Journal on Quality and Safety in Healthcare Volume 9 ; 9 ; >
+
+  }
+  {
+
+    title <
+      name = Innovations in Digital Health, Diagnostics, and Biomarkers ;
+      eissn = 2688-8130 
+    >
+
+    param[base_url] = https://innovationsjournals-iddb.kglmeridian.com/
+    param[journal_id] = idhd
+
+    au < doNotProcess ; exists ; 2021 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2022 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2023 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 2024 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 4 ; 4 ; >
+    au < exists ; exists ; 2025 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 5 ; 5 ; >
+    au < exists ; exists ; 2026 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 6 ; 6 ; >
+
+  }
+  {
+
+    title <
+      name = Innovations in Surgery and Interventional Medicine ;
+      eissn = 2688-8122 
+    >
+
+    param[base_url] = https://innovationsjournals-isim.kglmeridian.com/
+    param[journal_id] = isim
+
+    au < doNotProcess ; exists ; 2021 ; Innovations in Surgery and Interventional Medicine Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2022 ; Innovations in Surgery and Interventional Medicine Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2023 ; Innovations in Surgery and Interventional Medicine Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 2024 ; Innovations in Surgery and Interventional Medicine Volume 4 ; 4 ; >
+    au < exists ; exists ; 2025 ; Innovations in Surgery and Interventional Medicine Volume 5 ; 5 ; >
+    au < exists ; exists ; 2026 ; Innovations in Surgery and Interventional Medicine Volume 6 ; 6 ; >
+
+  }
+}
