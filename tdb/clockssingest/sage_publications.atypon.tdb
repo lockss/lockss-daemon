@@ -52,9 +52,9 @@
 
       #param[journal_id] = aca
 
-      au < manifest ; exists ; 1997 ; About Campus Volume 1 ; 1 ; acaa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1998 ; About Campus Volume 2 ; 2 ; acaa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1999 ; About Campus Volume 3 ; 3 ; acaa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1997 ; About Campus Volume 1 ; 1 ; acaa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1998 ; About Campus Volume 2 ; 2 ; acaa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1999 ; About Campus Volume 3 ; 3 ; acaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; About Campus Volume 4 ; 4 ; acaa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2001 ; About Campus Volume 5 ; 5 ; acaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; About Campus Volume 6 ; 6 ; acaa ; https://journals.sagepub.com/ ; >
@@ -95,36 +95,36 @@
 
       #param[base_url] = http://aax.sagepub.com/
 
-      au < manifest ; exists ; 1970 ; Abstracts in Anthropology Volume 1 ; 1 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1971 ; Abstracts in Anthropology Volume 2 ; 2 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1972 ; Abstracts in Anthropology Volume 3 ; 3 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1973 ; Abstracts in Anthropology Volume 4 ; 4 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1974 ; Abstracts in Anthropology Volume 5 ; 5 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1975 ; Abstracts in Anthropology Volume 6 ; 6 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1978 ; Abstracts in Anthropology Volume 7 ; 7 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1981 ; Abstracts in Anthropology Volume 8 ; 8 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1982 ; Abstracts in Anthropology Volume 9 ; 9 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1983 ; Abstracts in Anthropology Volume 10 ; 10 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1984 ; Abstracts in Anthropology Volume 11 ; 11 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1985 ; Abstracts in Anthropology Volume 12 ; 12 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1986 ; Abstracts in Anthropology Volume 13 ; 13 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1987 ; Abstracts in Anthropology Volume 14 ; 14 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1987 ; Abstracts in Anthropology Volume 15 ; 15 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1988 ; Abstracts in Anthropology Volume 16 ; 16 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1988 ; Abstracts in Anthropology Volume 17 ; 17 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1989 ; Abstracts in Anthropology Volume 18 ; 18 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1989 ; Abstracts in Anthropology Volume 19 ; 19 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1990 ; Abstracts in Anthropology Volume 20 ; 20 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1990 ; Abstracts in Anthropology Volume 21 ; 21 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1991 ; Abstracts in Anthropology Volume 22 ; 22 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1991 ; Abstracts in Anthropology Volume 23 ; 23 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1992 ; Abstracts in Anthropology Volume 24 ; 24 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1992 ; Abstracts in Anthropology Volume 25 ; 25 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1993 ; Abstracts in Anthropology Volume 26 ; 26 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1993 ; Abstracts in Anthropology Volume 27 ; 27 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1994 ; Abstracts in Anthropology Volume 28 ; 28 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1994 ; Abstracts in Anthropology Volume 29 ; 29 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1995 ; Abstracts in Anthropology Volume 30 ; 30 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1970 ; Abstracts in Anthropology Volume 1 ; 1 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1971 ; Abstracts in Anthropology Volume 2 ; 2 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1972 ; Abstracts in Anthropology Volume 3 ; 3 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1973 ; Abstracts in Anthropology Volume 4 ; 4 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1974 ; Abstracts in Anthropology Volume 5 ; 5 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1975 ; Abstracts in Anthropology Volume 6 ; 6 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1978 ; Abstracts in Anthropology Volume 7 ; 7 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1981 ; Abstracts in Anthropology Volume 8 ; 8 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1982 ; Abstracts in Anthropology Volume 9 ; 9 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1983 ; Abstracts in Anthropology Volume 10 ; 10 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1984 ; Abstracts in Anthropology Volume 11 ; 11 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1985 ; Abstracts in Anthropology Volume 12 ; 12 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1986 ; Abstracts in Anthropology Volume 13 ; 13 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1987 ; Abstracts in Anthropology Volume 14 ; 14 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1987 ; Abstracts in Anthropology Volume 15 ; 15 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1988 ; Abstracts in Anthropology Volume 16 ; 16 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1988 ; Abstracts in Anthropology Volume 17 ; 17 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1989 ; Abstracts in Anthropology Volume 18 ; 18 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1989 ; Abstracts in Anthropology Volume 19 ; 19 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1990 ; Abstracts in Anthropology Volume 20 ; 20 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1990 ; Abstracts in Anthropology Volume 21 ; 21 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1991 ; Abstracts in Anthropology Volume 22 ; 22 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1991 ; Abstracts in Anthropology Volume 23 ; 23 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1992 ; Abstracts in Anthropology Volume 24 ; 24 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1992 ; Abstracts in Anthropology Volume 25 ; 25 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1993 ; Abstracts in Anthropology Volume 26 ; 26 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1993 ; Abstracts in Anthropology Volume 27 ; 27 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1994 ; Abstracts in Anthropology Volume 28 ; 28 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1994 ; Abstracts in Anthropology Volume 29 ; 29 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1995 ; Abstracts in Anthropology Volume 30 ; 30 ; aaxa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 1995 ; Abstracts in Anthropology Volume 31 ; 31 ; aaxa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 1996 ; Abstracts in Anthropology Volume 32 ; 32 ; aaxa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 1996 ; Abstracts in Anthropology Volume 33 ; 33 ; aaxa ; https://journals.sagepub.com/ ; >
@@ -4146,8 +4146,8 @@
       au < manifest ; exists ; 2016 ; Antioxidants & Redox Signaling Volume 25 ; 25 ; area ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Antioxidants & Redox Signaling Volume 26 ; 26 ; area ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Antioxidants & Redox Signaling Volume 27 ; 27 ; area ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Antioxidants & Redox Signaling Volume 28 ; 28 ; area ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Antioxidants & Redox Signaling Volume 29 ; 29 ; area ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Antioxidants & Redox Signaling Volume 28 ; 28 ; area ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Antioxidants & Redox Signaling Volume 29 ; 29 ; area ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Antioxidants & Redox Signaling Volume 30 ; 30 ; area ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Antioxidants & Redox Signaling Volume 31 ; 31 ; area ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Antioxidants & Redox Signaling Volume 32 ; 32 ; area ; https://journals.sagepub.com/ ; >
@@ -5372,7 +5372,7 @@
       au < manifest ; exists ; 2015 ; Astrobiology Volume 15 ; 15 ; asba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Astrobiology Volume 16 ; 16 ; asba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Astrobiology Volume 17 ; 17 ; asba ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Astrobiology Volume 18 ; 18 ; asba ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Astrobiology Volume 18 ; 18 ; asba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Astrobiology Volume 19 ; 19 ; asba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Astrobiology Volume 20 ; 20 ; asba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Astrobiology Volume 21 ; 21 ; asba ; https://journals.sagepub.com/ ; >
@@ -6079,7 +6079,7 @@
 
       au < manifest ; exists ; 2016 ; Bariatric Nursing and Surgical Patient Care Volume 1 ; 1 ; barb ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Bariatric Nursing and Surgical Patient Care Volume 2 ; 2 ; barb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Bariatric Nursing and Surgical Patient Care Volume 3 ; 3 ; barb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Bariatric Nursing and Surgical Patient Care Volume 3 ; 3 ; barb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Bariatric Nursing and Surgical Patient Care Volume 4 ; 4 ; barb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Bariatric Nursing and Surgical Patient Care Volume 5 ; 5 ; barb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Bariatric Nursing and Surgical Patient Care Volume 6 ; 6 ; barb ; https://journals.sagepub.com/ ; >
@@ -6434,7 +6434,7 @@
       au < manifest ; exists ; 2015 ; Big Data Volume 3 ; 3 ; biga ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Big Data Volume 4 ; 4 ; biga ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Big Data Volume 5 ; 5 ; biga ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Big Data Volume 6 ; 6 ; biga ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Big Data Volume 6 ; 6 ; biga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Big Data Volume 7 ; 7 ; biga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Big Data Volume 8 ; 8 ; biga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Big Data Volume 9 ; 9 ; biga ; https://journals.sagepub.com/ ; >
@@ -6641,7 +6641,7 @@
       au < manifest ; exists ; 2015 ; Biopreservation and Biobanking Volume 13 ; 13 ; bpba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Biopreservation and Biobanking Volume 14 ; 14 ; bpba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Biopreservation and Biobanking Volume 15 ; 15 ; bpba ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Biopreservation and Biobanking Volume 16 ; 16 ; bpba ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Biopreservation and Biobanking Volume 16 ; 16 ; bpba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Biopreservation and Biobanking Volume 17 ; 17 ; bpba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Biopreservation and Biobanking Volume 18 ; 18 ; bpba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Biopreservation and Biobanking Volume 19 ; 19 ; bpba ; https://journals.sagepub.com/ ; >
@@ -6800,7 +6800,7 @@
       au < manifest ; exists ; 2015 ; Biotechnology Law Report Volume 34 ; 34 ; blra ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Biotechnology Law Report Volume 35 ; 35 ; blra ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Biotechnology Law Report Volume 36 ; 36 ; blra ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Biotechnology Law Report Volume 37 ; 37 ; blra ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Biotechnology Law Report Volume 37 ; 37 ; blra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Biotechnology Law Report Volume 38 ; 38 ; blra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Biotechnology Law Report Volume 39 ; 39 ; blra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Biotechnology Law Report Volume 40 ; 40 ; blra ; https://journals.sagepub.com/ ; >
@@ -6896,7 +6896,7 @@
       au < manifest ; exists ; 2015 ; Brain Connectivity Volume 5 ; 5 ; brca ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Brain Connectivity Volume 6 ; 6 ; brca ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Brain Connectivity Volume 7 ; 7 ; brca ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Brain Connectivity Volume 8 ; 8 ; brca ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Brain Connectivity Volume 8 ; 8 ; brca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Brain Connectivity Volume 9 ; 9 ; brca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Brain Connectivity Volume 10 ; 10 ; brca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Brain Connectivity Volume 11 ; 11 ; brca ; https://journals.sagepub.com/ ; >
@@ -6998,7 +6998,7 @@
       au < manifest ; exists ; 2015 ; Breastfeeding Medicine Volume 10 ; 10 ; bfma ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Breastfeeding Medicine Volume 11 ; 11 ; bfma ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Breastfeeding Medicine Volume 12 ; 12 ; bfma ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Breastfeeding Medicine Volume 13 ; 13 ; bfma ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Breastfeeding Medicine Volume 13 ; 13 ; bfma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Breastfeeding Medicine Volume 14 ; 14 ; bfma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Breastfeeding Medicine Volume 15 ; 15 ; bfma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Breastfeeding Medicine Volume 16 ; 16 ; bfma ; https://journals.sagepub.com/ ; >
@@ -8727,7 +8727,7 @@
       au < manifest ; exists ; 2015 ; Cancer Biotherapy and Radiopharmaceuticals Volume 30 ; 30 ; cbta ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Cancer Biotherapy and Radiopharmaceuticals Volume 31 ; 31 ; cbta ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Cancer Biotherapy and Radiopharmaceuticals Volume 32 ; 32 ; cbta ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Cancer Biotherapy and Radiopharmaceuticals Volume 33 ; 33 ; cbta ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Cancer Biotherapy and Radiopharmaceuticals Volume 33 ; 33 ; cbta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Cancer Biotherapy and Radiopharmaceuticals Volume 34 ; 34 ; cbta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Cancer Biotherapy and Radiopharmaceuticals Volume 35 ; 35 ; cbta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Cancer Biotherapy and Radiopharmaceuticals Volume 36 ; 36 ; cbta ; https://journals.sagepub.com/ ; >
@@ -8750,7 +8750,7 @@
 
       au < manifest ; exists ; 2016 ; Cannabis & Cannabinoid Research Volume 1 ; 1 ; ccba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Cannabis & Cannabinoid Research Volume 2 ; 2 ; ccba ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Cannabis & Cannabinoid Research Volume 3 ; 3 ; ccba ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Cannabis & Cannabinoid Research Volume 3 ; 3 ; ccba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Cannabis & Cannabinoid Research Volume 4 ; 4 ; ccba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Cannabis & Cannabinoid Research Volume 5 ; 5 ; ccba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Cannabis & Cannabinoid Research Volume 6 ; 6 ; ccba ; https://journals.sagepub.com/ ; >
@@ -9124,7 +9124,7 @@
       au < manifest ; exists ; 2015 ; Cellular Reprogramming Volume 17 ; 17 ; clra ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Cellular Reprogramming Volume 18 ; 18 ; clra ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Cellular Reprogramming Volume 19 ; 19 ; clra ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Cellular Reprogramming Volume 20 ; 20 ; clra ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Cellular Reprogramming Volume 20 ; 20 ; clra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Cellular Reprogramming Volume 21 ; 21 ; clra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Cellular Reprogramming Volume 22 ; 22 ; clra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Cellular Reprogramming Volume 23 ; 23 ; clra ; https://journals.sagepub.com/ ; >
@@ -9425,7 +9425,7 @@
       au < manifest ; exists ; 2015 ; Childhood Obesity Volume 11 ; 11 ; cdoa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Childhood Obesity Volume 12 ; 12 ; cdoa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Childhood Obesity Volume 13 ; 13 ; cdoa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Childhood Obesity Volume 14 ; 14 ; cdoa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Childhood Obesity Volume 14 ; 14 ; cdoa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Childhood Obesity Volume 15 ; 15 ; cdoa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Childhood Obesity Volume 16 ; 16 ; cdoa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Childhood Obesity Volume 17 ; 17 ; cdoa ; https://journals.sagepub.com/ ; >
@@ -10497,7 +10497,7 @@
       au < manifest ; exists ; 2015 ; Clinical Thyroidology Volume 27 ; 27 ; ctha ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Clinical Thyroidology Volume 28 ; 28 ; ctha ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Clinical Thyroidology Volume 29 ; 29 ; ctha ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Clinical Thyroidology Volume 30 ; 30 ; ctha ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Clinical Thyroidology Volume 30 ; 30 ; ctha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Clinical Thyroidology Volume 31 ; 31 ; ctha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Clinical Thyroidology Volume 32 ; 32 ; ctha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Clinical Thyroidology Volume 33 ; 33 ; ctha ; https://journals.sagepub.com/ ; >
@@ -12532,15 +12532,15 @@
     >
       #journal_id = TCJ
 
-      au < manifest ; exists ; 2018 ; The CRISPR Journal Volume 1 ; 1 ; tcja ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2019 ; The CRISPR Journal Volume 2 ; 2 ; tcja ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; The CRISPR Journal Volume 1 ; 1 ; tcja ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2019 ; The CRISPR Journal Volume 2 ; 2 ; tcja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; The CRISPR Journal Volume 3 ; 3 ; tcja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; The CRISPR Journal Volume 4 ; 4 ; tcja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; The CRISPR Journal Volume 5 ; 5 ; tcja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2023 ; The CRISPR Journal Volume 6 ; 6 ; tcja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2024 ; The CRISPR Journal Volume 7 ; 7 ; tcja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; The CRISPR Journal Volume 8 ; 8 ; tcja ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; The CRISPR Journal Volume 9 ; 9 ; tcja ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; The CRISPR Journal Volume 9 ; 9 ; tcja ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -13204,7 +13204,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; A Current Bibliography on African Affairs Volume 55 ; 55 ; cbaa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; A Current Bibliography on African Affairs Volume 56 ; 56 ; cbaa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; A Current Bibliography on African Affairs Volume 57 ; 57 ; cbaa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; A Current Bibliography on African Affairs Volume 58 ; 58 ; cbaa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; A Current Bibliography on African Affairs Volume 58 ; 58 ; cbaa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2026-2027 ; A Current Bibliography on African Affairs Volume 59 ; 59 ; cbaa ; https://journals.sagepub.com/ ; >
 
   }
@@ -13375,7 +13375,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Currents in Biblical Research Volume 21 ; 21 ; cbib ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Currents in Biblical Research Volume 22 ; 22 ; cbib ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Currents in Biblical Research Volume 23 ; 23 ; cbib ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Currents in Biblical Research Volume 24 ; 24 ; cbib ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Currents in Biblical Research Volume 24 ; 24 ; cbib ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026-2027 ; Currents in Biblical Research Volume 25 ; 25 ; cbib ; https://journals.sagepub.com/ ; >
 
   }
@@ -13423,7 +13423,7 @@
       au < manifest ; exists ; 2015 ; Cyberpsychology, Behavior, and Social Networking Volume 18 ; 18 ; cyba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Cyberpsychology, Behavior, and Social Networking Volume 19 ; 19 ; cyba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Cyberpsychology, Behavior, and Social Networking Volume 20 ; 20 ; cyba ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Cyberpsychology, Behavior, and Social Networking Volume 21 ; 21 ; cyba ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Cyberpsychology, Behavior, and Social Networking Volume 21 ; 21 ; cyba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Cyberpsychology, Behavior, and Social Networking Volume 22 ; 22 ; cyba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Cyberpsychology, Behavior, and Social Networking Volume 23 ; 23 ; cyba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Cyberpsychology, Behavior, and Social Networking Volume 24 ; 24 ; cyba ; https://journals.sagepub.com/ ; >
@@ -13543,7 +13543,7 @@
       au < manifest ; exists ; 2015 ; Dermatitis Volume 26 ; 26 ; drma ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Dermatitis Volume 27 ; 27 ; drma ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Dermatitis Volume 28 ; 28 ; drma ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Dermatitis Volume 29 ; 29 ; drma ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Dermatitis Volume 29 ; 29 ; drma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Dermatitis Volume 30 ; 30 ; drma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Dermatitis Volume 31 ; 31 ; drma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Dermatitis Volume 32 ; 32 ; drma ; https://journals.sagepub.com/ ; >
@@ -13659,7 +13659,7 @@
       au < deepCrawl ; exists ; 2023 ; The Science of Diabetes Self-Management and Care Volume 49 ; 49 ; tdeb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; The Science of Diabetes Self-Management and Care Volume 50 ; 50 ; tdeb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; The Science of Diabetes Self-Management and Care Volume 51 ; 51 ; tdeb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; The Science of Diabetes Self-Management and Care Volume 52 ; 52 ; tdeb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; The Science of Diabetes Self-Management and Care Volume 52 ; 52 ; tdeb ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -13704,7 +13704,7 @@
       au < manifest ; exists ; 2015 ; Diabetes Technology & Therapeutics Volume 17 ; 17 ; dtta ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Diabetes Technology & Therapeutics Volume 18 ; 18 ; dtta ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Diabetes Technology & Therapeutics Volume 19 ; 19 ; dtta ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Diabetes Technology & Therapeutics Volume 20 ; 20 ; dtta ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Diabetes Technology & Therapeutics Volume 20 ; 20 ; dtta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Diabetes Technology & Therapeutics Volume 21 ; 21 ; dtta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Diabetes Technology & Therapeutics Volume 22 ; 22 ; dtta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Diabetes Technology & Therapeutics Volume 23 ; 23 ; dtta ; https://journals.sagepub.com/ ; >
@@ -14062,7 +14062,7 @@
       au < manifest ; exists ; 2015 ; DNA and Cell Biology Volume 34 ; 34 ; dnaa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; DNA and Cell Biology Volume 35 ; 35 ; dnaa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; DNA and Cell Biology Volume 36 ; 36 ; dnaa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; DNA and Cell Biology Volume 37 ; 37 ; dnaa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; DNA and Cell Biology Volume 37 ; 37 ; dnaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; DNA and Cell Biology Volume 38 ; 38 ; dnaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; DNA and Cell Biology Volume 39 ; 39 ; dnaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; DNA and Cell Biology Volume 40 ; 40 ; dnaa ; https://journals.sagepub.com/ ; >
@@ -14275,7 +14275,7 @@
       au < deepCrawl ; exists ; 2023 ; The Downside Review Volume 141 ; 141 ; tdra ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; The Downside Review Volume 142 ; 142 ; tdra ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; The Downside Review Volume 143 ; 143 ; tdra ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; The Downside Review Volume 144 ; 144 ; tdra ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; The Downside Review Volume 144 ; 144 ; tdra ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -14735,7 +14735,7 @@
       au < manifest ; exists ; 2015 ; Ecopsychology Volume 7 ; 7 ; ecoa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Ecopsychology Volume 8 ; 8 ; ecoa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Ecopsychology Volume 9 ; 9 ; ecoa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Ecopsychology Volume 10 ; 10 ; ecoa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Ecopsychology Volume 10 ; 10 ; ecoa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Ecopsychology Volume 11 ; 11 ; ecoa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Ecopsychology Volume 12 ; 12 ; ecoa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Ecopsychology Volume 13 ; 13 ; ecoa ; https://journals.sagepub.com/ ; >
@@ -15405,7 +15405,7 @@
       au < manifest ; exists ; 2015 ; Election Law Journal: Rules, Politics, and Policy Volume 14 ; 14 ; elea ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Election Law Journal: Rules, Politics, and Policy Volume 15 ; 15 ; elea ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Election Law Journal: Rules, Politics, and Policy Volume 16 ; 16 ; elea ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Election Law Journal: Rules, Politics, and Policy Volume 17 ; 17 ; elea ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Election Law Journal: Rules, Politics, and Policy Volume 17 ; 17 ; elea ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Election Law Journal: Rules, Politics, and Policy Volume 18 ; 18 ; elea ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Election Law Journal: Rules, Politics, and Policy Volume 19 ; 19 ; elea ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Election Law Journal: Rules, Politics, and Policy Volume 20 ; 20 ; elea ; https://journals.sagepub.com/ ; >
@@ -16244,7 +16244,7 @@
       au < manifest ; exists ; 2015 ; Environmental Engineering Science Volume 32 ; 32 ; eena ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Environmental Engineering Science Volume 33 ; 33 ; eena ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Environmental Engineering Science Volume 34 ; 34 ; eena ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Environmental Engineering Science Volume 35 ; 35 ; eena ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Environmental Engineering Science Volume 35 ; 35 ; eena ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Environmental Engineering Science Volume 36 ; 36 ; eena ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Environmental Engineering Science Volume 37 ; 37 ; eena ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Environmental Engineering Science Volume 38 ; 38 ; eena ; https://journals.sagepub.com/ ; >
@@ -16276,7 +16276,7 @@
       au < manifest ; exists ; 2015 ; Environmental Justice Volume 8 ; 8 ; ejua ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Environmental Justice Volume 9 ; 9 ; ejua ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Environmental Justice Volume 10 ; 10 ; ejua ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Environmental Justice Volume 11 ; 11 ; ejua ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Environmental Justice Volume 11 ; 11 ; ejua ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Environmental Justice Volume 12 ; 12 ; ejua ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Environmental Justice Volume 13 ; 13 ; ejua ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Environmental Justice Volume 14 ; 14 ; ejua ; https://journals.sagepub.com/ ; >
@@ -16392,7 +16392,7 @@
       au < frozen ; exists ; 2022 ; Environmental Policy and Law Volume 52 ; 52 ; epla ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022-2024 ; Environmental Policy and Law Volume 53 ; 53 ; epla ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Environmental Policy and Law Volume 54 ; 54 ; epla ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Environmental Policy and Law Volume 55 ; 55 ; epla ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Environmental Policy and Law Volume 55 ; 55 ; epla ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2026-2027 ; Environmental Policy and Law Volume 56 ; 56 ; epla ; https://journals.sagepub.com/ ; >
 
   }
@@ -17961,7 +17961,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Exceptional Children Volume 89 ; 89 ; ecxc ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Exceptional Children Volume 90 ; 90 ; ecxc ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2024-2025 ; Exceptional Children Volume 91 ; 91 ; ecxc ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Exceptional Children Volume 92 ; 92 ; ecxc ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Exceptional Children Volume 92 ; 92 ; ecxc ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026-2027 ; Exceptional Children Volume 93 ; 93 ; ecxc ; https://journals.sagepub.com/ ; >
 
   }
@@ -18111,7 +18111,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; The Expository Times Volume 134 ; 134 ; exta ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; The Expository Times Volume 135 ; 135 ; exta ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; The Expository Times Volume 136 ; 136 ; exta ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; The Expository Times Volume 137 ; 137 ; exta ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; The Expository Times Volume 137 ; 137 ; exta ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026-2027 ; The Expository Times Volume 138 ; 138 ; exta ; https://journals.sagepub.com/ ; >
 
   }
@@ -18399,7 +18399,7 @@
       au < deepCrawl ; exists ; 2023 ; The Family Journal Volume 31 ; 31 ; tfja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; The Family Journal Volume 32 ; 32 ; tfja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; The Family Journal Volume 33 ; 33 ; tfja ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; The Family Journal Volume 34 ; 34 ; tfja ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; The Family Journal Volume 34 ; 34 ; tfja ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -18526,7 +18526,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Feminist Theology Volume 31 ; 31 ; ftha ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Feminist Theology Volume 32 ; 32 ; ftha ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Feminist Theology Volume 33 ; 33 ; ftha ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Feminist Theology Volume 34 ; 34 ; ftha ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Feminist Theology Volume 34 ; 34 ; ftha ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026-2027 ; Feminist Theology Volume 35 ; 35 ; ftha ; https://journals.sagepub.com/ ; >
 
   }
@@ -19147,7 +19147,7 @@
       au < manifest ; exists ; 2015 ; Foodborne Pathogens and Disease Volume 12 ; 12 ; fpda ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Foodborne Pathogens and Disease Volume 13 ; 13 ; fpda ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Foodborne Pathogens and Disease Volume 14 ; 14 ; fpda ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Foodborne Pathogens and Disease Volume 15 ; 15 ; fpda ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Foodborne Pathogens and Disease Volume 15 ; 15 ; fpda ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Foodborne Pathogens and Disease Volume 16 ; 16 ; fpda ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Foodborne Pathogens and Disease Volume 17 ; 17 ; fpda ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Foodborne Pathogens and Disease Volume 18 ; 18 ; fpda ; https://journals.sagepub.com/ ; >
@@ -19528,7 +19528,7 @@
       au < manifest ; exists ; 2015 ; Games for Health Journal Volume 4 ; 4 ; gfha ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Games for Health Journal Volume 5 ; 5 ; gfha ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Games for Health Journal Volume 6 ; 6 ; gfha ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Games for Health Journal Volume 7 ; 7 ; gfha ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Games for Health Journal Volume 7 ; 7 ; gfha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Games for Health Journal Volume 8 ; 8 ; gfha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Games for Health Journal Volume 9 ; 9 ; gfha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Games for Health Journal Volume 10 ; 10 ; gfha ; https://journals.sagepub.com/ ; >
@@ -19735,7 +19735,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Journal of General Music Education Volume 36 ; 36 ; gmtc ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Journal of General Music Education Volume 37 ; 37 ; gmtc ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Journal of General Music Education Volume 38 ; 38 ; gmtc ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Journal of General Music Education Volume 39 ; 39 ; gmtc ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Journal of General Music Education Volume 39 ; 39 ; gmtc ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026-2027 ; Journal of General Music Education Volume 40 ; 40 ; gmtc ; https://journals.sagepub.com/ ; >
 
   }
@@ -19773,7 +19773,7 @@
       au < manifest ; exists ; 2015 ; Genetic Engineering & Biotechnology News Volume 35 ; 35 ; geba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Genetic Engineering & Biotechnology News Volume 36 ; 36 ; geba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Genetic Engineering & Biotechnology News Volume 37 ; 37 ; geba ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Genetic Engineering & Biotechnology News Volume 38 ; 38 ; geba ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Genetic Engineering & Biotechnology News Volume 38 ; 38 ; geba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Genetic Engineering & Biotechnology News Volume 39 ; 39 ; geba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Genetic Engineering & Biotechnology News Volume 40 ; 40 ; geba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Genetic Engineering & Biotechnology News Volume 41 ; 41 ; geba ; https://journals.sagepub.com/ ; >
@@ -19831,7 +19831,7 @@
       au < manifest ; exists ; 2015 ; Genetic Testing and Molecular Biomarkers Volume 19 ; 19 ; gtma ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Genetic Testing and Molecular Biomarkers Volume 20 ; 20 ; gtma ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Genetic Testing and Molecular Biomarkers Volume 21 ; 21 ; gtma ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Genetic Testing and Molecular Biomarkers Volume 22 ; 22 ; gtma ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Genetic Testing and Molecular Biomarkers Volume 22 ; 22 ; gtma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Genetic Testing and Molecular Biomarkers Volume 23 ; 23 ; gtma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Genetic Testing and Molecular Biomarkers Volume 24 ; 24 ; gtma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Genetic Testing and Molecular Biomarkers Volume 25 ; 25 ; gtma ; https://journals.sagepub.com/ ; >
@@ -21151,7 +21151,7 @@
       #journal_id = HEQ
 
       au < manifest ; exists ; 2017 ; Health Equity Volume 1 ; 1 ; heqa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Health Equity Volume 2 ; 2 ; heqa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Health Equity Volume 2 ; 2 ; heqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Health Equity Volume 3 ; 3 ; heqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Health Equity Volume 4 ; 4 ; heqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Health Equity Volume 5 ; 5 ; heqa ; https://journals.sagepub.com/ ; >
@@ -21203,7 +21203,7 @@
       au < manifest ; exists ; 2015 ; Health Security Volume 13 ; 13 ; hsca ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Health Security Volume 14 ; 14 ; hsca ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Health Security Volume 15 ; 15 ; hsca ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Health Security Volume 16 ; 16 ; hsca ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Health Security Volume 16 ; 16 ; hsca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Health Security Volume 17 ; 17 ; hsca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Health Security Volume 18 ; 18 ; hsca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Health Security Volume 19 ; 19 ; hsca ; https://journals.sagepub.com/ ; >
@@ -21349,7 +21349,7 @@
       au < manifest ; exists ; 2015 ; High Altitude Medicine & Biology Volume 16 ; 16 ; hama ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; High Altitude Medicine & Biology Volume 17 ; 17 ; hama ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; High Altitude Medicine & Biology Volume 18 ; 18 ; hama ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; High Altitude Medicine & Biology Volume 19 ; 19 ; hama ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; High Altitude Medicine & Biology Volume 19 ; 19 ; hama ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; High Altitude Medicine & Biology Volume 20 ; 20 ; hama ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; High Altitude Medicine & Biology Volume 21 ; 21 ; hama ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; High Altitude Medicine & Biology Volume 22 ; 22 ; hama ; https://journals.sagepub.com/ ; >
@@ -22268,7 +22268,7 @@
       au < manifest ; exists ; 2015 ; Human Gene Therapy Volume 26 ; 26 ; hgta ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Human Gene Therapy Volume 27 ; 27 ; hgta ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Human Gene Therapy Volume 28 ; 28 ; hgta ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Human Gene Therapy Volume 29 ; 29 ; hgta ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Human Gene Therapy Volume 29 ; 29 ; hgta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Human Gene Therapy Volume 30 ; 30 ; hgta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Human Gene Therapy Volume 31 ; 31 ; hgta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Human Gene Therapy Volume 32 ; 32 ; hgta ; https://journals.sagepub.com/ ; >
@@ -22870,7 +22870,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Imagination, Cognition and Personality Volume 42 ; 42 ; icaa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Imagination, Cognition and Personality Volume 43 ; 43 ; icaa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Imagination, Cognition and Personality Volume 44 ; 44 ; icaa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Imagination, Cognition and Personality Volume 45 ; 45 ; icaa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Imagination, Cognition and Personality Volume 45 ; 45 ; icaa ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026-2027 ; Imagination, Cognition and Personality Volume 46 ; 46 ; icaa ; https://journals.sagepub.com/ ; >
 
   }
@@ -23469,7 +23469,7 @@
       au < manifest ; exists ; 2015 ; Industrial Biotechnology Volume 11 ; 11 ; inda ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Industrial Biotechnology Volume 12 ; 12 ; inda ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Industrial Biotechnology Volume 13 ; 13 ; inda ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Industrial Biotechnology Volume 14 ; 14 ; inda ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Industrial Biotechnology Volume 14 ; 14 ; inda ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Industrial Biotechnology Volume 15 ; 15 ; inda ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2020 ; Industrial Biotechnology Volume 16 ; 16 ; inda ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Industrial Biotechnology Volume 17 ; 17 ; inda ; https://journals.sagepub.com/ ; >
@@ -23822,7 +23822,7 @@
       au < manifest ; exists ; 2015 ; Clinical OMICs Volume 2 ; 2 ; ipmb ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Clinical OMICs Volume 3 ; 3 ; ipmb ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Clinical OMICs Volume 4 ; 4 ; ipmb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Clinical OMICs Volume 5 ; 5 ; ipmb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Clinical OMICs Volume 5 ; 5 ; ipmb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Clinical OMICs Volume 6 ; 6 ; ipmb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Clinical OMICs Volume 7 ; 7 ; ipmb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Clinical OMICs Volume 8 ; 8 ; ipmb ; https://journals.sagepub.com/ ; >
@@ -23910,8 +23910,8 @@
       au < manifest ; exists ; 2015 ; Alternative and Complementary Therapies Volume 21 ; 21 ; ithb ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Alternative and Complementary Therapies Volume 22 ; 22 ; ithb ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Alternative and Complementary Therapies Volume 23 ; 23 ; ithb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Alternative and Complementary Therapies Volume 24 ; 24 ; ithb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2019 ; Alternative and Complementary Therapies Volume 25 ; 25 ; ithb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Alternative and Complementary Therapies Volume 24 ; 24 ; ithb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2019 ; Alternative and Complementary Therapies Volume 25 ; 25 ; ithb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Alternative and Complementary Therapies Volume 26 ; 26 ; ithb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Alternative and Complementary Therapies Volume 27 ; 27 ; ithb ; https://journals.sagepub.com/ ; >
 
@@ -24590,8 +24590,8 @@
       au < deepCrawl ; exists ; 2024 ; The International Journal of Aging and Human Development Volume 99 ; 99 ; ahdb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; The International Journal of Aging and Human Development Volume 100 ; 100 ; ahdb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; The International Journal of Aging and Human Development Volume 101 ; 101 ; ahdb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; The International Journal of Aging and Human Development Volume 102 ; 102 ; ahdb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; The International Journal of Aging and Human Development Volume 103 ; 103 ; ahdb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; The International Journal of Aging and Human Development Volume 102 ; 102 ; ahdb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; The International Journal of Aging and Human Development Volume 103 ; 103 ; ahdb ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -24675,7 +24675,7 @@
       au < deepCrawl ; exists ; 2025 ; International Journal of Applied Electromagnetics and Mechanics Volume 77 ; 77 ; aema ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; International Journal of Applied Electromagnetics and Mechanics Volume 78 ; 78 ; aema ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; International Journal of Applied Electromagnetics and Mechanics Volume 79 ; 79 ; aema ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; International Journal of Applied Electromagnetics and Mechanics Volume 80 ; 80 ; aema ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; International Journal of Applied Electromagnetics and Mechanics Volume 80 ; 80 ; aema ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026 ; International Journal of Applied Electromagnetics and Mechanics Volume 81 ; 81 ; aema ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026 ; International Journal of Applied Electromagnetics and Mechanics Volume 82 ; 82 ; aema ; https://journals.sagepub.com/ ; >
 
@@ -26860,7 +26860,7 @@
       au < deepCrawl ; exists ; 2023 ; International Journal of Stroke Volume 18 ; 18 ; wsoa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; International Journal of Stroke Volume 19 ; 19 ; wsoa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; International Journal of Stroke Volume 20 ; 20 ; wsoa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; International Journal of Stroke Volume 21 ; 21 ; wsoa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; International Journal of Stroke Volume 21 ; 21 ; wsoa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -27142,7 +27142,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Community Health Equity Research & Policy Volume 43 ; 43 ; qchb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Community Health Equity Research & Policy Volume 44 ; 44 ; qchb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Community Health Equity Research & Policy Volume 45 ; 45 ; qchb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Community Health Equity Research & Policy Volume 46 ; 46 ; qchb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Community Health Equity Research & Policy Volume 46 ; 46 ; qchb ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026-2027 ; Community Health Equity Research & Policy Volume 47 ; 47 ; qchb ; https://journals.sagepub.com/ ; >
 
   }
@@ -27906,7 +27906,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Intervention in School and Clinic Volume 58 ; 58 ; iscc ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Intervention in School and Clinic Volume 59 ; 59 ; iscc ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Intervention in School and Clinic Volume 60 ; 60 ; iscc ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Intervention in School and Clinic Volume 61 ; 61 ; iscc ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Intervention in School and Clinic Volume 61 ; 61 ; iscc ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026-2027 ; Intervention in School and Clinic Volume 62 ; 62 ; iscc ; https://journals.sagepub.com/ ; >
 
   }
@@ -28327,7 +28327,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Journal for the Study of the New Testament Volume 45 ; 45 ; jnta ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Journal for the Study of the New Testament Volume 46 ; 46 ; jnta ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Journal for the Study of the New Testament Volume 47 ; 47 ; jnta ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Journal for the Study of the New Testament Volume 48 ; 48 ; jnta ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Journal for the Study of the New Testament Volume 48 ; 48 ; jnta ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026-2027 ; Journal for the Study of the New Testament Volume 49 ; 49 ; jnta ; https://journals.sagepub.com/ ; >
 
   }
@@ -28391,7 +28391,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Journal for the Study of the Old Testament Volume 47 ; 47 ; jota ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Journal for the Study of the Old Testament Volume 48 ; 48 ; jota ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2024-2025 ; Journal for the Study of the Old Testament Volume 49 ; 49 ; jota ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Journal for the Study of the Old Testament Volume 50 ; 50 ; jota ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Journal for the Study of the Old Testament Volume 50 ; 50 ; jota ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026-2027 ; Journal for the Study of the Old Testament Volume 51 ; 51 ; jota ; https://journals.sagepub.com/ ; >
 
   }
@@ -28439,7 +28439,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Journal for the Study of the Pseudepigrapha Volume 32 ; 32 ; jspa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Journal for the Study of the Pseudepigrapha Volume 33 ; 33 ; jspa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Journal for the Study of the Pseudepigrapha Volume 34 ; 34 ; jspa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Journal for the Study of the Pseudepigrapha Volume 35 ; 35 ; jspa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Journal for the Study of the Pseudepigrapha Volume 35 ; 35 ; jspa ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026-2027 ; Journal for the Study of the Pseudepigrapha Volume 36 ; 36 ; jspa ; https://journals.sagepub.com/ ; >
 
   }
@@ -28511,8 +28511,8 @@
       au < manifest ; exists ; 2015 ; Journal of Adolescent and Young Adult Oncology Volume 4 ; 4 ; jaya ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Journal of Adolescent and Young Adult Oncology Volume 5 ; 5 ; jaya ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Journal of Adolescent and Young Adult Oncology Volume 6 ; 6 ; jaya ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Journal of Adolescent and Young Adult Oncology Volume 7 ; 7 ; jaya ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2019 ; Journal of Adolescent and Young Adult Oncology Volume 8 ; 8 ; jaya ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Journal of Adolescent and Young Adult Oncology Volume 7 ; 7 ; jaya ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2019 ; Journal of Adolescent and Young Adult Oncology Volume 8 ; 8 ; jaya ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Journal of Adolescent and Young Adult Oncology Volume 9 ; 9 ; jaya ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Journal of Adolescent and Young Adult Oncology Volume 10 ; 10 ; jaya ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; Journal of Adolescent and Young Adult Oncology Volume 11 ; 11 ; jaya ; https://journals.sagepub.com/ ; >
@@ -28609,7 +28609,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Adult and Continuing Education Volume 29 ; 29 ; adua ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Adult and Continuing Education Volume 30 ; 30 ; adua ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Adult and Continuing Education Volume 31 ; 31 ; adua ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Adult and Continuing Education Volume 32 ; 32 ; adua ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Adult and Continuing Education Volume 32 ; 32 ; adua ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -28705,7 +28705,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Advertising Education Volume 27 ; 27 ; adva ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Advertising Education Volume 28 ; 28 ; adva ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Advertising Education Volume 29 ; 29 ; adva ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Advertising Education Volume 30 ; 30 ; adva ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Advertising Education Volume 30 ; 30 ; adva ; https://journals.sagepub.com/ ; >
 
     }
 
@@ -28805,7 +28805,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Algorithms & Computational Technology Volume 17 ; 17 ; acta ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Algorithms & Computational Technology Volume 18 ; 18 ; acta ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Algorithms & Computational Technology Volume 19 ; 19 ; acta ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Algorithms & Computational Technology Volume 20 ; 20 ; acta ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Algorithms & Computational Technology Volume 20 ; 20 ; acta ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -28926,8 +28926,8 @@
       au < deepCrawl ; exists ; 2025 ; Journal of Alzheimer's Disease Volume 106 ; 106 ; alza ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Alzheimer's Disease Volume 107 ; 107 ; alza ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Alzheimer's Disease Volume 108 ; 108 ; alza ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Alzheimer's Disease Volume 109 ; 109 ; alza ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Alzheimer's Disease Volume 110 ; 110 ; alza ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Alzheimer's Disease Volume 109 ; 109 ; alza ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Alzheimer's Disease Volume 110 ; 110 ; alza ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2026 ; Journal of Alzheimer's Disease Volume 111 ; 111 ; alza ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2026 ; Journal of Alzheimer's Disease Volume 112 ; 112 ; alza ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026 ; Journal of Alzheimer's Disease Volume 113 ; 113 ; alza ; https://journals.sagepub.com/ ; >
@@ -28952,7 +28952,7 @@
       au < frozen ; exists ; 2023 ; Journal of Alzheimer's Disease Reports Volume 2023 ; 7 ; alra ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2024 ; Journal of Alzheimer's Disease Reports Volume 2024 ; 8 ; alra ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; Journal of Alzheimer's Disease Reports Volume 2025 ; 9 ; alra ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Alzheimer's Disease Reports Volume 2026 ; 10 ; alra ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Alzheimer's Disease Reports Volume 2026 ; 10 ; alra ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -28982,7 +28982,7 @@
       au < frozen ; exists ; 2023 ; Journal of Ambient Intelligence and Smart Environments Volume 15 ; 15 ; aisa ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2024 ; Journal of Ambient Intelligence and Smart Environments Volume 16 ; 16 ; aisa ; https://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; Journal of Ambient Intelligence and Smart Environments Volume 17 ; 17 ; aisa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Ambient Intelligence and Smart Environments Volume 18 ; 18 ; aisa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Ambient Intelligence and Smart Environments Volume 18 ; 18 ; aisa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -29263,7 +29263,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Asian Security and International Affairs Volume 10 ; 10 ; aiaa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Asian Security and International Affairs Volume 11 ; 11 ; aiaa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Asian Security and International Affairs Volume 12 ; 12 ; aiaa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Asian Security and International Affairs Volume 13 ; 13 ; aiaa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Asian Security and International Affairs Volume 13 ; 13 ; aiaa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -29557,7 +29557,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Journal of Biomaterials Applications Volume 37 ; 37 ; jbaa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Journal of Biomaterials Applications Volume 38 ; 38 ; jbaa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Journal of Biomaterials Applications Volume 39 ; 39 ; jbaa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Journal of Biomaterials Applications Volume 40 ; 40 ; jbaa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Journal of Biomaterials Applications Volume 40 ; 40 ; jbaa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2026-2027 ; Journal of Biomaterials Applications Volume 41 ; 41 ; jbaa ; https://journals.sagepub.com/ ; >
 
   }
@@ -29848,7 +29848,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Journal of Building Physics Volume 46 ; 46 ; jend ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Journal of Building Physics Volume 47 ; 47 ; jend ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2024-2025 ; Journal of Building Physics Volume 48 ; 48 ; jend ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Journal of Building Physics Volume 49 ; 49 ; jend ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Journal of Building Physics Volume 49 ; 49 ; jend ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2026-2027 ; Journal of Building Physics Volume 50 ; 50 ; jend ; https://journals.sagepub.com/ ; >
 
   }
@@ -30458,7 +30458,7 @@
       au < manifest ; exists ; 2015 ; Journal of Child and Adolescent Psychopharmacology Volume 22 ; 22 ; chaa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Journal of Child and Adolescent Psychopharmacology Volume 23 ; 23 ; chaa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Journal of Child and Adolescent Psychopharmacology Volume 24 ; 24 ; chaa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Journal of Child and Adolescent Psychopharmacology Volume 25 ; 25 ; chaa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Journal of Child and Adolescent Psychopharmacology Volume 25 ; 25 ; chaa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2019 ; Journal of Child and Adolescent Psychopharmacology Volume 26 ; 26 ; chaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Journal of Child and Adolescent Psychopharmacology Volume 27 ; 27 ; chaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Journal of Child and Adolescent Psychopharmacology Volume 28 ; 28 ; chaa ; https://journals.sagepub.com/ ; >
@@ -31107,7 +31107,7 @@
       au < manifest ; exists ; 2015 ; Journal of Computational Biology Volume 22 ; 22 ; cpba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Journal of Computational Biology Volume 23 ; 23 ; cpba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Journal of Computational Biology Volume 24 ; 24 ; cpba ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Journal of Computational Biology Volume 25 ; 25 ; cpba ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Journal of Computational Biology Volume 25 ; 25 ; cpba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Journal of Computational Biology Volume 26 ; 26 ; cpba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Journal of Computational Biology Volume 27 ; 27 ; cpba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Journal of Computational Biology Volume 28 ; 28 ; cpba ; https://journals.sagepub.com/ ; >
@@ -32101,7 +32101,7 @@
     #continues = 2348-2915
 
       au < deepCrawl ; exists ; 2025 ; Journal of Applied Dentistry and Oral Sciences Volume 11 ; 11 ; adoa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Applied Dentistry and Oral Sciences Volume 12 ; 12 ; adoa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Applied Dentistry and Oral Sciences Volume 12 ; 12 ; adoa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -32860,7 +32860,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Journal of Educational Technology Systems Volume 51 ; 51 ; etsa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Journal of Educational Technology Systems Volume 52 ; 52 ; etsa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Journal of Educational Technology Systems Volume 53 ; 53 ; etsa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Journal of Educational Technology Systems Volume 54 ; 54 ; etsa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Journal of Educational Technology Systems Volume 54 ; 54 ; etsa ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026-2027 ; Journal of Educational Technology Systems Volume 55 ; 55 ; etsa ; https://journals.sagepub.com/ ; >
 
   }
@@ -33990,7 +33990,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Journal of General Management Volume 48 ; 48 ; gema ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Journal of General Management Volume 49 ; 49 ; gema ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Journal of General Management Volume 50 ; 50 ; gema ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Journal of General Management Volume 51 ; 51 ; gema ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Journal of General Management Volume 51 ; 51 ; gema ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026-2027 ; Journal of General Management Volume 52 ; 52 ; gema ; https://journals.sagepub.com/ ; >
 
   }
@@ -34152,7 +34152,7 @@
     au < manifest ; exists ; 2015 ; Journal of Gynecologic Surgery Volume 31 ; 31 ; gyna ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; Journal of Gynecologic Surgery Volume 32 ; 32 ; gyna ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; Journal of Gynecologic Surgery Volume 33 ; 33 ; gyna ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2018 ; Journal of Gynecologic Surgery Volume 34 ; 34 ; gyna ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2018 ; Journal of Gynecologic Surgery Volume 34 ; 34 ; gyna ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2019 ; Journal of Gynecologic Surgery Volume 35 ; 35 ; gyna ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; Journal of Gynecologic Surgery Volume 36 ; 36 ; gyna ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; Journal of Gynecologic Surgery Volume 37 ; 37 ; gyna ; https://journals.sagepub.com/ ; >
@@ -34638,7 +34638,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Journal of Historical Research in Music Education Volume 44 ; 44 ; jhrb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Journal of Historical Research in Music Education Volume 45 ; 45 ; jhrb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2024-2025 ; Journal of Historical Research in Music Education Volume 46 ; 46 ; jhrb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Journal of Historical Research in Music Education Volume 47 ; 47 ; jhrb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Journal of Historical Research in Music Education Volume 47 ; 47 ; jhrb ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026-2027 ; Journal of Historical Research in Music Education Volume 48 ; 48 ; jhrb ; https://journals.sagepub.com/ ; >
 
   }
@@ -35222,7 +35222,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Journal of Industrial Textiles Volume 52 ; 52 ; jitc ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Journal of Industrial Textiles Volume 53 ; 53 ; jitc ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Journal of Industrial Textiles Volume 54 ; 54 ; jitc ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Journal of Industrial Textiles Volume 55 ; 55 ; jitc ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Journal of Industrial Textiles Volume 55 ; 55 ; jitc ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2026-2027 ; Journal of Industrial Textiles Volume 56 ; 56 ; jitc ; https://journals.sagepub.com/ ; >
 
   }
@@ -35424,7 +35424,7 @@
     au < deepCrawl ; exists ; 2023 ; Journal of Information Technology Teaching Cases Volume 13 ; 13 ; ttca ; https://journals.sagepub.com/ ; >
     au < deepCrawl ; exists ; 2024 ; Journal of Information Technology Teaching Cases Volume 14 ; 14 ; ttca ; https://journals.sagepub.com/ ; >
     au < deepCrawl ; exists ; 2025 ; Journal of Information Technology Teaching Cases Volume 15 ; 15 ; ttca ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2026 ; Journal of Information Technology Teaching Cases Volume 16 ; 16 ; ttca ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2026 ; Journal of Information Technology Teaching Cases Volume 16 ; 16 ; ttca ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -35500,7 +35500,7 @@
     au < manifest ; exists ; 2015 ; The Journal of Alternative and Complementary Medicine Volume 21 ; 21 ; cpmc ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; The Journal of Alternative and Complementary Medicine Volume 22 ; 22 ; cpmc ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; The Journal of Alternative and Complementary Medicine Volume 23 ; 23 ; cpmc ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2018 ; The Journal of Alternative and Complementary Medicine Volume 24 ; 24 ; cpmc ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2018 ; The Journal of Alternative and Complementary Medicine Volume 24 ; 24 ; cpmc ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2019 ; The Journal of Alternative and Complementary Medicine Volume 25 ; 25 ; cpmc ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; The Journal of Alternative and Complementary Medicine Volume 26 ; 26 ; cpmc ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; The Journal of Alternative and Complementary Medicine Volume 27 ; 27 ; cpmc ; https://journals.sagepub.com/ ; >
@@ -35591,7 +35591,7 @@
       au < frozen ; exists ; 2021 ; Journal of Intelligent & Fuzzy Systems Volume 41 ; 41 ; ifsa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021-2022 ; Journal of Intelligent & Fuzzy Systems Volume 42 ; 42 ; ifsa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; Journal of Intelligent & Fuzzy Systems Volume 43 ; 43 ; ifsa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2023 ; Journal of Intelligent & Fuzzy Systems Volume 44 ; 44 ; ifsa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2023 ; Journal of Intelligent & Fuzzy Systems Volume 44 ; 44 ; ifsa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2023 ; Journal of Intelligent & Fuzzy Systems Volume 45 ; 45 ; ifsa ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2024 ; Journal of Intelligent & Fuzzy Systems Volume 46 ; 46 ; ifsa ; https://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2024 ; Journal of Intelligent & Fuzzy Systems Volume 47 ; 47 ; ifsa ; https://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
@@ -37166,8 +37166,8 @@
     au < manifest ; exists ; 2015 ; Journal of Medicinal Food Volume 18 ; 18 ; mefa ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; Journal of Medicinal Food Volume 19 ; 19 ; mefa ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; Journal of Medicinal Food Volume 20 ; 20 ; mefa ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2018 ; Journal of Medicinal Food Volume 21 ; 21 ; mefa ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2019 ; Journal of Medicinal Food Volume 22 ; 22 ; mefa ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2018 ; Journal of Medicinal Food Volume 21 ; 21 ; mefa ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2019 ; Journal of Medicinal Food Volume 22 ; 22 ; mefa ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; Journal of Medicinal Food Volume 23 ; 23 ; mefa ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; Journal of Medicinal Food Volume 24 ; 24 ; mefa ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2022 ; Journal of Medicinal Food Volume 25 ; 25 ; mefa ; https://journals.sagepub.com/ ; >
@@ -37335,7 +37335,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Journal of Music Teacher Education Volume 32 ; 32 ; jmta ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Journal of Music Teacher Education Volume 33 ; 33 ; jmta ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Journal of Music Teacher Education Volume 34 ; 34 ; jmta ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Journal of Music Teacher Education Volume 35 ; 35 ; jmta ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Journal of Music Teacher Education Volume 35 ; 35 ; jmta ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026-2027 ; Journal of Music Teacher Education Volume 36 ; 36 ; jmta ; https://journals.sagepub.com/ ; >
 
   }
@@ -37554,8 +37554,8 @@
     au < manifest ; exists ; 2015 ; Journal of Neurotrauma Volume 31 ; 31 ; nrta ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; Journal of Neurotrauma Volume 32 ; 32 ; nrta ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; Journal of Neurotrauma Volume 33 ; 33 ; nrta ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2018 ; Journal of Neurotrauma Volume 34 ; 34 ; nrta ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2019 ; Journal of Neurotrauma Volume 35 ; 35 ; nrta ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2018 ; Journal of Neurotrauma Volume 34 ; 34 ; nrta ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2019 ; Journal of Neurotrauma Volume 35 ; 35 ; nrta ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; Journal of Neurotrauma Volume 36 ; 36 ; nrta ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; Journal of Neurotrauma Volume 37 ; 37 ; nrta ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2022 ; Journal of Neurotrauma Volume 38 ; 38 ; nrta ; https://journals.sagepub.com/ ; >
@@ -37648,8 +37648,8 @@
     au < manifest ; exists ; 2015 ; Journal of Ocular Pharmacology and Therapeutics Volume 31 ; 31 ; opta ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; Journal of Ocular Pharmacology and Therapeutics Volume 32 ; 32 ; opta ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; Journal of Ocular Pharmacology and Therapeutics Volume 33 ; 33 ; opta ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2018 ; Journal of Ocular Pharmacology and Therapeutics Volume 34 ; 34 ; opta ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2019 ; Journal of Ocular Pharmacology and Therapeutics Volume 35 ; 35 ; opta ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2018 ; Journal of Ocular Pharmacology and Therapeutics Volume 34 ; 34 ; opta ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2019 ; Journal of Ocular Pharmacology and Therapeutics Volume 35 ; 35 ; opta ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; Journal of Ocular Pharmacology and Therapeutics Volume 36 ; 36 ; opta ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; Journal of Ocular Pharmacology and Therapeutics Volume 37 ; 37 ; opta ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2022 ; Journal of Ocular Pharmacology and Therapeutics Volume 38 ; 38 ; opta ; https://journals.sagepub.com/ ; >
@@ -37967,8 +37967,8 @@
     au < manifest ; exists ; 2015 ; Journal of Palliative Medicine Volume 18 ; 18 ; plma ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; Journal of Palliative Medicine Volume 19 ; 19 ; plma ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; Journal of Palliative Medicine Volume 20 ; 20 ; plma ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2018 ; Journal of Palliative Medicine Volume 21 ; 21 ; plma ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2019 ; Journal of Palliative Medicine Volume 22 ; 22 ; plma ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2018 ; Journal of Palliative Medicine Volume 21 ; 21 ; plma ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2019 ; Journal of Palliative Medicine Volume 22 ; 22 ; plma ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; Journal of Palliative Medicine Volume 23 ; 23 ; plma ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; Journal of Palliative Medicine Volume 24 ; 24 ; plma ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2022 ; Journal of Palliative Medicine Volume 25 ; 25 ; plma ; https://journals.sagepub.com/ ; >
@@ -41440,7 +41440,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Tissue Engineering Volume 14 ; 14 ; teja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Tissue Engineering Volume 15 ; 15 ; teja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Tissue Engineering Volume 16 ; 16 ; teja ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Tissue Engineering Volume 17 ; 17 ; teja ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Tissue Engineering Volume 17 ; 17 ; teja ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -41489,7 +41489,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Transcultural Nursing Volume 34 ; 34 ; tcna ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Transcultural Nursing Volume 35 ; 35 ; tcna ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Transcultural Nursing Volume 36 ; 36 ; tcna ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Transcultural Nursing Volume 37 ; 37 ; tcna ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Transcultural Nursing Volume 37 ; 37 ; tcna ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -41855,7 +41855,7 @@
       au < frozen ; exists ; 2023-2024 ; Journal of Vestibular Research Volume 33 ; 33 ; vera ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2024 ; Journal of Vestibular Research Volume 34 ; 34 ; vera ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; Journal of Vestibular Research Volume 35 ; 35 ; vera ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Vestibular Research Volume 36 ; 36 ; vera ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Vestibular Research Volume 36 ; 36 ; vera ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -41956,7 +41956,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Veterinary Diagnostic Investigation Volume 35 ; 35 ; vdia ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Veterinary Diagnostic Investigation Volume 36 ; 36 ; vdia ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Veterinary Diagnostic Investigation Volume 37 ; 37 ; vdia ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Veterinary Diagnostic Investigation Volume 38 ; 38 ; vdia ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Veterinary Diagnostic Investigation Volume 38 ; 38 ; vdia ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -42138,7 +42138,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of VitreoRetinal Diseases Volume 7 ; 7 ; vrda ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of VitreoRetinal Diseases Volume 8 ; 8 ; vrda ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of VitreoRetinal Diseases Volume 9 ; 9 ; vrda ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of VitreoRetinal Diseases Volume 10 ; 10 ; vrda ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of VitreoRetinal Diseases Volume 10 ; 10 ; vrda ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -42263,7 +42263,7 @@
       au < frozen ; exists ; 2023 ; Journal of X-Ray Science and Technology Volume 31 ; 31 ; xsta ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2024 ; Journal of X-Ray Science and Technology Volume 32 ; 32 ; xsta ; https://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2025 ; Journal of X-Ray Science and Technology Volume 33 ; 33 ; xsta ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of X-Ray Science and Technology Volume 34 ; 34 ; xsta ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of X-Ray Science and Technology Volume 34 ; 34 ; xsta ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -42328,8 +42328,8 @@
     au < manifest ; exists ; 2015 ; Journal of Women's Health Volume 24 ; 24 ; jwha ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; Journal of Women's Health Volume 25 ; 25 ; jwha ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; Journal of Women's Health Volume 26 ; 26 ; jwha ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2018 ; Journal of Women's Health Volume 27 ; 27 ; jwha ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2019 ; Journal of Women's Health Volume 28 ; 28 ; jwha ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2018 ; Journal of Women's Health Volume 27 ; 27 ; jwha ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2019 ; Journal of Women's Health Volume 28 ; 28 ; jwha ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; Journal of Women's Health Volume 29 ; 29 ; jwha ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; Journal of Women's Health Volume 30 ; 30 ; jwha ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2022 ; Journal of Women's Health Volume 31 ; 31 ; jwha ; https://journals.sagepub.com/ ; >
@@ -42755,8 +42755,8 @@
     au < manifest ; exists ; 2015 ; LGBT Health Volume 2 ; 2 ; lgba ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; LGBT Health Volume 3 ; 3 ; lgba ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; LGBT Health Volume 4 ; 4 ; lgba ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2018 ; LGBT Health Volume 5 ; 5 ; lgba ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2019 ; LGBT Health Volume 6 ; 6 ; lgba ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2018 ; LGBT Health Volume 5 ; 5 ; lgba ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2019 ; LGBT Health Volume 6 ; 6 ; lgba ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; LGBT Health Volume 7 ; 7 ; lgba ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; LGBT Health Volume 8 ; 8 ; lgba ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2022 ; LGBT Health Volume 9 ; 9 ; lgba ; https://journals.sagepub.com/ ; >
@@ -43284,7 +43284,7 @@
       au < frozen ; exists ; 2019 ; Lighting Design + Application Volume 49 ; 49 ; ldaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Lighting Design + Application Volume 50 ; 50 ; ldaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Lighting Design + Application Volume 51 ; 51 ; ldaa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2022 ; Lighting Design + Application Volume 52 ; 52 ; ldaa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2022 ; Lighting Design + Application Volume 52 ; 52 ; ldaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2023 ; Lighting Design + Application Volume 53 ; 53 ; ldaa ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2024 ; Lighting Design + Application Volume 54 ; 54 ; ldaa ; https://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; Lighting Design + Application Volume 55 ; 55 ; ldaa ; https://journals.sagepub.com/ ; >
@@ -43639,8 +43639,8 @@
     au < manifest ; exists ; 2015 ; Lymphatic Research and Biology Volume 13 ; 13 ; lrba ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; Lymphatic Research and Biology Volume 14 ; 14 ; lrba ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; Lymphatic Research and Biology Volume 15 ; 15 ; lrba ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2018 ; Lymphatic Research and Biology Volume 16 ; 16 ; lrba ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2019 ; Lymphatic Research and Biology Volume 17 ; 17 ; lrba ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2018 ; Lymphatic Research and Biology Volume 16 ; 16 ; lrba ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2019 ; Lymphatic Research and Biology Volume 17 ; 17 ; lrba ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; Lymphatic Research and Biology Volume 18 ; 18 ; lrba ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; Lymphatic Research and Biology Volume 19 ; 19 ; lrba ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2022 ; Lymphatic Research and Biology Volume 20 ; 20 ; lrba ; https://journals.sagepub.com/ ; >
@@ -44572,7 +44572,7 @@
     au < frozen ; exists ; 2023 ; Medical Acupuncture Volume 35 ; 35 ; acua ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2024 ; Medical Acupuncture Volume 36 ; 36 ; acua ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2025 ; Medical Acupuncture Volume 37 ; 37 ; acua ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2026 ; Medical Acupuncture Volume 38 ; 38 ; acua ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2026 ; Medical Acupuncture Volume 38 ; 38 ; acua ; https://journals.sagepub.com/ ; >
 
    }
 
@@ -45272,8 +45272,8 @@
     au < manifest ; exists ; 2015 ; Microbial Drug Resistance Volume 21 ; 21 ; mdra ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; Microbial Drug Resistance Volume 22 ; 22 ; mdra ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; Microbial Drug Resistance Volume 23 ; 23 ; mdra ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2018 ; Microbial Drug Resistance Volume 24 ; 24 ; mdra ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2019 ; Microbial Drug Resistance Volume 25 ; 25 ; mdra ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2018 ; Microbial Drug Resistance Volume 24 ; 24 ; mdra ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2019 ; Microbial Drug Resistance Volume 25 ; 25 ; mdra ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; Microbial Drug Resistance Volume 26 ; 26 ; mdra ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; Microbial Drug Resistance Volume 27 ; 27 ; mdra ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2022 ; Microbial Drug Resistance Volume 28 ; 28 ; mdra ; https://journals.sagepub.com/ ; >
@@ -45374,7 +45374,7 @@
       au < frozen ; exists ; 2022-2023 ; Millennium - Journal of International Studies Volume 51 ; 51 ; mila ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2023-2024 ; Millennium - Journal of International Studies Volume 52 ; 52 ; mila ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Millennium - Journal of International Studies Volume 53 ; 53 ; mila ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Millennium - Journal of International Studies Volume 54 ; 54 ; mila ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Millennium - Journal of International Studies Volume 54 ; 54 ; mila ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -45626,8 +45626,8 @@
     au < manifest ; exists ; 2015 ; Monoclonal Antibodies in Immunodiagnosis & Immunotherapy Volume 34 ; 34 ; maia ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; Monoclonal Antibodies in Immunodiagnosis & Immunotherapy Volume 35 ; 35 ; maia ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; Monoclonal Antibodies in Immunodiagnosis & Immunotherapy Volume 36 ; 36 ; maia ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2018 ; Monoclonal Antibodies in Immunodiagnosis & Immunotherapy Volume 37 ; 37 ; maia ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2019 ; Monoclonal Antibodies in Immunodiagnosis & Immunotherapy Volume 38 ; 38 ; maia ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2018 ; Monoclonal Antibodies in Immunodiagnosis & Immunotherapy Volume 37 ; 37 ; maia ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2019 ; Monoclonal Antibodies in Immunodiagnosis & Immunotherapy Volume 38 ; 38 ; maia ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; Monoclonal Antibodies in Immunodiagnosis & Immunotherapy Volume 39 ; 39 ; maia ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; Monoclonal Antibodies in Immunodiagnosis & Immunotherapy Volume 40 ; 40 ; maia ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2022 ; Monoclonal Antibodies in Immunodiagnosis & Immunotherapy Volume 41 ; 41 ; maia ; https://journals.sagepub.com/ ; >
@@ -45921,7 +45921,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Music Educators Journal Volume 109 ; 109 ; mejc ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Music Educators Journal Volume 110 ; 110 ; mejc ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Music Educators Journal Volume 111 ; 111 ; mejc ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Music Educators Journal Volume 112 ; 112 ; mejc ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Music Educators Journal Volume 112 ; 112 ; mejc ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026-2027 ; Music Educators Journal Volume 113 ; 113 ; mejc ; https://journals.sagepub.com/ ; >
 
   }
@@ -47009,7 +47009,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; New Solutions Volume 32 ; 32 ; newa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; New Solutions Volume 33 ; 33 ; newa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; New Solutions Volume 34 ; 34 ; newa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; New Solutions Volume 35 ; 35 ; newa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; New Solutions Volume 35 ; 35 ; newa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2026-2027 ; New Solutions Volume 36 ; 36 ; newa ; https://journals.sagepub.com/ ; >
 
   }
@@ -47028,8 +47028,8 @@
     au < manifest ; exists ; 2015 ; New Space Volume 3 ; 3 ; nspa ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; New Space Volume 4 ; 4 ; nspa ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; New Space Volume 5 ; 5 ; nspa ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2018 ; New Space Volume 6 ; 6 ; nspa ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2019 ; New Space Volume 7 ; 7 ; nspa ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2018 ; New Space Volume 6 ; 6 ; nspa ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2019 ; New Space Volume 7 ; 7 ; nspa ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; New Space Volume 8 ; 8 ; nspa ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; New Space Volume 9 ; 9 ; nspa ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2022 ; New Space Volume 10 ; 10 ; nspa ; https://journals.sagepub.com/ ; >
@@ -47643,8 +47643,8 @@
     au < manifest ; exists ; 2015 ; Nucleic Acid Therapeutics Volume 25 ; 25 ; nata ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; Nucleic Acid Therapeutics Volume 26 ; 26 ; nata ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; Nucleic Acid Therapeutics Volume 27 ; 27 ; nata ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2018 ; Nucleic Acid Therapeutics Volume 28 ; 28 ; nata ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2019 ; Nucleic Acid Therapeutics Volume 29 ; 29 ; nata ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2018 ; Nucleic Acid Therapeutics Volume 28 ; 28 ; nata ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2019 ; Nucleic Acid Therapeutics Volume 29 ; 29 ; nata ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; Nucleic Acid Therapeutics Volume 30 ; 30 ; nata ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; Nucleic Acid Therapeutics Volume 31 ; 31 ; nata ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2022 ; Nucleic Acid Therapeutics Volume 32 ; 32 ; nata ; https://journals.sagepub.com/ ; >
@@ -48037,8 +48037,8 @@
     au < manifest ; exists ; 2015 ; OMICS: A Journal of Integrative Biology Volume 19 ; 19 ; omia ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; OMICS: A Journal of Integrative Biology Volume 20 ; 20 ; omia ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; OMICS: A Journal of Integrative Biology Volume 21 ; 21 ; omia ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2018 ; OMICS: A Journal of Integrative Biology Volume 22 ; 22 ; omia ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2019 ; OMICS: A Journal of Integrative Biology Volume 23 ; 23 ; omia ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2018 ; OMICS: A Journal of Integrative Biology Volume 22 ; 22 ; omia ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2019 ; OMICS: A Journal of Integrative Biology Volume 23 ; 23 ; omia ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; OMICS: A Journal of Integrative Biology Volume 24 ; 24 ; omia ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; OMICS: A Journal of Integrative Biology Volume 25 ; 25 ; omia ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2022 ; OMICS: A Journal of Integrative Biology Volume 26 ; 26 ; omia ; https://journals.sagepub.com/ ; >
@@ -48807,8 +48807,8 @@
     au < manifest ; exists ; 2015 ; Pediatric Allergy, Immunology, and Pulmonology Volume 28 ; 28 ; paia ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; Pediatric Allergy, Immunology, and Pulmonology Volume 29 ; 29 ; paia ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; Pediatric Allergy, Immunology, and Pulmonology Volume 30 ; 30 ; paia ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2018 ; Pediatric Allergy, Immunology, and Pulmonology Volume 31 ; 31 ; paia ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2019 ; Pediatric Allergy, Immunology, and Pulmonology Volume 32 ; 32 ; paia ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2018 ; Pediatric Allergy, Immunology, and Pulmonology Volume 31 ; 31 ; paia ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2019 ; Pediatric Allergy, Immunology, and Pulmonology Volume 32 ; 32 ; paia ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; Pediatric Allergy, Immunology, and Pulmonology Volume 33 ; 33 ; paia ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; Pediatric Allergy, Immunology, and Pulmonology Volume 34 ; 34 ; paia ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2022 ; Pediatric Allergy, Immunology, and Pulmonology Volume 35 ; 35 ; paia ; https://journals.sagepub.com/ ; >
@@ -49473,7 +49473,7 @@
         au < deepCrawl ; exists ; 2022-2023 ; Phi Delta Kappan Volume 104 ; 104 ; pdka ; https://journals.sagepub.com/ ; >
         au < deepCrawl ; exists ; 2023-2024 ; Phi Delta Kappan Volume 105 ; 105 ; pdka ; https://journals.sagepub.com/ ; >
         au < deepCrawl ; exists ; 2024-2025 ; Phi Delta Kappan Volume 106 ; 106 ; pdka ; https://journals.sagepub.com/ ; >
-        au < manifest ; exists ; 2025-2026 ; Phi Delta Kappan Volume 107 ; 107 ; pdka ; https://journals.sagepub.com/ ; >
+        au < ready ; exists ; 2025-2026 ; Phi Delta Kappan Volume 107 ; 107 ; pdka ; https://journals.sagepub.com/ ; >
         au < expected ; exists ; 2026-2027 ; Phi Delta Kappan Volume 108 ; 108 ; pdka ; https://journals.sagepub.com/ ; >
 
     }
@@ -49677,8 +49677,8 @@
     au < manifest ; exists ; 2015 ; Planned Giving Today Volume 26 ; 26 ; pgta ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; Planned Giving Today Volume 27 ; 27 ; pgta ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; Planned Giving Today Volume 28 ; 28 ; pgta ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2018 ; Planned Giving Today Volume 29 ; 29 ; pgta ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2019 ; Planned Giving Today Volume 30 ; 30 ; pgta ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2018 ; Planned Giving Today Volume 29 ; 29 ; pgta ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2019 ; Planned Giving Today Volume 30 ; 30 ; pgta ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; Planned Giving Today Volume 31 ; 31 ; pgta ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; Planned Giving Today Volume 32 ; 32 ; pgta ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2022 ; Planned Giving Today Volume 33 ; 33 ; pgta ; https://journals.sagepub.com/ ; >
@@ -50536,8 +50536,8 @@
       au < manifest ; exists ; 2015 ; Population Health Management Volume 18 ; 18 ; popa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Population Health Management Volume 19 ; 19 ; popa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Population Health Management Volume 20 ; 20 ; popa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Population Health Management Volume 21 ; 21 ; popa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2019 ; Population Health Management Volume 22 ; 22 ; popa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Population Health Management Volume 21 ; 21 ; popa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2019 ; Population Health Management Volume 22 ; 22 ; popa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Population Health Management Volume 23 ; 23 ; popa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Population Health Management Volume 24 ; 24 ; popa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; Population Health Management Volume 25 ; 25 ; popa ; https://journals.sagepub.com/ ; >
@@ -50694,7 +50694,7 @@
       au < deepCrawl ; exists ; 2023 ; The Prison Journal Volume 103 ; 103 ; tpjd ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; The Prison Journal Volume 104 ; 104 ; tpjd ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; The Prison Journal Volume 105 ; 105 ; tpjd ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; The Prison Journal Volume 106 ; 106 ; tpjd ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; The Prison Journal Volume 106 ; 106 ; tpjd ; https://journals.sagepub.com/ ; >
 
     }
 
@@ -53428,7 +53428,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Race & Class Volume 64 ; 64 ; racb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Race & Class Volume 65 ; 65 ; racb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Race & Class Volume 66 ; 66 ; racb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Race & Class Volume 67 ; 67 ; racb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Race & Class Volume 67 ; 67 ; racb ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2026-2027 ; Race & Class Volume 68 ; 68 ; racb ; https://journals.sagepub.com/ ; >
 
   }
@@ -53691,7 +53691,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Rehabilitation Counseling Bulletin Volume 66 ; 66 ; rcba ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Rehabilitation Counseling Bulletin Volume 67 ; 67 ; rcba ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Rehabilitation Counseling Bulletin Volume 68 ; 68 ; rcba ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Rehabilitation Counseling Bulletin Volume 69 ; 69 ; rcba ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Rehabilitation Counseling Bulletin Volume 69 ; 69 ; rcba ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026-2027 ; Rehabilitation Counseling Bulletin Volume 70 ; 70 ; rcba ; https://journals.sagepub.com/ ; >
 
   }
@@ -53738,8 +53738,8 @@
       au < manifest ; exists ; 2015 ; Rejuvenation Research Volume 18 ; 18 ; reja ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Rejuvenation Research Volume 19 ; 19 ; reja ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Rejuvenation Research Volume 20 ; 20 ; reja ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Rejuvenation Research Volume 21 ; 21 ; reja ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2019 ; Rejuvenation Research Volume 22 ; 22 ; reja ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Rejuvenation Research Volume 21 ; 21 ; reja ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2019 ; Rejuvenation Research Volume 22 ; 22 ; reja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Rejuvenation Research Volume 23 ; 23 ; reja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Rejuvenation Research Volume 24 ; 24 ; reja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; Rejuvenation Research Volume 25 ; 25 ; reja ; https://journals.sagepub.com/ ; >
@@ -57240,8 +57240,8 @@
       au < manifest ; exists ; 2015 ; Soft Robotics Volume 2 ; 2 ; srba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Soft Robotics Volume 3 ; 3 ; srba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Soft Robotics Volume 4 ; 4 ; srba ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Soft Robotics Volume 5 ; 5 ; srba ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2019 ; Soft Robotics Volume 6 ; 6 ; srba ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Soft Robotics Volume 5 ; 5 ; srba ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2019 ; Soft Robotics Volume 6 ; 6 ; srba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Soft Robotics Volume 7 ; 7 ; srba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Soft Robotics Volume 8 ; 8 ; srba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; Soft Robotics Volume 9 ; 9 ; srba ; https://journals.sagepub.com/ ; >
@@ -57626,8 +57626,8 @@
       au < manifest ; exists ; 2015 ; Sport Marketing Quarterly Volume 24 ; 24 ; qsma ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Sport Marketing Quarterly Volume 25 ; 25 ; qsma ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Sport Marketing Quarterly Volume 26 ; 26 ; qsma ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Sport Marketing Quarterly Volume 27 ; 27 ; qsma ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2019 ; Sport Marketing Quarterly Volume 28 ; 28 ; qsma ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Sport Marketing Quarterly Volume 27 ; 27 ; qsma ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2019 ; Sport Marketing Quarterly Volume 28 ; 28 ; qsma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Sport Marketing Quarterly Volume 29 ; 29 ; qsma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Sport Marketing Quarterly Volume 30 ; 30 ; qsma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; Sport Marketing Quarterly Volume 31 ; 31 ; qsma ; https://journals.sagepub.com/ ; >
@@ -57967,8 +57967,8 @@
       au < manifest ; exists ; 2015 ; Stem Cells and Development Volume 24 ; 24 ; stca ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Stem Cells and Development Volume 25 ; 25 ; stca ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Stem Cells and Development Volume 26 ; 26 ; stca ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Stem Cells and Development Volume 27 ; 27 ; stca ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2019 ; Stem Cells and Development Volume 28 ; 28 ; stca ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Stem Cells and Development Volume 27 ; 27 ; stca ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2019 ; Stem Cells and Development Volume 28 ; 28 ; stca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Stem Cells and Development Volume 29 ; 29 ; stca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Stem Cells and Development Volume 30 ; 30 ; stca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; Stem Cells and Development Volume 31 ; 31 ; stca ; https://journals.sagepub.com/ ; >
@@ -58477,8 +58477,8 @@
       au < manifest ; exists ; 2015 ; Surgical Infections Volume 16 ; 16 ; sura ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Surgical Infections Volume 17 ; 17 ; sura ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Surgical Infections Volume 18 ; 18 ; sura ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Surgical Infections Volume 19 ; 19 ; sura ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2019 ; Surgical Infections Volume 20 ; 20 ; sura ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Surgical Infections Volume 19 ; 19 ; sura ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2019 ; Surgical Infections Volume 20 ; 20 ; sura ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Surgical Infections Volume 21 ; 21 ; sura ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Surgical Infections Volume 22 ; 22 ; sura ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; Surgical Infections Volume 23 ; 23 ; sura ; https://journals.sagepub.com/ ; >
@@ -58568,8 +58568,8 @@
       au < manifest ; exists ; 2015 ; Sustainability : The Journal of Record Volume 8 ; 8 ; sclb ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Sustainability : The Journal of Record Volume 9 ; 9 ; sclb ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Sustainability : The Journal of Record Volume 10 ; 10 ; sclb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Sustainability : The Journal of Record Volume 11 ; 11 ; sclb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2019 ; Sustainability : The Journal of Record Volume 12 ; 12 ; sclb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Sustainability : The Journal of Record Volume 11 ; 11 ; sclb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2019 ; Sustainability : The Journal of Record Volume 12 ; 12 ; sclb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Sustainability : The Journal of Record Volume 13 ; 13 ; sclb ; https://journals.sagepub.com/ ; >
 
   }
@@ -58650,7 +58650,7 @@
       au < deepCrawl ; exists ; 2023 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 46 ; 46 ; tesa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 47 ; 47 ; tesa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 48 ; 48 ; tesa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 49 ; 49 ; tesa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 49 ; 49 ; tesa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -58720,7 +58720,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; TEACHING Exceptional Children Volume 55 ; 55 ; tcxa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; TEACHING Exceptional Children Volume 56 ; 56 ; tcxa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; TEACHING Exceptional Children Volume 57 ; 57 ; tcxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; TEACHING Exceptional Children Volume 58 ; 58 ; tcxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; TEACHING Exceptional Children Volume 58 ; 58 ; tcxa ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026-2027 ; TEACHING Exceptional Children Volume 59 ; 59 ; tcxa ; https://journals.sagepub.com/ ; >
 
   }
@@ -58786,7 +58786,7 @@
       au < deepCrawl ; exists ; 2023 ; Teaching of Psychology Volume 50 ; 50 ; topa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Teaching of Psychology Volume 51 ; 51 ; topa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Teaching of Psychology Volume 52 ; 52 ; topa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Teaching of Psychology Volume 53 ; 53 ; topa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Teaching of Psychology Volume 53 ; 53 ; topa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -58841,7 +58841,7 @@
       au < frozen ; exists ; 2023 ; Teaching Public Administration Volume 41 ; 41 ; tpaa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Teaching Public Administration Volume 42 ; 42 ; tpaa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Teaching Public Administration Volume 43 ; 43 ; tpaa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Teaching Public Administration Volume 44 ; 44 ; tpaa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Teaching Public Administration Volume 44 ; 44 ; tpaa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -58876,7 +58876,7 @@
       au < deepCrawl ; exists ; 2023 ; Teaching Sociology Volume 51 ; 51 ; tsoa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Teaching Sociology Volume 52 ; 52 ; tsoa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Teaching Sociology Volume 53 ; 53 ; tsoa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Teaching Sociology Volume 54 ; 54 ; tsoa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Teaching Sociology Volume 54 ; 54 ; tsoa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -58972,7 +58972,7 @@
       au < frozen ; exists ; 2023 ; Technology and Health Care Volume 31 ; 31 ; thca ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2024 ; Technology and Health Care Volume 32 ; 32 ; thca ; https://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; Technology and Health Care Volume 33 ; 33 ; thca ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Technology and Health Care Volume 34 ; 34 ; thca ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Technology and Health Care Volume 34 ; 34 ; thca ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -59009,7 +59009,7 @@
       au < deepCrawl ; exists ; 2023 ; Technology in Cancer Research & Treatment Volume 22 ; 22 ; tcta ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Technology in Cancer Research & Treatment Volume 23 ; 23 ; tcta ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Technology in Cancer Research & Treatment Volume 24 ; 24 ; tcta ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Technology in Cancer Research & Treatment Volume 25 ; 25 ; tcta ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Technology in Cancer Research & Treatment Volume 25 ; 25 ; tcta ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -59058,15 +59058,15 @@
       au < manifest ; exists ; 2015 ; Telemedicine and e-Health Volume 21 ; 21 ; teha ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Telemedicine and e-Health Volume 22 ; 22 ; teha ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Telemedicine and e-Health Volume 23 ; 23 ; teha ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Telemedicine and e-Health Volume 24 ; 24 ; teha ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2019 ; Telemedicine and e-Health Volume 25 ; 25 ; teha ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Telemedicine and e-Health Volume 24 ; 24 ; teha ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2019 ; Telemedicine and e-Health Volume 25 ; 25 ; teha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Telemedicine and e-Health Volume 26 ; 26 ; teha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Telemedicine and e-Health Volume 27 ; 27 ; teha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; Telemedicine and e-Health Volume 28 ; 28 ; teha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2023 ; Telemedicine and e-Health Volume 29 ; 29 ; teha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2024 ; Telemedicine and e-Health Volume 30 ; 30 ; teha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Telemedicine and e-Health Volume 31 ; 31 ; teha ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Telemedicine and e-Health Volume 32 ; 32 ; teha ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Telemedicine and e-Health Volume 32 ; 32 ; teha ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -59084,7 +59084,7 @@
       au < frozen ; exists ; 2023 ; Telemedicine Reports Volume 4 ; 4 ; tmra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2024 ; Telemedicine Reports Volume 5 ; 5 ; tmra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Telemedicine Reports Volume 6 ; 6 ; tmra ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Telemedicine Reports Volume 7 ; 7 ; tmra ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Telemedicine Reports Volume 7 ; 7 ; tmra ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -59123,7 +59123,7 @@
       au < deepCrawl ; exists ; 2023 ; Television & New Media Volume 24 ; 24 ; tvna ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Television & New Media Volume 25 ; 25 ; tvna ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Television & New Media Volume 26 ; 26 ; tvna ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Television & New Media Volume 27 ; 27 ; tvna ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Television & New Media Volume 27 ; 27 ; tvna ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -59259,7 +59259,7 @@
       au < deepCrawl ; exists ; 2023 ; Textile Research Journal Volume 93 ; 93 ; trjc ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Textile Research Journal Volume 94 ; 94 ; trjc ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Textile Research Journal Volume 95 ; 95 ; trjc ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Textile Research Journal Volume 96 ; 96 ; trjc ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Textile Research Journal Volume 96 ; 96 ; trjc ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -59358,7 +59358,7 @@
     au < frozen ; exists ; 2023 ; Theological Studies Volume 84 ; 84 ; tsja ; https://journals.sagepub.com/ ; >
     au < deepCrawl ; exists ; 2024 ; Theological Studies Volume 85 ; 85 ; tsja ; https://journals.sagepub.com/ ; >
     au < deepCrawl ; exists ; 2025 ; Theological Studies Volume 86 ; 86 ; tsja ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2026 ; Theological Studies Volume 87 ; 87 ; tsja ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2026 ; Theological Studies Volume 87 ; 87 ; tsja ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -59499,7 +59499,7 @@
       au < deepCrawl ; exists ; 2023 ; Theology Volume 126 ; 126 ; tjxa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Theology Volume 127 ; 127 ; tjxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Theology Volume 128 ; 128 ; tjxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Theology Volume 129 ; 129 ; tjxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Theology Volume 129 ; 129 ; tjxa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -59620,7 +59620,7 @@
       au < frozen ; exists ; 2023 ; Theology Today Volume 80 ; 80 ; ttja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Theology Today Volume 81 ; 81 ; ttja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Theology Today Volume 82 ; 82 ; ttja ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Theology Today Volume 83 ; 83 ; ttja ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Theology Today Volume 83 ; 83 ; ttja ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -59662,7 +59662,7 @@
       au < deepCrawl ; exists ; 2023 ; Theoretical Criminology Volume 27 ; 27 ; tcra ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Theoretical Criminology Volume 28 ; 28 ; tcra ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Theoretical Criminology Volume 29 ; 29 ; tcra ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Theoretical Criminology Volume 30 ; 30 ; tcra ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Theoretical Criminology Volume 30 ; 30 ; tcra ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -59746,7 +59746,7 @@
       au < frozen ; exists ; 2023 ; Theory and Research in Education Volume 21 ; 21 ; treb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Theory and Research in Education Volume 22 ; 22 ; treb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Theory and Research in Education Volume 23 ; 23 ; treb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Theory and Research in Education Volume 24 ; 24 ; treb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Theory and Research in Education Volume 24 ; 24 ; treb ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -59801,7 +59801,7 @@
       au < deepCrawl ; exists ; 2023 ; Theory, Culture & Society Volume 40 ; 40 ; tcsa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Theory, Culture & Society Volume 41 ; 41 ; tcsa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Theory, Culture & Society Volume 42 ; 42 ; tcsa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Theory, Culture & Society Volume 43 ; 43 ; tcsa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Theory, Culture & Society Volume 43 ; 43 ; tcsa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -59904,7 +59904,7 @@
       au < deepCrawl ; exists ; 2023 ; Therapeutic Advances in Drug Safety Volume 14 ; 14 ; tawa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Therapeutic Advances in Drug Safety Volume 15 ; 15 ; tawa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Therapeutic Advances in Drug Safety Volume 16 ; 16 ; tawa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Therapeutic Advances in Drug Safety Volume 17 ; 17 ; tawa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Therapeutic Advances in Drug Safety Volume 17 ; 17 ; tawa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -60112,7 +60112,7 @@
       au < deepCrawl ; exists ; 2023 ; Therapeutic Advances in Psychopharmacology Volume 13 ; 13 ; tppa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Therapeutic Advances in Psychopharmacology Volume 14 ; 14 ; tppa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Therapeutic Advances in Psychopharmacology Volume 15 ; 15 ; tppa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Therapeutic Advances in Psychopharmacology Volume 16 ; 16 ; tppa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Therapeutic Advances in Psychopharmacology Volume 16 ; 16 ; tppa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -60417,9 +60417,9 @@
       au < deepCrawl ; exists ; 2025 ; Thesis Eleven Volume 189 ; 189 ; thea ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Thesis Eleven Volume 190 ; 190 ; thea ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Thesis Eleven Volume 191 ; 191 ; thea ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Thesis Eleven Volume 192 ; 192 ; thea ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Thesis Eleven Volume 193 ; 193 ; thea ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Thesis Eleven Volume 194 ; 194 ; thea ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Thesis Eleven Volume 192 ; 192 ; thea ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Thesis Eleven Volume 193 ; 193 ; thea ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Thesis Eleven Volume 194 ; 194 ; thea ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026 ; Thesis Eleven Volume 195 ; 195 ; thea ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026 ; Thesis Eleven Volume 196 ; 196 ; thea ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026 ; Thesis Eleven Volume 197 ; 197 ; thea ; https://journals.sagepub.com/ ; >
@@ -60462,15 +60462,15 @@
       au < manifest ; exists ; 2015 ; Thyroid Volume 25 ; 25 ; thya ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Thyroid Volume 26 ; 26 ; thya ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Thyroid Volume 27 ; 27 ; thya ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Thyroid Volume 28 ; 28 ; thya ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2019 ; Thyroid Volume 29 ; 29 ; thya ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Thyroid Volume 28 ; 28 ; thya ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2019 ; Thyroid Volume 29 ; 29 ; thya ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Thyroid Volume 30 ; 30 ; thya ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Thyroid Volume 31 ; 31 ; thya ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; Thyroid Volume 32 ; 32 ; thya ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2023 ; Thyroid Volume 33 ; 33 ; thya ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2024 ; Thyroid Volume 34 ; 34 ; thya ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Thyroid Volume 35 ; 35 ; thya ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Thyroid Volume 36 ; 36 ; thya ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Thyroid Volume 36 ; 36 ; thya ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -60567,15 +60567,15 @@
       au < manifest ; exists ; 2015 ; Tissue Engineering Part A Volume 21 ; 21 ; teaa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Tissue Engineering Part A Volume 22 ; 22 ; teaa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Tissue Engineering Part A Volume 23 ; 23 ; teaa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Tissue Engineering Part A Volume 24 ; 24 ; teaa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2019 ; Tissue Engineering Part A Volume 25 ; 25 ; teaa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Tissue Engineering Part A Volume 24 ; 24 ; teaa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2019 ; Tissue Engineering Part A Volume 25 ; 25 ; teaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Tissue Engineering Part A Volume 26 ; 26 ; teaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Tissue Engineering Part A Volume 27 ; 27 ; teaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; Tissue Engineering Part A Volume 28 ; 28 ; teaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2023 ; Tissue Engineering Part A Volume 29 ; 29 ; teaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2024 ; Tissue Engineering Part A Volume 30 ; 30 ; teaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Tissue Engineering Part A Volume 31 ; 31 ; teaa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Tissue Engineering Part A Volume 32 ; 32 ; teaa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Tissue Engineering Part A Volume 32 ; 32 ; teaa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -60598,15 +60598,15 @@
       au < manifest ; exists ; 2015 ; Tissue Engineering Part B: Reviews Volume 21 ; 21 ; teba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Tissue Engineering Part B: Reviews Volume 22 ; 22 ; teba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Tissue Engineering Part B: Reviews Volume 23 ; 23 ; teba ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Tissue Engineering Part B: Reviews Volume 24 ; 24 ; teba ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2019 ; Tissue Engineering Part B: Reviews Volume 25 ; 25 ; teba ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Tissue Engineering Part B: Reviews Volume 24 ; 24 ; teba ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2019 ; Tissue Engineering Part B: Reviews Volume 25 ; 25 ; teba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Tissue Engineering Part B: Reviews Volume 26 ; 26 ; teba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Tissue Engineering Part B: Reviews Volume 27 ; 27 ; teba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; Tissue Engineering Part B: Reviews Volume 28 ; 28 ; teba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2023 ; Tissue Engineering Part B: Reviews Volume 29 ; 29 ; teba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2024 ; Tissue Engineering Part B: Reviews Volume 30 ; 30 ; teba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Tissue Engineering Part B: Reviews Volume 31 ; 31 ; teba ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Tissue Engineering Part B: Reviews Volume 32 ; 32 ; teba ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Tissue Engineering Part B: Reviews Volume 32 ; 32 ; teba ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -60664,7 +60664,7 @@
       au < deepCrawl ; exists ; 2023 ; Topics in Early Childhood Special Education Volume 43 ; 43 ; teca ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Topics in Early Childhood Special Education Volume 44 ; 44 ; teca ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Topics in Early Childhood Special Education Volume 45 ; 45 ; teca ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Topics in Early Childhood Special Education Volume 46 ; 46 ; teca ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Topics in Early Childhood Special Education Volume 46 ; 46 ; teca ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -60702,7 +60702,7 @@
       au < frozen ; exists ; 2023 ; Tourism and Hospitality Research Volume 23 ; 23 ; thrb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Tourism and Hospitality Research Volume 24 ; 24 ; thrb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Tourism and Hospitality Research Volume 25 ; 25 ; thrb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Tourism and Hospitality Research Volume 26 ; 26 ; thrb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Tourism and Hospitality Research Volume 26 ; 26 ; thrb ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -60740,7 +60740,7 @@
       au < frozen ; exists ; 2023 ; Tourist Studies Volume 23 ; 23 ; toua ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Tourist Studies Volume 24 ; 24 ; toua ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Tourist Studies Volume 25 ; 25 ; toua ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Tourist Studies Volume 26 ; 26 ; toua ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Tourist Studies Volume 26 ; 26 ; toua ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -60821,7 +60821,7 @@
       au < frozen ; exists ; 2023 ; Toxicologic Pathology Volume 51 ; 51 ; tpxb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Toxicologic Pathology Volume 52 ; 52 ; tpxb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Toxicologic Pathology Volume 53 ; 53 ; tpxb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Toxicologic Pathology Volume 54 ; 54 ; tpxb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Toxicologic Pathology Volume 54 ; 54 ; tpxb ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -60875,7 +60875,7 @@
       au < deepCrawl ; exists ; 2023 ; Toxicology and Industrial Health Volume 39 ; 39 ; tiha ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Toxicology and Industrial Health Volume 40 ; 40 ; tiha ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Toxicology and Industrial Health Volume 41 ; 41 ; tiha ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Toxicology and Industrial Health Volume 42 ; 42 ; tiha ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Toxicology and Industrial Health Volume 42 ; 42 ; tiha ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -60949,7 +60949,7 @@
       au < deepCrawl ; exists ; 2023 ; Transactions of the Institute of Measurement and Control Volume 45 ; 45 ; tima ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Transactions of the Institute of Measurement and Control Volume 46 ; 46 ; tima ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Transactions of the Institute of Measurement and Control Volume 47 ; 47 ; tima ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Transactions of the Institute of Measurement and Control Volume 48 ; 48 ; tima ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Transactions of the Institute of Measurement and Control Volume 48 ; 48 ; tima ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -61054,7 +61054,7 @@
       au < deepCrawl ; exists ; 2023 ; Transcultural Psychiatry Volume 60 ; 60 ; tpse ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Transcultural Psychiatry Volume 61 ; 61 ; tpse ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Transcultural Psychiatry Volume 62 ; 62 ; tpse ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Transcultural Psychiatry Volume 63 ; 63 ; tpse ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Transcultural Psychiatry Volume 63 ; 63 ; tpse ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -61098,7 +61098,7 @@
       au < deepCrawl ; exists ; 2023 ; Transfer: European Review of Labour and Research Volume 29 ; 29 ; trsa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Transfer: European Review of Labour and Research Volume 30 ; 30 ; trsa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Transfer: European Review of Labour and Research Volume 31 ; 31 ; trsa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Transfer: European Review of Labour and Research Volume 32 ; 32 ; trsa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Transfer: European Review of Labour and Research Volume 32 ; 32 ; trsa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -61152,7 +61152,7 @@
       au < deepCrawl ; exists ; 2023 ; Transformation: An International Journal of Holistic Mission Studies Volume 40 ; 40 ; trna ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Transformation: An International Journal of Holistic Mission Studies Volume 41 ; 41 ; trna ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Transformation: An International Journal of Holistic Mission Studies Volume 42 ; 42 ; trna ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Transformation: An International Journal of Holistic Mission Studies Volume 43 ; 43 ; trna ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Transformation: An International Journal of Holistic Mission Studies Volume 43 ; 43 ; trna ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -61167,15 +61167,15 @@
 
       au < manifest ; exists ; 2016 ; Transgender Health Volume 1 ; 1 ; trga ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Transgender Health Volume 2 ; 2 ; trga ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2018 ; Transgender Health Volume 3 ; 3 ; trga ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2019 ; Transgender Health Volume 4 ; 4 ; trga ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2018 ; Transgender Health Volume 3 ; 3 ; trga ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2019 ; Transgender Health Volume 4 ; 4 ; trga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Transgender Health Volume 5 ; 5 ; trga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Transgender Health Volume 6 ; 6 ; trga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; Transgender Health Volume 7 ; 7 ; trga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2023 ; Transgender Health Volume 8 ; 8 ; trga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2024 ; Transgender Health Volume 9 ; 9 ; trga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Transgender Health Volume 10 ; 10 ; trga ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Transgender Health Volume 11 ; 11 ; trga ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Transgender Health Volume 11 ; 11 ; trga ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -62614,7 +62614,7 @@
       au < deepCrawl ; exists ; 2023 ; Transportation Research Record Volume 2677 ; 2677 ; trra ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Transportation Research Record Volume 2678 ; 2678 ; trra ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Transportation Research Record Volume 2679 ; 2679 ; trra ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Transportation Research Record Volume 2680 ; 2680 ; trra ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Transportation Research Record Volume 2680 ; 2680 ; trra ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -62654,7 +62654,7 @@
       au < deepCrawl ; exists ; 2023 ; Trauma Volume 25 ; 25 ; traa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Trauma Volume 26 ; 26 ; traa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Trauma Volume 27 ; 27 ; traa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Trauma Volume 28 ; 28 ; traa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Trauma Volume 28 ; 28 ; traa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -62693,7 +62693,7 @@
       au < deepCrawl ; exists ; 2023 ; Trauma, Violence, & Abuse Volume 24 ; 24 ; tvaa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Trauma, Violence, & Abuse Volume 25 ; 25 ; tvaa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Trauma, Violence, & Abuse Volume 26 ; 26 ; tvaa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Trauma, Violence, & Abuse Volume 27 ; 27 ; tvaa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Trauma, Violence, & Abuse Volume 27 ; 27 ; tvaa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -62779,7 +62779,7 @@
       au < deepCrawl ; exists ; 2023 ; Trends in Hearing Volume 27 ; 27 ; tiab ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Trends in Hearing Volume 28 ; 28 ; tiab ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Trends in Hearing Volume 29 ; 29 ; tiab ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Trends in Hearing Volume 30 ; 30 ; tiab ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Trends in Hearing Volume 30 ; 30 ; tiab ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -62809,7 +62809,7 @@
       au < deepCrawl ; exists ; 2023 ; Tropical Conservation Science Volume 16 ; 16 ; trca ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Tropical Conservation Science Volume 17 ; 17 ; trca ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Tropical Conservation Science Volume 18 ; 18 ; trca ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Tropical Conservation Science Volume 19 ; 19 ; trca ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Tropical Conservation Science Volume 19 ; 19 ; trca ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -62833,7 +62833,7 @@
       au < frozen ; exists ; 2023 ; Tumor Biology Volume 45 ; 45 ; tuba ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2024 ; Tumor Biology Volume 46 ; 46 ; tuba ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; Tumor Biology Volume 47 ; 47 ; tuba ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Tumor Biology Volume 48 ; 48 ; tuba ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Tumor Biology Volume 48 ; 48 ; tuba ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -62873,7 +62873,7 @@
       au < frozen ; exists ; 2023 ; Tumori Journal Volume 109 ; 109 ; tmja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Tumori Journal Volume 110 ; 110 ; tmja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Tumori Journal Volume 111 ; 111 ; tmja ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Tumori Journal Volume 112 ; 112 ; tmja ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Tumori Journal Volume 112 ; 112 ; tmja ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -62927,7 +62927,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Update: Applications of Research in Music Education Volume 41 ; 41 ; upda ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Update: Applications of Research in Music Education Volume 42 ; 42 ; upda ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Update: Applications of Research in Music Education Volume 43 ; 43 ; upda ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2025-2026 ; Update: Applications of Research in Music Education Volume 44 ; 44 ; upda ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2025-2026 ; Update: Applications of Research in Music Education Volume 44 ; 44 ; upda ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026-2027 ; Update: Applications of Research in Music Education Volume 45 ; 45 ; upda ; https://journals.sagepub.com/ ; >
 
   }
@@ -63016,7 +63016,7 @@
       au < deepCrawl ; exists ; 2023 ; Urban Affairs Review Volume 59 ; 59 ; uarb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Urban Affairs Review Volume 60 ; 60 ; uarb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Urban Affairs Review Volume 61 ; 61 ; uarb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Urban Affairs Review Volume 62 ; 62 ; uarb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Urban Affairs Review Volume 62 ; 62 ; uarb ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -63089,7 +63089,7 @@
       au < deepCrawl ; exists ; 2023 ; Urban Education Volume 58 ; 58 ; uexa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Urban Education Volume 59 ; 59 ; uexa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Urban Education Volume 60 ; 60 ; uexa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Urban Education Volume 61 ; 61 ; uexa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Urban Education Volume 61 ; 61 ; uexa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -63164,7 +63164,7 @@
       au < frozen ; exists ; 2023 ; Urban Studies Volume 60 ; 60 ; usja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Urban Studies Volume 61 ; 61 ; usja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Urban Studies Volume 62 ; 62 ; usja ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Urban Studies Volume 63 ; 63 ; usja ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Urban Studies Volume 63 ; 63 ; usja ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -63209,7 +63209,7 @@
       au < frozen ; exists ; 2023 ; Urologia Journal Volume 90 ; 90 ; urja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Urologia Journal Volume 91 ; 91 ; urja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Urologia Journal Volume 92 ; 92 ; urja ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Urologia Journal Volume 93 ; 93 ; urja ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Urologia Journal Volume 93 ; 93 ; urja ; https://journals.sagepub.com/ ; >
 
     }
 
@@ -63296,7 +63296,7 @@
       au < deepCrawl ; exists ; 2023 ; Vascular and Endovascular Surgery Volume 57 ; 57 ; vesb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Vascular and Endovascular Surgery Volume 58 ; 58 ; vesb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Vascular and Endovascular Surgery Volume 59 ; 59 ; vesb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Vascular and Endovascular Surgery Volume 60 ; 60 ; vesb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Vascular and Endovascular Surgery Volume 60 ; 60 ; vesb ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -63359,7 +63359,7 @@
       au < frozen ; exists ; 2023 ; Vascular Medicine Volume 28 ; 28 ; vmjc ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Vascular Medicine Volume 29 ; 29 ; vmjc ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Vascular Medicine Volume 30 ; 30 ; vmjc ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Vascular Medicine Volume 31 ; 31 ; vmjc ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Vascular Medicine Volume 31 ; 31 ; vmjc ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -63390,14 +63390,14 @@
       au < manifest ; exists ; 2016 ; Vector-Borne and Zoonotic Diseases Volume 16 ; 16 ; vbza ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Vector-Borne and Zoonotic Diseases Volume 17 ; 17 ; vbza ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2018 ; Vector-Borne and Zoonotic Diseases Volume 18 ; 18 ; vbza ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2019 ; Vector-Borne and Zoonotic Diseases Volume 19 ; 19 ; vbza ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2019 ; Vector-Borne and Zoonotic Diseases Volume 19 ; 19 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Vector-Borne and Zoonotic Diseases Volume 20 ; 20 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Vector-Borne and Zoonotic Diseases Volume 21 ; 21 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; Vector-Borne and Zoonotic Diseases Volume 22 ; 22 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2023 ; Vector-Borne and Zoonotic Diseases Volume 23 ; 23 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2024 ; Vector-Borne and Zoonotic Diseases Volume 24 ; 24 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Vector-Borne and Zoonotic Diseases Volume 25 ; 25 ; vbza ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Vector-Borne and Zoonotic Diseases Volume 26 ; 26 ; vbza ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Vector-Borne and Zoonotic Diseases Volume 26 ; 26 ; vbza ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -63488,7 +63488,7 @@
       au < deepCrawl ; exists ; 2023 ; Veterinary Pathology Volume 60 ; 60 ; vetb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Veterinary Pathology Volume 61 ; 61 ; vetb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Veterinary Pathology Volume 62 ; 62 ; vetb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Veterinary Pathology Volume 63 ; 63 ; vetb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Veterinary Pathology Volume 63 ; 63 ; vetb ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -63551,7 +63551,7 @@
       au < deepCrawl ; exists ; 2023 ; Vikalpa Volume 48 ; 48 ; vika ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Vikalpa Volume 49 ; 49 ; vika ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Vikalpa Volume 50 ; 50 ; vika ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Vikalpa Volume 51 ; 51 ; vika ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Vikalpa Volume 51 ; 51 ; vika ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -63595,7 +63595,7 @@
       au < deepCrawl ; exists ; 2023 ; Violence Against Women Volume 29 ; 29 ; vawa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Violence Against Women Volume 30 ; 30 ; vawa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Violence Against Women Volume 31 ; 31 ; vawa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Violence Against Women Volume 32 ; 32 ; vawa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Violence Against Women Volume 32 ; 32 ; vawa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -63613,14 +63613,14 @@
       au < manifest ; exists ; 2016 ; Violence and Gender Volume 3 ; 3 ; vlga ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Violence and Gender Volume 4 ; 4 ; vlga ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2018 ; Violence and Gender Volume 5 ; 5 ; vlga ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2019 ; Violence and Gender Volume 6 ; 6 ; vlga ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2019 ; Violence and Gender Volume 6 ; 6 ; vlga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Violence and Gender Volume 7 ; 7 ; vlga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Violence and Gender Volume 8 ; 8 ; vlga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; Violence and Gender Volume 9 ; 9 ; vlga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2023 ; Violence and Gender Volume 10 ; 10 ; vlga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2024 ; Violence and Gender Volume 11 ; 11 ; vlga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Violence and Gender Volume 12 ; 12 ; vlga ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Violence and Gender Volume 13 ; 13 ; vlga ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Violence and Gender Volume 13 ; 13 ; vlga ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -63664,14 +63664,14 @@
       au < manifest ; exists ; 2016 ; Viral Immunology Volume 29 ; 29 ; vima ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Viral Immunology Volume 30 ; 30 ; vima ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2018 ; Viral Immunology Volume 31 ; 31 ; vima ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2019 ; Viral Immunology Volume 32 ; 32 ; vima ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2019 ; Viral Immunology Volume 32 ; 32 ; vima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Viral Immunology Volume 33 ; 33 ; vima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Viral Immunology Volume 34 ; 34 ; vima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; Viral Immunology Volume 35 ; 35 ; vima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2023 ; Viral Immunology Volume 36 ; 36 ; vima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2024 ; Viral Immunology Volume 37 ; 37 ; vima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Viral Immunology Volume 38 ; 38 ; vima ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Viral Immunology Volume 39 ; 39 ; vima ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Viral Immunology Volume 39 ; 39 ; vima ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -63708,7 +63708,7 @@
       au < deepCrawl ; exists ; 2023 ; Visual Communication Volume 22 ; 22 ; vcja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Visual Communication Volume 23 ; 23 ; vcja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Visual Communication Volume 24 ; 24 ; vcja ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Visual Communication Volume 25 ; 25 ; vcja ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Visual Communication Volume 25 ; 25 ; vcja ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -63753,7 +63753,7 @@
       au < deepCrawl ; exists ; 2023 ; War in History Volume 30 ; 30 ; wiha ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; War in History Volume 31 ; 31 ; wiha ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; War in History Volume 32 ; 32 ; wiha ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; War in History Volume 33 ; 33 ; wiha ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; War in History Volume 33 ; 33 ; wiha ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -63809,7 +63809,7 @@
       au < frozen ; exists ; 2023 ; Waste Management & Research Volume 41 ; 41 ; wmra ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Waste Management & Research Volume 42 ; 42 ; wmra ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Waste Management & Research Volume 43 ; 43 ; wmra ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Waste Management & Research Volume 44 ; 44 ; wmra ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Waste Management & Research Volume 44 ; 44 ; wmra ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -63859,7 +63859,7 @@
       au < frozen ; exists ; 2023 ; Web Intelligence Volume 21 ; 21 ; webb ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2024 ; Web Intelligence Volume 22 ; 22 ; webb ; https://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; Web Intelligence Volume 23 ; 23 ; webb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Web Intelligence Volume 24 ; 24 ; webb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Web Intelligence Volume 24 ; 24 ; webb ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -63877,7 +63877,7 @@
       au < frozen ; exists ; 2023 ; Women's Health Reports Volume 4 ; 4 ; whra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2024 ; Women's Health Reports Volume 5 ; 5 ; whra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Women's Health Reports Volume 6 ; 6 ; whra ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Women's Health Reports Volume 7 ; 7 ; whra ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Women's Health Reports Volume 7 ; 7 ; whra ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -63937,7 +63937,7 @@
       au < deepCrawl ; exists ; 2023 ; Western Journal of Nursing Research Volume 45 ; 45 ; wjna ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Western Journal of Nursing Research Volume 46 ; 46 ; wjna ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Western Journal of Nursing Research Volume 47 ; 47 ; wjna ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Western Journal of Nursing Research Volume 48 ; 48 ; wjna ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Western Journal of Nursing Research Volume 48 ; 48 ; wjna ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -63976,7 +63976,7 @@
       au < deepCrawl ; exists ; 2023 ; Wind Engineering Volume 47 ; 47 ; wiea ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Wind Engineering Volume 48 ; 48 ; wiea ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Wind Engineering Volume 49 ; 49 ; wiea ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Wind Engineering Volume 50 ; 50 ; wiea ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Wind Engineering Volume 50 ; 50 ; wiea ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -64105,7 +64105,7 @@
       au < deepCrawl ; exists ; 2023 ; Work and Occupations Volume 50 ; 50 ; woxb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Work and Occupations Volume 51 ; 51 ; woxb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Work and Occupations Volume 52 ; 52 ; woxb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Work and Occupations Volume 53 ; 53 ; woxb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Work and Occupations Volume 53 ; 53 ; woxb ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -64200,8 +64200,8 @@
       au < deepCrawl ; exists ; 2025 ; WORK: A Journal of Prevention, Assessment & Rehabilitation Volume 80 ; 80 ; wora ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; WORK: A Journal of Prevention, Assessment & Rehabilitation Volume 81 ; 81 ; wora ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; WORK: A Journal of Prevention, Assessment & Rehabilitation Volume 82 ; 82 ; wora ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; WORK: A Journal of Prevention, Assessment & Rehabilitation Volume 83 ; 83 ; wora ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; WORK: A Journal of Prevention, Assessment & Rehabilitation Volume 84 ; 84 ; wora ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; WORK: A Journal of Prevention, Assessment & Rehabilitation Volume 83 ; 83 ; wora ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; WORK: A Journal of Prevention, Assessment & Rehabilitation Volume 84 ; 84 ; wora ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026 ; WORK: A Journal of Prevention, Assessment & Rehabilitation Volume 85 ; 85 ; wora ; https://journals.sagepub.com/ ; >
 
   }
@@ -64254,7 +64254,7 @@
       au < deepCrawl ; exists ; 2023 ; Work, Employment & Society Volume 37 ; 37 ; wesa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Work, Employment & Society Volume 38 ; 38 ; wesa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Work, Employment & Society Volume 39 ; 39 ; wesa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Work, Employment & Society Volume 40 ; 40 ; wesa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Work, Employment & Society Volume 40 ; 40 ; wesa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -64383,7 +64383,7 @@
       au < deepCrawl ; exists ; 2023 ; Workplace Health & Safety Volume 71 ; 71 ; whsd ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Workplace Health & Safety Volume 72 ; 72 ; whsd ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Workplace Health & Safety Volume 73 ; 73 ; whsd ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Workplace Health & Safety Volume 74 ; 74 ; whsd ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Workplace Health & Safety Volume 74 ; 74 ; whsd ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -64518,7 +64518,7 @@
       au < deepCrawl ; exists ; 2023 ; Written Communication Volume 40 ; 40 ; wcxa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Written Communication Volume 41 ; 41 ; wcxa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Written Communication Volume 42 ; 42 ; wcxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Written Communication Volume 43 ; 43 ; wcxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Written Communication Volume 43 ; 43 ; wcxa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -64564,7 +64564,7 @@
       au < deepCrawl ; exists ; 2023 ; Young Volume 31 ; 31 ; youa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Young Volume 32 ; 32 ; youa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Young Volume 33 ; 33 ; youa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Young Volume 34 ; 34 ; youa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Young Volume 34 ; 34 ; youa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -64604,7 +64604,7 @@
       au < frozen ; exists ; 2023 ; Young Exceptional Children Volume 26 ; 26 ; yeca ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Young Exceptional Children Volume 27 ; 27 ; yeca ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Young Exceptional Children Volume 28 ; 28 ; yeca ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Young Exceptional Children Volume 29 ; 29 ; yeca ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Young Exceptional Children Volume 29 ; 29 ; yeca ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -64674,7 +64674,7 @@
       au < frozen ; exists ; 2023 ; Youth & Society Volume 55 ; 55 ; yasa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Youth & Society Volume 56 ; 56 ; yasa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Youth & Society Volume 57 ; 57 ; yasa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Youth & Society Volume 58 ; 58 ; yasa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Youth & Society Volume 58 ; 58 ; yasa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -64712,7 +64712,7 @@
       au < frozen ; exists ; 2023 ; Youth Justice Volume 23 ; 23 ; yjja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Youth Justice Volume 24 ; 24 ; yjja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Youth Justice Volume 25 ; 25 ; yjja ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Youth Justice Volume 26 ; 26 ; yjja ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Youth Justice Volume 26 ; 26 ; yjja ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -64748,7 +64748,7 @@
       au < frozen ; exists ; 2023 ; Youth Violence and Juvenile Justice Volume 21 ; 21 ; yvja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Youth Violence and Juvenile Justice Volume 22 ; 22 ; yvja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Youth Violence and Juvenile Justice Volume 23 ; 23 ; yvja ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Youth Violence and Juvenile Justice Volume 24 ; 24 ; yvja ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Youth Violence and Juvenile Justice Volume 24 ; 24 ; yvja ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -64783,7 +64783,7 @@
       au < frozen ; exists ; 2023 ; Zebrafish Volume 20 ; 20 ; zbfa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2024 ; Zebrafish Volume 21 ; 21 ; zbfa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Zebrafish Volume 22 ; 22 ; zbfa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Zebrafish Volume 23 ; 23 ; zbfa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Zebrafish Volume 23 ; 23 ; zbfa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -65831,7 +65831,7 @@
       au < deepCrawl ; exists ; 2023 ; Ultrasonic Imaging Volume 45 ; 45 ; uixa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Ultrasonic Imaging Volume 46 ; 46 ; uixa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Ultrasonic Imaging Volume 47 ; 47 ; uixa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Ultrasonic Imaging Volume 48 ; 48 ; uixa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Ultrasonic Imaging Volume 48 ; 48 ; uixa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -65873,7 +65873,7 @@
       au < frozen ; exists ; 2023 ; Vision: The Journal of Business Perspective Volume 27 ; 27 ; visa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Vision: The Journal of Business Perspective Volume 28 ; 28 ; visa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Vision: The Journal of Business Perspective Volume 29 ; 29 ; visa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Vision: The Journal of Business Perspective Volume 30 ; 30 ; visa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Vision: The Journal of Business Perspective Volume 30 ; 30 ; visa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -65956,7 +65956,7 @@
       au < deepCrawl ; exists ; 2023 ; Australian Journal of Education Volume 67 ; 67 ; aeda ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Australian Journal of Education Volume 68 ; 68 ; aeda ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Australian Journal of Education Volume 69 ; 69 ; aeda ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Australian Journal of Education Volume 70 ; 70 ; aeda ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Australian Journal of Education Volume 70 ; 70 ; aeda ; https://journals.sagepub.com/ ; >
 
     }
 
@@ -66034,7 +66034,7 @@
     au < deepCrawl ; exists ; 2023 ; Adoption & Fostering Volume 47 ; 47 ; aafa ; https://journals.sagepub.com/ ; >
     au < deepCrawl ; exists ; 2024 ; Adoption & Fostering Volume 48 ; 48 ; aafa ; https://journals.sagepub.com/ ; >
     au < deepCrawl ; exists ; 2025 ; Adoption & Fostering Volume 49 ; 49 ; aafa ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2026 ; Adoption & Fostering Volume 50 ; 50 ; aafa ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2026 ; Adoption & Fostering Volume 50 ; 50 ; aafa ; https://journals.sagepub.com/ ; >
 
     }
 
@@ -66084,7 +66084,7 @@
     au < deepCrawl ; exists ; 2023 ; Asia-Pacific Journal of Management Research and Innovation Volume 19 ; 19 ; abrb ; https://journals.sagepub.com/ ; >
     au < deepCrawl ; exists ; 2024 ; Asia-Pacific Journal of Management Research and Innovation Volume 20 ; 20 ; abrb ; https://journals.sagepub.com/ ; >
     au < deepCrawl ; exists ; 2025 ; Asia-Pacific Journal of Management Research and Innovation Volume 21 ; 21 ; abrb ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2026 ; Asia-Pacific Journal of Management Research and Innovation Volume 22 ; 22 ; abrb ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2026 ; Asia-Pacific Journal of Management Research and Innovation Volume 22 ; 22 ; abrb ; https://journals.sagepub.com/ ; >
 
     }
 
@@ -66158,7 +66158,7 @@
     au < deepCrawl ; exists ; 2023 ; Australian Journal of Career Development Volume 32 ; 32 ; acda ; https://journals.sagepub.com/ ; >
     au < deepCrawl ; exists ; 2024 ; Australian Journal of Career Development Volume 33 ; 33 ; acda ; https://journals.sagepub.com/ ; >
     au < deepCrawl ; exists ; 2025 ; Australian Journal of Career Development Volume 34 ; 34 ; acda ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2026 ; Australian Journal of Career Development Volume 35 ; 35 ; acda ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2026 ; Australian Journal of Career Development Volume 35 ; 35 ; acda ; https://journals.sagepub.com/ ; >
 
     }
 
@@ -66199,7 +66199,7 @@
     au < deepCrawl ; exists ; 2023 ; ADCES in Practice Volume 11 ; 11 ; aipb ; https://journals.sagepub.com/ ; >
     au < deepCrawl ; exists ; 2024 ; ADCES in Practice Volume 12 ; 12 ; aipb ; https://journals.sagepub.com/ ; >
     au < deepCrawl ; exists ; 2025 ; ADCES in Practice Volume 13 ; 13 ; aipb ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2026 ; ADCES in Practice Volume 14 ; 14 ; aipb ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2026 ; ADCES in Practice Volume 14 ; 14 ; aipb ; https://journals.sagepub.com/ ; >
 
     }
 
@@ -67376,7 +67376,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Clinical Urology Volume 16 ; 16 ; urob ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Clinical Urology Volume 17 ; 17 ; urob ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Clinical Urology Volume 18 ; 18 ; urob ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Clinical Urology Volume 19 ; 19 ; urob ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Clinical Urology Volume 19 ; 19 ; urob ; https://journals.sagepub.com/ ; >
 
     }
 
@@ -67636,7 +67636,7 @@
         au < deepCrawl ; exists ; 2023 ; Acta Radiologica Volume 64 ; 64 ; acrc ; https://journals.sagepub.com/ ; >
         au < deepCrawl ; exists ; 2024 ; Acta Radiologica Volume 65 ; 65 ; acrc ; https://journals.sagepub.com/ ; >
         au < deepCrawl ; exists ; 2025 ; Acta Radiologica Volume 66 ; 66 ; acrc ; https://journals.sagepub.com/ ; >
-        au < manifest ; exists ; 2026 ; Acta Radiologica Volume 67 ; 67 ; acrc ; https://journals.sagepub.com/ ; >
+        au < ready ; exists ; 2026 ; Acta Radiologica Volume 67 ; 67 ; acrc ; https://journals.sagepub.com/ ; >
 
     }
 
@@ -67740,7 +67740,7 @@
         au < deepCrawl ; exists ; 2023 ; Annals of Clinical Biochemistry Volume 60 ; 60 ; acbb ; https://journals.sagepub.com/ ; >
         au < deepCrawl ; exists ; 2024 ; Annals of Clinical Biochemistry Volume 61 ; 61 ; acbb ; https://journals.sagepub.com/ ; >
         au < deepCrawl ; exists ; 2025 ; Annals of Clinical Biochemistry Volume 62 ; 62 ; acbb ; https://journals.sagepub.com/ ; >
-        au < manifest ; exists ; 2026 ; Annals of Clinical Biochemistry Volume 63 ; 63 ; acbb ; https://journals.sagepub.com/ ; >
+        au < ready ; exists ; 2026 ; Annals of Clinical Biochemistry Volume 63 ; 63 ; acbb ; https://journals.sagepub.com/ ; >
 
     }
 
@@ -69468,7 +69468,7 @@
         au < deepCrawl ; exists ; 2023 ; Tropical Doctor Volume 53 ; 53 ; tdoa ; https://journals.sagepub.com/ ; >
         au < deepCrawl ; exists ; 2024 ; Tropical Doctor Volume 54 ; 54 ; tdoa ; https://journals.sagepub.com/ ; >
         au < deepCrawl ; exists ; 2025 ; Tropical Doctor Volume 55 ; 55 ; tdoa ; https://journals.sagepub.com/ ; >
-        au < manifest ; exists ; 2026 ; Tropical Doctor Volume 56 ; 56 ; tdoa ; https://journals.sagepub.com/ ; >
+        au < ready ; exists ; 2026 ; Tropical Doctor Volume 56 ; 56 ; tdoa ; https://journals.sagepub.com/ ; >
 
     }
 
@@ -69504,7 +69504,7 @@
         au < deepCrawl ; exists ; 2023 ; Ultrasound Volume 31 ; 31 ; ultb ; https://journals.sagepub.com/ ; >
         au < deepCrawl ; exists ; 2024 ; Ultrasound Volume 32 ; 32 ; ultb ; https://journals.sagepub.com/ ; >
         au < deepCrawl ; exists ; 2025 ; Ultrasound Volume 33 ; 33 ; ultb ; https://journals.sagepub.com/ ; >
-        au < manifest ; exists ; 2026 ; Ultrasound Volume 34 ; 34 ; ultb ; https://journals.sagepub.com/ ; >
+        au < ready ; exists ; 2026 ; Ultrasound Volume 34 ; 34 ; ultb ; https://journals.sagepub.com/ ; >
 
     }
 
@@ -69585,7 +69585,7 @@
       au < deepCrawl ; exists ; 2023 ; Vascular Volume 31 ; 31 ; vasb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Vascular Volume 32 ; 32 ; vasb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Vascular Volume 33 ; 33 ; vasb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Vascular Volume 34 ; 34 ; vasb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Vascular Volume 34 ; 34 ; vasb ; https://journals.sagepub.com/ ; >
 
     }
 
@@ -69620,7 +69620,7 @@
       au < deepCrawl ; exists ; 2023 ; Women's Health Volume 19 ; 19 ; whea ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Women's Health Volume 20 ; 20 ; whea ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Women's Health Volume 21 ; 21 ; whea ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Women's Health Volume 22 ; 22 ; whea ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Women's Health Volume 22 ; 22 ; whea ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -70345,7 +70345,7 @@
     au < deepCrawl ; exists ; 2023 ; Tourism Economics Volume 29 ; 29 ; teua ; https://journals.sagepub.com/ ; >
     au < deepCrawl ; exists ; 2024 ; Tourism Economics Volume 30 ; 30 ; teua ; https://journals.sagepub.com/ ; >
     au < deepCrawl ; exists ; 2025 ; Tourism Economics Volume 31 ; 31 ; teua ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2026 ; Tourism Economics Volume 32 ; 32 ; teua ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2026 ; Tourism Economics Volume 32 ; 32 ; teua ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -70465,7 +70465,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Advanced Oral Research Volume 14 ; 14 ; aada ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2024 ; Journal of Advanced Oral Research Volume 15 ; 15 ; aada ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2025 ; Journal of Advanced Oral Research Volume 16 ; 16 ; aada ; https://journals.sagepub.com/ ;  >
-      au < manifest ; exists ; 2026 ; Journal of Advanced Oral Research Volume 17 ; 17 ; aada ; https://journals.sagepub.com/ ;  >
+      au < ready ; exists ; 2026 ; Journal of Advanced Oral Research Volume 17 ; 17 ; aada ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -70491,7 +70491,7 @@
       au < deepCrawl ; exists ; 2023 ; Academic Forensic Pathology Volume 13 ; 13 ; afpa ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2024 ; Academic Forensic Pathology Volume 14 ; 14 ; afpa ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2025 ; Academic Forensic Pathology Volume 15 ; 15 ; afpa ; https://journals.sagepub.com/ ;  >
-      au < manifest ; exists ; 2026 ; Academic Forensic Pathology Volume 16 ; 16 ; afpa ; https://journals.sagepub.com/ ;  >
+      au < ready ; exists ; 2026 ; Academic Forensic Pathology Volume 16 ; 16 ; afpa ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -70553,7 +70553,7 @@
       au < deepCrawl ; exists ; 2023 ; American Journal of Rhinology & Allergy Volume 37 ; 37 ; ajra ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2024 ; American Journal of Rhinology & Allergy Volume 38 ; 38 ; ajra ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2025 ; American Journal of Rhinology & Allergy Volume 39 ; 39 ; ajra ; https://journals.sagepub.com/ ;  >
-      au < manifest ; exists ; 2026 ; American Journal of Rhinology & Allergy Volume 40 ; 40 ; ajra ; https://journals.sagepub.com/ ;  >
+      au < ready ; exists ; 2026 ; American Journal of Rhinology & Allergy Volume 40 ; 40 ; ajra ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -73206,7 +73206,7 @@
       au < deepCrawl ; exists ; 2023 ; Teachers College Record: The Voice of Scholarship in Education Volume 124 ; 124 ; tcza ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2024 ; Teachers College Record: The Voice of Scholarship in Education Volume 125 ; 125 ; tcza ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2025 ; Teachers College Record: The Voice of Scholarship in Education Volume 126 ; 126 ; tcza ; https://journals.sagepub.com/ ;  >
-      au < manifest ; exists ; 2026 ; Teachers College Record: The Voice of Scholarship in Education Volume 127 ; 127 ; tcza ; https://journals.sagepub.com/ ;  >
+      au < ready ; exists ; 2026 ; Teachers College Record: The Voice of Scholarship in Education Volume 127 ; 127 ; tcza ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -73275,7 +73275,7 @@
       au < frozen ; exists ; 2023 ; Therapeutic Advances in Rare Disease Volume 4 ; 4 ; trda ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2024 ; Therapeutic Advances in Rare Disease Volume 5 ; 5 ; trda ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2025 ; Therapeutic Advances in Rare Disease Volume 6 ; 6 ; trda ; https://journals.sagepub.com/ ;  >
-      au < manifest ; exists ; 2026 ; Therapeutic Advances in Rare Disease Volume 7 ; 7 ; trda ; https://journals.sagepub.com/ ;  >
+      au < ready ; exists ; 2026 ; Therapeutic Advances in Rare Disease Volume 7 ; 7 ; trda ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -73303,7 +73303,7 @@
       au < frozen ; exists ; 2023 ; Transactions in Planning and Urban Research Volume 2 ; 2 ; tupa ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2024 ; Transactions in Planning and Urban Research Volume 3 ; 3 ; tupa ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2025 ; Transactions in Planning and Urban Research Volume 4 ; 4 ; tupa ; https://journals.sagepub.com/ ;  >
-      au < manifest ; exists ; 2026 ; Transactions in Planning and Urban Research Volume 5 ; 5 ; tupa ; https://journals.sagepub.com/ ;  >
+      au < ready ; exists ; 2026 ; Transactions in Planning and Urban Research Volume 5 ; 5 ; tupa ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -73318,7 +73318,7 @@
       au < deepCrawl ; exists ; 2023 ; Transactions in Urban Data, Science, and Technology Volume 2 ; 2 ; tusa ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2024 ; Transactions in Urban Data, Science, and Technology Volume 3 ; 3 ; tusa ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2025 ; Transactions in Urban Data, Science, and Technology Volume 4 ; 4 ; tusa ; https://journals.sagepub.com/ ;  >
-      au < manifest ; exists ; 2026 ; Transactions in Urban Data, Science, and Technology Volume 5 ; 5 ; tusa ; https://journals.sagepub.com/ ;  >
+      au < ready ; exists ; 2026 ; Transactions in Urban Data, Science, and Technology Volume 5 ; 5 ; tusa ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -73352,7 +73352,7 @@
       au < deepCrawl ; exists ; 2023 ; Video Journal of Sports Medicine Volume 3 ; 3 ; vjsa ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2024 ; Video Journal of Sports Medicine Volume 4 ; 4 ; vjsa ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2025 ; Video Journal of Sports Medicine Volume 5 ; 5 ; vjsa ; https://journals.sagepub.com/ ;  >
-      au < manifest ; exists ; 2026 ; Video Journal of Sports Medicine Volume 6 ; 6 ; vjsa ; https://journals.sagepub.com/ ;  >
+      au < ready ; exists ; 2026 ; Video Journal of Sports Medicine Volume 6 ; 6 ; vjsa ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -73372,7 +73372,7 @@
       au < frozen ; exists ; 2023 ; Journal of Victimology and Victim Justice Volume 6 ; 6 ; vvja ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2024 ; Journal of Victimology and Victim Justice Volume 7 ; 7 ; vvja ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2025 ; Journal of Victimology and Victim Justice Volume 8 ; 8 ; vvja ; https://journals.sagepub.com/ ;  >
-      au < manifest ; exists ; 2026 ; Journal of Victimology and Victim Justice Volume 9 ; 9 ; vvja ; https://journals.sagepub.com/ ;  >
+      au < ready ; exists ; 2026 ; Journal of Victimology and Victim Justice Volume 9 ; 9 ; vvja ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -73390,7 +73390,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of White Collar and Corporate Crime Volume 4 ; 4 ; wcca ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2024 ; Journal of White Collar and Corporate Crime Volume 5 ; 5 ; wcca ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2025 ; Journal of White Collar and Corporate Crime Volume 6 ; 6 ; wcca ; https://journals.sagepub.com/ ;  >
-      au < manifest ; exists ; 2026 ; Journal of White Collar and Corporate Crime Volume 7 ; 7 ; wcca ; https://journals.sagepub.com/ ;  >
+      au < ready ; exists ; 2026 ; Journal of White Collar and Corporate Crime Volume 7 ; 7 ; wcca ; https://journals.sagepub.com/ ;  >
 
   }
 
