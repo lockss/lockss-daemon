@@ -4,8 +4,9 @@
     name = University of Michigan Press, Museum of Paleontology ;
     info[contract] = 2018 ;
     info[back] = 1922 ;
-    info[tester] = 8 ;
-    info[platform] = Custom
+    info[tester] = X ;
+    #info[tester] = 8 ;
+    info[platform] = Custom. See LOCKSS-2234
   >
 
   provider = University of Michigan
