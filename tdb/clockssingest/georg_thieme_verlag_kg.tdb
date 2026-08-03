@@ -939,20 +939,21 @@
     >
     param[journal_id] = 10.1055/s-00000110
     comment[years] = 2000-2011
+    # this journal first merged with 10.1055/s-00000107, so all these volumes are superseded 
     # combined with Journal of Neurological Surgery Part A - Central European Neorosurgery in 2012
 
-    au < frozen ; exists ; 2000 ; 2000 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 61 ; 61 ; >
-    au < frozen ; exists ; 2001 ; 2001 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 62 ; 62 ; >
-    au < frozen ; exists ; 2002 ; 2002 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 63 ; 63 ; >
-    au < frozen ; exists ; 2003 ; 2003 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 64 ; 64 ; >
-    au < frozen ; exists ; 2004 ; 2004 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 65 ; 65 ; >
-    au < frozen ; exists ; 2005 ; 2005 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 66 ; 66 ; >
-    au < frozen ; exists ; 2006 ; 2006 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 67 ; 67 ; >
-    au < frozen ; exists ; 2007 ; 2007 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 68 ; 68 ; >
-    au < frozen ; exists ; 2008 ; 2008 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 69 ; 69 ; >
-    au < doNotProcess ; exists ; 2009 ; 2009 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 70 ; 70 ; > #no metadata, preserved under Zentralblatt für Neurochirurgie Volume 70
-    au < finished ; finished ; 2010 ; 2010 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 71 ; 71 ; >
-    au < finished ; finished ; 2011 ; 2011 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 72 ; 72 ; >
+    au < superseded ; exists ; 2000 ; 2000 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 61 [superseded] ; 61 ; >
+    au < superseded ; exists ; 2001 ; 2001 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 62 [superseded] ; 62 ; >
+    au < superseded ; exists ; 2002 ; 2002 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 63 [superseded] ; 63 ; >
+    au < superseded ; exists ; 2003 ; 2003 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 64 [superseded] ; 64 ; >
+    au < superseded ; exists ; 2004 ; 2004 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 65 [superseded] ; 65 ; >
+    au < superseded ; exists ; 2005 ; 2005 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 66 [superseded] ; 66 ; >
+    au < superseded ; exists ; 2006 ; 2006 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 67 [superseded] ; 67 ; >
+    au < superseded ; exists ; 2007 ; 2007 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 68 [superseded] ; 68 ; >
+    au < superseded ; exists ; 2008 ; 2008 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 69 [superseded] ; 69 ; >
+    au < superseded ; exists ; 2009 ; 2009 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 70 [superseded] ; 70 ; > #no metadata, preserved under Zentralblatt für Neurochirurgie Volume 70
+    au < superseded ; finished ; 2010 ; 2010 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 71 [superseded] ; 71 ; >
+    au < superseded ; finished ; 2011 ; 2011 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 72 [superseded] ; 72 ; >
 
   }
 
@@ -8146,17 +8147,18 @@
     >
     param[journal_id] = 10.1055/s-00000107
     #years = 2000-2011
+    # this journal first merged with 10.1055/s-00000110, so all those volumes are superseded 
     # combined with Journal of Neurological Surgery Part A - Central European Neorosurgery in 2012
 
-    au < doNotProcess ; exists ; 2000 ; 2000 ; Zentralblatt für Neurochirurgie Volume 61 ; 61 ; > #no metadata. volume & year are correct, perserved under Central European Neurosurgery - Zentralblatt für Neurochirurgie
-    au < doNotProcess ; exists ; 2001 ; 2001 ; Zentralblatt für Neurochirurgie Volume 62 ; 62 ; > #no metadata. volume & year are correct, perserved under Central European Neurosurgery - Zentralblatt für Neurochirurgie
-    au < doNotProcess ; exists ; 2002 ; 2002 ; Zentralblatt für Neurochirurgie Volume 63 ; 63 ; > #no metadata. volume & year are correct, perserved under Central European Neurosurgery - Zentralblatt für Neurochirurgie
-    au < doNotProcess ; exists ; 2003 ; 2003 ; Zentralblatt für Neurochirurgie Volume 64 ; 64 ; > #no metadata. volume & year are correct, perserved under Central European Neurosurgery - Zentralblatt für Neurochirurgie
-    au < doNotProcess ; exists ; 2004 ; 2004 ; Zentralblatt für Neurochirurgie Volume 65 ; 65 ; > #no metadata. volume & year are correct, perserved under Central European Neurosurgery - Zentralblatt für Neurochirurgie
-    au < doNotProcess ; exists ; 2005 ; 2005 ; Zentralblatt für Neurochirurgie Volume 66 ; 66 ; > #no metadata. volume & year are correct, perserved under Central European Neurosurgery - Zentralblatt für Neurochirurgie
-    au < doNotProcess ; exists ; 2006 ; 2006 ; Zentralblatt für Neurochirurgie Volume 67 ; 67 ; > #no metadata. volume & year are correct, perserved under Central European Neurosurgery - Zentralblatt für Neurochirurgie
-    au < doNotProcess ; exists ; 2007 ; 2007 ; Zentralblatt für Neurochirurgie Volume 68 ; 68 ; > #no metadata. volume & year are correct, perserved under Central European Neurosurgery - Zentralblatt für Neurochirurgie
-    au < doNotProcess ; exists ; 2008 ; 2008 ; Zentralblatt für Neurochirurgie Volume 69 ; 69 ; > #no metadata. volume & year are correct, perserved under Central European Neurosurgery - Zentralblatt für Neurochirurgie
+    au < ready ; exists ; 2000 ; 2000 ; Zentralblatt für Neurochirurgie Volume 61 ; 61 ; >
+    au < ready ; exists ; 2001 ; 2001 ; Zentralblatt für Neurochirurgie Volume 62 ; 62 ; >
+    au < ready ; exists ; 2002 ; 2002 ; Zentralblatt für Neurochirurgie Volume 63 ; 63 ; >
+    au < ready ; exists ; 2003 ; 2003 ; Zentralblatt für Neurochirurgie Volume 64 ; 64 ; >
+    au < ready ; exists ; 2004 ; 2004 ; Zentralblatt für Neurochirurgie Volume 65 ; 65 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Zentralblatt für Neurochirurgie Volume 66 ; 66 ; >
+    au < ready ; exists ; 2006 ; 2006 ; Zentralblatt für Neurochirurgie Volume 67 ; 67 ; >
+    au < ready ; exists ; 2007 ; 2007 ; Zentralblatt für Neurochirurgie Volume 68 ; 68 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Zentralblatt für Neurochirurgie Volume 69 ; 69 ; >
     au < finished ; finished ; 2009 ; 2009 ; Zentralblatt für Neurochirurgie Volume 70 ; 70 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; 2010 ; Zentralblatt für Neurochirurgie Volume 71 ; 71 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2011 ; 2011 ; Zentralblatt für Neurochirurgie Volume 72 ; 72 ; reingest4.clockss.org:8082 >

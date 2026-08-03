@@ -931,6 +931,7 @@
     >
     param[journal_id] = 10.1055/s-00000110
     comment[years] = 2000-2011
+    # this journal first merged with 10.1055/s-00000107, so all these volumes are superseded 
     # combined with Journal of Neurological Surgery Part A - Central European Neorosurgery in 2012
 
     au < doNotProcess ; 2000 ; 2000 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 61 ; 61 >
@@ -943,8 +944,8 @@
     au < doNotProcess ; 2007 ; 2007 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 68 ; 68 >
     au < doNotProcess ; 2008 ; 2008 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 69 ; 69 >
     au < doNotProcess ; 2009 ; 2009 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 70 ; 70 >
-    au < released ; 2010 ; 2010 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 71 ; 71 >
-    au < released ; 2011 ; 2011 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 72 ; 72 >
+    au < superseded ; 2010 ; 2010 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 71 [superseded] ; 71 >
+    au < superseded ; 2011 ; 2011 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 72 [superseded] ; 72 >
 
     }
 
@@ -8134,6 +8135,7 @@
     >
     param[journal_id] = 10.1055/s-00000107
     #years = 2000-2011
+    # this journal first merged with 10.1055/s-00000110, so all those volumes are superseded 
     # combined with Journal of Neurological Surgery Part A - Central European Neorosurgery in 2012
 
     au < manifest ; 2000 ; 2000 ; Zentralblatt für Neurochirurgie Volume 61 ; 61 >
