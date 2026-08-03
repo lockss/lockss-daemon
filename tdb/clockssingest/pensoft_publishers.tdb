@@ -96,7 +96,7 @@
     au < finished ; manifest ; 2023 ; 18 ; BioRisk Volume 2023 ; 2023 ; https://biorisk.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 19 ; BioRisk Volume 2024 ; 2024 ; https://biorisk.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2025 ; 20 ; BioRisk Volume 2025 ; 2025 ; https://biorisk.pensoft.net/ ; >
-    au < ready ; exists ; 2026 ; 21 ; BioRisk Volume 2026 ; 2026 ; https://biorisk.pensoft.net/ ; >
+    au < crawling ; exists ; 2026 ; 21 ; BioRisk Volume 2026 ; 2026 ; https://biorisk.pensoft.net/ ; >
 
    }
    
@@ -238,7 +238,7 @@
     au < finished ; manifest ; 2023 ; 95-100 ; MycoKeys Volume 2023 ; 2023 ; https://mycokeys.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 101-111 ; MycoKeys Volume 2024 ; 2024 ; https://mycokeys.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2025 ; 112-126 ; MycoKeys Volume 2025 ; 2025 ; https://mycokeys.pensoft.net/ ; >
-    au < ready ; exists ; 2026 ; 127-141 ; MycoKeys Volume 2026 ; 2026 ; https://mycokeys.pensoft.net/ ; >
+    au < crawling ; exists ; 2026 ; 127-141 ; MycoKeys Volume 2026 ; 2026 ; https://mycokeys.pensoft.net/ ; >
 
    }
   
@@ -589,7 +589,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Check List Volume 2023 ; 2023 ; https://checklist.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Check List Volume 2024 ; 2024 ; https://checklist.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Check List Volume 2025 ; 2025 ; https://checklist.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Check List Volume 2026 ; 2026 ; https://checklist.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Check List Volume 2026 ; 2026 ; https://checklist.pensoft.net/ ; >
 
   }
 
@@ -899,7 +899,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Research Ideas and Outcomes Volume 2023 ; 2023 ; https://riojournal.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Research Ideas and Outcomes Volume 2024 ; 2024 ; https://riojournal.com/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Research Ideas and Outcomes Volume 2025 ; 2025 ; https://riojournal.com/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Research Ideas and Outcomes Volume 2026 ; 2026 ; https://riojournal.com/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Research Ideas and Outcomes Volume 2026 ; 2026 ; https://riojournal.com/ ; >
 
   }
 
@@ -1044,7 +1044,7 @@
 
       au < finished ; manifest ; 2024 ; 2024 ; ARPHA Proceedings Volume 2024 ; 2024 ; https://ap.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 2025 ; ARPHA Proceedings Volume 2025 ; 2025 ; https://ap.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; ARPHA Proceedings Volume 2026 ; 2026 ; https://ap.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; ARPHA Proceedings Volume 2026 ; 2026 ; https://ap.pensoft.net/ ; >
 
   }
 
@@ -1467,7 +1467,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Biosystematics and Ecology Volume 2023 ; 2023 ; https://biosystecol.oeaw.ac.at/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 2024 ; Biosystematics and Ecology Volume 2024 ; 2024 ; https://biosystecol.oeaw.ac.at/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Biosystematics and Ecology Volume 2025 ; 2025 ; https://biosystecol.oeaw.ac.at/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Biosystematics and Ecology Volume 2026 ; 2026 ; https://biosystecol.oeaw.ac.at/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Biosystematics and Ecology Volume 2026 ; 2026 ; https://biosystecol.oeaw.ac.at/ ; >
 
   }
 
@@ -1765,7 +1765,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; IMA Fungus Volume 2023 ; 2023 ; https://imafungus.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2024 ; 2024 ; IMA Fungus Volume 2024 ; 2024 ; https://imafungus.pensoft.net/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 2025 ; IMA Fungus Volume 2025 ; 2025 ; https://imafungus.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; IMA Fungus Volume 2026 ; 2026 ; https://imafungus.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; IMA Fungus Volume 2026 ; 2026 ; https://imafungus.pensoft.net/ ; >
 
   }
 
@@ -1809,7 +1809,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Journal of Applied Sports Sciences Volume 2023 ; 2023 ; https://journal.nsa.bg/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 2024 ; Journal of Applied Sports Sciences Volume 2024 ; 2024 ; https://journal.nsa.bg/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Journal of Applied Sports Sciences Volume 2025 ; 2025 ; https://journal.nsa.bg/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Journal of Applied Sports Sciences Volume 2026 ; 2026 ; https://journal.nsa.bg/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Journal of Applied Sports Sciences Volume 2026 ; 2026 ; https://journal.nsa.bg/ ; >
 
   }
 
@@ -1825,7 +1825,7 @@
 
       au < finished ; manifest ; 2024 ; 2024 ; Journal of Biomedical and Clinical Research (JBCR) Volume 2024 ; 2024 ; https://jbcr.arphahub.com/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Journal of Biomedical and Clinical Research (JBCR) Volume 2025 ; 2025 ; https://jbcr.arphahub.com/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Journal of Biomedical and Clinical Research (JBCR) Volume 2026 ; 2026 ; https://jbcr.arphahub.com/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Journal of Biomedical and Clinical Research (JBCR) Volume 2026 ; 2026 ; https://jbcr.arphahub.com/ ; >
 
   }
 
