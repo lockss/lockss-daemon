@@ -693,9 +693,9 @@
     #continued_by = 1809-9777
     #new name = International Archives of Otorhinolaryngology 
 
-   au < released ; 2010 ; 2010 ; Arquivos Internacionais de Otorrinolaringologia Volume 1 ; 1 >
-   au < released ; 2011 ; 2011 ; Arquivos Internacionais de Otorrinolaringologia Volume 2 ; 2 >
-   au < released ; 2012 ; 2012 ; Arquivos Internacionais de Otorrinolaringologia Volume 3 ; 3 >
+   au < released ; 2010 ; 2010 ; Arquivos Internacionais de Otorrinolaringologia Volume 14 ; 14 >
+   au < released ; 2011 ; 2011 ; Arquivos Internacionais de Otorrinolaringologia Volume 15 ; 15 >
+   au < released ; 2012 ; 2012 ; Arquivos Internacionais de Otorrinolaringologia Volume 16 ; 16 >
 
    }
 
@@ -711,7 +711,8 @@
     comment[years] = 1999-2012
     # includes Arzneimittelforschung Drug Research. Published as Drug Research after 2012.
 
-    au < doNotProcess ; 1999 ; 1999 ; Arzneimittelforschung Volume 50 ; 50 >
+    au < doNotProcess ; 1999 ; 1999 ; Arzneimittelforschung Volume 49 ; 49 >
+    au < exists ; 2000 ; 2000 ; Arzneimittelforschung Volume 50 ; 50 >
     au < doNotProcess ; 2001 ; 2001 ; Arzneimittelforschung Volume 51 ; 51 >
     au < doNotProcess ; 2002 ; 2002 ; Arzneimittelforschung Volume 52 ; 52 >
     au < doNotProcess ; 2003 ; 2003 ; Arzneimittelforschung Volume 53 ; 53 >
@@ -1993,8 +1994,11 @@
     param[journal_id] = 10.1055/s-00025479
     comment[years] = 2014-2015
 
-    au < released ; 2014 ; 2014 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 1 ; 1 >
-    au < released ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 2 ; 2 >
+    au < released ; 2014 ; 2014 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 2 ; 02 >
+    au < released ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 3 ; 03 >
+    au < exists ; 2016 ; 2016 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 4 ; 04 >
+    au < exists ; 2017 ; 2017 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 5 ; 05 >
+    au < exists ; 2018 ; 2018 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 6 ; 06 >
 
   }
 
@@ -3112,9 +3116,13 @@
     param[journal_id] = 10.1055/s-00033766
     comment[years] = 2017-current
 
-    au < released ; 2017 ; 2017 ; Joints Volume 1 ; 1 >
-    au < released ; 2018 ; 2018 ; Joints Volume 2 ; 2 >
-    au < released ; 2019 ; 2019 ; Joints Volume 3 ; 3 >
+    au < exists ; 2013 ; 2013 ; Joints Volume 1 ; 1 >
+    au < exists ; 2014 ; 2014 ; Joints Volume 2 ; 2 >
+    au < exists ; 2015 ; 2015 ; Joints Volume 3 ; 3 >
+    au < exists ; 2016 ; 2016 ; Joints Volume 4 ; 4 >
+    au < released ; 2017 ; 2017 ; Joints Volume 5 ; 5 >
+    au < released ; 2018 ; 2018 ; Joints Volume 6 ; 6 >
+    au < released ; 2019 ; 2019 ; Joints Volume 7 ; 7 >
 
   }
 
@@ -3180,7 +3188,7 @@
     param[journal_id] = 10.1055/s-00028318
     #years = 2014
 
-   au < released ; 2014 ; 2014 ; Journal of Academic Ophtalmology Volume 1 ; 1 >
+   au < released ; 2014 ; 2014 ; Journal of Academic Ophtalmology Volume 7 ; 07 >
 
   }
 
@@ -3953,27 +3961,27 @@
     param[journal_id] = 10.1055/s-00000031
     comment[years] = 1980-curren196t
 
-    au < doNotProcess ; 1980 ; 1980 ; Klinische Monatsblätter für Augenheilkunde Volume 197 ; 197 >
-    au < doNotProcess ; 1981 ; 1981 ; Klinische Monatsblätter für Augenheilkunde Volume 198 ; 198 >
-    au < doNotProcess ; 1982 ; 1982 ; Klinische Monatsblätter für Augenheilkunde Volume 199 ; 199 >
-    au < doNotProcess ; 1983 ; 1983 ; Klinische Monatsblätter für Augenheilkunde Volume 200 ; 200 >
-    au < doNotProcess ; 1984 ; 1984 ; Klinische Monatsblätter für Augenheilkunde Volume 201 ; 201 >
-    au < doNotProcess ; 1985 ; 1985 ; Klinische Monatsblätter für Augenheilkunde Volume 202 ; 202 >
-    au < doNotProcess ; 1986 ; 1986 ; Klinische Monatsblätter für Augenheilkunde Volume 203 ; 203 >
-    au < doNotProcess ; 1987 ; 1987 ; Klinische Monatsblätter für Augenheilkunde Volume 204 ; 204 >
-    au < doNotProcess ; 1988 ; 1988 ; Klinische Monatsblätter für Augenheilkunde Volume 205 ; 205 >
-    au < doNotProcess ; 1989 ; 1989 ; Klinische Monatsblätter für Augenheilkunde Volume 206 ; 206 >
-    au < doNotProcess ; 1990 ; 1990 ; Klinische Monatsblätter für Augenheilkunde Volume 207 ; 207 >
-    au < doNotProcess ; 1991 ; 1991 ; Klinische Monatsblätter für Augenheilkunde Volume 208 ; 208 >
-    au < doNotProcess ; 1992 ; 1992 ; Klinische Monatsblätter für Augenheilkunde Volume 209 ; 209 >
-    au < doNotProcess ; 1993 ; 1993 ; Klinische Monatsblätter für Augenheilkunde Volume 210 ; 210 >
-    au < doNotProcess ; 1994 ; 1994 ; Klinische Monatsblätter für Augenheilkunde Volume 211 ; 211 >
-    au < doNotProcess ; 1995 ; 1995 ; Klinische Monatsblätter für Augenheilkunde Volume 212 ; 212 >
-    au < doNotProcess ; 1996 ; 1996 ; Klinische Monatsblätter für Augenheilkunde Volume 213 ; 213 >
-    au < doNotProcess ; 1997 ; 1997 ; Klinische Monatsblätter für Augenheilkunde Volume 214 ; 214 >
-    au < doNotProcess ; 1998 ; 1998 ; Klinische Monatsblätter für Augenheilkunde Volume 215 ; 215 >
-    au < doNotProcess ; 1999 ; 1999 ; Klinische Monatsblätter für Augenheilkunde Volume 216 ; 216 >
-    au < doNotProcess ; 2000 ; 2000 ; Klinische Monatsblätter für Augenheilkunde Volume 217 ; 217 >
+    au < doNotProcess ; 1980 ; 1980 ; Klinische Monatsblätter für Augenheilkunde Volume 176-177 ; 176-177 >
+    au < doNotProcess ; 1981 ; 1981 ; Klinische Monatsblätter für Augenheilkunde Volume 178-179 ; 178-179 >
+    au < doNotProcess ; 1982 ; 1982 ; Klinische Monatsblätter für Augenheilkunde Volume 180-181 ; 180-181 >
+    au < doNotProcess ; 1983 ; 1983 ; Klinische Monatsblätter für Augenheilkunde Volume 182-183 ; 182-183 >
+    au < doNotProcess ; 1984 ; 1984 ; Klinische Monatsblätter für Augenheilkunde Volume 184-185 ; 184-185 >
+    au < doNotProcess ; 1985 ; 1985 ; Klinische Monatsblätter für Augenheilkunde Volume 186-187 ; 186-187 >
+    au < doNotProcess ; 1986 ; 1986 ; Klinische Monatsblätter für Augenheilkunde Volume 188-189 ; 188-189 >
+    au < doNotProcess ; 1987 ; 1987 ; Klinische Monatsblätter für Augenheilkunde Volume 190-191 ; 190-191 >
+    au < doNotProcess ; 1988 ; 1988 ; Klinische Monatsblätter für Augenheilkunde Volume 192-193 ; 192-193 >
+    au < doNotProcess ; 1989 ; 1989 ; Klinische Monatsblätter für Augenheilkunde Volume 194-195 ; 194-195 >
+    au < doNotProcess ; 1990 ; 1990 ; Klinische Monatsblätter für Augenheilkunde Volume 196-197 ; 196-197 >
+    au < doNotProcess ; 1991 ; 1991 ; Klinische Monatsblätter für Augenheilkunde Volume 198-199 ; 198-199 >
+    au < doNotProcess ; 1992 ; 1992 ; Klinische Monatsblätter für Augenheilkunde Volume 200-201 ; 200-201 >
+    au < doNotProcess ; 1993 ; 1993 ; Klinische Monatsblätter für Augenheilkunde Volume 202-203 ; 202-203 >
+    au < doNotProcess ; 1994 ; 1994 ; Klinische Monatsblätter für Augenheilkunde Volume 204-205 ; 204-205 >
+    au < doNotProcess ; 1995 ; 1995 ; Klinische Monatsblätter für Augenheilkunde Volume 206-207 ; 206-207 >
+    au < doNotProcess ; 1996 ; 1996 ; Klinische Monatsblätter für Augenheilkunde Volume 208-209 ; 208-209 >
+    au < doNotProcess ; 1997 ; 1997 ; Klinische Monatsblätter für Augenheilkunde Volume 210-211 ; 210-211 >
+    au < doNotProcess ; 1998 ; 1998 ; Klinische Monatsblätter für Augenheilkunde Volume 212-213 ; 212-213 >
+    au < doNotProcess ; 1999 ; 1999 ; Klinische Monatsblätter für Augenheilkunde Volume 214-215 ; 214-215 >
+    au < doNotProcess ; 2000 ; 2000 ; Klinische Monatsblätter für Augenheilkunde Volume 216-217 ; 216-217 >
     au < doNotProcess ; 2001 ; 2001 ; Klinische Monatsblätter für Augenheilkunde Volume 218 ; 218 >
     au < doNotProcess ; 2002 ; 2002 ; Klinische Monatsblätter für Augenheilkunde Volume 219 ; 219 >
     au < doNotProcess ; 2003 ; 2003 ; Klinische Monatsblätter für Augenheilkunde Volume 220 ; 220 >
@@ -4249,20 +4257,20 @@
     comment[years] = 1980-current
     # this journal subsumed Laryngologie, Rhinologie, Otologie und ihre Grenzgebiete
 
-    au < doNotProcess ; 1980 ; 1980 ; Laryngo-Rhino-Otologie Volume 58 ; 58 >
-    au < doNotProcess ; 1981 ; 1981 ; Laryngo-Rhino-Otologie Volume 59 ; 59 >
-    au < doNotProcess ; 1982 ; 1982 ; Laryngo-Rhino-Otologie Volume 60 ; 60 >
-    au < doNotProcess ; 1983 ; 1983 ; Laryngo-Rhino-Otologie Volume 61 ; 61 >
-    au < doNotProcess ; 1984 ; 1984 ; Laryngo-Rhino-Otologie Volume 62 ; 62 >
-    au < doNotProcess ; 1985 ; 1985 ; Laryngo-Rhino-Otologie Volume 63 ; 63 >
-    au < doNotProcess ; 1986 ; 1986 ; Laryngo-Rhino-Otologie Volume 64 ; 64 >
-    au < doNotProcess ; 1987 ; 1987 ; Laryngo-Rhino-Otologie Volume 65 ; 65 >
-    au < doNotProcess ; 1988 ; 1988 ; Laryngo-Rhino-Otologie Volume 66 ; 66 >
-    au < doNotProcess ; 1989 ; 1989 ; Laryngo-Rhino-Otologie Volume 67 ; 67 >
-    au < doNotProcess ; 1990 ; 1990 ; Laryngo-Rhino-Otologie Volume 68 ; 68 >
-    au < doNotProcess ; 1991 ; 1991 ; Laryngo-Rhino-Otologie Volume 69 ; 69 >
-    au < doNotProcess ; 1992 ; 1992 ; Laryngo-Rhino-Otologie Volume 70 ; 70 >
-    au < doNotProcess ; 1993 ; 1993 ; Laryngo-Rhino-Otologie Volume 71 ; 71 >
+    au < doNotProcess ; 1980 ; 1980 ; Laryngo-Rhino-Otologie Volume 59 ; 59 >
+    au < doNotProcess ; 1981 ; 1981 ; Laryngo-Rhino-Otologie Volume 60 ; 60 >
+    au < doNotProcess ; 1982 ; 1982 ; Laryngo-Rhino-Otologie Volume 61 ; 61 >
+    au < doNotProcess ; 1983 ; 1983 ; Laryngo-Rhino-Otologie Volume 62 ; 62 >
+    au < doNotProcess ; 1984 ; 1984 ; Laryngo-Rhino-Otologie Volume 63 ; 63 >
+    au < doNotProcess ; 1985 ; 1985 ; Laryngo-Rhino-Otologie Volume 64 ; 64 >
+    au < doNotProcess ; 1986 ; 1986 ; Laryngo-Rhino-Otologie Volume 65 ; 65 >
+    au < doNotProcess ; 1987 ; 1987 ; Laryngo-Rhino-Otologie Volume 66 ; 66 >
+    au < doNotProcess ; 1988 ; 1988 ; Laryngo-Rhino-Otologie Volume 67 ; 67 >
+    au < doNotProcess ; 1989 ; 1989 ; Laryngo-Rhino-Otologie Volume 68 ; 68 >
+    au < doNotProcess ; 1990 ; 1990 ; Laryngo-Rhino-Otologie Volume 69 ; 69 >
+    au < doNotProcess ; 1991 ; 1991 ; Laryngo-Rhino-Otologie Volume 70 ; 70 >
+    au < doNotProcess ; 1992 ; 1992 ; Laryngo-Rhino-Otologie Volume 71 ; 71 >
+    au < doNotProcess ; 1993 ; 1993 ; Laryngo-Rhino-Otologie Volume 72 ; 72 >
     au < doNotProcess ; 1994 ; 1994 ; Laryngo-Rhino-Otologie Volume 73 ; 73 >
     au < doNotProcess ; 1995 ; 1995 ; Laryngo-Rhino-Otologie Volume 74 ; 74 >
     au < doNotProcess ; 1996 ; 1996 ; Laryngo-Rhino-Otologie Volume 75 ; 75 >
@@ -5394,13 +5402,13 @@
     param[journal_id] = 10.1055/s-00032099
     comment[years] = 2016-2022
 
-   au < released ; 2016 ; 2016 ; Planta Medica International Open Volume 1 ; 1 >
-   au < released ; 2017 ; 2017 ; Planta Medica International Open Volume 2 ; 2 >
-   au < released ; 2018 ; 2018 ; Planta Medica International Open Volume 3 ; 3 >
-   au < released ; 2019 ; 2019 ; Planta Medica International Open Volume 4 ; 4 >
-   au < released ; 2020 ; 2020 ; Planta Medica International Open Volume 5 ; 5 >
-   au < released ; 2021 ; 2021 ; Planta Medica International Open Volume 6 ; 6 >
-   au < released ; 2022 ; 2022 ; Planta Medica International Open Volume 7 ; 7 >
+   au < released ; 2016 ; 2016 ; Planta Medica International Open Volume 3 ; 3 >
+   au < released ; 2017 ; 2017 ; Planta Medica International Open Volume 4 ; 4 >
+   au < released ; 2018 ; 2018 ; Planta Medica International Open Volume 5 ; 5 >
+   au < released ; 2019 ; 2019 ; Planta Medica International Open Volume 6 ; 6 >
+   au < released ; 2020 ; 2020 ; Planta Medica International Open Volume 7 ; 7 >
+   au < released ; 2021 ; 2021 ; Planta Medica International Open Volume 8 ; 8 >
+   au < released ; 2022 ; 2022 ; Planta Medica International Open Volume 9 ; 9 >
 
   }
 
@@ -6896,13 +6904,14 @@
     param[journal_id] = 10.1055/s-00000131
     comment[years] = 2005-current
 
-   au < doNotProcess ; 2005 ; 2005 ; SYNFACTS Volume 1 ; 1 >
-   au < doNotProcess ; 2006 ; 2006 ; SYNFACTS Volume 2 ; 2 >
-   au < doNotProcess ; 2007 ; 2007 ; SYNFACTS Volume 3 ; 3 >
-   au < doNotProcess ; 2008 ; 2008 ; SYNFACTS Volume 4 ; 4 >
-   au < doNotProcess ; 2009 ; 2009 ; SYNFACTS Volume 5 ; 5 >
-   au < released ; 2010 ; 2010 ; SYNFACTS Volume 6 ; 6 >
-   au < released ; 2011 ; 2011 ; SYNFACTS Volume 7 ; 7 >
+   au < doNotProcess ; 2005 ; 2005 ; SYNFACTS Volume 1 ; 2005 >
+   au < doNotProcess ; 2006 ; 2006 ; SYNFACTS Volume 2 ; 2006 >
+   au < doNotProcess ; 2007 ; 2007 ; SYNFACTS Volume 3 ; 2007 >
+   au < doNotProcess ; 2008 ; 2008 ; SYNFACTS Volume 4 ; 2008 >
+   au < doNotProcess ; 2009 ; 2009 ; SYNFACTS Volume 5 ; 2009 >
+   au < released ; 2010 ; 2010 ; SYNFACTS Volume 6 ; 2010 >
+   au < released ; 2011 ; 2011 ; SYNFACTS Volume 7 ; 2011 >
+
    au < released ; 2012 ; 2012 ; SYNFACTS Volume 8 ; 8 >
    au < released ; 2013 ; 2013 ; SYNFACTS Volume 9 ; 9 >
    au < released ; 2014 ; 2014 ; SYNFACTS Volume 10 ; 10 >
@@ -6933,29 +6942,31 @@
     param[journal_id] = 10.1055/s-00000083
     comment[years] = 1989-current
 
-   au < doNotProcess ; 1989 ; 1989 ; SYNLETT Volume 1 (1989) ; 1 >
-   au < doNotProcess ; 1990 ; 1990 ; SYNLETT Volume 1 (1990) ; 1 >
-   au < doNotProcess ; 1991 ; 1991 ; SYNLETT Volume 2 ; 2 >
-   au < doNotProcess ; 1992 ; 1992 ; SYNLETT Volume 3 ; 3 >
-   au < doNotProcess ; 1993 ; 1993 ; SYNLETT Volume 4 ; 4 >
-   au < doNotProcess ; 1994 ; 1994 ; SYNLETT Volume 5 ; 5 >
-   au < doNotProcess ; 1995 ; 1995 ; SYNLETT Volume 6 ; 6 >
-   au < doNotProcess ; 1996 ; 1996 ; SYNLETT Volume 7 ; 7 >
-   au < doNotProcess ; 1997 ; 1997 ; SYNLETT Volume 8 ; 8 >
-   au < doNotProcess ; 1998 ; 1998 ; SYNLETT Volume 9 ; 9 >
-   au < doNotProcess ; 1999 ; 1999 ; SYNLETT Volume 10 ; 10 >
-   au < doNotProcess ; 2000 ; 2000 ; SYNLETT Volume 11 ; 11 >
-   au < doNotProcess ; 2001 ; 2001 ; SYNLETT Volume 12 ; 12 >
-   au < doNotProcess ; 2002 ; 2002 ; SYNLETT Volume 13 ; 13 >
-   au < doNotProcess ; 2003 ; 2003 ; SYNLETT Volume 14 ; 14 >
-   au < doNotProcess ; 2004 ; 2004 ; SYNLETT Volume 15 ; 15 >
-   au < doNotProcess ; 2005 ; 2005 ; SYNLETT Volume 16 ; 16 >
-   au < doNotProcess ; 2006 ; 2006 ; SYNLETT Volume 17 ; 17 >
-   au < doNotProcess ; 2007 ; 2007 ; SYNLETT Volume 18 ; 18 >
-   au < doNotProcess ; 2008 ; 2008 ; SYNLETT Volume 19 ; 19 >
-   au < doNotProcess ; 2009 ; 2009 ; SYNLETT Volume 20 ; 20 >
-   au < released ; 2010 ; 2010 ; SYNLETT Volume 21 ; 21 >
-   au < released ; 2011 ; 2011 ; SYNLETT Volume 22 ; 22 >
+   au < doNotProcess ; 1989 ; 1989 ; SYNLETT Volume 1 (1989) ; 1989 >
+   au < doNotProcess ; 1990 ; 1990 ; SYNLETT Volume 1 (1990) ; 1990 >
+   au < doNotProcess ; 1991 ; 1991 ; SYNLETT Volume 2 ; 1991 >
+   au < doNotProcess ; 1992 ; 1992 ; SYNLETT Volume 3 ; 1992 >
+   au < doNotProcess ; 1993 ; 1993 ; SYNLETT Volume 4 ; 1993 >
+   au < doNotProcess ; 1994 ; 1994 ; SYNLETT Volume 5 ; 1994 >
+   au < doNotProcess ; 1995 ; 1995 ; SYNLETT Volume 6 ; 1995 >
+   au < doNotProcess ; 1996 ; 1996 ; SYNLETT Volume 7 ; 1996 >
+   au < doNotProcess ; 1997 ; 1997 ; SYNLETT Volume 8 ; 1997 >
+   au < doNotProcess ; 1998 ; 1998 ; SYNLETT Volume 9 ; 1998 >
+   au < doNotProcess ; 1999 ; 1999 ; SYNLETT Volume 10 ; 1999 >
+   au < doNotProcess ; 2000 ; 2000 ; SYNLETT Volume 11 ; 2000 >
+   au < doNotProcess ; 2001 ; 2001 ; SYNLETT Volume 12 ; 2001 >
+   au < doNotProcess ; 2002 ; 2002 ; SYNLETT Volume 13 ; 2002 >
+   au < doNotProcess ; 2003 ; 2003 ; SYNLETT Volume 14 ; 2003 >
+   au < doNotProcess ; 2004 ; 2004 ; SYNLETT Volume 15 ; 2004 >
+   au < doNotProcess ; 2005 ; 2005 ; SYNLETT Volume 16 ; 2005 >
+   au < doNotProcess ; 2006 ; 2006 ; SYNLETT Volume 17 ; 2006 >
+   au < doNotProcess ; 2007 ; 2007 ; SYNLETT Volume 18 ; 2007 >
+   au < doNotProcess ; 2008 ; 2008 ; SYNLETT Volume 19 ; 2008 >
+   au < doNotProcess ; 2009 ; 2009 ; SYNLETT Volume 20 ; 2009 >
+   au < released ; 2010 ; 2010 ; SYNLETT Volume 21 ; 2010 >
+   au < released ; 2011 ; 2011 ; SYNLETT Volume 22 ; 2011 >
+
+   #The volume for 2012 uses the year for the first 4 issues, and the volume for the remaining issues
    au < released ; 2012 ; 2012 ; SYNLETT Volume 23 ; 23 >
    au < released ; 2013 ; 2013 ; SYNLETT Volume 24 ; 24 >
    au < released ; 2014 ; 2014 ; SYNLETT Volume 25 ; 25 >
@@ -7010,29 +7021,29 @@
     param[journal_id] = 10.1055/s-00000084
     comment[years] = 1989-current
 
-   au < doNotProcess ; 1989 ; 1989 ; SYNTHESIS Volume 21 ; 21 >
-   au < doNotProcess ; 1990 ; 1990 ; SYNTHESIS Volume 22 ; 22 >
-   au < doNotProcess ; 1991 ; 1991 ; SYNTHESIS Volume 23 ; 23 >
-   au < doNotProcess ; 1992 ; 1992 ; SYNTHESIS Volume 24 ; 24 >
-   au < doNotProcess ; 1993 ; 1993 ; SYNTHESIS Volume 25 ; 25 >
-   au < doNotProcess ; 1994 ; 1994 ; SYNTHESIS Volume 26 ; 26 >
-   au < doNotProcess ; 1995 ; 1995 ; SYNTHESIS Volume 27 ; 27 >
-   au < doNotProcess ; 1996 ; 1996 ; SYNTHESIS Volume 28 ; 28 >
-   au < doNotProcess ; 1997 ; 1997 ; SYNTHESIS Volume 29 ; 29 >
-   au < doNotProcess ; 1998 ; 1998 ; SYNTHESIS Volume 30 ; 30 >
-   au < doNotProcess ; 1999 ; 1999 ; SYNTHESIS Volume 31 ; 31 >
-   au < doNotProcess ; 2000 ; 2000 ; SYNTHESIS Volume 32 ; 32 >
-   au < doNotProcess ; 2001 ; 2001 ; SYNTHESIS Volume 33 ; 33 >
-   au < doNotProcess ; 2002 ; 2002 ; SYNTHESIS Volume 34 ; 34 >
-   au < doNotProcess ; 2003 ; 2003 ; SYNTHESIS Volume 35 ; 35 >
-   au < doNotProcess ; 2004 ; 2004 ; SYNTHESIS Volume 36 ; 36 >
-   au < doNotProcess ; 2005 ; 2005 ; SYNTHESIS Volume 37 ; 37 >
-   au < doNotProcess ; 2006 ; 2006 ; SYNTHESIS Volume 38 ; 38 >
-   au < doNotProcess ; 2007 ; 2007 ; SYNTHESIS Volume 39 ; 39 >
-   au < doNotProcess ; 2008 ; 2008 ; SYNTHESIS Volume 40 ; 40 >
-   au < doNotProcess ; 2009 ; 2009 ; SYNTHESIS Volume 41 ; 41 >
-   au < released ; 2010 ; 2010 ; SYNTHESIS Volume 42 ; 42 >
-   au < released ; 2011 ; 2011 ; SYNTHESIS Volume 43 ; 43 >
+   au < doNotProcess ; 1989 ; 1989 ; SYNTHESIS Volume 21 ; 1989 >
+   au < doNotProcess ; 1990 ; 1990 ; SYNTHESIS Volume 22 ; 1990 >
+   au < doNotProcess ; 1991 ; 1991 ; SYNTHESIS Volume 23 ; 1991 >
+   au < doNotProcess ; 1992 ; 1992 ; SYNTHESIS Volume 24 ; 1992 >
+   au < doNotProcess ; 1993 ; 1993 ; SYNTHESIS Volume 25 ; 1993 >
+   au < doNotProcess ; 1994 ; 1994 ; SYNTHESIS Volume 26 ; 1994 >
+   au < doNotProcess ; 1995 ; 1995 ; SYNTHESIS Volume 27 ; 1995 >
+   au < doNotProcess ; 1996 ; 1996 ; SYNTHESIS Volume 28 ; 1996 >
+   au < doNotProcess ; 1997 ; 1997 ; SYNTHESIS Volume 29 ; 1997 >
+   au < doNotProcess ; 1998 ; 1998 ; SYNTHESIS Volume 30 ; 1998 >
+   au < doNotProcess ; 1999 ; 1999 ; SYNTHESIS Volume 31 ; 1999 >
+   au < doNotProcess ; 2000 ; 2000 ; SYNTHESIS Volume 32 ; 2000 >
+   au < doNotProcess ; 2001 ; 2001 ; SYNTHESIS Volume 33 ; 2001 >
+   au < doNotProcess ; 2002 ; 2002 ; SYNTHESIS Volume 34 ; 2002 >
+   au < doNotProcess ; 2003 ; 2003 ; SYNTHESIS Volume 35 ; 2003 >
+   au < doNotProcess ; 2004 ; 2004 ; SYNTHESIS Volume 36 ; 2004 >
+   au < doNotProcess ; 2005 ; 2005 ; SYNTHESIS Volume 37 ; 2005 >
+   au < doNotProcess ; 2006 ; 2006 ; SYNTHESIS Volume 38 ; 2006 >
+   au < doNotProcess ; 2007 ; 2007 ; SYNTHESIS Volume 39 ; 2007 >
+   au < doNotProcess ; 2008 ; 2008 ; SYNTHESIS Volume 40 ; 2008 >
+   au < doNotProcess ; 2009 ; 2009 ; SYNTHESIS Volume 41 ; 2009 >
+   au < released ; 2010 ; 2010 ; SYNTHESIS Volume 42 ; 2010 >
+   au < released ; 2011 ; 2011 ; SYNTHESIS Volume 43 ; 2011 >
    au < released ; 2012 ; 2012 ; SYNTHESIS Volume 44 ; 44 >
    au < released ; 2013 ; 2013 ; SYNTHESIS Volume 45 ; 45 >
    au < released ; 2014 ; 2014 ; SYNTHESIS Volume 46 ; 46 >
@@ -7874,31 +7885,31 @@
     au < doNotProcess ; 1980 ; 1980 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1980 ; 118 >
     au < doNotProcess ; 1981 ; 1981 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1981 ; 119 >
     au < doNotProcess ; 1982 ; 1982 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1982 ; 120 >
-    au < doNotProcess ; 1983 ; 1983 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1983 ; 0 >
-    au < doNotProcess ; 1984 ; 1984 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1984 ; 0 >
-    au < doNotProcess ; 1985 ; 1985 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1985 ; 0 >
-    au < doNotProcess ; 1986 ; 1986 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1986 ; 0 >
-    au < doNotProcess ; 1987 ; 1987 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1987 ; 0 >
-    au < doNotProcess ; 1988 ; 1988 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1988 ; 0 >
-    au < doNotProcess ; 1989 ; 1989 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1989 ; 0 >
-    au < doNotProcess ; 1990 ; 1990 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1990 ; 0 >
-    au < doNotProcess ; 1991 ; 1991 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1991 ; 0 >
-    au < doNotProcess ; 1992 ; 1992 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1992 ; 0 >
-    au < doNotProcess ; 1993 ; 1993 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1993 ; 0 >
-    au < doNotProcess ; 1994 ; 1994 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1994 ; 0 >
-    au < doNotProcess ; 1995 ; 1995 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1995 ; 0 >
-    au < doNotProcess ; 1996 ; 1996 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1996 ; 0 >
-    au < doNotProcess ; 1997 ; 1997 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1997 ; 0 >
-    au < doNotProcess ; 1998 ; 1998 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1998 ; 0 >
-    au < doNotProcess ; 1999 ; 1999 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1999 ; 0 >
-    au < doNotProcess ; 2000 ; 2000 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2000 ; 0 >
-    au < doNotProcess ; 2001 ; 2001 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2001 ; 0 >
-    au < doNotProcess ; 2002 ; 2002 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2002 ; 0 >
-    au < doNotProcess ; 2003 ; 2003 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2003 ; 0 >
-    au < doNotProcess ; 2004 ; 2004 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2004 ; 0 >
-    au < doNotProcess ; 2005 ; 2005 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2005 ; 0 >
-    au < doNotProcess ; 2006 ; 2006 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2006 ; 0 >
-    au < released ; 2007 ; 2007 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2007 ; 0 >
+    au < doNotProcess ; 1983 ; 1983 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1983 ; 121 >
+    au < doNotProcess ; 1984 ; 1984 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1984 ; 122 >
+    au < doNotProcess ; 1985 ; 1985 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1985 ; 123 >
+    au < doNotProcess ; 1986 ; 1986 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1986 ; 124 >
+    au < doNotProcess ; 1987 ; 1987 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1987 ; 125 >
+    au < doNotProcess ; 1988 ; 1988 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1988 ; 126 >
+    au < doNotProcess ; 1989 ; 1989 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1989 ; 127 >
+    au < doNotProcess ; 1990 ; 1990 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1990 ; 128 >
+    au < doNotProcess ; 1991 ; 1991 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1991 ; 129 >
+    au < doNotProcess ; 1992 ; 1992 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1992 ; 130 >
+    au < doNotProcess ; 1993 ; 1993 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1993 ; 131 >
+    au < doNotProcess ; 1994 ; 1994 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1994 ; 132 >
+    au < doNotProcess ; 1995 ; 1995 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1995 ; 133 >
+    au < doNotProcess ; 1996 ; 1996 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1996 ; 134 >
+    au < doNotProcess ; 1997 ; 1997 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1997 ; 135 >
+    au < doNotProcess ; 1998 ; 1998 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1998 ; 136 >
+    au < doNotProcess ; 1999 ; 1999 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1999 ; 137 >
+    au < doNotProcess ; 2000 ; 2000 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2000 ; 138 >
+    au < doNotProcess ; 2001 ; 2001 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2001 ; 139 >
+    au < doNotProcess ; 2002 ; 2002 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2002 ; 140 >
+    au < doNotProcess ; 2003 ; 2003 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2003 ; 141 >
+    au < doNotProcess ; 2004 ; 2004 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2004 ; 142 >
+    au < doNotProcess ; 2005 ; 2005 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2005 ; 143 >
+    au < doNotProcess ; 2006 ; 2006 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2006 ; 144 >
+    au < released ; 2007 ; 2007 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2007 ; 145 >
 
   }
 
@@ -8388,12 +8399,12 @@
     #move to Scientific Scholar, https://ijcdw.org by 2022-07-26
     #Journal no longer online available
 
-    au < down ; 2017 ; 2017 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 1 ; 1 >
-    au < down ; 2018 ; 2018 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 2 ; 2 >
-    au < down ; 2019 ; 2019 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 3 ; 3 >
-    au < down ; 2020 ; 2020 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 4 ; 4 >
-    au < down ; 2021 ; 2021 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 5 ; 5 >
-    au < down ; 2022 ; 2022 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 6 ; 6 >
+    au < down ; 2017 ; 2017 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 2 ; 02 >
+    au < down ; 2018 ; 2018 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 3 ; 03 >
+    au < down ; 2019 ; 2019 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 4 ; 04 >
+    au < down ; 2020 ; 2020 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 5 ; 05 >
+    au < down ; 2021 ; 2021 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 6 ; 06 >
+    au < down ; 2022 ; 2022 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 7 ; 07 >
 
   }
 
