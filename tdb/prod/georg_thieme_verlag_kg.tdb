@@ -263,8 +263,8 @@
     param[journal_id] = 10.1055/s-00000005
     comment[years] = 1980-current
 
-    au < exists ; 1980 ; 1980 ; Aktuelle Rheumatologie Volume 5 ; 5 >
-    au < exists ; 1981 ; 1981 ; Aktuelle Rheumatologie Volume 6 ; 6 >
+    au < manifest ; 1980 ; 1980 ; Aktuelle Rheumatologie Volume 5 ; 5 >
+    au < manifest ; 1981 ; 1981 ; Aktuelle Rheumatologie Volume 6 ; 6 >
     au < doNotProcess ; 1982 ; 1982 ; Aktuelle Rheumatologie Volume 7 ; 7 >
     au < doNotProcess ; 1983 ; 1983 ; Aktuelle Rheumatologie Volume 8 ; 8 >
     au < doNotProcess ; 1984 ; 1984 ; Aktuelle Rheumatologie Volume 9 ; 9 >
@@ -3400,18 +3400,18 @@
     au < released ; 2012 ; 2012 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 73 ; 73 >
     au < released ; 2013 ; 2013 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 74 ; 74 >
     au < released ; 2014 ; 2014 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 75 ; 75 >
-    au < exists ; 2015 ; 2015 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 76 ; 76 >
-    au < exists ; 2016 ; 2016 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 77 ; 77 >
-    au < exists ; 2017 ; 2017 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 78 ; 78 >
-    au < exists ; 2018 ; 2018 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 79 ; 79 >
-    au < exists ; 2019 ; 2019 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 80 ; 80 >
-    au < exists ; 2020 ; 2020 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 81 ; 81 >
-    au < exists ; 2021 ; 2021 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 82 ; 82 >
-    au < exists ; 2022 ; 2022 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 83 ; 83 >
-    au < exists ; 2023 ; 2023 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 84 ; 84 >
-    au < exists ; 2024 ; 2024 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 85 ; 85 >
-    au < exists ; 2025 ; 2025 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 86 ; 86 >
-    au < exists ; 2026 ; 2026 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 87 ; 87 >
+    au < manifest ; 2015 ; 2015 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 76 ; 76 >
+    au < manifest ; 2016 ; 2016 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 77 ; 77 >
+    au < manifest ; 2017 ; 2017 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 78 ; 78 >
+    au < manifest ; 2018 ; 2018 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 79 ; 79 >
+    au < manifest ; 2019 ; 2019 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 80 ; 80 >
+    au < manifest ; 2020 ; 2020 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 81 ; 81 >
+    au < manifest ; 2021 ; 2021 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 82 ; 82 >
+    au < manifest ; 2022 ; 2022 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 83 ; 83 >
+    au < manifest ; 2023 ; 2023 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 84 ; 84 >
+    au < manifest ; 2024 ; 2024 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 85 ; 85 >
+    au < manifest ; 2025 ; 2025 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 86 ; 86 >
+    au < manifest ; 2026 ; 2026 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 87 ; 87 >
 
   }
 
@@ -5855,7 +5855,7 @@
    au < released ; 2023 ; 2023 ; Revista Chilena de Ortopedia y Traumatología Volume 64 ; 64 >
    au < released ; 2024 ; 2024 ; Revista Chilena de Ortopedia y Traumatología Volume 65 ; 65 >
    au < released ; 2025 ; 2025 ; Revista Chilena de Ortopedia y Traumatología Volume 66 ; 66 >
-   au < expected ; 2026 ; 2026 ; Revista Chilena de Ortopedia y Traumatología Volume 67 ; 67 >
+   au < manifest ; 2026 ; 2026 ; Revista Chilena de Ortopedia y Traumatología Volume 67 ; 67 >
 
   }
 
