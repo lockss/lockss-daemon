@@ -115,7 +115,7 @@
     au < finished ; manifest ; 2023 ; 2 ; Caucasiana Volume 2023 ; 2023 ; https://caucasiana.pensoft.net/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 3 ; Caucasiana Volume 2024 ; 2024 ; https://caucasiana.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2025 ; 4 ; Caucasiana Volume 2025 ; 2025 ; https://caucasiana.pensoft.net/ ; >
-    au < ready ; exists ; 2026 ; 5 ; Caucasiana Volume 2026 ; 2026 ; https://caucasiana.pensoft.net/ ; >
+    au < crawling ; exists ; 2026 ; 5 ; Caucasiana Volume 2026 ; 2026 ; https://caucasiana.pensoft.net/ ; >
 
    }
   
@@ -325,7 +325,7 @@
     au < finished ; manifest ; 2023 ; 46 ; Nota Lepidopterologica Volume 2023 ; 2023 ; https://nl.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 47 ; Nota Lepidopterologica Volume 2024 ; 2024 ; https://nl.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2025 ; 48 ; Nota Lepidopterologica Volume 2025 ; 2025 ; https://nl.pensoft.net/ ; >
-    au < ready ; exists ; 2026 ; 49 ; Nota Lepidopterologica Volume 2026 ; 2026 ; https://nl.pensoft.net/ ; >
+    au < crawling ; exists ; 2026 ; 49 ; Nota Lepidopterologica Volume 2026 ; 2026 ; https://nl.pensoft.net/ ; >
 
    }
     
@@ -685,7 +685,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Italian Botanist Volume 2023 ; 2023 ; https://italianbotanist.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Italian Botanist Volume 2024 ; 2024 ; https://italianbotanist.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Italian Botanist Volume 2025 ; 2025 ; https://italianbotanist.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Italian Botanist Volume 2026 ; 2026 ; https://italianbotanist.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Italian Botanist Volume 2026 ; 2026 ; https://italianbotanist.pensoft.net/ ; >
 
   }
 
@@ -967,7 +967,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Russian Journal of Economics Volume 2023 ; 2023 ; https://rujec.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Russian Journal of Economics Volume 2024 ; 2024 ; https://rujec.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Russian Journal of Economics Volume 2025 ; 2025 ; https://rujec.org/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Russian Journal of Economics Volume 2026 ; 2026 ; https://rujec.org/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Russian Journal of Economics Volume 2026 ; 2026 ; https://rujec.org/ ; >
 
   }
 
@@ -1168,7 +1168,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Pharmacia Volume 2023 ; 2023 ; https://pharmacia.pensoft.net/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Pharmacia Volume 2024 ; 2024 ; https://pharmacia.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Pharmacia Volume 2025 ; 2025 ; https://pharmacia.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Pharmacia Volume 2026 ; 2026 ; https://pharmacia.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Pharmacia Volume 2026 ; 2026 ; https://pharmacia.pensoft.net/ ; >
 
   }
 
@@ -1191,7 +1191,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Bulgarian Cardiology Volume 2023 ; 2023 ; https://journal.bgcardio.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Bulgarian Cardiology Volume 2024 ; 2024 ; https://journal.bgcardio.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Bulgarian Cardiology Volume 2025 ; 2025 ; https://journal.bgcardio.org/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Bulgarian Cardiology Volume 2026 ; 2026 ; https://journal.bgcardio.org/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Bulgarian Cardiology Volume 2026 ; 2026 ; https://journal.bgcardio.org/ ; >
 
   }
 
@@ -1352,7 +1352,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Journal of Universal Computer Science Volume 2023 ; 2023 ; https://lib.jucs.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Universal Computer Science Volume 2024 ; 2024 ; https://lib.jucs.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Journal of Universal Computer Science Volume 2025 ; 2025 ; https://lib.jucs.org/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Journal of Universal Computer Science Volume 2026 ; 2026 ; https://lib.jucs.org/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Journal of Universal Computer Science Volume 2026 ; 2026 ; https://lib.jucs.org/ ; >
 
   }
 
@@ -1487,7 +1487,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; BRICS Journal of Economics Volume 2023 ; 2023 ; https://brics-econ.arphahub.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; BRICS Journal of Economics Volume 2024 ; 2024 ; https://brics-econ.arphahub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; BRICS Journal of Economics Volume 2025 ; 2025 ; https://brics-econ.arphahub.com/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; BRICS Journal of Economics Volume 2026 ; 2026 ; https://brics-econ.arphahub.com/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; BRICS Journal of Economics Volume 2026 ; 2026 ; https://brics-econ.arphahub.com/ ; >
 
   }
 
@@ -1547,7 +1547,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Fossil Record Volume 2023 ; 2023 ; https://fr.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Fossil Record Volume 2024 ; 2024 ; https://fr.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Fossil Record Volume 2025 ; 2025 ; https://fr.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Fossil Record Volume 2026 ; 2026 ; https://fr.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Fossil Record Volume 2026 ; 2026 ; https://fr.pensoft.net/ ; >
 
   }
 
@@ -1786,7 +1786,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Innovations in Agriculture Volume 2023 ; 2023 ; https://innovationsagriculture.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 2024 ; Innovations in Agriculture Volume 2024 ; 2024 ; https://innovationsagriculture.pensoft.net/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Innovations in Agriculture Volume 2025 ; 2025 ; https://innovationsagriculture.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Innovations in Agriculture Volume 2026 ; 2026 ; https://innovationsagriculture.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Innovations in Agriculture Volume 2026 ; 2026 ; https://innovationsagriculture.pensoft.net/ ; >
 
   }
 
@@ -1963,7 +1963,7 @@
       au < ready ; exists ; 2023 ; 2023 ; Problems of Dental Medicine Volume 2023 ; 2023 ; https://pdm.pensoft.net/ ; >
       au < frozen ; exists ; 2024 ; 2024 ; Problems of Dental Medicine Volume 2024 ; 2024 ; https://pdm.pensoft.net/ ; >
       au < frozen ; exists ; 2025 ; 2025 ; Problems of Dental Medicine Volume 2025 ; 2025 ; https://pdm.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Problems of Dental Medicine Volume 2026 ; 2026 ; https://pdm.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Problems of Dental Medicine Volume 2026 ; 2026 ; https://pdm.pensoft.net/ ; >
 
   }
 
@@ -1980,7 +1980,7 @@
 
       au < frozen ; exists ; 2024 ; 2024 ; Review of Clinical Pharmacology and Pharmacokinetics - International Edition Volume 2024 ; 2024 ; https://rcpp-ie.com/ ; >
       au < frozen ; exists ; 2025 ; 2025 ; Review of Clinical Pharmacology and Pharmacokinetics - International Edition Volume 2025 ; 2025 ; https://rcpp-ie.com/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Review of Clinical Pharmacology and Pharmacokinetics - International Edition Volume 2026 ; 2026 ; https://rcpp-ie.com/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Review of Clinical Pharmacology and Pharmacokinetics - International Edition Volume 2026 ; 2026 ; https://rcpp-ie.com/ ; >
 
   }
 
