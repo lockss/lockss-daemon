@@ -719,7 +719,7 @@
     # includes Arzneimittelforschung Drug Research. Published as Drug Research after 2012.
 
     au < finished ; frozen ; 1999 ; 1999 ; Arzneimittelforschung Volume 49 ; 49 ; reingest1.clockss.org:8082 >
-    au < exists ; exists ; 2000 ; 2000 ; Arzneimittelforschung Volume 50 ; 50 ; >
+    au < manifest ; exists ; 2000 ; 2000 ; Arzneimittelforschung Volume 50 ; 50 ; >
     au < finished ; finished ; 2001 ; 2001 ; Arzneimittelforschung Volume 51 ; 51 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2002 ; 2002 ; Arzneimittelforschung Volume 52 ; 52 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2003 ; 2003 ; Arzneimittelforschung Volume 53 ; 53 ; reingest1.clockss.org:8082 >
@@ -2005,9 +2005,9 @@
 
     au < finished ; finished ; 2014 ; 2014 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 2 ; 02 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 3 ; 03 ; reingest5.clockss.org:8082 >
-    au < exists ; exists ; 2016 ; 2016 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 4 ; 04 ; >
-    au < exists ; exists ; 2017 ; 2017 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 5 ; 05 ; >
-    au < exists ; exists ; 2018 ; 2018 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 6 ; 06 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 4 ; 04 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 5 ; 05 ; >
+    au < manifest ; exists ; 2018 ; 2018 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 6 ; 06 ; >
 
   }
 
@@ -3127,10 +3127,10 @@
     param[journal_id] = 10.1055/s-00033766
     comment[years] = 2013-current
 
-    au < exists ; exists ; 2013 ; 2013 ; Joints Volume 1 ; 1 ; >
-    au < exists ; exists ; 2014 ; 2014 ; Joints Volume 2 ; 2 ; >
-    au < exists ; exists ; 2015 ; 2015 ; Joints Volume 3 ; 3 ; >
-    au < exists ; exists ; 2016 ; 2016 ; Joints Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Joints Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; Joints Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Joints Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Joints Volume 4 ; 4 ; >
     au < finished ; finished ; 2017 ; 2017 ; Joints Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; Joints Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2019 ; 2019 ; Joints Volume 7 ; 7 ; reingest2.clockss.org:8085 >
