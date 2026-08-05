@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>43</string>
+        <string>44</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -146,6 +146,7 @@
             -->
             <string>1,"https?://movie-usa.glencoesoftware.com/metadata/.*"</string>
             <string>1,"^https?://(trs\.silverchair-cdn\.com)/"</string>
+            <string>1,"^https?://(cdn\.rupress\.org)/"</string>
             <string>1,"^https?://(%s|[^.]+\.(silverchair-?cdn\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
             <!--
             Exclude bad url comes from
@@ -304,6 +305,10 @@
         </list>
     </entry>
     <entry>
+        <string>text/*_content_validator_factory</string>
+        <string>org.lockss.plugin.silverchair.SilverchairCommonThemeContentImageContentValidatorFactory</string>
+    </entry>
+    <entry>
         <string>au_permitted_host_pattern</string>
         <list>
             <string>(fonts|ajax)\.googleapis\.com</string>
@@ -322,6 +327,7 @@
             <string>movie-usa\.glencoesoftware\.com</string>
             <string>static-movie-usa\.glencoesoftware\.com</string>
             <string>trs\.silverchair-cdn\.com</string>
+            <string>cdn\.rupress\.org</string>
         </list>
     </entry>
     <entry>
