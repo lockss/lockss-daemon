@@ -276,7 +276,7 @@ public class BaseAtyponMetadataUtil {
             AU_journal_titleSiam + ", foundJournalTitleSiam ="  + foundJournalTitleSiam + ", isInAu =" + isInAu);
 
     if (isInAu && (pubNameSiam != null) && (foundJournalTitleSiam != null)) {
-      Boolean isSiam = pubNameSeg.equals("Society for Industrial and Applied Mathematics");
+      Boolean isSiam = pubNameSiam.equals("Society for Industrial and Applied Mathematics");
       if (isSiam) {
         log.debug3("Siam Check:  Publisher Specific Checks for Siam");
 
