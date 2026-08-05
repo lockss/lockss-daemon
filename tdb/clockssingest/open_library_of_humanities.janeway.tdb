@@ -964,9 +964,9 @@
       au < notReady ; exists ; 2000 ; 80 ; International Labour Review Volume 2000 ; 2000 ; > #no articles found and do not redirect to https://en.ilr-rit.org/lockss?year=2000
       au < notReady ; exists ; 2001 ; 81 ; International Labour Review Volume 2001 ; 2001 ; > #no articles found and do not redirect to https://en.ilr-rit.org/lockss?year=2001
       au < testing ; exists ; 2002 ; 82 ; International Labour Review Volume 2002 ; 2002 ; >
-      au < testing ; exists ; 2003 ; 83 ; International Labour Review Volume 2003 ; 2003 ; >
+      au < notReady ; exists ; 2003 ; 83 ; International Labour Review Volume 2003 ; 2003 ; > #no articles found and do not redirect to https://en.ilr-rit.org/lockss?year=2003
       au < testing ; exists ; 2004 ; 84 ; International Labour Review Volume 2004 ; 2004 ; >
-      au < testing ; exists ; 2005 ; 85 ; International Labour Review Volume 2005 ; 2005 ; >
+      au < notReady ; exists ; 2005 ; 85 ; International Labour Review Volume 2005 ; 2005 ; > #no articles found and do not redirect to https://en.ilr-rit.org/lockss?year=2005
       au < testing ; exists ; 2006 ; 86 ; International Labour Review Volume 2006 ; 2006 ; >
       au < testing ; exists ; 2007 ; 87 ; International Labour Review Volume 2007 ; 2007 ; >
       au < testing ; exists ; 2008 ; 88 ; International Labour Review Volume 2008 ; 2008 ; >
@@ -1033,7 +1033,7 @@
 
       au < testing ; exists ; 2024 ; 1 ; Regeneration: Environment, Art, Culture Volume 2024 ; 2024 ; >
       au < testing ; exists ; 2025 ; 2 ; Regeneration: Environment, Art, Culture Volume 2025 ; 2025 ; >
-      au < testing ; exists ; 2026 ; 3 ; Regeneration: Environment, Art, Culture Volume 2026 ; 2026 ; >
+      au < notReady ; exists ; 2026 ; 3 ; Regeneration: Environment, Art, Culture Volume 2026 ; 2026 ; > #403 Forbidden, https://www.regeneration-journal.org/article/id/20309/file/212719/
 
   }
 
