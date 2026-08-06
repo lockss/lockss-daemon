@@ -142,7 +142,7 @@
      au < finished ; manifest ; 2023 ; 70 ; Deutsche Entomologische Zeitschrift Volume 2023 ; 2023 ; https://dez.pensoft.net/ ; reingest5.clockss.org:8082 >
      au < deepCrawl ; exists ; 2024 ; 71 ; Deutsche Entomologische Zeitschrift Volume 2024 ; 2024 ; https://dez.pensoft.net/ ; >
      au < deepCrawl ; exists ; 2025 ; 72 ; Deutsche Entomologische Zeitschrift Volume 2025 ; 2025 ; https://dez.pensoft.net/ ; >
-     au < ready ; exists ; 2026 ; 73 ; Deutsche Entomologische Zeitschrift Volume 2026 ; 2026 ; https://dez.pensoft.net/ ; >
+     au < crawling ; exists ; 2026 ; 73 ; Deutsche Entomologische Zeitschrift Volume 2026 ; 2026 ; https://dez.pensoft.net/ ; >
 
    }
    
@@ -1124,7 +1124,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; European Science Editing (ESE) Volume 2023 ; 2023 ; https://ese.arphahub.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; European Science Editing (ESE) Volume 2024 ; 2024 ; https://ese.arphahub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; European Science Editing (ESE) Volume 2025 ; 2025 ; https://ese.arphahub.com/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; European Science Editing (ESE) Volume 2026 ; 2026 ; https://ese.arphahub.com/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; European Science Editing (ESE) Volume 2026 ; 2026 ; https://ese.arphahub.com/ ; >
 
   }
 
@@ -1409,7 +1409,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Population and Economics Volume 2023 ; 2023 ; https://populationandeconomics.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Population and Economics Volume 2024 ; 2024 ; https://populationandeconomics.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Population and Economics Volume 2025 ; 2025 ; https://populationandeconomics.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Population and Economics Volume 2026 ; 2026 ; https://populationandeconomics.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Population and Economics Volume 2026 ; 2026 ; https://populationandeconomics.pensoft.net/ ; >
 
   }
 
@@ -1622,7 +1622,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Plant Ecology and Evolution Volume 2023 ; 2023 ; https://plecevo.eu/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Plant Ecology and Evolution Volume 2024 ; 2024 ; https://plecevo.eu/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Plant Ecology and Evolution Volume 2025 ; 2025 ; https://plecevo.eu/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Plant Ecology and Evolution Volume 2026 ; 2026 ; https://plecevo.eu/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Plant Ecology and Evolution Volume 2026 ; 2026 ; https://plecevo.eu/ ; >
 
   }
 
@@ -1855,7 +1855,7 @@
 
       au < finished ; manifest ; 2024 ; 2024 ; Papahou: Records of the Auckland Museum Volume 2024 ; 2024 ; https://papahou.arphahub.com/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Papahou: Records of the Auckland Museum Volume 2025 ; 2025 ; https://papahou.arphahub.com/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Papahou: Records of the Auckland Museum Volume 2026 ; 2026 ; https://papahou.arphahub.com/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Papahou: Records of the Auckland Museum Volume 2026 ; 2026 ; https://papahou.arphahub.com/ ; >
 
   }
 
@@ -1899,7 +1899,7 @@
       param[au_oai_set] = ibe
 
       au < deepCrawl ; exists ; 2025 ; 1 ; Individual-based Ecology (IBE) Volume 2025 ; 2025 ; https://ibe.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2 ; Individual-based Ecology (IBE) Volume 2026 ; 2026 ; https://ibe.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2 ; Individual-based Ecology (IBE) Volume 2026 ; 2026 ; https://ibe.pensoft.net/ ; >
 
   }
 
