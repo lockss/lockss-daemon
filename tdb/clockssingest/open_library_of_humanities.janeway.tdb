@@ -35,7 +35,7 @@
     au < doesNotExist ; doesNotExist ; 2023 ; 13 ; The Comics Grid Volume 2023 ; 2023 ; >
     au < deepCrawl ; exists ; 2024 ; 14 ; The Comics Grid Volume 2024 ; 2024 ; >
     au < deepCrawl ; exists ; 2025 ; 15 ; The Comics Grid Volume 2025 ; 2025 ; >
-    au < ready ; exists ; 2026 ; 16 ; The Comics Grid Volume 2026 ; 2026 ; >
+    au < crawling ; exists ; 2026 ; 16 ; The Comics Grid Volume 2026 ; 2026 ; >
 
   }
 
@@ -1016,7 +1016,7 @@
       param[base_url] = https://politicalphilosophyjournal.org/
 
       au < ready ; exists ; 2024 ; 1 ; Political Philosophy Volume 2024 ; 2024 ; >
-      au < ready ; exists ; 2025 ; 2 ; Political Philosophy Volume 2025 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; 2 ; Political Philosophy Volume 2025 ; 2025 ; >
       au < crawling ; exists ; 2026 ; 3 ; Political Philosophy Volume 2026 ; 2026 ; >
 
   }
@@ -1093,7 +1093,7 @@
       param[base_url] = https://www.theoryandsocialinquiry.org/
 
       au < ready ; exists ; 2025 ; 1 ; Theory and Social Inquiry Volume 2025 ; 2025 ; >
-      au < ready ; exists ; 2026 ; 2 ; Theory and Social Inquiry Volume 2026 ; 2026 ; >
+      au < crawling ; exists ; 2026 ; 2 ; Theory and Social Inquiry Volume 2026 ; 2026 ; >
 
   }
 
