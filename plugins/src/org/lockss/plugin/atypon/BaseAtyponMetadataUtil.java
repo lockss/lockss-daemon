@@ -392,76 +392,82 @@ public class BaseAtyponMetadataUtil {
     String foundJournalTitleEUP = am.get(MetadataField.FIELD_PUBLICATION_TITLE);
 
     log.debug3("EUP Check: Publisher Specific Checks for EUP = " + pubNameEUP + ", AU_journal_titleEUP = " +
-            AU_journal_titleEUP + ", foundJournalTitleEUP ="  + foundJournalTitleEUP + ", isInAu =" + isInAu);
+          AU_journal_titleEUP + ", foundJournalTitleEUP ="  + foundJournalTitleEUP + ", isInAu =" + isInAu);
 
     if (isInAu && (pubNameEUP != null) && (foundJournalTitleEUP != null)) {
-      Boolean isEUP = pubNameSeg.equals("Edinburgh University Press");
-        if (isEUP) {
-            log.debug3("EUP Check:  Publisher Specific Checks for EUP");
-            // Logic mapping:
-            // 2020 - 2026+: check both JID and Year
-            // 2000 - 2019: check JID only
-            String eup_jid = tdbau.getParam("journal_id");
-            String eup_year = tdbau.getAttr("year");
-            String eup_doi = am.get(MetadataField.FIELD_DOI);
-            log.debug3(String.format("EUP Check: EUP doi = %s, jid = %s, eup_year = %s ", eup_doi, eup_jid, eup_year));
+      Boolean isEUP = pubNameEUP.equals("Edinburgh University Press");
+      if (isEUP) {
+          log.debug3("EUP Check:  Publisher Specific Checks for EUP");
 
-            // Parse eup_year defensively: it may be a single year ("2021"),
-            // a range ("2020-2021"), or missing/malformed.
-            Integer startYear = null;
-            Integer endYear = null;
-            if (eup_year != null) {
-                String trimmed = eup_year.trim();
-                String[] yearParts = trimmed.split("\\s*-\\s*");
-                try {
-                    startYear = Integer.parseInt(yearParts[0].trim());
-                    endYear = (yearParts.length > 1) ? Integer.parseInt(yearParts[yearParts.length - 1].trim()) : startYear;
-                } catch (NumberFormatException e) {
-                    log.debug3("EUP Check: Could not parse year attribute '" + eup_year + "', skipping year-based check: " + e.getMessage());
-                    startYear = null;
-                    endYear = null;
-                }
-            } else {
-                log.debug3("EUP Check: year attribute is null, skipping year-based check");
-            }
+          // 1. PRIMARY CHECK: volume, when available, is a direct comparison against
+          // TDB and is decisive either way - it doesn't need a fallback.
+          String foundVolumeEUP = am.get(MetadataField.FIELD_VOLUME);
+          String AU_volumeEUP = au.getProperties().getString(ConfigParamDescr.VOLUME_NAME.getKey());
 
-            // If we couldn't determine a usable year, skip the whole EUP-specific
-            // check rather than throwing, and leave isInAu as inherited.
-            if (startYear == null) {
-                return isInAu;
-            }
+          if (!StringUtils.isEmpty(foundVolumeEUP) && !StringUtils.isEmpty(AU_volumeEUP)) {
+              isInAu = checkVolumeMatch("EUP", am, au, "Edinburgh University Press");
+              log.debug3("EUP Check: volume data available, decisive result isInAu = " + isInAu);
+              return isInAu;
+          }
 
-            // 1. Check if year is within our valid processing range (2000 and forward)
-            if (startYear >= 2000) {
-                if (eup_doi != null && eup_jid != null) {
-                    // Determine logic: 2020 and forward (including 2026+) uses both
-                    boolean useYear = (startYear >= 2020);
-                    boolean containsJid = eup_doi.contains(eup_jid);
-                    // A range like 2020-2021 may be encoded in the DOI as either year
-                    boolean containsYear = eup_doi.contains(String.valueOf(startYear))
-                            || (endYear != null && !endYear.equals(startYear) && eup_doi.contains(String.valueOf(endYear)));
-                    if (useYear) {
-                        // 2020 - 2026+ Logic
-                        isInAu = containsJid && containsYear;
-                        log.debug3(String.format("EUP Check (JID+Year) for %s: %b", eup_year, isInAu));
-                    } else {
-                        // 2000 - 2019 Logic
-                        isInAu = containsJid;
-                        log.debug3(String.format("EUP Check (JID only) for %s: %b", eup_year, isInAu));
-                    }
-                } else if (eup_doi == null) {
-                    // Fail the check if DOI is missing for any year >= 2000
-                    isInAu = false;
-                    log.debug3("EUP Check Failed: DOI is null");
-                }
-            } else {
-                // Optional: Handle years before 2000 if necessary
-                log.debug3("EUP Check: Year " + startYear + " is outside the 2000-2026+ range.");
-            }
-            // If the year is NOT in the list (e.g., 1998), the block is skipped
-            // and the inherited value of isInAu remains unchanged.
-            return isInAu;
-        }
+          // 2. FALLBACK: no volume data on one side or the other (e.g. HTML-sourced
+          // metadata without a citation_volume mapping, or an older RIS record).
+          // Use JID/year-in-DOI as a heuristic proxy instead.
+          log.debug3("EUP Check: no usable volume data, falling back to JID/year check");
+
+          String eup_jid = tdbau.getParam("journal_id");
+          String eup_year = tdbau.getAttr("year");
+          String eup_doi = am.get(MetadataField.FIELD_DOI);
+          log.debug3(String.format("EUP Check: EUP doi = %s, jid = %s, eup_year = %s ", eup_doi, eup_jid, eup_year));
+
+          Integer startYear = null;
+          Integer endYear = null;
+          if (eup_year != null) {
+              String trimmed = eup_year.trim();
+              String[] yearParts = trimmed.split("\\s*-\\s*");
+              try {
+                  startYear = Integer.parseInt(yearParts[0].trim());
+                  endYear = (yearParts.length > 1) ? Integer.parseInt(yearParts[yearParts.length - 1].trim()) : startYear;
+                  log.debug3("EUP Check: startYear =  " + startYear + ", endYear = " + endYear);
+              } catch (NumberFormatException e) {
+                  log.debug3("EUP Check: Could not parse year attribute '" + eup_year + "', skipping year-based check: " + e.getMessage());
+                  startYear = null;
+                  endYear = null;
+              }
+          } else {
+              log.debug3("EUP Check: year attribute is null, skipping year-based check");
+          }
+
+          if (startYear == null) {
+              return isInAu;
+          }
+
+          log.debug3("EUP Check: before year range check, startYear =  " + startYear + ", endYear = " + endYear + ", eup_doi = " + eup_doi + ", eup_jid =" + eup_jid + ", isInAu = " + isInAu);
+
+          if (startYear >= 2000) {
+              if (eup_doi != null && eup_jid != null) {
+                  boolean useYear = (startYear >= 2020);
+                  boolean containsJid = eup_doi.contains(eup_jid);
+                  boolean containsYear = eup_doi.contains(String.valueOf(startYear))
+                          || (endYear != null && !endYear.equals(startYear) && eup_doi.contains(String.valueOf(endYear)));
+                  if (useYear) {
+                      isInAu = containsJid && containsYear;
+                      log.debug3(String.format("EUP Check (JID+Year) for %s: %b", eup_year, isInAu));
+                  } else {
+                      isInAu = containsJid;
+                      log.debug3(String.format("EUP Check (JID only) for %s: %b", eup_year, isInAu));
+                  }
+              } else if (eup_doi == null) {
+                  isInAu = false;
+                  log.debug3("EUP Check Failed: DOI is null");
+              }
+          } else {
+              log.debug3("EUP Check: Year " + startYear + " is outside the 2000-2026+ range.");
+          }
+
+          log.debug3("EUP Check: finished with isInAu = " + isInAu);
+          return isInAu;
+      }
     }
 
     // END PUBLISHER SPECIFIC CHECKS //
