@@ -1,16 +1,17 @@
 {
 
   publisher <
-    name = Verduci Editore ;
+    name = Verduci International LLC ;
     info[contract] = 2017 ;
     info[tester] = S ;
     info[platform] = Source
   >
     hidden[proxy] = DIRECT
+    #Publisher changed from Verduci Editore to Verduci International LLC May 2026.
 
   {
     title <
-       name = Verduci Editore Source Content
+       name = Verduci International Source Content
     >
 
     plugin = org.lockss.plugin.clockss.verduci.ClockssVerduciEditoreSourcePlugin
@@ -18,7 +19,6 @@
     {
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/verduci-released/
 
-    #2018 not on Humboldt
     au < zapped ; finished ; 2018 ; Verduci Editore Source Content 2018 ; 2018 >
     au < zapped ; finished ; 2019 ; Verduci Editore Source Content 2019 ; 2019 >
     au < zapped ; finished ; 2020 ; Verduci Editore Source Content 2020 ; 2020 >
@@ -32,7 +32,7 @@
     au < readySource ; frozen ; 2023 ; Verduci Editore Source Content 2023 ; 2023 >
     au < readySource ; finished ; 2024 ; Verduci Editore Source Content 2024 ; 2024 >
     au < readySource ; finished ; 2025 ; Verduci Editore Source Content 2025 ; 2025 >
-    au < readySource ; crawling ; 2026 ; Verduci Editore Source Content 2026 ; 2026 >
+    au < readySource ; crawling ; 2026 ; Verduci International Source Content 2026 ; 2026 >
 
     }
   }
