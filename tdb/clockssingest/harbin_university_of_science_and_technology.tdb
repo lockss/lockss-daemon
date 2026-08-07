@@ -4,7 +4,7 @@
     info[contract] = 2008 ;
     info[back] = 2008 ;
     info[tester] = 5 ;
-    info[platform] = Bepress
+    info[platform] = Bepress. Moved? LOCKSS-5446
   >
     provider = bepress
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
