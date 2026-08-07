@@ -8,6 +8,7 @@
   plugin = org.lockss.plugin.silverchair.allenpress.AllenPressSilverchairPlugin
   implicit < status ; year ; param[year] ; name ; param[volume_name] >
   param[base_url] = https://meridian.allenpress.com/
+  #Moved from SC https://meridian.allenpress.com/to PubFactory https://innovationsjournals.kglmeridian.com/
 
   {
 
@@ -19,15 +20,14 @@
 
     param[journal_id] = innovationsjournals-JIPO
 
-    au < released ; 2018 ; 2018 ; Journal of Immunotherapy and Precision Oncology Volume 1 ; 1 >
-    au < released ; 2019 ; 2019 ; Journal of Immunotherapy and Precision Oncology Volume 2 ; 2 >
-    au < released ; 2020 ; 2020 ; Journal of Immunotherapy and Precision Oncology Volume 3 ; 3 >
-    au < released ; 2021 ; 2021 ; Journal of Immunotherapy and Precision Oncology Volume 4 ; 4 >
-    au < released ; 2022 ; 2022 ; Journal of Immunotherapy and Precision Oncology Volume 5 ; 5 >
-    au < released ; 2023 ; 2023 ; Journal of Immunotherapy and Precision Oncology Volume 6 ; 6 >
-    au < released ; 2024 ; 2024 ; Journal of Immunotherapy and Precision Oncology Volume 7 ; 7 >
-    au < testing ; 2025 ; 2025 ; Journal of Immunotherapy and Precision Oncology Volume 8 ; 8 >
-    au < expected ; 2026 ; 2026 ; Journal of Immunotherapy and Precision Oncology Volume 9 ; 9 >
+    au < down ; 2018 ; 2018 ; Journal of Immunotherapy and Precision Oncology Volume 1 ; 1 >
+    au < down ; 2019 ; 2019 ; Journal of Immunotherapy and Precision Oncology Volume 2 ; 2 >
+    au < down ; 2020 ; 2020 ; Journal of Immunotherapy and Precision Oncology Volume 3 ; 3 >
+    au < down ; 2021 ; 2021 ; Journal of Immunotherapy and Precision Oncology Volume 4 ; 4 >
+    au < down ; 2022 ; 2022 ; Journal of Immunotherapy and Precision Oncology Volume 5 ; 5 >
+    au < down ; 2023 ; 2023 ; Journal of Immunotherapy and Precision Oncology Volume 6 ; 6 >
+    au < down ; 2024 ; 2024 ; Journal of Immunotherapy and Precision Oncology Volume 7 ; 7 >
+    au < doNotProcess ; 2025 ; 2025 ; Journal of Immunotherapy and Precision Oncology Volume 8 ; 8 >
 
   }
   {
@@ -40,15 +40,14 @@
 
     param[journal_id] = innovationsjournals-JQSH
 
-    au < released ; 2018 ; 2018 ; Global Journal on Quality and Safety in Healthcare Volume 1 ; 1 >
-    au < released ; 2019 ; 2019 ; Global Journal on Quality and Safety in Healthcare Volume 2 ; 2 >
-    au < released ; 2020 ; 2020 ; Global Journal on Quality and Safety in Healthcare Volume 3 ; 3 >
-    au < released ; 2021 ; 2021 ; Global Journal on Quality and Safety in Healthcare Volume 4 ; 4 >
-    au < released ; 2022 ; 2022 ; Global Journal on Quality and Safety in Healthcare Volume 5 ; 5 >
-    au < released ; 2023 ; 2023 ; Global Journal on Quality and Safety in Healthcare Volume 6 ; 6 >
-    au < released ; 2024 ; 2024 ; Global Journal on Quality and Safety in Healthcare Volume 7 ; 7 >
-    au < testing ; 2025 ; 2025 ; Global Journal on Quality and Safety in Healthcare Volume 8 ; 8 >
-    au < expected ; 2026 ; 2026 ; Global Journal on Quality and Safety in Healthcare Volume 9 ; 9 >
+    au < down ; 2018 ; 2018 ; Global Journal on Quality and Safety in Healthcare Volume 1 ; 1 >
+    au < down ; 2019 ; 2019 ; Global Journal on Quality and Safety in Healthcare Volume 2 ; 2 >
+    au < down ; 2020 ; 2020 ; Global Journal on Quality and Safety in Healthcare Volume 3 ; 3 >
+    au < down ; 2021 ; 2021 ; Global Journal on Quality and Safety in Healthcare Volume 4 ; 4 >
+    au < down ; 2022 ; 2022 ; Global Journal on Quality and Safety in Healthcare Volume 5 ; 5 >
+    au < down ; 2023 ; 2023 ; Global Journal on Quality and Safety in Healthcare Volume 6 ; 6 >
+    au < down ; 2024 ; 2024 ; Global Journal on Quality and Safety in Healthcare Volume 7 ; 7 >
+    au < doNotProcess ; 2025 ; 2025 ; Global Journal on Quality and Safety in Healthcare Volume 8 ; 8 >
 
   }
   {
@@ -60,12 +59,11 @@
 
     param[journal_id] = innovationsjournals-IDDB
 
-    au < released ; 2021 ; 2021 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 1 ; 1 >
-    au < released ; 2022 ; 2022 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 2 ; 2 >
-    au < released ; 2023 ; 2023 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 3 ; 3 >
-    au < released ; 2024 ; 2024 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 4 ; 4 >
-    au < testing ; 2025 ; 2025 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 5 ; 5 >
-    au < expected ; 2026 ; 2026 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 6 ; 6 >
+    au < down ; 2021 ; 2021 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 1 ; 1 >
+    au < down ; 2022 ; 2022 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 2 ; 2 >
+    au < down ; 2023 ; 2023 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 3 ; 3 >
+    au < down ; 2024 ; 2024 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 4 ; 4 >
+    au < doNotProcess ; 2025 ; 2025 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 5 ; 5 >
 
   }
   {
@@ -77,12 +75,11 @@
 
     param[journal_id] = innovationsjournals-ISIM
 
-    au < released ; 2021 ; 2021 ; Innovations in Surgery and Interventional Medicine Volume 1 ; 1 >
-    au < released ; 2022 ; 2022 ; Innovations in Surgery and Interventional Medicine Volume 2 ; 2 >
-    au < released ; 2023 ; 2023 ; Innovations in Surgery and Interventional Medicine Volume 3 ; 3 >
-    au < released ; 2024 ; 2024 ; Innovations in Surgery and Interventional Medicine Volume 4 ; 4 >
-    au < testing ; 2025 ; 2025 ; Innovations in Surgery and Interventional Medicine Volume 5 ; 5 >
-    au < expected ; 2026 ; 2026 ; Innovations in Surgery and Interventional Medicine Volume 6 ; 6 >
+    au < down ; 2021 ; 2021 ; Innovations in Surgery and Interventional Medicine Volume 1 ; 1 >
+    au < down ; 2022 ; 2022 ; Innovations in Surgery and Interventional Medicine Volume 2 ; 2 >
+    au < down ; 2023 ; 2023 ; Innovations in Surgery and Interventional Medicine Volume 3 ; 3 >
+    au < down ; 2024 ; 2024 ; Innovations in Surgery and Interventional Medicine Volume 4 ; 4 >
+    au < doNotProcess ; 2025 ; 2025 ; Innovations in Surgery and Interventional Medicine Volume 5 ; 5 >
 
   }
 }
