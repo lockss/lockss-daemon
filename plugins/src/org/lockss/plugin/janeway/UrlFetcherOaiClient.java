@@ -62,6 +62,7 @@ public class UrlFetcherOaiClient implements OAIClient{
   @Override
   public InputStream execute(Parameters parameters) throws HttpException {
 	String url = parameters.toUrl(baseUrl);
+    log.debug3("OAI request URL: " + url);
     UrlFetcher uf = facade.makeUrlFetcher(url);
     BitSet permFetchFlags = uf.getFetchFlags();
     permFetchFlags.set(UrlCacher.REFETCH_FLAG);

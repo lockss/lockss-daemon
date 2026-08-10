@@ -139,6 +139,8 @@ public class JanewayOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
               }
           }
       } catch (InvalidOAIResponse e) {
+          logger.error("InvalidOAIResponse: cause = " +
+                  (e.getCause() != null ? e.getCause().toString() : "null"), e);
     	  if(e.getCause() != null && e.getCause().getMessage().contains("LOCKSS")) {
     		  error = true;
     		  logger.debug3("OAI result errored due to LOCKSS audit proxy. Trying alternate start Url", e);
@@ -148,7 +150,7 @@ public class JanewayOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
       } catch (BadArgumentException e) {
     	  throw new ConfigurationException("Incorrectly formatted OAI parameter", e);
       }  catch (Exception e) {
-          logger.debug("Unexpected exception when trying to getRecordList");
+          logger.debug("Unexpected exception when trying to getRecordList", e);
       }
       
       List<String> idList = new ArrayList<String>();
