@@ -10968,8 +10968,8 @@
       #journal_id = CDH
 
       au < manifest ; exists ; 2011 ; Community Dental Health Volume 28 ; 28 ; cdha ; https://journals.sagepub.com/ ; >
-      au < exists ; exists ; 2012 ; Community Dental Health Volume 29 ; 29 ; cdha ; https://journals.sagepub.com/ ; >
-      au < exists ; exists ; 2013 ; Community Dental Health Volume 30 ; 30 ; cdha ; https://journals.sagepub.com/ ; >
+      au < manifest ; exists ; 2012 ; Community Dental Health Volume 29 ; 29 ; cdha ; https://journals.sagepub.com/ ; >
+      au < manifest ; exists ; 2013 ; Community Dental Health Volume 30 ; 30 ; cdha ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2014 ; Community Dental Health Volume 31 ; 31 ; cdha ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2015 ; Community Dental Health Volume 32 ; 32 ; cdha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2016 ; Community Dental Health Volume 33 ; 33 ; cdha ; https://journals.sagepub.com/ ; >
@@ -11370,7 +11370,7 @@
       au < frozen ; exists ; 2023 ; Computability Volume 12 ; 12 ; coea ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2024 ; Computability Volume 13 ; 13 ; coea ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; Computability Volume 14 ; 14 ; coea ; https://journals.sagepub.com/ ; >
-      au < expected ; exists ; 2026 ; Computability Volume 15 ; 15 ; coea ; https://journals.sagepub.com/ ; >
+      au < manifest ; exists ; 2026 ; Computability Volume 15 ; 15 ; coea ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -22877,7 +22877,7 @@
       au < deepCrawl ; exists ; 2023-2024 ; Imagination, Cognition and Personality Volume 43 ; 43 ; icaa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Imagination, Cognition and Personality Volume 44 ; 44 ; icaa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2025-2026 ; Imagination, Cognition and Personality Volume 45 ; 45 ; icaa ; https://journals.sagepub.com/ ; >
-      au < expected ; exists ; 2026-2027 ; Imagination, Cognition and Personality Volume 46 ; 46 ; icaa ; https://journals.sagepub.com/ ; >
+      au < manifest ; exists ; 2026-2027 ; Imagination, Cognition and Personality Volume 46 ; 46 ; icaa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -25753,7 +25753,7 @@
       au < deepCrawl ; exists ; 2023 ; International Journal of Immunopathology and Pharmacology Volume 37 ; 37 ; ijia ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; International Journal of Immunopathology and Pharmacology Volume 38 ; 38 ; ijia ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2025 ; International Journal of Immunopathology and Pharmacology Volume 39 ; 39 ; ijia ; https://journals.sagepub.com/ ; >
-      au < expected ; exists ; 2026 ; International Journal of Immunopathology and Pharmacology Volume 40 ; 40 ; ijia ; https://journals.sagepub.com/ ; >
+      au < manifest ; exists ; 2026 ; International Journal of Immunopathology and Pharmacology Volume 40 ; 40 ; ijia ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -32868,7 +32868,7 @@
       au < deepCrawl ; exists ; 2023-2024 ; Journal of Educational Technology Systems Volume 52 ; 52 ; etsa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Journal of Educational Technology Systems Volume 53 ; 53 ; etsa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2025-2026 ; Journal of Educational Technology Systems Volume 54 ; 54 ; etsa ; https://journals.sagepub.com/ ; >
-      au < expected ; exists ; 2026-2027 ; Journal of Educational Technology Systems Volume 55 ; 55 ; etsa ; https://journals.sagepub.com/ ; >
+      au < manifest ; exists ; 2026-2027 ; Journal of Educational Technology Systems Volume 55 ; 55 ; etsa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -64033,7 +64033,7 @@
       au < deepCrawl ; exists ; 2023 ; Word of Mouth Volume 35 ; 35 ; woma ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Word of Mouth Volume 36 ; 36 ; woma ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Word of Mouth Volume 37 ; 37 ; woma ; https://journals.sagepub.com/ ; >
-      au < expected ; exists ; 2026 ; Word of Mouth Volume 38 ; 38 ; woma ; https://journals.sagepub.com/ ; >
+      au < manifest ; exists ; 2026 ; Word of Mouth Volume 38 ; 38 ; woma ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -77450,7 +77450,7 @@
       au < frozen ; exists ; 2023 ; Transactions in Earth, Environment, and Sustainability Volume 1 ; 1 ; teea ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Transactions in Earth, Environment, and Sustainability Volume 2 ; 2 ; teea ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Transactions in Earth, Environment, and Sustainability Volume 3 ; 3 ; teea ; https://journals.sagepub.com/ ; >
-      au < expected ; exists ; 2026 ; Transactions in Earth, Environment, and Sustainability Volume 4 ; 4 ; teea ; https://journals.sagepub.com/ ; >
+      au < manifest ; exists ; 2026 ; Transactions in Earth, Environment, and Sustainability Volume 4 ; 4 ; teea ; https://journals.sagepub.com/ ; >
 
   }
 
