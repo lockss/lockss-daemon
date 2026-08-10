@@ -33,13 +33,6 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.atypon;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import org.apache.commons.lang3.StringUtils;
 import org.lockss.config.TdbAu;
 import org.lockss.daemon.ConfigParamDescr;
@@ -47,11 +40,18 @@ import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.MetadataField;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.util.UrlUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.TypedEntryMap;
-import java.util.Arrays;
-import java.util.List;
+import org.lockss.util.UrlUtil;
+
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * This class contains useful routines to allow a metadata extractor to verify
@@ -850,33 +850,51 @@ public class BaseAtyponMetadataUtil {
 
   // helper method
   public static boolean checkVolumeMatch(String publisherKey,
-                                   ArticleMetadata am,
-                                   ArchivalUnit au,
-                                   String expectedPublisherName) {
-    String foundVolume = am.get(MetadataField.FIELD_VOLUME);
-    String auVolume    = au.getProperties()
-            .getString(ConfigParamDescr.VOLUME_NAME.getKey());
+                                         ArticleMetadata am,
+                                         ArchivalUnit au,
+                                         String expectedPublisherName) {
+      String foundVolume = am.get(MetadataField.FIELD_VOLUME);
+      String auVolume    = au.getProperties()
+              .getString(ConfigParamDescr.VOLUME_NAME.getKey());
 
-    // missing or mismatch → drop out
-    if (StringUtils.isEmpty(foundVolume)
-            || StringUtils.isEmpty(auVolume)
-            || !foundVolume.equals(auVolume)) {
+      // First pass: check for standard match
+      if (!StringUtils.isEmpty(foundVolume)
+              && !StringUtils.isEmpty(auVolume)
+              && foundVolume.equals(auVolume)) {
 
+          log.debug3(publisherKey
+                  + " volumes match; isInAu remains true"
+                  + " (expectedPublisher=" + expectedPublisherName
+                  + ", foundVolume="     + foundVolume
+                  + ", auVolume="        + auVolume + ")");
+          return true;
+      }
+
+      // Second pass fallback: Try decoding if the first match failed
+      if (!StringUtils.isEmpty(foundVolume) && !StringUtils.isEmpty(auVolume)) {
+          try {
+              String decodedAuVolume = URLDecoder.decode(auVolume, String.valueOf(StandardCharsets.UTF_8));
+              if (foundVolume.equals(decodedAuVolume)) {
+
+                  log.debug3(publisherKey
+                          + " volumes match after URL decoding; isInAu remains true"
+                          + " (expectedPublisher=" + expectedPublisherName
+                          + ", foundVolume="     + foundVolume
+                          + ", auVolume(decoded)=" + decodedAuVolume + ")");
+                  return true;
+              }
+          } catch (Exception e) {
+              // Ignore decoding exceptions and proceed to log the original failure
+          }
+      }
+
+      // Both standard match and decoding fallback failed
       log.debug3(publisherKey
               + " volume mismatch or missing; setting isInAu=false"
               + " (expectedPublisher=" + expectedPublisherName
               + ", foundVolume="     + foundVolume
               + ", auVolume="        + auVolume + ")");
       return false;
-    }
-
-    // match → stay true
-    log.debug3(publisherKey
-            + " volumes match; isInAu remains true"
-            + " (expectedPublisher=" + expectedPublisherName
-            + ", foundVolume="     + foundVolume
-            + ", auVolume="        + auVolume + ")");
-    return true;
   }
 
 
