@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -124,7 +124,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_crawlrules</string>
     <list>
         <!--Need to exclude those urls since they are followed by u=real_article full url or url=real_article full url or other format -->
-        <string>2, "https?://(www\.)?(facebook\.com|linkedin\.com|mendeley\.com|mix\.com|orcid\.org|pinterest\.com|twitter\.com|x\.com|web\.skype\.com|academia\.edu|blogger\.com|digg\.com|google\.com|instagram\.com|reddit\.com|refworks\.com|researchgate\.net|semanticscholar\.org|del\.icio\.us)/"</string>
+        <string>2, "https?://(www\.)?(facebook\.com|linkedin\.com|mendeley\.com|mix\.com|orcid\.org|pinterest\.com|twitter\.com|x\.com|web\.skype\.com|academia\.edu|blogger\.com|digg\.com|google\.com|instagram\.com|reddit\.com|refworks\.com|researchgate\.net|semanticscholar\.org|del\.icio\.us|crossmark-cdn\.crossref\.org)/"</string>
         <string>1, "https://crossmark-cdn.crossref.org/widget/"</string>
         <string>1, "%sissue_\d+_\d+\.html", base_url</string>
         <string>1, "%s(themes|inc|data)/", base_url</string>
