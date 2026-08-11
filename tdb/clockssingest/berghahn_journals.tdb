@@ -489,7 +489,7 @@
     au < finished ; manifest ; 2023 ; European Comic Art Volume 16 ; 16 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; European Comic Art Volume 17 ; 17 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; European Comic Art Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2026 ; European Comic Art Volume 19 ; 19 ; >
+    au < testing ; exists ; 2026 ; European Comic Art Volume 19 ; 19 ; >
 
   }
 
@@ -1301,7 +1301,7 @@
     au < finished ; manifest ; 2023 ; Social Analysis Volume 67 ; 67 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Social Analysis Volume 68 ; 68 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Social Analysis Volume 69 ; 69 ; >
-    au < manifest ; exists ; 2026 ; Social Analysis Volume 70 ; 70 ; >
+    au < testing ; exists ; 2026 ; Social Analysis Volume 70 ; 70 ; >
 
   }
 
