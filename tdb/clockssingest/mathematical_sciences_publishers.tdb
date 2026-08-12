@@ -690,4 +690,92 @@
 
   }
 
+  {
+
+    title <
+      name = Mathematica Scandinavica ;
+        eissn = 0025-5521
+    >
+
+    param[journal_id] = mscand
+    #This journal is on a different platform from the others. Open Journal Systems 3.4.0.10
+
+    au < expected ; exists ; 1953 ; Mathematica Scandinavica Volume 1 ; 1 ; 1953 ; https://msp.org/ ; >
+    au < expected ; exists ; 1954 ; Mathematica Scandinavica Volume 2 ; 2 ; 1954 ; https://msp.org/ ; >
+    au < expected ; exists ; 1955 ; Mathematica Scandinavica Volume 3 ; 3 ; 1955 ; https://msp.org/ ; >
+    au < expected ; exists ; 1956 ; Mathematica Scandinavica Volume 4 ; 4 ; 1956 ; https://msp.org/ ; >
+    au < expected ; exists ; 1957 ; Mathematica Scandinavica Volume 5 ; 5 ; 1957 ; https://msp.org/ ; >
+    au < expected ; exists ; 1958 ; Mathematica Scandinavica Volume 6 ; 6 ; 1958 ; https://msp.org/ ; >
+    au < expected ; exists ; 1959 ; Mathematica Scandinavica Volume 7 ; 7 ; 1959 ; https://msp.org/ ; >
+    au < expected ; exists ; 1960 ; Mathematica Scandinavica Volume 8 ; 8 ; 1960 ; https://msp.org/ ; >
+    au < expected ; exists ; 1961 ; Mathematica Scandinavica Volume 9 ; 9 ; 1961 ; https://msp.org/ ; >
+    au < expected ; exists ; 1962 ; Mathematica Scandinavica Volume 10-11 ; 10-11 ; 1962 ; https://msp.org/ ; >
+    au < expected ; exists ; 1963 ; Mathematica Scandinavica Volume 12-13 ; 12-13 ; 1963 ; https://msp.org/ ; >
+    au < expected ; exists ; 1964 ; Mathematica Scandinavica Volume 14-15 ; 14-15 ; 1964 ; https://msp.org/ ; >
+    au < expected ; exists ; 1965 ; Mathematica Scandinavica Volume 16-17 ; 16-17 ; 1965 ; https://msp.org/ ; >
+    au < expected ; exists ; 1966 ; Mathematica Scandinavica Volume 18-19 ; 18-19 ; 1966 ; https://msp.org/ ; >
+    au < expected ; exists ; 1967 ; Mathematica Scandinavica Volume 20-21 ; 20-21 ; 1967 ; https://msp.org/ ; >
+    au < expected ; exists ; 1968 ; Mathematica Scandinavica Volume 22-23 ; 22-23 ; 1968 ; https://msp.org/ ; >
+    au < expected ; exists ; 1969 ; Mathematica Scandinavica Volume 24-25 ; 24-25 ; 1969 ; https://msp.org/ ; >
+    au < expected ; exists ; 1970 ; Mathematica Scandinavica Volume 26-27 ; 26-27 ; 1970 ; https://msp.org/ ; >
+    au < expected ; exists ; 1971 ; Mathematica Scandinavica Volume 28-29 ; 28-29 ; 1971 ; https://msp.org/ ; >
+    au < expected ; exists ; 1972 ; Mathematica Scandinavica Volume 30-31 ; 30-31 ; 1972 ; https://msp.org/ ; >
+    au < expected ; exists ; 1973 ; Mathematica Scandinavica Volume 32-33 ; 32-33 ; 1973 ; https://msp.org/ ; >
+    au < expected ; exists ; 1974 ; Mathematica Scandinavica Volume 34-35 ; 34-35 ; 1974 ; https://msp.org/ ; >
+    au < expected ; exists ; 1975 ; Mathematica Scandinavica Volume 36-37 ; 36-37 ; 1975 ; https://msp.org/ ; >
+    au < expected ; exists ; 1976 ; Mathematica Scandinavica Volume 38-39 ; 38-39 ; 1976 ; https://msp.org/ ; >
+    au < expected ; exists ; 1977 ; Mathematica Scandinavica Volume 40-41 ; 40-41 ; 1977 ; https://msp.org/ ; >
+    au < expected ; exists ; 1978 ; Mathematica Scandinavica Volume 42-43 ; 42-43 ; 1978 ; https://msp.org/ ; >
+    au < expected ; exists ; 1979 ; Mathematica Scandinavica Volume 44-45 ; 44-45 ; 1979 ; https://msp.org/ ; >
+    au < expected ; exists ; 1980 ; Mathematica Scandinavica Volume 46-47 ; 46-47 ; 1980 ; https://msp.org/ ; >
+    au < expected ; exists ; 1981 ; Mathematica Scandinavica Volume 48-49 ; 48-49 ; 1981 ; https://msp.org/ ; >
+    au < expected ; exists ; 1982 ; Mathematica Scandinavica Volume 50-51 ; 50-51 ; 1982 ; https://msp.org/ ; >
+    au < expected ; exists ; 1983 ; Mathematica Scandinavica Volume 52-53 ; 52-53 ; 1983 ; https://msp.org/ ; >
+    au < expected ; exists ; 1984 ; Mathematica Scandinavica Volume 54-55 ; 54-55 ; 1984 ; https://msp.org/ ; >
+    au < expected ; exists ; 1985 ; Mathematica Scandinavica Volume 56-57 ; 56-57 ; 1985 ; https://msp.org/ ; >
+    au < expected ; exists ; 1986 ; Mathematica Scandinavica Volume 58-59 ; 58-59 ; 1986 ; https://msp.org/ ; >
+    au < expected ; exists ; 1987 ; Mathematica Scandinavica Volume 60-61 ; 60-61 ; 1987 ; https://msp.org/ ; >
+    au < expected ; exists ; 1988 ; Mathematica Scandinavica Volume 62-63 ; 62-63 ; 1988 ; https://msp.org/ ; >
+    au < expected ; exists ; 1989 ; Mathematica Scandinavica Volume 64-65 ; 64-65 ; 1989 ; https://msp.org/ ; >
+    au < expected ; exists ; 1990 ; Mathematica Scandinavica Volume 66-67 ; 66-67 ; 1990 ; https://msp.org/ ; >
+    au < expected ; exists ; 1991 ; Mathematica Scandinavica Volume 68-69 ; 68-69 ; 1991 ; https://msp.org/ ; >
+    au < expected ; exists ; 1992 ; Mathematica Scandinavica Volume 70-71 ; 70-71 ; 1992 ; https://msp.org/ ; >
+    au < expected ; exists ; 1993 ; Mathematica Scandinavica Volume 72-73 ; 72-73 ; 1993 ; https://msp.org/ ; >
+    au < expected ; exists ; 1994 ; Mathematica Scandinavica Volume 74-75 ; 74-75 ; 1994 ; https://msp.org/ ; >
+    au < expected ; exists ; 1995 ; Mathematica Scandinavica Volume 76-77 ; 76-77 ; 1995 ; https://msp.org/ ; >
+    au < expected ; exists ; 1996 ; Mathematica Scandinavica Volume 78-79 ; 78-79 ; 1996 ; https://msp.org/ ; >
+    au < expected ; exists ; 1997 ; Mathematica Scandinavica Volume 80-81 ; 80-81 ; 1997 ; https://msp.org/ ; >
+    au < expected ; exists ; 1998 ; Mathematica Scandinavica Volume 82-83 ; 82-83 ; 1998 ; https://msp.org/ ; >
+    au < expected ; exists ; 1999 ; Mathematica Scandinavica Volume 84-85 ; 84-85 ; 1999 ; https://msp.org/ ; >
+    au < expected ; exists ; 2000 ; Mathematica Scandinavica Volume 86-87 ; 86-87 ; 2000 ; https://msp.org/ ; >
+    au < expected ; exists ; 2001 ; Mathematica Scandinavica Volume 88-89 ; 88-89 ; 2001 ; https://msp.org/ ; >
+    au < expected ; exists ; 2002 ; Mathematica Scandinavica Volume 90-91 ; 90-91 ; 2002 ; https://msp.org/ ; >
+    au < expected ; exists ; 2003 ; Mathematica Scandinavica Volume 92-93 ; 92-93 ; 2003 ; https://msp.org/ ; >
+    au < expected ; exists ; 2004 ; Mathematica Scandinavica Volume 94-95 ; 94-95 ; 2004 ; https://msp.org/ ; >
+    au < expected ; exists ; 2005 ; Mathematica Scandinavica Volume 96-97 ; 96-97 ; 2005 ; https://msp.org/ ; >
+    au < expected ; exists ; 2006 ; Mathematica Scandinavica Volume 98-99 ; 98-99 ; 2006 ; https://msp.org/ ; >
+    au < expected ; exists ; 2007 ; Mathematica Scandinavica Volume 100-101 ; 100-101 ; 2007 ; https://msp.org/ ; >
+    au < expected ; exists ; 2008 ; Mathematica Scandinavica Volume 102-103 ; 102-103 ; 2008 ; https://msp.org/ ; >
+    au < expected ; exists ; 2009 ; Mathematica Scandinavica Volume 104-105 ; 104-105 ; 2009 ; https://msp.org/ ; >
+    au < expected ; exists ; 2010 ; Mathematica Scandinavica Volume 106-107 ; 106-107 ; 2010 ; https://msp.org/ ; >
+    au < expected ; exists ; 2011 ; Mathematica Scandinavica Volume 108-109 ; 108-109 ; 2011 ; https://msp.org/ ; >
+    au < expected ; exists ; 2012 ; Mathematica Scandinavica Volume 110-111 ; 110-111 ; 2012 ; https://msp.org/ ; >
+    au < expected ; exists ; 2013 ; Mathematica Scandinavica Volume 112-113 ; 112-113 ; 2013 ; https://msp.org/ ; >
+    au < expected ; exists ; 2014 ; Mathematica Scandinavica Volume 114-115 ; 114-115 ; 2014 ; https://msp.org/ ; >
+    au < expected ; exists ; 2015 ; Mathematica Scandinavica Volume 116-117 ; 116-117 ; 2015 ; https://msp.org/ ; >
+    au < expected ; exists ; 2016 ; Mathematica Scandinavica Volume 118-119 ; 118-119 ; 2016 ; https://msp.org/ ; >
+    au < expected ; exists ; 2017 ; Mathematica Scandinavica Volume 120-121 ; 120-121 ; 2017 ; https://msp.org/ ; >
+    au < expected ; exists ; 2018 ; Mathematica Scandinavica Volume 122-123 ; 122-123 ; 2018 ; https://msp.org/ ; >
+    au < expected ; exists ; 2019 ; Mathematica Scandinavica Volume 124-125 ; 124-125 ; 2019 ; https://msp.org/ ; >
+    au < expected ; exists ; 2020 ; Mathematica Scandinavica Volume 126 ; 126 ; 2020 ; https://msp.org/ ; >
+    au < expected ; exists ; 2021 ; Mathematica Scandinavica Volume 127 ; 127 ; 2021 ; https://msp.org/ ; >
+    au < expected ; exists ; 2022 ; Mathematica Scandinavica Volume 128 ; 128 ; 2022 ; https://msp.org/ ; >
+    au < expected ; exists ; 2023 ; Mathematica Scandinavica Volume 129 ; 129 ; 2023 ; https://msp.org/ ; >
+    au < expected ; exists ; 2024 ; Mathematica Scandinavica Volume 130 ; 130 ; 2024 ; https://msp.org/ ; >
+    au < expected ; exists ; 2025 ; Mathematica Scandinavica Volume 131 ; 131 ; 2025 ; https://msp.org/ ; >
+    au < expected ; exists ; 2026 ; Mathematica Scandinavica Volume 132 ; 132 ; 2026 ; https://msp.org/ ; >
+
+
+  }
+
 }
