@@ -276,7 +276,7 @@
     
       param[journal_id] = cjb1
 
-      au < ready ; exists ; 1951 ; Canadian Journal of Botany Volume 29 ; 29 ; https://cdnsciencepub.com/ ; >
+      au < crawling ; exists ; 1951 ; Canadian Journal of Botany Volume 29 ; 29 ; https://cdnsciencepub.com/ ; >
       au < ready ; exists ; 1952 ; Canadian Journal of Botany Volume 30 ; 30 ; https://cdnsciencepub.com/ ; >
       au < ready ; exists ; 1953 ; Canadian Journal of Botany Volume 31 ; 31 ; https://cdnsciencepub.com/ ; >
       au < ready ; exists ; 1954 ; Canadian Journal of Botany Volume 32 ; 32 ; https://cdnsciencepub.com/ ; >
@@ -287,7 +287,7 @@
       au < ready ; exists ; 1959 ; Canadian Journal of Botany Volume 37 ; 37 ; https://cdnsciencepub.com/ ; >
       au < crawling ; exists ; 1960 ; Canadian Journal of Botany Volume 38 ; 38 ; https://cdnsciencepub.com/ ; >
       au < ready ; exists ; 1961 ; Canadian Journal of Botany Volume 39 ; 39 ; https://cdnsciencepub.com/ ; >
-      au < ready ; exists ; 1962 ; Canadian Journal of Botany Volume 40 ; 40 ; https://cdnsciencepub.com/ ; >
+      au < crawling ; exists ; 1962 ; Canadian Journal of Botany Volume 40 ; 40 ; https://cdnsciencepub.com/ ; >
       au < crawling ; exists ; 1963 ; Canadian Journal of Botany Volume 41 ; 41 ; https://cdnsciencepub.com/ ; >
       au < ready ; exists ; 1964 ; Canadian Journal of Botany Volume 42 ; 42 ; https://cdnsciencepub.com/ ; >
       au < crawling ; exists ; 1965 ; Canadian Journal of Botany Volume 43 ; 43 ; https://cdnsciencepub.com/ ; >
@@ -363,7 +363,7 @@
     au < ready ; exists ; 1971 ; Canadian Geotechnical Journal Volume 8 ; 8 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1972 ; Canadian Geotechnical Journal Volume 9 ; 9 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1973 ; Canadian Geotechnical Journal Volume 10 ; 10 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1974 ; Canadian Geotechnical Journal Volume 11 ; 11 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1974 ; Canadian Geotechnical Journal Volume 11 ; 11 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1975 ; Canadian Geotechnical Journal Volume 12 ; 12 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1976 ; Canadian Geotechnical Journal Volume 13 ; 13 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1977 ; Canadian Geotechnical Journal Volume 14 ; 14 ; https://cdnsciencepub.com/ ; >
@@ -629,7 +629,7 @@
 
     au < ready ; exists ; 1964 ; Canadian Journal of Earth Sciences Volume 1 ; 1 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1965 ; Canadian Journal of Earth Sciences Volume 2 ; 2 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1966 ; Canadian Journal of Earth Sciences Volume 3 ; 3 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1966 ; Canadian Journal of Earth Sciences Volume 3 ; 3 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1967 ; Canadian Journal of Earth Sciences Volume 4 ; 4 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1968 ; Canadian Journal of Earth Sciences Volume 5 ; 5 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1969 ; Canadian Journal of Earth Sciences Volume 6 ; 6 ; https://cdnsciencepub.com/ ; >
@@ -797,8 +797,8 @@
     au < ready ; exists ; 1947 ; Journal of the Fisheries Research Board of Canada Volume 7a ; 7a ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1948 ; Journal of the Fisheries Research Board of Canada Volume 7b ; 7b ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1949 ; Journal of the Fisheries Research Board of Canada Volume 7c ; 7c ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1950 ; Journal of the Fisheries Research Board of Canada Volume 7d ; 7d ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1950 ; Journal of the Fisheries Research Board of Canada Volume 8a ; 8a ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1950 ; Journal of the Fisheries Research Board of Canada Volume 7d ; 7d ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1950 ; Journal of the Fisheries Research Board of Canada Volume 8a ; 8a ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1951 ; Journal of the Fisheries Research Board of Canada Volume 8b ; 8b ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1952 ; Journal of the Fisheries Research Board of Canada Volume 8c ; 8c ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1952 ; Journal of the Fisheries Research Board of Canada Volume 9 ; 9 ; https://cdnsciencepub.com/ ; >
@@ -809,7 +809,7 @@
     au < crawling ; exists ; 1956 ; Journal of the Fisheries Research Board of Canada Volume 13 ; 13 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1957 ; Journal of the Fisheries Research Board of Canada Volume 14 ; 14 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1958 ; Journal of the Fisheries Research Board of Canada Volume 15 ; 15 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1959 ; Journal of the Fisheries Research Board of Canada Volume 16 ; 16 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1959 ; Journal of the Fisheries Research Board of Canada Volume 16 ; 16 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1960 ; Journal of the Fisheries Research Board of Canada Volume 17 ; 17 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1961 ; Journal of the Fisheries Research Board of Canada Volume 18 ; 18 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1962 ; Journal of the Fisheries Research Board of Canada Volume 19 ; 19 ; https://cdnsciencepub.com/ ; >
@@ -1195,7 +1195,7 @@
     au < manifest ; exists ; 1972 ; Canadian Journal of Physiology and Pharmacology Volume 50 ; 50 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1973 ; Canadian Journal of Physiology and Pharmacology Volume 51 ; 51 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1974 ; Canadian Journal of Physiology and Pharmacology Volume 52 ; 52 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1975 ; Canadian Journal of Physiology and Pharmacology Volume 53 ; 53 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1975 ; Canadian Journal of Physiology and Pharmacology Volume 53 ; 53 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1976 ; Canadian Journal of Physiology and Pharmacology Volume 54 ; 54 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1977 ; Canadian Journal of Physiology and Pharmacology Volume 55 ; 55 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1978 ; Canadian Journal of Physiology and Pharmacology Volume 56 ; 56 ; https://cdnsciencepub.com/ ; >

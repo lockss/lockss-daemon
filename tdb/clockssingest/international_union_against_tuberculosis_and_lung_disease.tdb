@@ -184,7 +184,7 @@
     param[base_url] = https://journals.theunion.org/
 
     au < ready ; exists ; 2024 ; IJTLD OPEN Volume 1 ; 1 ; >
-    au < ready ; exists ; 2025 ; IJTLD OPEN Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2025 ; IJTLD OPEN Volume 2 ; 2 ; >
     au < crawling ; exists ; 2026 ; IJTLD OPEN Volume 3 ; 3 ; >
 
     }
