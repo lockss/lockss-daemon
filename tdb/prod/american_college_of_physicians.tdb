@@ -211,8 +211,8 @@
     au < released ; 2021 ; Annals of Internal Medicine Volume 174 ; 174 >
     au < released ; 2022 ; Annals of Internal Medicine Volume 175 ; 175 >
     au < released ; 2023 ; Annals of Internal Medicine Volume 176 ; 176 >
-    au < notReady ; 2024 ; Annals of Internal Medicine Volume 177 ; 177 > #500 error
-    au < testing ; 2025 ; Annals of Internal Medicine Volume 178 ; 178 >
+    au < notReady ; 2024 ; Annals of Internal Medicine Volume 177 ; 177 > #500 error, overcrawl, LOCKSS-5550
+    au < notReady ; 2025 ; Annals of Internal Medicine Volume 178 ; 178 > #overcrawl, LOCKSS-5550
     au < manifest ; 2026 ; Annals of Internal Medicine Volume 179 ; 179 >
 
   }
