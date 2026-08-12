@@ -21,6 +21,7 @@
 
     param[journal_id] = abbs
 
+    au < doNotProcess ; 2003 ; 2003 ; Acta Biochimica et Biophysica Sinica Volume 35 ; 35 >
     au < doNotProcess ; 2004 ; 2004 ; Acta Biochimica et Biophysica Sinica Volume 36 ; 36 >
     au < doNotProcess ; 2005 ; 2005 ; Acta Biochimica et Biophysica Sinica Volume 37 ; 37 >
     au < doNotProcess ; 2006 ; 2006 ; Acta Biochimica et Biophysica Sinica Volume 38 ; 38 >
@@ -566,7 +567,6 @@
     #move to Elsevier, 2023-01-02
     #content available from 1952 volume 1 to 2008 volume 88
 
-    au < doNotProcess ; 2008 ; 2008 ; The American Journal of Clinical Nutrition Volume 87-88 ; 87-88 >
     au < down ; 2009 ; 2009 ; The American Journal of Clinical Nutrition Volume 89-90 ; 89-90 >
     au < down ; 2010 ; 2010 ; The American Journal of Clinical Nutrition Volume 91-92 ; 91-92 >
     au < down ; 2011 ; 2011 ; The American Journal of Clinical Nutrition Volume 93-94 ; 93-94 >
@@ -3523,8 +3523,8 @@
     au < released ; 2021 ; 2021 ; Bulletin of the Institute of Classical Studies Volume 64 ; 64 >
     au < released ; 2022 ; 2022 ; Bulletin of the Institute of Classical Studies Volume 65 ; 65 >
     au < released ; 2023 ; 2023 ; Bulletin of the Institute of Classical Studies Volume 66 ; 66 >
-    au < released ; 2025 ; 2025 ; Bulletin of the Institute of Classical Studies Volume 67 ; 67 >
-    au < manifest ; 2026 ; 2026 ; Bulletin of the Institute of Classical Studies Volume 68 ; 68 >
+    au < released ; 2025 ; 2025 ; Bulletin of the Institute of Classical Studies Volume 67-68 ; 67-68 >
+    au < manifest ; 2026 ; 2026 ; Bulletin of the Institute of Classical Studies Volume 68-69 ; 68-69 >
 
   }
 
@@ -8963,7 +8963,8 @@
     au < doNotProcess ; 1937 ; 1937 ; ICES Journal of Marine Science Volume 12 ; 12 >
     au < doNotProcess ; 1938 ; 1938 ; ICES Journal of Marine Science Volume 13 ; 13 >
     au < doNotProcess ; 1939 ; 1939 ; ICES Journal of Marine Science Volume 14 ; 14 >
-    au < doNotProcess ; 1948 ; 1948 ; ICES Journal of Marine Science Volume 15 issue 2-3 ; 15 issue 2-3>
+    au < doNotProcess ; 1947 ; 1947 ; ICES Journal of Marine Science Volume 15 issue 1 ; 15 issue 1 >
+    au < doNotProcess ; 1948 ; 1948 ; ICES Journal of Marine Science Volume 15 issue 2-3 ; 15 issue 2-3 >
     au < doNotProcess ; 1949 ; 1949 ; ICES Journal of Marine Science Volume 16 issue 1 ; 16 issue 1 >
     au < doNotProcess ; 1950 ; 1950 ; ICES Journal of Marine Science Volume 16-17 ; 16-17 >
     au < doNotProcess ; 1951 ; 1951 ; ICES Journal of Marine Science Volume 17 ; 17 >
@@ -9809,16 +9810,32 @@
     au < doNotProcess ; 2014 ; 2014 ; Interactive CardioVascular and Thoracic Surgery Volume 18-19 ; 18-19 >
     au < doNotProcess ; 2015 ; 2015 ; Interactive CardioVascular and Thoracic Surgery Volume 20-21 ; 20-21 >
     au < released ; 2016 ; 2016 ; Interactive CardioVascular and Thoracic Surgery Volume 22-23 ; 22-23 >
-    au < released ; 2017 ; 2017 ; Interactive CardioVascular and Thoracic Surgery Volume 24 ; 24 >
-    au < released ; 2018 ; 2018 ; Interactive CardioVascular and Thoracic Surgery Volume 25 ; 25 >
-    au < released ; 2019 ; 2019 ; Interactive CardioVascular and Thoracic Surgery Volume 26 ; 26 >
-    au < released ; 2020 ; 2020 ; Interactive CardioVascular and Thoracic Surgery Volume 27 ; 27 >
-    au < released ; 2021 ; 2021 ; Interactive CardioVascular and Thoracic Surgery Volume 28 ; 28 >
-    au < released ; 2022 ; 2022 ; Interactive CardioVascular and Thoracic Surgery Volume 29 ; 29 >
-    au < released ; 2023 ; 2023 ; Interactive CardioVascular and Thoracic Surgery Volume 30 ; 30 >
-    au < released ; 2024 ; 2024 ; Interactive CardioVascular and Thoracic Surgery Volume 31 ; 31 >
-    au < released ; 2025 ; 2025 ; Interactive CardioVascular and Thoracic Surgery Volume 32 ; 32 >
-    au < manifest ; 2026 ; 2026 ; Interactive CardioVascular and Thoracic Surgery Volume 33 ; 33 >
+    au < released ; 2017 ; 2017 ; Interactive CardioVascular and Thoracic Surgery Volume 24-25 ; 24-25 >
+    au < released ; 2018 ; 2018 ; Interactive CardioVascular and Thoracic Surgery Volume 26-27 ; 26-27 >
+    au < released ; 2019 ; 2019 ; Interactive CardioVascular and Thoracic Surgery Volume 28-29 ; 28-29 >
+    au < released ; 2020 ; 2020 ; Interactive CardioVascular and Thoracic Surgery Volume 30-31 ; 30-31 >
+    au < released ; 2021 ; 2021 ; Interactive CardioVascular and Thoracic Surgery Volume 32-33 ; 32-33 >
+    au < released ; 2022 ; 2022 ; Interactive CardioVascular and Thoracic Surgery Volume 34-35 ; 34-35 >
+    au < released ; 2023 ; 2023 ; Interactive CardioVascular and Thoracic Surgery Volume 36-37 ; 36-37 >
+    au < released ; 2024 ; 2024 ; Interactive CardioVascular and Thoracic Surgery Volume 38-39 ; 38-39 >
+    au < released ; 2025 ; 2025 ; Interactive CardioVascular and Thoracic Surgery Volume 40 ; 40 >
+    au < manifest ; 2026 ; 2026 ; Interactive CardioVascular and Thoracic Surgery Volume 41 ; 41 >
+
+  }
+
+  {
+
+    title <
+      name = Interdisciplinary CardioVascular and Thoracic Surgery ;
+      eissn = 2753-670X ;
+      issnl = 2753-670X
+    >
+
+    param[journal_id] = icvts
+
+    au < exists ; 2023 ; 2023 ; Interdisciplinary CardioVascular and Thoracic Surgery Volume 36-37 ; 36-37 >
+    au < exists ; 2024 ; 2024 ; Interdisciplinary CardioVascular and Thoracic Surgery Volume 38-39 ; 38-39 >
+    au < exists ; 2025 ; 2025 ; Interdisciplinary CardioVascular and Thoracic Surgery Volume 40-41 ; 40-41 >
 
   }
 
@@ -9833,6 +9850,8 @@
     param[journal_id] = ia
     #this title was ONLY in the publisher listing
 
+    au < exists ; 2008 ; 2008 ; International Affairs Volume 84 ; 84 >
+    au < exists ; 2009 ; 2009 ; International Affairs Volume 85 ; 85 >
     au < released ; 2010 ; 2010 ; International Affairs Volume 86 ; 86 >
     au < released ; 2011 ; 2011 ; International Affairs Volume 87 ; 87 >
     au < released ; 2012 ; 2012 ; International Affairs Volume 88 ; 88 >
@@ -18188,11 +18207,11 @@
     au < released ; 2017 ; 2017 ; Oxford Journal of Law and Religion Volume 6 ; 6 >
     au < released ; 2018 ; 2018 ; Oxford Journal of Law and Religion Volume 7 ; 7 >
     au < released ; 2019 ; 2019 ; Oxford Journal of Law and Religion Volume 8 ; 8 >
-    au < released ; 2020 ; 2020 ; Oxford Journal of Law and Religion Volume 9-10 ; 9-10 >
+    au < released ; 2020 ; 2020 ; Oxford Journal of Law and Religion Volume 9 ; 9 >
     au < released ; 2021 ; 2021 ; Oxford Journal of Law and Religion Volume 10 ; 10 >
     au < released ; 2022 ; 2022 ; Oxford Journal of Law and Religion Volume 11 ; 11 >
-    au < released ; 2023 ; 2023 ; Oxford Journal of Law and Religion Volume 11-12 ; 11-12 >
-    au < released ; 2024 ; 2024 ; Oxford Journal of Law and Religion Volume 12-13 ; 12-13 >
+    au < released ; 2023 ; 2023 ; Oxford Journal of Law and Religion Volume 12 ; 12 >
+    au < released ; 2024 ; 2024 ; Oxford Journal of Law and Religion Volume 13 ; 13 >
     au < released ; 2025 ; 2025 ; Oxford Journal of Law and Religion Volume 14 ; 14 >
     au < expected ; 2026 ; 2026 ; Oxford Journal of Law and Religion Volume 15 ; 15 >
 
@@ -23168,6 +23187,48 @@
   }
 
   {
+  
+    title <
+      name = The Journal of Immunology ;
+      issn = 0022-1767 ;
+      eissn = 1550-6606 ;
+      issnl = 0022-1767
+    >
+        #param[base_url] = http://www.jimmunol.org/
+        param[journal_id] = jimmunol
+        #Previously published by American Association of Immunologists
+        #volume 193 and prior had been processed in AAISilverchairPlugin
+
+        au < exists ; 2020 ; 2020 ; The Journal of Immunology Volume 213 ; 213 >
+        au < exists ; 2021 ; 2021 ; The Journal of Immunology Volume 213 ; 213 >
+        au < exists ; 2022 ; 2022 ; The Journal of Immunology Volume 213 ; 213 >
+        au < exists ; 2023 ; 2023 ; The Journal of Immunology Volume 213 ; 213 >
+        au < exists ; 2024 ; 2024 ; The Journal of Immunology Volume 213 ; 213 >
+        au < exists ; 2025 ; 2025 ; The Journal of Immunology Volume 214 ; 214 >
+
+  }
+
+  {
+  
+    title <
+      name = ImmunoHorizons ;
+      eissn = 2573-7732 ;
+      issnl = 2573-7732
+    >
+        #param[base_url] = http://www.immunohorizons.org/
+        param[journal_id] = immunohorizons
+        #Previously published by American Association of Immunologists
+
+        au < exists ; 2020 ; 2020 ; ImmunoHorizons Volume 4 ; 4 >
+        au < exists ; 2021 ; 2021 ; ImmunoHorizons Volume 5 ; 5 >
+        au < exists ; 2022 ; 2022 ; ImmunoHorizons Volume 6 ; 6 >
+        au < exists ; 2023 ; 2023 ; ImmunoHorizons Volume 7 ; 7 >
+        au < exists ; 2024 ; 2024 ; ImmunoHorizons Volume 8 ; 8 >
+        au < exists ; 2025 ; 2025 ; ImmunoHorizons Volume 9 ; 9 >
+
+  }
+
+  {
 
     title <
       name = Journal of Infectious Diseases ;
@@ -25963,8 +26024,6 @@
     au < exists ; 2022 ; 2022 ; Yearbook of European Law Volume 40 (2021) ; 40 >
     au < exists ; 2023 ; 2023 ; Yearbook of European Law Volume 41 (2022) ; 41 >
     au < exists ; 2024 ; 2024 ; Yearbook of European Law Volume 42-43 (2023) ; 42-43 >
-    au < expected ; 2025 ; 2025 ; Yearbook of European Law Volume 44 (2025) ; 44 >
-    au < expected ; 2026 ; 2026 ; Yearbook of European Law Volume 45 (2026) ; 45 >
 
   }
 
