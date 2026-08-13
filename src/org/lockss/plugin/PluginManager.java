@@ -949,6 +949,12 @@ public class PluginManager
 			 + auKey);
 	    continue nextAU;
 	  }
+	  if (configMgr.isPendingDeactivateAuid(auId)) {
+	    // Deactivation has been journalled but not yet applied to au.txt
+	    if (log.isDebug2())
+	      log.debug2("Not restarting pending-deactivate AU id: " + auKey);
+	    continue nextAU;
+	  }
 	  log.debug2("Retrying previously unstarted AU id: " + auId);
 	  break;
 	}
@@ -1553,6 +1559,16 @@ public class PluginManager
     synchronized (auAddDelLock) {
       log.debug("Journal deleting AU: " + au);
       String auid = au.getAuId();
+      // The map may hold a newer instance (e.g., after a plugin restart);
+      // always stop the live one.  If it isn't in the map it's already
+      // stopped, which is harmless - still journal the au.txt update, else
+      // the AU would start again at the next daemon restart.
+      ArchivalUnit liveAu = auMap.get(auid);
+      if (liveAu != null) {
+        au = liveAu;
+      } else {
+        log.warning("Deleting AU that wasn't running: " + auid);
+      }
       stopAu(au, new AuEvent(AuEvent.Type.Delete, false).setMigration(true));
       inactiveAuIds.remove(auid);
       configMgr.addMigratedAuid(auid);
@@ -1574,6 +1590,16 @@ public class PluginManager
     synchronized (auAddDelLock) {
       log.debug("Journal deactivating AU: " + au);
       String auid = au.getAuId();
+      // The map may hold a newer instance (e.g., after a plugin restart);
+      // always stop the live one.  If it isn't in the map it's already
+      // stopped, which is harmless - still journal the au.txt update, else
+      // the AU would start again at the next daemon restart.
+      ArchivalUnit liveAu = auMap.get(auid);
+      if (liveAu != null) {
+        au = liveAu;
+      } else {
+        log.warning("Deactivating AU that wasn't running: " + auid);
+      }
       stopAu(au, new AuEvent(AuEvent.Type.Deactivate, false).setMigration(true));
       inactiveAuIds.add(auid);
       appendAuTxtJournal("DEACTIVATE", auid);
@@ -1590,6 +1616,11 @@ public class PluginManager
       printer.printRecord(action, auid);
       printer.flush();
       fos.getFD().sync();
+    }
+    if ("DEACTIVATE".equals(action)) {
+      // Remember until the journal is applied to au.txt, so a plugin reload
+      // doesn't restart the AU
+      configMgr.addPendingDeactivateAuid(auid);
     }
   }
 
@@ -3305,6 +3336,14 @@ public class PluginManager
           }
           try {
             runRestartBatch(b, wdog, startAus, changedPluginKeys);
+            if (startAus && changedPluginKeys.contains(b.pkey)) {
+              // Try to start any AUs configured for this plugin, that didn't
+              // previously start (either because the plugin didn't exist, or
+              // the AU didn't successfully start with the old definition).
+              // Must run under the coord lock so it can't restart AUs that
+              // the migrator has deactivated.
+              configurePlugins(ListUtil.list(b.pkey));
+            }
           } finally {
             try {
               lock.close();
@@ -3337,12 +3376,6 @@ public class PluginManager
           break;
         }
       }
-    }
-    if (startAus && !changedPluginKeys.isEmpty()) {
-      // Try to start any AUs configured for changed plugins, that didn't
-      // previously start (either because the plugin didn't exist, or the
-      // AU didn't successfully start with the old definition)
-      configurePlugins(changedPluginKeys);
     }
     if (log.isDebug()) {
       List<String> changedPluginNames = changedPluginKeys.stream()

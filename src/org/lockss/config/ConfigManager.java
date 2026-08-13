@@ -682,6 +682,11 @@ public class ConfigManager implements LockssManager {
   private Set<String> migratedAuids =
     Collections.synchronizedSet(new HashSet<>());
 
+  /** Set of AUs whose deactivation has been journalled but not yet applied
+   * to au.txt, to prevent them being restarted during migration */
+  private Set<String> pendingDeactivateAuids =
+    Collections.synchronizedSet(new HashSet<>());
+
   public ConfigManager() {
     this(null, null);
   }
@@ -2359,6 +2364,10 @@ public class ConfigManager implements LockssManager {
 
     writeCacheConfigFile(fileConfig, CONFIG_FILE_AU_CONFIG, "AU Configuration");
 
+    // The deactivations are now recorded in au.txt, so they no longer need
+    // to be remembered separately
+    resetPendingDeactivateAuids();
+
     if (!FileUtil.safeDeleteFile(journal)) {
       log.warning("Couldn't delete AU config journal: " + journal);
     }
@@ -2380,6 +2389,22 @@ public class ConfigManager implements LockssManager {
 
   public boolean isMigratedAuid(String auid) {
     return migratedAuids.contains(auid);
+  }
+
+  public void addPendingDeactivateAuid(String auid) {
+    pendingDeactivateAuids.add(auid);
+  }
+
+  public void removePendingDeactivateAuid(String auid) {
+    pendingDeactivateAuids.remove(auid);
+  }
+
+  public void resetPendingDeactivateAuids() {
+    pendingDeactivateAuids.clear();
+  }
+
+  public boolean isPendingDeactivateAuid(String auid) {
+    return pendingDeactivateAuids.contains(auid);
   }
 
   /** Write the named local cache config file into the previously determined

@@ -1792,31 +1792,37 @@ public class V2AuMover {
       log.debug2("Finishing AU: " + auName);
       removeActiveAu(au);
       BatchLockToken bt = auStat.getBatchToken();
-      if (bt != null) bt.decrement();
       updateReport(auStat);
       if (!auStat.hasV1Content()) {
         totalAusEmpty++;
       }
-      if (auStat.isAbort()) {
-        setAuMigrationState(au, AuState.MigrationState.Aborted, auStat);
-        enterPhase(auStat, Phase.ABORT);
-      } else {
-        setAuMigrationState(au, AuState.MigrationState.Finished, auStat);
-        totalAusMoved++;
-        if (auHasErrors(auStat)) {
-          addAuError(auErrorsDetail(auStat));
-        }
-        if (checkMissingContent && existsInV2(auStat.getAuId())) {
-          Counters ctrs = auStat.getCounters();
-          if (ctrs != null) {
-            if (ctrs.isNonZero(CounterType.ARTIFACTS_MOVED)) {
-              totalAusPartiallyMoved++;
-            } else {
-              totalAusSkipped++;
+      // Hold the batch's plugin coord lock until the AU has been deactivated,
+      // so a plugin reload can't restart it.  The lock must be dropped even
+      // if setAuMigrationState() throws.
+      try {
+        if (auStat.isAbort()) {
+          setAuMigrationState(au, AuState.MigrationState.Aborted, auStat);
+          enterPhase(auStat, Phase.ABORT);
+        } else {
+          setAuMigrationState(au, AuState.MigrationState.Finished, auStat);
+          totalAusMoved++;
+          if (auHasErrors(auStat)) {
+            addAuError(auErrorsDetail(auStat));
+          }
+          if (checkMissingContent && existsInV2(auStat.getAuId())) {
+            Counters ctrs = auStat.getCounters();
+            if (ctrs != null) {
+              if (ctrs.isNonZero(CounterType.ARTIFACTS_MOVED)) {
+                totalAusPartiallyMoved++;
+              } else {
+                totalAusSkipped++;
+              }
             }
           }
+          auStat.endPhase();
         }
-        auStat.endPhase();
+      } finally {
+        if (bt != null) bt.decrement();
       }
       addFinishedAu(au, auStat);
       ausLatch.countDown();
