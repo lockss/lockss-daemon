@@ -21,21 +21,21 @@
         attr[au_coverage_depth] = abstracts
         param[base_url] = http://www.ajnr.org/
 
-        au < HighWirePressH20Plugin ; down ; 1980 ; American Journal of Neuroradiology [abstracts only] Volume 1 ; 1 >
-        au < HighWirePressH20Plugin ; down ; 1981 ; American Journal of Neuroradiology [abstracts only] Volume 2 ; 2 >
-        au < HighWirePressH20Plugin ; down ; 1982 ; American Journal of Neuroradiology [abstracts only] Volume 3 ; 3 >
-        au < HighWirePressH20Plugin ; down ; 1983 ; American Journal of Neuroradiology [abstracts only] Volume 4 ; 4 >
-        au < HighWirePressH20Plugin ; down ; 1984 ; American Journal of Neuroradiology [abstracts only] Volume 5 ; 5 >
-        au < HighWirePressH20Plugin ; down ; 1985 ; American Journal of Neuroradiology [abstracts only] Volume 6 ; 6 >
-        au < HighWirePressH20Plugin ; down ; 1986 ; American Journal of Neuroradiology [abstracts only] Volume 7 ; 7 >
-        au < HighWirePressH20Plugin ; down ; 1987 ; American Journal of Neuroradiology [abstracts only] Volume 8 ; 8 >
-        au < HighWirePressH20Plugin ; down ; 1988 ; American Journal of Neuroradiology [abstracts only] Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; down ; 1989 ; American Journal of Neuroradiology [abstracts only] Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; down ; 1990 ; American Journal of Neuroradiology [abstracts only] Volume 11 ; 11 >
-        au < HighWirePressH20Plugin ; down ; 1991 ; American Journal of Neuroradiology [abstracts only] Volume 12 ; 12 >
-        au < HighWirePressH20Plugin ; down ; 1992 ; American Journal of Neuroradiology [abstracts only] Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; down ; 1993 ; American Journal of Neuroradiology [abstracts only] Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; down ; 1994 ; American Journal of Neuroradiology [abstracts only] Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; down ; 1980 ; American Journal of Neuroradiology Volume 1 [abstracts only] ; 1 >
+        au < HighWirePressH20Plugin ; down ; 1981 ; American Journal of Neuroradiology Volume 2 [abstracts only] ; 2 >
+        au < HighWirePressH20Plugin ; down ; 1982 ; American Journal of Neuroradiology Volume 3 [abstracts only] ; 3 >
+        au < HighWirePressH20Plugin ; down ; 1983 ; American Journal of Neuroradiology Volume 4 [abstracts only] ; 4 >
+        au < HighWirePressH20Plugin ; down ; 1984 ; American Journal of Neuroradiology Volume 5 [abstracts only] ; 5 >
+        au < HighWirePressH20Plugin ; down ; 1985 ; American Journal of Neuroradiology Volume 6 [abstracts only] ; 6 >
+        au < HighWirePressH20Plugin ; down ; 1986 ; American Journal of Neuroradiology Volume 7 [abstracts only] ; 7 >
+        au < HighWirePressH20Plugin ; down ; 1987 ; American Journal of Neuroradiology Volume 8 [abstracts only] ; 8 >
+        au < HighWirePressH20Plugin ; down ; 1988 ; American Journal of Neuroradiology Volume 9 [abstracts only] ; 9 >
+        au < HighWirePressH20Plugin ; down ; 1989 ; American Journal of Neuroradiology Volume 10 [abstracts only] ; 10 >
+        au < HighWirePressH20Plugin ; down ; 1990 ; American Journal of Neuroradiology Volume 11 [abstracts only] ; 11 >
+        au < HighWirePressH20Plugin ; down ; 1991 ; American Journal of Neuroradiology Volume 12 [abstracts only] ; 12 >
+        au < HighWirePressH20Plugin ; down ; 1992 ; American Journal of Neuroradiology Volume 13 [abstracts only] ; 13 >
+        au < HighWirePressH20Plugin ; down ; 1993 ; American Journal of Neuroradiology Volume 14 [abstracts only] ; 14 >
+        au < HighWirePressH20Plugin ; down ; 1994 ; American Journal of Neuroradiology Volume 15 [abstracts only] ; 15 >
       }
       {
         param[base_url] = http://www.ajnr.org/
