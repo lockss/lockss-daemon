@@ -949,10 +949,12 @@ public class PluginManager
 			 + auKey);
 	    continue nextAU;
 	  }
-	  if (configMgr.isPendingDeactivateAuid(auId)) {
-	    // Deactivation has been journalled but not yet applied to au.txt
+	  if (configMgr.isPendingAuTxtAuid(auId)) {
+	    // Deactivation or deletion has been journalled but not yet applied
+	    // to au.txt, which therefore still shows the AU as enabled
 	    if (log.isDebug2())
-	      log.debug2("Not restarting pending-deactivate AU id: " + auKey);
+	      log.debug2("Not restarting AU id with pending au.txt update: "
+			 + auKey);
 	    continue nextAU;
 	  }
 	  log.debug2("Retrying previously unstarted AU id: " + auId);
@@ -1617,11 +1619,10 @@ public class PluginManager
       printer.flush();
       fos.getFD().sync();
     }
-    if ("DEACTIVATE".equals(action)) {
-      // Remember until the journal is applied to au.txt, so a plugin reload
-      // doesn't restart the AU
-      configMgr.addPendingDeactivateAuid(auid);
-    }
+    // Remember until the journal is applied to au.txt, so a plugin reload
+    // doesn't restart the AU.  Applies to both DEACTIVATE and DELETE: until
+    // the journal is processed, au.txt still has the AU enabled.
+    configMgr.addPendingAuTxtAuid(auid);
   }
 
   /**
