@@ -610,7 +610,7 @@ public class V2AuMover {
   private org.lockss.laaws.model.rs.ApiStatus repoStatus;
 
   /** All AUIDs known to V2 repo at start of execution */
-  private final ArrayList<String> v2Aus = new HashSet<>();
+  private final Set<String> v2Aus = new HashSet<>();
   // Primary AU move queue.  Holds AUIDs not AUs to make plugin-reload
   // AU restart less disruptive.  Grouped by plugin key so the scheduler
   // can take per-plugin restart-coordination locks one plugin at a time.
