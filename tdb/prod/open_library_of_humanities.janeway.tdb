@@ -361,7 +361,7 @@
       au < doNotProcess ; 2013 ; 2013 ; Theoretical Roman Archaeology Conference Volume 2013 ; 2013 >
       au < doNotProcess ; 2014 ; 2014 ; Theoretical Roman Archaeology Conference Volume 2014 ; 2014 >
       au < doNotProcess ; 2015 ; 2015 ; Theoretical Roman Archaeology Conference Volume 2015 ; 2015 >
-      au < releasing ; 2016 ; 2016 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 >
+      au < released ; 2016 ; 2016 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 >
       au < released ; 2017 ; 2017 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 >
       au < doNotProcess ; 2018 ; 1 ; Theoretical Roman Archaeology Journal Volume 1 ; 2018 >
       au < doNotProcess ; 2019 ; 2 ; Theoretical Roman Archaeology Journal Volume 2 ; 2019 >
@@ -806,9 +806,9 @@
       au < doNotProcess ; 2019 ; 24 ; Quaker Studies Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 25 ; Quaker Studies Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 26 ; Quaker Studies Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 27 ; Quaker Studies Volume 2022 ; 2022 > # Does not pass MPC
-      au < releasing ; 2023 ; 28 ; Quaker Studies Volume 2023 ; 2023 > # Does not pass MPC
-      au < releasing ; 2024 ; 29 ; Quaker Studies Volume 2024 ; 2024 >
+      au < released ; 2022 ; 27 ; Quaker Studies Volume 2022 ; 2022 > # Does not pass MPC
+      au < released ; 2023 ; 28 ; Quaker Studies Volume 2023 ; 2023 > # Does not pass MPC
+      au < released ; 2024 ; 29 ; Quaker Studies Volume 2024 ; 2024 >
       au < manifest ; 2025 ; 30 ; Quaker Studies Volume 2025 ; 2025 >
       au < manifest ; 2026 ; 31 ; Quaker Studies Volume 2026 ; 2026 >
 
@@ -835,8 +835,8 @@
       au < manifest ; 2021 ; 2021 ; [in]Transition Volume 2021 ; 2021 >
       au < manifest ; 2022 ; 2022 ; [in]Transition Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 2023 ; [in]Transition Volume 2023 ; 2023 >
-      au < releasing ; 2024 ; 2024 ; [in]Transition Volume 2024 ; 2024 >
-      au < releasing ; 2025 ; 2025 ; [in]Transition Volume 2025 ; 2025 >
+      au < released ; 2024 ; 2024 ; [in]Transition Volume 2024 ; 2024 >
+      au < released ; 2025 ; 2025 ; [in]Transition Volume 2025 ; 2025 >
       au < manifest ; 2026 ; 2026 ; [in]Transition Volume 2026 ; 2026 >
 
   }
@@ -851,7 +851,7 @@
       #published 2025-2026
       param[base_url] = https://freeandequaljournal.org/
 
-      au < releasing ; 2025 ; 2025 ; Free & Equal: A Journal of Ethics and Public Affairs Volume 2025 ; 2025 >
+      au < released ; 2025 ; 2025 ; Free & Equal: A Journal of Ethics and Public Affairs Volume 2025 ; 2025 >
       au < manifest ; 2026 ; 2026 ; Free & Equal: A Journal of Ethics and Public Affairs Volume 2026 ; 2026 >
 
   }
@@ -956,8 +956,8 @@
       au < manifest ; 2008 ; 2008 ; International Labour Review Volume 2008 ; 2008 >
       au < manifest ; 2009 ; 2009 ; International Labour Review Volume 2009 ; 2009 >
       au < exists ; 2010 ; 2010 ; International Labour Review Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 2011 ; International Labour Review Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 2012 ; International Labour Review Volume 2012 ; 2012 >
+      au < released ; 2011 ; 2011 ; International Labour Review Volume 2011 ; 2011 >
+      au < released ; 2012 ; 2012 ; International Labour Review Volume 2012 ; 2012 >
       au < exists ; 2013 ; 2013 ; International Labour Review Volume 2013 ; 2013 >
       au < exists ; 2014 ; 2014 ; International Labour Review Volume 2014 ; 2014 >
       au < exists ; 2015 ; 2015 ; International Labour Review Volume 2015 ; 2015 >
@@ -970,7 +970,7 @@
       au < exists ; 2022 ; 2022 ; International Labour Review Volume 2022 ; 2022 >
       au < exists ; 2023 ; 2023 ; International Labour Review Volume 2023 ; 2023 >
       au < exists ; 2024 ; 2024 ; International Labour Review Volume 2024 ; 2024 >
-      au < releasing ; 2025 ; 2025 ; International Labour Review Volume 2025 ; 2025 >
+      au < released ; 2025 ; 2025 ; International Labour Review Volume 2025 ; 2025 >
       au < manifest ; 2026 ; 2026 ; International Labour Review Volume 2026 ; 2026 >
 
   }
@@ -999,8 +999,8 @@
       #published 2024-2026
       param[base_url] = https://politicalphilosophyjournal.org/
 
-      au < releasing ; 2024 ; 2024 ; Political Philosophy Volume 2024 ; 2024 >
-      au < releasing ; 2025 ; 2025 ; Political Philosophy Volume 2025 ; 2025 >
+      au < released ; 2024 ; 2024 ; Political Philosophy Volume 2024 ; 2024 >
+      au < released ; 2025 ; 2025 ; Political Philosophy Volume 2025 ; 2025 >
       au < manifest ; 2026 ; 2026 ; Political Philosophy Volume 2026 ; 2026 >
 
   }
@@ -1015,8 +1015,8 @@
       #published 2024-2026
       param[base_url] = https://www.regeneration-journal.org/
 
-      au < releasing ; 2024 ; 2024 ; Regeneration: Environment, Art, Culture Volume 2024 ; 2024 >
-      au < releasing ; 2025 ; 2025 ; Regeneration: Environment, Art, Culture Volume 2025 ; 2025 >
+      au < released ; 2024 ; 2024 ; Regeneration: Environment, Art, Culture Volume 2024 ; 2024 >
+      au < released ; 2025 ; 2025 ; Regeneration: Environment, Art, Culture Volume 2025 ; 2025 >
       au < manifest ; 2026 ; 2026 ; Regeneration: Environment, Art, Culture Volume 2026 ; 2026 >
 
   }
@@ -1031,8 +1031,8 @@
       #published 2024-2026
       param[base_url] = https://rhetm.org/
 
-      au < releasing ; 2024 ; 2024 ; Review of the History of Economic Thought and Methodology Volume 2024 ; 2024 >
-      au < releasing ; 2025 ; 2025 ; Review of the History of Economic Thought and Methodology Volume 2025 ; 2025 >
+      au < released ; 2024 ; 2024 ; Review of the History of Economic Thought and Methodology Volume 2024 ; 2024 >
+      au < released ; 2025 ; 2025 ; Review of the History of Economic Thought and Methodology Volume 2025 ; 2025 >
       au < manifest ; 2026 ; 2026 ; Review of the History of Economic Thought and Methodology Volume 2026 ; 2026 >
 
   }
@@ -1047,7 +1047,7 @@
       #published 2025-2026
       param[base_url] = https://star-linguistics.org/
 
-      au < releasing ; 2025 ; 2025 ; Syntactic Theory and Research Volume 2025 ; 2025 >
+      au < released ; 2025 ; 2025 ; Syntactic Theory and Research Volume 2025 ; 2025 >
       au < manifest ; 2026 ; 2026 ; Syntactic Theory and Research Volume 2026 ; 2026 >
 
   }
@@ -1076,7 +1076,7 @@
       #published 2025-2026
       param[base_url] = https://www.theoryandsocialinquiry.org/
 
-      au < releasing ; 2025 ; 2025 ; Theory and Social Inquiry Volume 2025 ; 2025 >
+      au < released ; 2025 ; 2025 ; Theory and Social Inquiry Volume 2025 ; 2025 >
       au < manifest ; 2026 ; 2026 ; Theory and Social Inquiry Volume 2026 ; 2026 >
 
   }
