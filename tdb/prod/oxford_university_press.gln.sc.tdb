@@ -9833,9 +9833,9 @@
 
     param[journal_id] = icvts
 
-    au < exists ; 2023 ; 2023 ; Interdisciplinary CardioVascular and Thoracic Surgery Volume 36-37 ; 36-37 >
-    au < exists ; 2024 ; 2024 ; Interdisciplinary CardioVascular and Thoracic Surgery Volume 38-39 ; 38-39 >
-    au < exists ; 2025 ; 2025 ; Interdisciplinary CardioVascular and Thoracic Surgery Volume 40-41 ; 40-41 >
+    au < manifest ; 2023 ; 2023 ; Interdisciplinary CardioVascular and Thoracic Surgery Volume 36-37 ; 36-37 >
+    au < manifest ; 2024 ; 2024 ; Interdisciplinary CardioVascular and Thoracic Surgery Volume 38-39 ; 38-39 >
+    au < manifest ; 2025 ; 2025 ; Interdisciplinary CardioVascular and Thoracic Surgery Volume 40-41 ; 40-41 >
 
   }
 
@@ -9850,8 +9850,8 @@
     param[journal_id] = ia
     #this title was ONLY in the publisher listing
 
-    au < exists ; 2008 ; 2008 ; International Affairs Volume 84 ; 84 >
-    au < exists ; 2009 ; 2009 ; International Affairs Volume 85 ; 85 >
+    au < manifest ; 2008 ; 2008 ; International Affairs Volume 84 ; 84 >
+    au < manifest ; 2009 ; 2009 ; International Affairs Volume 85 ; 85 >
     au < released ; 2010 ; 2010 ; International Affairs Volume 86 ; 86 >
     au < released ; 2011 ; 2011 ; International Affairs Volume 87 ; 87 >
     au < released ; 2012 ; 2012 ; International Affairs Volume 88 ; 88 >
@@ -23199,12 +23199,12 @@
         #Previously published by American Association of Immunologists
         #volume 193 and prior had been processed in AAISilverchairPlugin
 
-        au < exists ; 2020 ; 2020 ; The Journal of Immunology Volume 209 ; 209 >
-        au < exists ; 2021 ; 2021 ; The Journal of Immunology Volume 210 ; 210 >
-        au < exists ; 2022 ; 2022 ; The Journal of Immunology Volume 211 ; 211 >
-        au < exists ; 2023 ; 2023 ; The Journal of Immunology Volume 212 ; 212 >
-        au < exists ; 2024 ; 2024 ; The Journal of Immunology Volume 213 ; 213 >
-        au < exists ; 2025 ; 2025 ; The Journal of Immunology Volume 214 ; 214 >
+        au < manifest ; 2020 ; 2020 ; The Journal of Immunology Volume 209 ; 209 >
+        au < manifest ; 2021 ; 2021 ; The Journal of Immunology Volume 210 ; 210 >
+        au < manifest ; 2022 ; 2022 ; The Journal of Immunology Volume 211 ; 211 >
+        au < manifest ; 2023 ; 2023 ; The Journal of Immunology Volume 212 ; 212 >
+        au < manifest ; 2024 ; 2024 ; The Journal of Immunology Volume 213 ; 213 >
+        au < manifest ; 2025 ; 2025 ; The Journal of Immunology Volume 214 ; 214 >
 
   }
 
@@ -23219,12 +23219,12 @@
         param[journal_id] = immunohorizons
         #Previously published by American Association of Immunologists
 
-        au < exists ; 2020 ; 2020 ; ImmunoHorizons Volume 4 ; 4 >
-        au < exists ; 2021 ; 2021 ; ImmunoHorizons Volume 5 ; 5 >
-        au < exists ; 2022 ; 2022 ; ImmunoHorizons Volume 6 ; 6 >
-        au < exists ; 2023 ; 2023 ; ImmunoHorizons Volume 7 ; 7 >
-        au < exists ; 2024 ; 2024 ; ImmunoHorizons Volume 8 ; 8 >
-        au < exists ; 2025 ; 2025 ; ImmunoHorizons Volume 9 ; 9 >
+        au < manifest ; 2020 ; 2020 ; ImmunoHorizons Volume 4 ; 4 >
+        au < manifest ; 2021 ; 2021 ; ImmunoHorizons Volume 5 ; 5 >
+        au < manifest ; 2022 ; 2022 ; ImmunoHorizons Volume 6 ; 6 >
+        au < manifest ; 2023 ; 2023 ; ImmunoHorizons Volume 7 ; 7 >
+        au < manifest ; 2024 ; 2024 ; ImmunoHorizons Volume 8 ; 8 >
+        au < manifest ; 2025 ; 2025 ; ImmunoHorizons Volume 9 ; 9 >
 
   }
 
