@@ -192,7 +192,7 @@
 
     plugin = org.lockss.plugin.highwire.ers.ERSScolarisPlugin
     implicit < status ; year ; name ; param[volume_name] >
-    param[journal_id] = ijtld-crd
+    param[journal_id] = ijtldcrd
 
     param[base_url] = https://journals.theunion.org/
 

@@ -18519,4 +18519,37 @@
 
   }
 
+  {
+
+      title <
+        name = Distance Learning ;
+        issn = 1547-4712 ;
+        eissn = 2978-5189
+      >
+      param[journal_id] = dlea
+
+      au < exists ; 2004 ; 2004 ; Distance Learning Volume 1 ; 1 >
+      au < exists ; 2005 ; 2005 ; Distance Learning Volume 2 ; 2 >
+      au < exists ; 2006 ; 2006 ; Distance Learning Volume 3 ; 3 >
+      au < exists ; 2007 ; 2007 ; Distance Learning Volume 4 ; 4 >
+      au < exists ; 2008 ; 2008 ; Distance Learning Volume 5 ; 5 >
+      au < exists ; 2009 ; 2009 ; Distance Learning Volume 6 ; 6 >
+      au < exists ; 2010 ; 2010 ; Distance Learning Volume 7 ; 7 >
+      au < exists ; 2011 ; 2011 ; Distance Learning Volume 8 ; 8 >
+      au < exists ; 2012 ; 2012 ; Distance Learning Volume 9 ; 9 >
+      au < exists ; 2013 ; 2013 ; Distance Learning Volume 10 ; 10 >
+      au < exists ; 2014 ; 2014 ; Distance Learning Volume 11 ; 11 >
+      au < exists ; 2015 ; 2015 ; Distance Learning Volume 12 ; 12 >
+      au < exists ; 2016 ; 2016 ; Distance Learning Volume 13 ; 13 >
+      au < exists ; 2017 ; 2017 ; Distance Learning Volume 14 ; 14 >
+      au < exists ; 2018 ; 2018 ; Distance Learning Volume 15 ; 15 >
+      au < exists ; 2019 ; 2019 ; Distance Learning Volume 16 ; 16 >
+      au < exists ; 2020 ; 2020 ; Distance Learning Volume 17 ; 17 >
+      au < exists ; 2021 ; 2021 ; Distance Learning Volume 18 ; 18 >
+      au < exists ; 2022 ; 2022 ; Distance Learning Volume 19 ; 19 >
+      au < exists ; 2023 ; 2023 ; Distance Learning Volume 20 ; 20 >
+      au < exists ; 2024 ; 2024 ; Distance Learning Volume 21 ; 21 >
+
+  }
+
 }
