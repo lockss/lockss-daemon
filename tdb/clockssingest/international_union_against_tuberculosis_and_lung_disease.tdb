@@ -145,7 +145,7 @@
     {
     param[base_url] = https://journals.theunion.org/
 
-    au < ready ; exists ; 2025 ; Public Health Action Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2025 ; Public Health Action Volume 15 ; 15 ; >
     au < crawling ; exists ; 2026 ; Public Health Action Volume 16 ; 16 ; >
 
     }
