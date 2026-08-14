@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>51</string>
+    <string>52</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -103,7 +103,8 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s/[^?]+[.](bmp|gif|ico|jpe?g|png|tif?f|(css|js|eot|svg|ttf|woff.?)([?].*)?)$", url_host(base_url)</string>
       <string>1,"^%smedia/.*/supmat/", base_url</string>
       <string>4,"^%s.*/10[.][0-9a-z]{4,6}/", base_url</string>
-      <string>2,"^%s.*/10[.][0-9a-z]{4,6}/www[.]", base_url</string>
+      <!-- Exclude improperly relative URLs -->
+      <string>2,"^%s.*/10[.][0-9a-z]{4,6}/(http|www[.])", base_url</string>
       <string>2,"^%s(?:[^/]+/)?(?:rss/thieme|ejournals/(?:journal|issues|sample|recommend|topten|linkout))", base_url</string>
       <!--July 2025, manifest pages are linking articles from past years causing overcrawls. These tend to have ?issue= at the end to signify their original issue.-->
       <string>2,"^%s(?:[^/]+/)?ejournals/(?:issue|abstract|html|pdf|ris|xml)/10[.][0-9a-z]{4,6}/[^/?&amp;]+\?issue=10[.][0-9a-z]{4,6}/[^/?&amp;]+$", base_url</string>
