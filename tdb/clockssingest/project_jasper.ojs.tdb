@@ -2,7 +2,8 @@
 
   publisher <
     name = Project JASPER ;
-    info[contract] = 2023 ;
+    info[contract] = 2026 ;
+    #info[contract] = 2023 ; #change back to 2025 after 11/1/2026 when noticed
     info[back] = 2021 ;
     info[tester] = 5 ;
     info[platform] = OJS3. Internet Archive JASPER. https://doaj.org/preservation/
