@@ -26,12 +26,12 @@ $tdbout -Q "publisher:info[contract] is \"$YEAR\"" -t publisher,plugin,year,publ
 #List titles for harvest plugins in development pending
 echo
 echo "***CLOCKSS harvest plugins in development (pending)"
-$tdbout -c publisher:info[tester],publisher,publisher:info[contract],publisher:info[platform] -Q 'plugin ~ "needs"' tdb/clockssingest/*.tdb | sort | uniq -c
+$tdbout -t publisher:info[tester],publisher,publisher:info[contract],publisher:info[platform] -Q 'plugin ~ "needs"' tdb/clockssingest/*.tdb | sort | uniq -c
 
 #List publishers for harvest plugins in development existing
 echo
 echo "***CLOCKSS harvest plugins in development (existing)"
-$tdbout -t publisher:info[tester],publisher,publisher:info[contract],publisher:info[platform] -Q 'publisher:info[tester] is not "8" and publisher:info[tester] is not "5"' tdb/clockssingest/*.tdb | sort | uniq -c
+$tdbout -t publisher:info[tester],publisher,publisher:info[contract],publisher:info[platform] -Q 'plugin !~ "needs" and publisher:info[tester] is not "8" and publisher:info[tester] is not "5"' tdb/clockssingest/*.tdb | sort | uniq -c
 
 
 # Find plugins listed in tdb files, that don't exist. Usually empty
