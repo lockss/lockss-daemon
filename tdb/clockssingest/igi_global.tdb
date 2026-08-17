@@ -3160,6 +3160,20 @@
   {
 
     title <
+      name = International Journal of Project Management and Administration in Education (IJPMAE) ;
+      issn = 2998-4610 ;
+      eissn = 2998-4629 ;
+      issnl = 2998-4610
+    >
+    param[journal_issn] = 2998-4610
+
+    au < exists ; exists ; 2026 ; International Journal of Project Management and Administration in Education (IJPMAE) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+
+  }
+
+  {
+
+    title <
       name = International Journal of Public and Private Healthcare Management and Economics (IJPPHME) ;
       issn = 2155-6423 ;
       eissn = 2155-6431 ;
@@ -3626,6 +3640,20 @@
     au < finished ; crawling ; 2020 ; International Journal of Sustainable Economies Management (IJSEM) Volume 9 ; 9 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; International Journal of Sustainable Economies Management (IJSEM) Volume 10 ; 10 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; International Journal of Sustainable Economies Management (IJSEM) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Sustainable Supply Chain Management (IJSSCM) ;
+      issn = 3066-6481 ;
+      eissn = 3066-649X ;
+      issnl = 3066-6481
+    >
+    param[journal_issn] = 3066-6481
+
+    au < exists ; exists ; 2026 ; International Journal of Sustainable Supply Chain Management (IJSSCM) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
 
   }
 
