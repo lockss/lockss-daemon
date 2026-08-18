@@ -1140,7 +1140,7 @@
     au < ready ; exists ; 1972 ; Journal of Transport Economics and Policy Volume 6 ; 6 ; >
     au < ready ; exists ; 1973 ; Journal of Transport Economics and Policy Volume 7 ; 7 ; >
     au < ready ; exists ; 1974 ; Journal of Transport Economics and Policy Volume 8 ; 8 ; >
-    au < ready ; exists ; 1975 ; Journal of Transport Economics and Policy Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1975 ; Journal of Transport Economics and Policy Volume 9 ; 9 ; >
     au < frozen ; exists ; 1976 ; Journal of Transport Economics and Policy Volume 10 ; 10 ; >
     au < frozen ; exists ; 1977 ; Journal of Transport Economics and Policy Volume 11 ; 11 ; >
     au < frozen ; exists ; 1978 ; Journal of Transport Economics and Policy Volume 12 ; 12 ; >
@@ -1156,7 +1156,7 @@
     au < ready ; exists ; 1988 ; Journal of Transport Economics and Policy Volume 22 ; 22 ; >
     au < ready ; exists ; 1989 ; Journal of Transport Economics and Policy Volume 23 ; 23 ; >
     au < ready ; exists ; 1990 ; Journal of Transport Economics and Policy Volume 24 ; 24 ; >
-    au < ready ; exists ; 1991 ; Journal of Transport Economics and Policy Volume 25 ; 25 ; >
+    au < crawling ; exists ; 1991 ; Journal of Transport Economics and Policy Volume 25 ; 25 ; >
     au < ready ; exists ; 1992 ; Journal of Transport Economics and Policy Volume 26 ; 26 ; >
     au < frozen ; exists ; 1993 ; Journal of Transport Economics and Policy Volume 27 ; 27 ; >
     au < ready ; exists ; 1994 ; Journal of Transport Economics and Policy Volume 28 ; 28 ; >
@@ -1169,7 +1169,7 @@
     au < ready ; exists ; 2001 ; Journal of Transport Economics and Policy Volume 35 ; 35 ; >
     au < frozen ; exists ; 2002 ; Journal of Transport Economics and Policy Volume 36 ; 36 ; >
     au < ready ; exists ; 2003 ; Journal of Transport Economics and Policy Volume 37 ; 37 ; >
-    au < ready ; exists ; 2004 ; Journal of Transport Economics and Policy Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2004 ; Journal of Transport Economics and Policy Volume 38 ; 38 ; >
     au < ready ; exists ; 2005 ; Journal of Transport Economics and Policy Volume 39 ; 39 ; >
     au < ready ; exists ; 2006 ; Journal of Transport Economics and Policy Volume 40 ; 40 ; >
     au < ready ; exists ; 2007 ; Journal of Transport Economics and Policy Volume 41 ; 41 ; >
@@ -2584,7 +2584,7 @@
 
     param[journal_id] = fs
 
-    au < ready ; exists ; 1947 ; French Studies Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1947 ; French Studies Volume 1 ; 1 ; >
     au < ready ; exists ; 1948 ; French Studies Volume 2 ; 2 ; >
     au < ready ; exists ; 1949 ; French Studies Volume 3 ; 3 ; >
     au < ready ; exists ; 1950 ; French Studies Volume 4 ; 4 ; >
@@ -2750,7 +2750,7 @@
     au < ready ; exists ; 1918-1923 ; The Huguenot Society Journal Volume 12 ; 12 ; >
     au < frozen ; exists ; 1924-1929 ; The Huguenot Society Journal Volume 13 ; 13 ; >
     au < ready ; exists ; 1930-1933 ; The Huguenot Society Journal Volume 14 ; 14 ; >
-    au < ready ; exists ; 1934-1937 ; The Huguenot Society Journal Volume 15 ; 15 ; >
+    au < crawling ; exists ; 1934-1937 ; The Huguenot Society Journal Volume 15 ; 15 ; >
     au < ready ; exists ; 1938-1941 ; The Huguenot Society Journal Volume 16 ; 16 ; >
     au < ready ; exists ; 1942-1946 ; The Huguenot Society Journal Volume 17 ; 17 ; >
     au < ready ; exists ; 1947-1952 ; The Huguenot Society Journal Volume 18 ; 18 ; >
