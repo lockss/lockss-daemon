@@ -1,0 +1,75 @@
+{
+  publisher <
+    name = Adventist University of Africa ;
+    info[contract] = 2026 ;
+    info[back] = 2020 ;
+    info[tester] = X ;
+    info[platform] = Open Journal Systems 3.3.0.20
+  >
+
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    param[base_url] = https://journals.aua.ke/
+    implicit < status ; status2 ; year ; name ; param[year] ; volume ; hidden[proxy] >
+    #OJS3
+    attr[start_stem] = index.php/
+
+  {
+
+      title <
+        name = Pan-African Journal of Education and Social Sciences ;
+        issn = 2789-0058 ;
+        eissn = 2789-0066
+      >
+
+      #param[base_url] = https://journals.aua.ke/
+      param[journal_id] = pajes 
+
+      au < manifest ; exists ; 2020 ; Pan-African Journal of Education and Social Sciences Volume 2020 ; 2020 ; 1 ; >
+      au < manifest ; exists ; 2021 ; Pan-African Journal of Education and Social Sciences Volume 2021 ; 2021 ; 2 ; >
+      au < manifest ; exists ; 2022 ; Pan-African Journal of Education and Social Sciences Volume 2022 ; 2022 ; 3 ; >
+      au < manifest ; exists ; 2023 ; Pan-African Journal of Education and Social Sciences Volume 2023 ; 2023 ; 4 ; >
+      au < manifest ; exists ; 2024 ; Pan-African Journal of Education and Social Sciences Volume 2024 ; 2024 ; 5 ; >
+      au < manifest ; exists ; 2025 ; Pan-African Journal of Education and Social Sciences Volume 2025 ; 2025 ; 6 ; >
+      au < exists ; exists ; 2026 ; Pan-African Journal of Education and Social Sciences Volume 2026 ; 2026 ; 7 ; >
+
+  }
+
+  {
+
+      title <
+        name = Pan-African Journal of Health and Environmental Science ;
+        issn = 2789-6196 ;
+        eissn = 2789-620X
+      >
+
+      #param[base_url] = https://journals.aua.ke/
+      param[journal_id] = ajhes 
+
+      au < manifest ; exists ; 2022 ; Pan-African Journal of Health and Environmental Science Volume 2022 ; 2022 ; 1 ; >
+      au < manifest ; exists ; 2023 ; Pan-African Journal of Health and Environmental Science Volume 2023 ; 2023 ; 2 ; >
+      au < manifest ; exists ; 2024 ; Pan-African Journal of Health and Environmental Science Volume 2024 ; 2024 ; 3 ; >
+      au < manifest ; exists ; 2025 ; Pan-African Journal of Health and Environmental Science Volume 2025 ; 2025 ; 4 ; >
+      au < exists ; exists ; 2026 ; Pan-African Journal of Health and Environmental Science Volume 2026 ; 2026 ; 5 ; >
+
+  }
+
+  {
+
+      title <
+        name = Pan-African Journal of Theology ;
+        issn = 2789-6218 ;
+        eissn = 2789-6226
+      >
+
+      #param[base_url] = https://journals.aua.ke/
+      param[journal_id] = pajot
+
+      au < manifest ; exists ; 2022 ; Pan-African Journal of Theology Volume 2022 ; 2022 ; 1 ; >
+      au < manifest ; exists ; 2023 ; Pan-African Journal of Theology Volume 2023 ; 2023 ; 2 ; >
+      au < manifest ; exists ; 2024 ; Pan-African Journal of Theology Volume 2024 ; 2024 ; 3 ; >
+      au < manifest ; exists ; 2025 ; Pan-African Journal of Theology Volume 2025 ; 2025 ; 4 ; >
+      au < exists ; exists ; 2026 ; Pan-African Journal of Theology Volume 2026 ; 2026 ; 5 ; >
+
+  }
+
+}

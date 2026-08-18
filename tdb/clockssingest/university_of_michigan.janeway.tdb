@@ -26,7 +26,7 @@
       #published 2015-present
       param[journal_id] = absinthe
 
-      au < crawling ; exists ; 2015 ; 22 ; Absinthe: World Literature in Translation Volume 2015 ; 2016 ; >
+      au < frozen ; exists ; 2015 ; 22 ; Absinthe: World Literature in Translation Volume 2015 ; 2016 ; >
       au < ready ; exists ; 2015-2018 ; 22-24 ; Absinthe: World Literature in Translation Volume 2015-2018 ; 2017 ; >
       au < ready ; exists ; 2019 ; 25 ; Absinthe: World Literature in Translation Volume 2019 ; 2018 ; >
       au < ready ; exists ; 2020 ; 26 ; Absinthe: World Literature in Translation Volume 2020 ; 2019 ; >
@@ -133,9 +133,9 @@
       #published 2014-2020
       param[journal_id] = dsdj
 
-      au < ready ; exists ; 2009 ; 1 ; Deaf Studies Digital Journal Volume 2009 ; 2009 ; >
+      au < crawling ; exists ; 2009 ; 1 ; Deaf Studies Digital Journal Volume 2009 ; 2009 ; >
       au < doesNotExist ; doesNotExist ; 2010 ; 2 ; Deaf Studies Digital Journal Volume 2010 ; 2010 ; >
-      au < crawling ; exists ; 2012 ; 3 ; Deaf Studies Digital Journal Volume 2012 ; 2012 ; >
+      au < frozen ; exists ; 2012 ; 3 ; Deaf Studies Digital Journal Volume 2012 ; 2012 ; >
       au < ready ; exists ; 2014 ; 4 ; Deaf Studies Digital Journal Volume 2014 ; 2014 ; >
       au < doesNotExist ; doesNotExist ; 2020 ; 5 ; Deaf Studies Digital Journal Volume 2020 ; 2020 ; >
       au < deepCrawl ; exists ; 2025 ; 6 ; Deaf Studies Digital Journal Volume 2025 ; 2025 ; >
@@ -711,10 +711,10 @@
       #published 2014-present
       param[journal_id] = weaveux
 
-      au < crawling ; exists ; 2014 ; 1 ; Weave: Journal of Library User Experience Volume 2014 ; 2014 ; >
+      au < frozen ; exists ; 2014 ; 1 ; Weave: Journal of Library User Experience Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 2 ; Weave: Journal of Library User Experience Volume 2015 ; 2015 ; >
       au < ready ; exists ; 2016 ; 3 ; Weave: Journal of Library User Experience Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 4 ; Weave: Journal of Library User Experience Volume 2017 ; 2017 ; >
+      au < frozen ; exists ; 2017 ; 4 ; Weave: Journal of Library User Experience Volume 2017 ; 2017 ; >
       au < frozen ; exists ; 2018 ; 5 ; Weave: Journal of Library User Experience Volume 2018 ; 2018 ; >
       au < ready ; exists ; 2019 ; 6 ; Weave: Journal of Library User Experience Volume 2019 ; 2019 ; >
       au < crawling ; exists ; 2020 ; 7 ; Weave: Journal of Library User Experience Volume 2020 ; 2020 ; reingest1.clockss.org:8082 >

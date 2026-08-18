@@ -1,0 +1,30 @@
+{
+
+  publisher <
+    name = Greenfort International Publisher ;
+    info[contract] = 2026 ;
+    info[tester] = 5 ;
+    info[platform] = OJS3 3.4.0.7
+  >
+
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+
+  {
+  
+    title < 
+      name = Greenfort International Journal of Applied Medical Science ;
+      issn = 3048-6904 ;
+      eissn = 2584-2420
+    >
+      param[base_url] = https://gijams.in/
+      param[journal_id] = gijams
+
+      au < exists ; exists ; 2023 ; Greenfort International Journal of Applied Medical Science Volume 1 ; 1 ; 2023 ; >
+      au < exists ; exists ; 2024 ; Greenfort International Journal of Applied Medical Science Volume 2 ; 2 ; 2024 ; >
+      au < exists ; exists ; 2025 ; Greenfort International Journal of Applied Medical Science Volume 3 ; 3 ; 2025 ; >
+      au < exists ; exists ; 2026 ; Greenfort International Journal of Applied Medical Science Volume 4 ; 4 ; 2026 ; >
+  }
+
+}

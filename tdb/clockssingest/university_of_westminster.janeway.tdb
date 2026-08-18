@@ -1,10 +1,9 @@
 {
-
   publisher <
     name = University of Westminster ;
     info[contract] = 2018 ;
     info[back] = 2002 ;
-    info[tester] = 8 ;
+    info[tester] = X ;
     info[platform] = Janeway. LXPLUG-2156.
   >
     provider = University of Westminster
@@ -25,7 +24,7 @@
     au < frozen ; exists ; 2022 ; 2 ; Active Travel Studies Volume 2022 ; 2022 ; >
     au < frozen ; exists ; 2023 ; 3 ; Active Travel Studies Volume 2023 ; 2023 ; >
     au < frozen ; exists ; 2024 ; 4 ; Active Travel Studies Volume 2024 ; 2024 ; >
-    au < doNotProcess ; exists ; 2025 ; 5 ; Active Travel Studies Volume 2025 ; 2025 ; >
+    au < exists ; exists ; 2025 ; 5 ; Active Travel Studies Volume 2025 ; 2025 ; >
 
   }
 
@@ -44,7 +43,7 @@
     au < frozen ; exists ; 2022 ; 3 ; Anthropocenes – Human, Inhuman, Posthuman Volume 2022 ; 2022 ; >
     au < frozen ; exists ; 2023 ; 4 ; Anthropocenes – Human, Inhuman, Posthuman Volume 2023 ; 2023 ; >
     au < frozen ; exists ; 2024 ; 5 ; Anthropocenes – Human, Inhuman, Posthuman Volume 2024 ; 2024 ; >
-    au < doNotProcess ; exists ; 2025 ; 6 ; Anthropocenes – Human, Inhuman, Posthuman Volume 2025 ; 2025 ; >
+    au < exists ; exists ; 2025 ; 6 ; Anthropocenes – Human, Inhuman, Posthuman Volume 2025 ; 2025 ; >
 
   }
 
@@ -57,6 +56,7 @@
 
     comment[publisher] = University of Westminster
     param[base_url] = https://www.entsportslawjournal.com/ #API works encoded & = &amp;
+    #V1-18 processed with Ubiquity press
 
     au < doesNotExist ; doesNotExist ; 2002 ; 1 ; Entertainment and Sports Law Journal Volume 2002 ; 2002 ; >
     au < doNotProcess ; exists ; 2003 ; 2 ; Entertainment and Sports Law Journal Volume 2003 ; 2003 ; >
@@ -80,7 +80,7 @@
     au < frozen ; exists ; 2022 ; 20 ; Entertainment and Sports Law Journal Volume 2022 ; 2022 ; >
     au < frozen ; exists ; 2023 ; 21 ; Entertainment and Sports Law Journal Volume 2023 ; 2023 ; >
     au < frozen ; exists ; 2024 ; 22 ; Entertainment and Sports Law Journal Volume 2024 ; 2024 ; >
-    au < doNotProcess ; exists ; 2025 ; 23 ; Entertainment and Sports Law Journal Volume 2025 ; 2025 ; >
+    au < exists ; exists ; 2025 ; 23 ; Entertainment and Sports Law Journal Volume 2025 ; 2025 ; >
 
   }
 
@@ -114,7 +114,7 @@
     au < frozen ; exists ; 2022 ; 18 ; Journal of Deliberative Democracy Volume 2022 ; 2022 ; >
     au < frozen ; exists ; 2023 ; 19 ; Journal of Deliberative Democracy Volume 2023 ; 2023 ; >
     au < frozen ; exists ; 2024 ; 20 ; Journal of Deliberative Democracy Volume 2024 ; 2024 ; >
-    au < doNotProcess ; exists ; 2025 ; 21 ; Journal of Deliberative Democracy Volume 2025 ; 2025 ; >
+    au < exists ; exists ; 2025 ; 21 ; Journal of Deliberative Democracy Volume 2025 ; 2025 ; >
 
   }
 
