@@ -31,7 +31,7 @@
       implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
      {
 
-      au < ready ; exists ; 1947 ; The American Journal of Psychotherapy Volume 1 ; 1 ; https://psychiatryonline.org/ ; >
+      au < crawling ; exists ; 1947 ; The American Journal of Psychotherapy Volume 1 ; 1 ; https://psychiatryonline.org/ ; >
       au < ready ; exists ; 1948 ; The American Journal of Psychotherapy Volume 2 ; 2 ; https://psychiatryonline.org/ ; >
       au < ready ; exists ; 1949 ; The American Journal of Psychotherapy Volume 3 ; 3 ; https://psychiatryonline.org/ ; >
       au < ready ; exists ; 1950 ; The American Journal of Psychotherapy Volume 4 ; 4 ; https://psychiatryonline.org/ ; >
