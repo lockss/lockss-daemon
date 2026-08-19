@@ -35,6 +35,7 @@ package org.lockss.plugin.georgthiemeverlag;
 import java.io.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.*;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
@@ -42,8 +43,10 @@ import org.apache.commons.lang.StringUtils;
 import org.lockss.util.*;
 import org.lockss.config.TdbAu;
 import org.lockss.daemon.*;
+import org.lockss.daemon.AuParamType.InvalidFormatException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.lockss.util.urlconn.*;
 
 
 /**
@@ -115,7 +118,7 @@ public class GeorgThiemeVerlagHtmlMetadataExtractorFactory implements FileMetada
      * If we can get issn/eissn  isbn/eisbn info then check against that
      */
     private static boolean metadataMatchesTdb(CachedUrl cu, ArchivalUnit au, 
-  		  ArticleMetadata am) { 
+  		  ArticleMetadata am) throws IOException { 
 
   	  boolean isInAu = true;
   	  String stringUrl = cu.getUrl();
@@ -174,15 +177,23 @@ public class GeorgThiemeVerlagHtmlMetadataExtractorFactory implements FileMetada
   	  String AU_volume = au.getTdbAu().getVolume();
       if (isInAu && !(StringUtils.isEmpty(foundVolume))) {
         if(AU_volume != null && AU_volume.contains("-")){
-          String[] au_volumes = AU_volume.split("-");
-          boolean multiVolCheck = false;
-          for(String vol : au_volumes){
-            if(vol.equals(foundVolume)){
-              multiVolCheck = true;
-            }
+          //range of volumes
+          try{
+            List<String> au_volumes = (List<String>)AuParamType.Range.parse(AU_volume);
+            isInAu = checkForVol(au_volumes, foundVolume);
+            log.debug3("After multivolume range check, isInAu :" + isInAu + ", foundVolume = " + foundVolume + ", AU_volumes =" + AU_volume);
+          }catch (AuParamType.InvalidFormatException e) {
+            throw new IOException("Bad format of volume.");
           }
-          isInAu = multiVolCheck;
-          log.debug3("After multivolume check, isInAu :" + isInAu + ", foundVolume = " + foundVolume + ", AU_volumes =" + AU_volume);
+        }else if(AU_volume != null && AU_volume.contains(",")){
+          //set of volumes; example is Zeitschrift für Orthomolekulare Medizin Volume 13 which has inconsistent volume
+          try{
+            List<String> au_volumes = (List<String>)AuParamType.Set.parse(AU_volume);
+            isInAu = checkForVol(au_volumes, foundVolume);
+            log.debug3("After multivolume set check, isInAu :" + isInAu + ", foundVolume = " + foundVolume + ", AU_volumes =" + AU_volume);
+          }catch (AuParamType.InvalidFormatException e) {
+            throw new IOException("Bad format of volume.");
+          }
         }
         else{
           //Some single digit volumes are represented as having a 0 before it ('01' vs '1'). Check both. 
@@ -202,8 +213,15 @@ public class GeorgThiemeVerlagHtmlMetadataExtractorFactory implements FileMetada
   	  }
   	  return id;
     }
-    
+
+    public static boolean checkForVol(List<String> volumes, String foundVolume){
+      boolean multiVolCheck = false;
+      for(String vol : volumes){
+        if(vol.equals(foundVolume)){
+          multiVolCheck = true;
+        }
+      }
+      return multiVolCheck;
+    }
   }
-
-
 }
