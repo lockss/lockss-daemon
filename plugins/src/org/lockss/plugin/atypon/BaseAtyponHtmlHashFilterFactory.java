@@ -225,6 +225,8 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttributeRegex("section", "id", "comments-section"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "comment-list"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "comments__wrapper"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "bibliolist"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "core-xlink-article-link"),
 
     // A number of children add a link item "Cited By" only after the article
     // has been cited...remove the entire list item - look for text pattern
