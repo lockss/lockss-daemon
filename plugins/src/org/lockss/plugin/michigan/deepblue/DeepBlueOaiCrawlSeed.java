@@ -342,6 +342,9 @@ public class DeepBlueOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
 	        }
 	      }
       } catch (InvalidOAIResponse e) {
+          Throwable c = e.getCause();
+          logger.error("InvalidOAIResponse after " + allRecCount + " records; cause="
+                  + (c != null ? c.toString() : "NULL"), e);
     	  if(e.getCause() != null && e.getCause().getMessage().contains("LOCKSS")) {
     		  error = true;
     		  logger.debug("OAI result errored due to LOCKSS audit proxy. Trying alternate start Url", e);
