@@ -197,7 +197,7 @@ public class GeorgThiemeVerlagHtmlMetadataExtractorFactory implements FileMetada
         }
         else{
           //Some single digit volumes are represented as having a 0 before it ('01' vs '1'). Check both. 
-          isInAu =  ( (AU_volume != null) && ((foundVolume.equals(AU_volume)) || foundVolume.equals("0".concat(AU_volume))));
+          isInAu =  ( (AU_volume != null) && ((foundVolume.equals(AU_volume)) || foundVolume.equals("0".concat(AU_volume)) || ("0".concat(foundVolume)).equals(AU_volume)));
           log.debug3("After volume check, isInAu :" + isInAu + ", foundVolume = " + foundVolume + ", AU_volume =" + AU_volume);
         }
       }
