@@ -33,6 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.rewriter;
 
 import java.io.*;
+import java.nio.charset.*;
 import java.util.*;
 import java.util.function.Consumer;
 
@@ -40,24 +41,42 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.lockss.util.*;
 
-public class JsoupTransformInputStream extends InputStream {
+public class JsoupTransformInputStream extends InputStream implements EncodedThing {
+
+  private static final Logger log = Logger.getLogger(JsoupTransformInputStream.class);
 
   public static interface JsoupTransform {
     public void transform(Document doc) throws Exception;
   }
   
-  protected InputStream in = null;
+  /*
+   * Internal state
+   */
   
-  protected InputStream out = null;
-  
+  protected boolean built = false;
+
+  protected boolean closed = false;
+
   protected List<JsoupTransform> transforms = new ArrayList<>();
+  
+  /*
+   * Input side
+   */
+  
+  protected InputStream in = null;
   
   protected String inCharsetName = null;
   
   protected String baseUri = null;
   
-  protected boolean closed = false;
-
+  /*
+   * Output side
+   */
+  
+  protected InputStream out = null;
+  
+  protected String outCharsetName = null;
+  
   public JsoupTransformInputStream() {
     // Intentionally left blank
   }
@@ -79,8 +98,14 @@ public class JsoupTransformInputStream extends InputStream {
   
   public JsoupTransformInputStream setInputStream(InputStream in)
       throws IllegalArgumentException, IllegalStateException {
+    if (built) {
+      throw new IllegalStateException("Input stream is already built");
+    }
+    if (closed) {
+      throw new IllegalStateException("Input stream is closed");
+    }
     if (in == null) {
-      throw new IllegalArgumentException("Input stream cannot be null");
+      throw new IllegalArgumentException("Input stream is null");
     }
     if (this.in != null) {
       throw new IllegalStateException("Input stream is already set");
@@ -91,8 +116,14 @@ public class JsoupTransformInputStream extends InputStream {
   
   public JsoupTransformInputStream setInputCharsetName(String inCharsetName)
       throws IllegalArgumentException, IllegalStateException {
+    if (built) {
+      throw new IllegalStateException("Input stream is already built");
+    }
+    if (closed) {
+      throw new IllegalStateException("Input stream is closed");
+    }
     if (inCharsetName == null) {
-      throw new IllegalArgumentException("Input charset name cannot be null");
+      throw new IllegalArgumentException("Input charset name is null");
     }
     if (this.inCharsetName != null) {
       throw new IllegalStateException("Input charset name is already set");
@@ -103,8 +134,14 @@ public class JsoupTransformInputStream extends InputStream {
 
   public JsoupTransformInputStream setBaseUri(String baseUri)
       throws IllegalArgumentException, IllegalStateException {
+    if (built) {
+      throw new IllegalStateException("Input stream is already built");
+    }
+    if (closed) {
+      throw new IllegalStateException("Input stream is closed");
+    }
     if (baseUri == null) {
-      throw new IllegalArgumentException("Base URI cannot be null");
+      throw new IllegalArgumentException("Base URI is null");
     }
     if (this.baseUri != null) {
       throw new IllegalStateException("Base URI is already set");
@@ -113,9 +150,33 @@ public class JsoupTransformInputStream extends InputStream {
     return this;
   }
 
+  public JsoupTransformInputStream setOutputCharsetName(String outCharsetName)
+      throws IllegalArgumentException, IllegalStateException {
+    if (built) {
+      throw new IllegalStateException("Input stream is already built");
+    }
+    if (closed) {
+      throw new IllegalStateException("Input stream is closed");
+    }
+    if (outCharsetName == null) {
+      throw new IllegalArgumentException("Output charset name is null");
+    }
+    if (this.outCharsetName != null) {
+      throw new IllegalStateException("Output charset name is already set");
+    }
+    this.outCharsetName = outCharsetName;
+    return this;
+  }
+
   public JsoupTransformInputStream addTransform(JsoupTransform jxf) {
+    if (built) {
+      throw new IllegalStateException("Input stream is already built");
+    }
+    if (closed) {
+      throw new IllegalStateException("Input stream is closed");
+    }
     if (jxf == null) {
-      throw new IllegalArgumentException("Transform cannot be null");
+      throw new IllegalArgumentException("Transform is null");
     }
     transforms.add(jxf);
     return this;
@@ -134,12 +195,34 @@ public class JsoupTransformInputStream extends InputStream {
     return this;
   }
   
+  public String getCharset() throws IOException {
+    getOut();
+    return outCharsetName;
+  }
+
   protected void doOutput(Document doc) throws IOException {
     DeferredTempFileOutputStream dtfos = null;
     OutputStreamWriter osw = null;
     try {
+      // Decide output charset
+      if (outCharsetName != null && !outCharsetName.equalsIgnoreCase(inCharsetName)) {
+        log.debug2("Changing charset to: " + outCharsetName);
+      }
+      if (outCharsetName == null) {
+        Charset docCharset = doc.charset();
+        if (docCharset != null) {
+          outCharsetName = docCharset.name();
+	  log.debug2("Document changes charset to: " + outCharsetName); 
+        }
+      }
+      if (outCharsetName == null) {
+        outCharsetName = inCharsetName; // Could be null
+      }
+      // Output to deferred temp file	
       dtfos = new DeferredTempFileOutputStream(1*1024*1024); // FIXME
-      osw = new OutputStreamWriter(dtfos, inCharsetName);
+      osw = (outCharsetName != null)
+            ? new OutputStreamWriter(dtfos, outCharsetName)
+            : new OutputStreamWriter(dtfos);
       osw.write(doc.outerHtml());
       osw.close();
       out = dtfos.getDeleteOnCloseInputStream();
@@ -157,15 +240,25 @@ public class JsoupTransformInputStream extends InputStream {
       throw new IOException("Underlying input stream is not set");
     }
     if (inCharsetName == null) {
-      throw new IOException("Underlying input charset name is not set");
+      throw new IOException("Input charset name is not set");
     }
     if (baseUri == null) {
       throw new IOException("Underlying base URI is not set");
+    }
+    if (in instanceof EncodedThing) {
+      String actualInCharsetName = ((EncodedThing)in).getCharset();
+      if (!StringUtil.isNullString(actualInCharsetName)) {
+	if (!actualInCharsetName.equals(inCharsetName)) {
+	  log.debug2("Using input stream's charset: " + actualInCharsetName);
+	}
+	inCharsetName = actualInCharsetName;
+      }
     }
     return Jsoup.parse(in, inCharsetName, baseUri);
   }
   
   protected void process() throws IOException {
+    built = true;
     Document doc = parse();
     transform(doc);
     doOutput(doc);
