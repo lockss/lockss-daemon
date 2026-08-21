@@ -35,8 +35,9 @@ package org.lockss.rewriter;
 import java.io.*;
 import java.nio.charset.*;
 import java.util.*;
-import java.util.function.Consumer;
+import java.util.function.*;
 
+import org.apache.commons.io.input.ReaderInputStream;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.lockss.util.*;
@@ -77,104 +78,131 @@ public class JsoupTransformInputStream extends InputStream implements EncodedThi
   
   protected String outCharsetName = null;
   
+  protected int dtfosThreshold = 1*1024*1024; // 1 MiB
+  
   public JsoupTransformInputStream() {
     // Intentionally left blank
   }
   
   public JsoupTransformInputStream(InputStream in,
                                    String inCharsetName,
-                                   String baseUri) {
-    setInput(in, inCharsetName, baseUri);
+                                   String baseUri)
+      throws IllegalArgumentException, IllegalStateException {
+    setInputSource(in, inCharsetName, baseUri);
   }
   
-  public JsoupTransformInputStream setInput(InputStream in,
-                                            String inCharsetName,
-                                            String baseUri) {
+  public JsoupTransformInputStream(File file,
+                                   String inCharsetName,
+                                   String baseUri)
+      throws FileNotFoundException, IllegalArgumentException, IllegalStateException {
+    setInputSource(file, inCharsetName, baseUri);
+  }
+
+  public JsoupTransformInputStream(String input,
+                                   String inCharsetName,
+                                   String baseUri)
+      throws IOException, IllegalArgumentException, IllegalStateException {
+    setInputSource(input, inCharsetName, baseUri);
+  }
+
+  public JsoupTransformInputStream setInputSource(InputStream in,
+                                                  String inCharsetName,
+                                                  String baseUri)
+      throws IllegalArgumentException, IllegalStateException {
     setInputStream(in);
     setInputCharsetName(inCharsetName);
     setBaseUri(baseUri);
     return this;
   }
   
+  public JsoupTransformInputStream setInputSource(File file,
+                                                  String inCharsetName,
+                                                  String baseUri)
+      throws FileNotFoundException, IllegalArgumentException, IllegalStateException {
+    setInputFile(file);
+    setInputCharsetName(inCharsetName);
+    setBaseUri(baseUri);
+    return this;
+  }
+
+  public JsoupTransformInputStream setInputSource(String input,
+                                                  String inCharsetName,
+                                                  String baseUri)
+      throws IOException, IllegalArgumentException, IllegalStateException {
+    setInputCharsetName(inCharsetName); // Must do this first
+    setInputString(input);
+    setBaseUri(baseUri);
+    return this;
+}
+
   public JsoupTransformInputStream setInputStream(InputStream in)
       throws IllegalArgumentException, IllegalStateException {
-    if (built) {
-      throw new IllegalStateException("Input stream is already built");
-    }
-    if (closed) {
-      throw new IllegalStateException("Input stream is closed");
-    }
-    if (in == null) {
-      throw new IllegalArgumentException("Input stream is null");
-    }
-    if (this.in != null) {
-      throw new IllegalStateException("Input stream is already set");
-    }
+    throwIfBuiltOrClosed();
+    throwIfVarNullOrFieldSet(in, this.in, "Input stream");
     this.in = in;
     return this;
   }
-  
-  public JsoupTransformInputStream setInputCharsetName(String inCharsetName)
-      throws IllegalArgumentException, IllegalStateException {
-    if (built) {
-      throw new IllegalStateException("Input stream is already built");
+
+  public JsoupTransformInputStream setInputFile(File file)
+      throws FileNotFoundException, IllegalArgumentException, IllegalStateException {
+    if (file == null) {
+      throw new IllegalArgumentException("Input file is null");
     }
-    if (closed) {
-      throw new IllegalStateException("Input stream is closed");
+    return setInputStream(new BufferedInputStream(new FileInputStream(file)));
+  }
+
+  public JsoupTransformInputStream setInputString(String input)
+      throws IOException, IllegalArgumentException, IllegalStateException {
+    if (input == null) {
+      throw new IllegalArgumentException("Input string is null");
     }
     if (inCharsetName == null) {
-      throw new IllegalArgumentException("Input charset name is null");
+      throw new IllegalStateException("Input charset name is not set");
     }
-    if (this.inCharsetName != null) {
-      throw new IllegalStateException("Input charset name is already set");
-    }
+    return setInputStream(ReaderInputStream.builder().setReader(new StringReader(input))
+                                                     .setCharset(inCharsetName)
+                                                     .get());
+  }
+
+  public JsoupTransformInputStream setInputCharsetName(String inCharsetName)
+      throws IllegalArgumentException, IllegalStateException {
+    throwIfBuiltOrClosed();
+    throwIfVarNullOrFieldSet(inCharsetName, this.inCharsetName, "Input charset name");
     this.inCharsetName = inCharsetName;
     return this;
   }
 
   public JsoupTransformInputStream setBaseUri(String baseUri)
       throws IllegalArgumentException, IllegalStateException {
-    if (built) {
-      throw new IllegalStateException("Input stream is already built");
-    }
-    if (closed) {
-      throw new IllegalStateException("Input stream is closed");
-    }
-    if (baseUri == null) {
-      throw new IllegalArgumentException("Base URI is null");
-    }
-    if (this.baseUri != null) {
-      throw new IllegalStateException("Base URI is already set");
-    }
+    throwIfBuiltOrClosed();
+    throwIfVarNullOrFieldSet(baseUri, this.baseUri, "Base URI");
     this.baseUri = baseUri;
     return this;
   }
 
   public JsoupTransformInputStream setOutputCharsetName(String outCharsetName)
       throws IllegalArgumentException, IllegalStateException {
-    if (built) {
-      throw new IllegalStateException("Input stream is already built");
-    }
-    if (closed) {
-      throw new IllegalStateException("Input stream is closed");
-    }
-    if (outCharsetName == null) {
-      throw new IllegalArgumentException("Output charset name is null");
-    }
-    if (this.outCharsetName != null) {
-      throw new IllegalStateException("Output charset name is already set");
-    }
+    throwIfBuiltOrClosed();
+    throwIfVarNullOrFieldSet(outCharsetName, this.outCharsetName, "Output charset name");
     this.outCharsetName = outCharsetName;
     return this;
   }
 
+  public JsoupTransformInputStream setDtfosThreshold(int dtfosThreshold)
+      throws IllegalArgumentException {
+    throwIfBuiltOrClosed();
+    if (dtfosThreshold < 0) {
+      throw new IllegalArgumentException("DTFOS threshold is negative");
+    }
+    if (dtfosThreshold == 0) {
+      throw new IllegalArgumentException("DTFOS threshold is zero");
+    }
+    this.dtfosThreshold = dtfosThreshold;
+    return this;
+  }
+  
   public JsoupTransformInputStream addTransform(JsoupTransform jxf) {
-    if (built) {
-      throw new IllegalStateException("Input stream is already built");
-    }
-    if (closed) {
-      throw new IllegalStateException("Input stream is closed");
-    }
+    throwIfBuiltOrClosed();
     if (jxf == null) {
       throw new IllegalArgumentException("Transform is null");
     }
@@ -216,14 +244,12 @@ public class JsoupTransformInputStream extends InputStream implements EncodedThi
         }
       }
       if (outCharsetName == null) {
-        outCharsetName = inCharsetName; // Could be null
+        outCharsetName = inCharsetName;
       }
       // Output to deferred temp file	
-      dtfos = new DeferredTempFileOutputStream(1*1024*1024); // FIXME
-      osw = (outCharsetName != null)
-            ? new OutputStreamWriter(dtfos, outCharsetName)
-            : new OutputStreamWriter(dtfos);
-      osw.write(doc.outerHtml());
+      dtfos = new DeferredTempFileOutputStream(dtfosThreshold);
+      osw = new OutputStreamWriter(dtfos, outCharsetName);
+      doc.html(osw); // FIXME unknown if this does the right thing for a Document
       osw.close();
       out = dtfos.getDeleteOnCloseInputStream();
     }
@@ -283,6 +309,27 @@ public class JsoupTransformInputStream extends InputStream implements EncodedThi
       process();
     }
     return out;
+  }
+  
+  protected void throwIfBuiltOrClosed() throws IllegalStateException {
+    if (built) {
+      throw new IllegalStateException("Input stream is already built");
+    }
+    if (closed) {
+      throw new IllegalStateException("Input stream is closed");
+    }
+  }
+  
+  protected void throwIfVarNullOrFieldSet(Object variable,
+                                          Object field,
+                                          String thing)
+      throws IllegalArgumentException {
+    if (variable == null) {
+      throw new IllegalArgumentException(thing + " is null");
+    }
+    if (field != null) {
+      throw new IllegalArgumentException(thing + " is already set");
+    }
   }
   
   /*
