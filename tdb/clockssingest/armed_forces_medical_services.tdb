@@ -65,7 +65,7 @@
     param[journal_abbr] = journal
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < crawling ; exists ; 2000 ; Neurosciences Journal Volume 5 ; 5 ; > 
+    au < frozen ; exists ; 2000 ; Neurosciences Journal Volume 5 ; 5 ; > 
     au < frozen ; exists ; 2001 ; Neurosciences Journal Volume 6 ; 6 ; > 
     au < frozen ; exists ; 2002 ; Neurosciences Journal Volume 7 ; 7 ; > 
     au < frozen ; exists ; 2003 ; Neurosciences Journal Volume 8 ; 8 ; > 
