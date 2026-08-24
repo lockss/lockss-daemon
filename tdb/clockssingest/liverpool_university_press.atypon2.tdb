@@ -966,7 +966,7 @@
     au < ready ; exists ; 1954 ; Journal of Jewish Studies Volume 5 ; 5 ; >
     au < frozen ; exists ; 1955 ; Journal of Jewish Studies Volume 6 ; 6 ; >
     au < frozen ; exists ; 1956 ; Journal of Jewish Studies Volume 7 ; 7 ; >
-    au < ready ; exists ; 1957 ; Journal of Jewish Studies Volume 8 ; 8 ; >
+    au < crawling ; exists ; 1957 ; Journal of Jewish Studies Volume 8 ; 8 ; >
     au < ready ; exists ; 1958 ; Journal of Jewish Studies Volume 9 ; 9 ; >
     au < ready ; exists ; 1959 ; Journal of Jewish Studies Volume 10 ; 10 ; >
     au < frozen ; exists ; 1960 ; Journal of Jewish Studies Volume 11 ; 11 ; >
@@ -2502,7 +2502,7 @@
     param[journal_id] = blr
 
     au < ready ; exists ; 1914-1916 ; The Bodleian Library Record Volume I ; I ; >
-    au < ready ; exists ; 1917-1919 ; The Bodleian Library Record Volume II ; II ; >
+    au < crawling ; exists ; 1917-1919 ; The Bodleian Library Record Volume II ; II ; >
     au < frozen ; exists ; 1920-1922 ; The Bodleian Library Record Volume III ; III ; >
     au < crawling ; exists ; 1923-1925 ; The Bodleian Library Record Volume IV ; IV ; >
     au < crawling ; exists ; 1926-1928 ; The Bodleian Library Record Volume V ; V ; >
@@ -2594,7 +2594,7 @@
     au < ready ; exists ; 1954 ; French Studies Volume 8 ; 8 ; >
     au < frozen ; exists ; 1955 ; French Studies Volume 9 ; 9 ; >
     au < frozen ; exists ; 1956 ; French Studies Volume 10 ; 10 ; >
-    au < ready ; exists ; 1957 ; French Studies Volume 11 ; 11 ; >
+    au < crawling ; exists ; 1957 ; French Studies Volume 11 ; 11 ; >
     au < ready ; exists ; 1958 ; French Studies Volume 12 ; 12 ; >
     au < ready ; exists ; 1959 ; French Studies Volume 13 ; 13 ; >
     au < frozen ; exists ; 1960 ; French Studies Volume 14 ; 14 ; >
@@ -2746,12 +2746,12 @@
     au < frozen ; exists ; 1905-1908 ; The Huguenot Society Journal Volume 8 ; 8 ; >
     au < ready ; exists ; 1909-1911 ; The Huguenot Society Journal Volume 9 ; 9 ; >
     au < crawling ; exists ; 1912-1914 ; The Huguenot Society Journal Volume 10 ; 10 ; >
-    au < ready ; exists ; 1915-1917 ; The Huguenot Society Journal Volume 11 ; 11 ; >
+    au < crawling ; exists ; 1915-1917 ; The Huguenot Society Journal Volume 11 ; 11 ; >
     au < ready ; exists ; 1918-1923 ; The Huguenot Society Journal Volume 12 ; 12 ; >
     au < frozen ; exists ; 1924-1929 ; The Huguenot Society Journal Volume 13 ; 13 ; >
     au < ready ; exists ; 1930-1933 ; The Huguenot Society Journal Volume 14 ; 14 ; >
     au < crawling ; exists ; 1934-1937 ; The Huguenot Society Journal Volume 15 ; 15 ; >
-    au < ready ; exists ; 1938-1941 ; The Huguenot Society Journal Volume 16 ; 16 ; >
+    au < crawling ; exists ; 1938-1941 ; The Huguenot Society Journal Volume 16 ; 16 ; >
     au < ready ; exists ; 1942-1946 ; The Huguenot Society Journal Volume 17 ; 17 ; >
     au < ready ; exists ; 1947-1952 ; The Huguenot Society Journal Volume 18 ; 18 ; >
     au < ready ; exists ; 1953-1958 ; The Huguenot Society Journal Volume 19 ; 19 ; >
