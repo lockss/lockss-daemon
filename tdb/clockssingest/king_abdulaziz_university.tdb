@@ -99,7 +99,7 @@
       param[journal_abbr] = jmeds
 
       au < frozen ; exists ; 2025 ; Journal of King Abdulaziz University: Medical Sciences Volume 32 ; 32 ; >
-      au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Medical Sciences Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2026 ; Journal of King Abdulaziz University: Medical Sciences Volume 33 ; 33 ; >
 
   }
 
