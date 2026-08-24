@@ -9794,6 +9794,7 @@
     >
 
     param[journal_id] = icvts
+    #Continued by 2753-670X
 
     au < doNotProcess ; 2002 ; 2002 ; Interactive CardioVascular and Thoracic Surgery Volume 1 ; 1 >
     au < doNotProcess ; 2003 ; 2003 ; Interactive CardioVascular and Thoracic Surgery Volume 2 ; 2 >
@@ -9816,10 +9817,6 @@
     au < released ; 2020 ; 2020 ; Interactive CardioVascular and Thoracic Surgery Volume 30-31 ; 30-31 >
     au < released ; 2021 ; 2021 ; Interactive CardioVascular and Thoracic Surgery Volume 32-33 ; 32-33 >
     au < released ; 2022 ; 2022 ; Interactive CardioVascular and Thoracic Surgery Volume 34-35 ; 34-35 >
-    au < released ; 2023 ; 2023 ; Interactive CardioVascular and Thoracic Surgery Volume 36-37 ; 36-37 >
-    au < released ; 2024 ; 2024 ; Interactive CardioVascular and Thoracic Surgery Volume 38-39 ; 38-39 >
-    au < released ; 2025 ; 2025 ; Interactive CardioVascular and Thoracic Surgery Volume 40 ; 40 >
-    au < manifest ; 2026 ; 2026 ; Interactive CardioVascular and Thoracic Surgery Volume 41 ; 41 >
 
   }
 
@@ -9833,9 +9830,10 @@
 
     param[journal_id] = icvts
 
-    au < manifest ; 2023 ; 2023 ; Interdisciplinary CardioVascular and Thoracic Surgery Volume 36-37 ; 36-37 >
-    au < manifest ; 2024 ; 2024 ; Interdisciplinary CardioVascular and Thoracic Surgery Volume 38-39 ; 38-39 >
-    au < manifest ; 2025 ; 2025 ; Interdisciplinary CardioVascular and Thoracic Surgery Volume 40-41 ; 40-41 >
+    au < released ; 2023 ; 2023 ; Interdisciplinary CardioVascular and Thoracic Surgery Volume 36-37 ; 36-37 >
+    au < released ; 2024 ; 2024 ; Interdisciplinary CardioVascular and Thoracic Surgery Volume 38-39 ; 38-39 >
+    au < released ; 2025 ; 2025 ; Interdisciplinary CardioVascular and Thoracic Surgery Volume 40-41 ; 40-41 >
+    au < manifest ; 2026 ; 2026 ; Interdisciplinary CardioVascular and Thoracic Surgery Volume 42-43 ; 42-43 >
 
   }
 
