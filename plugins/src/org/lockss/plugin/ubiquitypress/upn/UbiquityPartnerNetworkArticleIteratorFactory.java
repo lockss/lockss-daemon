@@ -51,7 +51,7 @@ public class UbiquityPartnerNetworkArticleIteratorFactory
     and "newer" versions (like https://journalofcognition.org/en/articles/10.5334/joc.326 
     or https://jcms-journal.com/articles/jcms.1011201).
   */
-  private static final Pattern LANDING_PATTERN = Pattern.compile("/articles/([a-zA-Z0-9\\.]+)(/[a-zA-Z0-9\\.-_]+)?$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern LANDING_PATTERN = Pattern.compile("/articles/([a-zA-Z0-9\\.]+)(/[a-zA-Z0-9\\.\\-_]+)?$", Pattern.CASE_INSENSITIVE);
   private static final String LANDING_REPLACEMENT = "/articles/$1$2";
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
