@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>44</string>
+        <string>45</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -29,7 +29,7 @@
             </entry>
             <entry>
                 <string>Metadata</string>
-                <string>6</string>
+                <string>7</string>
             </entry>
         </map>
     </entry>
@@ -224,11 +224,6 @@
             <string>1,"https?://static-movie-usa.glencoesoftware.com/(mp4|source|webm|flv|jpg|ogv)"</string>
             <string>1, "%s%s/issue/volume/%s", base_url, journal_id, volume_name</string>
         </list>
-    </entry>
-    <entry>
-        <!-- Validator factory for text MIME types -->
-        <string>text/*_content_validator_factory</string>
-        <string>org.lockss.plugin.silverchair.BaseScContentValidatorFactory</string>
     </entry>
     <entry>
         <string>text/html_crawl_filter_factory</string>

@@ -1,6 +1,7 @@
 <!--
 
-Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2026, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -32,15 +33,15 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>deprecated</string>
+        <string>development</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.silverchair.aai.AAISilverchairPlugin</string>
+        <string>org.lockss.plugin.silverchair.rsc.RoyalSocietyChemistryJournalsPlugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>8</string>
+        <string>1</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -48,21 +49,30 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>45</string>
+        <string>24</string>
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>American Association of Immunologists Journal Plugin (Legacy)</string>
+        <string>Royal Society Chemistry Journals Plugin</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"American Association of Immunologists Journal Plugin (Legacy), Base URL %s, Journal ID %s, Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
+        <string>"Royal Society Chemistry Journals Plugin, Base URL %s, Journal ID %s,  Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
     </entry>
-    <!--https://journals.aai.org/jimmunol/issue/browse-by-year/2020-->
+    <!--
+    https://pubs.rsc.org/fd/issue/browse-by-year/2025
+    https://pubs.rsc.org/fd/issue/volume/255
+    -->
     <entry>
         <string>au_start_url</string>
         <list>
-            <string>"%s%s/issue/browse-by-year/%d", base_url, journal_id, year</string>
+            <string>"%s%s/issue/volume/%s", base_url, journal_id, volume_name</string>
+        </list>
+    </entry>
+    <entry>
+        <string>plugin_cache_result_list</string>
+        <list>
+            <string>403=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
         </list>
     </entry>
 </map>
