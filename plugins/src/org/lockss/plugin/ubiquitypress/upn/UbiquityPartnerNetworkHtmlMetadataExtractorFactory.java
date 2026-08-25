@@ -107,11 +107,13 @@ public class UbiquityPartnerNetworkHtmlMetadataExtractorFactory implements
       ArticleMetadata am = super.extract(target, cu);
       ArchivalUnit au = cu.getArchivalUnit();
       //There was an overcrawl in  Journal of Long-Term Care 2025 so a year check is being put in place. 
-      String year = am.getRaw("citation_publication_date").substring(0,4);
-      String auYear    = Integer.toString(au.getProperties().getInt(ConfigParamDescr.YEAR.getKey()));
-      if (!StringUtils.isEmpty(year) && !StringUtils.isEmpty(auYear) && !year.equals(auYear)) {
-        log.debug3("Found year is " + year + ", auYear is " + auYear + ". No match, do not emit metadata.");
-        return null;
+      if(am.getRaw("citation_publication_date") != null){
+        String year = am.getRaw("citation_publication_date").substring(0,4);
+        String auYear    = Integer.toString(au.getProperties().getInt(ConfigParamDescr.YEAR.getKey()));
+        if (!StringUtils.isEmpty(year) && !StringUtils.isEmpty(auYear) && !year.equals(auYear)) {
+          log.debug3("Found year is " + year + ", auYear is " + auYear + ". No match, do not emit metadata.");
+          return null;
+        }
       }
       am.cook(tagMap);
       String url = am.get(MetadataField.FIELD_ACCESS_URL);
