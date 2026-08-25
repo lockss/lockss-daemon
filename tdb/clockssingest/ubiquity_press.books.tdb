@@ -154,82 +154,6 @@
   {
 
     publisher <
-      name = Modern Academic Publishing ;
-      info[contract] = 2011 ;
-      info[back] = 2001 ;
-      info[tester] = 5 ;
-      info[platform] = Ubiquity Books
-    >
-
-    {
-
-      title <
-        name = Modern Academic Publishing Books ;
-        type = bookSeries
-      >
-
-      param[base_url] = https://www.humanities-map.net/
-
-      au < finished ; frozen ; 2015 ; 978-3-95896-000-8 ; An den Wurzeln der Tugend (978-3-95896-000-8) ; 10.16994/baa ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2015 ; 978-3-946198-04-8 ; Architekturzeichnungen der deutschen Renaissance (978-3-946198-04-8) ; 10.16994/bac ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2015 ; 978-3-946198-00-0 ; Traumdramaturgie und Selbstreflexion (978-3-946198-00-0) ; 10.16994/bab ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2015 ; 978-3-946198-08-6 ; Mehrsprachigkeit im Spiegel des Buchdrucks (978-3-946198-08-6) ; 10.16994/bad ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2016 ; 978-3-946198-12-3 ; Fortschritt und Verfall (978-3-946198-12-3) ; 10.16994/bae ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2016 ; 978-3-946198-16-1 ; Hunger and Modern Writing (978-3-946198-16-1) ; 10.16994/baf ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2017 ; 978-3-946198-24-6 ; Rodin-Lektüren (978-3-946198-24-6) ; 10.16994/bah ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2017 ; 978-3-946198-20-8 ; Buddha in Beton (978-3-946198-20-8) ; 10.16994/bag ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2018 ; 978-3-946198-32-1 ; The Truth about the Desert (978-3-946198-32-1) ; 10.16994/bai ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; 978-3-946198-28-4 ; Colonised by Wankers (978-3-946198-28-4) ; 10.16994/baj ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; 978-3-946198-36-9 ; An Archaeology of Art and Writing (978-3-946198-36-9) ; 10.16994/bak ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2019 ; 978-3-946198-40-6 ; Muster und Bedeutung (978-3-946198-40-6) ; 10.16994/bam ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2019 ; 978-3-946198-44-4 ; Funktionen von Possessivsuffixen in den ugrischen Sprachen (978-3-946198-44-4) ; 10.16994/bal ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 978-3-946198-48-2 ; Royal Power in the Late Carolingian Age (978-3-946198-48-2) ; 10.16994/ban ; reingest3.clockss.org:8083 >
-
-    }
-
-  }
-
-  {
-
-    publisher <
-      name = Penn State University Press ;
-      info[contract] = 2011 ;
-      info[back] = 2001 ;
-      info[tester] = 5 ;
-      info[platform] = Ubiquity Books
-    >
-
-    {
-
-      title <
-        name = Penn State University Press Books ;
-        type = bookSeries
-      >
-
-      param[base_url] = https://oa.psupress.org/
-
-      au < finished ; frozen ; 2008 ; 978-0-271-03278-8 ; Territories of History (978-0-271-03278-8) ; 10.5325/book3 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2008 ; 978-0-271-03268-9 ; Career Stories (978-0-271-03268-9) ; 10.5325/book2 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2008 ; 978-0-271-03266-5 ; Reconstructing Woman (978-0-271-03266-5) ; 10.5325/book1 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2008 ; 978-0-271-03396-9 ; The Book of Peace (978-0-271-03396-9) ; 10.5325/book4 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2008 ; 978-0-271-03410-2 ; Consensus and Debate in Salazar's Portugal (978-0-271-03410-2) ; 10.5325/book5 ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2009 ; 978-0-271-03438-6 ; Rewriting Womanhood (978-0-271-03438-6) ; 10.5325/book6 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2009 ; 978-0-271-03517-8 ; Imperial Lyric (978-0-271-03517-8) ; 10.5325/book7 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2009 ; 978-0-271-03530-7 ; Love Cures (978-0-271-03530-7) ; 10.5325/book8 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2010 ; 978-0-271-03576-5 ; Manekine, John and Blonde, and "Foolish Generosity" (978-0-271-03576-5) ; 10.5325/book10 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2010 ; 978-0-271-03565-9 ; Weaving Narrative (978-0-271-03565-9) ; 10.5325/book9 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2010 ; 978-0-271-03672-4 ; Multilingualism and Mother Tongue in Medieval French, Occitan, and Catalan Narratives (978-0-271-03672-4) ; 10.5325/book11 ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2011 ; 978-0-271-03775-2 ; Transcending Textuality (978-0-271-03775-2) ; 10.5325/book12 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2014 ; 978-0-9885170-6-6 ; Viscous Expectations (978-0-9885170-6-6) ; 10.5325/book13 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 978-0-2710811-8-2 ; Passing to América (978-0-2710811-8-2) ; 10.5325/book14 ; reingest5.clockss.org:8082 >
-
-    }
-
-  }
-
-  {
-
-    publisher <
       name = Stockholm University Press ;
       info[contract] = 2011 ;
       info[back] = 2001 ;
@@ -277,6 +201,7 @@
       au < finished ; frozen ; 2020 ; 978-91-7635-112-3 ; Uppkomsten av ett professionellt medicinskt fält (978-91-7635-112-3) ; 10.16993/bbc ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; 978-91-7635-119-2 ; Ars Edendi Lecture Series, vol. V (978-91-7635-119-2) ; 10.16993/bbd ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; 978-91-7635-123-9 ; Invoking Flora Nwapa (978-91-7635-123-9) ; 10.16993/bbe ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2020 ;  978-91-7635-125-3 ; Working-Class Literature(s) Volume II (978-91-7635-125-3) ; 10.16993/bbf ; reingest1.clockss.org:8082 >
 
     }
 
@@ -447,65 +372,6 @@
   {
 
     publisher <
-      name = University of Westminster Press ;
-      info[contract] = 2011 ;
-      info[back] = 2001 ;
-      info[tester] = 5 ;
-      info[platform] = Ubiquity Books
-    >
-
-    {
-
-      title <
-        name = University of Westminster Press Books ;
-        type = bookSeries
-      >
-
-      param[base_url] = https://www.uwestminsterpress.co.uk/
-
-      au < finished ; frozen ; 2016 ; 978-1-911534-04-4 ; Critical Theory of Communication (978-1-911534-04-4) ; 10.16997/book1 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2017 ; 978-1-911534-08-2 ; Naval Leadership in the Atlantic World (978-1-911534-08-2) ; 10.16997/book2 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2017 ; 978-1-911534-24-2 ; Knowledge in the Age of Digital Capitalism (978-1-911534-24-2) ; 10.16997/book3 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2017 ; 978-1-911534-28-0 ; Collaborative Production in the Creative Industries (978-1-911534-28-0) ; 10.16997/book4 ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2017 ; 978-1-911534-40-2 ; Politicizing Digital Space (978-1-911534-40-2) ; 10.16997/book5 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2017 ; 978-1-911534-36-5 ; Capital, State, Empire (978-1-911534-36-5) ; 10.16997/book6 ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2017 ; 978-1-911534-44-0 ; The Spectacle 2.0 (978-1-911534-44-0) ; 10.16997/book11 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; 978-1-911534-68-6 ; Developing Educators for The Digital Age (978-1-911534-68-6) ; 10.16997/book13 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 978-1-911534-64-8 ; SEE (978-1-911534-64-8) ; 10.16997/book12 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; 978-1-911534-72-3 ; The Big Data Agenda (978-1-911534-72-3) ; 10.16997/book14 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2018 ; 978-1-911534-56-3 ; Social Capital Online (978-1-911534-56-3) ; 10.16997/book16 ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2018 ; 978-1-911534-93-8 ; The Online Advertising Tax as the Foundation of a Public Service Internet (978-1-911534-93-8) ; 10.16997/book23 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; 978-1-911534-60-0 ; Farewell to Freedom (978-1-911534-60-0) ; 10.16997/book15 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 978-1-911534-32-7 ; TASTE (978-1-911534-32-7) ; 10.16997/book21 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; 978-1-912656-16-5 ; The Propaganda Model Today (978-1-912656-16-5) ; 10.16997/book27 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; 978-1-912656-12-7 ; Reform and Revolt in the City of Dreaming Spires (978-1-912656-12-7) ; 10.16997/book28 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2018 ; 978-1-912656-04-2 ; Critical Theory and Authoritarian Populism (978-1-912656-04-2) ; 10.16997/book30 ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2019 ; 978-1-912656-08-0 ; Digital Objects, Digital Subjects (978-1-912656-08-0) ; 10.16997/book29 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2019 ; 978-1-911534-77-8 ; Peer to Peer (978-1-911534-77-8) ; 10.16997/book33 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2019 ; 978-1-911534-48-8 ; The Blitz Companion (978-1-911534-48-8) ; 10.16997/book26 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 978-1-912656-26-4 ; Destination London (978-1-912656-26-4) ; 10.16997/book35 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2019 ; 978-1-912656-00-4 ; Bubbles and Machines (978-1-912656-00-4) ; 10.16997/book34 ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2019 ; 978-1-912656-30-1 ; Dies Irae (978-1-912656-30-1) ; 10.16997/book36 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 978-1-912656-56-1 ; The Media and Communications Study Skills Student Guide (978-1-912656-56-1) ; 10.16997/book42 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 978-1-912656-38-7 ; Cultural Crowdfunding (978-1-912656-38-7) ; 10.16997/book38 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 978-1-912656-67-7 ; The Condition of Digitality (978-1-912656-67-7) ; 10.16997/book44 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2020 ; 978-1-912656-66-0 ; Touch (978-1-912656-66-0) ; 10.16997/book37 ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2020 ; 978-1-912656-42-4 ; Incorporating the Digital Commons (978-1-912656-42-4) ; 10.16997/book39 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2020 ; 978-1-912656-51-6 ; Achieving Viability for Public Service Media in Challenging Settings (978-1-912656-51-6) ; 10.16997/book41 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2020 ; 978-1-912656-75-2 ; The Internet Myth (978-1-912656-75-2) ; 10.16997/book48 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2020 ; 978-1-912656-71-4 ; Communication and Capitalism (978-1-912656-71-4) ; 10.16997/book45 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2020 ; 978-1-912656-65-3 ; Can Music Make You Sick? (978-1-912656-65-3) ; 10.16997/book43 ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2020 ; 978-1-912656-79-0 ; Marx and Digital Machines (978-1-912656-79-0) ; 10.16997/book47 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2020 ; 978-1-912656-83-7 ; T﻿he Commons (978-1-912656-83-7) ; 10.16997/book46 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2020 ; 978-1-912656-87-5 ; Intellectual Commons and the Law (978-1-912656-87-5) ; 10.16997/book49 ; reingest5.clockss.org:8082 >
-
-    }
-
-  }
-
-  {
-
-    publisher <
       name = Virginia Tech Publishing ;
       info[contract] = 2011 ;
       info[back] = 2001 ;
@@ -573,30 +439,144 @@
 
     }
 
+  }
+
+##############
+#### Moved Platform
+##############
+
+  {
+
+    publisher <
+      name = University of Westminster Press ;
+      info[contract] = 2011 ;
+      info[back] = 2001 ;
+      info[tester] = 5 ;
+      info[platform] = Ubiquity Books
+    >
+
     {
 
       title <
-        name = University of Westminster Press ;
+        name = University of Westminster Press Books ;
         type = bookSeries
       >
 
       param[base_url] = https://www.uwestminsterpress.co.uk/
 
+      au < finished ; frozen ; 2016 ; 978-1-911534-04-4 ; Critical Theory of Communication (978-1-911534-04-4) ; 10.16997/book1 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; 978-1-911534-08-2 ; Naval Leadership in the Atlantic World (978-1-911534-08-2) ; 10.16997/book2 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; 978-1-911534-24-2 ; Knowledge in the Age of Digital Capitalism (978-1-911534-24-2) ; 10.16997/book3 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; 978-1-911534-28-0 ; Collaborative Production in the Creative Industries (978-1-911534-28-0) ; 10.16997/book4 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2017 ; 978-1-911534-40-2 ; Politicizing Digital Space (978-1-911534-40-2) ; 10.16997/book5 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; 978-1-911534-36-5 ; Capital, State, Empire (978-1-911534-36-5) ; 10.16997/book6 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2017 ; 978-1-911534-44-0 ; The Spectacle 2.0 (978-1-911534-44-0) ; 10.16997/book11 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; 978-1-911534-68-6 ; Developing Educators for The Digital Age (978-1-911534-68-6) ; 10.16997/book13 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 978-1-911534-64-8 ; SEE (978-1-911534-64-8) ; 10.16997/book12 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; 978-1-911534-72-3 ; The Big Data Agenda (978-1-911534-72-3) ; 10.16997/book14 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2018 ; 978-1-911534-56-3 ; Social Capital Online (978-1-911534-56-3) ; 10.16997/book16 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2018 ; 978-1-911534-93-8 ; The Online Advertising Tax as the Foundation of a Public Service Internet (978-1-911534-93-8) ; 10.16997/book23 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; 978-1-911534-60-0 ; Farewell to Freedom (978-1-911534-60-0) ; 10.16997/book15 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 978-1-911534-32-7 ; TASTE (978-1-911534-32-7) ; 10.16997/book21 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; 978-1-912656-16-5 ; The Propaganda Model Today (978-1-912656-16-5) ; 10.16997/book27 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; 978-1-912656-12-7 ; Reform and Revolt in the City of Dreaming Spires (978-1-912656-12-7) ; 10.16997/book28 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2018 ; 978-1-912656-04-2 ; Critical Theory and Authoritarian Populism (978-1-912656-04-2) ; 10.16997/book30 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2019 ; 978-1-912656-08-0 ; Digital Objects, Digital Subjects (978-1-912656-08-0) ; 10.16997/book29 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; 978-1-911534-77-8 ; Peer to Peer (978-1-911534-77-8) ; 10.16997/book33 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; 978-1-911534-48-8 ; The Blitz Companion (978-1-911534-48-8) ; 10.16997/book26 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 978-1-912656-26-4 ; Destination London (978-1-912656-26-4) ; 10.16997/book35 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; 978-1-912656-00-4 ; Bubbles and Machines (978-1-912656-00-4) ; 10.16997/book34 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2019 ; 978-1-912656-30-1 ; Dies Irae (978-1-912656-30-1) ; 10.16997/book36 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 978-1-912656-56-1 ; The Media and Communications Study Skills Student Guide (978-1-912656-56-1) ; 10.16997/book42 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 978-1-912656-38-7 ; Cultural Crowdfunding (978-1-912656-38-7) ; 10.16997/book38 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 978-1-912656-67-7 ; The Condition of Digitality (978-1-912656-67-7) ; 10.16997/book44 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2020 ; 978-1-912656-66-0 ; Touch (978-1-912656-66-0) ; 10.16997/book37 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2020 ; 978-1-912656-42-4 ; Incorporating the Digital Commons (978-1-912656-42-4) ; 10.16997/book39 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2020 ; 978-1-912656-51-6 ; Achieving Viability for Public Service Media in Challenging Settings (978-1-912656-51-6) ; 10.16997/book41 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2020 ; 978-1-912656-75-2 ; The Internet Myth (978-1-912656-75-2) ; 10.16997/book48 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2020 ; 978-1-912656-71-4 ; Communication and Capitalism (978-1-912656-71-4) ; 10.16997/book45 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2020 ; 978-1-912656-65-3 ; Can Music Make You Sick? (978-1-912656-65-3) ; 10.16997/book43 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2020 ; 978-1-912656-79-0 ; Marx and Digital Machines (978-1-912656-79-0) ; 10.16997/book47 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2020 ; 978-1-912656-83-7 ; T﻿he Commons (978-1-912656-83-7) ; 10.16997/book46 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2020 ; 978-1-912656-87-5 ; Intellectual Commons and the Law (978-1-912656-87-5) ; 10.16997/book49 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 978-1-912656-92-9 ; Fashion Media and Sustainability  (978-1-912656-92-9) ; 10.16997/book50 ; reingest3.clockss.org:8083 >
-
+      #Moved platform in 2025
     }
+
+  }
+
+  {
+
+    publisher <
+      name = Modern Academic Publishing ;
+      info[contract] = 2011 ;
+      info[back] = 2001 ;
+      info[tester] = 5 ;
+      info[platform] = Ubiquity Books
+    >
 
     {
 
       title <
-        name = Stockholm University Press ;
+        name = Modern Academic Publishing Books ;
         type = bookSeries
       >
 
-      param[base_url] = https://www.stockholmuniversitypress.se/
+      param[base_url] = https://www.humanities-map.net/
 
-      au < finished ; frozen ; 2020 ;  978-91-7635-125-3 ; Working-Class Literature(s) Volume II (978-91-7635-125-3) ; 10.16993/bbf ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; 978-3-95896-000-8 ; An den Wurzeln der Tugend (978-3-95896-000-8) ; 10.16994/baa ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 978-3-946198-04-8 ; Architekturzeichnungen der deutschen Renaissance (978-3-946198-04-8) ; 10.16994/bac ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 978-3-946198-00-0 ; Traumdramaturgie und Selbstreflexion (978-3-946198-00-0) ; 10.16994/bab ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; 978-3-946198-08-6 ; Mehrsprachigkeit im Spiegel des Buchdrucks (978-3-946198-08-6) ; 10.16994/bad ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2016 ; 978-3-946198-12-3 ; Fortschritt und Verfall (978-3-946198-12-3) ; 10.16994/bae ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; 978-3-946198-16-1 ; Hunger and Modern Writing (978-3-946198-16-1) ; 10.16994/baf ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; 978-3-946198-24-6 ; Rodin-Lektüren (978-3-946198-24-6) ; 10.16994/bah ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; 978-3-946198-20-8 ; Buddha in Beton (978-3-946198-20-8) ; 10.16994/bag ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2018 ; 978-3-946198-32-1 ; The Truth about the Desert (978-3-946198-32-1) ; 10.16994/bai ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; 978-3-946198-28-4 ; Colonised by Wankers (978-3-946198-28-4) ; 10.16994/baj ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; 978-3-946198-36-9 ; An Archaeology of Art and Writing (978-3-946198-36-9) ; 10.16994/bak ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; 978-3-946198-40-6 ; Muster und Bedeutung (978-3-946198-40-6) ; 10.16994/bam ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; 978-3-946198-44-4 ; Funktionen von Possessivsuffixen in den ugrischen Sprachen (978-3-946198-44-4) ; 10.16994/bal ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 978-3-946198-48-2 ; Royal Power in the Late Carolingian Age (978-3-946198-48-2) ; 10.16994/ban ; reingest3.clockss.org:8083 >
+      #Moved platform in 2025
+    }
 
+  }
+
+  {
+
+    publisher <
+      name = Penn State University Press ;
+      info[contract] = 2011 ;
+      info[back] = 2001 ;
+      info[tester] = 5 ;
+      info[platform] = Ubiquity Books
+    >
+
+    {
+
+      title <
+        name = Penn State University Press Books ;
+        type = bookSeries
+      >
+
+      param[base_url] = https://oa.psupress.org/
+
+      au < finished ; frozen ; 2008 ; 978-0-271-03278-8 ; Territories of History (978-0-271-03278-8) ; 10.5325/book3 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2008 ; 978-0-271-03268-9 ; Career Stories (978-0-271-03268-9) ; 10.5325/book2 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2008 ; 978-0-271-03266-5 ; Reconstructing Woman (978-0-271-03266-5) ; 10.5325/book1 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2008 ; 978-0-271-03396-9 ; The Book of Peace (978-0-271-03396-9) ; 10.5325/book4 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2008 ; 978-0-271-03410-2 ; Consensus and Debate in Salazar's Portugal (978-0-271-03410-2) ; 10.5325/book5 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2009 ; 978-0-271-03438-6 ; Rewriting Womanhood (978-0-271-03438-6) ; 10.5325/book6 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; 978-0-271-03517-8 ; Imperial Lyric (978-0-271-03517-8) ; 10.5325/book7 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; 978-0-271-03530-7 ; Love Cures (978-0-271-03530-7) ; 10.5325/book8 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; 978-0-271-03576-5 ; Manekine, John and Blonde, and "Foolish Generosity" (978-0-271-03576-5) ; 10.5325/book10 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; 978-0-271-03565-9 ; Weaving Narrative (978-0-271-03565-9) ; 10.5325/book9 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2010 ; 978-0-271-03672-4 ; Multilingualism and Mother Tongue in Medieval French, Occitan, and Catalan Narratives (978-0-271-03672-4) ; 10.5325/book11 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2011 ; 978-0-271-03775-2 ; Transcending Textuality (978-0-271-03775-2) ; 10.5325/book12 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; 978-0-9885170-6-6 ; Viscous Expectations (978-0-9885170-6-6) ; 10.5325/book13 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 978-0-2710811-8-2 ; Passing to América (978-0-2710811-8-2) ; 10.5325/book14 ; reingest5.clockss.org:8082 >
+      #Moved platform in 2026
     }
 
   }

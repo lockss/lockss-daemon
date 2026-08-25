@@ -691,6 +691,7 @@ while (my $line = <>) {
   } elsif ($plugin eq "UbiquityPartnerNetworkBooksPlugin" ||
            $plugin eq "ClockssUbiquityPartnerNetworkBooksPlugin") {
     $url = sprintf("%ssite/books/%s/",
+    #$url = sprintf("%sbooks/%s",
       $param{base_url}, $param{book_doi});
     $book_doi_short = uri_unescape($param{book_doi});
     #$book_doi_short =~ s/^..//; only use this if the book_doi starts with m/ or e/
