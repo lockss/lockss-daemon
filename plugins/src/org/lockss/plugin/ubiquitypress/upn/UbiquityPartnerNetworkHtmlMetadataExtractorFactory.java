@@ -107,10 +107,12 @@ public class UbiquityPartnerNetworkHtmlMetadataExtractorFactory implements
       ArticleMetadata am = super.extract(target, cu);
       ArchivalUnit au = cu.getArchivalUnit();
       //There was an overcrawl in  Journal of Long-Term Care 2025 so a year check is being put in place. 
-      if(am.getRaw("citation_publication_date") != null){
+      //Note that Anglo Saxonica 2019 has citation_publication_date of 2020 so exclude this AU from this check.
+      if(am.getRaw("citation_publication_date") != null && am.getRaw("citation_journal_title") != null){
         String year = am.getRaw("citation_publication_date").substring(0,4);
+        String journal = am.getRaw("citation_journal_title");
         String auYear    = Integer.toString(au.getProperties().getInt(ConfigParamDescr.YEAR.getKey()));
-        if (!StringUtils.isEmpty(year) && !StringUtils.isEmpty(auYear) && !year.equals(auYear)) {
+        if (!StringUtils.isEmpty(year) && !StringUtils.isEmpty(auYear) && !year.equals(auYear) && (!journal.equals("Anglo Saxonica") && !auYear.equals("2019"))) {
           log.debug3("Found year is " + year + ", auYear is " + auYear + ". No match, do not emit metadata.");
           return null;
         }
