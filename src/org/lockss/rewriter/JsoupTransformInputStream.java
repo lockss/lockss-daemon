@@ -40,6 +40,8 @@ import java.util.function.*;
 import org.apache.commons.io.input.ReaderInputStream;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Document.OutputSettings.Syntax;
+import org.jsoup.parser.*;
 import org.lockss.util.*;
 
 public class JsoupTransformInputStream extends InputStream implements EncodedThing {
@@ -78,7 +80,9 @@ public class JsoupTransformInputStream extends InputStream implements EncodedThi
   
   protected String outCharsetName = null;
   
-  protected int dtfosThreshold = 1*1024*1024; // 1 MiB
+  protected Integer dtfosThreshold = null;
+  
+  public static final int DEFAULT_DTFOS_THRESHOLD = 1*1024*1024; // 1 MiB
   
   public JsoupTransformInputStream() {
     // Intentionally left blank
@@ -197,7 +201,10 @@ public class JsoupTransformInputStream extends InputStream implements EncodedThi
     if (dtfosThreshold == 0) {
       throw new IllegalArgumentException("DTFOS threshold is zero");
     }
-    this.dtfosThreshold = dtfosThreshold;
+    if (this.dtfosThreshold != null) {
+      throw new IllegalArgumentException("DTFOS threshold is already set");
+    }
+    this.dtfosThreshold = Integer.valueOf(dtfosThreshold);
     return this;
   }
   
@@ -210,18 +217,18 @@ public class JsoupTransformInputStream extends InputStream implements EncodedThi
     return this;
   }
   
-  public JsoupTransformInputStream addTransform(Consumer<Document> jxf) {
-    if (jxf == null) {
-      throw new IllegalArgumentException("Transform cannot be null");
-    }
-    addTransform(new JsoupTransform() {
-      @Override
-      public void transform(Document doc) throws IOException {
-        jxf.accept(doc);
-      }
-    });
-    return this;
-  }
+//  public JsoupTransformInputStream addTransform(Consumer<Document> jxf) {
+//    if (jxf == null) {
+//      throw new IllegalArgumentException("Transform cannot be null");
+//    }
+//    addTransform(new JsoupTransform() {
+//      @Override
+//      public void transform(Document doc) throws IOException {
+//        jxf.accept(doc);
+//      }
+//    });
+//    return this;
+//  }
   
   public String getCharset() throws IOException {
     getOut();
@@ -246,10 +253,16 @@ public class JsoupTransformInputStream extends InputStream implements EncodedThi
       if (outCharsetName == null) {
         outCharsetName = inCharsetName;
       }
-      // Output to deferred temp file	
-      dtfos = new DeferredTempFileOutputStream(dtfosThreshold);
+      // Configure output
+      doc.outputSettings().prettyPrint(false);
+      doc.outputSettings().syntax(Syntax.html);
+      // Output to deferred temp file
+      if (dtfosThreshold == null) {
+        dtfosThreshold = Integer.valueOf(DEFAULT_DTFOS_THRESHOLD);
+      }
+      dtfos = new DeferredTempFileOutputStream(dtfosThreshold.intValue());
       osw = new OutputStreamWriter(dtfos, outCharsetName);
-      doc.html(osw); // FIXME unknown if this does the right thing for a Document
+      doc.html(osw);
       osw.close();
       out = dtfos.getDeleteOnCloseInputStream();
     }
@@ -280,7 +293,8 @@ public class JsoupTransformInputStream extends InputStream implements EncodedThi
 	inCharsetName = actualInCharsetName;
       }
     }
-    return Jsoup.parse(in, inCharsetName, baseUri);
+    Parser parser = Parser.htmlParser().settings(ParseSettings.preserveCase);
+    return Jsoup.parse(in, inCharsetName, baseUri, parser);
   }
   
   protected void process() throws IOException {
