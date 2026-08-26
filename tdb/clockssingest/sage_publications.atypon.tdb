@@ -18133,7 +18133,7 @@
       au < frozen ; exists ; 2023 ; FAIR Connect Volume 1 ; 1 ; fcoa ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2024 ; FAIR Connect Volume 2 ; 2 ; fcoa ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; FAIR Connect Volume 3 ; 3 ; fcoa ; https://journals.sagepub.com/ ; >
-      au < expected ; exists ; 2026 ; FAIR Connect Volume 4 ; 4 ; fcoa ; https://journals.sagepub.com/ ; >
+      au < manifest ; exists ; 2026 ; FAIR Connect Volume 4 ; 4 ; fcoa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -27914,7 +27914,7 @@
       au < deepCrawl ; exists ; 2023-2024 ; Intervention in School and Clinic Volume 59 ; 59 ; iscc ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Intervention in School and Clinic Volume 60 ; 60 ; iscc ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2025-2026 ; Intervention in School and Clinic Volume 61 ; 61 ; iscc ; https://journals.sagepub.com/ ; >
-      au < expected ; exists ; 2026-2027 ; Intervention in School and Clinic Volume 62 ; 62 ; iscc ; https://journals.sagepub.com/ ; >
+      au < manifest ; exists ; 2026-2027 ; Intervention in School and Clinic Volume 62 ; 62 ; iscc ; https://journals.sagepub.com/ ; >
 
   }
 
