@@ -22,10 +22,10 @@
       param[base_url] = https://gijams.in/
       param[journal_id] = gijams
 
-      au < ready ; exists ; 2023 ; Greenfort International Journal of Applied Medical Science Volume 1 ; 1 ; 2023 ; >
-      au < ready ; exists ; 2024 ; Greenfort International Journal of Applied Medical Science Volume 2 ; 2 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Greenfort International Journal of Applied Medical Science Volume 3 ; 3 ; 2025 ; >
-      au < ready ; exists ; 2026 ; Greenfort International Journal of Applied Medical Science Volume 4 ; 4 ; 2026 ; >
+      au < crawling ; exists ; 2023 ; Greenfort International Journal of Applied Medical Science Volume 1 ; 1 ; 2023 ; >
+      au < crawling ; exists ; 2024 ; Greenfort International Journal of Applied Medical Science Volume 2 ; 2 ; 2024 ; >
+      au < crawling ; exists ; 2025 ; Greenfort International Journal of Applied Medical Science Volume 3 ; 3 ; 2025 ; >
+      au < crawling ; exists ; 2026 ; Greenfort International Journal of Applied Medical Science Volume 4 ; 4 ; 2026 ; >
   }
 
 }

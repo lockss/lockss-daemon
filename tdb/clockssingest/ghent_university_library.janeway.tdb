@@ -157,7 +157,7 @@
       param[base_url] = https://akkadica.ugent.be/
       #param[journal_id] = akkadica
 
-      au < ready ; exists ; 1977 ; 1977 ; 1977 ; Akkadica Volume 1977 ; >
+      au < crawling ; exists ; 1977 ; 1977 ; 1977 ; Akkadica Volume 1977 ; >
       au < frozen ; exists ; 1978 ; 1978 ; 1978 ; Akkadica Volume 1978 ; >
       au < frozen ; exists ; 1979 ; 1979 ; 1979 ; Akkadica Volume 1979 ; >
       au < frozen ; exists ; 1980 ; 1980 ; 1980 ; Akkadica Volume 1980 ; >
