@@ -47,7 +47,7 @@
       au < doesNotExist ; doesNotExist ; 2023 ; 0 ; Journal of The American Society of Questioned Document Examiners Volume 2023 ; 2023 ; 0 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < doesNotExist ; doesNotExist ; 2024 ; 0 ; Journal of The American Society of Questioned Document Examiners Volume 2024 ; 2024 ; 0 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 26 ; Journal of The American Society of Questioned Document Examiners Volume 2025 ; 2025 ; 26 ; ASQDE ;  ; https://journal.asqde.org/ ; >
-      au < ready ; exists ; 2026 ; 27 ; Journal of The American Society of Questioned Document Examiners Volume 2026 ; 2026 ; 27 ; ASQDE ;  ; https://journal.asqde.org/ ; >
+      au < crawling ; exists ; 2026 ; 27 ; Journal of The American Society of Questioned Document Examiners Volume 2026 ; 2026 ; 27 ; ASQDE ;  ; https://journal.asqde.org/ ; >
 
   }
 
@@ -73,7 +73,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 8 ; ARENA Journal of Architectural Research Volume 2023 ; 2023 ; 8 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ ; >
       au < frozen ; exists ; 2024 ; 9 ; ARENA Journal of Architectural Research Volume 2024 ; 2024 ; 9 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ ; >
       au < deepCrawl ; exists ; 2025 ; 10 ; ARENA Journal of Architectural Research Volume 2025 ; 2025 ; 10 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ ; >
-      au < ready ; exists ; 2026 ; 11 ; ARENA Journal of Architectural Research Volume 2026 ; 2026 ; 11 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ ; >
+      au < crawling ; exists ; 2026 ; 11 ; ARENA Journal of Architectural Research Volume 2026 ; 2026 ; 11 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ ; >
 
   }
 
@@ -264,7 +264,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 26 ; Redescriptions Volume 2023 ; 2023 ; 26 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
       au < finished ; manifest ; 2024 ; 27 ; Redescriptions Volume 2024 ; 2024 ; 27 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 28 ; Redescriptions Volume 2025 ; 2025 ; 28 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
-      au < ready ; exists ; 2026 ; 29 ; Redescriptions Volume 2026 ; 2026 ; 29 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
+      au < crawling ; exists ; 2026 ; 29 ; Redescriptions Volume 2026 ; 2026 ; 29 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
 
   }
 
@@ -292,7 +292,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Modern Languages Open Volume 2023 ; 2023 ; 10 ; Liverpool University Press ;  ; https://modernlanguagesopen.org/ ; >
       au < frozen ; exists ; 2024 ; 11 ; Modern Languages Open Volume 2024 ; 2024 ; 11 ; Liverpool University Press ; 403. articles/191/files/submission/proof/article.xsl ; https://modernlanguagesopen.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 12 ; Modern Languages Open Volume 2025 ; 2025 ; 12 ; Liverpool University Press ; 403. articles/191/files/submission/proof/article.xsl ; https://modernlanguagesopen.org/ ; >
-      au < ready ; exists ; 2026 ; 13 ; Modern Languages Open Volume 2026 ; 2026 ; 13 ; Liverpool University Press ; 403. articles/191/files/submission/proof/article.xsl ; https://modernlanguagesopen.org/ ; >
+      au < crawling ; exists ; 2026 ; 13 ; Modern Languages Open Volume 2026 ; 2026 ; 13 ; Liverpool University Press ; 403. articles/191/files/submission/proof/article.xsl ; https://modernlanguagesopen.org/ ; >
 
   }
 
@@ -376,7 +376,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Rural Landscapes: Society, Environment, History Volume 2023 ; 2023 ; 10 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ ; >
       au < frozen ; exists ; 2024 ; 11 ; Rural Landscapes: Society, Environment, History Volume 2024 ; 2024 ; 11 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ ; >
       au < deepCrawl ; exists ; 2025 ; 12 ; Rural Landscapes: Society, Environment, History Volume 2025 ; 2025 ; 12 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ ; >
-      au < ready ; exists ; 2026 ; 13 ; Rural Landscapes: Society, Environment, History Volume 2026 ; 2026 ; 13 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ ; >
+      au < crawling ; exists ; 2026 ; 13 ; Rural Landscapes: Society, Environment, History Volume 2026 ; 2026 ; 13 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ ; >
 
   }
 
@@ -421,7 +421,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 25 ; Scandinavian Journal of Disability Research Volume 25 ; 2023 ; 25 ; Stockholm University Press ;  ; https://sjdr.se/ ; >
       au < frozen ; exists ; 2024 ; 26 ; Scandinavian Journal of Disability Research Volume 26 ; 2024 ; 26 ; Stockholm University Press ;  ; https://sjdr.se/ ; >
       au < deepCrawl ; exists ; 2025 ; 27 ; Scandinavian Journal of Disability Research Volume 27 ; 2025 ; 27 ; Stockholm University Press ;  ; https://sjdr.se/ ; >
-      au < ready ; exists ; 2026 ; 28 ; Scandinavian Journal of Disability Research Volume 28 ; 2026 ; 28 ; Stockholm University Press ;  ; https://sjdr.se/ ; >
+      au < crawling ; exists ; 2026 ; 28 ; Scandinavian Journal of Disability Research Volume 28 ; 2026 ; 28 ; Stockholm University Press ;  ; https://sjdr.se/ ; >
 
   }
 
@@ -1037,7 +1037,7 @@
       au < doNotProcess ; exists ; 2023 ; 22 ; Data Science Journal Volume 2023 ; 2023 ; 22 ; Ubiquity Press ;  ; https://datascience.codata.org/ ; >
       au < frozen ; exists ; 2024 ; 23 ; Data Science Journal Volume 2024 ; 2024 ; 23 ; Ubiquity Press ;  ; https://datascience.codata.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 24 ; Data Science Journal Volume 2025 ; 2025 ; 24 ; Ubiquity Press ;  ; https://datascience.codata.org/ ; >
-      au < ready ; exists ; 2026 ; 25 ; Data Science Journal Volume 2026 ; 2026 ; 25 ; Ubiquity Press ;  ; https://datascience.codata.org/ ; >
+      au < crawling ; exists ; 2026 ; 25 ; Data Science Journal Volume 2026 ; 2026 ; 25 ; Ubiquity Press ;  ; https://datascience.codata.org/ ; >
 
   }
 
@@ -1243,7 +1243,7 @@
       au < frozen ; exists ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 ; 2022 ; 20 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
       au < frozen ; exists ; 2023 ; 21 ; Journal of Conservation and Museum Studies Volume 2023 ; 2023 ; 21 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
       au < frozen ; exists ; 2025 ; 22 ; Journal of Conservation and Museum Studies Volume 2025 ; 2025 ; 22 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
-      au < ready ; exists ; 2026 ; 23 ; Journal of Conservation and Museum Studies Volume 2026 ; 2026 ; 23 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
+      au < crawling ; exists ; 2026 ; 23 ; Journal of Conservation and Museum Studies Volume 2026 ; 2026 ; 23 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
 
   }
 
@@ -1405,7 +1405,7 @@
 
       au < frozen ; exists ; 2023 ; 1 ; Silk Roads Archaeology and Heritage Volume 2023 ; 2023 ; 1 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 2 ; Silk Roads Archaeology and Heritage Volume 2025 ; 2025 ; 2 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ ; >
-      au < ready ; exists ; 2026 ; 3 ; Silk Roads Archaeology and Heritage Volume 2026 ; 2026 ; 3 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ ; >
+      au < crawling ; exists ; 2026 ; 3 ; Silk Roads Archaeology and Heritage Volume 2026 ; 2026 ; 3 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ ; >
 
   }
 
@@ -1490,7 +1490,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 11 ; Journal of Open Research Software Volume 2023 ; 2023 ; 11 ; Ubiquity Press ;  ; https://openresearchsoftware.metajnl.com/ ; >
       au < frozen ; exists ; 2024 ; 12 ; Journal of Open Research Software Volume 2024 ; 2024 ; 12 ; Ubiquity Press ;  ; https://openresearchsoftware.metajnl.com/ ; >
       au < deepCrawl ; exists ; 2025 ; 13 ; Journal of Open Research Software Volume 2025 ; 2025 ; 13 ; Ubiquity Press ;  ; https://openresearchsoftware.metajnl.com/ ; >
-      au < ready ; exists ; 2026 ; 14 ; Journal of Open Research Software Volume 2026 ; 2026 ; 14 ; Ubiquity Press ;  ; https://openresearchsoftware.metajnl.com/ ; >
+      au < crawling ; exists ; 2026 ; 14 ; Journal of Open Research Software Volume 2026 ; 2026 ; 14 ; Ubiquity Press ;  ; https://openresearchsoftware.metajnl.com/ ; >
 
   }
 
@@ -1539,7 +1539,7 @@
       au < doNotProcess ; exists ; 2023 ; 107 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2023 ; 2023 ; 107 ; Ubiquity Press ;  ; https://www.jbsr.be/ ; >
       au < frozen ; exists ; 2024 ; 108 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2024 ; 2024 ; 108 ; Ubiquity Press ;  ; https://jbsr.be/ ; >
       au < deepCrawl ; exists ; 2025 ; 109 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2025 ; 2025 ; 109 ; Ubiquity Press ;  ; https://jbsr.be/ ; >
-      au < ready ; exists ; 2026 ; 110 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2026 ; 2026 ; 110 ; Ubiquity Press ;  ; https://jbsr.be/ ; >
+      au < crawling ; exists ; 2026 ; 110 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2026 ; 2026 ; 110 ; Ubiquity Press ;  ; https://jbsr.be/ ; >
 
   }
 
@@ -1658,7 +1658,7 @@
       au < doNotProcess ; exists ; 2023 ; 17 ; International Journal of the Commons Volume 2023 ; 2023 ; 17 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ ; >
       au < frozen ; exists ; 2024 ; 18 ; International Journal of the Commons Volume 2024 ; 2024 ; 18 ; Ubiquity Press ;  ; https://thecommonsjournal.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 19 ; International Journal of the Commons Volume 2025 ; 2025 ; 19 ; Ubiquity Press ;  ; https://thecommonsjournal.org/ ; >
-      au < ready ; exists ; 2026 ; 20 ; International Journal of the Commons Volume 2026 ; 2026 ; 20 ; Ubiquity Press ;  ; https://thecommonsjournal.org/ ; >
+      au < crawling ; exists ; 2026 ; 20 ; International Journal of the Commons Volume 2026 ; 2026 ; 20 ; Ubiquity Press ;  ; https://thecommonsjournal.org/ ; >
 
   }
 
@@ -1768,7 +1768,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 63 ; Psychologica Belgica Volume 2023 ; 2023 ; 63 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; >
       au < frozen ; exists ; 2024 ; 64 ; Psychologica Belgica Volume 2024 ; 2024 ; 64 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; >
       au < deepCrawl ; exists ; 2025 ; 65 ; Psychologica Belgica Volume 2025 ; 2025 ; 65 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; >
-      au < ready ; exists ; 2026 ; 66 ; Psychologica Belgica Volume 2026 ; 2026 ; 66 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; >
+      au < crawling ; exists ; 2026 ; 66 ; Psychologica Belgica Volume 2026 ; 2026 ; 66 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; >
 
   }
 
@@ -1938,7 +1938,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Metaphysics Volume 2023 ; 2023 ; 6 ; Ubiquity Press ;  ; https://metaphysicsjournal.com/ ; >
       au < frozen ; exists ; 2024 ; 7 ; Metaphysics Volume 2024 ; 2024 ; 7 ; Ubiquity Press ;  ; https://metaphysicsjournal.com/ ; >
       au < deepCrawl ; exists ; 2025 ; 8 ; Metaphysics Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://metaphysicsjournal.com/ ; >
-      au < ready ; exists ; 2026 ; 9 ; Metaphysics Volume 2026 ; 2026 ; 9 ; Ubiquity Press ;  ; https://metaphysicsjournal.com/ ; >
+      au < crawling ; exists ; 2026 ; 9 ; Metaphysics Volume 2026 ; 2026 ; 9 ; Ubiquity Press ;  ; https://metaphysicsjournal.com/ ; >
 
   }
 
@@ -2091,7 +2091,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 3 ; Swiss Psychology Open Volume 2023 ; 2023 ; 3 ; Ubiquity Press ;  ; https://swisspsychologyopen.com/ ; >
       au < frozen ; exists ; 2024 ; 4 ; Swiss Psychology Open Volume 2024 ; 2024 ; 4 ; Ubiquity Press ;  ; https://swisspsychologyopen.com/ ; >
       au < deepCrawl ; exists ; 2025 ; 5 ; Swiss Psychology Open Volume 2025 ; 2025 ; 5 ; Ubiquity Press ;  ; https://swisspsychologyopen.com/ ; >
-      au < ready ; exists ; 2026 ; 6 ; Swiss Psychology Open Volume 2026 ; 2026 ; 6 ; Ubiquity Press ;  ; https://swisspsychologyopen.com/ ; >
+      au < crawling ; exists ; 2026 ; 6 ; Swiss Psychology Open Volume 2026 ; 2026 ; 6 ; Ubiquity Press ;  ; https://swisspsychologyopen.com/ ; >
 
   }
 
@@ -2243,7 +2243,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 19 ; Utrecht Law Review Volume 2023 ; 2023 ; 19 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ ; >
       au < frozen ; exists ; 2024 ; 20 ; Utrecht Law Review Volume 2024 ; 2024 ; 20 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 21 ; Utrecht Law Review Volume 2025 ; 2025 ; 21 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ ; >
-      au < ready ; exists ; 2026 ; 22 ; Utrecht Law Review Volume 2026 ; 2026 ; 22 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ ; >
+      au < crawling ; exists ; 2026 ; 22 ; Utrecht Law Review Volume 2026 ; 2026 ; 22 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ ; >
 
   }
 
@@ -2489,7 +2489,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Scandinavian Military Studies Volume 2023 ; 2023 ; 6 ; Scandinavian Military Studies ;  ; https://sjms.nu/ ; >
       au < frozen ; exists ; 2024 ; 7 ; Scandinavian Military Studies Volume 2024 ; 2024 ; 7 ; Scandinavian Military Studies ;  ; https://sjms.nu/ ; >
       au < deepCrawl ; exists ; 2025 ; 8 ; Scandinavian Military Studies Volume 2025 ; 2025 ; 8 ; Scandinavian Military Studies ;  ; https://sjms.nu/ ; >
-      au < ready ; exists ; 2026 ; 9 ; Scandinavian Military Studies Volume 2026 ; 2026 ; 9 ; Scandinavian Military Studies ;  ; https://sjms.nu/ ; >
+      au < crawling ; exists ; 2026 ; 9 ; Scandinavian Military Studies Volume 2026 ; 2026 ; 9 ; Scandinavian Military Studies ;  ; https://sjms.nu/ ; >
 
   }
 
