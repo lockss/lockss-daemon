@@ -113,7 +113,7 @@ public class AmPsychPubHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFac
         HtmlNodeFilters.tagWithAttribute("div", "class", "info-panel"),
         // references page
         HtmlNodeFilters.tagWithAttribute("table", "class", "references"),
-        
+        HtmlNodeFilters.tagWithAttribute("div", "class", "cited-by"),
         };
     return super.createFilteredInputStream(au, in, encoding, includeNodes, excludeNodes);
   }

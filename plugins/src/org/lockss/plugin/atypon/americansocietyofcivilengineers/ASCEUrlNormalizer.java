@@ -34,25 +34,31 @@ package org.lockss.plugin.atypon.americansocietyofcivilengineers;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.atypon.BaseAtyponUrlNormalizer;
+import org.lockss.plugin.ArchiveMemberSpec;
+import org.lockss.plugin.atypon.BaseAtyponHttpHttpsUrlNormalizer;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
-public class ASCEUrlNormalizer extends BaseAtyponUrlNormalizer{
+public class ASCEUrlNormalizer extends BaseAtyponHttpHttpsUrlNormalizer {
 
     protected static Logger log = Logger.getLogger(ASCEUrlNormalizer.class);
-    
+
     @Override
     public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
-      String newUrl = super.normalizeUrl(url, au);
-      int pos = url.indexOf(org.lockss.plugin.ArchiveMemberSpec.URL_SEPARATOR);
-      if(pos > 0){
-        newUrl = StringUtil.replaceString(newUrl.substring(0,pos), "(", "%28");
-        newUrl = StringUtil.replaceString(newUrl.substring(0,pos), ")", "%29");
-      }else{
+        String newUrl = super.normalizeUrl(url, au);
+        // Index against newUrl, not url: super may have changed the length
+        // (http -> https adds a character).
+        int pos = newUrl.indexOf(org.lockss.plugin.ArchiveMemberSpec.URL_SEPARATOR);
+        if (pos > 0) {
+            // Encode only the enclosing-archive portion; preserve the member suffix.
+            String archive = newUrl.substring(0, pos);
+            String member = newUrl.substring(pos);
+            archive = StringUtil.replaceString(archive, "(", "%28");
+            archive = StringUtil.replaceString(archive, ")", "%29");
+            return archive + member;
+        }
         newUrl = StringUtil.replaceString(newUrl, "(", "%28");
         newUrl = StringUtil.replaceString(newUrl, ")", "%29");
-      }
-      return newUrl;
+        return newUrl;
     }
 }
