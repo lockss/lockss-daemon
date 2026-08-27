@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>196</string>
+    <string>197</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -173,7 +173,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s/na[0-9]+/home/literatum/publisher/[^/]+/journals/[^/]+/%s/", url_host(base_url), journal_id</string>
       <!--royal society publishing has 'year' in their toc url: https://royalsocietypublishing.org/toc/rsos/2019/6/10-->
       <!--https://www.euppublishing.com/toc/brs/1/1 - old Au manifest page -->
-      <string>1,^https?://%s/toc/%s(\.[0-9]+)?(/\d{4})?/%s(/\d+)?($|/)", url_host(base_url), journal_id, volume_name</string>
+      <string>1,"^https?://%s/toc/%s(\.[0-9]+)?(/\d{4})?/%s(/\d+)?($|/)", url_host(base_url), journal_id, volume_name</string>
       <!--
          https://royalsocietypublishing.org/toc/rspa/2019/475/2232
          https://royalsocietypublishing.org/toc/rsta/2019/377/2161
