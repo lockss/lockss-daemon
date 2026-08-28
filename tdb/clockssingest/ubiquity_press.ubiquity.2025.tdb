@@ -154,7 +154,7 @@
 
       au < finished ; manifest ; 2024 ; 1 ; Hydrogen Safety Volume 2024 ; 2024 ; 1 ; KIT Scientific Publishing ; Issue URL does not redirect to journal site ; https://hysafejournal.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2025 ; 2 ; Hydrogen Safety Volume 2025 ; 2025 ; 2 ; KIT Scientific Publishing ;  ; https://hysafejournal.org/ ; >
-      au < ready ; exists ; 2026 ; 3 ; Hydrogen Safety Volume 2026 ; 2026 ; 3 ; KIT Scientific Publishing ;  ; https://hysafejournal.org/ ; >
+      au < crawling ; exists ; 2026 ; 3 ; Hydrogen Safety Volume 2026 ; 2026 ; 3 ; KIT Scientific Publishing ;  ; https://hysafejournal.org/ ; >
 
   }
 
@@ -218,7 +218,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 13 ; Nordic Journal of Migration Research Volume 2023 ; 2023 ; 13 ; Helsinki University Press ;  ; https://journal-njmr.org/ ; >
       au < frozen ; exists ; 2024 ; 14 ; Nordic Journal of Migration Research Volume 2024 ; 2024 ; 14 ; Helsinki University Press ;  ; https://journal-njmr.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 15 ; Nordic Journal of Migration Research Volume 2025 ; 2025 ; 15 ; Helsinki University Press ;  ; https://journal-njmr.org/ ; >
-      au < ready ; exists ; 2026 ; 16 ; Nordic Journal of Migration Research Volume 2026 ; 2026 ; 16 ; Helsinki University Press ;  ; https://journal-njmr.org/ ; >
+      au < crawling ; exists ; 2026 ; 16 ; Nordic Journal of Migration Research Volume 2026 ; 2026 ; 16 ; Helsinki University Press ;  ; https://journal-njmr.org/ ; >
   }
 
   {
@@ -348,7 +348,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Nordic Journal of Transitions, Careers and Guidance Volume 2023 ; 2023 ; 4 ; Stockholm University Press ;  ; https://njtcg.org/ ; >
       au < frozen ; exists ; 2024 ; 5 ; Nordic Journal of Transitions, Careers and Guidance Volume 2024 ; 2024 ; 5 ; Stockholm University Press ;  ; https://njtcg.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 6 ; Nordic Journal of Transitions, Careers and Guidance Volume 2025 ; 2025 ; 6 ; Stockholm University Press ;  ; https://njtcg.org/ ; >
-      au < ready ; exists ; 2026 ; 7 ; Nordic Journal of Transitions, Careers and Guidance Volume 2026 ; 2026 ; 7 ; Stockholm University Press ;  ; https://njtcg.org/ ; >
+      au < crawling ; exists ; 2026 ; 7 ; Nordic Journal of Transitions, Careers and Guidance Volume 2026 ; 2026 ; 7 ; Stockholm University Press ;  ; https://njtcg.org/ ; >
 
   }
 
@@ -490,7 +490,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 52 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2023 ; 2023 ; 52 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
       au < frozen ; exists ; 2024 ; 53 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2024 ; 2024 ; 53 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
       au < deepCrawl ; exists ; 2025 ; 54 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2025 ; 2025 ; 54 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
-      au < ready ; exists ; 2026 ; 55 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2026 ; 2026 ; 55 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
+      au < crawling ; exists ; 2026 ; 55 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2026 ; 2026 ; 55 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
 
   }
 
@@ -792,7 +792,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 89 ; Annals of Global Health Volume 2023 ; 2023 ; 89 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ ; >
       au < frozen ; exists ; 2024 ; 90 ; Annals of Global Health Volume 2024 ; 2024 ; 90 ; Ubiquity Press ; No substance ; https://annalsofglobalhealth.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 91 ; Annals of Global Health Volume 2025 ; 2025 ; 91 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ ; >
-      au < ready ; exists ; 2026 ; 92 ; Annals of Global Health Volume 2026 ; 2026 ; 92 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ ; >
+      au < crawling ; exists ; 2026 ; 92 ; Annals of Global Health Volume 2026 ; 2026 ; 92 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ ; >
 
   }
 
@@ -879,7 +879,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 21 ; Anglo Saxonica Volume 2023 ; 2023 ; 21 ; Ubiquity Press ;  ; https://revista-anglo-saxonica.org/ ; >
       au < frozen ; exists ; 2024 ; 22 ; Anglo Saxonica Volume 2024 ; 2024 ; 22 ; Ubiquity Press ;  ; https://revista-anglo-saxonica.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 23 ; Anglo Saxonica Volume 2025 ; 2025 ; 23 ; Ubiquity Press ;  ; https://revista-anglo-saxonica.org/ ; >
-      au < ready ; exists ; 2026 ; 24 ; Anglo Saxonica Volume 2026 ; 2026 ; 24 ; Ubiquity Press ;  ; https://revista-anglo-saxonica.org/ ; >
+      au < crawling ; exists ; 2026 ; 24 ; Anglo Saxonica Volume 2026 ; 2026 ; 24 ; Ubiquity Press ;  ; https://revista-anglo-saxonica.org/ ; >
 
   }
 
@@ -997,7 +997,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 7 ; Computational Psychiatry Volume 2023 ; 2023 ; 7 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; >
       au < finished ; manifest ; 2024 ; 8 ; Computational Psychiatry Volume 2024 ; 2024 ; 8 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 9 ; Computational Psychiatry Volume 2025 ; 2025 ; 9 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; >
-      au < ready ; exists ; 2026 ; 10 ; Computational Psychiatry Volume 2026 ; 2026 ; 10 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; >
+      au < crawling ; exists ; 2026 ; 10 ; Computational Psychiatry Volume 2026 ; 2026 ; 10 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; >
 
   }
 
@@ -1088,7 +1088,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Glocality: Undergraduate Academic Journal Volume 2023 ; 2023 ; 6 ; Ubiquity Press ;  ; https://glocality.eu/ ; >
       au < frozen ; exists ; 2024 ; 7 ; Glocality: Undergraduate Academic Journal Volume 2024 ; 2024 ; 7 ; Ubiquity Press ; No substance ; http://glocality.eu/ ; >
       au < deepCrawl ; exists ; 2025 ; 8 ; Glocality: Undergraduate Academic Journal Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; http://glocality.eu/ ; >
-      au < ready ; exists ; 2026 ; 9 ; Glocality: Undergraduate Academic Journal Volume 2026 ; 2026 ; 9 ; Ubiquity Press ;  ; http://glocality.eu/ ; >
+      au < crawling ; exists ; 2026 ; 9 ; Glocality: Undergraduate Academic Journal Volume 2026 ; 2026 ; 9 ; Ubiquity Press ;  ; http://glocality.eu/ ; >
 
   }
 
@@ -1156,7 +1156,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 36 ; International Review of Social Psychology Volume 2023 ; 2023 ; 36 ; Ubiquity Press ;  ; https://rips-irsp.com/ ; >
       au < frozen ; exists ; 2024 ; 37 ; International Review of Social Psychology Volume 2024 ; 2024 ; 37 ; Ubiquity Press ;  ; https://rips-irsp.com/ ; >
       au < deepCrawl ; exists ; 2025 ; 38 ; International Review of Social Psychology Volume 2025 ; 2025 ; 38 ; Ubiquity Press ;  ; https://rips-irsp.com/ ; >
-      au < ready ; exists ; 2026 ; 39 ; International Review of Social Psychology Volume 2026 ; 2026 ; 39 ; Ubiquity Press ;  ; https://rips-irsp.com/ ; >
+      au < crawling ; exists ; 2026 ; 39 ; International Review of Social Psychology Volume 2026 ; 2026 ; 39 ; Ubiquity Press ;  ; https://rips-irsp.com/ ; >
 
   }
 
@@ -1387,7 +1387,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 11 ; Journal of Open Archaeology Data Volume 2023 ; 2023 ; 11 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ ; >
       au < frozen ; exists ; 2024 ; 12 ; Journal of Open Archaeology Data Volume 2024 ; 2024 ; 12 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ ; >
       au < deepCrawl ; exists ; 2025 ; 13 ; Journal of Open Archaeology Data Volume 2025 ; 2025 ; 13 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ ; >
-      au < ready ; exists ; 2026 ; 14 ; Journal of Open Archaeology Data Volume 2026 ; 2026 ; 14 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ ; >
+      au < crawling ; exists ; 2026 ; 14 ; Journal of Open Archaeology Data Volume 2026 ; 2026 ; 14 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ ; >
 
   }
 
@@ -1963,7 +1963,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 7 ; Physical Activity and Health Volume 2023 ; 2023 ; 7 ; Ubiquity Press ;  ; https://paahjournal.com/ ; >
       au < frozen ; exists ; 2024 ; 8 ; Physical Activity and Health Volume 2024 ; 2024 ; 8 ; Ubiquity Press ;  ; https://paahjournal.com/ ; >
       au < deepCrawl ; exists ; 2025 ; 9 ; Physical Activity and Health Volume 2025 ; 2025 ; 9 ; Ubiquity Press ;  ; https://paahjournal.com/ ; >
-      au < ready ; exists ; 2026 ; 10 ; Physical Activity and Health Volume 2026 ; 2026 ; 10 ; Ubiquity Press ;  ; https://paahjournal.com/ ; >
+      au < crawling ; exists ; 2026 ; 10 ; Physical Activity and Health Volume 2026 ; 2026 ; 10 ; Ubiquity Press ;  ; https://paahjournal.com/ ; >
 
   }
 
@@ -2348,7 +2348,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 19 ; British and Irish Orthoptic Journal Volume 2023 ; 2023 ; 19 ; White Rose University Press ;  ; https://bioj-online.com/ ; >
       au < finished ; manifest ; 2024 ; 20 ; British and Irish Orthoptic Journal Volume 2024 ; 2024 ; 20 ; White Rose University Press ;  ; https://bioj-online.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 21 ; British and Irish Orthoptic Journal Volume 2025 ; 2025 ; 21 ; White Rose University Press ;  ; https://bioj-online.com/ ; >
-      au < ready ; exists ; 2026 ; 22 ; British and Irish Orthoptic Journal Volume 2026 ; 2026 ; 22 ; White Rose University Press ;  ; https://bioj-online.com/ ; >
+      au < crawling ; exists ; 2026 ; 22 ; British and Irish Orthoptic Journal Volume 2026 ; 2026 ; 22 ; White Rose University Press ;  ; https://bioj-online.com/ ; >
 
   }
 
@@ -2560,7 +2560,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Studies in Engineering Education Volume 2023 ; 2023 ; 4 ; Virginia Tech Publishing ;  ; https://www.seejournal.org/ ; >
       au < frozen ; exists ; 2024 ; 5 ; Studies in Engineering Education Volume 2024 ; 2024 ; 5 ; Virginia Tech Publishing ;  ; https://seejournal.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 6 ; Studies in Engineering Education Volume 2025 ; 2025 ; 6 ; Virginia Tech Publishing ;  ; https://seejournal.org/ ; >
-      au < ready ; exists ; 2026 ; 7 ; Studies in Engineering Education Volume 2026 ; 2026 ; 7 ; Virginia Tech Publishing ;  ; https://seejournal.org/ ; >
+      au < crawling ; exists ; 2026 ; 7 ; Studies in Engineering Education Volume 2026 ; 2026 ; 7 ; Virginia Tech Publishing ;  ; https://seejournal.org/ ; >
 
   }
 
@@ -2826,7 +2826,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Scientific Study of Literature Volume 2023 ; 2023 ; 12 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
       au < frozen ; exists ; 2024 ; 13 ; Scientific Study of Literature Volume 2024 ; 2024 ; 13 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
       au < deepCrawl ; exists ; 2025 ; 14 ; Scientific Study of Literature Volume 2025 ; 2025 ; 14 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
-      au < ready ; exists ; 2026 ; 15 ; Scientific Study of Literature Volume 2026 ; 2026 ; 15 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
+      au < crawling ; exists ; 2026 ; 15 ; Scientific Study of Literature Volume 2026 ; 2026 ; 15 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
 
   }
 
@@ -2897,7 +2897,7 @@
 
       au < frozen ; exists ; 2024 ; 1 ; Journal of Neurointerventional Case Reports 2024 ; 2024 ; 1 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ ; >
       au < deepCrawl ; exists ; 2025 ; 2 ; Journal of Neurointerventional Case Reports Volume 2025 ; 2025 ; 2 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ ; >
-      au < ready ; exists ; 2026 ; 3 ; Journal of Neurointerventional Case Reports Volume 2026 ; 2026 ; 3 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ ; >
+      au < crawling ; exists ; 2026 ; 3 ; Journal of Neurointerventional Case Reports Volume 2026 ; 2026 ; 3 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ ; >
 
   }
 
