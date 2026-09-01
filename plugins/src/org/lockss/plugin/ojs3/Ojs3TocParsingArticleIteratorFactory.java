@@ -119,7 +119,7 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
             Elements articles = doc.select("div.article-summary:not(:has(div.article-summary)),article.article,ul.articles>li:not(:has(div.article-summary)),div.one-article-intoc,article.article_summary,div.article-sum,"
                 +"ul.it-list>li>div.it-right-zone,article.equal,div.grid-child:has(div>div.media-body),ul.row>li.issue__article,div.page-issue-galleys:has(div.h3:contains(Número completo)),"
                 +"div.galleys:has(h2:contains(Número completo)),div.galleys:has(h2:contains(Full Issue)),div.galleys:has(h2:contains(Весь випуск)),div.altex-issue-article,div.altex-issue-editorial," 
-                +"div.media-list>li");
+                +"div.media-list>li, div.galleys:has(h3:contains(Full Issue))");
             ArrayList<String> rolesForFullText = new ArrayList<>();
             for (Element article : articles) {
                 ArticleFiles af = new ArticleFiles();
@@ -128,7 +128,7 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
                     +"div.galleys_links>a[href*=article]:contains(PDF),div.btn-group>a[href*=article].pdf,a.indexGalleyLink:contains(PDF),"
                     +"div.galleryLinksWrp>div.btnsLink>a.galley-link:contains(PDF),ul.actions>li.galley-links-items>a:has(i.fa-file-pdf),div.row>div>a.galley-link:has(span.gallery_item_link:contains(PDF)),"
                     +"a[href*=issue/view].btn:contains(PDF),ul.galleys_links>li>a.pdf[href*=issue/view],a[href*=article]:has(span:contains(pdf)),"
-                    +"div.galleys_links>div>a.pdf[href*=article],div.article-galleys>div.d-flex>div.galley-item>a[href*=article]");
+                    +"div.galleys_links>div>a.pdf[href*=article],div.article-galleys>div.d-flex>div.galley-item>a[href*=article],div.btn-group>a[href*=issue].pdf");
                 pdfUrl = au.makeCachedUrl(PDFs.attr("href").trim());
 
                 Elements HTMLs = article.select("ul.galleys_links>li>a:contains(HTML),ul.article__btn-group>li>a:contains(HTML),div.btn-group>a:contains(HTML),"

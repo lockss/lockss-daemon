@@ -307,12 +307,17 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
 
           if (node instanceof Div) {
             String classattr = ((Div) node).getAttribute("class");
-            if (classattr == null) {
+            if (classattr == null || classattr.isEmpty()) {
               Node[] children = ((Div) node).getChildrenAsNodeArray();
               for (Node child: children) {
                 if (child instanceof Div) {
                   String childClass = ((Div) child).getAttribute("class");
                   if (childClass != null && childClass.contains("eye")) {
+                    return true;
+                  }
+                }else if (child instanceof Span) {
+                  String childClass = ((Span) child).getAttribute("class");
+                  if (childClass != null && childClass.contains("article_counter_read")) {
                     return true;
                   }
                 }
