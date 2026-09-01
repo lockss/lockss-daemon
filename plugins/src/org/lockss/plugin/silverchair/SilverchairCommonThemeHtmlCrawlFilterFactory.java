@@ -62,6 +62,12 @@ public class SilverchairCommonThemeHtmlCrawlFilterFactory implements FilterFacto
             //We saw Silverchair add those to non-common-theme plugins, for cautious, we added it here
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-IssueInfo"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-ArticleNavLinks"),
+            //https://pubs.geoscienceworld.org/sepm/palaios/article/36/1/15/594256
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget widget-dynamic ContentCss"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget widget-dynamic GeoRefCss"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget widget-dynamic SupplementsCss"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget widget-dynamic ReferencesCss"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget widget-dynamic ContentCss"),
         };
 
         return new HtmlFilterInputStream(in,

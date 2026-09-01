@@ -82,6 +82,12 @@ public class SilverchairCommonThemeHtmlHashFilterFactory implements FilterFactor
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "info-author-correspondence"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-footnote"),
             HtmlNodeFilters.tagWithAttributeRegex("input", "type", "hidden"),
+            //https://pubs.geoscienceworld.org/sepm/palaios/article/36/1/15/594256
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget widget-dynamic ContentCss"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget widget-dynamic GeoRefCss"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget widget-dynamic SupplementsCss"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget widget-dynamic ReferencesCss"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget widget-dynamic ContentCss"),
             
     };
 
