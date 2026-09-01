@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Journal of the American Animal Hospital Association ;
+    info[contract] = 2026 ;
+    info[back] = 1995 ;
+    info[tester] = 4 ;
+    info[platform] = pubfactory. 1 title
+  >
+
+  {
+  
+    title <
+      name = Journal of the American Animal Hospital Association ;
+      issn = 0587-2871 ;
+      eissn = 1547-3317
+    >
+      plugin = org.lockss.plugin.pubfactory.aaha.ClockssAAHAJournalsPlugin
+      param[base_url] = https://jaaha.kglmeridian.com/
+      param[journal_id] = aaha
+      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+
+      au < manifest ; exists ; 2025 ; Journal of the American Animal Hospital Association Volume 61 ; 61 ; >
+
+  }
+}
