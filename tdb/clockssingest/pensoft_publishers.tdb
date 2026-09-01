@@ -1914,7 +1914,7 @@
       param[au_oai_set] = skinonline
 
       au < deepCrawl ; exists ; 2025 ; 1 ; SKINdeep Volume 2025 ; 2025 ; https://skindeep.skinonline.org/ ; >
-      au < ready ; exists ; 2026 ; 2 ; SKINdeep Volume 2026 ; 2026 ; https://skindeep.skinonline.org/ ; >
+      au < crawling ; exists ; 2026 ; 2 ; SKINdeep Volume 2026 ; 2026 ; https://skindeep.skinonline.org/ ; >
 
   }
 

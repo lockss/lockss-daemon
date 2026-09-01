@@ -136,7 +136,7 @@
       au < frozen ; exists ; 2023 ; 4 ; Steiner Studies Volume 2023 ; 2023 ; 4 ; frommann-holzboog ;  ; https://steiner-studies.org/ ; >
       au < frozen ; exists ; 2024 ; 5 ; Steiner Studies Volume 2024 ; 2024 ; 5 ; frommann-holzboog ;  ; https://steiner-studies.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 6 ; Steiner Studies Volume 2025 ; 2025 ; 6 ; frommann-holzboog ;  ; https://steiner-studies.org/ ; >
-      au < ready ; exists ; 2026 ; 7 ; Steiner Studies Volume 2026 ; 2026 ; 7 ; frommann-holzboog ;  ; https://steiner-studies.org/ ; >
+      au < crawling ; exists ; 2026 ; 7 ; Steiner Studies Volume 2026 ; 2026 ; 7 ; frommann-holzboog ;  ; https://steiner-studies.org/ ; >
 
   }
 
@@ -188,7 +188,7 @@
       au < frozen ; exists ; 2023 ; 60 ; Estetika: The European Journal of Aesthetics Volume 2023 ; 2023 ; 60 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
       au < finished ; manifest ; 2024 ; 61 ; Estetika: The European Journal of Aesthetics Volume 2024 ; 2024 ; 61 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2025 ; 62 ; Estetika: The European Journal of Aesthetics Volume 2025 ; 2025 ; 62 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
-      au < ready ; exists ; 2026 ; 63 ; Estetika: The European Journal of Aesthetics Volume 2026 ; 2026 ; 63 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
+      au < crawling ; exists ; 2026 ; 63 ; Estetika: The European Journal of Aesthetics Volume 2026 ; 2026 ; 63 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
   }
 
   {
@@ -447,7 +447,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 8 ; Scandinavian Journal of Work and Organizational Psychology Volume 2023 ; 2023 ; 8 ; Stockholm University Press ;  ; https://sjwop.com/ ; >
       au < frozen ; exists ; 2024 ; 9 ; Scandinavian Journal of Work and Organizational Psychology Volume 2024 ; 2024 ; 9 ; Stockholm University Press ;  ; https://sjwop.com/ ; >
       au < deepCrawl ; exists ; 2025 ; 10 ; Scandinavian Journal of Work and Organizational Psychology Volume 2025 ; 2025 ; 10 ; Stockholm University Press ;  ; https://sjwop.com/ ; >
-      au < ready ; exists ; 2026 ; 11 ; Scandinavian Journal of Work and Organizational Psychology Volume 2026 ; 2026 ; 11 ; Stockholm University Press ;  ; https://sjwop.com/ ; >
+      au < crawling ; exists ; 2026 ; 11 ; Scandinavian Journal of Work and Organizational Psychology Volume 2026 ; 2026 ; 11 ; Stockholm University Press ;  ; https://sjwop.com/ ; >
 
   }
 
@@ -514,7 +514,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2023 ; 2023 ; 6 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
       au < frozen ; exists ; 2024 ; 7 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2024 ; 2024 ; 7 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 8 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2025 ; 2025 ; 8 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
-      au < ready ; exists ; 2026 ; 9 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2026 ; 2026 ; 9 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
+      au < crawling ; exists ; 2026 ; 9 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2026 ; 2026 ; 9 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
 
   }
 
@@ -608,7 +608,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 75 ; Tellus Volume 2023 ; 2023 ; 75 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
       au < doNotProcess ; exists ; 2024 ; 76 ; Tellus Volume 2024 ; 2024 ; 76 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 77 ; Tellus Volume 2025 ; 2025 ; 77 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < ready ; exists ; 2026 ; 78 ; Tellus Volume 2026 ; 2026 ; 78 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < crawling ; exists ; 2026 ; 78 ; Tellus Volume 2026 ; 2026 ; 78 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
 
   }
 
@@ -814,7 +814,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Buildings and Cities Volume 2023 ; 2023 ; 4 ; Ubiquity Press ;  ; https://journal-buildingscities.org/ ; > #404 forbidden cloudfront.net  
       au < frozen ; exists ; 2024 ; 5 ; Buildings and Cities Volume 2024 ; 2024 ; 5 ; Ubiquity Press ;  ; https://journal-buildingscities.org/ ; > #505 forbidden cloudfront.net
       au < deepCrawl ; exists ; 2025 ; 6 ; Buildings and Cities Volume 2025 ; 2025 ; 6 ; Ubiquity Press ;  ; https://journal-buildingscities.org/ ; > #606 forbidden cloudfront.net
-      au < ready ; exists ; 2026 ; 7 ; Buildings and Cities Volume 2026 ; 2026 ; 7 ; Ubiquity Press ;  ; https://journal-buildingscities.org/ ; > #707 forbidden cloudfront.net
+      au < crawling ; exists ; 2026 ; 7 ; Buildings and Cities Volume 2026 ; 2026 ; 7 ; Ubiquity Press ;  ; https://journal-buildingscities.org/ ; > #707 forbidden cloudfront.net
 
   }
 
@@ -972,7 +972,7 @@
       au < doNotProcess ; exists ; 2023 ; 8 ; Citizen Science: Theory and Practice Volume 2023 ; 2023 ; 8 ; Ubiquity Press ;  ; https://theoryandpractice.citizenscienceassociation.org/ ; >
       au < frozen ; exists ; 2024 ; 9 ; Citizen Science: Theory and Practice Volume 2024 ; 2024 ; 9 ; Ubiquity Press ;  ; https://theoryandpractice.citizenscienceassociation.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 10 ; Citizen Science: Theory and Practice Volume 2025 ; 2025 ; 10 ; Ubiquity Press ;  ; https://theoryandpractice.citizenscienceassociation.org/ ; >
-      au < ready ; exists ; 2026 ; 11 ; Citizen Science: Theory and Practice Volume 2026 ; 2026 ; 11 ; Ubiquity Press ;  ; https://theoryandpractice.citizenscienceassociation.org/ ; >
+      au < crawling ; exists ; 2026 ; 11 ; Citizen Science: Theory and Practice Volume 2026 ; 2026 ; 11 ; Ubiquity Press ;  ; https://theoryandpractice.citizenscienceassociation.org/ ; >
 
   }
 
@@ -1130,7 +1130,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 23 ; International Journal of Integrated Care Volume 2023 ; 2023 ; 23 ; Ubiquity Press ;  ; https://ijic.org/ ; >
       au < finished ; manifest ; 2024 ; 24 ; International Journal of Integrated Care Volume 2024 ; 2024 ; 24 ; Ubiquity Press ;  ; https://ijic.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2025 ; 25 ; International Journal of Integrated Care Volume 2025 ; 2025 ; 25 ; Ubiquity Press ;  ; https://ijic.org/ ; >
-      au < ready ; exists ; 2026 ; 26 ; International Journal of Integrated Care Volume 2026 ; 2026 ; 26 ; Ubiquity Press ;  ; https://ijic.org/ ; >
+      au < crawling ; exists ; 2026 ; 26 ; International Journal of Integrated Care Volume 2026 ; 2026 ; 26 ; Ubiquity Press ;  ; https://ijic.org/ ; >
 
   }
 
@@ -1722,7 +1722,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 9 ; Open Quaternary Volume 2023 ; 2023 ; 9 ; Ubiquity Press ;  ; https://openquaternary.com/ ; >
       au < frozen ; exists ; 2024 ; 10 ; Open Quaternary Volume 2024 ; 2024 ; 10 ; Ubiquity Press ;  ; https://openquaternary.com/ ; >
       au < deepCrawl ; exists ; 2025 ; 11 ; Open Quaternary Volume 2025 ; 2025 ; 11 ; Ubiquity Press ;  ; https://openquaternary.com/ ; >
-      au < ready ; exists ; 2026 ; 12 ; Open Quaternary Volume 2026 ; 2026 ; 12 ; Ubiquity Press ;  ; https://openquaternary.com/ ; >
+      au < crawling ; exists ; 2026 ; 12 ; Open Quaternary Volume 2026 ; 2026 ; 12 ; Ubiquity Press ;  ; https://openquaternary.com/ ; >
 
   }
 
@@ -1801,7 +1801,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Secularism and Nonreligion Volume 2023 ; 2023 ; 12 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; >
       au < frozen ; exists ; 2024 ; 13 ; Secularism and Nonreligion Volume 2024 ; 2024 ; 13 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 14 ; Secularism and Nonreligion Volume 2025 ; 2025 ; 14 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; >
-      au < ready ; exists ; 2026 ; 15 ; Secularism and Nonreligion Volume 2026 ; 2026 ; 15 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; >
+      au < crawling ; exists ; 2026 ; 15 ; Secularism and Nonreligion Volume 2026 ; 2026 ; 15 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; >
 
   }
 
@@ -1914,7 +1914,7 @@
       au < doNotProcess ; exists ; 2023 ; 6 ; Journal of Computer Applications in Archaeology Volume 2023 ; 2023 ; 6 ; Ubiquity Press ;  ; https://journal.caa-international.org/ ; >
       au < finished ; manifest ; 2024 ; 7 ; Journal of Computer Applications in Archaeology Volume 2024 ; 2024 ; 7 ; Ubiquity Press ;  ; https://journal.caa-international.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 8 ; Journal of Computer Applications in Archaeology Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://journal.caa-international.org/ ; >
-      au < ready ; exists ; 2026 ; 9 ; Journal of Computer Applications in Archaeology Volume 2026 ; 2026 ; 9 ; Ubiquity Press ;  ; https://journal.caa-international.org/ ; >
+      au < crawling ; exists ; 2026 ; 9 ; Journal of Computer Applications in Archaeology Volume 2026 ; 2026 ; 9 ; Ubiquity Press ;  ; https://journal.caa-international.org/ ; >
 
   }
 
@@ -1994,7 +1994,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 28 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2023 ; 2023 ; 28 ; Ubiquity Press ;  ; https://tilburglawreview.com/ ; >
       au < finished ; manifest ; 2024 ; 29 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2024 ; 2024 ; 29 ; Ubiquity Press ;  ; https://tilburglawreview.com/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2025 ; 30 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2025 ; 2025 ; 30 ; Ubiquity Press ;  ; https://tilburglawreview.com/ ; >
-      au < ready ; exists ; 2026 ; 31 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2026 ; 2026 ; 31 ; Ubiquity Press ;  ; https://tilburglawreview.com/ ; >
+      au < crawling ; exists ; 2026 ; 31 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2026 ; 2026 ; 31 ; Ubiquity Press ;  ; https://tilburglawreview.com/ ; >
 
   }
 
@@ -2314,7 +2314,7 @@
       au < frozen ; exists ; 2023 ; 36 ; Insights: the UKSG journal Volume 2023 ; 2023 ; 36 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
       au < frozen ; exists ; 2024 ; 37 ; Insights: the UKSG journal Volume 2024 ; 2024 ; 37 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 38 ; Insights: the UKSG journal Volume 2025 ; 2025 ; 38 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
-      au < ready ; exists ; 2026 ; 39 ; Insights: the UKSG journal Volume 2026 ; 2026 ; 39 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
+      au < crawling ; exists ; 2026 ; 39 ; Insights: the UKSG journal Volume 2026 ; 2026 ; 39 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
 
   }
 
@@ -2465,7 +2465,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 11 ; Stability: International Journal of Security & Development Volume 2023 ; 2023 ; 11 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
       au < doesNotExist ; doesNotExist ; 2024 ; 0 ; Stability: International Journal of Security & Development Volume 2024 ; 2024 ; 0 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 12 ; Stability: International Journal of Security & Development Volume 2025 ; 2025 ; 12 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
-      au < ready ; exists ; 2026 ; 13 ; Stability: International Journal of Security & Development Volume 2026 ; 2026 ; 13 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
+      au < crawling ; exists ; 2026 ; 13 ; Stability: International Journal of Security & Development Volume 2026 ; 2026 ; 13 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
 
   }
 
