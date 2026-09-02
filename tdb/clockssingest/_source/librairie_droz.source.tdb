@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Librairie Droz ;
+    info[contract] = 2026 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+  hidden[proxy] = DIRECT
+
+  {
+    title <
+       name = Librairie Droz Books Source Countent
+    >
+
+    plugin = org.lockss.plugin.clockss.librairiedroz.ClockssLibrairieDrozBooksSourcePlugin
+    implicit < status ; status2 ; year ; name ; param[directory] >
+    {
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/droz-released/
+
+    au < testing ; exists ; 2026 ; Librairie Droz Books Source Countent 2026_01 ; 2026_01 >
+
+    }
+  }
+
+}
