@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Euclid Prime ;
+    info[contract] = 2026 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+  hidden[proxy] = DIRECT
+
+  {
+    title <
+       name = Euclid Prime Journals Source Countent
+    >
+
+    plugin = org.lockss.plugin.clockss.endocrinesociety.ClockssEndocrineSocietySourcePlugin
+    implicit < status ; status2 ; year ; name ; param[directory] >
+    {
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/euclidprime-released/
+
+    au < testing ; exists ; 2026 ; Euclid Prime Journals Source Countent 2026_01 ; 2026_01 >
+
+    }
+  }
+
+}
