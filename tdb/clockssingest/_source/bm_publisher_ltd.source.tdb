@@ -18,7 +18,7 @@
 
     param[base_url] = https://clockss-test.lockss.org/sourcefiles/bmpublisher-released/
 
-    au < testing ; crawling ; 2026 ; BM-Publisher Ltd Source Content 2026_01 ; 2026_01 >
+    au < ready ; crawling ; 2026 ; BM-Publisher Ltd Source Content 2026_01 ; 2026_01 >
 
 
   }
