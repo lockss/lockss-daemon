@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = BM-Publisher Ltd ;
+    info[contract] = 2026 ;
+    info[tester] = S ;
+    info[platform] = Source. See LOCKSS-5480
+  >
+  hidden[proxy] = DIRECT
+
+  {
+    title < 
+      name = BM-Publisher Ltd Source Content
+    >
+
+    plugin = org.lockss.plugin.clockss.bmpublisher.ClockssBMPublisherSourcePlugin
+    implicit < status ; status2 ; year ; name ; param[directory] >
+
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/bmpublisher-released/
+
+    au < testing ; crawling ; 2026 ; BM-Publisher Ltd Source Content 2026_01 ; 2026_01 >
+
+
+  }
+
+}
