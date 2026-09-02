@@ -1640,7 +1640,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Tuhinga Volume 2023 ; 2023 ; https://tuhinga.arphahub.com/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Tuhinga Volume 2024 ; 2024 ; https://tuhinga.arphahub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Tuhinga Volume 2025 ; 2025 ; https://tuhinga.arphahub.com/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Tuhinga Volume 2026 ; 2026 ; https://tuhinga.arphahub.com/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Tuhinga Volume 2026 ; 2026 ; https://tuhinga.arphahub.com/ ; >
 
   }
 
@@ -2080,7 +2080,7 @@
       au < frozen ; exists ; 2023 ; 2023 ; Swiss Journal of Palaeontology Volume 2023 ; 2023 ; https://sjp.pensoft.net/ ; >
       au < frozen ; exists ; 2024 ; 2024 ; Swiss Journal of Palaeontology Volume 2024 ; 2024 ; https://sjp.pensoft.net/ ; >
       au < frozen ; exists ; 2025 ; 2025 ; Swiss Journal of Palaeontology Volume 2025 ; 2025 ; https://sjp.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Swiss Journal of Palaeontology Volume 2026 ; 2026 ; https://sjp.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Swiss Journal of Palaeontology Volume 2026 ; 2026 ; https://sjp.pensoft.net/ ; >
 
   }
 
