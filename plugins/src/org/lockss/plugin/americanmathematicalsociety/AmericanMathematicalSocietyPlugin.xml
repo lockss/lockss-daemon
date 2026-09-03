@@ -208,4 +208,15 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>^https?://[^/]+/(publications|images)/.*\.gif$</string>
     </list>
   </entry>
+  <entry>
+    <string>au_mime_rate_limiter_map</string>
+    <map>
+      <entry>
+        <string>application/pdf</string>
+        <!--In 2026, AMS notified us of a rate limiting rule, where we can only download 5 PDF files per minute.
+            We will download every 15 seconds just to be on the safe side.-->
+        <string>1/15s</string>
+      </entry>
+    </map>
+  </entry>
 </map>
