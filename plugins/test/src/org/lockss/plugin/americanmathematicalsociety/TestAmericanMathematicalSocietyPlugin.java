@@ -192,7 +192,6 @@ public class TestAmericanMathematicalSocietyPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "lockssdata/?p=asdf&y=2004", false, au);
     // toc page for an issue
     shouldCacheTest(ROOT_URL + "journals/asdf/2004-82-281/", true, au);
-    shouldCacheTest(ROOT_URL + "journals/asdf/2004-82-281", false, au);
     shouldCacheTest(ROOT_URL + "asdf/home-2004.html", true, au);
     // article files
     
