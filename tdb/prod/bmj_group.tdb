@@ -700,7 +700,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Open Ophthalmology Volume 8 ; 8 ; https://bmjophth.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2024 ; BMJ Open Ophthalmology Volume 9 ; 9 ; https://bmjophth.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2025 ; BMJ Open Ophthalmology Volume 10 ; 10 ; https://bmjophth.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2026 ; BMJ Open Ophthalmology Volume 11 ; 11 ; https://bmjophth.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2026 ; BMJ Open Ophthalmology Volume 11 ; 11 ; https://bmjophth.bmj.com/ >
 
   }
   
@@ -2831,7 +2831,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; RMD Open Volume 9 ; 9 ; https://rmdopen.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2024 ; RMD Open Volume 10 ; 10 ; https://rmdopen.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2025 ; RMD Open Volume 11 ; 11 ; https://rmdopen.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2026 ; RMD Open Volume 12 ; 12 ; https://rmdopen.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2026 ; RMD Open Volume 12 ; 12 ; https://rmdopen.bmj.com/ >
 
   }
 
