@@ -764,7 +764,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 75 ; Tellus B: Chemical and Physical Meteorology Volume 2023 ; 2023 ; 75 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < finished ; manifest ; 2024 ; 76 ; Tellus B: Chemical and Physical Meteorology Volume 2024 ; 2024 ; 76 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2025 ; 77 ; Tellus B: Chemical and Physical Meteorology Volume 2025 ; 2025 ; 77 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
-      au < ready ; exists ; 2026 ; 78 ; Tellus B: Chemical and Physical Meteorology Volume 2026 ; 2026 ; 78 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
+      au < crawling ; exists ; 2026 ; 78 ; Tellus B: Chemical and Physical Meteorology Volume 2026 ; 2026 ; 78 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       #Merged with Tellus A to form Tellus.
   }
 
@@ -1327,7 +1327,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Interactive Media in Education Volume 2023 ; 2023 ; 2023 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; >
       au < frozen ; exists ; 2024 ; 2024 ; Journal of Interactive Media in Education Volume 2024 ; 2024 ; 2024 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Journal of Interactive Media in Education Volume 2025 ; 2025 ; 2025 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Journal of Interactive Media in Education Volume 2026 ; 2026 ; 2026 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Journal of Interactive Media in Education Volume 2026 ; 2026 ; 2026 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; >
 
   }
 
@@ -1461,7 +1461,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 11 ; Journal of Open Psychology Data Volume 2023 ; 2023 ; 11 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; >
       au < frozen ; exists ; 2024 ; 12 ; Journal of Open Psychology Data Volume 2024 ; 2024 ; 12 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; >
       au < deepCrawl ; exists ; 2025 ; 13 ; Journal of Open Psychology Data Volume 2025 ; 2025 ; 13 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; >
-      au < ready ; exists ; 2026 ; 14 ; Journal of Open Psychology Data Volume 2026 ; 2026 ; 14 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; >
+      au < crawling ; exists ; 2026 ; 14 ; Journal of Open Psychology Data Volume 2026 ; 2026 ; 14 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; >
 
   }
 
@@ -1623,7 +1623,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Continuity in Education Volume 2023 ; 2023 ; 4 ; Ubiquity Press ;  ; https://continuityineducation.org/ ; >
       au < finished ; manifest ; 2024 ; 5 ; Continuity in Education Volume 2024 ; 2024 ; 5 ; Ubiquity Press ;  ; https://continuityineducation.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2025 ; 6 ; Continuity in Education Volume 2025 ; 2025 ; 6 ; Ubiquity Press ;  ; https://continuityineducation.org/ ; >
-      au < ready ; exists ; 2026 ; 7 ; Continuity in Education Volume 2026 ; 2026 ; 7 ; Ubiquity Press ;  ; https://continuityineducation.org/ ; >
+      au < crawling ; exists ; 2026 ; 7 ; Continuity in Education Volume 2026 ; 2026 ; 7 ; Ubiquity Press ;  ; https://continuityineducation.org/ ; >
 
   }
 
@@ -1890,7 +1890,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Journal of Cognition Volume 2023 ; 2023 ; 6 ; Ubiquity Press ;  ; https://journalofcognition.org/ ; >
       au < frozen ; exists ; 2024 ; 7 ; Journal of Cognition Volume 2024 ; 2024 ; 7 ; Ubiquity Press ;  ; https://journalofcognition.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 8 ; Journal of Cognition Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://journalofcognition.org/ ; >
-      au < ready ; exists ; 2026 ; 9 ; Journal of Cognition Volume 2026 ; 2026 ; 9 ; Ubiquity Press ;  ; https://journalofcognition.org/ ; >
+      au < crawling ; exists ; 2026 ; 9 ; Journal of Cognition Volume 2026 ; 2026 ; 9 ; Ubiquity Press ;  ; https://journalofcognition.org/ ; >
 
   }
 
@@ -2026,7 +2026,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 14 ; Yearbook of Swiss Administrative Science Volume 2023 ; 2023 ; 14 ; Ubiquity Press ;  ; https://ssas-yearbook.com/ ; >
       au < frozen ; exists ; 2024 ; 15 ; Yearbook of Swiss Administrative Science Volume 2024 ; 2024 ; 15 ; Ubiquity Press ;  ; https://ssas-yearbook.com/ ; >
       au < deepCrawl ; exists ; 2025 ; 16 ; Yearbook of Swiss Administrative Science Volume 2025 ; 2025 ; 16 ; Ubiquity Press ;  ; https://ssas-yearbook.com/ ; >
-      au < ready ; exists ; 2026 ; 17 ; Yearbook of Swiss Administrative Science Volume 2026 ; 2026 ; 17 ; Ubiquity Press ;  ; https://ssas-yearbook.com/ ; >
+      au < crawling ; exists ; 2026 ; 17 ; Yearbook of Swiss Administrative Science Volume 2026 ; 2026 ; 17 ; Ubiquity Press ;  ; https://ssas-yearbook.com/ ; >
 
   }
 
@@ -2375,7 +2375,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 7 ; Journal of the European Second Language Association Volume 2023 ; 2023 ; 7 ; White Rose University Press ;  ; https://euroslajournal.org/ ; >
       au < finished ; manifest ; 2024 ; 8 ; Journal of the European Second Language Association Volume 2024 ; 2024 ; 8 ; White Rose University Press ;  ; https://euroslajournal.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 9 ; Journal of the European Second Language Association Volume 2025 ; 2025 ; 9 ; White Rose University Press ;  ; https://euroslajournal.org/ ; >
-      au < ready ; exists ; 2026 ; 10 ; Journal of the European Second Language Association Volume 2026 ; 2026 ; 10 ; White Rose University Press ;  ; https://euroslajournal.org/ ; >
+      au < crawling ; exists ; 2026 ; 10 ; Journal of the European Second Language Association Volume 2026 ; 2026 ; 10 ; White Rose University Press ;  ; https://euroslajournal.org/ ; >
 
   }
 
@@ -2535,7 +2535,7 @@
       #au < doesNotExist ; doesNotExist ; 2023 ; 0 ; The Journal of Technology Studies Volume 2023 ; 2023 ; 0 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
       au < frozen ; exists ; 2024 ; 49 ; The Journal of Technology Studies Volume 2024 ; 2024 ; 49 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
       au < deepCrawl ; exists ; 2025 ; 50 ; The Journal of Technology Studies Volume 2025 ; 2025 ; 50 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
-      au < ready ; exists ; 2026 ; 51 ; The Journal of Technology Studies Volume 2026 ; 2026 ; 51 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
+      au < crawling ; exists ; 2026 ; 51 ; The Journal of Technology Studies Volume 2026 ; 2026 ; 51 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
 
   }
 
