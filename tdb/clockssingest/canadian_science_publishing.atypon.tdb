@@ -176,7 +176,7 @@
       au < crawling ; exists ; 1968 ; Canadian Journal of Biochemistry Volume 46 ; 46 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 1969 ; Canadian Journal of Biochemistry Volume 47 ; 47 ; https://cdnsciencepub.com/ ; >
       au < ready ; exists ; 1970 ; Canadian Journal of Biochemistry Volume 48 ; 48 ; https://cdnsciencepub.com/ ; >
-      au < ready ; exists ; 1971 ; Canadian Journal of Biochemistry Volume 49 ; 49 ; https://cdnsciencepub.com/ ; >
+      au < crawling ; exists ; 1971 ; Canadian Journal of Biochemistry Volume 49 ; 49 ; https://cdnsciencepub.com/ ; >
       au < crawling ; exists ; 1972 ; Canadian Journal of Biochemistry Volume 50 ; 50 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 1973 ; Canadian Journal of Biochemistry Volume 51 ; 51 ; https://cdnsciencepub.com/ ; >
       au < ready ; exists ; 1974 ; Canadian Journal of Biochemistry Volume 52 ; 52 ; https://cdnsciencepub.com/ ; >
@@ -784,7 +784,7 @@
     
     param[journal_id] = jfrbc
     
-    au < ready ; exists ; 1938 ; Journal of the Fisheries Research Board of Canada Volume 4a ; 4a ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1938 ; Journal of the Fisheries Research Board of Canada Volume 4a ; 4a ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1939 ; Journal of the Fisheries Research Board of Canada Volume 4b ; 4b ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1940 ; Journal of the Fisheries Research Board of Canada Volume 5a ; 5a ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1941 ; Journal of the Fisheries Research Board of Canada Volume 5b ; 5b ; https://cdnsciencepub.com/ ; >
