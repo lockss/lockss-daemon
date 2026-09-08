@@ -62,80 +62,174 @@ public class BMPTOCMetadataExtractorFactory implements FileMetadataExtractorFact
     }
 
     public static class BMPTOCMetadataExtractor implements FileMetadataExtractor {
-            private static MultiMap tagMap = new MultiValueMap();
-            public String doi;
+        private static MultiMap tagMap = new MultiValueMap();
 
-            public BMPTOCMetadataExtractor(String doi){
-                this.doi = doi;
-            }
-            
-            public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
+        /*
+         * Some items in the TOC (typically Letters to the Editor) have no abstract
+         * landing page at all -- the item title itself links straight at
+         * /full-text-pdf/<id>/<lang>. For those items there is no HTML article page
+         * carrying the usual citation_* meta tags, so the publisher and publication
+         * title are taken from the TOC (volume/issue) page instead. The masthead reads
+         *   "The Official Journal of the <a ...>Turkish Society of Algology</a>"
+         * which yields "The Turkish Society of Algology" -- the same string the
+         * article pages emit as citation_publisher -- and the page title reads
+         *   "<title> 2019, Volume 31 - Issue 4 |  The Journal of the Turkish Society of Algology</title>"
+         * whose tail is the publication title. Both are best-effort: if the markup
+         * isn't there the field is simply left unset rather than guessed at.
+         */
+        protected static final String PDF_ONLY_TITLE_LINK = "h3>a[href*=\"full-text-pdf\"]";
+        protected static final String SOCIETY_LINK = "a.header-tagline-society";
+
+        public String doi;
+
+        public BMPTOCMetadataExtractor(String doi){
+            this.doi = doi;
+        }
+
+        public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
                 throws IOException, PluginException{
-                InputStream in = cu.getUncompressedInputStream();
-                ArticleMetadata am = new ArticleMetadata();
-                if (in != null) {
+            InputStream in = cu.getUncompressedInputStream();
+            ArticleMetadata am = new ArticleMetadata();
+            if (in != null) {
+                try {
+                    String title = null;
+                    String author = null;
+                    String publisher = null;
+                    String publicationTitle = null;
+
+                    Elements element_title;
+                    Elements element_author;
+                    Elements element_doi;
+                    String url = cu.getUrl();
                     try {
-                        String title = null;
-                        String author = null;
-
-                        Elements element_title;
-                        Elements element_author;
-                        Elements element_doi;
-                        String url = cu.getUrl();
-                        try {
-                            Document doc = Jsoup.parse(in, cu.getEncoding(), url);
-                            Elements article = doc.select("div.span9>section[id*=cat]>div:has(>div>div.span8>a[href=\""+doi+"\"])");
-                            element_title = article.select("h3>a");
-                            element_author = article.select("p");
-                            element_doi = article.select("div.row-fluid>div.span8>a");
-                            author = checkElement(element_author, "Author");
-                            title = checkElement(element_title, "Title");
-                            doi = checkElement(element_doi, "DOI");
-                        } catch (IOException e) {
-                            log.debug3("Baycinar Medical Publishing: Error getting Metadata", e);
+                        Document doc = Jsoup.parse(in, cu.getEncoding(), url);
+                        Elements article = doc.select("div.span9>section[id*=cat]>div:has(>div>div.span8>a[href=\""+doi+"\"])");
+                        element_title = article.select("h3>a");
+                        element_author = article.select("p");
+                        element_doi = article.select("div.row-fluid>div.span8>a");
+                        author = checkElement(element_author, "Author");
+                        title = checkElement(element_title, "Title");
+                        doi = checkElement(element_doi, "DOI");
+                        //PDF-only items have no article page to harvest citation_* tags from
+                        if (isPdfOnly(article)) {
+                            publisher = getPublisherFromTocPage(doc);
+                            publicationTitle = getPublicationTitleFromTocPage(doc);
                         }
-                        in.close();
-                        am = fillMetadata(doi, MetadataField.FIELD_DOI, am);
-                        am = fillMetadata(title, MetadataField.FIELD_ARTICLE_TITLE, am);
-                        am = fillMetadata(author, MetadataField.FIELD_AUTHOR, am);
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        log.debug3("Baycinar Medical Publishing: Error getting Metadata", e);
                     }
-                    //some content (like Front Matter) don't have dois; don't emit metadata for these articles
-                    if(doi != null && doi != ""){
-                        emitter.emitMetadata(cu, am);
-                    } 
+                    in.close();
+                    am = fillMetadata(doi, MetadataField.FIELD_DOI, am);
+                    am = fillMetadata(title, MetadataField.FIELD_ARTICLE_TITLE, am);
+                    am = fillMetadata(author, MetadataField.FIELD_AUTHOR, am);
+                    am = fillMetadata(publisher, MetadataField.FIELD_PUBLISHER, am);
+                    am = fillMetadata(publicationTitle, MetadataField.FIELD_PUBLICATION_TITLE, am);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                //some content (like Front Matter) don't have dois; don't emit metadata for these articles
+                if(doi != null && !doi.isEmpty()){
+                    emitter.emitMetadata(cu, am);
                 }
             }
+        }
 
-            protected String checkElement(Elements element, String specifiedMetadata) {
-                String cleanedUpElement = null;
-                if ( element != null){
-                    //if more than one element is found, throw an error
-                    if( element.size() > 1){
-                        throw new UnsupportedOperationException("Too many elements were found for metadata " + specifiedMetadata);
-                    }else{
-                        cleanedUpElement = element.text().trim();
-                        log.debug3("Baycinar Medical Publishing: Element for " + specifiedMetadata + " is " + element);
-                        if (cleanedUpElement != null) {
-                            log.debug3("Baycinar Medical Publishing: Element cleaned for " + specifiedMetadata + " is " + cleanedUpElement);
-                        } else {
-                            log.debug3("Baycinar Medical Publishing: Element is null");
-                        }
+        /*
+         * True when the TOC entry's own title link points at the PDF, meaning there is
+         * no abstract/full-text HTML page for this item.
+         */
+        protected boolean isPdfOnly(Elements article) {
+            if (article == null) {
+                return false;
+            }
+            boolean pdfOnly = !article.select(PDF_ONLY_TITLE_LINK).isEmpty();
+            log.debug3("Baycinar Medical Publishing: PDF-only item for doi " + doi + ": " + pdfOnly);
+            return pdfOnly;
+        }
+
+        /*
+         * The society named in the TOC masthead is the publisher; the masthead omits
+         * the leading article ("Turkish Society of Algology") that citation_publisher
+         * carries ("The Turkish Society of Algology"), so add it back when absent.
+         */
+        protected String getPublisherFromTocPage(Document doc) {
+            if (doc == null) {
+                return null;
+            }
+            Elements society = doc.select(SOCIETY_LINK);
+            if (society.isEmpty()) {
+                log.debug3("Baycinar Medical Publishing: no society link in TOC masthead");
+                return null;
+            }
+            String publisher = society.first().text().replaceAll("\\s+", " ").trim();
+            if (publisher.isEmpty()) {
+                log.debug3("Baycinar Medical Publishing: empty society link in TOC masthead");
+                return null;
+            }
+            if (!publisher.toLowerCase().startsWith("the ")) {
+                publisher = "The " + publisher;
+            }
+            log.debug3("Baycinar Medical Publishing: publisher from TOC page is " + publisher);
+            return publisher;
+        }
+
+        /*
+         * The TOC page title is "<year, Volume N - Issue N> | <publication title>".
+         * Only the text after the last pipe is the publication title, so if there is no
+         * pipe the field is left unset rather than falling back on the whole <title>,
+         * which would be the volume/issue label.
+         */
+        protected String getPublicationTitleFromTocPage(Document doc) {
+            if (doc == null) {
+                return null;
+            }
+            String pageTitle = doc.title();
+            if (pageTitle == null) {
+                return null;
+            }
+            int pipe = pageTitle.lastIndexOf('|');
+            if (pipe < 0) {
+                log.debug3("Baycinar Medical Publishing: no publication title in TOC page title '" + pageTitle + "'");
+                return null;
+            }
+            //TOC titles carry stray/doubled whitespace around the pipe
+            String publicationTitle = pageTitle.substring(pipe + 1).replaceAll("\\s+", " ").trim();
+            if (publicationTitle.isEmpty()) {
+                log.debug3("Baycinar Medical Publishing: empty publication title in TOC page title");
+                return null;
+            }
+            log.debug3("Baycinar Medical Publishing: publication title from TOC page is " + publicationTitle);
+            return publicationTitle;
+        }
+
+        protected String checkElement(Elements element, String specifiedMetadata) {
+            String cleanedUpElement = null;
+            if ( element != null){
+                //if more than one element is found, throw an error
+                if( element.size() > 1){
+                    throw new UnsupportedOperationException("Too many elements were found for metadata " + specifiedMetadata);
+                }else{
+                    cleanedUpElement = element.text().trim();
+                    log.debug3("Baycinar Medical Publishing: Element for " + specifiedMetadata + " is " + element);
+                    if (cleanedUpElement != null) {
+                        log.debug3("Baycinar Medical Publishing: Element cleaned for " + specifiedMetadata + " is " + cleanedUpElement);
+                    } else {
+                        log.debug3("Baycinar Medical Publishing: Element is null");
                     }
                 }
-                return cleanedUpElement;
             }
+            return cleanedUpElement;
+        }
 
-            protected ArticleMetadata fillMetadata(String metadata, MetadataField mf, ArticleMetadata am){
-                if (metadata != null && metadata != "") {
-                    log.debug3("Baycinar Medical Publishing: --------getAdditionalMetadata: " + metadata + "-------");
-                    am.put(mf, metadata);
-                } else {
-                    log.debug3("Baycinar Medical Publishing: --------getAdditionalMetadata: " + metadata + " Failed-------");
-                }
-                return am;
+        protected ArticleMetadata fillMetadata(String metadata, MetadataField mf, ArticleMetadata am){
+            if (metadata != null && !metadata.isEmpty()) {
+                log.debug3("Baycinar Medical Publishing: --------getAdditionalMetadata: " + metadata + "-------");
+                am.put(mf, metadata);
+            } else {
+                log.debug3("Baycinar Medical Publishing: --------getAdditionalMetadata: " + metadata + " Failed-------");
             }
+            return am;
+        }
     }
-    
+
 }
