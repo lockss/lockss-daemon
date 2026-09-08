@@ -64,6 +64,8 @@ public class AmsHtmlCrawlFilterFactory implements FilterFactory {
       
     		// references with links to journal page and alternate form of volume page
     	     HtmlNodeFilters.tagWithAttribute("div", "id", "EnhancedReferences"),
+        //there are hrefs that are phone numbers
+           HtmlNodeFilters.tagWithAttributeRegex("a", "href", "tel:"),
       
     };
     return new HtmlFilterInputStream(in,
