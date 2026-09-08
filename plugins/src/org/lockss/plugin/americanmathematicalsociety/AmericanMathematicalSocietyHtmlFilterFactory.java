@@ -66,6 +66,11 @@ public class AmericanMathematicalSocietyHtmlFilterFactory implements FilterFacto
         HtmlNodeFilters.tagWithAttribute("div", "class", "altmetric-embed"),
         // Changeable copyright and links
         HtmlNodeFilters.tagWithAttribute("table", "id", "footer"),
+        //remove generated verification tokens
+        HtmlNodeFilters.tagWithAttribute("input", "name", "__RequestVerificationToken"),
+        //remove generated email linksc
+        HtmlNodeFilters.tagWithAttribute("a", "class", "__cf_email__"),
+        HtmlNodeFilters.tagWithAttribute("span", "class", "__cf_email__"),
         
     };
     
