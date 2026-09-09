@@ -4,7 +4,7 @@
     name = Mathematical Sciences Publishers ;
     info[contract] = 2012 ;
     info[back] = 1997 ;
-    info[tester] = 4 ;
+    info[tester] = 8 ;
     info[platform] = Custom & OJS3
   >
 
@@ -716,7 +716,7 @@
     au < doNotProcess ; exists ; 1957 ; 1957 ; Mathematica Scandinavica Volume 5 ; 5 ; >
     au < doNotProcess ; exists ; 1958 ; 1958 ; Mathematica Scandinavica Volume 6 ; 6 ; >
     au < doNotProcess ; exists ; 1959 ; 1959 ; Mathematica Scandinavica Volume 7 ; 7 ; >
-    au < testing ; exists ; 1960 ; 1960 ; Mathematica Scandinavica Volume 8 ; 8 ; >
+    au < ready ; exists ; 1960 ; 1960 ; Mathematica Scandinavica Volume 8 ; 8 ; >
     au < doNotProcess ; exists ; 1961 ; 1961 ; Mathematica Scandinavica Volume 9 ; 9 ; >
     au < doNotProcess ; exists ; 1962 ; 1962 ; Mathematica Scandinavica Volume 10-11 ; 10-11 ; >
     au < doNotProcess ; exists ; 1963 ; 1963 ; Mathematica Scandinavica Volume 12-13 ; 12-13 ; >
@@ -776,7 +776,7 @@
     au < doNotProcess ; exists ; 2017 ; 2017 ; Mathematica Scandinavica Volume 120-121 ; 120-121 ; >
     au < doNotProcess ; exists ; 2018 ; 2018 ; Mathematica Scandinavica Volume 122-123 ; 122-123 ; >
     au < doNotProcess ; exists ; 2019 ; 2019 ; Mathematica Scandinavica Volume 124-125 ; 124-125 ; >
-    au < testing ; exists ; 2020 ; 2020 ; Mathematica Scandinavica Volume 126 ; 126 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Mathematica Scandinavica Volume 126 ; 126 ; >
     au < doNotProcess ; exists ; 2021 ; 2021 ; Mathematica Scandinavica Volume 127 ; 127 ; >
     au < doNotProcess ; exists ; 2022 ; 2022 ; Mathematica Scandinavica Volume 128 ; 128 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Mathematica Scandinavica Volume 129 ; 129 ; >
