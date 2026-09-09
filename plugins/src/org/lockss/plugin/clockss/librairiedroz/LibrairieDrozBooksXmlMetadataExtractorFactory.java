@@ -2,6 +2,8 @@ package org.lockss.plugin.clockss.librairiedroz;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
@@ -17,16 +19,16 @@ import org.lockss.util.Logger;
 /**
  * Metadata extractor for Librairie Droz MODS book deliveries.
  *
- * One <modsCollection> XML -> N book records -> N ArticleFiles. The EPUB that goes with each
- * record lives in a sibling zip:
- *   <dir>/droz_test_mods_20260824.xml
- *   <dir>/droz_test_epubs_20260824.zip!/<something>.epub
+ * One mods_YYYYMMDD.xml is a <modsCollection> of N book records; each book's EPUB is a plain
+ * file in the parallel epubs_YYYYMMDD/ directory, named after the book's EPUB ISBN:
  *
- * OPEN QUESTION: nothing in the MODS record names the EPUB file. The record carries three
- * ISBNs (print / epub / pdf) and a DOI, and the filename is almost certainly built from one
- * of them — but until we can list the zip we are guessing. getFilenamesAssociatedWithRecord()
- * therefore tries every plausible stem and logs which one hit, so the first test crawl tells
- * us the answer. Once known, collapse the candidate list to the single real pattern.
+ *   <base_url>2026_01/mods_20260907.xml
+ *   <base_url>2026_01/epubs_20260907/9782600316095.epub
+ *
+ * The mapping record -> file is therefore exact, not guessed: take the
+ * <identifier type="isbn" dislayLabel="epub"> value and append ".epub". Confirmed against the
+ * 2026-09-07 directory listing, where every filename is a 97826003xxxxx ISBN — the EPUB ISBN
+ * series, not the print (97826000xxxxx) or PDF (97826001xxxxx) series.
  */
 public class LibrairieDrozBooksXmlMetadataExtractorFactory
     extends SourceXmlMetadataExtractorFactory {
@@ -37,15 +39,16 @@ public class LibrairieDrozBooksXmlMetadataExtractorFactory
   private static SourceXmlSchemaHelper drozHelper = null;
 
   /*
-   * Set true to emit metadata even when no matching EPUB is found in the zip. Useful right
-   * now: with only two sample files, a wrong filename guess would otherwise silently produce
-   * an AU with zero metadata, which looks identical to a broken schema helper. Flip to false
-   * before the plugin goes to production, so books without content are not indexed.
+   * Set true to emit metadata even when the EPUB is missing from the delivery. Leave true
+   * while the publisher is still sending partial test drops (the 2026-09-07 epubs directory
+   * holds 10 books, which will not line up with every record in every MODS file). Flip to
+   * false for production so books with no preserved content are not indexed.
    */
   private static final boolean EMIT_WITHOUT_CONTENT_FILE = true;
 
-  /** Extensions to try, best first. PDF is included in case a later delivery adds it. */
-  private static final String[] CONTENT_EXTENSIONS = { ".epub", ".pdf" };
+  /** mods_20260907.xml -> epubs_20260907/ in the same delivery directory. */
+  private static final Pattern MODS_FILENAME_PATTERN =
+      Pattern.compile("^(.*/)mods_(\\d+)\\.xml$", Pattern.CASE_INSENSITIVE);
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
@@ -68,25 +71,27 @@ public class LibrairieDrozBooksXmlMetadataExtractorFactory
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper,
                                                             CachedUrl cu,
                                                             ArticleMetadata oneAM) {
-      String zipUrl = deriveContentZipUrl(cu.getUrl());
-      if (zipUrl == null) {
-        log.warning("Droz: cannot derive content zip from XML url: " + cu.getUrl());
+      String epubDir = deriveEpubDirUrl(cu.getUrl());
+      if (epubDir == null) {
+        log.warning("Droz: XML url does not match mods_<date>.xml: " + cu.getUrl());
         return null;
       }
 
       List<String> candidates = new ArrayList<String>();
-      for (String rawKey : LibrairieDrozBooksXmlSchemaHelper.filenameCandidateKeys()) {
-        String stem = toFilenameStem(oneAM.getRaw(rawKey));
-        if (stem == null) {
-          continue;
-        }
-        for (String ext : CONTENT_EXTENSIONS) {
-          String candidate = zipUrl + "!/" + stem + ext;
-          if (!candidates.contains(candidate)) {
-            candidates.add(candidate);
-          }
-        }
-      }
+
+      // The real mapping: EPUB ISBN + ".epub".
+      addCandidate(candidates, epubDir,
+          oneAM.getRaw(LibrairieDrozBooksXmlSchemaHelper.KEY_ISBN_EPUB));
+      addCandidate(candidates, epubDir,
+          oneAM.getRaw(LibrairieDrozBooksXmlSchemaHelper.KEY_ISBN_EPUB_FIXED));
+
+      // Fallbacks, only for the case where a record is missing its EPUB ISBN. Cheap to try
+      // and they cost nothing when the primary hits first.
+      addCandidate(candidates, epubDir,
+          oneAM.getRaw(LibrairieDrozBooksXmlSchemaHelper.KEY_ISBN_PRINT));
+      addCandidate(candidates, epubDir,
+          oneAM.getRaw(LibrairieDrozBooksXmlSchemaHelper.KEY_ISBN_PRINT_FIXED));
+
       return candidates;
     }
 
@@ -94,7 +99,7 @@ public class LibrairieDrozBooksXmlMetadataExtractorFactory
      * Deterministic replacement for the base-class check: the first candidate that actually
      * has content wins and becomes the access URL. Written out explicitly rather than
      * inherited because "all files must exist" vs "any file may exist" differs across daemon
-     * versions, and with a guessed filename that difference is the whole ballgame.
+     * versions.
      */
     @Override
     protected boolean preEmitCheck(SourceXmlSchemaHelper helper,
@@ -107,7 +112,7 @@ public class LibrairieDrozBooksXmlMetadataExtractorFactory
           try {
             if (fileCu != null && fileCu.hasContent()) {
               oneAM.put(MetadataField.FIELD_ACCESS_URL, url);
-              log.debug3("Droz: matched content file " + url);
+              log.debug3("Droz: matched EPUB " + url);
               return true;
             }
           } finally {
@@ -116,7 +121,7 @@ public class LibrairieDrozBooksXmlMetadataExtractorFactory
         }
       }
 
-      log.warning("Droz: no content file found for record; tried "
+      log.warning("Droz: no EPUB found for record; tried "
           + (candidates == null ? "nothing" : candidates.toString()));
 
       if (EMIT_WITHOUT_CONTENT_FILE) {
@@ -141,47 +146,42 @@ public class LibrairieDrozBooksXmlMetadataExtractorFactory
       // <relatedItem type="series"><titleInfo><title/> is empty in every sample record while
       // the volume number is populated, so the series name has to come from somewhere else.
       // If the publisher cannot fill it in, consider deriving the publication title from the
-      // <classification> values, or hard-coding the series per AU.
+      // <classification> values, or setting the series per AU.
+    }
+  }
+
+  private static void addCandidate(List<String> candidates, String epubDir, String isbn) {
+    String stem = toFilenameStem(isbn);
+    if (stem == null) {
+      return;
+    }
+    String url = epubDir + stem + ".epub";
+    if (!candidates.contains(url)) {
+      candidates.add(url);
     }
   }
 
   /**
-   * droz_test_mods_20260824.xml -> droz_test_epubs_20260824.zip, in the same directory.
-   * Tolerates the "_mods_" token appearing anywhere in the stem, and falls back to matching
-   * any sibling *_epubs_*.zip naming convention the publisher settles on.
+   * .../2026_01/mods_20260907.xml -> .../2026_01/epubs_20260907/
+   * Returns null if the URL is not a recognisable MODS delivery file.
    */
-  static String deriveContentZipUrl(String xmlUrl) {
-    if (xmlUrl == null || !xmlUrl.toLowerCase().endsWith(".xml")) {
+  static String deriveEpubDirUrl(String xmlUrl) {
+    if (xmlUrl == null) {
       return null;
     }
-    String base = xmlUrl.substring(0, xmlUrl.length() - ".xml".length());
-    if (base.contains("_mods_")) {
-      return base.replace("_mods_", "_epubs_") + ".zip";
+    Matcher m = MODS_FILENAME_PATTERN.matcher(xmlUrl);
+    if (!m.matches()) {
+      return null;
     }
-    if (base.endsWith("_mods")) {
-      return base.substring(0, base.length() - "_mods".length()) + "_epubs.zip";
-    }
-    // Unknown naming: assume the zip shares the XML's stem.
-    return base + ".zip";
+    return m.group(1) + "epubs_" + m.group(2) + "/";
   }
 
-  /**
-   * Turn an identifier into a candidate filename stem.
-   * ISBN "9782600365185" -> "9782600365185" (hyphens stripped, in case they appear later).
-   * DOI  "10.47421/droz65184" -> "droz65184".
-   */
+  /** ISBN as delivered -> filename stem. Hyphens stripped in case they appear later. */
   static String toFilenameStem(String rawValue) {
     if (rawValue == null) {
       return null;
     }
-    String v = rawValue.trim();
-    if (v.isEmpty()) {
-      return null;
-    }
-    if (v.contains("/")) {
-      v = v.substring(v.lastIndexOf('/') + 1);
-    }
-    v = v.replace("-", "");
+    String v = rawValue.trim().replace("-", "").replace(" ", "");
     return v.isEmpty() ? null : v;
   }
 }

@@ -1,35 +1,3 @@
-/*
-
-Copyright (c) 2000-2026, Board of Trustees of Leland Stanford Jr. University
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-
-1. Redistributions of source code must retain the above copyright notice,
-this list of conditions and the following disclaimer.
-
-2. Redistributions in binary form must reproduce the above copyright notice,
-this list of conditions and the following disclaimer in the documentation
-and/or other materials provided with the distribution.
-
-3. Neither the name of the copyright holder nor the names of its contributors
-may be used to endorse or promote products derived from this software without
-specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
-LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-POSSIBILITY OF SUCH DAMAGE.
-
-*/
-
 package org.lockss.plugin.clockss.librairiedroz;
 
 import org.lockss.daemon.PluginException;
@@ -49,29 +17,24 @@ import java.util.regex.Pattern;
 public class LibrairieDrozBooksXmlArticleIteratorFactory
         implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-    protected static Logger log =
-            Logger.getLogger(LibrairieDrozBooksXmlArticleIteratorFactory.class);
+    // Plain files, no archives:
+    // <base_url><directory>/mods_20260907.xml
+    // <base_url><directory>/mods_20260907.xml.md5sum
+    // <base_url><directory>/epubs_20260907/9782600316095.epub
+    // <base_url><directory>/epubs_20260907/9782600316095.epub.md5sum
+    //
+    // One mods_YYYYMMDD.xml is a <modsCollection> of N books. Each book's epub lives in the
+    // parallel epubs_YYYYMMDD/ directory named after its epub ISBN, so xml and epub share no
+    // stem and cannot be paired by substitution. Iterate on the xml only; the metadata
+    // extractor resolves each record's epub by ISBN.
 
-    protected static final String ALL_XML_PATTERN_TEMPLATE = "\"%s.*\\.xml$\", base_url";
+    protected static Logger log = Logger.getLogger(LibrairieDrozBooksXmlArticleIteratorFactory.class);
 
-    protected static final Pattern NESTED_ARCHIVE_PATTERN =
-            Pattern.compile(".*\\.(zip|epub|tar|tgz|gz)!/.*", Pattern.CASE_INSENSITIVE);
+    protected static final String ROOT_TEMPLATE = "\"%s%s\",base_url,directory";
+    private static final String PATTERN_TEMPLATE = "\"%s%s/.*\\.xml$\",base_url,directory";
 
-    public static final Pattern XML_PATTERN =
-            Pattern.compile("/([^/]+)\\.xml$", Pattern.CASE_INSENSITIVE);
-    public static final String XML_REPLACEMENT = "/$1.xml";
-
-    protected String getIncludePatternTemplate() {
-        return ALL_XML_PATTERN_TEMPLATE;
-    }
-
-    protected Pattern getExcludeSubTreePattern() {
-        return NESTED_ARCHIVE_PATTERN;
-    }
-
-    protected boolean getIsArchive() {
-        return false;
-    }
+    protected static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$");
+    protected static final String XML_REPLACEMENT = "/$1.xml";
 
     @Override
     public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -79,11 +42,9 @@ public class LibrairieDrozBooksXmlArticleIteratorFactory
             throws PluginException {
         SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
 
-        builder.setSpec(builder.newSpec()
-                .setTarget(target)
-                .setPatternTemplate(getIncludePatternTemplate(), Pattern.CASE_INSENSITIVE)
-                .setExcludeSubTreePattern(getExcludeSubTreePattern())
-                .setVisitArchiveMembers(getIsArchive()));
+        builder.setSpec(target,
+                ROOT_TEMPLATE,
+                PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
         builder.addAspect(XML_PATTERN,
                 XML_REPLACEMENT,
@@ -99,4 +60,5 @@ public class LibrairieDrozBooksXmlArticleIteratorFactory
             throws PluginException {
         return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
     }
+
 }

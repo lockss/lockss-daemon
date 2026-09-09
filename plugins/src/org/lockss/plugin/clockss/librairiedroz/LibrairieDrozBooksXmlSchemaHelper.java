@@ -1,8 +1,6 @@
 package org.lockss.plugin.clockss.librairiedroz;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.collections.map.MultiValueMap;
@@ -179,8 +177,8 @@ public class LibrairieDrozBooksXmlSchemaHelper implements SourceXmlSchemaHelper 
   private static final String MODS_ISBN_PDF_FIXED =
       "identifier[@type='isbn'][@displayLabel='pdf']";
 
-  // Exposed so the metadata extractor can read them back out of the raw map when it has to
-  // guess the EPUB filename inside the delivery zip.
+  // Exposed so the metadata extractor can read them back out of the raw map to build the
+  // EPUB filename: <epub ISBN>.epub in the parallel epubs_YYYYMMDD/ directory.
   public static final String KEY_ISBN_PRINT = MODS_ISBN_PRINT;
   public static final String KEY_ISBN_PRINT_FIXED = MODS_ISBN_PRINT_FIXED;
   public static final String KEY_ISBN_EPUB = MODS_ISBN_EPUB;
@@ -287,16 +285,4 @@ public class LibrairieDrozBooksXmlSchemaHelper implements SourceXmlSchemaHelper 
     return null;
   }
 
-  /** Convenience for the extractor: every identifier we could plausibly build a filename from. */
-  public static List<String> filenameCandidateKeys() {
-    List<String> keys = new ArrayList<String>();
-    keys.add(KEY_ISBN_EPUB);
-    keys.add(KEY_ISBN_EPUB_FIXED);
-    keys.add(KEY_ISBN_PRINT);
-    keys.add(KEY_ISBN_PRINT_FIXED);
-    keys.add(KEY_ISBN_PDF);
-    keys.add(KEY_ISBN_PDF_FIXED);
-    keys.add(KEY_DOI);
-    return keys;
-  }
 }
