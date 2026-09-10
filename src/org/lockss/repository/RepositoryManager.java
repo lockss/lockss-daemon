@@ -32,8 +32,10 @@ import java.io.*;
 import java.nio.file.*;
 import java.net.*;
 import java.util.*;
+import java.util.concurrent.*;
 import org.apache.commons.collections4.map.LinkedMap;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.tuple.*;
 
 import org.lockss.app.*;
 import org.lockss.laaws.MigrationManager;
@@ -42,6 +44,7 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
+import org.lockss.laaws.V2AuMover;
 
 
 /**
@@ -181,6 +184,7 @@ public class RepositoryManager
   private long paramDeleteThreadInterval = DEFAULT_DELETEAUS_INTERVAL;
   private Deadline deleteThreadDeadline;
   private AuEventHandler auEventHandler;
+  private ThreadPoolExecutor deleteExecutor;
 
 
   PlatformUtil.DF paramDFWarn =
@@ -224,25 +228,91 @@ public class RepositoryManager
     }
   }
 
-  /**
-   * Deletes an AU from the filesystem immediately by moving it into
-   * the "deleted AUs" directory and expiring the "delete thread".
-   * @param au The {@link ArchivalUnit} to delete.
-   */
-  public void deleteAu(ArchivalUnit au) {
-    if (StringUtil.isNullString(paramMoveDeletedAusTo)) {
-      log.warning("MoveDeletedAusTo is not set!");
-    }
+  // No callers
+//   /**
+//    * Deletes an AU from the filesystem immediately by moving it into
+//    * the "deleted AUs" directory and expiring the "delete thread".
+//    * @param au The {@link ArchivalUnit} to delete.
+//    */
+//   public void deleteAu(ArchivalUnit au) {
+//     if (StringUtil.isNullString(paramMoveDeletedAusTo)) {
+//       log.warning("MoveDeletedAusTo is not set!");
+//     }
 
-    moveDeletedAu(au);
-    deleteThreadDeadline.expire();
+//     moveDeletedAu(au);
+//     deleteThreadDeadline.expire();
+//   }
+
+  class FileDF {
+    final File file;
+    final PlatformUtil.DF df;
+    FileDF(File file, PlatformUtil.DF df) {
+      this.file = file;
+      this.df = df;
+    }
   }
 
-  private class DeleteAusToDeleteThread extends LockssThread {
-    boolean keepGoing = true;
+  /** Return the migrated dir on the disk with the least free space */
+  File findDirOnMostFullDisk() {
+    List<FileDF> pairs = getDiskSpaceList();
+    return findDirOnMostFullDisk(pairs);
+  }
 
-    protected DeleteAusToDeleteThread() {
-      super("DeleteAusToDelete");
+  /** Return the migrated dir on the disk with the least free space.
+   * @param fdfs DF info for each disk
+   */
+  File findDirOnMostFullDisk(List<FileDF> fdfs) {
+    Collections.sort(fdfs, ascendingSpaceComparator);
+    for (FileDF fdf : fdfs) {
+      for (File migDir : fdf.file.listFiles()) {
+        if (activeDeletes.contains(migDir)) {
+          continue;
+        }
+        return migDir;
+      }
+    }
+    return null;
+  }
+
+  /** Comparator that sorts be increasing free space */
+  Comparator<FileDF> ascendingSpaceComparator =
+    new Comparator<FileDF>()  {
+      public int compare(FileDF f1,
+                         FileDF f2) {
+        return Long.compare(f1.df.getAvail(),
+                            f2.df.getAvail());
+      }
+    };
+
+  /** Return list of FileDF objects with space info for each disk in
+   * repository */
+  List<FileDF> getDiskSpaceList() {
+    String delRoot = paramMoveDeletedAusTo;
+    List<FileDF> fdfs = new ArrayList<>();
+    if (StringUtil.isNullString(delRoot)) {
+      throw new IllegalStateException(PARAM_MOVE_DELETED_AUS_TO +" is not set.");
+    }
+    for (String repoName : getRepositoryList()) {
+      File deletedAusDir =
+        new File(LockssRepositoryImpl.getLocalRepositoryPath(repoName), delRoot);
+      if (deletedAusDir.isDirectory()) {
+        PlatformUtil.DF df = platInfo.getDF(deletedAusDir.toString());
+        fdfs.add(new FileDF(deletedAusDir, df));
+      }
+    }
+    return fdfs;
+  }
+
+  // Mechanism to feed migrated dirs to executor pool of dir tree deleters
+
+  Set<File> activeDeletes = Collections.synchronizedSet(new HashSet<>());
+
+  private class DeleteAusThread extends LockssThread {
+    boolean keepGoing = true;
+    BlockingQueue deleteQueue;
+
+    protected DeleteAusThread() {
+      super("DeleteAus");
     }
 
     public void stopDeleteThread() {
@@ -252,26 +322,70 @@ public class RepositoryManager
 
     @Override
     protected void lockssRun() {
-      setPriority(PRIORITY_PARAM_DELETEAUS_THREAD, PRIORITY_DEFAULT_DELETEAUS_THREAD);
-
+      setPriority(PRIORITY_PARAM_DELETEAUS_THREAD,
+                  PRIORITY_DEFAULT_DELETEAUS_THREAD);
+      deleteQueue = deleteExecutor.getQueue();
       while (keepGoing) {
-        try {
-          deleteAusToDelete();
-          deleteThreadDeadline.sleep();
-          deleteThreadDeadline.expireIn(paramDeleteThreadInterval);
-        } catch (InterruptedException e) {
-          // just wakeup and check for exit
+        // Wait until the queue is empty
+        while (deleteQueue.remainingCapacity() < 1) {
+          try {
+            Thread.sleep(10_000);
+          } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt(); break;
+          }
         }
+        File next = findDirOnMostFullDisk();
+        activeDeletes.add(next);
+        deleteExecutor.execute(new Deleter(next));
+      }
+    }
+
+    class Deleter extends LockssRunnable {
+      File dir;
+
+      Deleter(File dir) {
+        super("Dir deleter: " + dir);
+        this.dir = dir;
+      }
+
+      public void lockssRun() {
+        setPriority(PRIORITY_PARAM_DELETEAUS_THREAD, PRIORITY_DEFAULT_DELETEAUS_THREAD);
+        try {
+          FileUtil.fastDelTree(dir);
+        } catch (IOException e) {
+        }
+        activeDeletes.remove(dir);
       }
     }
   }
+//     @Override
+//     protected void lockssRun() {
+//       setPriority(PRIORITY_PARAM_DELETEAUS_THREAD, PRIORITY_DEFAULT_DELETEAUS_THREAD);
+//       while (keepGoing) {
+//         try {
+//           deleteAusToDelete();
+//           deleteThreadDeadline.sleep();
+//           deleteThreadDeadline.expireIn(paramDeleteThreadInterval);
+//         } catch (InterruptedException e) {
+//           // just wakeup and check for exit
+//         }
+//       }
+//     }
+//   }
 
   private void deleteAusToDelete() {
     for (String repoName : getRepositoryList()) {
       String repoRoot =
           LockssRepositoryImpl.getLocalRepositoryPath(repoName);
 
-      File deletedAusDir = new File(repoRoot, paramMoveDeletedAusTo);
+      String delRoot = paramMoveDeletedAusTo;
+      if (StringUtil.isNullString(delRoot)) {
+        String msg = "Deletion process exiting: " +
+          PARAM_MOVE_DELETED_AUS_TO + " is not set.";
+        log.error(msg);
+        throw new RuntimeException(msg);
+      }
+      File deletedAusDir = new File(repoRoot, delRoot);
 
       if (deletedAusDir.isDirectory()) {
         // Iterate over all AUs under deletedAusDir and call delTree
@@ -457,6 +571,12 @@ public class RepositoryManager
           if (getDaemon().getMigrationManager().isRealMigrationMode()
               && deleteAusAfterMigration
               && !StringUtil.isNullString(paramMoveDeletedAusTo)) {
+            deleteExecutor =
+              V2AuMover.createOrReConfigureExecutor(deleteExecutor, config,
+                                                   V2AuMover.PARAM_DELETE_EXECUTOR_SPEC,
+                                                   V2AuMover.DEFAULT_DELETE_EXECUTOR_SPEC);
+
+
             startOrKickDeleteAusThread();
           } else {
             stopDeleteAusThread();
@@ -638,7 +758,7 @@ public class RepositoryManager
   private Set sizeCalcQueue = new HashSet();
   private BinarySemaphore sizeCalcSem = new BinarySemaphore();
   private SizeCalcThread sizeCalcThread;
-  private DeleteAusToDeleteThread deleteAusThread;
+  private DeleteAusThread deleteAusThread;
 
   /** engqueue a size calculation for the AU */
   public void queueSizeCalc(ArchivalUnit au) {
@@ -682,7 +802,7 @@ public class RepositoryManager
   void startOrKickDeleteAusThread() {
     if (deleteAusThread == null) {
       log.debug2("Starting delete AUs thread");
-      deleteAusThread = new DeleteAusToDeleteThread();
+      deleteAusThread = new DeleteAusThread();
       deleteAusThread.start();
     }
   }

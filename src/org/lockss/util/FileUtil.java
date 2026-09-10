@@ -37,6 +37,7 @@ import java.nio.file.attribute.*;
 import java.nio.channels.*;
 import java.util.*;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.FileUtils;
 import org.apache.oro.text.regex.*;
 
 /** Utilities for Files
@@ -472,31 +473,64 @@ public class FileUtil {
   /** Delete the contents of a directory, leaving the empty directory.
    * @return true iff successful */
   public static boolean emptyDir(File dir) {
-    String files[] = dir.list();
-    if (files == null) {
-      return false;		  // true would imply there's an empty
-				  // dir, which there doesn't seem to be
+    try {
+      FileUtils.cleanDirectory(dir);
+    } catch (IOException e) {
+      log.debug("Failed to empty dir, returning false: " + dir, e);
+      return false;
     }
-    boolean ret = true;
-    for (int i = 0; i < files.length; i++) {
-      File f = new File(dir, files[i]);
-      if (f.isDirectory()) {
-	ret = ret && emptyDir(f);
-      }
-      if (!f.delete()) {
-	ret = false;
-      }
-    }
-    return ret;
+    return true;
   }
 
   /** Delete a directory and its contents.
    * @return true iff successful */
   public static boolean delTree(File dir) {
-    emptyDir(dir);
-    if (dir.delete()) {
+    if (!dir.exists()) {
       return true;
-    } else return !dir.exists();
+    }
+    return FileUtils.deleteQuietly(dir);
+  }
+
+  /** Delete a directory and its contents.
+   * @return true iff successful */
+  public static boolean fastDelTree(File dir) throws IOException {
+    return fastDelTree(dir.toPath());
+  }
+
+  /** Delete a directory and its contents.
+   * @return true iff successful */
+  public static boolean fastDelTree(Path dir) throws IOException {
+    Path normPath = dir.normalize();
+    if (!Files.exists(normPath)) {
+      return true;
+    }
+    String normStr = normPath.toString();
+    if (!normStr.startsWith(File.separator) || normStr.equals(File.separator)) {
+      throw new IllegalArgumentException("Illegal path " + dir);
+    }
+    ProcessBuilder pb = new ProcessBuilder();
+    pb.command("/bin/rm", "-rf", normStr);
+    pb.redirectErrorStream(true);
+    log.debug2("fastDelTree: " + pb.command());
+    Process proc = pb.start();
+    try (BufferedReader br =
+         new BufferedReader(new InputStreamReader(proc.getInputStream()))) {
+      String pref = "rm -rf " + normStr + ": ";
+      String line;
+      int cnt = 100;
+      while ((line = br.readLine()) != null) {
+        if (--cnt == 0) {
+          log.warning("Maximum error logging reached.");
+        }
+        if (cnt >= 0) {
+          log.warning(pref + line);
+        }
+      }
+    } catch (IOException e) {
+      log.error("Error reading from 'rm' process", e);
+      throw e;
+    }
+    return true;
   }
 
   private static File generateFile(String prefix, String suffix, File dir)

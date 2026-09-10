@@ -268,6 +268,7 @@ public class TestFileUtil extends LockssTestCase {
     assertTrue(new File(d1, "d1f1").createNewFile());
     assertTrue(new File(d2, "d2f1").createNewFile());
     assertFalse(dir.delete());
+    assertTrue(dir.exists());
     assertTrue(FileUtil.delTree(dir));
     assertFalse(dir.exists());
   }
@@ -277,6 +278,28 @@ public class TestFileUtil extends LockssTestCase {
     File d1 = new File(dir, "foo");
     assertFalse(d1.exists());
     assertTrue(FileUtil.delTree(d1));
+  }
+
+  public void testFastDelTree() throws IOException {
+    File dir = getTempDir("deltreey");
+    File d1 = new File(dir, "foo");
+    assertTrue(d1.mkdir());
+    File d2 = new File(d1, "bar");
+    assertTrue(d2.mkdir());
+    assertTrue(new File(dir, "f1").createNewFile());
+    assertTrue(new File(d1, "d1f1").createNewFile());
+    assertTrue(new File(d2, "d2f1").createNewFile());
+    assertFalse(dir.delete());
+    assertTrue(dir.exists());
+    assertTrue(FileUtil.fastDelTree(dir));
+    assertFalse(dir.exists());
+  }
+
+  public void testFastDelTreeNoDir() throws IOException {
+    File dir = getTempDir("deltree");
+    File d1 = new File(dir, "foo");
+    assertFalse(d1.exists());
+    assertTrue(FileUtil.fastDelTree(d1));
   }
 
   public void testEmptyDir() throws IOException {
