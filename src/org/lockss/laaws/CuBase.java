@@ -60,6 +60,7 @@ public class CuBase extends Worker {
   protected String v1Url;
   protected boolean isPartialContent;
   protected FailedCu fcu;
+  protected int maxVersions;
 
   /** Maps each actual publisher URL from which any of the versions of
    * this CU was collected to a list of CUs (possibly
@@ -70,6 +71,10 @@ public class CuBase extends Worker {
    */
   protected ListValuedMap<String,CachedUrl> mappedCus =
     new ArrayListValuedHashMap<>();
+
+  /** Accumulates CUs that aren't being added to mappedCus so need to
+   * be released. */
+  private List<CachedUrl> toRelease;
 
   protected static StatusLine STATUS_LINE_OK =
     new BasicStatusLine(new ProtocolVersion("HTTP", 1, 1), 200, "OK");
@@ -96,8 +101,9 @@ public class CuBase extends Worker {
   // refactoring, or might be more easily dealt with by limiting the
   // number of versions that are copied (with a config param?)
   void buildCompatMap(CachedUrl cu) {
+    maxVersions = auMover.getMaxVersions(auid, cu.getUrl());
     CachedUrl[] v1Versions = cu.getCuVersions();
-    List<CachedUrl> toRelease = new ArrayList<>();
+    toRelease = new ArrayList<>();
     try {
       for (CachedUrl cuVer : v1Versions) {
         String v1Url = cuVer.getUrl();
@@ -122,16 +128,16 @@ public class CuBase extends Worker {
             // This was collected as "foo/", not the result of a redirect.
             // Copy it only as "foo/"
             V2CompatCachedUrl v2cuVer = new V2CompatCachedUrl(cuVer, nodeUrl);
-            mappedCus.put(nodeUrl, v2cuVer);
+            addUpToMax(nodeUrl, v2cuVer);
           } else if (UrlUtil.isDirectoryRedirection(v1Url, redirTo)) {
             // This was redirected from "foo" to "foo/".  Copy as both
             // "foo" and "foo/" to match what V2 would have collected
             V2CompatCachedUrl v2cuVer = new V2CompatCachedUrl(cuVer, redirTo);
-            mappedCus.put(v1Url, cuVer);
-            mappedCus.put(redirTo, v2cuVer);
+            addUpToMax(v1Url, cuVer);
+            addUpToMax(redirTo, v2cuVer);
           } else {
             // No slash - V2 name is the same
-            mappedCus.put(v1Url, cuVer);
+            addUpToMax(v1Url, cuVer);
           }
         } catch (Exception e) {
           String err = "Couldn't read props for " + cuVer + ", skipping";
@@ -148,6 +154,17 @@ public class CuBase extends Worker {
       for (CachedUrl relCu : toRelease) {
         AuUtil.safeRelease(relCu);
       }
+    }
+  }
+
+  /** Add cuVer to the mappedCus map iff the list associated with
+   * v2Url is shorter than maxVersions, otherwise add to toRelease. */
+  void addUpToMax(String v2Url, CachedUrl cuVer) {
+    List<CachedUrl> lst = mappedCus.get(v2Url);
+    if (lst == null || lst.size() < maxVersions) {
+      mappedCus.put(v2Url, cuVer);
+    } else {
+      toRelease.add(cuVer);
     }
   }
 
@@ -172,7 +189,8 @@ public class CuBase extends Worker {
   }
 
   /** Find the existing artifacts for this URL on the target, return
-   * them in a {version -> artifact} map */
+   * them in a {version -> artifact} map.  Process only the most
+   * recent maxVersions versions. */
   protected Map<Integer,Artifact> getV2ArtifactsForUrl(String auId,
                                                        String v2Url,
                                                        boolean includeUncommitted)
@@ -180,18 +198,35 @@ public class CuBase extends Worker {
     String token = null;
     Map<Integer,Artifact> verMap = new HashMap<>();
     log.debug3("Fetching V2 Artifacts for " + v2Url);
+    boolean truncated = false;
     do {
       ArtifactPageInfo pageInfo =
         artifactsApi.getArtifacts(auId, namespace, v2Url, null,
                                   "all", includeUncommitted, null, token);
       for (Artifact art : pageInfo.getArtifacts()) {
+        if (verMap.size() >= maxVersions) {
+          // If we've reached maxVersions and there's another version,
+          // truncation occurred
+          truncated = true;
+          break;
+        }
         verMap.put(art.getVersion(), art);
       }
       token = (pageInfo.getPageInfo() != null)
         ? pageInfo.getPageInfo().getContinuationToken()
         : null;
-    } while (!isAbort() && !StringUtil.isNullString(token));
-    log.debug3("Found " + verMap.size() + " artifacts for " + v2Url);
+      // If we've reached maxVersions and there's another page,
+      // truncation occurred
+      truncated |= (verMap.size() >= maxVersions &&
+                    !StringUtil.isNullString(token));
+    } while (!isAbort() &&
+             !StringUtil.isNullString(token) &&
+             verMap.size() < maxVersions);
+    if (truncated) {
+      log.debug3("Found " + verMap.size() + " artifacts (truncated) for " + v2Url);
+    } else {
+      log.debug3("Found " + verMap.size() + " artifacts for " + v2Url);
+    }
     return verMap;
   }
 
