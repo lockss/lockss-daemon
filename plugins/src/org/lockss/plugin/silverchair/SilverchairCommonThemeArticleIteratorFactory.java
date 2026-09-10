@@ -66,7 +66,7 @@ public class SilverchairCommonThemeArticleIteratorFactory implements ArticleIter
     // vol/issue/page/id must all be numeric, and slug must be the final segment
     // since we got doi as relative url as in <div class="comment">doi: <a class="link" href="10.1666/13-053" target="_blank">10.1666/13-053</a>.</div>
     private static Pattern HTML_PATTERN = Pattern.compile(
-            "/article/([\\w-]+/[\\w-]+/[^/]+/\\d+)/([A-Z][A-Z0-9-]*)$",
+            "/article/([\\w-]+/[\\w-]+/[^/]+/\\d+)/([\\w][\\w-]*)$",
             Pattern.CASE_INSENSITIVE);
 
     private static String HTML_REPLACEMENT = "/article/$1/$2";
