@@ -95,6 +95,8 @@ public class TestCuIterable extends LockssTestCase {
 				  CuIterOptions.PARAM_INCLUDED_ONLY, "true");
     assertEquals(ListUtil.list(cu1),
 		 ListUtil.fromIterable(makeIterable(cus)));
+    assertEquals(ListUtil.list(cu1, cu2),
+		 ListUtil.fromIterable(makeIterable(cus).setIncludedOnly(false).setIncludedOnly(false)));
   }
 
   CuIterable makeIterable(final CachedUrlSet cus) {
