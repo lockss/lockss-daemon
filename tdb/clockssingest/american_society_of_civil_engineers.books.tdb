@@ -594,7 +594,7 @@
     au < frozen ; exists ; 2006 ; 9780784408094 ; 9780784471258 ; 9780784408094 ; STANDARD ASCE/SEI 7-05 (9780784408094) ; >
     au < ready ; exists ; 2006 ; 9780784408186 ; 9780784471319 ; 9780784408186 ; STANDARD ASCE/SEI 24-05 (9780784408186) ; >
     au < ready ; exists ; 2006 ; 9780784408117 ; 9780784471272 ; 9780784408117 ; STANDARD ASCE/SEI 12-05, 13-05, 14-05 (9780784408117) ; >
-    au < ready ; exists ; 2006 ; 9780784408063 ; 9780784471241 ; 9780784408063 ; STANDARD ASCE/EWRI 45-05, 46-05, 47-05 (9780784408063) ; >
+    au < crawling ; exists ; 2006 ; 9780784408063 ; 9780784471241 ; 9780784408063 ; STANDARD ASCE/EWRI 45-05, 46-05, 47-05 (9780784408063) ; >
     au < ready ; exists ; 2006 ; 9780784408377 ; 9780784471449 ; 9780784408377 ; STANDARD ASCE/SEI 48-05 (9780784408377) ; >
     au < ready ; exists ; 2006 ; 9780784408735 ; 9780784471678 ; 9780784408735 ; STANDARD ANSI/ASCE/T&DI 21-05 (9780784408735) ; >
     au < ready ; exists ; 2007 ; 9780784408742 ; 9780784471685 ; 9780784408742 ; STANDARD ASCE/SEI/SFPE 29-05 (9780784408742) ; >
@@ -784,7 +784,7 @@
     au < ready ; exists ; 1991 ; 9780872627765 ; 9780784479544 ; 9780872627765 ; Coastal Engineering 1990 (9780872627765) ; >
     au < frozen ; exists ; 1993 ; 9780872629332 ; 9780784479537 ; 9780872629332 ; Coastal Engineering 1992 (9780872629332) ; >
     au < crawling ; exists ; 1995 ; 9780784400890 ; 9780784479520 ; 9780784400890 ; Coastal Engineering 1994 (9780784400890) ; >
-    au < ready ; exists ; 1995 ; 9780784401316 ; 9780784473924 ; 9780784401316 ; Nondestructive Testing Methods for Civil Infrastructure (9780784401316) ; >
+    au < crawling ; exists ; 1995 ; 9780784401316 ; 9780784473924 ; 9780784401316 ; Nondestructive Testing Methods for Civil Infrastructure (9780784401316) ; >
     au < frozen ; exists ; 1996 ; 9780784402061 ; 9780784479452 ; 9780784402061 ; Analysis and Design of Retaining Structures against Earthquakes, GSP 60 (9780784402061) ; >
     au < crawling ; exists ; 1996 ; 9780784401774 ;  ; 9780784401774 ; Engineering, Construction, and Operations in Space V (9780784401774) ; >
     au < ready ; exists ; 1997 ; 9780784402443 ; 9780784481370 ; 9780784402443 ; Trenchless Pipeline Projects, Practical Applications (9780784402443) ; >
@@ -797,7 +797,7 @@
     au < frozen ; exists ; 1999 ; 9780784404300 ;  ; 9780784404300 ; WRPMD'99, Preparing for the 21st Century (9780784404300) ; >
     au < exists ; exists ; 1999 ; 9780784404065 ; 9780784478080 ; 9780784404065 ; Jacked Tunnel Design and Construction, GSP 87 (9780784404065) ; >
     au < ready ; exists ; 1999 ; 9780784404409 ;  ; 9780784404409 ; Waterpower '99, Hydro's Future: Technology, Markets, and Policy (9780784404409) ; >
-    au < ready ; exists ; 2000 ; 9780784405376 ; 9780784479445 ; 9780784405376 ; Judgment and Innovation, The Heritage and Future of the Geotechnical Engineering Profession, GSP 111 (9780784405376) ; >
+    au < crawling ; exists ; 2000 ; 9780784405376 ; 9780784479445 ; 9780784405376 ; Judgment and Innovation, The Heritage and Future of the Geotechnical Engineering Profession, GSP 111 (9780784405376) ; >
     au < ready ; exists ; 2000 ; 9780784404751 ;  ; 9780784404751 ; Construction Congress VI, Building Together for a Better Tomorrow in an Increasingly Complex World (9780784404751) ; >
     au < frozen ; exists ; 2000 ; 9780784404768 ;  ; 9780784404768 ; Robotics 2000 (9780784404768) ; >
     au < frozen ; exists ; 2000 ; 9780784404799 ;  ; 9780784404799 ; Space 2000 (9780784404799) ; >
@@ -827,7 +827,7 @@
     au < ready ; exists ; 2000 ; 9780784405307 ;  ; 9780784405307 ; The 2020 Vision of Air Transportation, Emerging Issues and Innovative Solutions (9780784405307) ; >
     au < frozen ; exists ; 2000 ; 9780784405178 ;  ; 9780784405178 ; Building Partnerships (9780784405178) ; >
     au < frozen ; exists ; 2000 ; 9780784405499 ;  ; 9780784405499 ; Coastal Engineering 2000 (9780784405499) ; >
-    au < ready ; exists ; 2001 ; 9780784405529 ;  ; 9780784405529 ; Soft Ground Technology, GSP 112 (9780784405529) ; >
+    au < crawling ; exists ; 2001 ; 9780784405529 ;  ; 9780784405529 ; Soft Ground Technology, GSP 112 (9780784405529) ; >
     au < ready ; exists ; 2001 ; 9780784405550 ;  ; 9780784405550 ; Ports '01, America's Ports: Gateway to the Global Economy (9780784405550) ; >
     au < frozen ; exists ; 2001 ; 9780784405628 ;  ; 9780784405628 ; Integrated Surface and Ground Water Management (9780784405628) ; >
     au < frozen ; exists ; 2001 ; 9780784404997 ;  ; 9780784404997 ; Watershed Management and Operations Management 2000 (9780784404997) ; >
@@ -861,12 +861,12 @@
     au < ready ; exists ; 2002 ; 9780784406427 ; 9780784478189 ; 9780784406427 ; Electrical Transmission in a New Age (9780784406427) ; >
     au < ready ; exists ; 2002 ; 9780784406441 ;  ; 9780784406441 ; Global Solutions for Urban Drainage (9780784406441) ; >
     au < ready ; exists ; 2002 ; 9780784406403 ;  ; 9780784406403 ; Carbonate Beaches 2000 (9780784406403) ; >
-    au < ready ; exists ; 2002 ; 9780784406502 ;  ; 9780784406502 ; Environmental and Water Resources History (9780784406502) ; >
+    au < crawling ; exists ; 2002 ; 9780784406502 ;  ; 9780784406502 ; Environmental and Water Resources History (9780784406502) ; >
     au < ready ; exists ; 2002 ; 9780784406526 ;  ; 9780784406526 ; Computing in Civil Engineering (2002) (9780784406526) ; >
     au < ready ; exists ; 2002 ; 9780784406410 ;  ; 9780784406410 ; Pipelines 2002, Beneath Our Feet, Challenges and Solutions (9780784406410) ; >
     au < ready ; exists ; 2002 ; 9780784406557 ;  ; 9780784406557 ; Hydraulic Measurements and Experimental Methods 2002 (9780784406557) ; >
     au < ready ; exists ; 2002 ; 9780784406540 ;  ; 9780784406540 ; American Civil Engineering History, The Pioneering Years (9780784406540) ; >
-    au < ready ; exists ; 2002 ; 9780784406465 ;  ; 9780784406465 ; Designing, Constructing, Maintaining, and Financing Today's Airport Projects (9780784406465) ; >
+    au < crawling ; exists ; 2002 ; 9780784406465 ;  ; 9780784406465 ; Designing, Constructing, Maintaining, and Financing Today's Airport Projects (9780784406465) ; >
     au < ready ; exists ; 2012 ; 9780784406595 ;  ; 9780784406595 ; Soil Behavior and Soft Ground Construction (9780784406595) ; >
     au < ready ; exists ; 2002 ; 9780784406632 ;  ; 9780784406632 ; Grouting and Ground Treatment, GSP 120 (9780784406632) ; >
     au < crawling ; exists ; 2002 ; 9780784406717 ;  ; 9780784406717 ; Construction Research Congress, Wind of Change: Integration and Innovation (9780784406717) ; >
@@ -938,7 +938,7 @@
     au < ready ; exists ; 2012 ; 9780784408223 ;  ; 9780784408223 ; Seismic Performance and Simulation of Pile Foundations in Liquefied and Laterally Spreading Ground (9780784408223) ; >
     au < ready ; exists ; 2006 ; 9780784408254 ; 9780784471364 ; 9780784408254 ; Asphalt Concrete, Simulation, Modeling, and Experimental Characterization, GSP 146 (9780784408254) ; >
     au < ready ; exists ; 2012 ; 9780784408261 ;  ; 9780784408261 ; Composite Construction in Steel and Concrete V (9780784408261) ; >
-    au < ready ; exists ; 2012 ; 9780784408032 ;  ; 9780784408032 ; GeoCongress 2006 (9780784408032) ; >
+    au < crawling ; exists ; 2012 ; 9780784408032 ;  ; 9780784408032 ; GeoCongress 2006 (9780784408032) ; >
     au < ready ; exists ; 2006 ; 9780784408308 ; 9780784471418 ; 9780784408308 ; Earth & Space 2006, Engineering, Construction, and Operations in Challenging Environments (9780784408308) ; >
     au < ready ; exists ; 2006 ; 9780784408025 ; 9780784471227 ; 9780784408025 ; Unsaturated Soils 2006, GSP 147 (9780784408025) ; >
     au < ready ; exists ; 2006 ; 9780784407981 ;  ; 9780784407981 ; Building Integration Solutions, Building Integration Solutions (9780784407981) ; >
@@ -1015,7 +1015,7 @@
     au < frozen ; exists ; 2008 ; 9780784409909 ; 9780784472453 ; 9780784409909 ; Estuarine and Coastal Modeling (2007) (9780784409909) ; >
     au < ready ; exists ; 2008 ; 9780784409862 ; 9780784472415 ; 9780784409862 ; Pavements and Materials, Characterization, Modeling, and Simulation, GSP 182 (9780784409862) ; >
     au < ready ; exists ; 2008 ; 9780784409886 ;  ; 9780784409886 ; Earth & Space 2008, Engineering, Science, Construction, and Operations in Challenging Environments (9780784409886) ; >
-    au < ready ; exists ; 2008 ; 9780784410028 ; 9780784472552 ; 9780784410028 ; AEI 2008, Building Integration Solutions (9780784410028) ; >
+    au < crawling ; exists ; 2008 ; 9780784410028 ; 9780784472552 ; 9780784410028 ; AEI 2008, Building Integration Solutions (9780784410028) ; >
     au < ready ; exists ; 2008 ; 9780784410035 ;  ; 9780784410035 ; Sinkholes and the Engineering and Environmental Impacts of Karst (2008), GSP 183 (9780784410035) ; >
     au < frozen ; exists ; 2012 ; 9780784407820 ;  ; 9780784407820 ; Geosynthetics Research and Development in Progress (9780784407820) ; >
     au < ready ; exists ; 2008 ; 9780784410059 ;  ; 9780784410059 ; Airfield and Highway Pavements, Efficient Pavements Supporting Transportation’s Future (9780784410059) ; >
@@ -1076,14 +1076,14 @@
     au < ready ; exists ; 2010 ; 9780784411278 ; 9780784476055 ; 9780784411278 ; ICCTP 2010, Integrated Transportation Systems: Green, Intelligent, Reliable (9780784411278) ; >
     au < ready ; exists ; 2010 ; 9780784411230 ; 9780784476079 ; 9780784411230 ; Traffic and Transportation Studies 2010 (9780784411230) ; >
     au < frozen ; exists ; 2010 ; 9780784411285 ; 9780784476062 ; 9780784411285 ; Earth Retention Conference 3, GSP 208 (9780784411285) ; >
-    au < ready ; exists ; 2010 ; 9780784411292 ; 9780784476086 ; 9780784411292 ; Pavements and Materials, Testing and Modeling in Multiple Length Scales, TEMSP 1 (9780784411292) ; >
+    au < crawling ; exists ; 2010 ; 9780784411292 ; 9780784476086 ; 9780784411292 ; Pavements and Materials, Testing and Modeling in Multiple Length Scales, TEMSP 1 (9780784411292) ; >
     au < frozen ; exists ; 2010 ; 9780784411384 ; 9780784476093 ; 9780784411384 ; Pipelines 2010, Climbing New Peaks to Infrastructure Reliability—Renew, Rehab, and Reinvest (9780784411384) ; >
     au < frozen ; exists ; 2010 ; 9780784411391 ; 9780784476116 ; 9780784411391 ; ICLEM 2010, Logistics for Sustained Economic Development—Infrastructure, Information, Integration (9780784411391) ; >
     au < ready ; exists ; 2010 ; 9780784411216 ; 9780784476819 ; 9780784411216 ; Estuarine and Coastal Modeling (2009) (9780784411216) ; >
     au < ready ; exists ; 2010 ; 9780784411414 ; 9780784476130 ; 9780784411414 ; Hoover Dam (9780784411414) ; >
     au < ready ; exists ; 2011 ; 9780784411445 ; 9780784476147 ; 9780784411445 ; GeoTrends, The Progress of Geological and Geotechnical Engineering in Colorado at the Cusp of a New Decade, GPP 6 (9780784411445) ; >
     au < ready ; exists ; 2010 ; 9780784411476 ; 9780784476154 ; 9780784411476 ; Scour and Erosion, GSP 210 (9780784411476) ; >
-    au < ready ; exists ; 2011 ; 9780784411483 ; 9780784476161 ; 9780784411483 ; Green Streets and Highways 2010, An Interactive Conference on the State of the Art and How to Achieve Sustainable Outcomes (9780784411483) ; >
+    au < crawling ; exists ; 2011 ; 9780784411483 ; 9780784476161 ; 9780784411483 ; Green Streets and Highways 2010, An Interactive Conference on the State of the Art and How to Achieve Sustainable Outcomes (9780784411483) ; >
     au < frozen ; exists ; 2011 ; 9780784411490 ; 9780784476178 ; 9780784411490 ; Indo-U.S. Forensic Practices, Investigation Techniques and Technology (9780784411490) ; >
     au < ready ; exists ; 2010 ; 9780784411438 ; 9780784476185 ; 9780784411438 ; Watershed Management 2010, Innovations in Watershed Management under Land Use and Climate Change (9780784411438) ; >
     au < ready ; exists ; 2011 ; 9780784411469 ; 9780784476536 ; 9780784411469 ; Geotechnical Characterization, Field Measurement, and Laboratory Testing of Municipal Solid Waste, GSP 209 (9780784411469) ; >
@@ -1131,7 +1131,7 @@
     au < crawling ; exists ; 2012 ; 9780784412442 ;  ; 9780784412442 ; CICTP 2012, Multimodal Transportation Systems—Convenient, Safe, Cost-Effective, Efficient (9780784412442) ; >
     au < ready ; exists ; 2012 ; 9780784412435 ;  ; 9780784412435 ; Civil Engineering and Urban Planning 2012 (9780784412435) ; >
     au < ready ; exists ; 2012 ; 9780784412350 ;  ; 9780784412350 ; Grouting and Deep Mixing 2012, GSP 228 (9780784412350) ; >
-    au < ready ; exists ; 2012 ; 9780784412480 ; 9780784477168 ; 9780784412480 ; Pipelines 2012, Innovations in Design, Construction, Operations, and Maintenance, Doing More with Less (9780784412480) ; >
+    au < crawling ; exists ; 2012 ; 9780784412480 ; 9780784477168 ; 9780784412480 ; Pipelines 2012, Innovations in Design, Construction, Operations, and Maintenance, Doing More with Less (9780784412480) ; >
     au < ready ; exists ; 2012 ; 9780784412473 ; 9780784477120 ; 9780784412473 ; Cold Regions Engineering 2012, Sustainable Infrastructure Development in a Changing Cold Environment (9780784412473) ; >
     au < ready ; exists ; 2013 ; 9780784412527 ; 9780784477007 ; 9780784412527 ; Storm Surge Barriers to Protect New York City, Against the Deluge (9780784412527) ; >
     au < frozen ; exists ; 2013 ; 9780784412602 ;  ; 9780784412602 ; ICLEM 2012, Logistics for Sustained Economic Development—Technology and Management for Efficiency (9780784412602) ; >
@@ -1177,7 +1177,7 @@
     au < frozen ; exists ; 2014 ; 9780784413418 ;  ; 9780784413418 ; Pavement Materials, Structures, and Performance (9780784413418) ; >
     au < ready ; exists ; 2014 ; 9780784413456 ;  ; 9780784413456 ; New Frontiers in Geotechnical Engineering (9780784413456) ; >
     au < ready ; exists ; 2014 ; 9780784413432 ;  ; 9780784413432 ; Geoenvironmental Engineering (9780784413432) ; >
-    au < ready ; exists ; 2014 ; 9780784413425 ;  ; 9780784413425 ; Advances in Soil Dynamics and Foundation Engineering (9780784413425) ; >
+    au < crawling ; exists ; 2014 ; 9780784413425 ;  ; 9780784413425 ; Advances in Soil Dynamics and Foundation Engineering (9780784413425) ; >
     au < ready ; exists ; 2014 ; 9780784413364 ; 9780784478363 ; 9780784413364 ; Challenges and Advances in Sustainable Transportation Systems, Plan, Design, Build, Manage, and Maintain (9780784413364) ; >
     au < ready ; exists ; 2014 ; 9780784413388 ;  ; 9780784413388 ; Soil Behavior and Geomechanics (9780784413388) ; >
     au < frozen ; exists ; 2014 ; 9780784413449 ;  ; 9780784413449 ; Tunneling and Underground Construction (9780784413449) ; >
@@ -1187,7 +1187,7 @@
     au < frozen ; exists ; 2014 ; 9780784413586 ;  ; 9780784413586 ; T&DI Congress 2014 (9780784413586) ; >
     au < frozen ; exists ; 2014 ; 9780784413548 ;  ; 9780784413548 ; World Environmental and Water Resources Congress 2014 (9780784413548) ; >
     au < crawling ; exists ; 2014 ; 9780784413203 ; 9780784478226 ; 9780784413203 ; Seismic Hazard Design Issues in the Central United States, CDRM 7 (9780784413203) ; >
-    au < ready ; exists ; 2014 ; 9780784413616 ;  ; 9780784413616 ; Computing in Civil and Building Engineering (2014) (9780784413616) ; >
+    au < crawling ; exists ; 2014 ; 9780784413616 ;  ; 9780784413616 ; Computing in Civil and Building Engineering (2014) (9780784413616) ; >
     au < frozen ; exists ; 2014 ; 9780784478509 ;  ; 9780784478509 ; Advances in Transportation Geotechnics and Materials for Sustainable Infrastructure (9780784478509) ; >
     au < frozen ; exists ; 2014 ; 9780784478455 ;  ; 9780784478455 ; Innovative and Sustainable Use of Geomaterials and Geosystems (9780784478455) ; >
     au < frozen ; exists ; 2014 ; 9780784478462 ;  ; 9780784478462 ; Design, Analysis, and Asphalt Material Characterization for Road and Airfield Pavements (9780784478462) ; >
@@ -1221,11 +1221,11 @@
     au < frozen ; exists ; 2015 ;  ; 9780784479179 ; 9780784479179 ; Earth and Space 2014, Engineering for Extreme Environments (9780784479179) ; >
     au < ready ; exists ; 2015 ;  ; 9780784479247 ; 9780784479247 ; Computing in Civil Engineering 2015 (9780784479247) ; >
     au < frozen ; exists ; 2015 ;  ; 9780784479292 ; 9780784479292 ; CICTP 2015, Efficient, Safe, and Green Multimodal Transportation (9780784479292) ; >
-    au < ready ; exists ; 2015 ;  ; 9780784479315 ; 9780784479315 ; Cold Regions Engineering 2015, Developing and Maintaining Resilient Infrastructure (9780784479315) ; >
+    au < crawling ; exists ; 2015 ;  ; 9780784479315 ; 9780784479315 ; Cold Regions Engineering 2015, Developing and Maintaining Resilient Infrastructure (9780784479315) ; >
     au < ready ; exists ; 2015 ;  ; 9780784479322 ; 9780784479322 ; Watershed Management 2015, Power of the Watershed (9780784479322) ; >
     au < frozen ; exists ; 2015 ;  ; 9780784479285 ; 9780784479285 ; Environmental Sustainability in Transportation Infrastructure (9780784479285) ; >
     au < frozen ; exists ; 2015 ;  ; 9780784479278 ; 9780784479278 ; Innovative Materials and Design for Sustainable Transportation Infrastructure (9780784479278) ; >
-    au < ready ; exists ; 2015 ;  ; 9780784479360 ; 9780784479360 ; Pipelines 2015, Recent Advances in Underground Pipeline Engineering and Construction (9780784479360) ; >
+    au < crawling ; exists ; 2015 ;  ; 9780784479360 ; 9780784479360 ; Pipelines 2015, Recent Advances in Underground Pipeline Engineering and Construction (9780784479360) ; >
     au < frozen ; exists ; 2015 ;  ; 9780784479346 ; 9780784479346 ; CONCREEP 10, Mechanics and Physics of Creep, Shrinkage, and Durability of Concrete and Concrete Structures (9780784479346) ; >
     au < frozen ; exists ; 2015 ;  ; 9780784479414 ; 9780784479414 ; Electrical Transmission and Substation Structures 2015, Technical Challenges and Innovative Solutions in Grid Modernization (9780784479414) ; >
     au < ready ; exists ; 2015 ;  ; 9780784479384 ; 9780784479384 ; ICTE 2015 (9780784479384) ; >
@@ -1240,13 +1240,13 @@
     au < crawling ; exists ; 2016 ;  ; 9780784479797 ; 9780784479797 ; Automated People Movers and Automated Transit Systems 2016, Innovation in a Rapidly Urbanizing World (9780784479797) ; >
     au < ready ; exists ; 2016 ;  ; 9780784479865 ; 9780784479865 ; World Environmental and Water Resources Congress 2016, Environmental, Sustainability, Groundwater, Hydraulic Fracturing, and Water Distribution Systems Analysis (9780784479865) ; >
     au < frozen ; exists ; 2016 ;  ; 9780784479889 ; 9780784479889 ; World Environmental and Water Resources Congress 2016, Water, Wastewater, and Stormwater and Urban Watershed Symposium (9780784479889) ; >
-    au < ready ; exists ; 2016 ;  ; 9780784479841 ; 9780784479841 ; World Environmental and Water Resources Congress 2016, Professional Development, Innovative Technology, International Perspectives, and History and Heritage (9780784479841) ; >
+    au < crawling ; exists ; 2016 ;  ; 9780784479841 ; 9780784479841 ; World Environmental and Water Resources Congress 2016, Professional Development, Innovative Technology, International Perspectives, and History and Heritage (9780784479841) ; >
     au < ready ; exists ; 2016 ;  ; 9780784479872 ; 9780784479872 ; World Environmental and Water Resources Congress 2016, Hydraulics and Waterways and Hydro-Climate/Climate Change (9780784479872) ; >
     au < frozen ; exists ; 2016 ;  ; 9780784479858 ; 9780784479858 ; World Environmental and Water Resources Congress 2016, Watershed Management, Irrigation and Drainage, and Water Resources Planning and Management (9780784479858) ; >
     au < ready ; exists ; 2016 ;  ; 9780784479810 ; 9780784479810 ; Bridging the East and West, Theories and Practices of Transportation in the Asia Pacific (9780784479810) ; >
     au < ready ; exists ; 2016 ;  ; 9780784479827 ; 9780784479827 ; Construction Research Congress 2016, Old and New Construction Technologies Converge in Historic San Juan (9780784479827) ; >
     au < ready ; exists ; 2016 ;  ; 9780784479902 ; 9780784479902 ; Ports 2016, Port Engineering (9780784479902) ; >
-    au < ready ; exists ; 2016 ;  ; 9780784479919 ; 9780784479919 ; Ports 2016, Port Planning and Development (9780784479919) ; >
+    au < crawling ; exists ; 2016 ;  ; 9780784479919 ; 9780784479919 ; Ports 2016, Port Planning and Development (9780784479919) ; >
     au < ready ; exists ; 2016 ;  ; 9780784479926 ; 9780784479926 ; International Conference on Transportation and Development 2016, Projects and Practices for Prosperity (9780784479926) ; >
     au < ready ; exists ; 2016 ;  ; 9780784479896 ; 9780784479896 ; CICTP 2016, Green and Multimodal Transportation and Logistics (9780784479896) ; >
     au < ready ; exists ; 2016 ;  ; 9780784479957 ; 9780784479957 ; Pipelines 2016, Out of Sight, Out of Mind, Not Out of Risk (9780784479957) ; >
@@ -1291,9 +1291,9 @@
     au < frozen ; exists ; 2017 ;  ; 9780784480700 ; 9780784480700 ; Geo-Risk 2017, Reliability-Based Design and Code Developments, GSP 283 (9780784480700) ; >
     au < frozen ; exists ; 2017 ;  ; 9780784480724 ; 9780784480724 ; Geo-Risk 2017, Geotechnical Risk Assessment and Management, GSP 285 (9780784480724) ; >
     au < frozen ; exists ; 2017 ;  ; 9780784480717 ; 9780784480717 ; Geo-Risk 2017, Impact of Spatial Variability, Probabilistic Site Characterization, and Geohazards, GSP 284 (9780784480717) ; >
-    au < ready ; exists ; 2017 ;  ; 9780784480847 ; 9780784480847 ; Computing in Civil Engineering 2017, Smart Safety, Sustainability, and Resilience (9780784480847) ; >
+    au < crawling ; exists ; 2017 ;  ; 9780784480847 ; 9780784480847 ; Computing in Civil Engineering 2017, Smart Safety, Sustainability, and Resilience (9780784480847) ; >
     au < ready ; exists ; 2017 ;  ; 9780784480823 ; 9780784480823 ; Computing in Civil Engineering 2017, Information Modeling and Data Analytics (9780784480823) ; >
-    au < ready ; exists ; 2017 ;  ; 9780784480830 ; 9780784480830 ; Computing in Civil Engineering 2017, Sensing, Simulation, and Visualization (9780784480830) ; >
+    au < crawling ; exists ; 2017 ;  ; 9780784480830 ; 9780784480830 ; Computing in Civil Engineering 2017, Sensing, Simulation, and Visualization (9780784480830) ; >
     au < frozen ; exists ; 2017 ;  ; 9780784480793 ; 9780784480793 ; Grouting 2017, Grouting, Drilling, and Verification, GSP 288 (9780784480793) ; >
     au < ready ; exists ; 2017 ;  ; 9780784480779 ; 9780784480779 ; Poromechanics VI, Proceedings of the Sixth Biot Conference on Poromechanics (9780784480779) ; >
     au < frozen ; exists ; 2017 ;  ; 9780784480809 ; 9780784480809 ; Grouting 2017, Jet Grouting, Diaphragm Walls, and Deep Mixing, GSP 289 (9780784480809) ; >
@@ -1318,14 +1318,14 @@
     au < ready ; exists ; 2017 ;  ; 9780784481196 ; 9780784481196 ; International Conference on Sustainable Infrastructure 2017, Methodology (9780784481196) ; >
     au < frozen ; exists ; 2017 ;  ; 9780784481202 ; 9780784481202 ; International Conference on Sustainable Infrastructure 2017, Policy, Finance, and Education (9780784481202) ; >
     au < frozen ; exists ; 2017 ;  ; 9780784481066 ; 9780784481066 ; ICCREM 2017, Industry Regulation and Sustainable Development (9780784481066) ; >
-    au < ready ; exists ; 2017 ;  ; 9780784481073 ; 9780784481073 ; ICCREM 2017, Real Estate and Urbanization (9780784481073) ; >
+    au < crawling ; exists ; 2017 ;  ; 9780784481073 ; 9780784481073 ; ICCREM 2017, Real Estate and Urbanization (9780784481073) ; >
     au < ready ; exists ; 2017 ;  ; 9780784481080 ; 9780784481080 ; ICCREM 2017, Project Management and Construction Technology (9780784481080) ; >
     au < ready ; exists ; 2017 ;  ; 9780784481059 ; 9780784481059 ; ICCREM 2017, Prefabricated Buildings, Industrialized Construction, and Public-Private Partnerships (9780784481059) ; >
     au < ready ; exists ; 2017 ;  ; 9780784481042 ; 9780784481042 ; International Low Impact Development Conference China 2016, LID Applications in Sponge City Projects (9780784481042) ; >
     au < ready ; exists ; 2018 ;  ; 9780784480915 ; 9780784480915 ; CICTP 2017, Transportation Reform and Change-Equity, Inclusiveness, Sharing, and Innovation (9780784480915) ; >
     au < frozen ; exists ; 2018 ;  ; 9780784481240 ; 9780784481240 ; Transportation Research Congress 2016, Innovations in Transportation Research Infrastructure (9780784481240) ; >
     au < ready ; exists ; 2018 ;  ; 9780784481257 ; 9780784481257 ; ICRT 2017, Railway Development, Operations, and Maintenance (9780784481257) ; >
-    au < ready ; exists ; 2018 ;  ; 9780784481288 ; 9780784481288 ; Construction Research Congress 2018, Safety and Disaster Management (9780784481288) ; >
+    au < crawling ; exists ; 2018 ;  ; 9780784481288 ; 9780784481288 ; Construction Research Congress 2018, Safety and Disaster Management (9780784481288) ; >
     au < frozen ; exists ; 2018 ;  ; 9780784481271 ; 9780784481271 ; Construction Research Congress 2018, Construction Project Management (9780784481271) ; >
     au < frozen ; exists ; 2018 ;  ; 9780784481301 ; 9780784481301 ; Construction Research Congress 2018, Sustainable Design and Construction and Education (9780784481301) ; >
     au < ready ; exists ; 2018 ;  ; 9780784481264 ; 9780784481264 ; Construction Research Congress 2018, Construction Information Technology (9780784481264) ; >
