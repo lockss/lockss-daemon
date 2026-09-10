@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -59,7 +59,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <map>
             <entry>
                 <string>Substance</string>
-                <string>1</string>
+                <string>2</string>
             </entry>
             <entry>
                 <string>Poll</string>
@@ -78,7 +78,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <string>"^%s%s/.+\.pdf$", base_url, directory</string>
+            <string>"^%s%s/.+\.epub$", base_url, directory</string>
         </list>
     </entry>
     <entry>
