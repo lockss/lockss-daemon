@@ -157,6 +157,31 @@ public class TestRepositoryManager extends LockssTestCase {
     assertEquals(50, mgr.sleepTimeToAchieveLoad(150L, .75F));
   }
 
+//   public void testFindDirOnMostFullDisk () throws Exception {
+//     List<RepositoryManager.FileDF> dirs =
+//       ListUtil.list(
+//                     new RepositoryManager.FileDF(new File("/foo"), PlatformUtil.makeThreshold(10, 0.0)),
+//                     new RepositoryManager.FileDF(new File("/bar"), PlatformUtil.makeThreshold(10, 0.0)),
+//                     new RepositoryManager.FileDF(new File("/foo"), PlatformUtil.makeThreshold(10, 0.0)),
+//                     new RepositoryManager.FileDF(new File("/foo"), PlatformUtil.makeThreshold(10, 0.0)),
+//   }
+
+//   public void testCancel() {
+//     String cmd = "for x in xxx yyy; do ( while true; do echo "foo: $x"; sleep 10; done ) &; done"
+//      try {
+//       ProcessBuilder pb = new ProcessBuilder();
+//       pb.command("/bin/sh", "-c", copyCommand);
+//       pb.redirectErrorStream(true);
+//       Process proc = pb.start();
+//       BufferedReader br = new BufferedReader(new InputStreamReader(proc.getInputStream()));
+//       List<String> outLines = new ArrayList<>();
+//       String line;
+//       while ((line = br.readLine()) != null) {
+//         outLines.add(line);
+//         log.debug(line);
+// }
+
+
   class MyRepositoryManager extends RepositoryManager {
     List nodes = new ArrayList();
     SimpleBinarySemaphore sem;
