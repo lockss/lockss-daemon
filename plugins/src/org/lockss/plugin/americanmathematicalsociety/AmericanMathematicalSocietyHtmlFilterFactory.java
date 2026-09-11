@@ -69,9 +69,9 @@ public class AmericanMathematicalSocietyHtmlFilterFactory implements FilterFacto
         //remove generated verification tokens
         HtmlNodeFilters.tagWithAttribute("input", "name", "__RequestVerificationToken"),
         //remove generated email links
-        HtmlNodeFilters.tagWithAttribute("a", "class", "__cf_email__"),
-        HtmlNodeFilters.tagWithAttribute("a", "href", "email-protection"),
-        HtmlNodeFilters.tagWithAttribute("span", "class", "__cf_email__"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "class", "__cf_email__"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "email-protection"),
+        HtmlNodeFilters.tagWithAttributeRegex("span", "class", "__cf_email__"),
         
     };
     
