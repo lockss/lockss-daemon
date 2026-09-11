@@ -144,6 +144,7 @@ public class V2AuMover {
    * Executor Spec:
    * <tt><i>queue-max</i>;<i>thread-max</i></tt> or
    * <tt><i>queue-max</i>;<i>core-threads</i>;<i>max-threads</i></tt>
+
    */
   public static final String PARAM_EXECUTOR_SPEC = EXEC_PREFIX + "<name>.spec";
 
@@ -211,15 +212,6 @@ public class V2AuMover {
   public static final String PARAM_MISC_EXECUTOR_SPEC =
     EXEC_PREFIX + "misc.spec";
   public static final String DEFAULT_MISC_EXECUTOR_SPEC = "50;10";
-
-  /**
-   * AU deletion Executor.  Executor is managed by RepositoryManager
-   * because it needs to keep running after migration finishes, but
-   * it's logically more related to this class
-   */
-  public static final String PARAM_DELETE_EXECUTOR_SPEC =
-    EXEC_PREFIX + "delete.spec";
-  public static final String DEFAULT_DELETE_EXECUTOR_SPEC = "1000;6";
 
   /**
    * Executor thread timeout
@@ -608,7 +600,7 @@ public class V2AuMover {
   private ThreadPoolExecutor stateCopyExecutor;
   private ThreadPoolExecutor miscExecutor;
   private ThreadPoolExecutor indexExecutor;
-  private static long executorRetryInterval;
+  private long executorRetryInterval;
 
   //////////////////////////////////////////////////////////////////////
   // State vars
@@ -2613,11 +2605,11 @@ public class V2AuMover {
     int maxThreads;
   }
 
-  static ExecSpec parsePoolSpec(String spec) {
+  ExecSpec parsePoolSpec(String spec) {
     return parsePoolSpecInto(spec, new ExecSpec());
   }
 
-  static ExecSpec parsePoolSpecInto(String spec, ExecSpec eSpec) {
+  ExecSpec parsePoolSpecInto(String spec, ExecSpec eSpec) {
     List<String> specList = StringUtil.breakAt(spec, ";", 3, false, true);
     switch (specList.size()) {
     case 3: eSpec.maxThreads = Integer.parseInt(specList.get(2));
@@ -2631,11 +2623,10 @@ public class V2AuMover {
     return eSpec;
   }
 
-  public static ThreadPoolExecutor
-    createOrReConfigureExecutor(ThreadPoolExecutor executer,
-                                Configuration config,
-                                String specParam,
-                                String defaultSpec) {
+  ThreadPoolExecutor createOrReConfigureExecutor(ThreadPoolExecutor executer,
+                                                 Configuration config,
+                                                 String specParam,
+                                                 String defaultSpec) {
     String spec = config.get(specParam);
     // Set default for each field
     ExecSpec eSpec = parsePoolSpec(defaultSpec);
@@ -2662,7 +2653,7 @@ public class V2AuMover {
     }
   }
 
-  public static ThreadPoolExecutor makeExecutor(int queueMax, long threadTimeout,
+  public ThreadPoolExecutor makeExecutor(int queueMax, long threadTimeout,
                                          int coreThreads, int maxThreads) {
     ThreadPoolExecutor exec =
       new BlockingThreadPoolExecutor(coreThreads, maxThreads,
@@ -2680,7 +2671,7 @@ public class V2AuMover {
    * repeatedly sleep()ing while others make successful requests
    * (either initially or as retries) and refill the queue.
    */
-  static class BlockingThreadPoolExecutor extends ThreadPoolExecutor {
+  class BlockingThreadPoolExecutor extends ThreadPoolExecutor {
     Semaphore sem = new Semaphore(1, true);
 
     public BlockingThreadPoolExecutor(int corePoolSize,
