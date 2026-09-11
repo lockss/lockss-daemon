@@ -159,10 +159,17 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.americanmathematicalsociety.AmericanMathematicalSocietyHtmlFilterFactory</string>
   </entry>
+  <!-- Update 2026: we will only be applying crawl filter to urls that are NOT the html versions of articles since they are too huge/complex
+       and can crash the crawl. The crawl filter factory will be applied selectively in the link extractor factory. 
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.americanmathematicalsociety.AmsHtmlCrawlFilterFactory</string>
-  </entry>  
+  </entry> 
+  --> 
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.americanmathematicalsociety.AmericanMathematicalSocietyHtmlLinkExtractorFactory</string>
+  </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.americanmathematicalsociety.AmericanMathematicalSocietyArticleIteratorFactory</string>
