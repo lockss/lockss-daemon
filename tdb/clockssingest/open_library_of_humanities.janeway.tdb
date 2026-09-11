@@ -986,7 +986,7 @@
       au < testing ; exists ; 2022 ; 102 ; International Labour Review Volume 2022 ; 2022 ; >
       au < testing ; exists ; 2023 ; 103 ; International Labour Review Volume 2023 ; 2023 ; >
       au < testing ; exists ; 2024 ; 104 ; International Labour Review Volume 2024 ; 2024 ; >
-      au < ready ; exists ; 2025 ; 105 ; International Labour Review Volume 2025 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; 105 ; International Labour Review Volume 2025 ; 2025 ; >
       au < testing ; exists ; 2026 ; 106 ; International Labour Review Volume 2026 ; 2026 ; >
 
   }
@@ -1032,7 +1032,7 @@
       param[base_url] = https://www.regeneration-journal.org/
 
       au < ready ; exists ; 2024 ; 1 ; Regeneration: Environment, Art, Culture Volume 2024 ; 2024 ; >
-      au < ready ; exists ; 2025 ; 2 ; Regeneration: Environment, Art, Culture Volume 2025 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; 2 ; Regeneration: Environment, Art, Culture Volume 2025 ; 2025 ; >
       au < notReady ; exists ; 2026 ; 3 ; Regeneration: Environment, Art, Culture Volume 2026 ; 2026 ; > #403 Forbidden, https://www.regeneration-journal.org/article/id/20309/file/212719/
 
   }
@@ -1135,7 +1135,7 @@
       au < ready ; exists ; 1991 ; 26 ; Zygon: Journal of Religion and Science Volume 1991 ; 1991 ; >
       au < frozen ; exists ; 1992 ; 27 ; Zygon: Journal of Religion and Science Volume 1992 ; 1992 ; >
       au < ready ; exists ; 1993 ; 28 ; Zygon: Journal of Religion and Science Volume 1993 ; 1993 ; >
-      au < ready ; exists ; 1994 ; 29 ; Zygon: Journal of Religion and Science Volume 1994 ; 1994 ; >
+      au < crawling ; exists ; 1994 ; 29 ; Zygon: Journal of Religion and Science Volume 1994 ; 1994 ; >
       au < frozen ; exists ; 1995 ; 30 ; Zygon: Journal of Religion and Science Volume 1995 ; 1995 ; >
       au < ready ; exists ; 1996 ; 31 ; Zygon: Journal of Religion and Science Volume 1996 ; 1996 ; >
       au < frozen ; exists ; 1997 ; 32 ; Zygon: Journal of Religion and Science Volume 1997 ; 1997 ; >
@@ -1147,7 +1147,7 @@
       au < ready ; exists ; 2003 ; 38 ; Zygon: Journal of Religion and Science Volume 2003 ; 2003 ; >
       au < frozen ; exists ; 2004 ; 39 ; Zygon: Journal of Religion and Science Volume 2004 ; 2004 ; >
       au < ready ; exists ; 2005 ; 40 ; Zygon: Journal of Religion and Science Volume 2005 ; 2005 ; >
-      au < ready ; exists ; 2006 ; 41 ; Zygon: Journal of Religion and Science Volume 2006 ; 2006 ; >
+      au < crawling ; exists ; 2006 ; 41 ; Zygon: Journal of Religion and Science Volume 2006 ; 2006 ; >
       au < ready ; exists ; 2007 ; 42 ; Zygon: Journal of Religion and Science Volume 2007 ; 2007 ; >
       au < frozen ; exists ; 2008 ; 43 ; Zygon: Journal of Religion and Science Volume 2008 ; 2008 ; >
       au < ready ; exists ; 2009 ; 44 ; Zygon: Journal of Religion and Science Volume 2009 ; 2009 ; >
