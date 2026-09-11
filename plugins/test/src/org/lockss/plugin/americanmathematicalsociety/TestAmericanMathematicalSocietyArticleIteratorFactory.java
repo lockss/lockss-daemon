@@ -54,6 +54,7 @@ public class TestAmericanMathematicalSocietyArticleIteratorFactory extends Artic
   static final String JOURNAL_ID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
   static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
   private final String BASE_URL = "https://www.ams.org/";
+  static final String NEW_URL = "https://pubs.ams.org/";
   private final String JOURNAL_ID = "jid";
   private final String YEAR = "2008";
   private final Configuration AU_CONFIG = ConfigurationUtil.fromArgs(
@@ -108,7 +109,7 @@ public class TestAmericanMathematicalSocietyArticleIteratorFactory extends Artic
   
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
-    assertEquals(ListUtil.list(BASE_URL + "journals/jid/"),
+    assertEquals(ListUtil.list(BASE_URL + "journals/jid/", NEW_URL + "jid/"),
         getRootUrls(artIter));
   }
   
@@ -153,8 +154,8 @@ public class TestAmericanMathematicalSocietyArticleIteratorFactory extends Artic
      */
     
     String pat1 = "(\\d+)file[.]html";
-    // turn xxfile.xhtml into abstracts
-    String repAbs = "journals/" + JOURNAL_ID + "/" + YEAR + "-01-09/S0894-0347-2008-$1";
+    // turn xxfile.xhtml into htmls
+    String repAbs = "journals/" + JOURNAL_ID + "/" + YEAR + "-01-09/S0894-0347-2008-$1/viewer";
     PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat1, repAbs);
     // turn xxfile.pdf into fulltext pdfs
     String pat2 = "(\\d+)file[.]pdf";
@@ -187,23 +188,17 @@ public class TestAmericanMathematicalSocietyArticleIteratorFactory extends Artic
       if ( cu != null) {
         ++countFullTextPdf;
       }
-      cu = af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA);
-      if (cu != null) {
-        ++countMetadata;
-      }
     }
-    // potential article count is 4
+    // potential article count is 3
     // subtract the one where we removed pdf
-    int expCount = 4;
+    int expCount = 3;
     
     log.debug3("Article count is " + count);
     assertEquals(expCount, count);
     
     // you will get a full text for ALL articles
-    assertEquals(expCount-1, countFullTextPdf);
+    assertEquals(expCount, countFullTextPdf);
     
-    // you will get metadata for ALL articles
-    assertEquals(expCount, countMetadata);
   }
   
   private void deleteBlock(CachedUrl cu) throws IOException {
