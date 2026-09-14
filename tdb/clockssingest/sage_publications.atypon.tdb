@@ -95,7 +95,7 @@
 
       #param[base_url] = http://aax.sagepub.com/
 
-      au < ready ; exists ; 1970 ; Abstracts in Anthropology Volume 1 ; 1 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1970 ; Abstracts in Anthropology Volume 1 ; 1 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1971 ; Abstracts in Anthropology Volume 2 ; 2 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1972 ; Abstracts in Anthropology Volume 3 ; 3 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1973 ; Abstracts in Anthropology Volume 4 ; 4 ; aaxa ; https://journals.sagepub.com/ ; >
@@ -125,7 +125,7 @@
       au < ready ; exists ; 1994 ; Abstracts in Anthropology Volume 28 ; 28 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1994 ; Abstracts in Anthropology Volume 29 ; 29 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1995 ; Abstracts in Anthropology Volume 30 ; 30 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1995 ; Abstracts in Anthropology Volume 31 ; 31 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1995 ; Abstracts in Anthropology Volume 31 ; 31 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1996 ; Abstracts in Anthropology Volume 32 ; 32 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1996 ; Abstracts in Anthropology Volume 33 ; 33 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1997 ; Abstracts in Anthropology Volume 34 ; 34 ; aaxa ; https://journals.sagepub.com/ ; >
@@ -3643,7 +3643,7 @@
       au < frozen ; exists ; 2000 ; The Annals of the American Academy of Political and Social Science Volume 570 ; 570 ; anna ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; The Annals of the American Academy of Political and Social Science Volume 571 ; 571 ; anna ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; The Annals of the American Academy of Political and Social Science Volume 572 ; 572 ; anna ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2001 ; The Annals of the American Academy of Political and Social Science Volume 573 ; 573 ; anna ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2001 ; The Annals of the American Academy of Political and Social Science Volume 573 ; 573 ; anna ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2001 ; The Annals of the American Academy of Political and Social Science Volume 574 ; 574 ; anna ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2001 ; The Annals of the American Academy of Political and Social Science Volume 575 ; 575 ; anna ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2001 ; The Annals of the American Academy of Political and Social Science Volume 576 ; 576 ; anna ; https://journals.sagepub.com/ ; >
@@ -18359,7 +18359,7 @@
       au < deepCrawl ; exists ; 2023 ; Family Business Review Volume 36 ; 36 ; fbra ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Family Business Review Volume 37 ; 37 ; fbra ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Family Business Review Volume 38 ; 38 ; fbra ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2026 ; Family Business Review Volume 39 ; 39 ; fbra ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2026 ; Family Business Review Volume 39 ; 39 ; fbra ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -19183,7 +19183,7 @@
       au < deepCrawl ; exists ; 2023 ; Foot & Ankle Orthopaedics Volume 8 ; 8 ; faoa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Foot & Ankle Orthopaedics Volume 9 ; 9 ; faoa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Foot & Ankle Orthopaedics Volume 10 ; 10 ; faoa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2026 ; Foot & Ankle Orthopaedics Volume 11 ; 11 ; faoa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2026 ; Foot & Ankle Orthopaedics Volume 11 ; 11 ; faoa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -20672,7 +20672,7 @@
       au < deepCrawl ; exists ; 2023 ; Group Analysis Volume 56 ; 56 ; gaqa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Group Analysis Volume 57 ; 57 ; gaqa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Group Analysis Volume 58 ; 58 ; gaqa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2026 ; Group Analysis Volume 59 ; 59 ; gaqa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2026 ; Group Analysis Volume 59 ; 59 ; gaqa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -21355,7 +21355,7 @@
       au < manifest ; exists ; 2015 ; High Altitude Medicine & Biology Volume 16 ; 16 ; hama ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; High Altitude Medicine & Biology Volume 17 ; 17 ; hama ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; High Altitude Medicine & Biology Volume 18 ; 18 ; hama ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2018 ; High Altitude Medicine & Biology Volume 19 ; 19 ; hama ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2018 ; High Altitude Medicine & Biology Volume 19 ; 19 ; hama ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; High Altitude Medicine & Biology Volume 20 ; 20 ; hama ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; High Altitude Medicine & Biology Volume 21 ; 21 ; hama ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; High Altitude Medicine & Biology Volume 22 ; 22 ; hama ; https://journals.sagepub.com/ ; >
@@ -22232,7 +22232,7 @@
       au < deepCrawl ; exists ; 2023 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 65 ; 65 ; hfsa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 66 ; 66 ; hfsa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 67 ; 67 ; hfsa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2026 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 68 ; 68 ; hfsa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2026 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 68 ; 68 ; hfsa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -30273,7 +30273,7 @@
       au < frozen ; exists ; 2023 ; Journal of Cellular Biotechnology Volume 9 ; 9 ; ceba ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2024 ; Journal of Cellular Biotechnology Volume 10 ; 10 ; ceba ; https://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2025 ; Journal of Cellular Biotechnology Volume 11 ; 11 ; ceba ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2026 ; Journal of Cellular Biotechnology Volume 12 ; 12 ; ceba ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2026 ; Journal of Cellular Biotechnology Volume 12 ; 12 ; ceba ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -31431,7 +31431,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Contemporary Criminal Justice Volume 39 ; 39 ; ccja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Contemporary Criminal Justice Volume 40 ; 40 ; ccja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Contemporary Criminal Justice Volume 41 ; 41 ; ccja ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2026 ; Journal of Contemporary Criminal Justice Volume 42 ; 42 ; ccja ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2026 ; Journal of Contemporary Criminal Justice Volume 42 ; 42 ; ccja ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -35604,7 +35604,7 @@
       au < finished ; manifest ; 2024 ; Journal of Intelligent & Fuzzy Systems Volume 47 ; 47 ; ifsa ; https://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2025 ; Journal of Intelligent & Fuzzy Systems Volume 48 ; 48 ; ifsa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Intelligent & Fuzzy Systems Volume 49 ; 49 ; ifsa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2026 ; Journal of Intelligent & Fuzzy Systems Volume 50 ; 50 ; ifsa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2026 ; Journal of Intelligent & Fuzzy Systems Volume 50 ; 50 ; ifsa ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026 ; Journal of Intelligent & Fuzzy Systems Volume 51 ; 51 ; ifsa ; https://journals.sagepub.com/ ; >
 
   }
@@ -49685,7 +49685,7 @@
     au < manifest ; exists ; 2016 ; Planned Giving Today Volume 27 ; 27 ; pgta ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; Planned Giving Today Volume 28 ; 28 ; pgta ; https://journals.sagepub.com/ ; >
     au < ready ; exists ; 2018 ; Planned Giving Today Volume 29 ; 29 ; pgta ; https://journals.sagepub.com/ ; >
-    au < ready ; exists ; 2019 ; Planned Giving Today Volume 30 ; 30 ; pgta ; https://journals.sagepub.com/ ; >
+    au < crawling ; exists ; 2019 ; Planned Giving Today Volume 30 ; 30 ; pgta ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; Planned Giving Today Volume 31 ; 31 ; pgta ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; Planned Giving Today Volume 32 ; 32 ; pgta ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2022 ; Planned Giving Today Volume 33 ; 33 ; pgta ; https://journals.sagepub.com/ ; >
@@ -60606,7 +60606,7 @@
       au < manifest ; exists ; 2016 ; Tissue Engineering Part B: Reviews Volume 22 ; 22 ; teba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Tissue Engineering Part B: Reviews Volume 23 ; 23 ; teba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2018 ; Tissue Engineering Part B: Reviews Volume 24 ; 24 ; teba ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2019 ; Tissue Engineering Part B: Reviews Volume 25 ; 25 ; teba ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2019 ; Tissue Engineering Part B: Reviews Volume 25 ; 25 ; teba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Tissue Engineering Part B: Reviews Volume 26 ; 26 ; teba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Tissue Engineering Part B: Reviews Volume 27 ; 27 ; teba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; Tissue Engineering Part B: Reviews Volume 28 ; 28 ; teba ; https://journals.sagepub.com/ ; >
@@ -63615,7 +63615,7 @@
     >
       #journal_id = VLG
 
-      au < ready ; exists ; 2014 ; Violence and Gender Volume 1 ; 1 ; vlga ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2014 ; Violence and Gender Volume 1 ; 1 ; vlga ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2015 ; Violence and Gender Volume 2 ; 2 ; vlga ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2016 ; Violence and Gender Volume 3 ; 3 ; vlga ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2017 ; Violence and Gender Volume 4 ; 4 ; vlga ; https://journals.sagepub.com/ ; >
@@ -64907,7 +64907,7 @@
       au < deepCrawl ; exists ; 2023 ; Gifted Child Today Volume 46 ; 46 ; gctc ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Gifted Child Today Volume 47 ; 47 ; gctc ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Gifted Child Today Volume 48 ; 48 ; gctc ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2026 ; Gifted Child Today Volume 49 ; 49 ; gctc ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2026 ; Gifted Child Today Volume 49 ; 49 ; gctc ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -66869,7 +66869,7 @@
     au < deepCrawl ; exists ; 2023 ; Forum Italicum: A Journal of Italian Studies Volume 57 ; 57 ; foia ; https://journals.sagepub.com/ ; >
     au < deepCrawl ; exists ; 2024 ; Forum Italicum: A Journal of Italian Studies Volume 58 ; 58 ; foia ; https://journals.sagepub.com/ ; >
     au < deepCrawl ; exists ; 2025 ; Forum Italicum: A Journal of Italian Studies Volume 59 ; 59 ; foia ; https://journals.sagepub.com/ ; >
-    au < ready ; exists ; 2026 ; Forum Italicum: A Journal of Italian Studies Volume 60 ; 60 ; foia ; https://journals.sagepub.com/ ; >
+    au < crawling ; exists ; 2026 ; Forum Italicum: A Journal of Italian Studies Volume 60 ; 60 ; foia ; https://journals.sagepub.com/ ; >
 
     }
 
@@ -67781,7 +67781,7 @@
         au < deepCrawl ; exists ; 2023 ; Clinical Ethics Volume 18 ; 18 ; ceta ; https://journals.sagepub.com/ ; >
         au < deepCrawl ; exists ; 2024 ; Clinical Ethics Volume 19 ; 19 ; ceta ; https://journals.sagepub.com/ ; >
         au < deepCrawl ; exists ; 2025 ; Clinical Ethics Volume 20 ; 20 ; ceta ; https://journals.sagepub.com/ ; >
-        au < ready ; exists ; 2026 ; Clinical Ethics Volume 21 ; 21 ; ceta ; https://journals.sagepub.com/ ; >
+        au < crawling ; exists ; 2026 ; Clinical Ethics Volume 21 ; 21 ; ceta ; https://journals.sagepub.com/ ; >
 
     }
 
@@ -71424,7 +71424,7 @@
       au < deepCrawl ; exists ; 2023 ; European Journal of Personality Volume 37 ; 37 ; erpa ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2024 ; European Journal of Personality Volume 38 ; 38 ; erpa ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2025 ; European Journal of Personality Volume 39 ; 39 ; erpa ; https://journals.sagepub.com/ ;  >
-      au < ready ; exists ; 2026 ; European Journal of Personality Volume 40 ; 40 ; erpa ; https://journals.sagepub.com/ ;  >
+      au < crawling ; exists ; 2026 ; European Journal of Personality Volume 40 ; 40 ; erpa ; https://journals.sagepub.com/ ;  >
 
   }
 
