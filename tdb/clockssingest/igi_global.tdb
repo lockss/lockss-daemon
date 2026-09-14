@@ -1332,7 +1332,7 @@
     au < finished ; manifest ; 2023 ; International Journal of E-Business Research (IJEBR) Volume 19 ; 19 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; International Journal of E-Business Research (IJEBR) Volume 20 ; 20 ; https://www.igi-global.com/ ; >
     au < deepCrawl ; exists ; 2025 ; International Journal of E-Business Research (IJEBR) Volume 21 ; 21 ; https://www.igi-global.com/ ; >
-    au < manifest ; exists ; 2026 ; International Journal of E-Business Research (IJEBR) Volume 22 ; 22 ; https://www.igi-global.com/ ; >
+    au < testing ; exists ; 2026 ; International Journal of E-Business Research (IJEBR) Volume 22 ; 22 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -3167,7 +3167,7 @@
     >
     param[journal_issn] = 2998-4610
 
-    au < manifest ; exists ; 2026 ; International Journal of Project Management and Administration in Education (IJPMAE) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+    au < testing ; exists ; 2026 ; International Journal of Project Management and Administration in Education (IJPMAE) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -3654,7 +3654,7 @@
     >
     param[journal_issn] = 3066-6481
 
-    au < manifest ; exists ; 2026 ; International Journal of Sustainable Supply Chain Management (IJSSCM) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+    au < testing ; exists ; 2026 ; International Journal of Sustainable Supply Chain Management (IJSSCM) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -5268,7 +5268,7 @@
       param[journal_issn] = 3066-6392
 
       au < finished ; manifest ; 2025 ; International Journal of Strategic Management and Innovation (IJSMI) Volume 1 ; 1 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2026 ; International Journal of Strategic Management and Innovation (IJSMI) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
+      au < testing ; exists ; 2026 ; International Journal of Strategic Management and Innovation (IJSMI) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
 
   }
 
