@@ -114,9 +114,9 @@
       au < ready ; exists ; 1988 ; Abstracts in Anthropology Volume 17 ; 17 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1989 ; Abstracts in Anthropology Volume 18 ; 18 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1989 ; Abstracts in Anthropology Volume 19 ; 19 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1990 ; Abstracts in Anthropology Volume 20 ; 20 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1990 ; Abstracts in Anthropology Volume 20 ; 20 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1990 ; Abstracts in Anthropology Volume 21 ; 21 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1991 ; Abstracts in Anthropology Volume 22 ; 22 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1991 ; Abstracts in Anthropology Volume 22 ; 22 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1991 ; Abstracts in Anthropology Volume 23 ; 23 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1992 ; Abstracts in Anthropology Volume 24 ; 24 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1992 ; Abstracts in Anthropology Volume 25 ; 25 ; aaxa ; https://journals.sagepub.com/ ; >
@@ -256,9 +256,9 @@
       au < ready ; exists ; 1977 ; Acta Sociologica Volume 20 ; 20 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1978 ; Acta Sociologica Volume 21 ; 21 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1979 ; Acta Sociologica Volume 22 ; 22 ; asja ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1980 ; Acta Sociologica Volume 23 ; 23 ; asja ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1980 ; Acta Sociologica Volume 23 ; 23 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1981 ; Acta Sociologica Volume 24 ; 24 ; asja ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1982 ; Acta Sociologica Volume 25 ; 25 ; asja ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1982 ; Acta Sociologica Volume 25 ; 25 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1983 ; Acta Sociologica Volume 26 ; 26 ; asja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1984 ; Acta Sociologica Volume 27 ; 27 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1985 ; Acta Sociologica Volume 28 ; 28 ; asja ; https://journals.sagepub.com/ ; >
@@ -269,7 +269,7 @@
       au < ready ; exists ; 1990 ; Acta Sociologica Volume 33 ; 33 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1991 ; Acta Sociologica Volume 34 ; 34 ; asja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1992 ; Acta Sociologica Volume 35 ; 35 ; asja ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1993 ; Acta Sociologica Volume 36 ; 36 ; asja ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1993 ; Acta Sociologica Volume 36 ; 36 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1994 ; Acta Sociologica Volume 37 ; 37 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1995 ; Acta Sociologica Volume 38 ; 38 ; asja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1996 ; Acta Sociologica Volume 39 ; 39 ; asja ; https://journals.sagepub.com/ ; >
@@ -549,7 +549,7 @@
       #param[base_url] = http://adb.sagepub.com/
 
       au < ready ; exists ; 1992 ; Adaptive Behavior Volume 1 ; 1 ; adba ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1993 ; Adaptive Behavior Volume 2 ; 2 ; adba ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1993 ; Adaptive Behavior Volume 2 ; 2 ; adba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1994 ; Adaptive Behavior Volume 3 ; 3 ; adba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1995 ; Adaptive Behavior Volume 4 ; 4 ; adba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1996 ; Adaptive Behavior Volume 5 ; 5 ; adba ; https://journals.sagepub.com/ ; >
@@ -728,7 +728,7 @@
       au < ready ; exists ; 1992 ; Adsorption Science & Technology Volume 9 ; 9 ; adta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1993 ; Adsorption Science & Technology Volume 10 ; 10 ; adta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1994 ; Adsorption Science & Technology Volume 11 ; 11 ; adta ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1995 ; Adsorption Science & Technology Volume 12 ; 12 ; adta ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1995 ; Adsorption Science & Technology Volume 12 ; 12 ; adta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1996 ; Adsorption Science & Technology Volume 13 ; 13 ; adta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1996 ; Adsorption Science & Technology Volume 14 ; 14 ; adta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1997 ; Adsorption Science & Technology Volume 15 ; 15 ; adta ; https://journals.sagepub.com/ ; >
@@ -881,7 +881,7 @@
       au < ready ; exists ; 1950-1951 ; Adult Education Volume 1 ; 1 ; aeqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1951-1952 ; Adult Education Volume 2 ; 2 ; aeqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1952-1953 ; Adult Education Volume 3 ; 3 ; aeqa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1953-1954 ; Adult Education Volume 4 ; 4 ; aeqa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1953-1954 ; Adult Education Volume 4 ; 4 ; aeqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1954-1955 ; Adult Education Volume 5 ; 5 ; aeqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1955-1956 ; Adult Education Volume 6 ; 6 ; aeqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1956-1957 ; Adult Education Volume 7 ; 7 ; aeqa ; https://journals.sagepub.com/ ; >
@@ -908,7 +908,7 @@
       au < ready ; exists ; 1977-1978 ; Adult Education Volume 28 ; 28 ; aeqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1978-1979 ; Adult Education Volume 29 ; 29 ; aeqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1979-1980 ; Adult Education Volume 30 ; 30 ; aeqa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1980-1981 ; Adult Education Volume 31 ; 31 ; aeqa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1980-1981 ; Adult Education Volume 31 ; 31 ; aeqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1981-1982 ; Adult Education Volume 32 ; 32 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1982-1983 ; Adult Education Volume 33 ; 33 ; aeqa ; https://journals.sagepub.com/ ; >
 
@@ -1373,8 +1373,8 @@
       au < ready ; exists ; 1990 ; AIDS Patient Care Volume 4 ; 4 ; adsb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1991 ; AIDS Patient Care Volume 5 ; 5 ; adsb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1992 ; AIDS Patient Care Volume 6 ; 6 ; adsb ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1993 ; AIDS Patient Care Volume 7 ; 7 ; adsb ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1994 ; AIDS Patient Care Volume 8 ; 8 ; adsb ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1993 ; AIDS Patient Care Volume 7 ; 7 ; adsb ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1994 ; AIDS Patient Care Volume 8 ; 8 ; adsb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1995 ; AIDS Patient Care Volume 9 ; 9 ; adsb ; https://journals.sagepub.com/ ; >
 
   }
@@ -1393,7 +1393,7 @@
       au < ready ; exists ; 1997 ; AIDS Patient Care and STDs Volume 11 ; 11 ; adsa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1998 ; AIDS Patient Care and STDs Volume 12 ; 12 ; adsa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1999 ; AIDS Patient Care and STDs Volume 13 ; 13 ; adsa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2000 ; AIDS Patient Care and STDs Volume 14 ; 14 ; adsa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2000 ; AIDS Patient Care and STDs Volume 14 ; 14 ; adsa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2001 ; AIDS Patient Care and STDs Volume 15 ; 15 ; adsa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; AIDS Patient Care and STDs Volume 16 ; 16 ; adsa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; AIDS Patient Care and STDs Volume 17 ; 17 ; adsa ; https://journals.sagepub.com/ ; >
@@ -6721,7 +6721,7 @@
       au < frozen ; exists ; 2020 ; Biorheology Volume 57 ; 57 ; brha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Biorheology Volume 58 ; 58 ; brha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2023-2024 ; Biorheology Volume 59 ; 59 ; brha ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2025-2026 ; Biorheology Volume 60 ; 60 ; brha ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2025-2026 ; Biorheology Volume 60 ; 60 ; brha ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026-2027 ; Biorheology Volume 61 ; 61 ; brha ; https://journals.sagepub.com/ ; >
 
   }
@@ -13549,7 +13549,7 @@
       au < manifest ; exists ; 2015 ; Dermatitis Volume 26 ; 26 ; drma ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Dermatitis Volume 27 ; 27 ; drma ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Dermatitis Volume 28 ; 28 ; drma ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2018 ; Dermatitis Volume 29 ; 29 ; drma ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2018 ; Dermatitis Volume 29 ; 29 ; drma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Dermatitis Volume 30 ; 30 ; drma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Dermatitis Volume 31 ; 31 ; drma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Dermatitis Volume 32 ; 32 ; drma ; https://journals.sagepub.com/ ; >
@@ -30465,7 +30465,7 @@
       au < manifest ; exists ; 2015 ; Journal of Child and Adolescent Psychopharmacology Volume 22 ; 22 ; chaa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Journal of Child and Adolescent Psychopharmacology Volume 23 ; 23 ; chaa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Journal of Child and Adolescent Psychopharmacology Volume 24 ; 24 ; chaa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2018 ; Journal of Child and Adolescent Psychopharmacology Volume 25 ; 25 ; chaa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2018 ; Journal of Child and Adolescent Psychopharmacology Volume 25 ; 25 ; chaa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2019 ; Journal of Child and Adolescent Psychopharmacology Volume 26 ; 26 ; chaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Journal of Child and Adolescent Psychopharmacology Volume 27 ; 27 ; chaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Journal of Child and Adolescent Psychopharmacology Volume 28 ; 28 ; chaa ; https://journals.sagepub.com/ ; >
@@ -57974,7 +57974,7 @@
       au < manifest ; exists ; 2015 ; Stem Cells and Development Volume 24 ; 24 ; stca ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Stem Cells and Development Volume 25 ; 25 ; stca ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Stem Cells and Development Volume 26 ; 26 ; stca ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2018 ; Stem Cells and Development Volume 27 ; 27 ; stca ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2018 ; Stem Cells and Development Volume 27 ; 27 ; stca ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2019 ; Stem Cells and Development Volume 28 ; 28 ; stca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Stem Cells and Development Volume 29 ; 29 ; stca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Stem Cells and Development Volume 30 ; 30 ; stca ; https://journals.sagepub.com/ ; >
@@ -61578,7 +61578,7 @@
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1853 ; 1853 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1854 ; 1854 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1855 ; 1855 ; trra ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2003 ; Transportation Research Record Volume 1856 ; 1856 ; trra ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2003 ; Transportation Research Record Volume 1856 ; 1856 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1857 ; 1857 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1858 ; 1858 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1859 ; 1859 ; trra ; https://journals.sagepub.com/ ; >
@@ -63832,7 +63832,7 @@
 
       au < manifest ; exists ; 2003 ; Web Intelligence and Agent Systems Volume 1 ; 1 ; weba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2004 ; Web Intelligence and Agent Systems Volume 2 ; 2 ; weba ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2005 ; Web Intelligence and Agent Systems Volume 3 ; 3 ; weba ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2005 ; Web Intelligence and Agent Systems Volume 3 ; 3 ; weba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2006 ; Web Intelligence and Agent Systems Volume 4 ; 4 ; weba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2007 ; Web Intelligence and Agent Systems Volume 5 ; 5 ; weba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2008 ; Web Intelligence and Agent Systems Volume 6 ; 6 ; weba ; https://journals.sagepub.com/ ; >
