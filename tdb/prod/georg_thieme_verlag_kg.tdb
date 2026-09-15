@@ -4087,6 +4087,7 @@
     au < released ; 2024 ; 2024 ; Klinische Neurophysiologie Volume 55 ; 55 >
     au < released ; 2025 ; 2025 ; Klinische Neurophysiologie Volume 56 ; 56 >
     au < manifest ; 2026 ; 2026 ; Klinische Neurophysiologie Volume 57 ; 57 >
+    # Last issue published by Thieme: 04/2026. Thieme will keep the published content of the journal.
 
   }
 
@@ -9609,6 +9610,7 @@
     au < released ; 2024 ; 2024 ; Klinik Einkauf Volume 6 ; 6 >
     au < released ; 2025 ; 2025 ; Klinik Einkauf Volume 7 ; 7 >
     au < manifest ; 2026 ; 2026 ; Klinik Einkauf Volume 8 ; 8 >
+    # Last issue published by Thieme: 06/2026. Thieme will keep the published content of the journal.
 
   }
 
@@ -10008,4 +10010,20 @@
     au < manifest ; 2026 ; 2026 ; World Journal of Nuclear Medicine Volume 25 ; 25 >
 
   }
+
+#  {
+#    title <
+#      name = Journal of Exercise & Sports Medicine ;
+#      eissn = 3056-1353 ;
+#      doi = 10.1055/s-00064227
+#   >
+#
+#    param[journal_id] = 10.1055/s-00064227
+#    comment[years] = 2025-current
+#
+#    au < exists ; 2025 ; 2025 ; Journal of Exercise & Sports Medicine Volume 1 ; 1 >
+#    au < exists ; 2026 ; 2026 ; Journal of Exercise & Sports Medicine Volume 2 ; 2 >
+#
+#  }
+#
 }
