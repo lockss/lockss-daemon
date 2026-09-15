@@ -66,6 +66,9 @@ public class AmsHtmlCrawlFilterFactory implements FilterFactory {
     	     HtmlNodeFilters.tagWithAttribute("div", "id", "EnhancedReferences"),
         //there are hrefs that are phone numbers
            HtmlNodeFilters.tagWithAttributeRegex("a", "href", "tel:"),
+        //do not crawl references section or sidebar
+           HtmlNodeFilters.tagWithAttributeRegex("div", "id", "articleReferencesContent"),
+           HtmlNodeFilters.tagWithAttribute("div","id", "sidebar"),
       
     };
     return new HtmlFilterInputStream(in,
