@@ -129,8 +129,14 @@ public class TestAmericanMathematicalSocietyHtmlMetadataExtractorFactory extends
       "<meta name=\"citation_author\" content=\"Name1, A\">\n" + 
       "<meta name=\"citation_title\" content=\"Title\">\n" + 
       "<meta name=\"citation_volume\" content=\"26\">\n" + 
-      "<meta name=\"citation_doi\" content=\"10.1090/S0894-0347-2012-00756-5\">\n" + 
       "</head>\n" +
+      "<div id=\"articleBibliographyContent\" class=\"accordion-collapse collapse\" aria-labelledby=\"articleBibliographyHeader\">" +
+      "<div class=\"accordion-body dottedList\"><ul><li>DOI: https://doi.org/10.1090/S0894-0347-2012-00756-5</li></ul></div>"+
+      "<div class=\"productDetailSubscriptionTabInfo\"><div>\"by \"<a href=\"https://mathscinet.ams.org/mathscinet/author?authorId=641675\""+
+      " target=\"_blank\">Name1</a></div></div>"+
+      "<div id=\"productDetailSubscriptionSelectedArticleContainer\">" +
+      "<div class=\"productDetailSubscriptionTabHeader\">Title</div>" +
+      "<div class=\"productDetailArticleInfoContent\"><div>J. Amer. Math. Soc. <strong>26</strong> (2016), 1-59</div></div>" +
       "</html>";
   
   public void testExtractFromGoodContent() throws Exception {
@@ -150,12 +156,10 @@ public class TestAmericanMathematicalSocietyHtmlMetadataExtractorFactory extends
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
     assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
-    /*  TODO - fix these to work with new metadata extractor
     assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
     assertEquals(goodAuthor, md.get(MetadataField.FIELD_AUTHOR));
     assertEquals(goodArticle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
-    */
   }
   
   String badContent = 
@@ -183,8 +187,7 @@ public class TestAmericanMathematicalSocietyHtmlMetadataExtractorFactory extends
     assertNull(md.get(MetadataField.FIELD_START_PAGE));
     assertNull(md.get(MetadataField.FIELD_ISSN));
     assertNull(md.get(MetadataField.FIELD_AUTHOR));
-    //FIX
-    //assertNull(md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertEquals("",md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertNull(md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     
     assertEquals(1, md.rawSize());
