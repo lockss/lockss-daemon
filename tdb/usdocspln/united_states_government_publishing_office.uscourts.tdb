@@ -1048,7 +1048,7 @@
     au < released ; 2023 ; United States District Court Northern District of Georgia ; USCOURTS_gand 2023 ; USCOURTS ; gand ; 2023 >
     au < released ; 2024 ; United States District Court Northern District of Georgia ; USCOURTS_gand 2024 ; USCOURTS ; gand ; 2024 >
     au < released ; 2025 ; United States District Court Northern District of Georgia ; USCOURTS_gand 2025 ; USCOURTS ; gand ; 2025 >
-    #au < manifest ; 1990 ; United States District Court District of Guam ; USCOURTS_gud 1990 ; USCOURTS ; gud ; 1990 >
+    au < doNotProcess ; 1990 ; United States District Court District of Guam ; USCOURTS_gud 1990 ; USCOURTS ; gud ; 1990 > #404 Error
     au < doNotProcess ; 2005 ; United States District Court District of Guam ; USCOURTS_gud 2005 ; USCOURTS ; gud ; 2005 >
     au < doNotProcess ; 2006 ; United States District Court District of Guam ; USCOURTS_gud 2006 ; USCOURTS ; gud ; 2006 >
     au < doNotProcess ; 2007 ; United States District Court District of Guam ; USCOURTS_gud 2007 ; USCOURTS ; gud ; 2007 >
@@ -1070,6 +1070,7 @@
     au < released ; 2023 ; United States District Court District of Guam ; USCOURTS_gud 2023 ; USCOURTS ; gud ; 2023 >
     au < released ; 2024 ; United States District Court District of Guam ; USCOURTS_gud 2024 ; USCOURTS ; gud ; 2024 >
     au < released ; 2025 ; United States District Court District of Guam ; USCOURTS_gud 2025 ; USCOURTS ; gud ; 2025 >
+    au < manifest ; 2026 ; United States District Court District of Guam ; USCOURTS_gud 2026 ; USCOURTS ; gud ; 2026 >
     au < doNotProcess ; 2005 ; United States Bankruptcy Court District of Hawaii ; USCOURTS_hib 2005 ; USCOURTS ; hib ; 2005 >
     au < doNotProcess ; 2006 ; United States Bankruptcy Court District of Hawaii ; USCOURTS_hib 2006 ; USCOURTS ; hib ; 2006 >
     au < doNotProcess ; 2007 ; United States Bankruptcy Court District of Hawaii ; USCOURTS_hib 2007 ; USCOURTS ; hib ; 2007 >
@@ -1664,7 +1665,7 @@
     au < released ; 2023 ; United States District Court District of Maine ; USCOURTS_med 2023 ; USCOURTS ; med ; 2023 >
     au < released ; 2024 ; United States District Court District of Maine ; USCOURTS_med 2024 ; USCOURTS ; med ; 2024 >
     au < ready ; 2025 ; United States District Court District of Maine ; USCOURTS_med 2025 ; USCOURTS ; med ; 2025 >
-    #au < manifest ; 1970 ; United States District Court Eastern District of Michigan ; USCOURTS_mied 1970 ; USCOURTS ; mied ; 1970 >
+    au < doNotProcess ; 1970 ; United States District Court Eastern District of Michigan ; USCOURTS_mied 1970 ; USCOURTS ; mied ; 1970 > #404 error
     au < released ; 1976 ; United States District Court Eastern District of Michigan ; USCOURTS_mied 1976 ; USCOURTS ; mied ; 1976 >
     au < released ; 1983 ; United States District Court Eastern District of Michigan ; USCOURTS_mied 1983 ; USCOURTS ; mied ; 1983 >
     au < doNotProcess ; 2005 ; United States District Court Eastern District of Michigan ; USCOURTS_mied 2005 ; USCOURTS ; mied ; 2005 >
@@ -1688,6 +1689,7 @@
     au < released ; 2023 ; United States District Court Eastern District of Michigan ; USCOURTS_mied 2023 ; USCOURTS ; mied ; 2023 >
     au < released ; 2024 ; United States District Court Eastern District of Michigan ; USCOURTS_mied 2024 ; USCOURTS ; mied ; 2024 >
     au < ready ; 2025 ; United States District Court Eastern District of Michigan ; USCOURTS_mied 2025 ; USCOURTS ; mied ; 2025 >
+    au < manifest ; 2026 ; United States District Court Eastern District of Michigan ; USCOURTS_mied 2026 ; USCOURTS ; mied ; 2026 >
     au < doNotProcess ; 2008 ; United States Bankruptcy Court Western District of Michigan ; USCOURTS_miwb 2008 ; USCOURTS ; miwb ; 2008 >
     au < doNotProcess ; 2009 ; United States Bankruptcy Court Western District of Michigan ; USCOURTS_miwb 2009 ; USCOURTS ; miwb ; 2009 >
     au < doNotProcess ; 2010 ; United States Bankruptcy Court Western District of Michigan ; USCOURTS_miwb 2010 ; USCOURTS ; miwb ; 2010 >
@@ -3371,8 +3373,6 @@
     au < manifest ; 2026 ; United States District Court for the Middle District of Georgia ; USCOURTS_gamd 2026 ; USCOURTS ; gamd ; 2026 >
     au < manifest ; 2026 ; United States Bankruptcy Court for the Northern District of Georgia ; USCOURTS_ganb 2026 ; USCOURTS ; ganb ; 2026 >
     au < manifest ; 2026 ; United States District Court for the Northern District of Georgia ; USCOURTS_gand 2026 ; USCOURTS ; gand ; 2026 >
-    au < manifest ; 1990 ; United States Bankruptcy Court for the District of Guam ; USCOURTS_gud 1990 ; USCOURTS ; gud ; 1990 >
-    au < manifest ; 2026 ; United States Bankruptcy Court for the District of Guam ; USCOURTS_gud 2026 ; USCOURTS ; gud ; 2026 >
     au < manifest ; 2026 ; United States Bankruptcy Court for the District of Hawaii ; USCOURTS_hib 2026 ; USCOURTS ; hib ; 2026 >
     au < manifest ; 2026 ; United States District Court for the District of Hawaii ; USCOURTS_hid 2026 ; USCOURTS ; hid ; 2026 >
     au < manifest ; 2026 ; United States Bankruptcy Court for the Northern District of Iowa ; USCOURTS_ianb 2026 ; USCOURTS ; ianb ; 2026 >
@@ -3398,8 +3398,6 @@
     au < manifest ; 2026 ; United States District Court for the District of Maryland ; USCOURTS_mdd 2026 ; USCOURTS ; mdd ; 2026 >
     au < manifest ; 2026 ; United States Bankruptcy Court for the District of Maine ; USCOURTS_meb 2026 ; USCOURTS ; meb ; 2026 >
     au < manifest ; 2026 ; United States District Court for the District of Maine ; USCOURTS_med 2026 ; USCOURTS ; med ; 2026 >
-    au < manifest ; 1970 ; United States District Court for the Eastern District of Michigan ; USCOURTS_mied 1970 ; USCOURTS ; mied ; 1970 >
-    au < manifest ; 2026 ; United States District Court for the Eastern District of Michigan ; USCOURTS_mied 2026 ; USCOURTS ; mied ; 2026 >
     au < manifest ; 2026 ; United States Bankruptcy Court for the Western District of Michigan ; USCOURTS_miwb 2026 ; USCOURTS ; miwb ; 2026 >
     au < manifest ; 2026 ; United States District Court for the Western District of Michigan ; USCOURTS_miwd 2026 ; USCOURTS ; miwd ; 2026 >
     au < manifest ; 2026 ; United States Bankruptcy Court for the District of Minnesota ; USCOURTS_mnb 2026 ; USCOURTS ; mnb ; 2026 >
