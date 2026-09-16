@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" article-type="research-article" dtd-version="1.2" xml:lang="en">
+    <front>
+        <journal-meta>
+            <journal-id journal-id-type="publisher-id">3187</journal-id>
+            <journal-title-group>
+                <journal-title>Aperture Neuro</journal-title>
+                <abbrev-journal-title>Aperture Neuro</abbrev-journal-title>
+            </journal-title-group>
+            <issn pub-type="epub">2957-3963</issn>
+            <publisher>
+                <publisher-name>Organization for Human Brain Mapping</publisher-name>
+            </publisher>
+            <self-uri xlink:href="https://apertureneuro.org/">Website: Aperture Neuro</self-uri>
+        </journal-meta>
+        <article-meta>
+            <article-id pub-id-type="publisher-id">162891</article-id>
+            <article-id pub-id-type="doi">10.52294/001c.162891</article-id>
+            <article-categories>
+                <subj-group subj-group-type="heading">
+                    <subject>Original Research Articles</subject>
+                </subj-group>
+            </article-categories>
+            <title-group>
+                <article-title>Impact of multi-echo ICA modeling decisions on motor-task fMRI analysis</article-title>
+            </title-group>
+            <contrib-group>
+                <contrib contrib-type="author" corresp="yes">
+                    <contrib-id contrib-id-type="orcid" authenticated="true">https://orcid.org/0000-0001-8938-540X</contrib-id>
+                    <name>
+                        <surname>Reddy</surname>
+                        <given-names>Neha A.</given-names>
+                    </name>
+                    <degrees>PhD</degrees>
+                    <xref ref-type="corresp" rid="author-note-1"/>
+                    <xref ref-type="aff" rid="author-aff-1">
+                        <sup>1</sup>
+                    </xref>
+                    <xref ref-type="aff" rid="author-aff-2">
+                        <sup>2</sup>
+                    </xref>
+                </contrib>
+                <contrib contrib-type="author">
+                    <contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0005-3862-5596</contrib-id>
+                    <name>
+                        <surname>Medina</surname>
+                        <given-names>Michelle C.</given-names>
+                    </name>
+                    <degrees>MS</degrees>
+                    <xref ref-type="aff" rid="author-aff-1">
+                        <sup>1</sup>
+                    </xref>
+                    <xref ref-type="aff" rid="author-aff-2">
+                        <sup>2</sup>
+                    </xref>
+                </contrib>
+                <contrib contrib-type="author">
+                    <name>
+                        <surname>Northrop</surname>
+                        <given-names>Jordan N.</given-names>
+                    </name>
+                    <degrees>MS</degrees>
+                    <xref ref-type="aff" rid="author-aff-1">
+                        <sup>1</sup>
+                    </xref>
+                    <xref ref-type="aff" rid="author-aff-2">
+                        <sup>2</sup>
+                    </xref>
+                </contrib>
+                <contrib contrib-type="author">
+                    <name>
+                        <surname>Zou</surname>
+                        <given-names>Chendong</given-names>
+                    </name>
+                    <degrees>MS</degrees>
+                    <xref ref-type="aff" rid="author-aff-1">
+                        <sup>1</sup>
+                    </xref>
+                    <xref ref-type="aff" rid="author-aff-2">
+                        <sup>2</sup>
+                    </xref>
+                    <xref ref-type="aff" rid="author-aff-3">
+                        <sup>3</sup>
+                    </xref>
+                </contrib>
+                <contrib contrib-type="author">
+                    <contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-4787-1124</contrib-id>
+                    <name>
+                        <surname>Clements</surname>
+                        <given-names>Rebecca G.</given-names>
+                    </name>
+                    <degrees>MS</degrees>
+                    <xref ref-type="aff" rid="author-aff-1">
+                        <sup>1</sup>
+                    </xref>
+                    <xref ref-type="aff" rid="author-aff-2">
+                        <sup>2</sup>
+                    </xref>
+                </contrib>
+                <contrib contrib-type="author">
+                    <contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-7972-0120</contrib-id>
+                    <name>
+                        <surname>Nehrujee</surname>
+                        <given-names>Aravind</given-names>
+                    </name>
+                    <degrees>PhD</degrees>
+                    <xref ref-type="aff" rid="author-aff-3">
+                        <sup>3</sup>
+                    </xref>
+                    <xref ref-type="aff" rid="author-aff-4">
+                        <sup>4</sup>
+                    </xref>
+                </contrib>
+                <contrib contrib-type="author">
+                    <contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-6979-2793</contrib-id>
+                    <name>
+                        <surname>Sandhu</surname>
+                        <given-names>Milap</given-names>
+                    </name>
+                    <degrees>PhD</degrees>
+                    <xref ref-type="aff" rid="author-aff-3">
+                        <sup>3</sup>
+                    </xref>
+                    <xref ref-type="aff" rid="author-aff-4">
+                        <sup>4</sup>
+                    </xref>
+                </contrib>
+                <contrib contrib-type="author">
+                    <contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-7257-9646</contrib-id>
+                    <name>
+                        <surname>Bright</surname>
+                        <given-names>Molly G.</given-names>
+                    </name>
+                    <degrees>DPhil</degrees>
+                    <xref ref-type="aff" rid="author-aff-1">
+                        <sup>1</sup>
+                    </xref>
+                    <xref ref-type="aff" rid="author-aff-2">
+                        <sup>2</sup>
+                    </xref>
+                </contrib>
+            </contrib-group>
+            <aff id="author-aff-1">
+                <label>1</label>
+                <institution-wrap>
+                    <institution content-type="dept">Physical Therapy and Human Movement Sciences</institution>
+                </institution-wrap>
+                <institution-wrap>
+                    <institution content-type="edu">Northwestern University, Evanston, IL, USA</institution>
+                </institution-wrap>
+            </aff>
+            <aff id="author-aff-2">
+                <label>2</label>
+                <institution-wrap>
+                    <institution content-type="dept">Biomedical Engineering</institution>
+                </institution-wrap>
+                <institution-wrap>
+                    <institution content-type="edu">Northwestern University, Evanston, IL, USA</institution>
+                </institution-wrap>
+            </aff>
+            <aff id="author-aff-3">
+                <label>3</label>
+                <institution-wrap>
+                    <institution content-type="edu">Shirley Ryan AbilityLab, Chicago, IL, USA</institution>
+                </institution-wrap>
+            </aff>
+            <aff id="author-aff-4">
+                <label>4</label>
+                <institution-wrap>
+                    <institution content-type="dept">Physical Medicine and Rehabilitation</institution>
+                </institution-wrap>
+                <institution-wrap>
+                    <institution content-type="edu">Northwestern University, Evanston, IL, USA</institution>
+                </institution-wrap>
+            </aff>
+            <author-notes>
+                <corresp id="author-note-1"><bold>Corresponding Author:</bold> Neha A. Reddy, PhD (nreddy@northwestern.edu) Physical Therapy and Human Movement Sciences, Northwestern University Biomedical Engineering, Northwestern University Evanston, IL, USA</corresp>
+            </author-notes>
+            <pub-date publication-format="electronic" date-type="pub" iso-8601-date="2026-09-04">
+                <day>4</day>
+                <month>9</month>
+                <year>2026</year>
+            </pub-date>
+            <pub-date publication-format="electronic" date-type="collection" iso-8601-date="2026-01-06">
+                <month>1</month>
+                <year>2026</year>
+            </pub-date>
+            <volume>6</volume>
+            <elocation-id>162891</elocation-id>
+            <supplementary-material id="attachment-347858" mimetype="application/pdf" xlink:href="assets/apertureneuro_2026_6_162891_347858.pdf">
+                <caption>
+                    <title>Supplemental Materials</title>
+                </caption>
+            </supplementary-material>
+            <history>
+                <date date-type="received" iso-8601-date="2025-12-02">
+                    <day>2</day>
+                    <month>12</month>
+                    <year>2025</year>
+                </date>
+                <date date-type="rev-recd" iso-8601-date="2026-03-13">
+                    <day>13</day>
+                    <month>3</month>
+                    <year>2026</year>
+                </date>
+                <date date-type="rev-recd" iso-8601-date="2026-05-09">
+                    <day>9</day>
+                    <month>5</month>
+                    <year>2026</year>
+                </date>
+                <date date-type="accepted" iso-8601-date="2026-05-12">
+                    <day>12</day>
+                    <month>5</month>
+                    <year>2026</year>
+                </date>
+            </history>
+            <permissions>
+                <license license-type="open-access">
+                    <ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/">
+                        http://creativecommons.org/licenses/by/4.0
+                    </ali:license_ref>
+                    <license-p>
+                        This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0">Creative Commons Attribution License (4.0)</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.
+                    </license-p>
+                </license>
+            </permissions>
+            <self-uri content-type="pdf" xlink:href="https://apertureneuro.org/article/162891.pdf"/>
+            <self-uri content-type="xml" xlink:href="https://apertureneuro.org/article/162891.xml"/>
+            <self-uri content-type="json" xlink:href="https://apertureneuro.org/article/162891.json"/>
+            <self-uri content-type="html" xlink:href="https://apertureneuro.org/article/162891"/>
+            <abstract>
+                <p>Multi-echo independent component analysis (ME-ICA) has been demonstrated to improve sensitivity and reliability of task functional magnetic resonance imaging (fMRI) data and, in particular, motor-task data with inherent task-correlated head motion. However, previous work has shown that an overly aggressive ME-ICA denoising approach may unintentionally remove task-related signal, while a more conservative approach may not effectively mitigate noise. While the effects of varied implementations of ME-ICA on signal and noise characteristics have been tested thoroughly in breath-hold data, the effects of similar modeling decisions have not been studied in motor-task data, which present with a more localized neural response. Here, we tested and compared the impacts of three analysis methods using rejected ME-ICA components as regressors in subject-level modeling: Aggressive (simple inclusion of ME-ICA regressors), Moderate (excluding task-correlated ME-ICA regressors from the model), and Conservative (orthogonalization of ME-ICA regressors to the core model and accepted ME-ICA components). We applied these methods to data from healthy and multiple sclerosis populations that included performance of hand-grasp, shoulder-abduction, and ankle-flexion tasks. We found that when the amount of head motion and its correlation with the task was high and the expected task-evoked signal was relatively low, the Conservative method led to significantly higher activation, t-statistics, and test-retest similarity in motor regions compared to the Aggressive method. Future motor-task studies may wish to implement similar models to prevent loss of motor signal, while still mitigating the effects of task-correlated head motion.</p>
+            </abstract>
+            <kwd-group>
+                <kwd>BOLD fMRI</kwd>
+                <kwd>motor task</kwd>
+                <kwd>task-correlated head motion</kwd>
+                <kwd>multi-echo</kwd>
+                <kwd>independent component analysis</kwd>
+                <kwd>denoising</kwd>
+            </kwd-group>
+            <funding-group>
+                <award-group>
+                    <funding-source id="fs1">
+                        <institution-wrap>
+                            <institution>National Institute of Child Health and Human Development</institution>
+                            <institution-id institution-id-type="DOI">10.13039/100000071</institution-id>
+                        </institution-wrap>
+                    </funding-source>
+                    <award-id>R21HD108587</award-id>
+                    <award-id>R03HD113915</award-id>
+                </award-group>
+                <award-group>
+                    <funding-source id="fs2">
+                        <institution-wrap>
+                            <institution>National Institute of Biomedical Imaging and Bioengineering</institution>
+                            <institution-id institution-id-type="DOI">10.13039/100000070</institution-id>
+                        </institution-wrap>
+                    </funding-source>
+                    <award-id>T32EB025766</award-id>
+                </award-group>
+                <award-group>
+                    <funding-source id="fs3">
+                        <institution-wrap>
+                            <institution>National Science Foundation</institution>
+                            <institution-id institution-id-type="DOI">10.13039/100000001</institution-id>
+                        </institution-wrap>
+                    </funding-source>
+                    <award-id>DGE-2234667</award-id>
+                </award-group>
+                <award-group>
+                    <funding-source id="fs4">
+                        <institution-wrap>
+                            <institution>American Heart Association</institution>
+                            <institution-id institution-id-type="DOI">10.13039/100000968</institution-id>
+                        </institution-wrap>
+                    </funding-source>
+                    <award-id>25PRE1356822</award-id>
+                </award-group>
+            </funding-group>
+        </article-meta>
+    </front>
+</article>
