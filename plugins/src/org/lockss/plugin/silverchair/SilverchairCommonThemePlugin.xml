@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>47</string>
+        <string>48</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -131,6 +131,12 @@
             -->
             <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/.*\.xlsx"</string>
             <string>2,"%smy-account/register", base_url</string>
+            <!-- Same problem as my-account/register above: the sign-in link's returnUrl
+                 ends in .tif, so the image-extension rule below would otherwise include
+                 it, and the text/* validator then reports a MIME mismatch.
+                 cf. IwapSilverchairPlugin and DupSilverchairPlugin.
+                 https://rupress.org/sign-in?returnUrl=%2Fview-large%2Ffigure%2F9919020%2FJCB_202503146_FigS1.tif -->
+            <string>2,"%s(institutional-login|sign-in)", base_url</string>
             <!--
             Exclude all these files, Cloudflare/Clounfront return inconsistent response code, sometimes it is 403 sometimes 404
             Themes/Client/app/img/favicons/v-639023850001008803/apple-touch-icon.png
@@ -147,9 +153,8 @@
             <string>1,"https?://movie-usa.glencoesoftware.com/metadata/.*"</string>
             <string>1,"^https?://(trs\.silverchair-cdn\.com)/"</string>
             <string>1,"^https?://(cdn\.rupress\.org)/"</string>
-            <string>1,"^https?://(%s|[^.]+\.(silverchair-?cdn\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
-            <!--
-            Exclude bad url comes from
+            <string>1,"^https?://(%s|[^.]+\.(silverchair-?cdn\.com/|cloudfront\.net/|brightcove\.net/))[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
+            <!--Exclude bad url comes from
             <div class="comment">doi: <a class="link" href="10.1666/13-053" target="_blank">10.1666/13-053</a>.</div>
             -->
             <string>2,"%s([^/]+/)?%s/(issue|article|article-abstract|article-standard)/%s/[^/]+/[^/]+/10\.\d{4,}/", base_url, journal_id, volume_name</string>
