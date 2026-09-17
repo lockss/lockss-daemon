@@ -2241,7 +2241,7 @@
     au < released ; 2023 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 172 ; 172 >
     au < released ; 2024 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 173 ; 173 >
     au < released ; 2025 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 174 ; 174 >
-    au < expected ; 2026 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 175 ; 175 >
+    au < manifest ; 2026 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 175 ; 175 >
 
   }
 
@@ -2931,4 +2931,24 @@
 
   }
   
+  {
+
+    title <
+      name = Archivium Hibernicum ;
+      issn = 0044-8745 ;
+      eissn = 3088-6988
+    >
+
+    param[journal_id] = archhib 
+
+    au < manifest ; 2020 ; Archivium Hibernicum Volume 73 ; 73 >
+    au < manifest ; 2021 ; Archivium Hibernicum Volume 74 ; 74 >
+    au < manifest ; 2022 ; Archivium Hibernicum Volume 75 ; 75 >
+    au < manifest ; 2023 ; Archivium Hibernicum Volume 76 ; 76 >
+    au < manifest ; 2024 ; Archivium Hibernicum Volume 77 ; 77 >
+    au < manifest ; 2025 ; Archivium Hibernicum Volume 78 ; 78 >
+    au < expected ; 2026 ; Archivium Hibernicum Volume 79 ; 79 >
+
+  }
+
 }
