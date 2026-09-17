@@ -72,8 +72,9 @@ public class AmericanMathematicalSocietyHtmlFilterFactory implements FilterFacto
         HtmlNodeFilters.tagWithAttributeRegex("a", "class", "__cf_email__"),
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "email-protection"),
         HtmlNodeFilters.tagWithAttributeRegex("span", "class", "__cf_email__"),
-        //remove recently published articles
+        //remove recently published articles and articles in press
         HtmlNodeFilters.tagWithAttribute("div", "id", "recent"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "press"),
         
     };
     
