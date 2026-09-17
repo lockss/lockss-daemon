@@ -194,7 +194,7 @@
     # param of date is a year-month published date in the form yyyy-mm. Not all months have material published
     # Issues are Volume 1, Part1,2,3 etc. Parts do not correspond with month published.
     
-    # already processed 2010-2013 on previous platform.
+    #### already processed 2010-2013 on previous platform. ####
     
     comment[continued_by] = Crystallographic Communications 2056-9890 [2015-onward]
     param[au_oai_set] = actacryste
