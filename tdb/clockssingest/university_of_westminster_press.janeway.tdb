@@ -1,13 +1,12 @@
 {
   publisher <
-    name = University of Westminster ;
+    name = University of Westminster Press ;
     info[contract] = 2018 ;
     info[back] = 2002 ;
-    info[tester] = X ;
-    #info[tester] = 8 ;
+    info[tester] = 8 ;
     info[platform] = Janeway. LXPLUG-2156.
   >
-    provider = University of Westminster
+    provider = University of Westminster Press
     plugin = org.lockss.plugin.janeway.universityofmichigan.ClockssUniversityofMichiganPlugin
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
 
@@ -18,7 +17,7 @@
         eissn = 2732-4184
     >
 
-    comment[publisher] = University of Westminster
+    comment[publisher] = University of Westminster Press
     param[base_url] = https://activetravelstudies.org/ #API works encoded & = &amp;
 
     au < frozen ; exists ; 2021 ; 1 ; Active Travel Studies Volume 2021 ; 2021 ; >
@@ -36,7 +35,7 @@
         eissn = 2633-4321
     >
 
-    comment[publisher] = University of Westminster
+    comment[publisher] = University of Westminster Press
     param[base_url] = https://www.anthropocenes.net/  #API works encoded & = &amp;
 
     au < frozen ; exists ; 2020 ; 1 ; Anthropocenes – Human, Inhuman, Posthuman Volume 2020 ; 2020 ; >
@@ -55,7 +54,7 @@
         eissn = 1748-944X
     >
 
-    comment[publisher] = University of Westminster
+    comment[publisher] = University of Westminster Press
     param[base_url] = https://www.entsportslawjournal.com/ #API works encoded & = &amp;
     #V1-18 processed with Ubiquity press
 
@@ -92,7 +91,7 @@
         eissn = 2634-0488
     >
 
-    comment[publisher] = University of Westminster
+    comment[publisher] = University of Westminster Press
     param[base_url] = https://delibdemjournal.org/   #API works encoded & = &amp;
 
     au < doNotProcess ; exists ; 2005 ; 1 ; Journal of Deliberative Democracy Volume 2005 ; 2005 ; >
@@ -126,7 +125,7 @@
         eissn = 2631-682X
     >
 
-    comment[publisher] = University of Westminster
+    comment[publisher] = University of Westminster Press
     param[base_url] = https://silkroadjournal.online/
     #Manifest page exists. https://silkroadjournal.online/api/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=2019-01-01&amp;until=2019-12-31
     #Permission page missing. https://silkroadjournal.online/clockss
@@ -145,7 +144,7 @@
         eissn = 1744-6716
     >
 
-    comment[publisher] = University of Westminster
+    comment[publisher] = University of Westminster Press
     param[base_url] = https://www.westminsterpapers.org/
 
     au < doNotProcess ; exists ; 2009 ; 6 ; Westminster Papers in Communication and Culture Volume 2009 ; 2009 ; >

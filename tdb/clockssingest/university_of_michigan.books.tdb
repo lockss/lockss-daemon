@@ -1,73 +1,6 @@
 #Permission for all content provided at: http://clockss-ingest.lockss.org/clockss.txt
 #Permission for all content provided at: http://clockss-ingest.lockss.org/lockss.txt
 
-{ 
-
-  publisher <
-    name = University of Westminster Press ;
-    info[contract] = 2026 ;
-    info[back] = 1981 ;
-    info[tester] = 8 ;
-    comment[platform] = Fulcrum
-  >
-
-  provider = University of Westminster Press
-  plugin = org.lockss.plugin.michigan.ClockssUMichFulcrumBooksPlugin
-  param[base_url] = https://www.fulcrum.org/
-  implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_uri] ; name ; hidden[proxy] >  
-
-  {
-  
-    title <
-      name = University of Westminster Press Ebooks (EBC) ;
-      type = bookSeries
-    >
-
-    #book list current as of 9/16/2026
-    
-    au < frozen ; exists ; 2008 ; 978-1-911534-20-4 ;  ; concern/monographs/jq085p23d ; The Education of the Eye: History of the Royal Polytechnic Institution 1838-1881 ; >
-    au < frozen ; exists ; 2013 ; 978-1-911534-14-3 ;  ; concern/monographs/028710003 ; An Education in Sport: Competition, communities and identities at the University of Westminster since 1864 ; >
-    au < frozen ; exists ; 2013 ; 978-1-911534-17-4 ;  ; concern/monographs/76537404q ; Educating Mind, Body and Spirit: The legacy of Quintin Hogg and The Polytechnic, 1864-1992 ; >
-    au < frozen ; exists ; 2015 ; 978-1-911534-23-5 ;  ; concern/monographs/pv63g341q ; The magic screen: a history of Regent Street Cinema ; >
-    au < frozen ; exists ; 2017 ; 978-1-911534-98-3 ;  ; concern/monographs/n583xx78c ; Educating for Professional Life: Twenty-five Years of the University of Westminster ; >
-    au < frozen ; exists ; 2018 ; 978-1-912656-23-3 ; 978-1-912656-24-0 ; concern/monographs/6969z391k ; Appearance, Discrimination and the Media: Portraying Facial Disfigurement Fairly in the News ; >
-    au < frozen ; exists ; 2018 ; 978-1-911534-82-2 ; 978-1-911534-83-9 ; concern/monographs/4f16c602n ; Artificial Intelligence and the Internet of Things: UK Policy Opportunities and Challenges ; >
-    au < frozen ; exists ; 2018 ; 978-1-911534-86-0 ; 978-1-911534-87-7 ; concern/monographs/9k41zh55j ; The Online Advertising Tax: A Digital Policy Innovation ; >
-    au < frozen ; exists ; 2018 ; 978-1-911534-90-7 ; 978-1-911534-91-4 ; concern/monographs/3b591c396 ; Well-Being and Mental Health in the Gig Economy: Policy Perspectives on Precarity ; >
-    au < frozen ; exists ; 2020 ; 978-1-912656-84-4 ; 978-1-912656-85-1 ; concern/monographs/3x816q60r ; T﻿he Commons: Economic Alternatives in the Digital Age ; >
-    au < frozen ; exists ; 2021 ; 978-1-914386-13-8 ; 978-1-914386-14-5 ; concern/monographs/0v838359n ; AI for Everyone?: Critical Perspectives ; >
-    au < frozen ; exists ; 2021 ; 978-1-914386-01-5 ; 978-1-914386-02-2 ; concern/monographs/k3569776g ; Anthropocene Islands: Entangled Worlds ; >
-    au < frozen ; exists ; 2021 ; 978-1-914386-22-0 ; 978-1-914386-23-7 ; concern/monographs/js956j798 ; Cultural China 2020: The Contemporary China Centre Review ; >
-    au < frozen ; exists ; 2021 ; 978-1-914386-18-3 ; 978-1-914386-19-0 ; concern/monographs/sx61dq13w ; Democracy in a Pandemic: Participation in Response to Crisis ; >
-    au < frozen ; exists ; 2021 ; 978-1-912656-91-2 ; 978-1-912656-92-9 ; concern/monographs/nv935580j ; Fashion Media and Sustainability: Encouraging Ethical Consumption via Journalism and Influencers ; >
-    au < frozen ; exists ; 2021 ; 978-1-914386-05-3 ; 978-1-914386-06-0 ; concern/monographs/bv73c331q ; Misinformation Policy in Sub-Saharan Africa: From Laws and Regulations to Media Literacy ; >
-    au < frozen ; exists ; 2021 ; 978-1-912656-95-0 ; 978-1-912656-96-7 ; concern/monographs/s4655k453 ; The Fight Against Platform Capitalism: An Inquiry into the Global Struggles of the Gig Economy ; >
-    au < frozen ; exists ; 2021 ; 978-1-914386-29-9 ; 978-1-914386-30-5 ; concern/monographs/t435gh246 ; The Public Service Media and Public Service Internet Manifesto ; >
-    au < frozen ; exists ; 2021 ; 978-1-914386-26-8 ; 978-1-914386-27-5 ; concern/monographs/zc77ss98h ; The Society of the Selfie: Social Media and the Crisis of Liberal Democracy ; >
-    au < frozen ; exists ; 2022 ; 978-1-915445-17-9 ; 978-1-915445-18-6 ; concern/monographs/5x21tj35x ; Cultural China 2021: The Contemporary China Centre Review ; >
-    au < frozen ; exists ; 2022 ; 978-1-914386-08-4 ; 978-1-914386-09-1 ; concern/monographs/7p88ck71x ; Digital Platforms and Algorithmic Subjectivities ; >
-    au < frozen ; exists ; 2022 ; 978-1-914386-45-9 ; 978-1-914386-46-6 ; concern/monographs/cv43p081k ; Festivals and the City: The Contested Geographies of Urban Events ; >
-    au < frozen ; exists ; 2022 ; 978-1-914386-33-6 ; 978-1-914386-33-6 ; concern/monographs/79408119k ; Paradoxes of Digital Disengagement: In Search of the Opt-Out Button ; >
-    au < frozen ; exists ; 2023 ; 978-1-914386-37-4 ; 978-1-914386-38-1 ; concern/monographs/z603r137f ; HEAR ; >
-    au < frozen ; exists ; 2023 ; 978-1-915445-12-4 ; 978-1-915445-13-1 ; concern/monographs/z316q454v ; Smell: (Law and the Senses) ; >
-    au < frozen ; exists ; 2023 ; 978-1-915445-31-5 ; 978-1-915445-32-2 ; concern/monographs/dr26z151g ; The World as Abyss: The Caribbean and Critical Thought in the Anthropocene ; >
-    au < frozen ; exists ; 2024 ; 978-1-914386-41-1 ; 978-1-914386-42-8 ; concern/monographs/tx31qm98v ; The Long Walk to Equality: Perspectives on Racial Inequality, Injustice and the Law ; >
-    au < frozen ; exists ; 2024 ; 978-1-915445-57-5 ; 978-1-915445-58-2 ; concern/monographs/w9505348p ; We Need To Talk About Climate: How Citizens’ Assemblies Can Help Us Solve The Climate Crisis ; >
-    au < manifest ; exists ; 2025 ; ; 978-1-915445-23-0 ; concern/monographs/rr1721015 ; Contemporary Colonialities: Kurds and Kashmiris ; >
-    au < manifest ; exists ; 2025 ; ; 978-1-915445-42-1 ; concern/monographs/2801pk47m ; Critical Communication: A Memoir ; >
-    au < manifest ; exists ; 2025 ; ; 978-1-915445-50-6 ; concern/monographs/jq085p33n ; Critique of the Political Economy of the Media: Foundations and Applications ; >
-    au < manifest ; exists ; 2025 ; ; 978-1-915445-03-2 ; concern/monographs/t148fm18t ; Digital and Social Media in Africa ; >
-    au < manifest ; exists ; 2025 ; ; 978-1-915445-38-4 ; concern/monographs/3197xq21t ; Fake News – What’s the harm? ; >
-    au < manifest ; exists ; 2025 ; ; 978-1-915445-82-7 ; concern/monographs/td96k575f ; How to Create a Universe ; >
-    au < manifest ; exists ; 2025 ; ; 978-1-915445-66-7 ; concern/monographs/cc08hj870 ; Media Pasts and Futures: Critical Reflections on Power Without Responsibility ; >
-    au < manifest ; exists ; 2025 ; ; 978-1-915445-46-9 ; concern/monographs/zk51vk955 ; The Left and Digital Politics: Political Parties from Platform Neoliberalism to Platform Socialism ; >
-    au < manifest ; exists ; 2025 ; ; 978-1-915445-08-7 ; concern/monographs/fx719r06x ; The Student Guide to the Creative Studio in the Digital Age ; >
-    au < manifest ; exists ; 2026 ; ; 978-1-915445-27-8 ; concern/monographs/qr46r432c ; Tourism and the Metropolis ; >
-
-  }
-
-}
-
 
 { 
 
@@ -1419,6 +1352,7 @@
     au < finished ; finished ; 2021 ; 9780472132546 ; 9780472902484 ; concern/monographs/8336h409h ; Writing Pirates ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; 9781954731004 ; 9781954731011 ; concern/monographs/tb09j8315 ; Yale Papyri in the Beinecke Rare Book and Manuscript Library IV ; reingest1.clockss.org:8082 >
     
+    #U of WM Press
     au < frozen ; exists ; 2016 ; 978-1-911534-05-1 ; 978-1-911534-06-8 ; concern/monographs/ns064890k ; Critical Theory of Communication: New Readings of Lukács, Adorno, Marcuse, Honneth and Habermas in the Age of the Internet ; >
     au < frozen ; exists ; 2017 ; 978-1-911534-37-2 ; 978-1-911534-38-9 ; concern/monographs/p5547v196 ; Capital, State, Empire: The New American Way of Digital Warfare ; >
     au < frozen ; exists ; 2017 ; 978-1-911534-29-7 ; 978-1-911534-30-3 ; concern/monographs/r781wk02r ; Collaborative Production in the Creative Industries ; >
