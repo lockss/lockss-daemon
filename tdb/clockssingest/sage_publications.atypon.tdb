@@ -56,7 +56,7 @@
       au < ready ; exists ; 1998 ; About Campus Volume 2 ; 2 ; acaa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1999 ; About Campus Volume 3 ; 3 ; acaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; About Campus Volume 4 ; 4 ; acaa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2001 ; About Campus Volume 5 ; 5 ; acaa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2001 ; About Campus Volume 5 ; 5 ; acaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; About Campus Volume 6 ; 6 ; acaa ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2003 ; About Campus Volume 7 ; 7 ; acaa ; https://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2004 ; About Campus Volume 8 ; 8 ; acaa ; https://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
@@ -191,7 +191,7 @@
       #param[base_url] = http://ach.sagepub.com/
 
       au < ready ; exists ; 1996 ; Accounting History Volume 1 ; 1 ; acha ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1997 ; Accounting History Volume 2 ; 2 ; acha ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1997 ; Accounting History Volume 2 ; 2 ; acha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1998 ; Accounting History Volume 3 ; 3 ; acha ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1999 ; Accounting History Volume 4 ; 4 ; acha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Accounting History Volume 5 ; 5 ; acha ; https://journals.sagepub.com/ ; >
@@ -891,10 +891,10 @@
       au < ready ; exists ; 1960-1961 ; Adult Education Volume 11 ; 11 ; aeqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1961-1962 ; Adult Education Volume 12 ; 12 ; aeqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1962-1963 ; Adult Education Volume 13 ; 13 ; aeqa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1963-1964 ; Adult Education Volume 14 ; 14 ; aeqa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1964-1965 ; Adult Education Volume 15 ; 15 ; aeqa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1963-1964 ; Adult Education Volume 14 ; 14 ; aeqa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1964-1965 ; Adult Education Volume 15 ; 15 ; aeqa ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 1965-1966 ; Adult Education Volume 16 ; 16 ; aeqa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1966-1967 ; Adult Education Volume 17 ; 17 ; aeqa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1966-1967 ; Adult Education Volume 17 ; 17 ; aeqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1967-1968 ; Adult Education Volume 18 ; 18 ; aeqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1968-1969 ; Adult Education Volume 19 ; 19 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1969-1970 ; Adult Education Volume 20 ; 20 ; aeqa ; https://journals.sagepub.com/ ; >
@@ -1372,7 +1372,7 @@
       au < ready ; exists ; 1989 ; AIDS Patient Care Volume 3 ; 3 ; adsb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1990 ; AIDS Patient Care Volume 4 ; 4 ; adsb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1991 ; AIDS Patient Care Volume 5 ; 5 ; adsb ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1992 ; AIDS Patient Care Volume 6 ; 6 ; adsb ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1992 ; AIDS Patient Care Volume 6 ; 6 ; adsb ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 1993 ; AIDS Patient Care Volume 7 ; 7 ; adsb ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 1994 ; AIDS Patient Care Volume 8 ; 8 ; adsb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1995 ; AIDS Patient Care Volume 9 ; 9 ; adsb ; https://journals.sagepub.com/ ; >
@@ -1502,7 +1502,7 @@
       au < ready ; exists ; 1990 ; Alexandria Volume 2 ; 2 ; alaa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1991 ; Alexandria Volume 3 ; 3 ; alaa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1992 ; Alexandria Volume 4 ; 4 ; alaa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1993 ; Alexandria Volume 5 ; 5 ; alaa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1993 ; Alexandria Volume 5 ; 5 ; alaa ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 1994 ; Alexandria Volume 6 ; 6 ; alaa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1995 ; Alexandria Volume 7 ; 7 ; alaa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1996 ; Alexandria Volume 8 ; 8 ; alaa ; https://journals.sagepub.com/ ; >
@@ -3647,7 +3647,7 @@
       au < ready ; exists ; 2001 ; The Annals of the American Academy of Political and Social Science Volume 574 ; 574 ; anna ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2001 ; The Annals of the American Academy of Political and Social Science Volume 575 ; 575 ; anna ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2001 ; The Annals of the American Academy of Political and Social Science Volume 576 ; 576 ; anna ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2001 ; The Annals of the American Academy of Political and Social Science Volume 577 ; 577 ; anna ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2001 ; The Annals of the American Academy of Political and Social Science Volume 577 ; 577 ; anna ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2001 ; The Annals of the American Academy of Political and Social Science Volume 578 ; 578 ; anna ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; The Annals of the American Academy of Political and Social Science Volume 579 ; 579 ; anna ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; The Annals of the American Academy of Political and Social Science Volume 580 ; 580 ; anna ; https://journals.sagepub.com/ ; >
@@ -4131,7 +4131,7 @@
       au < manifest ; exists ; 2008 ; Antioxidants & Redox Signaling Volume 10 ; 10 ; area ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2009 ; Antioxidants & Redox Signaling Volume 11 ; 11 ; area ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2010 ; Antioxidants & Redox Signaling Volume 12 ; 12 ; area ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2010 ; Antioxidants & Redox Signaling Volume 13 ; 13 ; area ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2010 ; Antioxidants & Redox Signaling Volume 13 ; 13 ; area ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2011 ; Antioxidants & Redox Signaling Volume 14 ; 14 ; area ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2011 ; Antioxidants & Redox Signaling Volume 15 ; 15 ; area ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2012 ; Antioxidants & Redox Signaling Volume 16 ; 16 ; area ; https://journals.sagepub.com/ ; >
@@ -6636,7 +6636,7 @@
       au < ready ; exists ; 2010 ; Biopreservation and Biobanking Volume 8 ; 8 ; bpba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2011 ; Biopreservation and Biobanking Volume 9 ; 9 ; bpba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2012 ; Biopreservation and Biobanking Volume 10 ; 10 ; bpba ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2013 ; Biopreservation and Biobanking Volume 11 ; 11 ; bpba ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2013 ; Biopreservation and Biobanking Volume 11 ; 11 ; bpba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2014 ; Biopreservation and Biobanking Volume 12 ; 12 ; bpba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2015 ; Biopreservation and Biobanking Volume 13 ; 13 ; bpba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2016 ; Biopreservation and Biobanking Volume 14 ; 14 ; bpba ; https://journals.sagepub.com/ ; >
@@ -6995,7 +6995,7 @@
       au < ready ; exists ; 2012 ; Breastfeeding Medicine Volume 7 ; 7 ; bfma ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2013 ; Breastfeeding Medicine Volume 8 ; 8 ; bfma ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2014 ; Breastfeeding Medicine Volume 9 ; 9 ; bfma ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2015 ; Breastfeeding Medicine Volume 10 ; 10 ; bfma ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2015 ; Breastfeeding Medicine Volume 10 ; 10 ; bfma ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2016 ; Breastfeeding Medicine Volume 11 ; 11 ; bfma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2017 ; Breastfeeding Medicine Volume 12 ; 12 ; bfma ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2018 ; Breastfeeding Medicine Volume 13 ; 13 ; bfma ; https://journals.sagepub.com/ ; >
@@ -31114,7 +31114,7 @@
       au < manifest ; exists ; 2015 ; Journal of Computational Biology Volume 22 ; 22 ; cpba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Journal of Computational Biology Volume 23 ; 23 ; cpba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Journal of Computational Biology Volume 24 ; 24 ; cpba ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2018 ; Journal of Computational Biology Volume 25 ; 25 ; cpba ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2018 ; Journal of Computational Biology Volume 25 ; 25 ; cpba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Journal of Computational Biology Volume 26 ; 26 ; cpba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Journal of Computational Biology Volume 27 ; 27 ; cpba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Journal of Computational Biology Volume 28 ; 28 ; cpba ; https://journals.sagepub.com/ ; >
@@ -57633,7 +57633,7 @@
       au < manifest ; exists ; 2015 ; Sport Marketing Quarterly Volume 24 ; 24 ; qsma ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Sport Marketing Quarterly Volume 25 ; 25 ; qsma ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Sport Marketing Quarterly Volume 26 ; 26 ; qsma ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2018 ; Sport Marketing Quarterly Volume 27 ; 27 ; qsma ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2018 ; Sport Marketing Quarterly Volume 27 ; 27 ; qsma ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2019 ; Sport Marketing Quarterly Volume 28 ; 28 ; qsma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Sport Marketing Quarterly Volume 29 ; 29 ; qsma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Sport Marketing Quarterly Volume 30 ; 30 ; qsma ; https://journals.sagepub.com/ ; >
@@ -59065,7 +59065,7 @@
       au < manifest ; exists ; 2015 ; Telemedicine and e-Health Volume 21 ; 21 ; teha ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Telemedicine and e-Health Volume 22 ; 22 ; teha ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Telemedicine and e-Health Volume 23 ; 23 ; teha ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2018 ; Telemedicine and e-Health Volume 24 ; 24 ; teha ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2018 ; Telemedicine and e-Health Volume 24 ; 24 ; teha ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2019 ; Telemedicine and e-Health Volume 25 ; 25 ; teha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Telemedicine and e-Health Volume 26 ; 26 ; teha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Telemedicine and e-Health Volume 27 ; 27 ; teha ; https://journals.sagepub.com/ ; >
@@ -63391,7 +63391,7 @@
       au < ready ; exists ; 2010 ; Vector-Borne and Zoonotic Diseases Volume 10 ; 10 ; vbza ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2011 ; Vector-Borne and Zoonotic Diseases Volume 11 ; 11 ; vbza ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2012 ; Vector-Borne and Zoonotic Diseases Volume 12 ; 12 ; vbza ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2013 ; Vector-Borne and Zoonotic Diseases Volume 13 ; 13 ; vbza ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2013 ; Vector-Borne and Zoonotic Diseases Volume 13 ; 13 ; vbza ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2014 ; Vector-Borne and Zoonotic Diseases Volume 14 ; 14 ; vbza ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2015 ; Vector-Borne and Zoonotic Diseases Volume 15 ; 15 ; vbza ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2016 ; Vector-Borne and Zoonotic Diseases Volume 16 ; 16 ; vbza ; https://journals.sagepub.com/ ; >
@@ -63472,7 +63472,7 @@
       au < manifest ; exists ; 2000 ; Veterinary Pathology Volume 37 ; 37 ; vetb ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2001 ; Veterinary Pathology Volume 38 ; 38 ; vetb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Veterinary Pathology Volume 39 ; 39 ; vetb ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2003 ; Veterinary Pathology Volume 40 ; 40 ; vetb ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2003 ; Veterinary Pathology Volume 40 ; 40 ; vetb ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2004 ; Veterinary Pathology Volume 41 ; 41 ; vetb ; https://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2005 ; Veterinary Pathology Volume 42 ; 42 ; vetb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2006 ; Veterinary Pathology Volume 43 ; 43 ; vetb ; https://journals.sagepub.com/ ; >
@@ -63662,7 +63662,7 @@
       au < ready ; exists ; 2007 ; Viral Immunology Volume 20 ; 20 ; vima ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2008 ; Viral Immunology Volume 21 ; 21 ; vima ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2009 ; Viral Immunology Volume 22 ; 22 ; vima ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2010 ; Viral Immunology Volume 23 ; 23 ; vima ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2010 ; Viral Immunology Volume 23 ; 23 ; vima ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2011 ; Viral Immunology Volume 24 ; 24 ; vima ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2012 ; Viral Immunology Volume 25 ; 25 ; vima ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2013 ; Viral Immunology Volume 26 ; 26 ; vima ; https://journals.sagepub.com/ ; >
@@ -63737,7 +63737,7 @@
       au < manifest ; exists ; 2000 ; War in History Volume 7 ; 7 ; wiha ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2001 ; War in History Volume 8 ; 8 ; wiha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; War in History Volume 9 ; 9 ; wiha ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2003 ; War in History Volume 10 ; 10 ; wiha ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2003 ; War in History Volume 10 ; 10 ; wiha ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2004 ; War in History Volume 11 ; 11 ; wiha ; https://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2005 ; War in History Volume 12 ; 12 ; wiha ; https://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2006 ; War in History Volume 13 ; 13 ; wiha ; https://journals.sagepub.com/ ; >

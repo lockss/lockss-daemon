@@ -184,7 +184,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Revista Prospectiva Volume 2023 ; 35-36 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Revista Prospectiva Volume 2024 ; 37 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Revista Prospectiva Volume 2025 ; 38 ; >
-      au < ready ; exists ; 2026 ; 2026 ; Revista Prospectiva Volume 2026 ; 39 ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Revista Prospectiva Volume 2026 ; 39 ; >
 
   }
 
@@ -224,7 +224,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Sociedad y Economía Volume 2023 ; 48-50 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2024 ; 2024 ; Sociedad y Economía Volume 2024 ; 51-53 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Sociedad y Economía Volume 2025 ; 54-56 ; >
-      au < ready ; exists ; 2026 ; 2026 ; Sociedad y Economía Volume 2026 ; 57-59 ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Sociedad y Economía Volume 2026 ; 57-59 ; >
 
   }
 }
