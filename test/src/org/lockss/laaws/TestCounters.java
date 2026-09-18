@@ -157,9 +157,8 @@ public class TestCounters extends LockssTestCase {
     final List<String> seen = new ArrayList<>();
     Thread reader = new Thread(() -> {
       try {
-        int spins = 0;
-        while (seen.size() < numToAdd && spins < 200000) {
-          spins++;
+        long deadline = System.currentTimeMillis() + 25000;
+        while (seen.size() < numToAdd && System.currentTimeMillis() < deadline) {
           int index = seen.size();
           int size = ctrs.getErrorListSize() - index;
           if (size > 0) {
@@ -197,10 +196,11 @@ public class TestCounters extends LockssTestCase {
       }
       fail("Concurrent read/write of error list failed:\n" + sb);
     }
-    // Reader may finish before writer adds the very last entries if
-    // it hit the spin cap, but it must have made it all the way once
-    // given the generous spin allowance; otherwise something is
-    // wrong with progress (e.g. livelock).
+    // The reader has a generous wall-clock deadline (not a CPU-bound
+    // spin cap, which could be exhausted by scheduler contention
+    // rather than a real bug), so if it didn't collect everything,
+    // something is genuinely wrong (e.g. livelock or a correctness
+    // bug), not just a slow machine.
     assertEquals(numToAdd, seen.size());
     for (int i = 0; i < numToAdd; i++) {
       assertEquals("err " + i, seen.get(i));
