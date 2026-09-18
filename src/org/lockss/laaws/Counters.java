@@ -137,6 +137,34 @@ public class Counters {
     }
   }
 
+  /** Number of entries currently in the error/warning message list
+   * (distinct from {@link #getErrorCount()} and {@link
+   * #getWarningCount()}, which count errors and warnings
+   * separately).  Used, together with {@link #getErrorsPage}, to
+   * fetch the error/warning message list incrementally rather than
+   * resending the whole (potentially very long) list on every
+   * poll. */
+  public int getErrorListSize() {
+    synchronized (errors) {
+      return errors.size();
+    }
+  }
+
+  /** Return up to {@code size} error/warning messages starting at
+   * {@code index}, for incremental (paged) retrieval of the
+   * error/warning list.  Entries are never removed or reordered, so
+   * repeated calls with an advancing index reconstruct the full list
+   * without resending previously-fetched entries. */
+  public List<String> getErrorsPage(int index, int size) {
+    synchronized (errors) {
+      if (index < 0 || index >= errors.size() || size <= 0) {
+        return new ArrayList<>();
+      }
+      int end = Math.min(errors.size(), index + size);
+      return new ArrayList<>(errors.subList(index, end));
+    }
+  }
+
   public synchronized void add(Counters ctrs) {
     for (CounterType type : CounterType.values()) {
       get(type).add(ctrs.get(type));

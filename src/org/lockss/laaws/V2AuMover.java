@@ -3121,6 +3121,19 @@ public class V2AuMover {
     return totalCounters.getErrors();
   }
 
+  /** Number of entries in the error/warning message list.  Used with
+   * {@link #getErrorsPage} for incremental retrieval; see {@link
+   * Counters#getErrorListSize}. */
+  public int getErrorListSize() {
+    return totalCounters.getErrorListSize();
+  }
+
+  /** Return a page of the error/warning message list; see {@link
+   * Counters#getErrorsPage}. */
+  public List<String> getErrorsPage(int index, int size) {
+    return totalCounters.getErrorsPage(index, size);
+  }
+
   private void addActiveAu(ArchivalUnit au, AuStatus austat) {
     synchronized (activeAus) {
       activeAus.put(au.getAuId(), austat);
