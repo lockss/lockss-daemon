@@ -98,7 +98,9 @@ public class MigrationManager extends BaseLockssDaemonManager
   static final String STATUS_START_TIME = "start_time";
   static final String STATUS_STATUS = "status_list";
   static final String STATUS_INSTRUMENTS = "instrument_list";
-  static final String STATUS_ERRORS = "errors";
+  static final String STATUS_ERRORS_PAGE = "errors_page";
+  static final String STATUS_ERRORS_INDEX = "errors_index";
+  static final String STATUS_ERRORS_COUNT = "errors_count";
   static final String STATUS_PROGRESS = "progress";
 
   public static final String PARAM_DRY_RUN_ENABLED = PREFIX + "dryRunEnabled";
@@ -285,11 +287,7 @@ public class MigrationManager extends BaseLockssDaemonManager
     if (runner == null) {
       stat.put(STATUS_RUNNING, false);
       stat.put(STATUS_FINISHED_COUNT, 0);
-      if (idleError != null) {
-        stat.put(STATUS_ERRORS, ListUtil.list(idleError));
-      } else {
-        stat.put(STATUS_ERRORS, Collections.emptyList());
-      }
+      stat.put(STATUS_ERRORS_COUNT, idleError != null ? 1 : 0);
     } else {
       stat.put(STATUS_RUNNING, mover.isRunning());
       stat.put(STATUS_STATUS, mover.getCurrentStatus());
@@ -304,10 +302,12 @@ public class MigrationManager extends BaseLockssDaemonManager
 //       if (!mover.getFinishedStatusList().isEmpty()) {
 //         stat.put(STATUS_FINISHED_LIST, mover.getFinishedStatusList());
 //       }
-      List<String> errs = mover.getErrors();
-      if (errs != null && !errs.isEmpty()) {
-        stat.put(STATUS_ERRORS, errs);
-      }
+      // Only the count is sent here; the messages themselves are
+      // fetched incrementally via getErrorsPage(), the same way the
+      // finished-AU list is, so that a long error list (e.g. on a
+      // large installation like GLN) isn't retransmitted in full on
+      // every poll.
+      stat.put(STATUS_ERRORS_COUNT, mover.getErrorListSize());
     }
     return stat;
   }
@@ -317,6 +317,28 @@ public class MigrationManager extends BaseLockssDaemonManager
     if (runner != null && idleError == null) {
       stat.put(STATUS_FINISHED_INDEX, index);
       stat.put(STATUS_FINISHED_PAGE, mover.getFinishedStatusPage(index, size));
+    }
+    return stat;
+  }
+
+  /**
+   * Returns a page of the error/warning message list, for
+   * incremental retrieval (mirrors {@link #getFinishedPage}).  When
+   * idle, the single idle error (if any) is returned as the page at
+   * index 0, and an empty page thereafter, so that callers using the
+   * same count-then-page protocol work uniformly whether or not a
+   * migration is running.
+   */
+  public Map getErrorsPage(int index, int size) {
+    Map stat = new HashMap();
+    stat.put(STATUS_ERRORS_INDEX, index);
+    if (runner != null && idleError == null) {
+      stat.put(STATUS_ERRORS_PAGE, mover.getErrorsPage(index, size));
+    } else if (idleError != null) {
+      stat.put(STATUS_ERRORS_PAGE,
+               index == 0 ? ListUtil.list(idleError) : Collections.emptyList());
+    } else {
+      stat.put(STATUS_ERRORS_PAGE, Collections.emptyList());
     }
     return stat;
   }

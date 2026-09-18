@@ -11,9 +11,10 @@ function toggleElement(elem) {
     }
 }
 
-// Append a received page of finished statuses to the full status
-// list, ensuring that duplicate responses are handled correctly
-function addFinishedPage(list, page, index) {
+// Append a received page (of finished statuses, or of error/warning
+// messages) to the full list, ensuring that duplicate responses are
+// handled correctly
+function addIncrementalPage(list, page, index) {
     // Avoid copy if not truncating array
     if (list.length == index) {
         return list.concat(page);
@@ -33,6 +34,8 @@ class AuMigrationStatus extends React.Component {
       finishedPageSize: 1,
       finishedCount: 0,
       finishedData: [],
+      errorsCount: 0,
+      errorsData: [],
       startTime: -1,
     };
   }
@@ -81,15 +84,15 @@ class AuMigrationStatus extends React.Component {
   }
 
   ErrorList() {
-    if (this.state.errors === undefined ||
-        this.state.errors.length == 0) {
+    if (this.state.errorsData === undefined ||
+        this.state.errorsData.length == 0) {
       return null;
     }
     return (
         <div className="stats-div">
-        {this.state.errors.length} Errors and Warnings:
+        {this.state.errorsData.length} Errors and Warnings:
         <div className={"errors"}>
-        <ul>{this.state.errors.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul>
+        <ul>{this.state.errorsData.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul>
         </div>
         </div>
     )
@@ -163,11 +166,12 @@ class AuMigrationStatus extends React.Component {
       instrumentList: result.instrument_list,
       activeList: result.active_list,
       finishedCount: result.finished_count,
-      errors: result.errors,
+      errorsCount: result.errors_count,
       delay: result.running ? 1000 : 5000,
       startTime: result.start_time,
       wasAtBottom: wasAtBottom,
       finishedData: startTimeChanged ? [] : prevState.finishedData,
+      errorsData: startTimeChanged ? [] : prevState.errorsData,
     }), () => {
       if (this.state.finishedCount != this.state.finishedData.length) {
         fetch("/MigrateContent?reqfreq=high&output=json&status=finished" +
@@ -177,13 +181,31 @@ class AuMigrationStatus extends React.Component {
           .then(
             (result) => {
               this.setState((prevState) => ({
-                finishedData: addFinishedPage(prevState.finishedData,
-                                              result.finished_page,
-                                              result.finished_index),
+                finishedData: addIncrementalPage(prevState.finishedData,
+                                                 result.finished_page,
+                                                 result.finished_index),
               }));
             },
             (error) => {
               console.error("Could not fetch finished AU page: " + error);
+            }
+          );
+      }
+      if (this.state.errorsCount != this.state.errorsData.length) {
+        fetch("/MigrateContent?reqfreq=high&output=json&status=errors" +
+              "&index=" + this.state.errorsData.length +
+              "&size=" + (this.state.errorsCount - this.state.errorsData.length))
+          .then(response => response.json())
+          .then(
+            (result) => {
+              this.setState((prevState) => ({
+                errorsData: addIncrementalPage(prevState.errorsData,
+                                               result.errors_page,
+                                               result.errors_index),
+              }));
+            },
+            (error) => {
+              console.error("Could not fetch errors page: " + error);
             }
           );
       }

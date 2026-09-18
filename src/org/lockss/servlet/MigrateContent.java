@@ -219,6 +219,10 @@ public class MigrateContent extends LockssServlet {
         sendFinishedChunk(outputFormat,
                           getParameter(KEY_INDEX), getParameter(KEY_SIZE));
         break;
+      case "errors":
+        sendErrorsChunk(outputFormat,
+                        getParameter(KEY_INDEX), getParameter(KEY_SIZE));
+        break;
       }
       return;
     }
@@ -342,7 +346,40 @@ public class MigrateContent extends LockssServlet {
       wrtr.println(json);
     }
   }
-    
+
+  private void sendErrorsChunk(String format, String indexStr, String sizeStr)
+      throws IOException {
+    // TODO: support format other than json?
+    try {
+	int index = Integer.parseInt(indexStr);
+	int size = Integer.parseInt(sizeStr);
+        Map statMap = migrationMgr.getErrorsPage(index, size);
+        switch (format) {
+        case "json":
+        default:
+          Gson gson = new GsonBuilder().create();
+          resp.setStatus(200);
+          PrintWriter wrtr = resp.getWriter();
+          resp.setContentType("application/json");
+          String json = gson.toJson(statMap);
+          log.debug3("json: " + json);
+          wrtr.println(json);
+        }
+    } catch (NumberFormatException e) {
+      String msg =
+        "Index (" + indexStr + ") or size (" + sizeStr + ") not an int";
+      log.error(msg);
+      Gson gson = new GsonBuilder().create();
+      Map errMap = new HashMap();
+      errMap.put("error", msg);
+      resp.setStatus(400);
+      PrintWriter wrtr = resp.getWriter();
+      resp.setContentType("application/json");
+      String json = gson.toJson(errMap);
+      wrtr.println(json);
+    }
+  }
+
   Map getCurrentStatus() {
     return migrationMgr.getStatus();
   }
