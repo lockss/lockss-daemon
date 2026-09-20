@@ -2241,6 +2241,24 @@
 
   {
     title <
+      name = Training Strategies for Tomorrow ;
+      issn = 1369-7234 ;
+      eissn = 1758-8596 ;
+      issnl = 1369-7234
+    >
+
+    comment[journal_issn] = 1369-7234
+    param[journal_id] = dlo
+    # online from 2002
+    comment[continued_by] = 1477-7282
+    #No pdfs 2002
+
+    au < doNotProcess ; 2002 ; 2002 ; Training Strategies for Tomorrow Volume 16 ; 16 >
+
+  }
+
+  {
+    title <
       name = Development and Learning in Organizations ;
       issn = 1477-7282 ;
       eissn = 1758-6097 ;
@@ -2250,8 +2268,9 @@
     comment[journal_issn] = 1477-7282
     param[journal_id] = dlo
     # online from 2003
+    #No pdfs 2003 - 2012
 
-    au < manifest ; 2003 ; 2003 ; Development and Learning in Organizations Volume 17 ; 17 >
+    au < doNotProcess ; 2003 ; 2003 ; Development and Learning in Organizations Volume 17 ; 17 >
     au < doNotProcess ; 2004 ; 2004 ; Development and Learning in Organizations Volume 18 ; 18 >
     au < doNotProcess ; 2005 ; 2005 ; Development and Learning in Organizations Volume 19 ; 19 >
     au < doNotProcess ; 2006 ; 2006 ; Development and Learning in Organizations Volume 20 ; 20 >
@@ -3479,9 +3498,10 @@
     comment[journal_issn] = 0967-0734
     param[journal_id] = hrmid
     # online from 2002
+    # no pdfs 2003
 
     au < doNotProcess ; 2002 ; 2002 ; Human Resource Management International Digest Volume 10 ; 10 >
-    au < manifest ; 2003 ; 2003 ; Human Resource Management International Digest Volume 11 ; 11 >
+    au < doNotProcess ; 2003 ; 2003 ; Human Resource Management International Digest Volume 11 ; 11 >
     au < doNotProcess ; 2004 ; 2004 ; Human Resource Management International Digest Volume 12 ; 12 >
     au < doNotProcess ; 2005 ; 2005 ; Human Resource Management International Digest Volume 13 ; 13 >
     au < doNotProcess ; 2006 ; 2006 ; Human Resource Management International Digest Volume 14 ; 14 >
@@ -10639,12 +10659,13 @@
 
     comment[journal_issn] = 0741-9058
     param[journal_id] = lhtn
+    # No pdfs 1999 - 2003
 
-    au < manifest ; 1999 ; 1999 ; Library Hi Tech News Volume 16 ; 16 >
+    au < doNotProcess ; 1999 ; 1999 ; Library Hi Tech News Volume 16 ; 16 >
     au < doNotProcess ; 2000 ; 2000 ; Library Hi Tech News Volume 17 ; 17 >
-    au < manifest ; 2001 ; 2001 ; Library Hi Tech News Volume 18 ; 18 >
+    au < doNotProcess ; 2001 ; 2001 ; Library Hi Tech News Volume 18 ; 18 >
     au < doNotProcess ; 2002 ; 2002 ; Library Hi Tech News Volume 19 ; 19 >
-    au < manifest ; 2003 ; 2003 ; Library Hi Tech News Volume 20 ; 20 >
+    au < doNotProcess ; 2003 ; 2003 ; Library Hi Tech News Volume 20 ; 20 >
     au < manifest ; 2004 ; 2004 ; Library Hi Tech News Volume 21 ; 21 >
     au < doNotProcess ; 2005 ; 2005 ; Library Hi Tech News Volume 22 ; 22 >
     au < doNotProcess ; 2006 ; 2006 ; Library Hi Tech News Volume 23 ; 23 >
@@ -13127,15 +13148,16 @@
     comment[journal_issn] = 0950-4125
     param[journal_id] = rr
     # online from 1997
+    # no substance 1997-2004. No pdfs
 
-    au < manifest ; 1997 ; 1997 ; Reference Reviews Volume 11 ; 11 >
-    au < manifest ; 1998 ; 1998 ; Reference Reviews Volume 12 ; 12 >
-    au < manifest ; 1999 ; 1999 ; Reference Reviews Volume 13 ; 13 >
-    au < manifest ; 2000 ; 2000 ; Reference Reviews Volume 14 ; 14 > #no substance. Possibly abstracts only
-    au < manifest ; 2001 ; 2001 ; Reference Reviews Volume 15 ; 15 >
-    au < manifest ; 2002 ; 2002 ; Reference Reviews Volume 16 ; 16 >
-    au < manifest ; 2003 ; 2003 ; Reference Reviews Volume 17 ; 17 >
-    au < manifest ; 2004 ; 2004 ; Reference Reviews Volume 18 ; 18 >
+    au < doNotProcess ; 1997 ; 1997 ; Reference Reviews Volume 11 ; 11 >
+    au < doNotProcess ; 1998 ; 1998 ; Reference Reviews Volume 12 ; 12 >
+    au < doNotProcess ; 1999 ; 1999 ; Reference Reviews Volume 13 ; 13 >
+    au < doNotProcess ; 2000 ; 2000 ; Reference Reviews Volume 14 ; 14 > #no substance. Possibly abstracts only
+    au < doNotProcess ; 2001 ; 2001 ; Reference Reviews Volume 15 ; 15 >
+    au < doNotProcess ; 2002 ; 2002 ; Reference Reviews Volume 16 ; 16 >
+    au < doNotProcess ; 2003 ; 2003 ; Reference Reviews Volume 17 ; 17 >
+    au < doNotProcess ; 2004 ; 2004 ; Reference Reviews Volume 18 ; 18 >
     au < manifest ; 2005 ; 2005 ; Reference Reviews Volume 19 ; 19 >
     au < manifest ; 2006 ; 2006 ; Reference Reviews Volume 20 ; 20 >
     au < manifest ; 2007 ; 2007 ; Reference Reviews Volume 21 ; 21 >
@@ -14415,23 +14437,6 @@
     au < manifest ; 1995 ; 1995 ; Training for Quality Volume 3 ; 3 >
     au < manifest ; 1996 ; 1996 ; Training for Quality Volume 4 ; 4 >
     au < manifest ; 1997 ; 1997 ; Training for Quality Volume 5 ; 5 >
-
-  }
-
-  {
-    title <
-      name = Training Strategies for Tomorrow ;
-      issn = 1369-7234 ;
-      eissn = 1758-8596 ;
-      issnl = 1369-7234
-    >
-
-    comment[journal_issn] = 1369-7234
-    param[journal_id] = dlo
-    # online from 2002
-    comment[continued_by] = 1477-7282
-
-    au < manifest ; 2002 ; 2002 ; Training Strategies for Tomorrow Volume 16 ; 16 >
 
   }
 

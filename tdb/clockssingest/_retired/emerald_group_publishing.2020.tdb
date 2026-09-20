@@ -12555,6 +12555,7 @@
     param[journal_issn] = 0950-4125
     comment[journal_id] = rr
     # online from 1997
+    # no substance 1997-2004. Possibly abstracts only
 
     au < notReady ; exists ; 1997 ; Reference Reviews Volume 11 ; 11 ; >
     au < notReady ; exists ; 1998 ; Reference Reviews Volume 12 ; 12 ; >

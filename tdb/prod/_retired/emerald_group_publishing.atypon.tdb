@@ -10869,6 +10869,7 @@
     comment[journal_issn] = 0950-4125
     param[journal_id] = rr
     # online from 1997
+    # no substance 1997-2004. Possibly abstracts only
 
     au < doNotProcess ; 1997 ; Reference Reviews Volume 11 ; 11 ; https://www.emeraldinsight.com/ >
     au < doNotProcess ; 1998 ; Reference Reviews Volume 12 ; 12 ; https://www.emeraldinsight.com/ >

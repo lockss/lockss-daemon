@@ -12569,29 +12569,30 @@
     param[journal_issn] = 0950-4125
     comment[journal_id] = rr
     # online from 1997
+    # no substance 1997-2004. Possibly abstracts only
 
-    au < notReady ; 1997 ; Reference Reviews Volume 11 ; 11 >
-    au < notReady ; 1998 ; Reference Reviews Volume 12 ; 12 >
-    au < notReady ; 1999 ; Reference Reviews Volume 13 ; 13 >
-    au < notReady ; 2000 ; Reference Reviews Volume 14 ; 14 > #no substance. Possibly abstracts only
-    au < notReady ; 2001 ; Reference Reviews Volume 15 ; 15 >
-    au < notReady ; 2002 ; Reference Reviews Volume 16 ; 16 >
-    au < notReady ; 2003 ; Reference Reviews Volume 17 ; 17 >
-    au < notReady ; 2004 ; Reference Reviews Volume 18 ; 18 >
-    au < notReady ; 2005 ; Reference Reviews Volume 19 ; 19 >
-    au < notReady ; 2006 ; Reference Reviews Volume 20 ; 20 >
-    au < notReady ; 2007 ; Reference Reviews Volume 21 ; 21 >
-    au < notReady ; 2008 ; Reference Reviews Volume 22 ; 22 >
-    au < notReady ; 2009 ; Reference Reviews Volume 23 ; 23 >
-    au < notReady ; 2010 ; Reference Reviews Volume 24 ; 24 >
-    au < notReady ; 2011 ; Reference Reviews Volume 25 ; 25 >
-    au < notReady ; 2012 ; Reference Reviews Volume 26 ; 26 >
+    au < doNotProcess ; 1997 ; Reference Reviews Volume 11 ; 11 >
+    au < doNotProcess ; 1998 ; Reference Reviews Volume 12 ; 12 >
+    au < doNotProcess ; 1999 ; Reference Reviews Volume 13 ; 13 >
+    au < doNotProcess ; 2000 ; Reference Reviews Volume 14 ; 14 > #no substance. Possibly abstracts only
+    au < doNotProcess ; 2001 ; Reference Reviews Volume 15 ; 15 >
+    au < doNotProcess ; 2002 ; Reference Reviews Volume 16 ; 16 >
+    au < doNotProcess ; 2003 ; Reference Reviews Volume 17 ; 17 >
+    au < doNotProcess ; 2004 ; Reference Reviews Volume 18 ; 18 >
+    au < doNotProcess ; 2005 ; Reference Reviews Volume 19 ; 19 >
+    au < doNotProcess ; 2006 ; Reference Reviews Volume 20 ; 20 >
+    au < doNotProcess ; 2007 ; Reference Reviews Volume 21 ; 21 >
+    au < doNotProcess ; 2008 ; Reference Reviews Volume 22 ; 22 >
+    au < doNotProcess ; 2009 ; Reference Reviews Volume 23 ; 23 >
+    au < doNotProcess ; 2010 ; Reference Reviews Volume 24 ; 24 >
+    au < doNotProcess ; 2011 ; Reference Reviews Volume 25 ; 25 >
+    au < doNotProcess ; 2012 ; Reference Reviews Volume 26 ; 26 >
     au < doNotProcess ; 2013 ; Reference Reviews Volume 27 ; 27 >
     au < doNotProcess ; 2014 ; Reference Reviews Volume 28 ; 28 >
     au < doNotProcess ; 2015 ; Reference Reviews Volume 29 ; 29 >
     au < doNotProcess ; 2016 ; Reference Reviews Volume 30 ; 30 >
     au < doNotProcess ; 2017 ; Reference Reviews Volume 31 ; 31 >
-    au < notReady ; 2018 ; Reference Reviews Volume 32 ; 32 >
+    au < doNotProcess ; 2018 ; Reference Reviews Volume 32 ; 32 >
     #stopped publishing after 2018
 
   }
