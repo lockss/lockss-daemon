@@ -133,7 +133,7 @@
       au < finished ; manifest ; 2023 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2023 ; 44 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2024 ; 45 ; 2024 ; >
       au < deepCrawl ; exists ; 2025 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2025 ; 46 ; 2025 ; >
-      au < manifest ; exists ; 2026 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2026 ; 47 ; 2026 ; >
+      au < ready ; exists ; 2026 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2026 ; 47 ; 2026 ; >
 
   }
 
@@ -336,10 +336,10 @@
       param[journal_id] = drawing-on
       param[base_url] = https://open.journals.ed.ac.uk/
 
-      au < manifest ; exists ; 2015 ; Drawing On Volume 2015 ; 1 ; 2015 ; >
-      au < manifest ; exists ; 2018 ; Drawing On Volume 2018 ; 2 ; 2018 ; >
-      au < manifest ; exists ; 2019 ; Drawing On Volume 2019 ; 3 ; 2019 ; >
-      au < manifest ; exists ; 2025 ; Drawing On Volume 2025 ; 4 ; 2025 ; >
+      au < ready ; exists ; 2015 ; Drawing On Volume 2015 ; 1 ; 2015 ; >
+      au < ready ; exists ; 2018 ; Drawing On Volume 2018 ; 2 ; 2018 ; >
+      au < ready ; exists ; 2019 ; Drawing On Volume 2019 ; 3 ; 2019 ; >
+      au < ready ; exists ; 2025 ; Drawing On Volume 2025 ; 4 ; 2025 ; >
       au < expected ; exists ; 2026 ; Drawing On Volume 2026 ; 5 ; 2026 ; >
 
   }
@@ -354,10 +354,10 @@
       param[journal_id] = eslj
       param[base_url] = https://open.journals.ed.ac.uk/
 
-      au < manifest ; exists ; 2021 ; Edinburgh Student Literary Journal Volume 2021 ; 1 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; Edinburgh Student Literary Journal Volume 2022 ; 2 ; 2022 ; >
-      au < manifest ; exists ; 2023 ; Edinburgh Student Literary Journal Volume 2023 ; 3 ; 2023 ; >
-      au < manifest ; exists ; 2025 ; Edinburgh Student Literary Journal Volume 2025 ; 4 ; 2025 ; >
+      au < ready ; exists ; 2021 ; Edinburgh Student Literary Journal Volume 2021 ; 1 ; 2021 ; >
+      au < ready ; exists ; 2022 ; Edinburgh Student Literary Journal Volume 2022 ; 2 ; 2022 ; >
+      au < ready ; exists ; 2023 ; Edinburgh Student Literary Journal Volume 2023 ; 3 ; 2023 ; >
+      au < ready ; exists ; 2025 ; Edinburgh Student Literary Journal Volume 2025 ; 4 ; 2025 ; >
       au < crawling ; exists ; 2026 ; Edinburgh Student Literary Journal Volume 2026 ; 5 ; 2026 ; >
 
   }
@@ -372,7 +372,7 @@
       param[journal_id] = ojbe
       param[base_url] = https://open.journals.ed.ac.uk/
 
-      au < manifest ; exists ; 2026 ; Open Journal of Biodiversity and Ecosystems Volume 2026 ; 1 ; 2026 ; >
+      au < ready ; exists ; 2026 ; Open Journal of Biodiversity and Ecosystems Volume 2026 ; 1 ; 2026 ; >
 
   }
 
