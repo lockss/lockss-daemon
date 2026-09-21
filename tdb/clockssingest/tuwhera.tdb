@@ -123,7 +123,7 @@
       au < finished ; manifest ; 2023 ; Te Kaharoa Volume 16 ; 16 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Te Kaharoa Volume 17 ; 17 ; 2024 ; >
       au < deepCrawl ; exists ; 2025 ; Te Kaharoa Volume 18 ; 18 ; 2025 ; >
-      au < ready ; exists ; 2026 ; Te Kaharoa Volume 19 ; 19 ; 2026 ; >
+      au < crawling ; exists ; 2026 ; Te Kaharoa Volume 19 ; 19 ; 2026 ; >
 
     }
 
@@ -207,7 +207,7 @@
       au < deepCrawl ; exists ; 2023 ; Decolonization of Criminology and Justice Volume 5 ; 5 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; Decolonization of Criminology and Justice Volume 6 ; 6 ; 2024 ; >
       au < deepCrawl ; exists ; 2025 ; Decolonization of Criminology and Justice Volume 7 ; 7 ; 2025 ; >
-      au < ready ; exists ; 2026 ; Decolonization of Criminology and Justice Volume 8 ; 8 ; 2026 ; >
+      au < crawling ; exists ; 2026 ; Decolonization of Criminology and Justice Volume 8 ; 8 ; 2026 ; >
 
   }
 
@@ -315,7 +315,7 @@
       au < finished ; manifest ; 2022 ; NZJER: New Zealand Journal of Employment Relations Volume 47 ; 47 ; 2022 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; NZJER: New Zealand Journal of Employment Relations Volume 48 ; 48 ; 2024 ; >
       au < frozen ; exists ; 2025 ; NZJER: New Zealand Journal of Employment Relations Volume 49 ; 49 ; 2025 ; >
-      au < ready ; exists ; 2026 ; NZJER: New Zealand Journal of Employment Relations Volume 50 ; 50 ; 2026 ; >
+      au < crawling ; exists ; 2026 ; NZJER: New Zealand Journal of Employment Relations Volume 50 ; 50 ; 2026 ; >
 
   }
 
@@ -338,7 +338,7 @@
       au < deepCrawl ; exists ; 2023 ; Pacific Health Volume 6 ; 6 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; Pacific Health Volume 7 ; 7 ; 2024 ; >
       au < deepCrawl ; exists ; 2025 ; Pacific Health Volume 8 ; 8 ; 2025 ; >
-      au < ready ; exists ; 2026 ; Pacific Health Volume 9 ; 9 ; 2026 ; >
+      au < crawling ; exists ; 2026 ; Pacific Health Volume 9 ; 9 ; 2026 ; >
 
   }
 
@@ -360,7 +360,7 @@
       au < deepCrawl ; exists ; 2023 ; PJTEL: Pacific Journal of Technology Enhanced Learning Volume 5 ; 5 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; PJTEL: Pacific Journal of Technology Enhanced Learning Volume 6 ; 6 ; 2024 ; >
       au < deepCrawl ; exists ; 2025 ; PJTEL: Pacific Journal of Technology Enhanced Learning Volume 7 ; 7 ; 2025 ; >
-      au < ready ; exists ; 2026 ; PJTEL: Pacific Journal of Technology Enhanced Learning Volume 8 ; 8 ; 2026 ; >
+      au < crawling ; exists ; 2026 ; PJTEL: Pacific Journal of Technology Enhanced Learning Volume 8 ; 8 ; 2026 ; >
 
   }
 
@@ -518,7 +518,7 @@
       au < deepCrawl ; exists ; 2023 ; Psychotherapy and Politics International Volume 21 ; 21 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; Psychotherapy and Politics International Volume 22 ; 22 ; 2024 ; >
       au < deepCrawl ; exists ; 2025 ; Psychotherapy and Politics International Volume 23 ; 23 ; 2025 ; >
-      au < ready ; exists ; 2026 ; Psychotherapy and Politics International Volume 24 ; 24 ; 2026 ; >
+      au < crawling ; exists ; 2026 ; Psychotherapy and Politics International Volume 24 ; 24 ; 2026 ; >
 
   }
 
@@ -537,7 +537,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; Rangahau Aranga: AUT Graduate Review Volume 2 ; 2 ; 2023 ; >
       au < finished ; manifest ; 2024 ; Rangahau Aranga: AUT Graduate Review Volume 3 ; 3 ; 2024 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; Rangahau Aranga: AUT Graduate Review Volume 4 ; 4 ; 2025 ; >
-      au < ready ; exists ; 2026 ; Rangahau Aranga: AUT Graduate Review Volume 5 ; 5 ; 2026 ; >
+      au < crawling ; exists ; 2026 ; Rangahau Aranga: AUT Graduate Review Volume 5 ; 5 ; 2026 ; >
       }
       {
       param[base_url] = https://ojs.aut.ac.nz/
