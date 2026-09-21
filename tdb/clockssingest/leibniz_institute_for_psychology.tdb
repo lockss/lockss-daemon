@@ -192,7 +192,7 @@
       au < ojs3.ClockssOjs3Plugin ; deepCrawl ; exists ; 2023 ; Quantitative and Computational Methods in Behavioral Sciences Volume 3 ; 3 ; 2023 ; https://qcmb.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; finished ; manifest ; 2024 ; Quantitative and Computational Methods in Behavioral Sciences Volume 4 ; 4 ; 2024 ; https://qcmb.psychopen.eu/ ; reingest2.clockss.org:8085 >
       au < ojs3.ClockssOjs3Plugin ; deepCrawl ; exists ; 2025 ; Quantitative and Computational Methods in Behavioral Sciences Volume 5 ; 5 ; 2025 ; https://qcmb.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2026 ; Quantitative and Computational Methods in Behavioral Sciences Volume 6 ; 6 ; 2026 ; https://qcmb.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2026 ; Quantitative and Computational Methods in Behavioral Sciences Volume 6 ; 6 ; 2026 ; https://qcmb.psychopen.eu/ ; >
 
   }
 
@@ -318,7 +318,7 @@
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2023 ; Psychology of Human-Animal Intergroup Relations Volume 2023 ; 2023 ; 2023 ; https://phair.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2024 ; Psychology of Human-Animal Intergroup Relations Volume 2024 ; 2024 ; 2024 ; https://phair.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2025 ; Psychology of Human-Animal Intergroup Relations Volume 2025 ; 2025 ; 2025 ; https://phair.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2026 ; Psychology of Human-Animal Intergroup Relations Volume 2026 ; 2026 ; 2026 ; https://phair.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2026 ; Psychology of Human-Animal Intergroup Relations Volume 2026 ; 2026 ; 2026 ; https://phair.psychopen.eu/ ; >
 
   }
 
@@ -332,7 +332,7 @@
       param[journal_id] = rpio
 
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2025 ; Research for People in Organizations Volume 2025 ; 2025 ; 2025 ; https://rpio.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2026 ; Research for People in Organizations Volume 2026 ; 2026 ; 2026 ; https://rpio.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2026 ; Research for People in Organizations Volume 2026 ; 2026 ; 2026 ; https://rpio.psychopen.eu/ ; >
 
   }
 

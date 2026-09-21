@@ -1224,7 +1224,7 @@
     au < finished ; manifest ; 2023 ; Screen Bodies Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Screen Bodies Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Screen Bodies Volume 10 ; 10 ; >
-    au < expected ; exists ; 2026 ; Screen Bodies Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2026 ; Screen Bodies Volume 11 ; 11 ; >
 
   }
 
@@ -1262,7 +1262,7 @@
     au < finished ; manifest ; 2023 ; Sibirica Volume 22 ; 22 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Sibirica Volume 23 ; 23 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Sibirica Volume 24 ; 24 ; >
-    au < expected ; exists ; 2026 ; Sibirica Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2026 ; Sibirica Volume 25 ; 25 ; >
 
   }
 
