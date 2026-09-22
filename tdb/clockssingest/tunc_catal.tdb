@@ -42,8 +42,8 @@
       attr[start_stem] = index.php/
       param[journal_id] = pub
 
-      au < notReady ; exists ; 2025 ; 2025 ; EUCHEMBIOJ Reviews Volume 1 ; 1 ; > #LOCKSS-5610, 0 mdata, 0 article, 20 suburls
-      au < notReady ; exists ; 2026 ; 2026 ; EUCHEMBIOJ Reviews Volume 2 ; 2 ; > #LOCKSS-5610, 0 mdata, 0 article, 16 suburls
+      au < ready ; exists ; 2025 ; 2025 ; EUCHEMBIOJ Reviews Volume 1 ; 1 ; >
+      au < ready ; exists ; 2026 ; 2026 ; EUCHEMBIOJ Reviews Volume 2 ; 2 ; >
 
   }
 
