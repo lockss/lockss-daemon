@@ -58,7 +58,6 @@ public class SilverchairVideoHtmlLinkExtractorFactory implements LinkExtractorFa
   protected static final Pattern PATTERN_DOI =
           Pattern.compile("/(article|proceeding)\\.aspx\\?(articleid=[^&]+)$",
                   Pattern.CASE_INSENSITIVE);
-  
 
   @Override
   public LinkExtractor createLinkExtractor(String mimeType) throws PluginException {
@@ -95,7 +94,10 @@ public class SilverchairVideoHtmlLinkExtractorFactory implements LinkExtractorFa
 
             logger.debug3("Metavalue citation_doi = " + doiValue);
 
-            //For example :  http://movie-usa.glencoesoftware.com/metadata/10.1083/jcb.202111095
+            // AU: The Journal of Cell Biology Volume 224
+            //https://rupress.org/jcb/article/224/3/e202109010/277212/TanGIBLE-A-selective-probe-for-evaluating
+            //https://movie-usa.glencoesoftware.com/metadata/10.1083/jcb.202109010
+
             String videoUrl = "http://movie-usa.glencoesoftware.com/metadata/" + doiValue;
 
             logger.debug3("Metavalue videoUrl = " + videoUrl);
