@@ -4381,7 +4381,7 @@
       au < down ; 2018 ; Applied Biosafety Volume 23 ; 23 ; apbb ; https://journals.sagepub.com/ >
       au < down ; 2019 ; Applied Biosafety Volume 24 ; 24 ; apbb ; https://journals.sagepub.com/ >
       au < doNotProcess ; 2020 ; Applied Biosafety Volume 25 ; 25 ; apbb ; https://journals.sagepub.com/ >
-      au < doNotProcess ; 2021 ; Applied Biosafety Volume 26 ; 26 ; apbb ; https://journals.sagepub.com/ >
+      au < exists ; 2021 ; Applied Biosafety Volume 26 ; 26 ; apbb ; https://journals.sagepub.com/ >
       au < released ; 2022 ; Applied Biosafety Volume 27 ; 27 ; apbb ; https://journals.sagepub.com/ >
       au < released ; 2023 ; Applied Biosafety Volume 28 ; 28 ; apbb ; https://journals.sagepub.com/ >
       au < released ; 2024 ; Applied Biosafety Volume 29 ; 29 ; apbb ; https://journals.sagepub.com/ >
@@ -60962,31 +60962,31 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
-  {
-
-    title <
-      name = Tissue Engineering ;
-      issn = 1076-3279 ;
-      eissn = 1557-8690
-    >
-      #journal_id = TEA
-      #continued_by = 1937-3341
-
-      au < exists ; 1995 ; Tissue Engineering Volume 1 ; 1 ; tea ; https://journals.sagepub.com/ >
-      au < exists ; 1996 ; Tissue Engineering Volume 2 ; 2 ; tea ; https://journals.sagepub.com/ >
-      au < exists ; 1997 ; Tissue Engineering Volume 3 ; 3 ; tea ; https://journals.sagepub.com/ >
-      au < exists ; 1998 ; Tissue Engineering Volume 4 ; 4 ; tea ; https://journals.sagepub.com/ >
-      au < exists ; 1999 ; Tissue Engineering Volume 5 ; 5 ; tea ; https://journals.sagepub.com/ >
-      au < exists ; 2000 ; Tissue Engineering Volume 6 ; 6 ; tea ; https://journals.sagepub.com/ >
-      au < exists ; 2001 ; Tissue Engineering Volume 7 ; 7 ; tea ; https://journals.sagepub.com/ >
-      au < exists ; 2002 ; Tissue Engineering Volume 8 ; 8 ; tea ; https://journals.sagepub.com/ >
-      au < exists ; 2003 ; Tissue Engineering Volume 9 ; 9 ; tea ; https://journals.sagepub.com/ >
-      au < exists ; 2004 ; Tissue Engineering Volume 10 ; 10 ; tea ; https://journals.sagepub.com/ >
-      au < exists ; 2005 ; Tissue Engineering Volume 11 ; 11 ; tea ; https://journals.sagepub.com/ >
-      au < exists ; 2006 ; Tissue Engineering Volume 12 ; 12 ; tea ; https://journals.sagepub.com/ >
-      au < exists ; 2007 ; Tissue Engineering Volume 13 ; 13 ; tea ; https://journals.sagepub.com/ >
-
-  }
+#  {
+#
+#    title <
+#      name = Tissue Engineering ;
+#      issn = 1076-3279 ;
+#      eissn = 1557-8690
+#    >
+#      #journal_id = TEA
+#      #continued_by = 1937-3341
+#
+#      au < exists ; 1995 ; Tissue Engineering Volume 1 ; 1 ; tea ; https://journals.sagepub.com/ >
+#      au < exists ; 1996 ; Tissue Engineering Volume 2 ; 2 ; tea ; https://journals.sagepub.com/ >
+#      au < exists ; 1997 ; Tissue Engineering Volume 3 ; 3 ; tea ; https://journals.sagepub.com/ >
+#      au < exists ; 1998 ; Tissue Engineering Volume 4 ; 4 ; tea ; https://journals.sagepub.com/ >
+#      au < exists ; 1999 ; Tissue Engineering Volume 5 ; 5 ; tea ; https://journals.sagepub.com/ >
+#      au < exists ; 2000 ; Tissue Engineering Volume 6 ; 6 ; tea ; https://journals.sagepub.com/ >
+#      au < exists ; 2001 ; Tissue Engineering Volume 7 ; 7 ; tea ; https://journals.sagepub.com/ >
+#      au < exists ; 2002 ; Tissue Engineering Volume 8 ; 8 ; tea ; https://journals.sagepub.com/ >
+#      au < exists ; 2003 ; Tissue Engineering Volume 9 ; 9 ; tea ; https://journals.sagepub.com/ >
+#      au < exists ; 2004 ; Tissue Engineering Volume 10 ; 10 ; tea ; https://journals.sagepub.com/ >
+#      au < exists ; 2005 ; Tissue Engineering Volume 11 ; 11 ; tea ; https://journals.sagepub.com/ >
+#      au < exists ; 2006 ; Tissue Engineering Volume 12 ; 12 ; tea ; https://journals.sagepub.com/ >
+#      au < exists ; 2007 ; Tissue Engineering Volume 13 ; 13 ; tea ; https://journals.sagepub.com/ >
+#
+#  }
 
   {
 
