@@ -1,0 +1,34 @@
+{
+
+  publisher <
+    name = Middle East University ;
+    info[contract] = 2026 ;
+    info[tester] = 5 ;
+    info[platform] = bepress
+  >
+  provider = bepress
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+
+  {
+  
+    title < 
+      name = Middle East Journal of Communication Studies ;
+      issn = 2790-5616
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = https://mejcs.meu.edu.jo/
+    param[journal_abbr] = home
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+    au < exists ; exists ; 2021 ; Middle East Journal of Communication Studies Volume 1 ; 1 ; >
+    au < exists ; exists ; 2022 ; Middle East Journal of Communication Studies Volume 2 ; 2 ; >
+    au < exists ; exists ; 2023 ; Middle East Journal of Communication Studies Volume 3 ; 3 ; >
+    au < exists ; exists ; 2024 ; Middle East Journal of Communication Studies Volume 4 ; 4 ; >
+    au < exists ; exists ; 2025 ; Middle East Journal of Communication Studies Volume 5 ; 5 ; >
+    au < exists ; exists ; 2026 ; Middle East Journal of Communication Studies Volume 6 ; 6 ; >
+
+  }
+
+}
