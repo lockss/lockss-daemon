@@ -18,7 +18,7 @@
 
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/apertureneuro-released/
 
-    au < manifest ; exists ; 2026 ; Organization for Human Brain Mapping Source Content 2026_01 ; 2026_01 >
+    au < readySource ; crawling ; 2026 ; Organization for Human Brain Mapping Source Content 2026_01 ; 2026_01 >
 
 
   }
