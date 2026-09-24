@@ -4381,7 +4381,7 @@
       au < down ; 2018 ; Applied Biosafety Volume 23 ; 23 ; apbb ; https://journals.sagepub.com/ >
       au < down ; 2019 ; Applied Biosafety Volume 24 ; 24 ; apbb ; https://journals.sagepub.com/ >
       au < doNotProcess ; 2020 ; Applied Biosafety Volume 25 ; 25 ; apbb ; https://journals.sagepub.com/ >
-      au < exists ; 2021 ; Applied Biosafety Volume 26 ; 26 ; apbb ; https://journals.sagepub.com/ >
+      au < manifest ; 2021 ; Applied Biosafety Volume 26 ; 26 ; apbb ; https://journals.sagepub.com/ >
       au < released ; 2022 ; Applied Biosafety Volume 27 ; 27 ; apbb ; https://journals.sagepub.com/ >
       au < released ; 2023 ; Applied Biosafety Volume 28 ; 28 ; apbb ; https://journals.sagepub.com/ >
       au < released ; 2024 ; Applied Biosafety Volume 29 ; 29 ; apbb ; https://journals.sagepub.com/ >
@@ -5567,7 +5567,7 @@
       au < manifest ; 2026 ; Asymptotic Analysis Volume 147 ; 147 ; asya ; https://journals.sagepub.com/ >
       au < manifest ; 2026 ; Asymptotic Analysis Volume 148 ; 148 ; asya ; https://journals.sagepub.com/ >
       au < manifest ; 2026 ; Asymptotic Analysis Volume 149 ; 149 ; asya ; https://journals.sagepub.com/ >
-      au < expected ; 2026 ; Asymptotic Analysis Volume 150 ; 150 ; asya ; https://journals.sagepub.com/ >
+      au < manifest ; 2026 ; Asymptotic Analysis Volume 150 ; 150 ; asya ; https://journals.sagepub.com/ >
 
 
     }
@@ -54079,7 +54079,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2023-2024 ; Rehabilitation Counseling Bulletin Volume 67 ; 67 ; rcba ; https://journals.sagepub.com/ >
         au < released ; 2024-2025 ; Rehabilitation Counseling Bulletin Volume 68 ; 68 ; rcba ; https://journals.sagepub.com/ >
         au < manifest ; 2025-2026 ; Rehabilitation Counseling Bulletin Volume 69 ; 69 ; rcba ; https://journals.sagepub.com/ >
-        au < expected ; 2026-2027 ; Rehabilitation Counseling Bulletin Volume 70 ; 70 ; rcba ; https://journals.sagepub.com/ >
+        au < manifest ; 2026-2027 ; Rehabilitation Counseling Bulletin Volume 70 ; 70 ; rcba ; https://journals.sagepub.com/ >
 
     }
 
