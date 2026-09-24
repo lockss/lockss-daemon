@@ -18,6 +18,33 @@
   {
 
      title <
+       name = 3D Printing and Additive Manufacturing ;
+       issn = 2329-7662 ;
+       eissn = 2329-7670 ;
+       issnl = 2329-7662
+     >
+
+       #journal_id = tdp
+
+       au < exists ; exists ; 2014 ; 3D Printing and Additive Manufacturing Volume 1 ; 1 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2015 ; 3D Printing and Additive Manufacturing Volume 2 ; 2 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2016 ; 3D Printing and Additive Manufacturing Volume 3 ; 3 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2017 ; 3D Printing and Additive Manufacturing Volume 4 ; 4 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2018 ; 3D Printing and Additive Manufacturing Volume 5 ; 5 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2019 ; 3D Printing and Additive Manufacturing Volume 6 ; 6 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2020 ; 3D Printing and Additive Manufacturing Volume 7 ; 7 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2021 ; 3D Printing and Additive Manufacturing Volume 8 ; 8 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2022 ; 3D Printing and Additive Manufacturing Volume 9 ; 9 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2023 ; 3D Printing and Additive Manufacturing Volume 10 ; 10 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2024 ; 3D Printing and Additive Manufacturing Volume 11 ; 11 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2025 ; 3D Printing and Additive Manufacturing Volume 12 ; 12 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2026 ; 3D Printing and Additive Manufacturing Volume 13 ; 13 ; tdpa ; https://journals.sagepub.com/ ; >
+
+  }
+
+  {
+
+     title <
        name = AATCC Journal of Research ;
        issn = 2472-3444 ;
        eissn = 2330-5517 ;
@@ -14082,6 +14109,36 @@
 
   {
 
+    title <
+      name = DNA and Cell Biology Reports ;
+      eissn = 2997-9811
+    >
+      #journal_id = dcb
+      #continues = 2766-2705
+      #no longer being published.
+
+      au < exists ; exists ; 2024 ; DNA and Cell Biology Reports Volume 4 ; 4 ; dcba ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2025 ; DNA and Cell Biology Reports Volume 5 ; 5 ; dcba ; https://journals.sagepub.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Re:GEN Open ;
+      eissn = 2766-2705
+    >
+      #journal_id = dcb
+      #continued_by = 2997-9811
+
+      au < exists ; exists ; 2021 ; Re:GEN Open Volume 1 ; 1 ; dcbb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2022 ; Re:GEN Open Volume 2 ; 2 ; dcbb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2023 ; Re:GEN Open Volume 3 ; 3 ; dcbb ; https://journals.sagepub.com/ ; >
+
+  }
+
+  {
+
       title <
         name = Nonlinearity in Biology, Toxicology, Medicine ;
         issn = 1540-1421 ;
@@ -18124,6 +18181,80 @@
 
   {
 
+     title <
+       name = Facial Plastic Surgery & Aesthetic Medicine ;
+       issn = 2689-3614 ;
+       eissn = 2689-3622 ;
+       issnl = 2689-3614
+     >
+
+       #journal_id = fps
+       #continues = 2168-6076
+
+       au < exists ; exists ; 2020 ; Facial Plastic Surgery & Aesthetic Medicine Volume 22 ; 22 ; fpsa ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2021 ; Facial Plastic Surgery & Aesthetic Medicine Volume 23 ; 23 ; fpsa ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2022 ; Facial Plastic Surgery & Aesthetic Medicine Volume 24 ; 24 ; fpsa ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2023 ; Facial Plastic Surgery & Aesthetic Medicine Volume 25 ; 25 ; fpsa ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2024 ; Facial Plastic Surgery & Aesthetic Medicine Volume 26 ; 26 ; fpsa ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2025 ; Facial Plastic Surgery & Aesthetic Medicine Volume 27 ; 27 ; fpsa ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2026 ; Facial Plastic Surgery & Aesthetic Medicine Volume 28 ; 28 ; fpsa ; https://journals.sagepub.com/ ; >
+
+  }
+
+  {
+
+     title <
+       name = JAMA Facial Plastic Surgery ;
+       issn = 2168-6076 ;
+       eissn = 2168-6092 ;
+       issnl = 2168-6076
+     >
+
+       #journal_id = fps
+       #continues = 1521-2491
+       #continued_by = 2689-3614
+
+      au < exists ; exists ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 15 ; fpsb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 16 ; fpsb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 17 ; fpsb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2016 ; JAMA Facial Plastic Surgery Volume 18 ; 18 ; fpsb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2017 ; JAMA Facial Plastic Surgery Volume 19 ; 19 ; fpsb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2018 ; JAMA Facial Plastic Surgery Volume 20 ; 20 ; fpsb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2019 ; JAMA Facial Plastic Surgery Volume 21 ; 21 ; fpsb ; https://journals.sagepub.com/ ; >
+
+  }
+
+  {
+
+     title <
+       name = Archives of Facial Plastic Surgery ;
+       issn = 1521-2491 ;
+       eissn = 1538-3660 ;
+       issnl = 1521-2491
+     >
+
+       #journal_id = fps
+       #continued_by = 2168-6076
+
+      au < exists ; exists ; 1999 ; Archives of Facial Plastic Surgery Volume 1 ; 1 ; fpsc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2000 ; Archives of Facial Plastic Surgery Volume 2 ; 2 ; fpsc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2001 ; Archives of Facial Plastic Surgery Volume 3 ; 3 ; fpsc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2002 ; Archives of Facial Plastic Surgery Volume 4 ; 4 ; fpsc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2003 ; Archives of Facial Plastic Surgery Volume 5 ; 5 ; fpsc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2004 ; Archives of Facial Plastic Surgery Volume 6 ; 6 ; fpsc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2005 ; Archives of Facial Plastic Surgery Volume 7 ; 7 ; fpsc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2006 ; Archives of Facial Plastic Surgery Volume 8 ; 8 ; fpsc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2007 ; Archives of Facial Plastic Surgery Volume 9 ; 9 ; fpsc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2008 ; Archives of Facial Plastic Surgery Volume 10 ; 10 ; fpsc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 ; fpsc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2010 ; Archives of Facial Plastic Surgery Volume 12 ; 12 ; fpsc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2011 ; Archives of Facial Plastic Surgery Volume 13 ; 13 ; fpsc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2012 ; Archives of Facial Plastic Surgery Volume 14 ; 14 ; fpsc ; https://journals.sagepub.com/ ; >
+
+  }
+
+  {
+
     title <
       name = FAIR Connect ;
       eissn = 2949-799X
@@ -19239,6 +19370,23 @@
 
   {
 
+     title <
+       name = FPSAM Video Journal ;
+       eissn = 2771-9650 ;
+       issnl = 2771-9650
+     >
+
+       #journal_id = fvj
+
+       au < exists ; exists ; 2023 ; FPSAM Video Journal Volume 1 ; 1 ; fvja ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2024 ; FPSAM Video Journal Volume 2 ; 2 ; fvja ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2025 ; FPSAM Video Journal Volume 3 ; 3 ; fvja ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2026 ; FPSAM Video Journal Volume 4 ; 4 ; fvja ; https://journals.sagepub.com/ ; >
+
+  }
+
+  {
+
     title <
       name = French Cultural Studies ;
       issn = 0957-1558 ;
@@ -19543,6 +19691,82 @@
       au < frozen ; exists ; 2024 ; Games for Health Journal Volume 13 ; 13 ; gfha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Games for Health Journal Volume 14 ; 14 ; gfha ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2026 ; Games for Health Journal Volume 15 ; 15 ; gfha ; https://journals.sagepub.com/ ; >
+
+  }
+
+  {
+
+     title <
+       name = Gaming Law Review ;
+       issn = 2572-5300 ;
+       eissn = 2572-5327 ;
+       issnl = 2572-5300
+     >
+
+       #journal_id = glr
+       #continues = 1097-5349
+
+       au < exists ; exists ; 2017 ; Gaming Law Review Volume 21 ; 21 ; glra ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2018 ; Gaming Law Review Volume 22 ; 22 ; glra ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2019 ; Gaming Law Review Volume 23 ; 23 ; glra ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2020 ; Gaming Law Review Volume 24 ; 24 ; glra ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2021 ; Gaming Law Review Volume 25 ; 25 ; glra ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2022 ; Gaming Law Review Volume 26 ; 26 ; glra ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2023 ; Gaming Law Review Volume 27 ; 27 ; glra ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2024 ; Gaming Law Review Volume 28 ; 28 ; glra ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2025 ; Gaming Law Review Volume 29 ; 29 ; glra ; https://journals.sagepub.com/ ; >
+       au < exists ; exists ; 2026 ; Gaming Law Review Volume 30 ; 30 ; glra ; https://journals.sagepub.com/ ; >
+
+  }
+
+  {
+
+     title <
+       name = Gaming Law Review and Economics ;
+       issn = 1097-5349 ;
+       eissn = 1941-5494 ;
+       issnl = 1097-5349
+     >
+
+       #journal_id = glr
+       #continues = 1092-1885
+       #continued_by = 2572-5300
+
+      au < exists ; exists ; 2008 ; Gaming Law Review and Economics Volume 12 ; 12 ; glrb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2009 ; Gaming Law Review and Economics Volume 13 ; 13 ; glrb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2010 ; Gaming Law Review and Economics Volume 14 ; 14 ; glrb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2011 ; Gaming Law Review and Economics Volume 15 ; 15 ; glrb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2012 ; Gaming Law Review and Economics Volume 16 ; 16 ; glrb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2013 ; Gaming Law Review and Economics Volume 17 ; 17 ; glrb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2014 ; Gaming Law Review and Economics Volume 18 ; 18 ; glrb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2015 ; Gaming Law Review and Economics Volume 19 ; 19 ; glrb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2016 ; Gaming Law Review and Economics Volume 20 ; 20 ; glrb ; https://journals.sagepub.com/ ; >
+
+  }
+
+  {
+
+     title <
+       name = Gaming Law Review ;
+       issn = 1092-1885 ;
+       eissn = 1538-3660 ;
+       issnl = 1092-1885
+     >
+
+       #journal_id = glr
+       #continued_by = 1097-5349
+
+      au < exists ; exists ; 1997 ; Gaming Law Review Volume 1 ; 1 ; glrc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1998 ; Gaming Law Review Volume 2 ; 2 ; glrc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1999 ; Gaming Law Review Volume 3 ; 3 ; glrc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2000 ; Gaming Law Review Volume 4 ; 4 ; glrc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2001 ; Gaming Law Review Volume 5 ; 5 ; glrc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2002 ; Gaming Law Review Volume 6 ; 6 ; glrc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2003 ; Gaming Law Review Volume 7 ; 7 ; glrc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2004 ; Gaming Law Review Volume 8 ; 8 ; glrc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2005 ; Gaming Law Review Volume 9 ; 9 ; glrc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2006 ; Gaming Law Review Volume 10 ; 10 ; glrc ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2007 ; Gaming Law Review Volume 11 ; 11 ; glrc ; https://journals.sagepub.com/ ; >
 
   }
 
