@@ -50,6 +50,7 @@ import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.*;
 import org.lockss.poller.PollManager;
 import org.lockss.protocol.IdentityManager;
+import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.repository.RepositoryManager;
 import org.lockss.servlet.MigrateContent;
 import org.lockss.state.AuState;
@@ -225,6 +226,24 @@ public class V2AuMover {
   public static final String PARAM_EXECUTOR_RETRY_INTERVAL =
     PREFIX + "executorRetryInterval";
   public static final long DEFAULT_EXECUTOR_RETRY_INTERVAL = Constants.SECOND;
+
+  /**
+   * How long to wait between checks of a full V1 repository's free space
+   * before starting to copy the next AU into it.  See #721.
+   */
+  public static final String PARAM_DISK_PAUSE_RETRY_INTERVAL =
+    PREFIX + "diskPauseRetryInterval";
+  public static final long DEFAULT_DISK_PAUSE_RETRY_INTERVAL =
+    Constants.MINUTE;
+
+  /**
+   * How many times to check a full V1 repository's free space before
+   * giving up on the current AU and moving on (it stays eligible for a
+   * later migration attempt via the migration error log).  See #721.
+   */
+  public static final String PARAM_DISK_PAUSE_MAX_ATTEMPTS =
+    PREFIX + "diskPauseMaxAttempts";
+  public static final int DEFAULT_DISK_PAUSE_MAX_ATTEMPTS = 10;
 
   /**
    * V2 namespace to migrate into
@@ -602,6 +621,11 @@ public class V2AuMover {
   private ThreadPoolExecutor indexExecutor;
   private long executorRetryInterval;
 
+  /** See PARAM_DISK_PAUSE_RETRY_INTERVAL.  Package visibility for testing. */
+  long diskPauseRetryInterval = DEFAULT_DISK_PAUSE_RETRY_INTERVAL;
+  /** See PARAM_DISK_PAUSE_MAX_ATTEMPTS.  Package visibility for testing. */
+  int diskPauseMaxAttempts = DEFAULT_DISK_PAUSE_MAX_ATTEMPTS;
+
   //////////////////////////////////////////////////////////////////////
   // State vars
   //////////////////////////////////////////////////////////////////////
@@ -751,6 +775,13 @@ public class V2AuMover {
       executorRetryInterval =
         config.getTimeInterval(PARAM_EXECUTOR_RETRY_INTERVAL,
                                DEFAULT_EXECUTOR_RETRY_INTERVAL);
+
+      diskPauseRetryInterval =
+        config.getTimeInterval(PARAM_DISK_PAUSE_RETRY_INTERVAL,
+                               DEFAULT_DISK_PAUSE_RETRY_INTERVAL);
+      diskPauseMaxAttempts =
+        config.getInt(PARAM_DISK_PAUSE_MAX_ATTEMPTS,
+                     DEFAULT_DISK_PAUSE_MAX_ATTEMPTS);
 
       if (changedKeys.contains(PARAM_DISK_SPACE_BYTES_CURVE)) {
         String curve = config.get(PARAM_DISK_SPACE_BYTES_CURVE,
@@ -1974,13 +2005,82 @@ public class V2AuMover {
   }
 
   /**
+   * Thrown when a V1 repository stays below the AU-mover pause threshold
+   * (see {@link RepositoryManager#getAuMoverPauseThreshold()}) for {@link
+   * #diskPauseMaxAttempts} checks in a row.  Caught by the generic
+   * phase-entry exception handler in {@link #enterPhase}, which aborts
+   * just this AU (leaving no partial content behind, since it is caught
+   * before any CU copy task is enqueued) and records the error so the AU
+   * remains eligible for a later migration attempt.  See #721.
+   */
+  static class InsufficientDiskSpaceException extends RuntimeException {
+    InsufficientDiskSpaceException(String msg) {
+      super(msg);
+    }
+  }
+
+  /**
+   * Check the V1 repository holding {@code au} against the AU-mover pause
+   * threshold before starting to copy it.  Polls up to {@link
+   * #diskPauseMaxAttempts} times, {@link #diskPauseRetryInterval} apart,
+   * nudging the deletion threads (in case they are idle) between checks.
+   * Returns normally once there is enough room; throws {@link
+   * InsufficientDiskSpaceException} if there still isn't after the last
+   * attempt.  See #721.
+   */
+  void checkDiskSpaceOrAbort(ArchivalUnit au) {
+    String repoSpec = LockssRepositoryImpl.getRepositorySpec(au);
+    PlatformUtil.DF pauseThreshold = repoMgr.getAuMoverPauseThreshold();
+    for (int attempt = 1; attempt <= diskPauseMaxAttempts; attempt++) {
+      PlatformUtil.DF df = repoMgr.getRepositoryDF(repoSpec);
+      if (df == null || !df.isFullerThan(pauseThreshold)) {
+        return;
+      }
+      log.warning(String.format(
+          "Pausing migration of %s: %s is low on space (%s), attempt %d/%d",
+          au.getName(), repoSpec, df, attempt, diskPauseMaxAttempts));
+      repoMgr.pokeDeleteAusThreads();
+      if (attempt < diskPauseMaxAttempts) {
+        try {
+          Thread.sleep(diskPauseRetryInterval);
+        } catch (InterruptedException ie) {
+          Thread.currentThread().interrupt();
+          giveUpOnDiskSpace(au, repoSpec,
+              "Interrupted while waiting for disk space: " + repoSpec);
+        }
+      }
+    }
+    giveUpOnDiskSpace(au, repoSpec,
+        "Repository " + repoSpec + " still below the AU-mover pause"
+        + " threshold (" + pauseThreshold + ") after "
+        + diskPauseMaxAttempts + " attempts; deferring "
+        + au.getName() + " to a later migration attempt");
+  }
+
+  /**
+   * Records the given message in the migration error log -- the FinishAu
+   * state (see {@link #doAction}) does this itself for a normally-finished
+   * AU with errors, but not for an aborted one, so callers that abort an AU
+   * directly (as opposed to via an uncaught exception during a later phase)
+   * must do it themselves -- then throws {@link
+   * InsufficientDiskSpaceException} so the caller's phase-entry exception
+   * handler aborts this AU and moves on.  See #721.
+   */
+  private void giveUpOnDiskSpace(ArchivalUnit au, String repoSpec, String msg) {
+    log.error(msg);
+    addAuError(msg);
+    throw new InsufficientDiskSpaceException(msg);
+  }
+
+  /**
    * Enqueue a copy task for each CU in the AU.  Will block if the
    * pool's queue fills.  Arrange for exitPhase() to be called when
    * all the CuMover tasks have completed */
   void enqueueCopyAuContent(AuStatus auStat) {
+    ArchivalUnit au = auStat.getAu();
+    checkDiskSpaceOrAbort(au);
     CountUpDownLatch latch = makePhaseEndingLatch(auStat, "Copy");
     auStat.setLatch(Phase.COPY, latch);
-    ArchivalUnit au = auStat.getAu();
     log.debug2("Enqueueing CU copies: " + au.getName());
     // Queue copies for all CUs in the v1 repo.
     for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
@@ -2774,7 +2874,7 @@ public class V2AuMover {
   private long totalAusPartiallyMoved = 0; // also included in totalAusMoved
   private long totalAusSkipped = 0;
   private long totalAusEmpty = 0;
-  private long totalAusWithErrors = 0;
+  long totalAusWithErrors = 0;  // Package visibility for testing.
   private StringBuilder auErrorReport = new StringBuilder();
   private OpTimers totalTimers = new OpTimers(this);
   private Counters totalCounters = totalTimers.getCounters();

@@ -167,6 +167,18 @@ public class RepositoryManager
     DISK_PREFIX + "full.freePercent";
   static final double DEFAULT_DISK_FULL_FRRE_PERCENT = .01;
 
+  /** Free-space threshold below which the migrator should pause starting
+   * new AU copies on a repository, distinct from {@link
+   * #PARAM_DISK_FULL_FRRE_MB} (100MB default): that threshold predates
+   * migration and was tuned for admin-UI status display, not for gating
+   * multi-GB AU copies. See #721. */
+  static final String PARAM_AUMOVER_PAUSE_FREE_MB =
+    DISK_PREFIX + "aumoverPause.freeMB";
+  static final int DEFAULT_AUMOVER_PAUSE_FREE_MB = 20000;
+  static final String PARAM_AUMOVER_PAUSE_FREE_PERCENT =
+    DISK_PREFIX + "aumoverPause.freePercent";
+  static final double DEFAULT_AUMOVER_PAUSE_FREE_PERCENT = .05;
+
   private PluginManager pluginMgr;
   private PlatformUtil platInfo = PlatformUtil.getInstance();
   private List repoList = Collections.EMPTY_LIST;
@@ -200,6 +212,10 @@ public class RepositoryManager
   PlatformUtil.DF paramDFFull =
     PlatformUtil.DF.makeThreshold(DEFAULT_DISK_FULL_FRRE_MB,
 				  DEFAULT_DISK_FULL_FRRE_PERCENT);
+
+  PlatformUtil.DF paramAuMoverPause =
+    PlatformUtil.DF.makeThreshold(DEFAULT_AUMOVER_PAUSE_FREE_MB,
+				  DEFAULT_AUMOVER_PAUSE_FREE_PERCENT);
 
   private float sizeCalcMaxLoad = DEFAULT_SIZE_CALC_MAX_LOAD;
 
@@ -494,8 +510,11 @@ public class RepositoryManager
   protected void deleteFinished(File dir, boolean success) {
   }
 
-  /** Tell idle delete threads that there may be work to do. */
-  void pokeDeleteAusThreads() {
+  /** Tell idle delete threads that there may be work to do.  Public so
+   * that a caller elsewhere in the daemon (e.g. the migrator, when it
+   * finds itself waiting on free space -- see #721) can nudge deletion
+   * rather than passively wait for its next scheduled pass. */
+  public void pokeDeleteAusThreads() {
     synchronized (deleteLock) {
       deleteGeneration++;
       deleteLock.notifyAll();
@@ -704,6 +723,11 @@ public class RepositoryManager
       minPer = config.getPercentage(PARAM_DISK_FULL_FRRE_PERCENT,
 					   DEFAULT_DISK_FULL_FRRE_PERCENT);
       paramDFFull = PlatformUtil.DF.makeThreshold(minMB, minPer);
+      minMB = config.getInt(PARAM_AUMOVER_PAUSE_FREE_MB,
+				DEFAULT_AUMOVER_PAUSE_FREE_MB);
+      minPer = config.getPercentage(PARAM_AUMOVER_PAUSE_FREE_PERCENT,
+					   DEFAULT_AUMOVER_PAUSE_FREE_PERCENT);
+      paramAuMoverPause = PlatformUtil.DF.makeThreshold(minMB, minPer);
     }
     if (changedKeys.contains(PARAM_SIZE_CALC_MAX_LOAD)) {
       sizeCalcMaxLoad = config.getPercentage(PARAM_SIZE_CALC_MAX_LOAD,
@@ -848,6 +872,14 @@ public class RepositoryManager
 
   public PlatformUtil.DF getDiskFullThreshold() {
     return paramDFFull;
+  }
+
+  /** Free-space threshold below which the migrator (V2AuMover) should
+   * pause rather than start copying a new AU into a repository.  See
+   * #721; distinct from {@link #getDiskFullThreshold()}, which is tuned
+   * for admin-UI display, not for gating multi-GB AU copies. */
+  public PlatformUtil.DF getAuMoverPauseThreshold() {
+    return paramAuMoverPause;
   }
 
   public static int getMaxUnusedDirSearch() {
