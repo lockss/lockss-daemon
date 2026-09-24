@@ -236,6 +236,8 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s/content(/[^/]+)?/suppl/", url_host(base_url)</string>
       <!-- iii.article-info was causing over counts, should not be collected -->
       <string>2,"^https?://%s/content/(by/(year|volume)|current|.*(/|\.)article-)", url_host(base_url)</string>
+      <!-- remove index-by-author pages, example https://www.ijssurgery.com/content/19/1/index-by-author -->
+      <string>2,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?/index-by-author", url_host(base_url), volume_name</string> 
       <!-- after content is optional jcode, required vol, optional issue, optional .toc  -->
       <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?(\.toc)?$", url_host(base_url), volume_name</string>
       <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL 
@@ -248,6 +250,8 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), volume_name</string>
       <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), volume_name</string>
       <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?/.+\.(long|supplemental|data|figures-only)$", url_host(base_url), volume_name</string>
+      <!-- collect citation files -->
+      <string>1,"^https?://%s/admin/highwire/citation/[0-9]+/[a-z]+_journal$", url_host(base_url)</string>
       <string>1,"^https?://%s/search/volume[^/?]+?%s[^/?]+\?(page=[0-9]+&amp;)?facet.+toc-section-id", url_host(base_url), volume_name</string>
       <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
       <string>1,"^https?://%s/[^/]+/(download-(pdf|suppl|video))/", url_host(base_url)</string>

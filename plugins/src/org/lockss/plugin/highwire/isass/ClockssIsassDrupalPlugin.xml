@@ -75,4 +75,13 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.highwire.HighWireJCoreScrapingPdfFilterFactory</string>
   </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.highwire.isass.IsassDrupalHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
 </map>
