@@ -1,5 +1,21 @@
 'use strict';
 
+// Bounds how long a single status/finished/errors request can stay
+// outstanding. Without this, a slow or stalled request could block the
+// next poll from ever being scheduled (see the overlap issue below).
+const STATUS_FETCH_TIMEOUT_MS = 10000;
+
+// fetch() with a hard timeout: rejects if the request is still outstanding
+// after STATUS_FETCH_TIMEOUT_MS, aborting it so it doesn't linger.
+function fetchJsonWithTimeout(url) {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), STATUS_FETCH_TIMEOUT_MS);
+
+    return fetch(url, { signal: controller.signal })
+        .then(response => response.json())
+        .finally(() => clearTimeout(timeoutId));
+}
+
 function toggleElement(elem) {
     if (elem === null) {
         return;
@@ -99,18 +115,14 @@ class AuMigrationStatus extends React.Component {
   }
 
   componentDidMount() {
+    this.mounted = true;
     this.__loadStatus();
-    this.interval = setInterval(this.__loadStatus, this.state.delay);
     this.disableSomeButtons();
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.wasAtBottom) {
       this.__scrollBottom();
-    }
-    if (prevState.delay != this.state.delay) {
-      clearInterval(this.interval);
-      this.interval = setInterval(this.__loadStatus, this.state.delay);
     }
 
     // FIXME: Replace with a jQuery solution?
@@ -136,7 +148,8 @@ class AuMigrationStatus extends React.Component {
   }
 
   componentWillUnmount() {
-    clearInterval(this.interval);
+    this.mounted = false;
+    clearTimeout(this.timeout);
   }
 
   __scrollBottom = () => {
@@ -159,68 +172,87 @@ class AuMigrationStatus extends React.Component {
 
     const startTimeChanged = prevStartTime != result.start_time;
 
-    this.setState((prevState) => ({
-      running: result.running,
-      fetchError: false,
-      statusList: result.status_list,
-      instrumentList: result.instrument_list,
-      activeList: result.active_list,
-      finishedCount: result.finished_count,
-      errorsCount: result.errors_count,
-      delay: result.running ? 1000 : 5000,
-      startTime: result.start_time,
-      wasAtBottom: wasAtBottom,
-      finishedData: startTimeChanged ? [] : prevState.finishedData,
-      errorsData: startTimeChanged ? [] : prevState.errorsData,
-    }), () => {
-      if (this.state.finishedCount != this.state.finishedData.length) {
-        fetch("/MigrateContent?reqfreq=high&output=json&status=finished" +
-              "&index=" + this.state.finishedData.length +
-              "&size=" + (this.state.finishedCount - this.state.finishedData.length))
-          .then(response => response.json())
-          .then(
-            (result) => {
-              this.setState((prevState) => ({
-                finishedData: addIncrementalPage(prevState.finishedData,
-                                                 result.finished_page,
-                                                 result.finished_index),
-              }));
-            },
-            (error) => {
-              console.error("Could not fetch finished AU page: " + error);
-            }
+    // Resolves once every page this response implies is still needed has
+    // settled (successfully or not), so the caller can wait for the whole
+    // round trip -- not just this first response -- before scheduling the
+    // next poll. Without that, a slow page fetch here would not stop the
+    // next status poll from starting, and outstanding requests would pile up.
+    return new Promise((resolveRoundTrip) => {
+      this.setState((prevState) => ({
+        running: result.running,
+        fetchError: false,
+        statusList: result.status_list,
+        instrumentList: result.instrument_list,
+        activeList: result.active_list,
+        finishedCount: result.finished_count,
+        errorsCount: result.errors_count,
+        delay: result.running ? 1000 : 5000,
+        startTime: result.start_time,
+        wasAtBottom: wasAtBottom,
+        finishedData: startTimeChanged ? [] : prevState.finishedData,
+        errorsData: startTimeChanged ? [] : prevState.errorsData,
+      }), () => {
+        const pagesPending = [];
+
+        if (this.state.finishedCount != this.state.finishedData.length) {
+          pagesPending.push(
+            fetchJsonWithTimeout("/MigrateContent?reqfreq=high&output=json&status=finished" +
+                  "&index=" + this.state.finishedData.length +
+                  "&size=" + (this.state.finishedCount - this.state.finishedData.length))
+              .then(
+                (result) => {
+                  this.setState((prevState) => ({
+                    finishedData: addIncrementalPage(prevState.finishedData,
+                                                     result.finished_page,
+                                                     result.finished_index),
+                  }));
+                },
+                (error) => {
+                  console.error("Could not fetch finished AU page: " + error);
+                }
+              )
           );
-      }
-      if (this.state.errorsCount != this.state.errorsData.length) {
-        fetch("/MigrateContent?reqfreq=high&output=json&status=errors" +
-              "&index=" + this.state.errorsData.length +
-              "&size=" + (this.state.errorsCount - this.state.errorsData.length))
-          .then(response => response.json())
-          .then(
-            (result) => {
-              this.setState((prevState) => ({
-                errorsData: addIncrementalPage(prevState.errorsData,
-                                               result.errors_page,
-                                               result.errors_index),
-              }));
-            },
-            (error) => {
-              console.error("Could not fetch errors page: " + error);
-            }
+        }
+        if (this.state.errorsCount != this.state.errorsData.length) {
+          pagesPending.push(
+            fetchJsonWithTimeout("/MigrateContent?reqfreq=high&output=json&status=errors" +
+                  "&index=" + this.state.errorsData.length +
+                  "&size=" + (this.state.errorsCount - this.state.errorsData.length))
+              .then(
+                (result) => {
+                  this.setState((prevState) => ({
+                    errorsData: addIncrementalPage(prevState.errorsData,
+                                                   result.errors_page,
+                                                   result.errors_index),
+                  }));
+                },
+                (error) => {
+                  console.error("Could not fetch errors page: " + error);
+                }
+              )
           );
-      }
+        }
+
+        Promise.all(pagesPending).then(resolveRoundTrip, resolveRoundTrip);
+      });
     });
+  }
+
+  // Schedules the next poll delay milliseconds from now, replacing any
+  // already-scheduled one. Only ever called after the previous round trip
+  // (status, plus any finished/errors pages it implied) has fully settled,
+  // so at most one round trip is ever outstanding at a time.
+  __scheduleNextLoad = (delay) => {
+    clearTimeout(this.timeout);
+    this.timeout = setTimeout(this.__loadStatus, delay);
   }
 
   __loadStatus = () => {
     const prevStartTime = this.state.startTime;
 
-    fetch("/MigrateContent?reqfreq=high&output=json&status=status")
-      .then(response => response.json())
+    fetchJsonWithTimeout("/MigrateContent?reqfreq=high&output=json&status=status")
       .then(
-        (result) => {
-          this.updateStateAfterFetch(result, prevStartTime);
-        },
+        (result) => this.updateStateAfterFetch(result, prevStartTime),
         (error) => {
           console.error("Could not fetch status information: " + error);
 
@@ -230,8 +262,12 @@ class AuMigrationStatus extends React.Component {
             delay: 5000,
           });
         }
-      );
-
+      )
+      .finally(() => {
+        if (this.mounted) {
+          this.__scheduleNextLoad(this.state.delay);
+        }
+      });
   }
 
   render() {
