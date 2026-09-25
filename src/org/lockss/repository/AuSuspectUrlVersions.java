@@ -68,8 +68,9 @@ public class AuSuspectUrlVersions implements LockssSerializable {
       this.url = url;
       this.version = version;
       this.created = TimeBase.nowMs();
-      this.computedHash = HashResult.make(computedHash, algorithm);
-      this.storedHash = HashResult.make(storedHash, algorithm);
+      // computedHash is null if the version has a stored hash but no content
+      this.computedHash = makeHashResult(computedHash, algorithm);
+      this.storedHash = makeHashResult(storedHash, algorithm);
     }
 
     protected SuspectUrlVersion(String url, int version,
@@ -80,6 +81,10 @@ public class AuSuspectUrlVersions implements LockssSerializable {
       this.created = TimeBase.nowMs();
       this.computedHash = computedHash;
       this.storedHash = storedHash;
+    }
+
+    private HashResult makeHashResult(byte[] bytes, String algorithm) {
+      return bytes == null ? null : HashResult.make(bytes, algorithm);
     }
 
     public String getUrl() {

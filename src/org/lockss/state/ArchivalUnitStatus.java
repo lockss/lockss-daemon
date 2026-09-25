@@ -1844,8 +1844,13 @@ public class ArchivalUnitStatus
 	row.put(COL_URL, suv.getUrl());
 	row.put(COL_VERSION, suv.getVersion());
 	row.put(COL_DISCOVERED, suv.getCreated());
-	row.put(COL_COMPUTED, suv.getComputedHash().toString());
-	row.put(COL_STORED, suv.getStoredHash().toString());
+	// Computed hash is null if the version had no content
+	if (suv.getComputedHash() != null) {
+	  row.put(COL_COMPUTED, suv.getComputedHash().toString());
+	}
+	if (suv.getStoredHash() != null) {
+	  row.put(COL_STORED, suv.getStoredHash().toString());
+	}
 	rowL.add(row);
 	}
       return rowL;

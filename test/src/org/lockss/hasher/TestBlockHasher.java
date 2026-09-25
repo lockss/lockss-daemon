@@ -1662,6 +1662,35 @@ public class TestBlockHasher extends LockssTestCase {
     assertEvent(base+"1", len+2, str+"xx", events.get(2), false);
   }
 
+  // A "foo" -> "foo/" redirect is hashed under both URLs in V2 compat
+  // mode, also when the version has a stored checksum.  Its content is
+  // local-hashed only once.
+  public void testDirRedirV2CompatLocalHash() throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_V2_COMPAT, "true");
+    enableLocalHash("SHA-1", "SHA-1");
+    setUpRedirTest();
+    String str = "top index";
+    storeCu(dirAu, DIR_BASE, str, redirProps(DIR_BASE, DIR_BASE + "/"));
+    assertNotNull(dirAu.makeCachedUrl(DIR_BASE).getProperties()
+                  .getProperty(CachedUrl.PROPERTY_CHECKSUM));
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    CachedUrlSet cus = dirAu.getAuCachedUrlSet();
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(false);
+    assertEquals(str.length() * 2, hashToEnd(hasher, 100));
+    assertTrue(hasher.finished());
+    List<Event> events = handRec.getEvents();
+    assertEquals(2, events.size());
+    assertEvent(DIR_BASE, str.length(), str, events.get(0), false);
+    assertEvent(DIR_BASE + "/", str.length(), str, events.get(1), false);
+    LocalHashResult lhr = hasher.getLocalHashResult();
+    assertEquals(1, lhr.getMatchingVersions());
+    assertEquals(0, lhr.getNewlySuspectVersions());
+    assertEquals(0, lhr.getNewlyHashedVersions());
+  }
+
   // A directory URL ("dir/") collected by the V1 repository is stored in
   // node "dir", with the real URL in PROPERTY_NODE_URL.  When the crawl
   // rules match "dir/" but not "dir" (e.g., a source plugin's manifest
