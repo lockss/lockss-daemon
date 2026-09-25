@@ -19780,11 +19780,31 @@
     >
       #param[journal_id] = GNB
 
-      au < frozen ; exists ; 2022 ; GEN Biotechnology News Volume 1 ; 1 ; gnba ; https://journals.sagepub.com/ ; >
-      au < frozen ; exists ; 2023 ; GEN Biotechnology News Volume 2 ; 2 ; gnba ; https://journals.sagepub.com/ ; >
-      au < frozen ; exists ; 2024 ; GEN Biotechnology News Volume 3 ; 3 ; gnba ; https://journals.sagepub.com/ ; >
-      au < frozen ; exists ; 2025 ; GEN Biotechnology News Volume 4 ; 4 ; gnba ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2026 ; GEN Biotechnology News Volume 5 ; 5 ; gnba ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2022 ; GEN Biotechnology Volume 1 ; 1 ; gnba ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2023 ; GEN Biotechnology Volume 2 ; 2 ; gnba ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2024 ; GEN Biotechnology Volume 3 ; 3 ; gnba ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2025 ; GEN Biotechnology Volume 4 ; 4 ; gnba ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2026 ; GEN Biotechnology Volume 5 ; 5 ; gnba ; https://journals.sagepub.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = GEN Edge ;
+      eissn = 2768-1580 ;
+      issnl = 2768-1580
+    >
+      #param[journal_id] = ged
+      #no longer being published
+
+      au < exists ; exists ; 2019 ; GEN Edge Volume 1 ; 1 ; geda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2020 ; GEN Edge Volume 2 ; 2 ; geda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2021 ; GEN Edge Volume 3 ; 3 ; geda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2022 ; GEN Edge Volume 4 ; 4 ; geda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2023 ; GEN Edge Volume 5 ; 5 ; geda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2024 ; GEN Edge Volume 6 ; 6 ; geda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2025 ; GEN Edge Volume 7 ; 7 ; geda ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -24162,6 +24182,23 @@
       au < frozen ; exists ; 2024 ; Integrative and Complementary Therapies Volume 30 ; 30 ; itha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Integrative and Complementary Therapies Volume 31 ; 31 ; itha ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2026 ; Integrative and Complementary Therapies Volume 32 ; 32 ; itha ; https://journals.sagepub.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Integrative Medicine Reports ;
+      eissn = 2768-1580 ;
+      issnl = 2768-1580
+    >
+      #param[journal_id] = ime
+
+      au < exists ; exists ; 2022 ; Integrative Medicine Reports Volume 1 ; 1 ; imea ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2023 ; Integrative Medicine Reports Volume 2 ; 2 ; imea ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2024 ; Integrative Medicine Reports Volume 3 ; 3 ; imea ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2025 ; Integrative Medicine Reports Volume 4 ; 4 ; imea ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2026 ; Integrative Medicine Reports Volume 5 ; 5 ; imea ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -28846,6 +28883,73 @@
 
   {
 
+    title <
+      name = Journal of Aerosol Medicine ;
+      issn = 0894-2684 ;
+      eissn = 1557-9026 ;
+      issnl = 0894-2684
+    >
+      #param[journal_id] = pdd
+      #continued_by = 1941-2711
+
+      au < exists ; exists ; 1988 ; Journal of Aerosol Medicine Volume 1 ; 1 ; pddb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1989 ; Journal of Aerosol Medicine Volume 2 ; 2 ; pddb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1990 ; Journal of Aerosol Medicine Volume 3 ; 3 ; pddb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1991 ; Journal of Aerosol Medicine Volume 4 ; 4 ; pddb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1992 ; Journal of Aerosol Medicine Volume 5 ; 5 ; pddb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1993 ; Journal of Aerosol Medicine Volume 6 ; 6 ; pddb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1994 ; Journal of Aerosol Medicine Volume 7 ; 7 ; pddb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1995 ; Journal of Aerosol Medicine Volume 8 ; 8 ; pddb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1996 ; Journal of Aerosol Medicine Volume 9 ; 9 ; pddb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1997 ; Journal of Aerosol Medicine Volume 10 ; 10 ; pddb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1998 ; Journal of Aerosol Medicine Volume 11 ; 11 ; pddb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1999 ; Journal of Aerosol Medicine Volume 12 ; 12 ; pddb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2000 ; Journal of Aerosol Medicine Volume 13 ; 13 ; pddb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2001 ; Journal of Aerosol Medicine Volume 14 ; 14 ; pddb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2002 ; Journal of Aerosol Medicine Volume 15 ; 15 ; pddb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2003 ; Journal of Aerosol Medicine Volume 16 ; 16 ; pddb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2004 ; Journal of Aerosol Medicine Volume 17 ; 17 ; pddb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2005 ; Journal of Aerosol Medicine Volume 18 ; 18 ; pddb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2006 ; Journal of Aerosol Medicine Volume 19 ; 19 ; pddb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2007 ; Journal of Aerosol Medicine Volume 20 ; 20 ; pddb ; https://journals.sagepub.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Aerosol Medicine and Pulmonary Drug Delivery ;
+      issn = 1941-2711 ;
+      eissn = 1941-2703 ;
+      issnl = 1941-2711
+    >
+      #param[journal_id] = pdd
+      #continues = 1557-9026
+
+      au < exists ; exists ; 2008 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 21 ; 21 ; pdda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2009 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 22 ; 22 ; pdda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2010 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 23 ; 23 ; pdda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2011 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 24 ; 24 ; pdda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2012 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 25 ; 25 ; pdda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2013 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 26 ; 26 ; pdda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2014 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 27 ; 27 ; pdda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2015 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 28 ; 28 ; pdda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2016 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 29 ; 29 ; pdda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2017 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 30 ; 30 ; pdda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2018 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 31 ; 31 ; pdda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2019 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 32 ; 32 ; pdda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2020 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 33 ; 33 ; pdda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2021 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 34 ; 34 ; pdda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2022 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 35 ; 35 ; pdda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2023 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 36 ; 36 ; pdda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2024 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 37 ; 37 ; pdda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2025 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 38 ; 38 ; pdda ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2026 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 39 ; 39 ; pdda ; https://journals.sagepub.com/ ; >
+
+  }
+
+  {
+
       title <
         name = Journal of Secondary Gifted Education ;
         issn = 1077-4610 ;
@@ -33346,6 +33450,59 @@
   {
 
     title <
+      name = Journal of Endourology ;
+      issn = 0892-7790 ;
+      eissn = 1557-900X ;
+      issnl = 0892-7790
+    >
+      #param[journal_id] = enr
+
+      au < exists ; exists ; 1987 ; Journal of Endourology Volume 1 ; 1 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1988 ; Journal of Endourology Volume 2 ; 2 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1989 ; Journal of Endourology Volume 3 ; 3 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1990 ; Journal of Endourology Volume 4 ; 4 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1991 ; Journal of Endourology Volume 5 ; 5 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1992 ; Journal of Endourology Volume 6 ; 6 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1993 ; Journal of Endourology Volume 7 ; 7 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1994 ; Journal of Endourology Volume 8 ; 8 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1995 ; Journal of Endourology Volume 9 ; 9 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1996 ; Journal of Endourology Volume 10 ; 10 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1997 ; Journal of Endourology Volume 11 ; 11 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1998 ; Journal of Endourology Volume 12 ; 12 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1999 ; Journal of Endourology Volume 13 ; 13 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2000 ; Journal of Endourology Volume 14 ; 14 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2001 ; Journal of Endourology Volume 15 ; 15 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2002 ; Journal of Endourology Volume 16 ; 16 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2003 ; Journal of Endourology Volume 17 ; 17 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2004 ; Journal of Endourology Volume 18 ; 18 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2005 ; Journal of Endourology Volume 19 ; 19 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2006 ; Journal of Endourology Volume 20 ; 20 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2007 ; Journal of Endourology Volume 21 ; 21 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2008 ; Journal of Endourology Volume 22 ; 22 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2009 ; Journal of Endourology Volume 23 ; 23 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2010 ; Journal of Endourology Volume 24 ; 24 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2011 ; Journal of Endourology Volume 25 ; 25 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2012 ; Journal of Endourology Volume 26 ; 26 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2013 ; Journal of Endourology Volume 27 ; 27 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2014 ; Journal of Endourology Volume 28 ; 28 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2015 ; Journal of Endourology Volume 29 ; 29 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2016 ; Journal of Endourology Volume 30 ; 30 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2017 ; Journal of Endourology Volume 31 ; 31 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2018 ; Journal of Endourology Volume 32 ; 32 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2019 ; Journal of Endourology Volume 33 ; 33 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2020 ; Journal of Endourology Volume 34 ; 34 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2021 ; Journal of Endourology Volume 35 ; 35 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2022 ; Journal of Endourology Volume 36 ; 36 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2023 ; Journal of Endourology Volume 37 ; 37 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2024 ; Journal of Endourology Volume 38 ; 38 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2025 ; Journal of Endourology Volume 39 ; 39 ; enra ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2026 ; Journal of Endourology Volume 40 ; 40 ; enra ; https://journals.sagepub.com/ ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Endovascular Therapy ;
       issn = 1526-6028 ;
       eissn = 1545-1550
@@ -35956,6 +36113,79 @@
   {
 
     title <
+      name = Journal of Interferon Research ;
+      issn = 0197-8357 ;
+      issnl = 0197-8357
+    >
+      #param[journal_id] = ifc
+      #continued_by = 1079-9907
+
+      au < exists ; exists ; 1980-1981 ; Journal of Interferon Research Volume 1 ; 1 ; ifcb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1982 ; Journal of Interferon Research Volume 2 ; 2 ; ifcb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1983 ; Journal of Interferon Research Volume 3 ; 3 ; ifcb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1984 ; Journal of Interferon Research Volume 4 ; 4 ; ifcb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1985 ; Journal of Interferon Research Volume 5 ; 5 ; ifcb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1986 ; Journal of Interferon Research Volume 6 ; 6 ; ifcb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1987 ; Journal of Interferon Research Volume 7 ; 7 ; ifcb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1988 ; Journal of Interferon Research Volume 8 ; 8 ; ifcb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1989 ; Journal of Interferon Research Volume 9 ; 9 ; ifcb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1990 ; Journal of Interferon Research Volume 10 ; 10 ; ifcb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1991 ; Journal of Interferon Research Volume 11 ; 11 ; ifcb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1992 ; Journal of Interferon Research Volume 12 ; 12 ; ifcb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1993 ; Journal of Interferon Research Volume 13 ; 13 ; ifcb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1994 ; Journal of Interferon Research Volume 14 ; 14 ; ifcb ; https://journals.sagepub.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Interferon & Cytokine Research ;
+      issn = 1079-9907 ;
+      eissn = 1557-7465 ;
+      issnl = 1079-9907
+    >
+      #param[journal_id] = ifc
+      #continues = 0197-8357
+
+      au < exists ; exists ; 1995 ; Journal of Interferon & Cytokine Research Volume 15 ; 15 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1996 ; Journal of Interferon & Cytokine Research Volume 16 ; 16 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1997 ; Journal of Interferon & Cytokine Research Volume 17 ; 17 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1998 ; Journal of Interferon & Cytokine Research Volume 18 ; 18 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1999 ; Journal of Interferon & Cytokine Research Volume 19 ; 19 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2000 ; Journal of Interferon & Cytokine Research Volume 20 ; 20 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2001 ; Journal of Interferon & Cytokine Research Volume 21 ; 21 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2002 ; Journal of Interferon & Cytokine Research Volume 22 ; 22 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2003 ; Journal of Interferon & Cytokine Research Volume 23 ; 23 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2004 ; Journal of Interferon & Cytokine Research Volume 24 ; 24 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2005 ; Journal of Interferon & Cytokine Research Volume 25 ; 25 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2006 ; Journal of Interferon & Cytokine Research Volume 26 ; 26 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2007 ; Journal of Interferon & Cytokine Research Volume 27 ; 27 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2008 ; Journal of Interferon & Cytokine Research Volume 28 ; 28 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2009 ; Journal of Interferon & Cytokine Research Volume 29 ; 29 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2010 ; Journal of Interferon & Cytokine Research Volume 30 ; 30 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2011 ; Journal of Interferon & Cytokine Research Volume 31 ; 31 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2012 ; Journal of Interferon & Cytokine Research Volume 32 ; 32 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2013 ; Journal of Interferon & Cytokine Research Volume 33 ; 33 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2014 ; Journal of Interferon & Cytokine Research Volume 34 ; 34 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2015 ; Journal of Interferon & Cytokine Research Volume 35 ; 35 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2016 ; Journal of Interferon & Cytokine Research Volume 36 ; 36 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2017 ; Journal of Interferon & Cytokine Research Volume 37 ; 37 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2018 ; Journal of Interferon & Cytokine Research Volume 38 ; 38 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2019 ; Journal of Interferon & Cytokine Research Volume 39 ; 39 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2020 ; Journal of Interferon & Cytokine Research Volume 40 ; 40 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2021 ; Journal of Interferon & Cytokine Research Volume 41 ; 41 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2022 ; Journal of Interferon & Cytokine Research Volume 42 ; 42 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2023 ; Journal of Interferon & Cytokine Research Volume 43 ; 43 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2024 ; Journal of Interferon & Cytokine Research Volume 44 ; 44 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2025 ; Journal of Interferon & Cytokine Research Volume 45 ; 45 ; ifca ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2026 ; Journal of Interferon & Cytokine Research Volume 46 ; 46 ; ifca ; https://journals.sagepub.com/ ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Intensive Care Medicine ;
       issn = 0885-0666 ;
       eissn = 1525-1489
@@ -36396,6 +36626,69 @@
       au < deepCrawl ; exists ; 2024 ; Journal of Language and Social Psychology Volume 43 ; 43 ; jlsa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Language and Social Psychology Volume 44 ; 44 ; jlsa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2026 ; Journal of Language and Social Psychology Volume 45 ; 45 ; jlsa ; https://journals.sagepub.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Laparoendoscopic Surgery ;
+      issn = 1052-3901 ;
+      issnl = 1052-3901
+    >
+      #param[journal_id] = lat
+      #continued_by = 1092-6429
+
+      au < exists ; exists ; 1990-1991 ; Journal of Laparoendoscopic Surgery Volume 1 ; 1 ; latb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1992 ; Journal of Laparoendoscopic Surgery Volume 2 ; 2 ; latb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1993 ; Journal of Laparoendoscopic Surgery Volume 3 ; 3 ; latb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1994 ; Journal of Laparoendoscopic Surgery Volume 4 ; 4 ; latb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1995 ; Journal of Laparoendoscopic Surgery Volume 5 ; 5 ; latb ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1996 ; Journal of Laparoendoscopic Surgery Volume 6 ; 6 ; latb ; https://journals.sagepub.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Laparoendoscopic & Advanced Surgical Techniques ;
+      issn = 1092-6429 ;
+      eissn = 1557-9034 ;
+      issnl = 1092-6429
+    >
+      #param[journal_id] = lat
+      #continues = 1052-3901
+
+      au < exists ; exists ; 1997 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 7 ; 7 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1998 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 8 ; 8 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 1999 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 9 ; 9 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2000 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 10 ; 10 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2001 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 11 ; 11 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2002 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 12 ; 12 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2003 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 13 ; 13 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2004 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 14 ; 14 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2005 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 15 ; 15 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2006 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 16 ; 16 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2007 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 17 ; 17 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2008 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 18 ; 18 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2009 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 19 ; 19 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2010 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 20 ; 20 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2011 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 21 ; 21 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2012 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 22 ; 22 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2013 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 23 ; 23 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2014 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 24 ; 24 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2015 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 25 ; 25 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2016 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 26 ; 26 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2017 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 27 ; 27 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2018 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 28 ; 28 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2019 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 29 ; 29 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2020 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 30 ; 30 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2021 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 31 ; 31 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2022 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 32 ; 32 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2023 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 33 ; 33 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2024 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 34 ; 34 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2025 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 35 ; 35 ; lata ; https://journals.sagepub.com/ ; >
+      au < exists ; exists ; 2026 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 36 ; 36 ; lata ; https://journals.sagepub.com/ ; >
 
   }
 
