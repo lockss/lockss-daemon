@@ -1662,6 +1662,130 @@ public class TestBlockHasher extends LockssTestCase {
     assertEvent(base+"1", len+2, str+"xx", events.get(2), false);
   }
 
+  // A directory URL ("dir/") collected by the V1 repository is stored in
+  // node "dir", with the real URL in PROPERTY_NODE_URL.  When the crawl
+  // rules match "dir/" but not "dir" (e.g., a source plugin's manifest
+  // page), V2 compatibility mode provisionally includes the node.  Local
+  // hashing must then see each version as having content.
+  private static final String SLASH_BASE = "http://site/dir/";
+  private static final String SLASH_NODE = "http://site/dir";
+
+  private void setUpSlashOnlyCrawlRuleTest() throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_IGNORE_FILES_OUTSIDE_CRAWL_SPEC,
+                                  "true");
+    enableLocalHash("SHA-1", "SHA-1");
+    // Crawl rule is "^http://site/dir/", which doesn't match the
+    // slashless V1 node URL
+    dirAu =
+      PluginTestUtil.createAndStartAu("org.lockss.plugin.DirTreePlugin",
+                                      ConfigurationUtil.fromArgs("base_url",
+                                                                 SLASH_BASE));
+    assertTrue(dirAu.shouldBeCached(SLASH_BASE));
+    assertFalse(dirAu.shouldBeCached(SLASH_NODE));
+  }
+
+  // BaseCachedUrl.hasContent() accepts the slashless node via
+  // hasV2Content(); the Version CUs returned by getCuVersions() must
+  // agree.
+  public void testSlashOnlyCrawlRuleVersionHasContentV2Compat()
+      throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_V2_COMPAT, "true");
+    setUpSlashOnlyCrawlRuleTest();
+    storeCu(dirAu, SLASH_BASE, "manifest 1");
+    storeCu(dirAu, SLASH_BASE, "manifest 2");
+
+    // Confirm the setup matches the V1 repo layout: slashless node,
+    // real URL in node props, checksum stored by the UrlCacher
+    CachedUrl cu = dirAu.makeCachedUrl(SLASH_NODE);
+    assertTrue(cu.hasContent());
+    CachedUrl[] vers = cu.getCuVersions();
+    assertEquals(2, vers.length);
+    for (CachedUrl ver : vers) {
+      CIProperties props = ver.getProperties();
+      assertEquals(SLASH_BASE, props.getProperty(CachedUrl.PROPERTY_NODE_URL));
+      assertNotNull(props.getProperty(CachedUrl.PROPERTY_CHECKSUM));
+      assertTrue("Version " + ver.getVersion() + " has no content",
+                 ver.hasContent());
+    }
+  }
+
+  public void testSlashOnlyCrawlRuleLocalHashV2Compat() throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_V2_COMPAT, "true");
+    setUpSlashOnlyCrawlRuleTest();
+    String str1 = "manifest 1";
+    String str2 = "manifest 2";
+    storeCu(dirAu, SLASH_BASE, str1);
+    storeCu(dirAu, SLASH_BASE, str2);
+
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    CachedUrlSet cus = dirAu.getAuCachedUrlSet();
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(false);
+    assertEquals(str1.length() + str2.length(), hashToEnd(hasher, 100));
+    assertTrue(hasher.finished());
+    List<Event> events = handRec.getEvents();
+    assertEquals(1, events.size());
+    assertEquals(2, events.get(0).hblock.getVersions().length);
+    assertEvent(SLASH_BASE, str2.length(), str2, events.get(0), false);
+
+    LocalHashResult lhr = hasher.getLocalHashResult();
+    assertEquals(2, lhr.getMatchingVersions());
+    assertEquals(0, lhr.getNewlySuspectVersions());
+    assertEquals(0, lhr.getNewlyHashedVersions());
+    AuSuspectUrlVersions asuv = AuUtil.getSuspectUrlVersions(dirAu);
+    assertTrue(asuv.isEmpty());
+  }
+
+  // Without V2 compatibility the slashless node is outside the crawl spec
+  // and is skipped entirely.
+  public void testSlashOnlyCrawlRuleLocalHashNoV2Compat() throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_V2_COMPAT, "false");
+    setUpSlashOnlyCrawlRuleTest();
+    storeCu(dirAu, SLASH_BASE, "manifest 1");
+    storeCu(dirAu, SLASH_BASE, "manifest 2");
+
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    CachedUrlSet cus = dirAu.getAuCachedUrlSet();
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(false);
+    assertEquals(0, hashToEnd(hasher, 100));
+    assertTrue(hasher.finished());
+    assertEmpty(handRec.getEvents());
+    LocalHashResult lhr = hasher.getLocalHashResult();
+    assertEquals(0, lhr.getNewlySuspectVersions());
+    assertTrue(AuUtil.getSuspectUrlVersions(dirAu).isEmpty());
+  }
+
+  // A version with a stored checksum but no content should be marked
+  // suspect, not abort the hash.
+  public void testLocalHashChecksumButNoContent() throws Exception {
+    enableLocalHash("SHA-1");
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    MockArchivalUnit mau = setupContentTree();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    addVersionAndChecksum(mau, urls[4], "foo",
+                          "SHA-1:0beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33");
+    CachedUrl noContent =
+      addVersionAndChecksum(mau, urls[4], null,
+                            "SHA-1:0beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33");
+    assertFalse(noContent.hasContent());
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(false);
+    hashToEnd(hasher, 100);
+    assertTrue(hasher.finished());
+    LocalHashResult lhr = hasher.getLocalHashResult();
+    assertEquals(1, lhr.getMatchingVersions());
+    assertEquals(1, lhr.getNewlySuspectVersions());
+    AuSuspectUrlVersions asuv = AuUtil.getSuspectUrlVersions(mau);
+    assertTrue(asuv.isSuspect(urls[4], noContent.getVersion()));
+  }
+
 //  static byte[] bytes = ByteArray.makeRandomBytes(40);
 //  static final int multiple = 100000000;
 //
