@@ -277,7 +277,7 @@
       param[journal_id] = cjb1
 
       au < frozen ; exists ; 1951 ; Canadian Journal of Botany Volume 29 ; 29 ; https://cdnsciencepub.com/ ; >
-      au < ready ; exists ; 1952 ; Canadian Journal of Botany Volume 30 ; 30 ; https://cdnsciencepub.com/ ; >
+      au < crawling ; exists ; 1952 ; Canadian Journal of Botany Volume 30 ; 30 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 1953 ; Canadian Journal of Botany Volume 31 ; 31 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 1954 ; Canadian Journal of Botany Volume 32 ; 32 ; https://cdnsciencepub.com/ ; >
       au < crawling ; exists ; 1955 ; Canadian Journal of Botany Volume 33 ; 33 ; https://cdnsciencepub.com/ ; >
@@ -470,8 +470,8 @@
     au < ready ; exists ; 1956 ; Canadian Journal of Chemistry Volume 34 ; 34 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1957 ; Canadian Journal of Chemistry Volume 35 ; 35 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1958 ; Canadian Journal of Chemistry Volume 36 ; 36 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1959 ; Canadian Journal of Chemistry Volume 37 ; 37 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1960 ; Canadian Journal of Chemistry Volume 38 ; 38 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1959 ; Canadian Journal of Chemistry Volume 37 ; 37 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1960 ; Canadian Journal of Chemistry Volume 38 ; 38 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1961 ; Canadian Journal of Chemistry Volume 39 ; 39 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1962 ; Canadian Journal of Chemistry Volume 40 ; 40 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1963 ; Canadian Journal of Chemistry Volume 41 ; 41 ; https://cdnsciencepub.com/ ; >
@@ -481,8 +481,8 @@
     au < frozen ; exists ; 1967 ; Canadian Journal of Chemistry Volume 45 ; 45 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1968 ; Canadian Journal of Chemistry Volume 46 ; 46 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1969 ; Canadian Journal of Chemistry Volume 47 ; 47 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1970 ; Canadian Journal of Chemistry Volume 48 ; 48 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1971 ; Canadian Journal of Chemistry Volume 49 ; 49 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1970 ; Canadian Journal of Chemistry Volume 48 ; 48 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1971 ; Canadian Journal of Chemistry Volume 49 ; 49 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1972 ; Canadian Journal of Chemistry Volume 50 ; 50 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1973 ; Canadian Journal of Chemistry Volume 51 ; 51 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1974 ; Canadian Journal of Chemistry Volume 52 ; 52 ; https://cdnsciencepub.com/ ; >
@@ -808,7 +808,7 @@
     au < ready ; exists ; 1955 ; Journal of the Fisheries Research Board of Canada Volume 12 ; 12 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1956 ; Journal of the Fisheries Research Board of Canada Volume 13 ; 13 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1957 ; Journal of the Fisheries Research Board of Canada Volume 14 ; 14 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1958 ; Journal of the Fisheries Research Board of Canada Volume 15 ; 15 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1958 ; Journal of the Fisheries Research Board of Canada Volume 15 ; 15 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1959 ; Journal of the Fisheries Research Board of Canada Volume 16 ; 16 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1960 ; Journal of the Fisheries Research Board of Canada Volume 17 ; 17 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1961 ; Journal of the Fisheries Research Board of Canada Volume 18 ; 18 ; https://cdnsciencepub.com/ ; >
@@ -1011,7 +1011,7 @@
     au < ready ; exists ; 1970 ; Canadian Journal of Microbiology Volume 16 ; 16 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1971 ; Canadian Journal of Microbiology Volume 17 ; 17 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1972 ; Canadian Journal of Microbiology Volume 18 ; 18 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1973 ; Canadian Journal of Microbiology Volume 19 ; 19 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1973 ; Canadian Journal of Microbiology Volume 19 ; 19 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1974 ; Canadian Journal of Microbiology Volume 20 ; 20 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1975 ; Canadian Journal of Microbiology Volume 21 ; 21 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1976 ; Canadian Journal of Microbiology Volume 22 ; 22 ; https://cdnsciencepub.com/ ; >
@@ -1263,7 +1263,7 @@
     au < ready ; exists ; 1930 ; Canadian Journal of Research Volume 2 ; 2 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1930 ; Canadian Journal of Research Volume 3 ; 3 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1931 ; Canadian Journal of Research Volume 4 ; 4 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1931 ; Canadian Journal of Research Volume 5 ; 5 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1931 ; Canadian Journal of Research Volume 5 ; 5 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1932 ; Canadian Journal of Research Volume 6 ; 6 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1932 ; Canadian Journal of Research Volume 7 ; 7 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1933 ; Canadian Journal of Research Volume 8 ; 8 ; https://cdnsciencepub.com/ ; >
@@ -1282,7 +1282,7 @@
     au < ready ; exists ; 1937 ; Canadian Journal of Research Volume 15a ; 15a ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1937 ; Canadian Journal of Research Volume 15b ; 15b ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1937 ; Canadian Journal of Research Volume 15c ; 15c ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1937 ; Canadian Journal of Research Volume 15d ; 15d ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1937 ; Canadian Journal of Research Volume 15d ; 15d ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1938 ; Canadian Journal of Research Volume 16a ; 16a ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1938 ; Canadian Journal of Research Volume 16b ; 16b ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1938 ; Canadian Journal of Research Volume 16c ; 16c ; https://cdnsciencepub.com/ ; >
@@ -1364,7 +1364,7 @@
     au < ready ; exists ; 1958 ; Canadian Journal of Zoology Volume 36 ; 36 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1959 ; Canadian Journal of Zoology Volume 37 ; 37 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1960 ; Canadian Journal of Zoology Volume 38 ; 38 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1961 ; Canadian Journal of Zoology Volume 39 ; 39 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1961 ; Canadian Journal of Zoology Volume 39 ; 39 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1962 ; Canadian Journal of Zoology Volume 40 ; 40 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1963 ; Canadian Journal of Zoology Volume 41 ; 41 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1964 ; Canadian Journal of Zoology Volume 42 ; 42 ; https://cdnsciencepub.com/ ; >
@@ -1853,7 +1853,7 @@
     au < crawling ; exists ; 1963 ; The Canadian Surveyor Volume 17 ; 17 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1964 ; The Canadian Surveyor Volume 18 ; 18 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1965 ; The Canadian Surveyor Volume 19 ; 19 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1966 ; The Canadian Surveyor Volume 20 ; 20 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1966 ; The Canadian Surveyor Volume 20 ; 20 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1967 ; The Canadian Surveyor Volume 21 ; 21 ; https://cdnsciencepub.com/ ; >
 
     }
