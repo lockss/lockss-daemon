@@ -50561,6 +50561,106 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
   {
 
     title <
+      name = Laser Medicine and Surgery News and Advances ;
+      issn = 0736-9417 ;
+      issnl = 0736-9417
+    >
+      #param[journal_id] = pho
+      #continued_by = 1044-5471
+
+      au < exists ; 1983 ; Laser Medicine and Surgery News and Advances Volume 1 ; 1 ; phod ; https://journals.sagepub.com/ >
+      au < exists ; 1984 ; Laser Medicine and Surgery News and Advances Volume 2 ; 2 ; phod ; https://journals.sagepub.com/ >
+      au < exists ; 1985 ; Laser Medicine and Surgery News and Advances Volume 3 ; 3 ; phod ; https://journals.sagepub.com/ >
+      au < exists ; 1986 ; Laser Medicine and Surgery News and Advances Volume 4 ; 4 ; phod ; https://journals.sagepub.com/ >
+      au < exists ; 1987 ; Laser Medicine and Surgery News and Advances Volume 5 ; 5 ; phod ; https://journals.sagepub.com/ >
+      au < exists ; 1988 ; Laser Medicine and Surgery News and Advances Volume 6 ; 6 ; phod ; https://journals.sagepub.com/ >
+      au < exists ; 1989 ; Laser Medicine and Surgery News and Advances Volume 7 ; 7 ; phod ; https://journals.sagepub.com/ >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Clinical Laser Medicine & Surgery ;
+      issn = 1044-5471 ;
+      eissn = 1557-8089 ;
+      issnl = 1044-5471
+    >
+      #param[journal_id] = pho
+      #continues = 0736-9417
+      #continued_by = 1549-5418
+
+      au < exists ; 1990 ; Journal of Clinical Laser Medicine & Surgery Volume 8 ; 8 ; phob ; https://journals.sagepub.com/ >
+      au < exists ; 1991 ; Journal of Clinical Laser Medicine & Surgery Volume 9 ; 9 ; phob ; https://journals.sagepub.com/ >
+      au < exists ; 1992 ; Journal of Clinical Laser Medicine & Surgery Volume 10 ; 10 ; phob ; https://journals.sagepub.com/ >
+      au < exists ; 1993 ; Journal of Clinical Laser Medicine & Surgery Volume 11 ; 11 ; phob ; https://journals.sagepub.com/ >
+      au < exists ; 1994 ; Journal of Clinical Laser Medicine & Surgery Volume 12 ; 12 ; phob ; https://journals.sagepub.com/ >
+      au < exists ; 1995 ; Journal of Clinical Laser Medicine & Surgery Volume 13 ; 13 ; phob ; https://journals.sagepub.com/ >
+      au < exists ; 1996 ; Journal of Clinical Laser Medicine & Surgery Volume 14 ; 14 ; phob ; https://journals.sagepub.com/ >
+      au < exists ; 1997 ; Journal of Clinical Laser Medicine & Surgery Volume 15 ; 15 ; phob ; https://journals.sagepub.com/ >
+      au < exists ; 1998 ; Journal of Clinical Laser Medicine & Surgery Volume 16 ; 16 ; phob ; https://journals.sagepub.com/ >
+      au < exists ; 1999 ; Journal of Clinical Laser Medicine & Surgery Volume 17 ; 17 ; phob ; https://journals.sagepub.com/ >
+      au < exists ; 2000 ; Journal of Clinical Laser Medicine & Surgery Volume 18 ; 18 ; phob ; https://journals.sagepub.com/ >
+      au < exists ; 2001 ; Journal of Clinical Laser Medicine & Surgery Volume 19 ; 19 ; phob ; https://journals.sagepub.com/ >
+      au < exists ; 2002 ; Journal of Clinical Laser Medicine & Surgery Volume 20 ; 20 ; phob ; https://journals.sagepub.com/ >
+      au < exists ; 2003 ; Journal of Clinical Laser Medicine & Surgery Volume 21 ; 21 ; phob ; https://journals.sagepub.com/ >
+
+  }
+
+  {
+
+    title <
+      name = Photomedicine and Laser Surgery ;
+      issn = 1549-5418 ;
+      eissn = 1557-8550 ;
+      issnl = 1549-5418
+    >
+      #param[journal_id] = pho
+      #continues = 1044-5471
+      #continued_by = 2578-5478
+
+      au < exists ; 2004 ; Photomedicine and Laser Surgery Volume 22 ; 22 ; phoc ; https://journals.sagepub.com/ >
+      au < exists ; 2005 ; Photomedicine and Laser Surgery Volume 23 ; 23 ; phoc ; https://journals.sagepub.com/ >
+      au < exists ; 2006 ; Photomedicine and Laser Surgery Volume 24 ; 24 ; phoc ; https://journals.sagepub.com/ >
+      au < exists ; 2007 ; Photomedicine and Laser Surgery Volume 25 ; 25 ; phoc ; https://journals.sagepub.com/ >
+      au < exists ; 2008 ; Photomedicine and Laser Surgery Volume 26 ; 26 ; phoc ; https://journals.sagepub.com/ >
+      au < exists ; 2009 ; Photomedicine and Laser Surgery Volume 27 ; 27 ; phoc ; https://journals.sagepub.com/ >
+      au < exists ; 2010 ; Photomedicine and Laser Surgery Volume 28 ; 28 ; phoc ; https://journals.sagepub.com/ >
+      au < exists ; 2011 ; Photomedicine and Laser Surgery Volume 29 ; 29 ; phoc ; https://journals.sagepub.com/ >
+      au < exists ; 2012 ; Photomedicine and Laser Surgery Volume 30 ; 30 ; phoc ; https://journals.sagepub.com/ >
+      au < exists ; 2013 ; Photomedicine and Laser Surgery Volume 31 ; 31 ; phoc ; https://journals.sagepub.com/ >
+      au < exists ; 2014 ; Photomedicine and Laser Surgery Volume 32 ; 32 ; phoc ; https://journals.sagepub.com/ >
+      au < exists ; 2015 ; Photomedicine and Laser Surgery Volume 33 ; 33 ; phoc ; https://journals.sagepub.com/ >
+      au < exists ; 2016 ; Photomedicine and Laser Surgery Volume 34 ; 34 ; phoc ; https://journals.sagepub.com/ >
+      au < exists ; 2017 ; Photomedicine and Laser Surgery Volume 35 ; 35 ; phoc ; https://journals.sagepub.com/ >
+      au < exists ; 2018 ; Photomedicine and Laser Surgery Volume 36 ; 36 ; phoc ; https://journals.sagepub.com/ >
+
+  }
+
+  {
+
+    title <
+      name = Photobiomodulation, Photomedicine, and Laser Surgery ;
+      eissn = 2578-5478 ;
+      issnl = 2578-5478
+    >
+      #param[journal_id] = pho
+      #continues = 1549-5418
+
+      au < exists ; 2019 ; Photobiomodulation, Photomedicine, and Laser Surgery Volume 37 ; 37 ; phoa ; https://journals.sagepub.com/ >
+      au < exists ; 2020 ; Photobiomodulation, Photomedicine, and Laser Surgery Volume 38 ; 38 ; phoa ; https://journals.sagepub.com/ >
+      au < exists ; 2021 ; Photobiomodulation, Photomedicine, and Laser Surgery Volume 39 ; 39 ; phoa ; https://journals.sagepub.com/ >
+      au < exists ; 2022 ; Photobiomodulation, Photomedicine, and Laser Surgery Volume 40 ; 40 ; phoa ; https://journals.sagepub.com/ >
+      au < exists ; 2023 ; Photobiomodulation, Photomedicine, and Laser Surgery Volume 41 ; 41 ; phoa ; https://journals.sagepub.com/ >
+      au < exists ; 2024 ; Photobiomodulation, Photomedicine, and Laser Surgery Volume 42 ; 42 ; phoa ; https://journals.sagepub.com/ >
+      au < exists ; 2025 ; Photobiomodulation, Photomedicine, and Laser Surgery Volume 43 ; 43 ; phoa ; https://journals.sagepub.com/ >
+      au < exists ; 2026 ; Photobiomodulation, Photomedicine, and Laser Surgery Volume 44 ; 44 ; phoa ; https://journals.sagepub.com/ >
+
+  }
+
+  {
+
+    title <
       name = Planned Giving Today ;
       issn = 1052-4770 ;
       eissn = 1937-4860
@@ -55194,6 +55294,103 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2026 ; Research Studies in Music Education Volume 48 ; 48 ; rsma ; https://journals.sagepub.com/ >
 
     }
+
+  {
+
+    title <
+      name = Respiratory Care ;
+      issn = 0020-1324 ;
+      issnl = 0020-1324
+    >
+      #param[journal_id] = rsp
+      #continued_by = 1943-3654
+
+      au < exists ; 1956 ; Respiratory Care Volume 1 ; 1 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1957 ; Respiratory Care Volume 2 ; 2 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1958 ; Respiratory Care Volume 3 ; 3 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1959 ; Respiratory Care Volume 4 ; 4 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1960 ; Respiratory Care Volume 5 ; 5 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1961 ; Respiratory Care Volume 6 ; 6 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1962 ; Respiratory Care Volume 7 ; 7 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1963 ; Respiratory Care Volume 8 ; 8 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1964 ; Respiratory Care Volume 9 ; 9 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1965 ; Respiratory Care Volume 10 ; 10 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1966 ; Respiratory Care Volume 11 ; 11 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1967 ; Respiratory Care Volume 12 ; 12 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1968 ; Respiratory Care Volume 13 ; 13 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1969 ; Respiratory Care Volume 14 ; 14 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1970 ; Respiratory Care Volume 15 ; 15 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1971 ; Respiratory Care Volume 16 ; 16 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1972 ; Respiratory Care Volume 17 ; 17 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1973 ; Respiratory Care Volume 18 ; 18 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1974 ; Respiratory Care Volume 19 ; 19 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1975 ; Respiratory Care Volume 20 ; 20 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1976 ; Respiratory Care Volume 21 ; 21 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1977 ; Respiratory Care Volume 22 ; 22 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1978 ; Respiratory Care Volume 23 ; 23 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1979 ; Respiratory Care Volume 24 ; 24 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1980 ; Respiratory Care Volume 25 ; 25 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1981 ; Respiratory Care Volume 26 ; 26 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1982 ; Respiratory Care Volume 27 ; 27 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1983 ; Respiratory Care Volume 28 ; 28 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1984 ; Respiratory Care Volume 29 ; 29 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1985 ; Respiratory Care Volume 30 ; 30 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1986 ; Respiratory Care Volume 31 ; 31 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1987 ; Respiratory Care Volume 32 ; 32 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1988 ; Respiratory Care Volume 33 ; 33 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1989 ; Respiratory Care Volume 34 ; 34 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1990 ; Respiratory Care Volume 35 ; 35 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1991 ; Respiratory Care Volume 36 ; 36 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1992 ; Respiratory Care Volume 37 ; 37 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1993 ; Respiratory Care Volume 38 ; 38 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1994 ; Respiratory Care Volume 39 ; 39 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1995 ; Respiratory Care Volume 40 ; 40 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1996 ; Respiratory Care Volume 41 ; 41 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1997 ; Respiratory Care Volume 42 ; 42 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1998 ; Respiratory Care Volume 43 ; 43 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 1999 ; Respiratory Care Volume 44 ; 44 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2000 ; Respiratory Care Volume 45 ; 45 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2001 ; Respiratory Care Volume 46 ; 46 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2002 ; Respiratory Care Volume 47 ; 47 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2003 ; Respiratory Care Volume 48 ; 48 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2004 ; Respiratory Care Volume 49 ; 49 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2005 ; Respiratory Care Volume 50 ; 50 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2006 ; Respiratory Care Volume 51 ; 51 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2007 ; Respiratory Care Volume 52 ; 52 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2008 ; Respiratory Care Volume 53 ; 53 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2009 ; Respiratory Care Volume 54 ; 54 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2010 ; Respiratory Care Volume 55 ; 55 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2011 ; Respiratory Care Volume 56 ; 56 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2012 ; Respiratory Care Volume 57 ; 57 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2013 ; Respiratory Care Volume 58 ; 58 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2014 ; Respiratory Care Volume 59 ; 59 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2015 ; Respiratory Care Volume 60 ; 60 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2016 ; Respiratory Care Volume 61 ; 61 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2017 ; Respiratory Care Volume 62 ; 62 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2018 ; Respiratory Care Volume 63 ; 63 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2019 ; Respiratory Care Volume 64 ; 64 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2020 ; Respiratory Care Volume 65 ; 65 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2021 ; Respiratory Care Volume 66 ; 66 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2022 ; Respiratory Care Volume 67 ; 67 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2023 ; Respiratory Care Volume 68 ; 68 ; rspb ; https://journals.sagepub.com/ >
+      au < exists ; 2024 ; Respiratory Care Volume 69 ; 69 ; rspb ; https://journals.sagepub.com/ >
+
+  }
+
+  {
+
+    title <
+      name = Respiratory Care ;
+      eissn = 1943-3654 ;
+      issnl = 1943-3654
+    >
+      #param[journal_id] = rsp
+      #continues = 0020-1324
+
+      au < exists ; 2025 ; Respiratory Care Volume 70 ; 70 ; rspa ; https://journals.sagepub.com/ >
+      au < exists ; 2026 ; Respiratory Care Volume 71 ; 71 ; rspa ; https://journals.sagepub.com/ >
+
+  }
 
   {
     title <
@@ -61177,6 +61374,34 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
+  {
+
+    title <
+      name = Therapeutic Hypothermia and Temperature Management ;
+      issn = 2153-7658 ;
+      eissn = 2153-7933
+    >
+      #journal_id = tht
+
+      au < exists ; 2011 ; Therapeutic Hypothermia and Temperature Management Volume 1 ; 1 ; thta ; https://journals.sagepub.com/ >
+      au < exists ; 2012 ; Therapeutic Hypothermia and Temperature Management Volume 2 ; 2 ; thta ; https://journals.sagepub.com/ >
+      au < exists ; 2013 ; Therapeutic Hypothermia and Temperature Management Volume 3 ; 3 ; thta ; https://journals.sagepub.com/ >
+      au < exists ; 2014 ; Therapeutic Hypothermia and Temperature Management Volume 4 ; 4 ; thta ; https://journals.sagepub.com/ >
+      au < exists ; 2015 ; Therapeutic Hypothermia and Temperature Management Volume 5 ; 5 ; thta ; https://journals.sagepub.com/ >
+      au < exists ; 2016 ; Therapeutic Hypothermia and Temperature Management Volume 6 ; 6 ; thta ; https://journals.sagepub.com/ >
+      au < exists ; 2017 ; Therapeutic Hypothermia and Temperature Management Volume 7 ; 7 ; thta ; https://journals.sagepub.com/ >
+      au < exists ; 2018 ; Therapeutic Hypothermia and Temperature Management Volume 8 ; 8 ; thta ; https://journals.sagepub.com/ >
+      au < exists ; 2019 ; Therapeutic Hypothermia and Temperature Management Volume 9 ; 9 ; thta ; https://journals.sagepub.com/ >
+      au < exists ; 2020 ; Therapeutic Hypothermia and Temperature Management Volume 10 ; 10 ; thta ; https://journals.sagepub.com/ >
+      au < exists ; 2021 ; Therapeutic Hypothermia and Temperature Management Volume 11 ; 11 ; thta ; https://journals.sagepub.com/ >
+      au < exists ; 2022 ; Therapeutic Hypothermia and Temperature Management Volume 12 ; 12 ; thta ; https://journals.sagepub.com/ >
+      au < exists ; 2023 ; Therapeutic Hypothermia and Temperature Management Volume 13 ; 13 ; thta ; https://journals.sagepub.com/ >
+      au < exists ; 2024 ; Therapeutic Hypothermia and Temperature Management Volume 14 ; 14 ; thta ; https://journals.sagepub.com/ >
+      au < exists ; 2025 ; Therapeutic Hypothermia and Temperature Management Volume 15 ; 15 ; thta ; https://journals.sagepub.com/ >
+      au < exists ; 2026 ; Therapeutic Hypothermia and Temperature Management Volume 16 ; 16 ; thta ; https://journals.sagepub.com/ >
+
+  }
+
     {
 
       title <
@@ -61565,6 +61790,37 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < released ; 2024 ; Tissue Engineering Part B: Reviews Volume 30 ; 30 ; teba ; https://journals.sagepub.com/ >
       au < released ; 2025 ; Tissue Engineering Part B: Reviews Volume 31 ; 31 ; teba ; https://journals.sagepub.com/ >
       au < manifest ; 2026 ; Tissue Engineering Part B: Reviews Volume 32 ; 32 ; teba ; https://journals.sagepub.com/ >
+
+  }
+
+  {
+
+    title <
+      name = Tissue Engineering Part C: Methods ;
+      issn = 1937-3384 ;
+      eissn = 1937-3392
+    >
+      #journal_id = ten
+
+      au < exists ; 2008 ; Tissue Engineering Part C: Methods Volume 14 ; 14 ; tena ; https://journals.sagepub.com/ >
+      au < exists ; 2009 ; Tissue Engineering Part C: Methods Volume 15 ; 15 ; tena ; https://journals.sagepub.com/ >
+      au < exists ; 2010 ; Tissue Engineering Part C: Methods Volume 16 ; 16 ; tena ; https://journals.sagepub.com/ >
+      au < exists ; 2011 ; Tissue Engineering Part C: Methods Volume 17 ; 17 ; tena ; https://journals.sagepub.com/ >
+      au < exists ; 2012 ; Tissue Engineering Part C: Methods Volume 18 ; 18 ; tena ; https://journals.sagepub.com/ >
+      au < exists ; 2013 ; Tissue Engineering Part C: Methods Volume 19 ; 19 ; tena ; https://journals.sagepub.com/ >
+      au < exists ; 2014 ; Tissue Engineering Part C: Methods Volume 20 ; 20 ; tena ; https://journals.sagepub.com/ >
+      au < exists ; 2015 ; Tissue Engineering Part C: Methods Volume 21 ; 21 ; tena ; https://journals.sagepub.com/ >
+      au < exists ; 2016 ; Tissue Engineering Part C: Methods Volume 22 ; 22 ; tena ; https://journals.sagepub.com/ >
+      au < exists ; 2017 ; Tissue Engineering Part C: Methods Volume 23 ; 23 ; tena ; https://journals.sagepub.com/ >
+      au < exists ; 2018 ; Tissue Engineering Part C: Methods Volume 24 ; 24 ; tena ; https://journals.sagepub.com/ >
+      au < exists ; 2019 ; Tissue Engineering Part C: Methods Volume 25 ; 25 ; tena ; https://journals.sagepub.com/ >
+      au < exists ; 2020 ; Tissue Engineering Part C: Methods Volume 26 ; 26 ; tena ; https://journals.sagepub.com/ >
+      au < exists ; 2021 ; Tissue Engineering Part C: Methods Volume 27 ; 27 ; tena ; https://journals.sagepub.com/ >
+      au < exists ; 2022 ; Tissue Engineering Part C: Methods Volume 28 ; 28 ; tena ; https://journals.sagepub.com/ >
+      au < exists ; 2023 ; Tissue Engineering Part C: Methods Volume 29 ; 29 ; tena ; https://journals.sagepub.com/ >
+      au < exists ; 2024 ; Tissue Engineering Part C: Methods Volume 30 ; 30 ; tena ; https://journals.sagepub.com/ >
+      au < exists ; 2025 ; Tissue Engineering Part C: Methods Volume 31 ; 31 ; tena ; https://journals.sagepub.com/ >
+      au < exists ; 2026 ; Tissue Engineering Part C: Methods Volume 32 ; 32 ; tena ; https://journals.sagepub.com/ >
 
   }
 
@@ -64257,6 +64513,84 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2026 ; Veterinary Pathology Volume 63 ; 63 ; vetb ; https://journals.sagepub.com/ >
 
     }
+
+  {
+
+    title <
+      name = VideoEndocrinology ;
+      eissn = 2329-9738
+    >
+      #journal_id = vde
+
+      au < exists ; 2014 ; VideoEndocrinology Volume 1 ; 1 ; vdea ; https://journals.sagepub.com/ >
+      au < exists ; 2015 ; VideoEndocrinology Volume 2 ; 2 ; vdea ; https://journals.sagepub.com/ >
+      au < exists ; 2016 ; VideoEndocrinology Volume 3 ; 3 ; vdea ; https://journals.sagepub.com/ >
+      au < exists ; 2017 ; VideoEndocrinology Volume 4 ; 4 ; vdea ; https://journals.sagepub.com/ >
+      au < exists ; 2018 ; VideoEndocrinology Volume 5 ; 5 ; vdea ; https://journals.sagepub.com/ >
+      au < exists ; 2019 ; VideoEndocrinology Volume 6 ; 6 ; vdea ; https://journals.sagepub.com/ >
+      au < exists ; 2020 ; VideoEndocrinology Volume 7 ; 7 ; vdea ; https://journals.sagepub.com/ >
+      au < exists ; 2021 ; VideoEndocrinology Volume 8 ; 8 ; vdea ; https://journals.sagepub.com/ >
+      au < exists ; 2022 ; VideoEndocrinology Volume 9 ; 9 ; vdea ; https://journals.sagepub.com/ >
+      au < exists ; 2023 ; VideoEndocrinology Volume 10 ; 10 ; vdea ; https://journals.sagepub.com/ >
+      au < exists ; 2024 ; VideoEndocrinology Volume 11 ; 11 ; vdea ; https://journals.sagepub.com/ >
+      au < exists ; 2025 ; VideoEndocrinology Volume 12 ; 12 ; vdea ; https://journals.sagepub.com/ >
+      au < exists ; 2026 ; VideoEndocrinology Volume 13 ; 13 ; vdea ; https://journals.sagepub.com/ >
+
+  }
+
+  {
+
+    title <
+      name = Videoscopy ;
+      eissn = 2373-3063
+    >
+      #journal_id = vor
+
+      au < exists ; 2011 ; Videoscopy Volume 21 ; 21 ; vora ; https://journals.sagepub.com/ >
+      au < exists ; 2012 ; Videoscopy Volume 22 ; 22 ; vora ; https://journals.sagepub.com/ >
+      au < exists ; 2013 ; Videoscopy Volume 23 ; 23 ; vora ; https://journals.sagepub.com/ >
+      au < exists ; 2014 ; Videoscopy Volume 24 ; 24 ; vora ; https://journals.sagepub.com/ >
+      au < exists ; 2015 ; Videoscopy Volume 25 ; 25 ; vora ; https://journals.sagepub.com/ >
+      au < exists ; 2016 ; Videoscopy Volume 26 ; 26 ; vora ; https://journals.sagepub.com/ >
+      au < exists ; 2017 ; Videoscopy Volume 27 ; 27 ; vora ; https://journals.sagepub.com/ >
+      au < exists ; 2018 ; Videoscopy Volume 28 ; 28 ; vora ; https://journals.sagepub.com/ >
+      au < exists ; 2019 ; Videoscopy Volume 29 ; 29 ; vora ; https://journals.sagepub.com/ >
+      au < exists ; 2020 ; Videoscopy Volume 30 ; 30 ; vora ; https://journals.sagepub.com/ >
+      au < exists ; 2021 ; Videoscopy Volume 31 ; 31 ; vora ; https://journals.sagepub.com/ >
+      au < exists ; 2022 ; Videoscopy Volume 32 ; 32 ; vora ; https://journals.sagepub.com/ >
+      au < exists ; 2023 ; Videoscopy Volume 33 ; 33 ; vora ; https://journals.sagepub.com/ >
+      au < exists ; 2024 ; Videoscopy Volume 34 ; 34 ; vora ; https://journals.sagepub.com/ >
+      au < exists ; 2026 ; Videoscopy Volume 35 ; 35 ; vora ; https://journals.sagepub.com/ >
+
+  }
+
+  {
+
+    title <
+      name = Videourology ;
+      eissn = 2151-1136
+    >
+      #journal_id = vor
+
+      au < exists ; 2010 ; Videourology Volume 24 ; 24 ; vida ; https://journals.sagepub.com/ >
+      au < exists ; 2011 ; Videourology Volume 25 ; 25 ; vida ; https://journals.sagepub.com/ >
+      au < exists ; 2012 ; Videourology Volume 26 ; 26 ; vida ; https://journals.sagepub.com/ >
+      au < exists ; 2013 ; Videourology Volume 27 ; 27 ; vida ; https://journals.sagepub.com/ >
+      au < exists ; 2014 ; Videourology Volume 28 ; 28 ; vida ; https://journals.sagepub.com/ >
+      au < exists ; 2015 ; Videourology Volume 29 ; 29 ; vida ; https://journals.sagepub.com/ >
+      au < exists ; 2016 ; Videourology Volume 30 ; 30 ; vida ; https://journals.sagepub.com/ >
+      au < exists ; 2017 ; Videourology Volume 31 ; 31 ; vida ; https://journals.sagepub.com/ >
+      au < exists ; 2018 ; Videourology Volume 32 ; 32 ; vida ; https://journals.sagepub.com/ >
+      au < exists ; 2019 ; Videourology Volume 33 ; 33 ; vida ; https://journals.sagepub.com/ >
+      au < exists ; 2020 ; Videourology Volume 34 ; 34 ; vida ; https://journals.sagepub.com/ >
+      au < exists ; 2021 ; Videourology Volume 35 ; 35 ; vida ; https://journals.sagepub.com/ >
+      au < exists ; 2022 ; Videourology Volume 36 ; 36 ; vida ; https://journals.sagepub.com/ >
+      au < exists ; 2023 ; Videourology Volume 37 ; 37 ; vida ; https://journals.sagepub.com/ >
+      au < exists ; 2024 ; Videourology Volume 38 ; 38 ; vida ; https://journals.sagepub.com/ >
+      au < exists ; 2025 ; Videourology Volume 39 ; 39 ; vida ; https://journals.sagepub.com/ >
+      au < exists ; 2026 ; Videourology Volume 40 ; 40 ; vida ; https://journals.sagepub.com/ >
+
+  }
 
     {
 
