@@ -99,6 +99,7 @@ implements FileMetadataExtractorFactory {
                             title = checkElement(h1_element_title.first());
                             doi = cleanDoi(span_element_doi.first());
                             Matcher urlMatcher = urlPattern.matcher(url);
+                            //some metadata can be picked up from the URL
                             if(urlMatcher.matches()){
                               volume = urlMatcher.group(1);
                               issue = urlMatcher.group(2);
