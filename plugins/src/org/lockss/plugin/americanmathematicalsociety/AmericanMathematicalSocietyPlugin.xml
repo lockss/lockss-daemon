@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -173,6 +173,10 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.americanmathematicalsociety.AmericanMathematicalSocietyHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.americanmathematicalsociety.AmericanMathematicalSocietyUrlNormalizer</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
