@@ -314,7 +314,11 @@ public class SimpleHasher {
 				       MessageDigest[] digests,
 				       byte[][] initByteArrays,
 				       BlockHasher.EventHandler cb) {
-    return  new BlockHasher(cus, maxVersions, digests, initByteArrays, cb);
+    BlockHasher res =
+      new BlockHasher(cus, maxVersions, digests, initByteArrays, cb);
+    // Suppress local hash computation & checking
+    res.enableLocalHash(false);
+    return res;
   }
 
   private byte[][] initHasherByteArrays() {
