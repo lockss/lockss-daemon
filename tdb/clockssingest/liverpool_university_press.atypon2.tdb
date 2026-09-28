@@ -2736,7 +2736,7 @@
 
     param[journal_id] = huguenot
 
-    au < ready ; exists ; 1885-1886 ; The Huguenot Society Journal Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1885-1886 ; The Huguenot Society Journal Volume 1 ; 1 ; >
     au < frozen ; exists ; 1886-1888 ; The Huguenot Society Journal Volume 2 ; 2 ; >
     au < frozen ; exists ; 1888-1891 ; The Huguenot Society Journal Volume 3 ; 3 ; >
     au < frozen ; exists ; 1891-1893 ; The Huguenot Society Journal Volume 4 ; 4 ; >
@@ -2744,7 +2744,7 @@
     au < frozen ; exists ; 1898-1901 ; The Huguenot Society Journal Volume 6 ; 6 ; >
     au < frozen ; exists ; 1902-1904 ; The Huguenot Society Journal Volume 7 ; 7 ; >
     au < frozen ; exists ; 1905-1908 ; The Huguenot Society Journal Volume 8 ; 8 ; >
-    au < ready ; exists ; 1909-1911 ; The Huguenot Society Journal Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1909-1911 ; The Huguenot Society Journal Volume 9 ; 9 ; >
     au < frozen ; exists ; 1912-1914 ; The Huguenot Society Journal Volume 10 ; 10 ; >
     au < frozen ; exists ; 1915-1917 ; The Huguenot Society Journal Volume 11 ; 11 ; >
     au < ready ; exists ; 1918-1923 ; The Huguenot Society Journal Volume 12 ; 12 ; >
@@ -2752,7 +2752,7 @@
     au < frozen ; exists ; 1930-1933 ; The Huguenot Society Journal Volume 14 ; 14 ; >
     au < frozen ; exists ; 1934-1937 ; The Huguenot Society Journal Volume 15 ; 15 ; >
     au < frozen ; exists ; 1938-1941 ; The Huguenot Society Journal Volume 16 ; 16 ; >
-    au < ready ; exists ; 1942-1946 ; The Huguenot Society Journal Volume 17 ; 17 ; >
+    au < crawling ; exists ; 1942-1946 ; The Huguenot Society Journal Volume 17 ; 17 ; >
     au < crawling ; exists ; 1947-1952 ; The Huguenot Society Journal Volume 18 ; 18 ; >
     au < frozen ; exists ; 1953-1958 ; The Huguenot Society Journal Volume 19 ; 19 ; >
     au < frozen ; exists ; 1959-1964 ; The Huguenot Society Journal Volume 20 ; 20 ; >
