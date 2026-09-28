@@ -140,12 +140,12 @@
 
       au < frozen ; exists ; 1954 ; Canadian Journal of Biochemistry and Physiology Volume 32 ; 32 ; https://cdnsciencepub.com/ ; >
       au < ready ; exists ; 1955 ; Canadian Journal of Biochemistry and Physiology Volume 33 ; 33 ; https://cdnsciencepub.com/ ; >
-      au < crawling ; exists ; 1956 ; Canadian Journal of Biochemistry and Physiology Volume 34 ; 34 ; https://cdnsciencepub.com/ ; >
-      au < crawling ; exists ; 1957 ; Canadian Journal of Biochemistry and Physiology Volume 35 ; 35 ; https://cdnsciencepub.com/ ; >
-      au < crawling ; exists ; 1958 ; Canadian Journal of Biochemistry and Physiology Volume 36 ; 36 ; https://cdnsciencepub.com/ ; >
-      au < crawling ; exists ; 1959 ; Canadian Journal of Biochemistry and Physiology Volume 37 ; 37 ; https://cdnsciencepub.com/ ; >
+      au < frozen ; exists ; 1956 ; Canadian Journal of Biochemistry and Physiology Volume 34 ; 34 ; https://cdnsciencepub.com/ ; >
+      au < frozen ; exists ; 1957 ; Canadian Journal of Biochemistry and Physiology Volume 35 ; 35 ; https://cdnsciencepub.com/ ; >
+      au < frozen ; exists ; 1958 ; Canadian Journal of Biochemistry and Physiology Volume 36 ; 36 ; https://cdnsciencepub.com/ ; >
+      au < frozen ; exists ; 1959 ; Canadian Journal of Biochemistry and Physiology Volume 37 ; 37 ; https://cdnsciencepub.com/ ; >
       au < ready ; exists ; 1960 ; Canadian Journal of Biochemistry and Physiology Volume 38 ; 38 ; https://cdnsciencepub.com/ ; >
-      au < crawling ; exists ; 1961 ; Canadian Journal of Biochemistry and Physiology Volume 39 ; 39 ; https://cdnsciencepub.com/ ; >
+      au < frozen ; exists ; 1961 ; Canadian Journal of Biochemistry and Physiology Volume 39 ; 39 ; https://cdnsciencepub.com/ ; >
       au < ready ; exists ; 1962 ; Canadian Journal of Biochemistry and Physiology Volume 40 ; 40 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 1963 ; Canadian Journal of Biochemistry and Physiology Volume 41 ; 41 ; https://cdnsciencepub.com/ ; >
       
@@ -170,7 +170,7 @@
       param[journal_id] = cjbio
 
       au < frozen ; exists ; 1964 ; Canadian Journal of Biochemistry Volume 42 ; 42 ; https://cdnsciencepub.com/ ; >
-      au < crawling ; exists ; 1965 ; Canadian Journal of Biochemistry Volume 43 ; 43 ; https://cdnsciencepub.com/ ; >
+      au < frozen ; exists ; 1965 ; Canadian Journal of Biochemistry Volume 43 ; 43 ; https://cdnsciencepub.com/ ; >
       au < crawling ; exists ; 1966 ; Canadian Journal of Biochemistry Volume 44 ; 44 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 1967 ; Canadian Journal of Biochemistry Volume 45 ; 45 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 1968 ; Canadian Journal of Biochemistry Volume 46 ; 46 ; https://cdnsciencepub.com/ ; >
@@ -179,12 +179,12 @@
       au < frozen ; exists ; 1971 ; Canadian Journal of Biochemistry Volume 49 ; 49 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 1972 ; Canadian Journal of Biochemistry Volume 50 ; 50 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 1973 ; Canadian Journal of Biochemistry Volume 51 ; 51 ; https://cdnsciencepub.com/ ; >
-      au < crawling ; exists ; 1974 ; Canadian Journal of Biochemistry Volume 52 ; 52 ; https://cdnsciencepub.com/ ; >
+      au < frozen ; exists ; 1974 ; Canadian Journal of Biochemistry Volume 52 ; 52 ; https://cdnsciencepub.com/ ; >
       au < ready ; exists ; 1975 ; Canadian Journal of Biochemistry Volume 53 ; 53 ; https://cdnsciencepub.com/ ; >
       au < ready ; exists ; 1976 ; Canadian Journal of Biochemistry Volume 54 ; 54 ; https://cdnsciencepub.com/ ; >
-      au < crawling ; exists ; 1977 ; Canadian Journal of Biochemistry Volume 55 ; 55 ; https://cdnsciencepub.com/ ; >
+      au < frozen ; exists ; 1977 ; Canadian Journal of Biochemistry Volume 55 ; 55 ; https://cdnsciencepub.com/ ; >
       au < ready ; exists ; 1978 ; Canadian Journal of Biochemistry Volume 56 ; 56 ; https://cdnsciencepub.com/ ; >
-      au < crawling ; exists ; 1979 ; Canadian Journal of Biochemistry Volume 57 ; 57 ; https://cdnsciencepub.com/ ; >
+      au < frozen ; exists ; 1979 ; Canadian Journal of Biochemistry Volume 57 ; 57 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 1980 ; Canadian Journal of Biochemistry Volume 58 ; 58 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 1981 ; Canadian Journal of Biochemistry Volume 59 ; 59 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 1982 ; Canadian Journal of Biochemistry Volume 60 ; 60 ; https://cdnsciencepub.com/ ; >
@@ -277,10 +277,10 @@
       param[journal_id] = cjb1
 
       au < frozen ; exists ; 1951 ; Canadian Journal of Botany Volume 29 ; 29 ; https://cdnsciencepub.com/ ; >
-      au < crawling ; exists ; 1952 ; Canadian Journal of Botany Volume 30 ; 30 ; https://cdnsciencepub.com/ ; >
+      au < frozen ; exists ; 1952 ; Canadian Journal of Botany Volume 30 ; 30 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 1953 ; Canadian Journal of Botany Volume 31 ; 31 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 1954 ; Canadian Journal of Botany Volume 32 ; 32 ; https://cdnsciencepub.com/ ; >
-      au < crawling ; exists ; 1955 ; Canadian Journal of Botany Volume 33 ; 33 ; https://cdnsciencepub.com/ ; >
+      au < frozen ; exists ; 1955 ; Canadian Journal of Botany Volume 33 ; 33 ; https://cdnsciencepub.com/ ; >
       au < ready ; exists ; 1956 ; Canadian Journal of Botany Volume 34 ; 34 ; https://cdnsciencepub.com/ ; >
       au < ready ; exists ; 1957 ; Canadian Journal of Botany Volume 35 ; 35 ; https://cdnsciencepub.com/ ; >
       au < ready ; exists ; 1958 ; Canadian Journal of Botany Volume 36 ; 36 ; https://cdnsciencepub.com/ ; >
