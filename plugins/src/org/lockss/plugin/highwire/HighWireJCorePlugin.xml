@@ -232,6 +232,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,"^https?://%s/.*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|webp|woff.?)", url_host(base_url)</string>
       <string>1,"^https?://%s/c?lockss-manifest/[^/.]*vol_%s_manifest.html", url_host(base_url), volume_name</string>
       <string>1,"^https?://%s/content(/[^/]+)?/suppl/", url_host(base_url)</string>
       <!-- iii.article-info was causing over counts, should not be collected -->

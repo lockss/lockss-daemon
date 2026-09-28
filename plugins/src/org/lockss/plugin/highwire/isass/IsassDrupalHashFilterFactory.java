@@ -50,6 +50,7 @@ public class IsassDrupalHashFilterFactory  extends HighWireJCoreHashFilterFactor
                 HtmlNodeFilters.tagWithAttributeRegex("div","class","view-similar-articles"),
                 HtmlNodeFilters.tagWithAttributeRegex("div","class","view-more-in-this-section"),
                 HtmlNodeFilters.tagWithAttributeRegex("div","class","view-related-article"),
+                HtmlNodeFilters.tagWithAttributeRegex("div","class","view-keywords"),
                 HtmlNodeFilters.tagWithAttributeRegex("input", "name", "form_build_id"),
                 HtmlNodeFilters.tagWithAttributeRegex("li", "class", "author-corresp-email-link")
             };
