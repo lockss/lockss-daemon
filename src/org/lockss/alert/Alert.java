@@ -588,7 +588,7 @@ public class Alert {
 	for (String pair : pairs) {
 	  int pos = pair.indexOf(',');
 	  if (pos < 0) {
-	    throw new IllegalArgumentException("Marformed Alert_name,Group pair; no comma: "
+	    throw new IllegalArgumentException("Malformed Alert_name,Group pair; no comma: "
 						 + pair);
 	  }
 	  String alertName = pair.substring(0, pos);
