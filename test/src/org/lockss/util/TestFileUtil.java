@@ -306,14 +306,19 @@ public class TestFileUtil extends LockssTestCase {
     File dir = getTempDir("fastdeltree");
     File f1 = new File(dir, "f1");
     assertTrue(f1.createNewFile());
-    try {
-      FileUtil.delTree(f1);
-      fail("Should have thrown IllegalArgumentException");
-    } catch (IllegalArgumentException e) {
-      // Expected; pass-through
-    }
-    assertTrue(f1.exists());
+    FileUtil.delTree(f1);
+    assertFalse(f1.exists());
     assertTrue(dir.exists());
+
+
+//     try {
+//       FileUtil.delTree(f1);
+//       fail("Should have thrown IllegalArgumentException");
+//     } catch (IllegalArgumentException e) {
+//       // Expected; pass-through
+//     }
+//     assertTrue(f1.exists());
+//     assertTrue(dir.exists());
   }
 
   public void testFastDelTreeFile() throws IOException {
