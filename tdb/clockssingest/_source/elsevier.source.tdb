@@ -416,7 +416,7 @@
         au < readySource ; crawling ; 2026 ; Elsevier Source Content 2026_60 ; 2026_60 >
         au < readySource ; crawling ; 2026 ; Elsevier Source Content 2026_61 ; 2026_61 >
         au < readySource ; crawling ; 2026 ; Elsevier Source Content 2026_62 ; 2026_62 >
-        au < expected ; exists ; 2026 ; Elsevier Source Content 2026_63 ; 2026_63 >
+        au < manifest ; exists ; 2026 ; Elsevier Source Content 2026_63 ; 2026_63 >
         au < expected ; exists ; 2026 ; Elsevier Source Content 2026_64 ; 2026_64 >
         au < expected ; exists ; 2026 ; Elsevier Source Content 2026_65 ; 2026_65 >
         au < expected ; exists ; 2026 ; Elsevier Source Content 2026_66 ; 2026_66 >
