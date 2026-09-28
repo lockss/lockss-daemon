@@ -115,7 +115,7 @@ public class BlockHasher extends GenericHasher {
   List<Pattern> excludeUrlPats;
   private HashMap<String,MessageDigest> localHashDigestMap = null;
   private HashedInputStream.Hasher currentVersionLocalHasher = null;
-  private String localHashAlgorithm = null;
+  private String localHashAlgorithm = DEFAULT_LOCAL_HASH_ALGORITHM;
   private byte[] currentVersionStoredHash = null;
   private boolean enableLocalHash = DEFAULT_ENABLE_LOCAL_HASH;
   // private LocalHashHandler localHashHandler = null;
@@ -207,7 +207,6 @@ public class BlockHasher extends GenericHasher {
     } else {
       lhr = null;
       localHashDigestMap = null;
-      localHashAlgorithm = null;
     }
     enableLocalHash = val;
   }
