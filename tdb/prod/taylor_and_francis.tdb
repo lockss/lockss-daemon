@@ -43103,6 +43103,30 @@
   {
 
     title <
+      name = European Journal of Korean Studies ;
+      issn = 2631-4134 ;
+      eissn = 2516-5399 ;
+      issnl = 2631-4134
+    >
+
+    param[journal_id] = reks20
+
+    au < expected ; 2016-2017 ; European Journal of Korean Studies Volume 16 ; 16 ; https://www.tandfonline.com/ >
+    au < expected ; 2017-2018 ; European Journal of Korean Studies Volume 17 ; 17 ; https://www.tandfonline.com/ >
+    au < expected ; 2018-2019 ; European Journal of Korean Studies Volume 18 ; 18 ; https://www.tandfonline.com/ >
+    au < expected ; 2019-2020 ; European Journal of Korean Studies Volume 19 ; 19 ; https://www.tandfonline.com/ >
+    au < expected ; 2020-2021 ; European Journal of Korean Studies Volume 20 ; 20 ; https://www.tandfonline.com/ >
+    au < expected ; 2021-2022 ; European Journal of Korean Studies Volume 21 ; 21 ; https://www.tandfonline.com/ >
+    au < expected ; 2022-2023 ; European Journal of Korean Studies Volume 22 ; 22 ; https://www.tandfonline.com/ >
+    au < expected ; 2023-2024 ; European Journal of Korean Studies Volume 23 ; 23 ; https://www.tandfonline.com/ >
+    au < expected ; 2024-2025 ; European Journal of Korean Studies Volume 24 ; 24 ; https://www.tandfonline.com/ >
+    au < expected ; 2025-2026 ; European Journal of Korean Studies Volume 25 ; 25 ; https://www.tandfonline.com/ >
+
+  }
+
+  {
+
+    title <
       name = European Journal of Legal Education ;
       issn = 1684-1360 ;
       eissn = 1750-4686 ;
