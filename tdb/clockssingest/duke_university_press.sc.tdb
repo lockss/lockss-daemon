@@ -48,7 +48,7 @@
       au < finished ; manifest ; 2021 ; 2021 ; Agricultural History Volume 95 ; 95 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; 2022 ; Agricultural History Volume 96 ; 96 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Agricultural History Volume 97 ; 97 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2024 ; 2024 ; Agricultural History Volume 98 ; 98 ; >
+      au < finished ; manifest ; 2024 ; 2024 ; Agricultural History Volume 98 ; 98 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Agricultural History Volume 99 ; 99 ; >
       au < crawling ; exists ; 2026 ; 2026 ; Agricultural History Volume 100 ; 100 ; >
 
@@ -1142,7 +1142,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Publication of the American Dialect Society Volume 106 ; 106 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Publication of the American Dialect Society Volume 107 ; 107 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Publication of the American Dialect Society Volume 108 ; 108 ; >
-      au < frozen ; exists ; 2025 ; 2025 ; Publication of the American Dialect Society Volume 109 ; 109 ; >
+      au < finished ; manifest ; 2025 ; 2025 ; Publication of the American Dialect Society Volume 109 ; 109 ; reingest2.clockss.org:8085 >
       au < expected ; exists ; 2026 ; 2026 ; Publication of the American Dialect Society Volume 110 ; 110 ; >
 
     }
@@ -1405,7 +1405,7 @@
       au < finished ; manifest ; 2021 ; 2021 ; Trans Asia Photography Volume 2021 ; 11 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; 2022 ; Trans Asia Photography Volume 2022 ; 12 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Trans Asia Photography Volume 2023 ; 13 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2024 ; 2024 ; Trans Asia Photography Volume 2024 ; 14 ; >
+      au < finished ; manifest ; 2024 ; 2024 ; Trans Asia Photography Volume 2024 ; 14 ; reingest1.clockss.org:8082 >
       au < ready ; exists ; 2025 ; 2025 ; Trans Asia Photography Volume 2025 ; 15 ; >
       au < expected ; exists ; 2026 ; 2026 ; Trans Asia Photography Volume 2026 ; 16 ; >
 
@@ -1506,31 +1506,31 @@
 
       param[journal_id] = fsr
 
-      au < frozen ; exists ; 2000 ; 2000 ; Federal Sentencing Reporter Volume 12 ; 12 ; >
-      au < frozen ; exists ; 2001 ; 2001 ; Federal Sentencing Reporter Volume 13 ; 13 ; >
-      au < frozen ; exists ; 2002 ; 2002 ; Federal Sentencing Reporter Volume 14 ; 14 ; >
-      au < frozen ; exists ; 2003 ; 2003 ; Federal Sentencing Reporter Volume 15 ; 15 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; Federal Sentencing Reporter Volume 16 ; 16 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; Federal Sentencing Reporter Volume 17 ; 17 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; Federal Sentencing Reporter Volume 18 ; 18 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; Federal Sentencing Reporter Volume 19 ; 19 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; Federal Sentencing Reporter Volume 20 ; 20 ; >
-      au < frozen ; exists ; 2009 ; 2009 ; Federal Sentencing Reporter Volume 21 ; 21 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; Federal Sentencing Reporter Volume 22 ; 22 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; Federal Sentencing Reporter Volume 23 ; 23 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; Federal Sentencing Reporter Volume 24 ; 24 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; Federal Sentencing Reporter Volume 25 ; 25 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; Federal Sentencing Reporter Volume 26 ; 26 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; Federal Sentencing Reporter Volume 27 ; 27 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Federal Sentencing Reporter Volume 28 ; 28 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Federal Sentencing Reporter Volume 29 ; 29 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Federal Sentencing Reporter Volume 30 ; 30 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Federal Sentencing Reporter Volume 31 ; 31 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; Federal Sentencing Reporter Volume 32 ; 32 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; Federal Sentencing Reporter Volume 33 ; 33 ; >
-      au < frozen ; exists ; 2022 ; 2022 ; Federal Sentencing Reporter Volume 34 ; 34 ; >
-      au < frozen ; exists ; 2023 ; 2023 ; Federal Sentencing Reporter Volume 35 ; 35 ; >
-      au < frozen ; exists ; 2024 ; 2024 ; Federal Sentencing Reporter Volume 36 ; 36 ; >
+      au < finished ; manifest ; 2000 ; 2000 ; Federal Sentencing Reporter Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2001 ; 2001 ; Federal Sentencing Reporter Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; 2002 ; Federal Sentencing Reporter Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 2003 ; Federal Sentencing Reporter Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; 2004 ; Federal Sentencing Reporter Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2005 ; 2005 ; Federal Sentencing Reporter Volume 17 ; 17 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2006 ; 2006 ; Federal Sentencing Reporter Volume 18 ; 18 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; 2007 ; Federal Sentencing Reporter Volume 19 ; 19 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; Federal Sentencing Reporter Volume 20 ; 20 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; Federal Sentencing Reporter Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; Federal Sentencing Reporter Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2011 ; 2011 ; Federal Sentencing Reporter Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2012 ; 2012 ; Federal Sentencing Reporter Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; Federal Sentencing Reporter Volume 25 ; 25 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 2014 ; Federal Sentencing Reporter Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; 2015 ; Federal Sentencing Reporter Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; 2016 ; Federal Sentencing Reporter Volume 28 ; 28 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2017 ; 2017 ; Federal Sentencing Reporter Volume 29 ; 29 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Federal Sentencing Reporter Volume 30 ; 30 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; Federal Sentencing Reporter Volume 31 ; 31 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; 2020 ; Federal Sentencing Reporter Volume 32 ; 32 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; 2021 ; Federal Sentencing Reporter Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2022 ; 2022 ; Federal Sentencing Reporter Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2023 ; 2023 ; Federal Sentencing Reporter Volume 35 ; 35 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2024 ; 2024 ; Federal Sentencing Reporter Volume 36 ; 36 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Federal Sentencing Reporter Volume 37 ; 37 ; >
       au < crawling ; exists ; 2026 ; 2026 ; Federal Sentencing Reporter Volume 38 ; 38 ; >
 
@@ -1546,47 +1546,47 @@
 
       param[journal_id] = nps
 
-      au < frozen ; exists ; 1979 ; 1979 ; New Political Science: A Journal of Politics and Culture Volume 1 (1979) ; 1 ; >
-      au < frozen ; exists ; 1980 ; 1980 ; New Political Science: A Journal of Politics and Culture Volume 1 (1980) ; 1 ; >
-      au < frozen ; exists ; 1981 ; 1981 ; New Political Science: A Journal of Politics and Culture Volume 2 (1981) ; 2 ; >
-      au < frozen ; exists ; 1982 ; 1982 ; New Political Science: A Journal of Politics and Culture Volume 2-3 ; 2-3 ; >
-      au < frozen ; exists ; 1983 ; 1983 ; New Political Science: A Journal of Politics and Culture Volume 4 ; 4 ; >
-      au < frozen ; exists ; 1984 ; 1984 ; New Political Science: A Journal of Politics and Culture Volume 5 ; 5 ; >
-      au < frozen ; exists ; 1985 ; 1985 ; New Political Science: A Journal of Politics and Culture Volume 6 ; 6 ; >
-      au < frozen ; exists ; 1986 ; 1986 ; New Political Science: A Journal of Politics and Culture Volume 7 ; 7 ; >
-      au < frozen ; exists ; 1989 ; 1989 ; New Political Science: A Journal of Politics and Culture Volume 8 ; 8 ; >
-      au < frozen ; exists ; 1990 ; 1990 ; New Political Science: A Journal of Politics and Culture Volume 9 ; 9 ; >
-      au < frozen ; exists ; 1991 ; 1991 ; New Political Science: A Journal of Politics and Culture Volume 10 ; 10 ; >
-      au < frozen ; exists ; 1992 ; 1992 ; New Political Science: A Journal of Politics and Culture Volume 11 ; 11 ; >
-      au < frozen ; exists ; 1993 ; 1993 ; New Political Science: A Journal of Politics and Culture Volume 12-14 ; 12-14 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; New Political Science: A Journal of Politics and Culture Volume 15 ; 15 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; New Political Science: A Journal of Politics and Culture Volume 16-17 ; 16-17 ; >
+      au < finished ; manifest ; 1979 ; 1979 ; New Political Science: A Journal of Politics and Culture Volume 1 (1979) ; 1 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1980 ; 1980 ; New Political Science: A Journal of Politics and Culture Volume 1 (1980) ; 1 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1981 ; 1981 ; New Political Science: A Journal of Politics and Culture Volume 2 (1981) ; 2 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1982 ; 1982 ; New Political Science: A Journal of Politics and Culture Volume 2-3 ; 2-3 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1983 ; 1983 ; New Political Science: A Journal of Politics and Culture Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1984 ; 1984 ; New Political Science: A Journal of Politics and Culture Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1985 ; 1985 ; New Political Science: A Journal of Politics and Culture Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1986 ; 1986 ; New Political Science: A Journal of Politics and Culture Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1989 ; 1989 ; New Political Science: A Journal of Politics and Culture Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1990 ; 1990 ; New Political Science: A Journal of Politics and Culture Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1991 ; 1991 ; New Political Science: A Journal of Politics and Culture Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1992 ; 1992 ; New Political Science: A Journal of Politics and Culture Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1993 ; 1993 ; New Political Science: A Journal of Politics and Culture Volume 12-14 ; 12-14 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1994 ; 1994 ; New Political Science: A Journal of Politics and Culture Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1995 ; 1995 ; New Political Science: A Journal of Politics and Culture Volume 16-17 ; 16-17 ; reingest3.clockss.org:8083 >
 
-      au < frozen ; exists ; 1998 ; 1998 ; New Political Science: A Journal of Politics and Culture Volume 20 ; 20 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; New Political Science: A Journal of Politics and Culture Volume 21 ; 21 ; >
+      au < finished ; manifest ; 1998 ; 1998 ; New Political Science: A Journal of Politics and Culture Volume 20 ; 20 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1999 ; 1999 ; New Political Science: A Journal of Politics and Culture Volume 21 ; 21 ; reingest5.clockss.org:8082 >
 
-      au < frozen ; exists ; 2002 ; 2002 ; New Political Science: A Journal of Politics and Culture Volume 24 ; 24 ; >
-      au < frozen ; exists ; 2003 ; 2003 ; New Political Science: A Journal of Politics and Culture Volume 25 ; 25 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; New Political Science: A Journal of Politics and Culture Volume 26 ; 26 ; >
+      au < finished ; manifest ; 2002 ; 2002 ; New Political Science: A Journal of Politics and Culture Volume 24 ; 24 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 2003 ; New Political Science: A Journal of Politics and Culture Volume 25 ; 25 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2004 ; 2004 ; New Political Science: A Journal of Politics and Culture Volume 26 ; 26 ; reingest2.clockss.org:8085 >
 
-      au < frozen ; exists ; 2007 ; 2007 ; New Political Science: A Journal of Politics and Culture Volume 29 ; 29 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; New Political Science: A Journal of Politics and Culture Volume 30 ; 30 ; >
-      au < frozen ; exists ; 2009 ; 2009 ; New Political Science: A Journal of Politics and Culture Volume 31 ; 31 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; New Political Science: A Journal of Politics and Culture Volume 32 ; 32 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; New Political Science: A Journal of Politics and Culture Volume 33 ; 33 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; New Political Science: A Journal of Politics and Culture Volume 34 ; 34 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; New Political Science: A Journal of Politics and Culture Volume 35 ; 35 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; New Political Science: A Journal of Politics and Culture Volume 36 ; 36 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; New Political Science: A Journal of Politics and Culture Volume 37 ; 37 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; New Political Science: A Journal of Politics and Culture Volume 38 ; 38 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; New Political Science: A Journal of Politics and Culture Volume 39 ; 39 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; New Political Science: A Journal of Politics and Culture Volume 40 ; 40 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; New Political Science: A Journal of Politics and Culture Volume 41 ; 41 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; New Political Science: A Journal of Politics and Culture Volume 42 ; 42 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; New Political Science: A Journal of Politics and Culture Volume 43 ; 43 ; >
-      au < frozen ; exists ; 2022 ; 2022 ; New Political Science: A Journal of Politics and Culture Volume 44 ; 44 ; >
+      au < finished ; manifest ; 2007 ; 2007 ; New Political Science: A Journal of Politics and Culture Volume 29 ; 29 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; New Political Science: A Journal of Politics and Culture Volume 30 ; 30 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2009 ; 2009 ; New Political Science: A Journal of Politics and Culture Volume 31 ; 31 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; New Political Science: A Journal of Politics and Culture Volume 32 ; 32 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; New Political Science: A Journal of Politics and Culture Volume 33 ; 33 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; 2012 ; New Political Science: A Journal of Politics and Culture Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; New Political Science: A Journal of Politics and Culture Volume 35 ; 35 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 2014 ; New Political Science: A Journal of Politics and Culture Volume 36 ; 36 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2015 ; 2015 ; New Political Science: A Journal of Politics and Culture Volume 37 ; 37 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; 2016 ; New Political Science: A Journal of Politics and Culture Volume 38 ; 38 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; 2017 ; New Political Science: A Journal of Politics and Culture Volume 39 ; 39 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; 2018 ; New Political Science: A Journal of Politics and Culture Volume 40 ; 40 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; New Political Science: A Journal of Politics and Culture Volume 41 ; 41 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; 2020 ; New Political Science: A Journal of Politics and Culture Volume 42 ; 42 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; 2021 ; New Political Science: A Journal of Politics and Culture Volume 43 ; 43 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; 2022 ; New Political Science: A Journal of Politics and Culture Volume 44 ; 44 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; New Political Science: A Journal of Politics and Culture Volume 45 ; 45 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2024 ; 2024 ; New Political Science: A Journal of Politics and Culture Volume 46 ; 46 ; >
+      au < finished ; manifest ; 2024 ; 2024 ; New Political Science: A Journal of Politics and Culture Volume 46 ; 46 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2025 ; 2025 ; New Political Science: A Journal of Politics and Culture Volume 47 ; 47 ; >
       au < crawling ; exists ; 2026 ; 2026 ; New Political Science: A Journal of Politics and Culture Volume 48 ; 48 ; >
 
