@@ -101,6 +101,10 @@ public class BlockHasher extends GenericHasher {
   List<V2CompatCachedUrl> pendingV2CompatCUs = null;
   // The V2-compatible versions that are currently being processed
   List<V2CompatCachedUrl> processingV2CompatCUs = null;
+  // V2 compat CUs whose content was already local-hashed under the
+  // original URL
+  private Set<CachedUrl> noLocalHashV2CompatCUs =
+    Collections.newSetFromMap(new IdentityHashMap<>());
   boolean isV2Compat = DEFAULT_V2_COMPAT;
   int vix = -1;
   private long verBytesRead;
@@ -111,7 +115,7 @@ public class BlockHasher extends GenericHasher {
   List<Pattern> excludeUrlPats;
   private HashMap<String,MessageDigest> localHashDigestMap = null;
   private HashedInputStream.Hasher currentVersionLocalHasher = null;
-  private String localHashAlgorithm = null;
+  private String localHashAlgorithm = DEFAULT_LOCAL_HASH_ALGORITHM;
   private byte[] currentVersionStoredHash = null;
   private boolean enableLocalHash = DEFAULT_ENABLE_LOCAL_HASH;
   // private LocalHashHandler localHashHandler = null;
@@ -186,16 +190,25 @@ public class BlockHasher extends GenericHasher {
     ignoreFilesOutsideCrawlSpec =
       config.getBoolean(PARAM_IGNORE_FILES_OUTSIDE_CRAWL_SPEC,
 			DEFAULT_IGNORE_FILES_OUTSIDE_CRAWL_SPEC);
-    enableLocalHash = config.getBoolean(PARAM_ENABLE_LOCAL_HASH,
-					DEFAULT_ENABLE_LOCAL_HASH);
-    if (enableLocalHash) {
+    localHashAlgorithm =
+      config.get(PARAM_LOCAL_HASH_ALGORITHM, DEFAULT_LOCAL_HASH_ALGORITHM);
+    enableLocalHash(config.getBoolean(PARAM_ENABLE_LOCAL_HASH,
+                                      DEFAULT_ENABLE_LOCAL_HASH));
+  }
+
+  /** Enable or disable local hash generation & checking for this
+   * BlockHasher.  Overrides the {@value
+   * BlockHasher#PARAM_ENABLE_LOCAL_HASH} config param */
+  public void enableLocalHash(boolean val) {
+    if (val) {
 //       localHashHandler = new DefaultLocalHashHandler();
       lhr = new LocalHashResult();
       localHashDigestMap = new HashMap<String,MessageDigest>();
-      localHashAlgorithm =
-	config.get(PARAM_LOCAL_HASH_ALGORITHM, DEFAULT_LOCAL_HASH_ALGORITHM);
+    } else {
+      lhr = null;
+      localHashDigestMap = null;
     }
-    
+    enableLocalHash = val;
   }
 
   /** Tell the hasher whether to include the URL in the hash */
@@ -326,43 +339,50 @@ public class BlockHasher extends GenericHasher {
       verBytesRead = 0;
       cloneDigests();
 
-      String useHashAlgorithm = startVersionLocalHash();
-
       // Account for nonce in hash count
       verBytesHashed = nonceLength();
       try {
+        // If we're in V2 compatibility mode and not already
+        // processing the V2 URLs for this node ...  This must precede
+        // local hashing so that a deferred version is local-hashed
+        // only when it's actually hashed.
+        if (isV2Compat && processingV2CompatCUs == null) {
+          // Handle URLs ending with slash, which V1 repo
+          // incorrectly stores without final slash
+          String url = curVer.getUrl();
+          String nodeUrl = verProps.getProperty(CachedUrl.PROPERTY_NODE_URL);
+          String redirTo = verProps.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO);
+          if (UrlUtil.isDirectoryRedirection(url, nodeUrl)) {
+            // first check crawl rule, in case this node was wrongly
+            // provisionally included
+            if (ignoreFilesOutsideCrawlSpec && !au.shouldBeCached(nodeUrl)) {
+              continue;
+            }
+            log.debug2("doslashonly: " + nodeUrl);
+            // This was collected as "foo/", not the result of a
+            // redirect.  Defer it and process only as "foo/"
+            enqueueSlashCU(curVer, nodeUrl);
+            continue;
+          } else if (UrlUtil.isDirectoryRedirection(url, redirTo)) {
+            // This was redirected from "foo" to "foo/".  Process
+            // as "foo" and again as "foo/" to match what V2 would
+            // have done.  The content is local-hashed only as "foo".
+            log.debug2("doboth: " + url + ", " + redirTo);
+            noLocalHashV2CompatCUs.add(enqueueSlashCU(curVer, redirTo));
+          }
+        }
+
+        String useHashAlgorithm = null;
+        if (noLocalHashV2CompatCUs.remove(curVer)) {
+          currentVersionStoredHash = null;
+        } else {
+          useHashAlgorithm = startVersionLocalHash();
+        }
         HashedInputStream.Hasher hasher = null;
         if (useHashAlgorithm != null) {
           hasher = getStreamHasher(useHashAlgorithm);
         }
         if (hasher == null) {
-          // If we're in V2 compatibility mode and not already
-          // processing the V2 URLs for this node ...
-          if (isV2Compat && processingV2CompatCUs == null) {
-            // Handle URLs ending with slash, which V1 repo
-            // incorrectly stores without final slash
-            String url = curVer.getUrl();
-            String nodeUrl = verProps.getProperty(CachedUrl.PROPERTY_NODE_URL);
-            String redirTo = verProps.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO);
-            if (UrlUtil.isDirectoryRedirection(url, nodeUrl)) {
-              // first check crawl rule, in case this node was wrongly
-              // provisionally included
-              if (ignoreFilesOutsideCrawlSpec && !au.shouldBeCached(nodeUrl)) {
-                continue;
-              }
-              log.debug2("doslashonly: " + nodeUrl);
-              // This was collected as "foo/", not the result of a
-              // redirect.  Defer it and process only as "foo/"
-              enqueueSlashCU(curVer, nodeUrl);
-              continue;
-            } else if (UrlUtil.isDirectoryRedirection(url, redirTo)) {
-              // This was redirected from "foo" to "foo/".  Process
-              // as "foo" and again as "foo/" to match what V2 would
-              // have done.
-              log.debug2("doboth: " + url + ", " + redirTo);
-              enqueueSlashCU(curVer, redirTo);
-            }
-          }
           is = getInputStream(curVer);
         } else {
           if (isTrace) log.debug3("Local hash for " + curVer.getUrl());
@@ -384,11 +404,13 @@ public class BlockHasher extends GenericHasher {
     }
   }
 
-  private void enqueueSlashCU(CachedUrl cu, String v2Url) {
+  private V2CompatCachedUrl enqueueSlashCU(CachedUrl cu, String v2Url) {
     if (pendingV2CompatCUs == null) {
       pendingV2CompatCUs = new ArrayList<>(maxVersions);
     }
-    pendingV2CompatCUs.add(new V2CompatCachedUrl(cu, v2Url));
+    V2CompatCachedUrl v2cu = new V2CompatCachedUrl(cu, v2Url);
+    pendingV2CompatCUs.add(v2cu);
+    return v2cu;
   }
 
   /** Return the algorithm to use for local hash for the current file, or
