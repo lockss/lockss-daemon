@@ -157,6 +157,8 @@ public class CuBase extends Worker {
     }
   }
 
+  private boolean maxLogged = false;
+
   /** Add cuVer to the mappedCus map iff the list associated with
    * v2Url is shorter than maxVersions, otherwise add to toRelease. */
   void addUpToMax(String v2Url, CachedUrl cuVer) {
@@ -165,6 +167,12 @@ public class CuBase extends Worker {
       mappedCus.put(v2Url, cuVer);
     } else {
       toRelease.add(cuVer);
+      if (!maxLogged) {
+        log.debug2("Copying only " +
+                   StringUtil.numberOfUnits(maxVersions, "version") +
+                   " of " + v2Url);
+        maxLogged = true;
+      }
     }
   }
 
@@ -223,7 +231,7 @@ public class CuBase extends Worker {
              !StringUtil.isNullString(token) &&
              verMap.size() < maxVersions);
     if (truncated) {
-      log.debug3("Found " + verMap.size() + " artifacts (truncated) for " + v2Url);
+      log.debug2("Found " + verMap.size() + " artifacts (truncated) for " + v2Url);
     } else {
       log.debug3("Found " + verMap.size() + " artifacts for " + v2Url);
     }

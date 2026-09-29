@@ -585,7 +585,7 @@ public class V2AuMover {
   private boolean isCompareEvenIfVersionMismatch;
 
   private boolean includedOnly = V2_DEFAULT_INCLUDED_ONLY;
-  private PatternIntMap maxVersionsAuidMap;
+  private PatternIntMap maxVersionsAuidMap = PatternIntMap.EMPTY;
 
   // Retries and timeouts
   /** the time to wait for a connection before timing out */
@@ -837,7 +837,7 @@ public class V2AuMover {
     } else {
       try {
         maxVersionsAuidMap = new PatternIntMap(patternPairs);
-	log.debug("Installing max versions map: " + maxVersionsAuidMap);
+	log.debug("Installed max versions map: " + maxVersionsAuidMap);
       } catch (IllegalArgumentException e) {
 	log.error("Illegal max versions map, ignoring", e);
 	log.error("Max versions map unchanged: " + maxVersionsAuidMap);
