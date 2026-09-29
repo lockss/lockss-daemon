@@ -92,10 +92,6 @@
     #param[base_url] = http://erj.ersjournals.com/
 
     {
-
-
-    }
-    {
       au < ers.ClockssERSDrupalPlugin ; doNotProcess ; doNotProcess ; 1988 ; European Respiratory Journal Volume 1 ; 1 ; http://erj.ersjournals.com/ ; >
       au < ers.ClockssERSDrupalPlugin ; doNotProcess ; doNotProcess ; 1989 ; European Respiratory Journal Volume 2 ; 2 ; http://erj.ersjournals.com/ ; >
       au < ers.ClockssERSDrupalPlugin ; doNotProcess ; doNotProcess ; 1990 ; European Respiratory Journal Volume 3 ; 3 ; http://erj.ersjournals.com/ ; >
@@ -198,7 +194,6 @@
       issnl = 0905-9180
     >
     #param[base_url] = http://err.ersjournals.com/
-
 
     {
     au < ers.ClockssERSDrupalPlugin ; finished ; manifest ; 2005 ; European Respiratory Review Volume 14 ; 14 ; https://err.ersjournals.com/ ; reingest3.clockss.org:8083 >
