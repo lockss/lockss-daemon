@@ -1748,6 +1748,20 @@
   {
 
     title <
+      name = International Journal of Green Business (IJGB) ;
+      issn = 2998-4637 ;
+      eissn = 2998-4653 ;
+      issnl = 2998-4637
+    >
+    param[journal_issn] = 2998-4637
+
+    au < exists ; 2026 ; International Journal of Green Business (IJGB) Volume 1 ; 1 ; https://www.igi-global.com/ >
+
+  }
+
+  {
+
+    title <
       name = International Journal of Green Computing (IJGC) ;
       issn = 1948-5018 ;
       eissn = 1948-5026 ;
@@ -2910,6 +2924,20 @@
     au < released ; 2020 ; International Journal of Natural Computing Research (IJNCR) Volume 9 ; 9 ; https://www.igi-global.com/ >
     au < released ; 2021 ; International Journal of Natural Computing Research (IJNCR) Volume 10 ; 10 ; https://www.igi-global.com/ >
     au < released ; 2022 ; International Journal of Natural Computing Research (IJNCR) Volume 11 ; 11 ; https://www.igi-global.com/ >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Neuroscience and Neuroinformatics (IJNN) ;
+      issn = 2998-4521 ;
+      eissn = 2998-453X ;
+      issnl = 2998-4521
+    >
+    param[journal_issn] = 2998-4521
+
+    au < exists ; 2026 ; International Journal of Neuroscience and Neuroinformatics (IJNN) Volume 1 ; 1 ; https://www.igi-global.com/ >
 
   }
 

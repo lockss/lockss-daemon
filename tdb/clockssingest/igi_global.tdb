@@ -1751,6 +1751,20 @@
   {
 
     title <
+      name = International Journal of Green Business (IJGB) ;
+      issn = 2998-4637 ;
+      eissn = 2998-4653 ;
+      issnl = 2998-4637
+    >
+    param[journal_issn] = 2998-4637
+
+    au < exists ; exists ; 2026 ; International Journal of Green Business (IJGB) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+
+  }
+
+  {
+
+    title <
       name = International Journal of Green Computing (IJGC) ;
       issn = 1948-5018 ;
       eissn = 1948-5026 ;
@@ -1787,8 +1801,8 @@
     au < finished ; manifest ; 2021 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 12 ; 12 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 13 ; 13 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 14 ; 14 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2025 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 15 ; 15 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
-    au < expected ; exists ; 2026 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 16 ; 16 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2025 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 15 ; 15 ; https://www.igi-global.com/ ; >
+    au < expected ; exists ; 2026 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 16 ; 16 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -2913,6 +2927,20 @@
     au < finished ; crawling ; 2020 ; International Journal of Natural Computing Research (IJNCR) Volume 9 ; 9 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2021 ; International Journal of Natural Computing Research (IJNCR) Volume 10 ; 10 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; International Journal of Natural Computing Research (IJNCR) Volume 11 ; 11 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Neuroscience and Neuroinformatics (IJNN) ;
+      issn = 2998-4521 ;
+      eissn = 2998-453X ;
+      issnl = 2998-4521
+    >
+    param[journal_issn] = 2998-4521
+
+    au < exists ; exists ; 2026 ; International Journal of Neuroscience and Neuroinformatics (IJNN) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
 
   }
 
