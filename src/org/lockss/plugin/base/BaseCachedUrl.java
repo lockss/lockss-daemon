@@ -243,7 +243,7 @@ public class BaseCachedUrl implements CachedUrl {
 
   private Boolean hasV2Content = null;
 
-  private boolean hasV2Content() {
+  protected boolean hasV2Content() {
     String url = getUrl();
     ArchivalUnit au = getArchivalUnit();
     if (CurrentConfig.getBooleanParam(BlockHasher.PARAM_V2_COMPAT,
@@ -564,7 +564,8 @@ public class BaseCachedUrl implements CachedUrl {
       if (nodeVer == null || !getNodeVersion().hasContent()) {
 	return false;
       }
-      if (isIncludedOnly() && !au.shouldBeCached(getUrl())) {
+      if (isIncludedOnly() && !au.shouldBeCached(getUrl()) &&
+          !hasV2Content()) {
 	logger.debug2("hasContent("+getUrl()+"): excluded by crawl rule");
 	return false;
       }
