@@ -154,7 +154,7 @@ public class RepositoryManager
   static final int PRIORITY_DEFAULT_SIZE_CALC = Thread.NORM_PRIORITY - 1;
 
   static final String DISK_PREFIX = PREFIX + "diskSpace.";
-  
+
 
   static final String PARAM_DISK_WARN_FRRE_MB = DISK_PREFIX + "warn.freeMB";
   static final int DEFAULT_DISK_WARN_FRRE_MB = 5000;
@@ -447,7 +447,7 @@ public class RepositoryManager
     long start = TimeBase.nowMs();
     boolean ok = false;
     try {
-      log.debug2("Deleting dir tree: " + dir);
+      log.debug("Deleting dir tree: " + dir);
       ok = FileUtil.fastDelTree(dir);
       if (!ok) {
         log.warning("Failed to delete dir tree: " + dir);
