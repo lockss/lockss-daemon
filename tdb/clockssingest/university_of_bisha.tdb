@@ -22,10 +22,10 @@
       param[base_url] = https://ubjh.ub.edu.sa/
       param[journal_abbr] = home
 
-      au < frozen ; exists ; 2022 ; University of Bisha Journal for Humanities Volume 1 ; 1 ; >
-      au < frozen ; exists ; 2023 ; University of Bisha Journal for Humanities Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2024 ; University of Bisha Journal for Humanities Volume 3 ; 3 ; >
-      au < frozen ; exists ; 2025 ; University of Bisha Journal for Humanities Volume 4 ; 4 ; >
+      au < finished ; manifest ; 2022 ; University of Bisha Journal for Humanities Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2023 ; University of Bisha Journal for Humanities Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; University of Bisha Journal for Humanities Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2025 ; University of Bisha Journal for Humanities Volume 4 ; 4 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2026 ; University of Bisha Journal for Humanities Volume 5 ; 5 ; >
 
   }

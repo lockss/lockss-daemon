@@ -21,8 +21,8 @@
       param[base_url] = https://journal.nuc.edu.iq/
       param[journal_abbr] = home
 
-      au < frozen ; exists ; 2023 ; Al-Nisour Journal for Medical Sciences Volume 1 ; 1 ; >
-      au < frozen ; exists ; 2024 ; Al-Nisour Journal for Medical Sciences Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2023 ; Al-Nisour Journal for Medical Sciences Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; Al-Nisour Journal for Medical Sciences Volume 2 ; 2 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2025 ; Al-Nisour Journal for Medical Sciences Volume 3 ; 3 ; >
       au < crawling ; exists ; 2026 ; Al-Nisour Journal for Medical Sciences Volume 4 ; 4 ; >
 
