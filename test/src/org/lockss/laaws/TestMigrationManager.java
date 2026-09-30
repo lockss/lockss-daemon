@@ -168,4 +168,41 @@ public class TestMigrationManager extends LockssTestCase {
     Map page2 = migrationMgr.getErrorsPage(1, 10);
     assertEmpty((List) page2.get("errors_page"));
   }
+
+  /**
+   * Regression test for the #743 review: a run that fails outright (Runner.lockssRun()
+   * catches an exception from executeRequests()) does not change start_time, so the client
+   * cannot use start_time alone to tell "this run just failed" apart from "this is a
+   * continuation of the run that just failed" -- and would otherwise keep displaying (or
+   * endlessly re-fetching) that run's stale cached errors instead of the new failure
+   * message. generation must change on this transition even though start_time does not.
+   */
+  public void testGenerationChangesWhenARunFailsEvenThoughStartTimeDoesNot() throws Exception {
+    V2AuMover mover = makeRunningMover();
+    mover.addError("err from the run that is about to fail");
+
+    Map before = migrationMgr.getStatus();
+    long startTimeBefore = (Long) before.get("start_time");
+    long generationBefore = (Long) before.get("generation");
+
+    V2AuMover throwingMover = new V2AuMover() {
+      @Override
+      public void executeRequests(List<Args> argsLst) throws MigrationTaskFailedException {
+        throw new MigrationTaskFailedException("boom");
+      }
+    };
+    setPrivateField(migrationMgr, "mover", throwingMover);
+
+    MigrationManager.Runner runner =
+        migrationMgr.new Runner(ListUtil.list(new V2AuMover.Args()));
+    runner.lockssRun();
+
+    Map after = migrationMgr.getStatus();
+
+    assertEquals("start_time must not change on this path -- that is exactly why"
+        + " generation exists", startTimeBefore, after.get("start_time"));
+    assertEquals(1, after.get("errors_count"));
+    assertTrue("generation must change when a run fails, since start_time does not",
+        generationBefore != (Long) after.get("generation"));
+  }
 }

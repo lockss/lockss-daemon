@@ -53,6 +53,7 @@ class AuMigrationStatus extends React.Component {
       errorsCount: 0,
       errorsData: [],
       startTime: -1,
+      generation: -1,
     };
   }
 
@@ -162,7 +163,7 @@ class AuMigrationStatus extends React.Component {
     }
   }
 
-  updateStateAfterFetch = (result, prevStartTime) => {
+  updateStateAfterFetch = (result) => {
     const e = document.getElementById("finishedList");
     const wasAtBottom =
           (e == null) ||
@@ -170,7 +171,17 @@ class AuMigrationStatus extends React.Component {
            ((e.scrollHeight <= e.clientHeight) ||
             (e.scrollHeight - e.clientHeight) <= e.scrollTop + 5));
 
-    const startTimeChanged = prevStartTime != result.start_time;
+    // generation is bumped both when a new run starts and when a running one fails into the
+    // idle-error state -- unlike start_time, which the latter does not change, so relying on
+    // start_time alone would mistake a failure's error message for a continuation of whatever
+    // was cached from the run that just failed. But generation is a daemon-process-local
+    // counter that resets to zero on restart, so relying on it alone can just as wrongly do
+    // the opposite: if the daemon restarts while this page stays open and a new run starts
+    // before the next poll, that run's generation can coincide with the one already cached
+    // from before the restart. Checking both together covers what either one alone misses.
+    const runChanged =
+        (this.state.startTime != result.start_time) ||
+        (this.state.generation != result.generation);
 
     // Resolves once every page this response implies is still needed has
     // settled (successfully or not), so the caller can wait for the whole
@@ -188,10 +199,14 @@ class AuMigrationStatus extends React.Component {
         errorsCount: result.errors_count,
         delay: result.running ? 1000 : 5000,
         startTime: result.start_time,
+        generation: result.generation,
         wasAtBottom: wasAtBottom,
-        finishedData: startTimeChanged ? [] : prevState.finishedData,
-        errorsData: startTimeChanged ? [] : prevState.errorsData,
+        finishedData: runChanged ? [] : prevState.finishedData,
+        errorsData: runChanged ? [] : prevState.errorsData,
       }), () => {
+        // Captured after the state above is applied, so a page fetch is tagged with the
+        // generation it was actually requested against.
+        const requestGeneration = this.state.generation;
         const pagesPending = [];
 
         if (this.state.finishedCount != this.state.finishedData.length) {
@@ -201,6 +216,14 @@ class AuMigrationStatus extends React.Component {
                   "&size=" + (this.state.finishedCount - this.state.finishedData.length))
               .then(
                 (result) => {
+                  // Discard a response that arrives after a new run has started or the
+                  // current one has failed: merging it would inject a previous run's
+                  // finished AUs into the new one's list (or, since addIncrementalPage's
+                  // index no longer lines up, leave the list permanently out of sync with
+                  // finishedCount).
+                  if (this.state.generation != requestGeneration) {
+                    return;
+                  }
                   this.setState((prevState) => ({
                     finishedData: addIncrementalPage(prevState.finishedData,
                                                      result.finished_page,
@@ -220,6 +243,10 @@ class AuMigrationStatus extends React.Component {
                   "&size=" + (this.state.errorsCount - this.state.errorsData.length))
               .then(
                 (result) => {
+                  // See the matching comment on the finished-page fetch above.
+                  if (this.state.generation != requestGeneration) {
+                    return;
+                  }
                   this.setState((prevState) => ({
                     errorsData: addIncrementalPage(prevState.errorsData,
                                                    result.errors_page,
@@ -248,11 +275,9 @@ class AuMigrationStatus extends React.Component {
   }
 
   __loadStatus = () => {
-    const prevStartTime = this.state.startTime;
-
     fetchJsonWithTimeout("/MigrateContent?reqfreq=high&output=json&status=status")
       .then(
-        (result) => this.updateStateAfterFetch(result, prevStartTime),
+        (result) => this.updateStateAfterFetch(result),
         (error) => {
           console.error("Could not fetch status information: " + error);
 
