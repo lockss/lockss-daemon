@@ -22,12 +22,12 @@
     param[journal_abbr] = home
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < ready ; exists ; 2021 ; Middle East Journal of Communication Studies Volume 1 ; 1 ; >
-    au < ready ; exists ; 2022 ; Middle East Journal of Communication Studies Volume 2 ; 2 ; >
-    au < ready ; exists ; 2023 ; Middle East Journal of Communication Studies Volume 3 ; 3 ; >
-    au < ready ; exists ; 2024 ; Middle East Journal of Communication Studies Volume 4 ; 4 ; >
-    au < ready ; exists ; 2025 ; Middle East Journal of Communication Studies Volume 5 ; 5 ; >
-    au < ready ; exists ; 2026 ; Middle East Journal of Communication Studies Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2021 ; Middle East Journal of Communication Studies Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2022 ; Middle East Journal of Communication Studies Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2023 ; Middle East Journal of Communication Studies Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2024 ; Middle East Journal of Communication Studies Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2025 ; Middle East Journal of Communication Studies Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2026 ; Middle East Journal of Communication Studies Volume 6 ; 6 ; >
 
   }
 
