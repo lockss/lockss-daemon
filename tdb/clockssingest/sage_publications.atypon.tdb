@@ -80,7 +80,7 @@
       #param[journal_id] = aca
 
       au < ready ; exists ; 1997 ; About Campus Volume 1 ; 1 ; acaa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1998 ; About Campus Volume 2 ; 2 ; acaa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1998 ; About Campus Volume 2 ; 2 ; acaa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1999 ; About Campus Volume 3 ; 3 ; acaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; About Campus Volume 4 ; 4 ; acaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2001 ; About Campus Volume 5 ; 5 ; acaa ; https://journals.sagepub.com/ ; >
@@ -129,7 +129,7 @@
       au < frozen ; exists ; 1974 ; Abstracts in Anthropology Volume 5 ; 5 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1975 ; Abstracts in Anthropology Volume 6 ; 6 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1978 ; Abstracts in Anthropology Volume 7 ; 7 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1981 ; Abstracts in Anthropology Volume 8 ; 8 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1981 ; Abstracts in Anthropology Volume 8 ; 8 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1982 ; Abstracts in Anthropology Volume 9 ; 9 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1983 ; Abstracts in Anthropology Volume 10 ; 10 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1984 ; Abstracts in Anthropology Volume 11 ; 11 ; aaxa ; https://journals.sagepub.com/ ; >
@@ -149,7 +149,7 @@
       au < ready ; exists ; 1992 ; Abstracts in Anthropology Volume 25 ; 25 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1993 ; Abstracts in Anthropology Volume 26 ; 26 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1993 ; Abstracts in Anthropology Volume 27 ; 27 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1994 ; Abstracts in Anthropology Volume 28 ; 28 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1994 ; Abstracts in Anthropology Volume 28 ; 28 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1994 ; Abstracts in Anthropology Volume 29 ; 29 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1995 ; Abstracts in Anthropology Volume 30 ; 30 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1995 ; Abstracts in Anthropology Volume 31 ; 31 ; aaxa ; https://journals.sagepub.com/ ; >
@@ -272,7 +272,7 @@
       au < ready ; exists ; 1966 ; Acta Sociologica Volume 9 ; 9 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1967 ; Acta Sociologica Volume 10 ; 10 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1968 ; Acta Sociologica Volume 11 ; 11 ; asja ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1969 ; Acta Sociologica Volume 12 ; 12 ; asja ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1969 ; Acta Sociologica Volume 12 ; 12 ; asja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1970 ; Acta Sociologica Volume 13 ; 13 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1971 ; Acta Sociologica Volume 14 ; 14 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1972 ; Acta Sociologica Volume 15 ; 15 ; asja ; https://journals.sagepub.com/ ; >
@@ -575,7 +575,7 @@
 
       #param[base_url] = http://adb.sagepub.com/
 
-      au < ready ; exists ; 1992 ; Adaptive Behavior Volume 1 ; 1 ; adba ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1992 ; Adaptive Behavior Volume 1 ; 1 ; adba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1993 ; Adaptive Behavior Volume 2 ; 2 ; adba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1994 ; Adaptive Behavior Volume 3 ; 3 ; adba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1995 ; Adaptive Behavior Volume 4 ; 4 ; adba ; https://journals.sagepub.com/ ; >
@@ -961,7 +961,7 @@
       au < ready ; exists ; 1990-1991 ; Adult Education Quarterly Volume 41 ; 41 ; aeqb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1992-1992 ; Adult Education Quarterly Volume 42 ; 42 ; aeqb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1992-1993 ; Adult Education Quarterly Volume 43 ; 43 ; aeqb ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1993-1994 ; Adult Education Quarterly Volume 44 ; 44 ; aeqb ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1993-1994 ; Adult Education Quarterly Volume 44 ; 44 ; aeqb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1994-1995 ; Adult Education Quarterly Volume 45 ; 45 ; aeqb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1995-1996 ; Adult Education Quarterly Volume 46 ; 46 ; aeqb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1996-1997 ; Adult Education Quarterly Volume 47 ; 47 ; aeqb ; https://journals.sagepub.com/ ; >
@@ -1059,7 +1059,7 @@
       au < ready ; exists ; 1996 ; Advances in Dental Research Volume 10 ; 10 ; adra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1997 ; Advances in Dental Research Volume 11 ; 11 ; adra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1998 ; Advances in Dental Research Volume 12 ; 12 ; adra ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1999 ; Advances in Dental Research Volume 13 ; 13 ; adra ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1999 ; Advances in Dental Research Volume 13 ; 13 ; adra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Advances in Dental Research Volume 14 ; 14 ; adra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2001 ; Advances in Dental Research Volume 15 ; 15 ; adra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Advances in Dental Research Volume 16 ; 16 ; adra ; https://journals.sagepub.com/ ; >
@@ -1223,7 +1223,7 @@
       au < ready ; exists ; 1986 ; Affilia Volume 1 ; 1 ; affa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1987 ; Affilia Volume 2 ; 2 ; affa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1988 ; Affilia Volume 3 ; 3 ; affa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1989 ; Affilia Volume 4 ; 4 ; affa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1989 ; Affilia Volume 4 ; 4 ; affa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1990 ; Affilia Volume 5 ; 5 ; affa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1991 ; Affilia Volume 6 ; 6 ; affa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1992 ; Affilia Volume 7 ; 7 ; affa ; https://journals.sagepub.com/ ; >
@@ -1702,7 +1702,7 @@
 
       au < ready ; exists ; 1999 ; Alternatives to Laboratory Animals Volume 27 ; 27 ; atla ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Alternatives to Laboratory Animals Volume 28 ; 28 ; atla ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2001 ; Alternatives to Laboratory Animals Volume 29 ; 29 ; atla ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2001 ; Alternatives to Laboratory Animals Volume 29 ; 29 ; atla ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Alternatives to Laboratory Animals Volume 30 ; 30 ; atla ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2003 ; Alternatives to Laboratory Animals Volume 31 ; 31 ; atla ; https://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2004 ; Alternatives to Laboratory Animals Volume 32 ; 32 ; atla ; https://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
@@ -1915,7 +1915,7 @@
       au < manifest ; exists ; 1998 ; The American Economist Volume 42 ; 42 ; aexb ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 1999 ; The American Economist Volume 43 ; 43 ; aexb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; The American Economist Volume 44 ; 44 ; aexb ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2001 ; The American Economist Volume 45 ; 45 ; aexb ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2001 ; The American Economist Volume 45 ; 45 ; aexb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; The American Economist Volume 46 ; 46 ; aexb ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2003 ; The American Economist Volume 47 ; 47 ; aexb ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2004 ; The American Economist Volume 48 ; 48 ; aexb ; https://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
@@ -4173,7 +4173,7 @@
       au < ready ; exists ; 2016 ; Antioxidants & Redox Signaling Volume 25 ; 25 ; area ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2017 ; Antioxidants & Redox Signaling Volume 26 ; 26 ; area ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2017 ; Antioxidants & Redox Signaling Volume 27 ; 27 ; area ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2018 ; Antioxidants & Redox Signaling Volume 28 ; 28 ; area ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2018 ; Antioxidants & Redox Signaling Volume 28 ; 28 ; area ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2018 ; Antioxidants & Redox Signaling Volume 29 ; 29 ; area ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Antioxidants & Redox Signaling Volume 30 ; 30 ; area ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Antioxidants & Redox Signaling Volume 31 ; 31 ; area ; https://journals.sagepub.com/ ; >
@@ -6824,7 +6824,7 @@
       au < frozen ; exists ; 2012 ; Biotechnology Law Report Volume 31 ; 31 ; blra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2013 ; Biotechnology Law Report Volume 32 ; 32 ; blra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2014 ; Biotechnology Law Report Volume 33 ; 33 ; blra ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2015 ; Biotechnology Law Report Volume 34 ; 34 ; blra ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2015 ; Biotechnology Law Report Volume 34 ; 34 ; blra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2016 ; Biotechnology Law Report Volume 35 ; 35 ; blra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2017 ; Biotechnology Law Report Volume 36 ; 36 ; blra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2018 ; Biotechnology Law Report Volume 37 ; 37 ; blra ; https://journals.sagepub.com/ ; >
@@ -10524,7 +10524,7 @@
       au < manifest ; exists ; 2015 ; Clinical Thyroidology Volume 27 ; 27 ; ctha ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Clinical Thyroidology Volume 28 ; 28 ; ctha ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Clinical Thyroidology Volume 29 ; 29 ; ctha ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2018 ; Clinical Thyroidology Volume 30 ; 30 ; ctha ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2018 ; Clinical Thyroidology Volume 30 ; 30 ; ctha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Clinical Thyroidology Volume 31 ; 31 ; ctha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Clinical Thyroidology Volume 32 ; 32 ; ctha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Clinical Thyroidology Volume 33 ; 33 ; ctha ; https://journals.sagepub.com/ ; >
@@ -12566,7 +12566,7 @@
       #journal_id = TCJ
 
       au < ready ; exists ; 2018 ; The CRISPR Journal Volume 1 ; 1 ; tcja ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2019 ; The CRISPR Journal Volume 2 ; 2 ; tcja ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2019 ; The CRISPR Journal Volume 2 ; 2 ; tcja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; The CRISPR Journal Volume 3 ; 3 ; tcja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; The CRISPR Journal Volume 4 ; 4 ; tcja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; The CRISPR Journal Volume 5 ; 5 ; tcja ; https://journals.sagepub.com/ ; >
@@ -57962,7 +57962,7 @@
       au < manifest ; exists ; 2015 ; Soft Robotics Volume 2 ; 2 ; srba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Soft Robotics Volume 3 ; 3 ; srba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Soft Robotics Volume 4 ; 4 ; srba ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2018 ; Soft Robotics Volume 5 ; 5 ; srba ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2018 ; Soft Robotics Volume 5 ; 5 ; srba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2019 ; Soft Robotics Volume 6 ; 6 ; srba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Soft Robotics Volume 7 ; 7 ; srba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Soft Robotics Volume 8 ; 8 ; srba ; https://journals.sagepub.com/ ; >
@@ -64166,7 +64166,7 @@
       au < ready ; exists ; 2011 ; Vector-Borne and Zoonotic Diseases Volume 11 ; 11 ; vbza ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2012 ; Vector-Borne and Zoonotic Diseases Volume 12 ; 12 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2013 ; Vector-Borne and Zoonotic Diseases Volume 13 ; 13 ; vbza ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2014 ; Vector-Borne and Zoonotic Diseases Volume 14 ; 14 ; vbza ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2014 ; Vector-Borne and Zoonotic Diseases Volume 14 ; 14 ; vbza ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2015 ; Vector-Borne and Zoonotic Diseases Volume 15 ; 15 ; vbza ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2016 ; Vector-Borne and Zoonotic Diseases Volume 16 ; 16 ; vbza ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2017 ; Vector-Borne and Zoonotic Diseases Volume 17 ; 17 ; vbza ; https://journals.sagepub.com/ ; >
@@ -64431,7 +64431,7 @@
       au < manifest ; exists ; 2000 ; Violence Against Women Volume 6 ; 6 ; vawa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2001 ; Violence Against Women Volume 7 ; 7 ; vawa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Violence Against Women Volume 8 ; 8 ; vawa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2003 ; Violence Against Women Volume 9 ; 9 ; vawa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2003 ; Violence Against Women Volume 9 ; 9 ; vawa ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2004 ; Violence Against Women Volume 10 ; 10 ; vawa ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2005 ; Violence Against Women Volume 11 ; 11 ; vawa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2006 ; Violence Against Women Volume 12 ; 12 ; vawa ; https://journals.sagepub.com/ ; >
@@ -64687,7 +64687,7 @@
       au < frozen ; exists ; 2005 ; Web Intelligence and Agent Systems Volume 3 ; 3 ; weba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2006 ; Web Intelligence and Agent Systems Volume 4 ; 4 ; weba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2007 ; Web Intelligence and Agent Systems Volume 5 ; 5 ; weba ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2008 ; Web Intelligence and Agent Systems Volume 6 ; 6 ; weba ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2008 ; Web Intelligence and Agent Systems Volume 6 ; 6 ; weba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2009 ; Web Intelligence and Agent Systems Volume 7 ; 7 ; weba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2010 ; Web Intelligence and Agent Systems Volume 8 ; 8 ; weba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2011 ; Web Intelligence and Agent Systems Volume 9 ; 9 ; weba ; https://journals.sagepub.com/ ; >
