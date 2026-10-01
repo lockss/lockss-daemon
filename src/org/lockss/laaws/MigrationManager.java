@@ -101,6 +101,7 @@ public class MigrationManager extends BaseLockssDaemonManager
   static final String STATUS_ERRORS_PAGE = "errors_page";
   static final String STATUS_ERRORS_INDEX = "errors_index";
   static final String STATUS_ERRORS_COUNT = "errors_count";
+  static final String STATUS_GENERATION = "generation";
   static final String STATUS_PROGRESS = "progress";
 
   public static final String PARAM_DRY_RUN_ENABLED = PREFIX + "dryRunEnabled";
@@ -125,6 +126,11 @@ public class MigrationManager extends BaseLockssDaemonManager
   LockssUrlConnectionPool connectionPool;
   private String idleError;
   private long startTime = 0;
+  // Bumped on every transition the client must not mistake for a continuation of what it
+  // already has cached: starting a new run, and a run failing into the idle-error state.
+  // startTime alone does not cover the latter, since a mid-run failure sets idleError
+  // without changing startTime -- see startRunner() and Runner.lockssRun().
+  private long generation = 0;
 
   boolean isDryRun;
   boolean isInMigrationMode;
@@ -284,6 +290,7 @@ public class MigrationManager extends BaseLockssDaemonManager
   public Map getStatus() {
     Map stat = new HashMap();
     stat.put(STATUS_START_TIME, startTime);
+    stat.put(STATUS_GENERATION, generation);
     if (runner == null) {
       stat.put(STATUS_RUNNING, false);
       stat.put(STATUS_FINISHED_COUNT, 0);
@@ -360,6 +367,7 @@ public class MigrationManager extends BaseLockssDaemonManager
       throw new IllegalStateException("Migration is already running, can't start a new one");
     }
     startTime = TimeBase.nowMs();
+    generation++;
     mover = new V2AuMover();
     runner = new Runner(args);
     log.debug("Starting runner: " + args);
@@ -535,6 +543,7 @@ public class MigrationManager extends BaseLockssDaemonManager
       } catch (Exception e) {
         log.error("V2AuMover failed to start", e);
         idleError = "V2AuMover failed to start: " + e;
+        generation++;
         runner = null;
         mover = null;
       }
