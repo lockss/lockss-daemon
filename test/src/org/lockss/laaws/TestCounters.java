@@ -77,12 +77,6 @@ public class TestCounters extends LockssTestCase {
     // the 2 added since).  Exactly 4 new entries starting at index 3.
     List<String> page2 = ctrs.getErrorsPage(3, 4);
     assertEquals(ListUtil.list("error 3", "error 4", "error 5", "error 6"), page2);
-
-    // A page request should never return more than requested, and
-    // should never re-return entries already delivered by an earlier
-    // page in this scenario.
-    assertEquals(3, page1.size());
-    assertEquals(4, page2.size());
   }
 
   /** A client that polls from the beginning, repeatedly asking for
