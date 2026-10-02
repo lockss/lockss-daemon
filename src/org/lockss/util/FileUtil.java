@@ -490,9 +490,9 @@ public class FileUtil {
     if (!dir.exists()) {
       return true;
     }
-    if (!dir.isDirectory()) {
-      throw new IllegalArgumentException("Not a directory: " + dir);
-    }
+//     if (!dir.isDirectory()) {
+//       throw new IllegalArgumentException("Not a directory: " + dir);
+//     }
     return FileUtils.deleteQuietly(dir);
   }
 
