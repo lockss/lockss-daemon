@@ -3,13 +3,17 @@
 // Bounds how long a single status/finished/errors request can stay
 // outstanding. Without this, a slow or stalled request could block the
 // next poll from ever being scheduled (see the overlap issue below).
-const STATUS_FETCH_TIMEOUT_MS = 10000;
+// The status request is small and cheap, so it gets a short timeout; the
+// finished/errors page requests can legitimately take longer (a large
+// page, a busy server), so they get a longer one.
+const STATUS_FETCH_TIMEOUT_MS = 5000;
+const PAGE_FETCH_TIMEOUT_MS = 30000;
 
 // fetch() with a hard timeout: rejects if the request is still outstanding
-// after STATUS_FETCH_TIMEOUT_MS, aborting it so it doesn't linger.
-function fetchJsonWithTimeout(url) {
+// after timeoutMs, aborting it so it doesn't linger.
+function fetchJsonWithTimeout(url, timeoutMs) {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), STATUS_FETCH_TIMEOUT_MS);
+    const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
 
     return fetch(url, { signal: controller.signal })
         .then(response => response.json())
@@ -213,7 +217,8 @@ class AuMigrationStatus extends React.Component {
           pagesPending.push(
             fetchJsonWithTimeout("/MigrateContent?reqfreq=high&output=json&status=finished" +
                   "&index=" + this.state.finishedData.length +
-                  "&size=" + (this.state.finishedCount - this.state.finishedData.length))
+                  "&size=" + (this.state.finishedCount - this.state.finishedData.length),
+                  PAGE_FETCH_TIMEOUT_MS)
               .then(
                 (result) => {
                   // Discard a response that arrives after a new run has started or the
@@ -240,7 +245,8 @@ class AuMigrationStatus extends React.Component {
           pagesPending.push(
             fetchJsonWithTimeout("/MigrateContent?reqfreq=high&output=json&status=errors" +
                   "&index=" + this.state.errorsData.length +
-                  "&size=" + (this.state.errorsCount - this.state.errorsData.length))
+                  "&size=" + (this.state.errorsCount - this.state.errorsData.length),
+                  PAGE_FETCH_TIMEOUT_MS)
               .then(
                 (result) => {
                   // See the matching comment on the finished-page fetch above.
@@ -275,7 +281,8 @@ class AuMigrationStatus extends React.Component {
   }
 
   __loadStatus = () => {
-    fetchJsonWithTimeout("/MigrateContent?reqfreq=high&output=json&status=status")
+    fetchJsonWithTimeout("/MigrateContent?reqfreq=high&output=json&status=status",
+                         STATUS_FETCH_TIMEOUT_MS)
       .then(
         (result) => this.updateStateAfterFetch(result),
         (error) => {
