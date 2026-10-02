@@ -354,7 +354,7 @@
       param[journal_id] = eslj
       param[base_url] = https://open.journals.ed.ac.uk/
 
-      au < ready ; exists ; 2021 ; Edinburgh Student Literary Journal Volume 2021 ; 1 ; 2021 ; >
+      au < crawling ; exists ; 2021 ; Edinburgh Student Literary Journal Volume 2021 ; 1 ; 2021 ; >
       au < ready ; exists ; 2022 ; Edinburgh Student Literary Journal Volume 2022 ; 2 ; 2022 ; >
       au < ready ; exists ; 2023 ; Edinburgh Student Literary Journal Volume 2023 ; 3 ; 2023 ; >
       au < ready ; exists ; 2025 ; Edinburgh Student Literary Journal Volume 2025 ; 4 ; 2025 ; >
