@@ -1,5 +1,25 @@
 'use strict';
 
+// Bounds how long a single status/finished/errors request can stay
+// outstanding. Without this, a slow or stalled request could block the
+// next poll from ever being scheduled (see the overlap issue below).
+// The status request is small and cheap, so it gets a short timeout; the
+// finished/errors page requests can legitimately take longer (a large
+// page, a busy server), so they get a longer one.
+const STATUS_FETCH_TIMEOUT_MS = 5000;
+const PAGE_FETCH_TIMEOUT_MS = 30000;
+
+// fetch() with a hard timeout: rejects if the request is still outstanding
+// after timeoutMs, aborting it so it doesn't linger.
+function fetchJsonWithTimeout(url, timeoutMs) {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
+    return fetch(url, { signal: controller.signal })
+        .then(response => response.json())
+        .finally(() => clearTimeout(timeoutId));
+}
+
 function toggleElement(elem) {
     if (elem === null) {
         return;
@@ -11,9 +31,10 @@ function toggleElement(elem) {
     }
 }
 
-// Append a received page of finished statuses to the full status
-// list, ensuring that duplicate responses are handled correctly
-function addFinishedPage(list, page, index) {
+// Append a received page (of finished statuses, or of error/warning
+// messages) to the full list, ensuring that duplicate responses are
+// handled correctly
+function addIncrementalPage(list, page, index) {
     // Avoid copy if not truncating array
     if (list.length == index) {
         return list.concat(page);
@@ -33,7 +54,10 @@ class AuMigrationStatus extends React.Component {
       finishedPageSize: 1,
       finishedCount: 0,
       finishedData: [],
+      errorsCount: 0,
+      errorsData: [],
       startTime: -1,
+      generation: -1,
     };
   }
 
@@ -81,33 +105,29 @@ class AuMigrationStatus extends React.Component {
   }
 
   ErrorList() {
-    if (this.state.errors === undefined ||
-        this.state.errors.length == 0) {
+    if (this.state.errorsData === undefined ||
+        this.state.errorsData.length == 0) {
       return null;
     }
     return (
         <div className="stats-div">
-        {this.state.errors.length} Errors and Warnings:
+        {this.state.errorsData.length} Errors and Warnings:
         <div className={"errors"}>
-        <ul>{this.state.errors.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul>
+        <ul>{this.state.errorsData.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul>
         </div>
         </div>
     )
   }
 
   componentDidMount() {
+    this.mounted = true;
     this.__loadStatus();
-    this.interval = setInterval(this.__loadStatus, this.state.delay);
     this.disableSomeButtons();
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.wasAtBottom) {
       this.__scrollBottom();
-    }
-    if (prevState.delay != this.state.delay) {
-      clearInterval(this.interval);
-      this.interval = setInterval(this.__loadStatus, this.state.delay);
     }
 
     // FIXME: Replace with a jQuery solution?
@@ -133,7 +153,8 @@ class AuMigrationStatus extends React.Component {
   }
 
   componentWillUnmount() {
-    clearInterval(this.interval);
+    this.mounted = false;
+    clearTimeout(this.timeout);
   }
 
   __scrollBottom = () => {
@@ -146,7 +167,7 @@ class AuMigrationStatus extends React.Component {
     }
   }
 
-  updateStateAfterFetch = (result, prevStartTime) => {
+  updateStateAfterFetch = (result) => {
     const e = document.getElementById("finishedList");
     const wasAtBottom =
           (e == null) ||
@@ -154,51 +175,116 @@ class AuMigrationStatus extends React.Component {
            ((e.scrollHeight <= e.clientHeight) ||
             (e.scrollHeight - e.clientHeight) <= e.scrollTop + 5));
 
-    const startTimeChanged = prevStartTime != result.start_time;
+    // generation is bumped both when a new run starts and when a running one fails into the
+    // idle-error state -- unlike start_time, which the latter does not change, so relying on
+    // start_time alone would mistake a failure's error message for a continuation of whatever
+    // was cached from the run that just failed. But generation is a daemon-process-local
+    // counter that resets to zero on restart, so relying on it alone can just as wrongly do
+    // the opposite: if the daemon restarts while this page stays open and a new run starts
+    // before the next poll, that run's generation can coincide with the one already cached
+    // from before the restart. Checking both together covers what either one alone misses.
+    const runChanged =
+        (this.state.startTime != result.start_time) ||
+        (this.state.generation != result.generation);
 
-    this.setState((prevState) => ({
-      running: result.running,
-      fetchError: false,
-      statusList: result.status_list,
-      instrumentList: result.instrument_list,
-      activeList: result.active_list,
-      finishedCount: result.finished_count,
-      errors: result.errors,
-      delay: result.running ? 1000 : 5000,
-      startTime: result.start_time,
-      wasAtBottom: wasAtBottom,
-      finishedData: startTimeChanged ? [] : prevState.finishedData,
-    }), () => {
-      if (this.state.finishedCount != this.state.finishedData.length) {
-        fetch("/MigrateContent?reqfreq=high&output=json&status=finished" +
-              "&index=" + this.state.finishedData.length +
-              "&size=" + (this.state.finishedCount - this.state.finishedData.length))
-          .then(response => response.json())
-          .then(
-            (result) => {
-              this.setState((prevState) => ({
-                finishedData: addFinishedPage(prevState.finishedData,
-                                              result.finished_page,
-                                              result.finished_index),
-              }));
-            },
-            (error) => {
-              console.error("Could not fetch finished AU page: " + error);
-            }
+    // Resolves once every page this response implies is still needed has
+    // settled (successfully or not), so the caller can wait for the whole
+    // round trip -- not just this first response -- before scheduling the
+    // next poll. Without that, a slow page fetch here would not stop the
+    // next status poll from starting, and outstanding requests would pile up.
+    return new Promise((resolveRoundTrip) => {
+      this.setState((prevState) => ({
+        running: result.running,
+        fetchError: false,
+        statusList: result.status_list,
+        instrumentList: result.instrument_list,
+        activeList: result.active_list,
+        finishedCount: result.finished_count,
+        errorsCount: result.errors_count,
+        delay: result.running ? 1000 : 5000,
+        startTime: result.start_time,
+        generation: result.generation,
+        wasAtBottom: wasAtBottom,
+        finishedData: runChanged ? [] : prevState.finishedData,
+        errorsData: runChanged ? [] : prevState.errorsData,
+      }), () => {
+        // Captured after the state above is applied, so a page fetch is tagged with the
+        // generation it was actually requested against.
+        const requestGeneration = this.state.generation;
+        const pagesPending = [];
+
+        if (this.state.finishedCount != this.state.finishedData.length) {
+          pagesPending.push(
+            fetchJsonWithTimeout("/MigrateContent?reqfreq=high&output=json&status=finished" +
+                  "&index=" + this.state.finishedData.length +
+                  "&size=" + (this.state.finishedCount - this.state.finishedData.length),
+                  PAGE_FETCH_TIMEOUT_MS)
+              .then(
+                (result) => {
+                  // Discard a response that arrives after a new run has started or the
+                  // current one has failed: merging it would inject a previous run's
+                  // finished AUs into the new one's list (or, since addIncrementalPage's
+                  // index no longer lines up, leave the list permanently out of sync with
+                  // finishedCount).
+                  if (this.state.generation != requestGeneration) {
+                    return;
+                  }
+                  this.setState((prevState) => ({
+                    finishedData: addIncrementalPage(prevState.finishedData,
+                                                     result.finished_page,
+                                                     result.finished_index),
+                  }));
+                },
+                (error) => {
+                  console.error("Could not fetch finished AU page: " + error);
+                }
+              )
           );
-      }
+        }
+        if (this.state.errorsCount != this.state.errorsData.length) {
+          pagesPending.push(
+            fetchJsonWithTimeout("/MigrateContent?reqfreq=high&output=json&status=errors" +
+                  "&index=" + this.state.errorsData.length +
+                  "&size=" + (this.state.errorsCount - this.state.errorsData.length),
+                  PAGE_FETCH_TIMEOUT_MS)
+              .then(
+                (result) => {
+                  // See the matching comment on the finished-page fetch above.
+                  if (this.state.generation != requestGeneration) {
+                    return;
+                  }
+                  this.setState((prevState) => ({
+                    errorsData: addIncrementalPage(prevState.errorsData,
+                                                   result.errors_page,
+                                                   result.errors_index),
+                  }));
+                },
+                (error) => {
+                  console.error("Could not fetch errors page: " + error);
+                }
+              )
+          );
+        }
+
+        Promise.all(pagesPending).then(resolveRoundTrip, resolveRoundTrip);
+      });
     });
   }
 
-  __loadStatus = () => {
-    const prevStartTime = this.state.startTime;
+  // Schedules the next poll delay milliseconds from now, replacing any
+  // already-scheduled one. Only ever called after the previous round trip
+  // (status, plus any finished/errors pages it implied) has fully settled,
+  // so at most one round trip is ever outstanding at a time.
+  __scheduleNextLoad = (delay) => {
+    clearTimeout(this.timeout);
+    this.timeout = setTimeout(this.__loadStatus, delay);
+  }
 
-    fetch("/MigrateContent?reqfreq=high&output=json&status=status")
-      .then(response => response.json())
+  __loadStatus = () => {
+    fetchJsonWithTimeout("/MigrateContent?reqfreq=high&output=json&status=status",
+                         STATUS_FETCH_TIMEOUT_MS)
       .then(
-        (result) => {
-          this.updateStateAfterFetch(result, prevStartTime);
-        },
+        (result) => this.updateStateAfterFetch(result),
         (error) => {
           console.error("Could not fetch status information: " + error);
 
@@ -208,8 +294,12 @@ class AuMigrationStatus extends React.Component {
             delay: 5000,
           });
         }
-      );
-
+      )
+      .finally(() => {
+        if (this.mounted) {
+          this.__scheduleNextLoad(this.state.delay);
+        }
+      });
   }
 
   render() {

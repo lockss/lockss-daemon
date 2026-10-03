@@ -85,7 +85,7 @@ public abstract class AbstractPatternMap<T> {
 	// Find the last occurrence of comma as regexp may contain them
 	int pos = pair.lastIndexOf(',');
 	if (pos < 0) {
-	  throw new IllegalArgumentException("Marformed pattern,val pair; no comma: "
+	  throw new IllegalArgumentException("Malformed pattern,val pair; no comma: "
 					     + pair);
 	}
 	String regexp = pair.substring(0, pos);

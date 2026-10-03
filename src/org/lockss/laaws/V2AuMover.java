@@ -86,6 +86,21 @@ public class V2AuMover {
   static final String PREFIX = MigrationManager.PREFIX;
 
   /**
+   * Spec for regex map specifying the maximum number of CU versions to
+   * migrate, as a function of the AUID
+   */
+  public static final String V2_PARAM_MAX_VERSIONS_AUID_MAP =
+    PREFIX + "maxVersionsAuidMap";
+  public static final List<String> V2_DEFAULT_MAX_VERSIONS_AUID_MAP = null;
+
+  /**
+   * If true, only CUs included by crawl rules will be migrated.
+   * Probably should always be left false */
+  public static final String V2_PARAM_INCLUDED_ONLY =
+    PREFIX + "includedOnly";
+  public static final boolean V2_DEFAULT_INCLUDED_ONLY = false;
+
+  /**
    * User agent that the migrator will use when connecting to V2 services
    */
   public static final String V2_PARAM_USER_AGENT = PREFIX + "user_agent";
@@ -588,6 +603,9 @@ public class V2AuMover {
   private boolean isGenerateTestErrors;
   private boolean isCompareEvenIfVersionMismatch;
 
+  private boolean includedOnly = V2_DEFAULT_INCLUDED_ONLY;
+  private PatternIntMap maxVersionsAuidMap = PatternIntMap.EMPTY;
+
   // Retries and timeouts
   /** the time to wait for a connection before timing out */
   private long connectTimeout;
@@ -705,6 +723,14 @@ public class V2AuMover {
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
     if (changedKeys.contains(PREFIX)) {
+
+      if (changedKeys.contains(V2_PARAM_MAX_VERSIONS_AUID_MAP)) {
+	installMaxVersionsMap((List<String>)config
+                              .getList(V2_PARAM_MAX_VERSIONS_AUID_MAP,
+                                       V2_DEFAULT_MAX_VERSIONS_AUID_MAP));
+      }
+      includedOnly = config.getBoolean(V2_PARAM_INCLUDED_ONLY,
+                                       V2_DEFAULT_INCLUDED_ONLY);
 
       // XXX timeouts take effect only at request start.  Check
       // whether ok to call V2RestClient.setConnectTimeout(), etc. on
@@ -829,6 +855,27 @@ public class V2AuMover {
                                             DEFAULT_INTER_AU_DELAY);
     }
   }
+
+  /**
+   * Set up regex map of auid pattern -> max versions per CU to copy
+   *
+   * @param patternPairs A List<String> with the patterns.
+   */
+  private void installMaxVersionsMap(List<String> patternPairs) {
+    if (patternPairs == null) {
+      log.debug("Installing empty max versions map");
+      maxVersionsAuidMap = PatternIntMap.EMPTY;
+    } else {
+      try {
+        maxVersionsAuidMap = new PatternIntMap(patternPairs);
+	log.debug("Installed max versions map: " + maxVersionsAuidMap);
+      } catch (IllegalArgumentException e) {
+	log.error("Illegal max versions map, ignoring", e);
+	log.error("Max versions map unchanged: " + maxVersionsAuidMap);
+      }
+    }
+  }
+
 
   /** Set up to execute a sequence of migration operations.  Create
    * REST clients, open reports files */
@@ -2083,7 +2130,7 @@ public class V2AuMover {
     auStat.setLatch(Phase.COPY, latch);
     log.debug2("Enqueueing CU copies: " + au.getName());
     // Queue copies for all CUs in the v1 repo.
-    for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
+    for (CachedUrl cu : getCuIterable(au)) {
       if (auStat.isAbort()) {
         break;
       }
@@ -2142,7 +2189,7 @@ public class V2AuMover {
     ArchivalUnit au = auStat.getAu();
     log.debug2("Enqueueing CU verifies: " + au.getName());
     // Queue compares for all CUs in the v1 repo.
-    for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
+    for (CachedUrl cu : getCuIterable(au)) {
       if (auStat.isAbort()) {
         break;
       }
@@ -2260,6 +2307,12 @@ public class V2AuMover {
         throw new IOException("Unable to get AU List from V2 Repository: " + msg);
       }
     }
+  }
+
+  CuIterable getCuIterable(ArchivalUnit au) {
+    CuIterable iter = au.getAuCachedUrlSet().getCuIterable();
+    iter.setIncludedOnly(includedOnly);
+    return iter;
   }
 
   // Here mostly to make stack traces easier to read
@@ -2483,6 +2536,10 @@ public class V2AuMover {
   //////////////////////////////////////////////////////////////////////
   // Accessors
   //////////////////////////////////////////////////////////////////////
+
+  public int getMaxVersions(String auidPat, String url) {
+    return maxVersionsAuidMap.getMatch(auidPat, Integer.MAX_VALUE);
+  }
 
   public boolean isCompareBytes() {
     return isCompareBytes;
@@ -3219,6 +3276,19 @@ public class V2AuMover {
    */
   public List<String> getErrors() {
     return totalCounters.getErrors();
+  }
+
+  /** Number of entries in the error/warning message list.  Used with
+   * {@link #getErrorsPage} for incremental retrieval; see {@link
+   * Counters#getErrorListSize}. */
+  public int getErrorListSize() {
+    return totalCounters.getErrorListSize();
+  }
+
+  /** Return a page of the error/warning message list; see {@link
+   * Counters#getErrorsPage}. */
+  public List<String> getErrorsPage(int index, int size) {
+    return totalCounters.getErrorsPage(index, size);
   }
 
   private void addActiveAu(ArchivalUnit au, AuStatus austat) {
