@@ -1096,6 +1096,19 @@
    
   {
     title <
+      name = Land Systems ;
+      eissn = 3056-3666
+    >
+      attr[journal_id] = ls
+      param[base_url] = https://ls.copernicus.org/
+      param[home_url] = https://www.land-systems.net/
+
+      au < expected ; 2026 ; 2026 ; Land Systems Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
       name = Magnetic Resonance ;
       eissn = 2699-0016
     >
