@@ -1944,7 +1944,7 @@
 
       param[au_oai_set] = phytolbalcan
 
-      au < ready ; exists ; 2025 ; 2025 ; Phytologia Balcanica Volume 2025 ; 2025 ; https://phytolbalcan.arphahub.com/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Phytologia Balcanica Volume 2025 ; 2025 ; https://phytolbalcan.arphahub.com/ ; >
       au < crawling ; exists ; 2026 ; 2026 ; Phytologia Balcanica Volume 2026 ; 2026 ; https://phytolbalcan.arphahub.com/ ; >
 
   }
