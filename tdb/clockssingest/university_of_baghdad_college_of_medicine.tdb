@@ -28,9 +28,9 @@
       au < finished ; manifest ; 2008 ; Journal of the Faculty of Medicine Baghdad Volume 50 ; 50 ; 2008 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; Journal of the Faculty of Medicine Baghdad Volume 51 ; 51 ; 2009 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; Journal of the Faculty of Medicine Baghdad Volume 52 ; 52 ; 2010 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2011 ; Journal of the Faculty of Medicine Baghdad Volume 53 ; 53 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; Journal of the Faculty of Medicine Baghdad Volume 54 ; 54 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; Journal of the Faculty of Medicine Baghdad Volume 55 ; 55 ; 2013 ; >
+      au < finished ; manifest ; 2011 ; Journal of the Faculty of Medicine Baghdad Volume 53 ; 53 ; 2011 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; Journal of the Faculty of Medicine Baghdad Volume 54 ; 54 ; 2012 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; Journal of the Faculty of Medicine Baghdad Volume 55 ; 55 ; 2013 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; Journal of the Faculty of Medicine Baghdad Volume 56 ; 56 ; 2014 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; Journal of the Faculty of Medicine Baghdad Volume 57 ; 57 ; 2015 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; Journal of the Faculty of Medicine Baghdad Volume 58 ; 58 ; 2016 ; reingest3.clockss.org:8083 >
@@ -42,7 +42,7 @@
       au < finished ; manifest ; 2022 ; Journal of the Faculty of Medicine Baghdad Volume 64 ; 64 ; 2022 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Journal of the Faculty of Medicine Baghdad Volume 65 ; 65 ; 2023 ; >
       au < finished ; manifest ; 2024 ; Journal of the Faculty of Medicine Baghdad Volume 66 ; 66 ; 2024 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2025 ; Journal of the Faculty of Medicine Baghdad Volume 67 ; 67 ; 2025 ; > #LXQUEUE-1952, Redirect to login page: https://iqjmc.uobaghdad.edu.iq/index.php/19JFacMedBaghdad36/login?source=%2Findex.php%2F19JFacMedBaghdad36%2Fissue%2Fview%2F163 Redirect from https://iqjmc.uobaghdad.edu.iq/index.php/19JFacMedBaghdad36/issue/view/163
+      au < finished ; manifest ; 2025 ; Journal of the Faculty of Medicine Baghdad Volume 67 ; 67 ; 2025 ; reingest2.clockss.org:8085 > #LXQUEUE-1952, Redirect to login page: https://iqjmc.uobaghdad.edu.iq/index.php/19JFacMedBaghdad36/login?source=%2Findex.php%2F19JFacMedBaghdad36%2Fissue%2Fview%2F163 Redirect from https://iqjmc.uobaghdad.edu.iq/index.php/19JFacMedBaghdad36/issue/view/163
       au < crawling ; exists ; 2026 ; Journal of the Faculty of Medicine Baghdad Volume 68 ; 68 ; 2026 ; > 
 
   }
