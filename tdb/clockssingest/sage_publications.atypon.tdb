@@ -14118,7 +14118,7 @@
       #no longer being published.
 
       au < manifest ; exists ; 2024 ; DNA and Cell Biology Reports Volume 5 ; 5 ; dcba ; https://journals.sagepub.com/ ; >
-      au < exists ; exists ; 2025 ; DNA and Cell Biology Reports Volume 6 ; 6 ; dcba ; https://journals.sagepub.com/ ; >
+      au < manifest ; exists ; 2025 ; DNA and Cell Biology Reports Volume 6 ; 6 ; dcba ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -14134,7 +14134,7 @@
       au < manifest ; exists ; 2021 ; Re:GEN Open Volume 1 ; 1 ; dcbb ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2022 ; Re:GEN Open Volume 2 ; 2 ; dcbb ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2023 ; Re:GEN Open Volume 3 ; 3 ; dcbb ; https://journals.sagepub.com/ ; >
-      au < exists ; exists ; 2023 ; Re:GEN Open Volume 4 ; 4 ; dcbb ; https://journals.sagepub.com/ ; >
+      au < manifest ; exists ; 2023 ; Re:GEN Open Volume 4 ; 4 ; dcbb ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -38127,7 +38127,7 @@
       au < frozen ; exists ; 2023 ; Journal of Neutron Research Volume 25 ; 25 ; jnea ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2024 ; Journal of Neutron Research Volume 26 ; 26 ; jnea ; https://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2025 ; Journal of Neutron Research Volume 27 ; 27 ; jnea ; https://journals.sagepub.com/ ; >
-      au < expected ; exists ; 2026 ; Journal of Neutron Research Volume 28 ; 28 ; jnea ; https://journals.sagepub.com/ ; >
+      au < manifest ; exists ; 2026 ; Journal of Neutron Research Volume 28 ; 28 ; jnea ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -58067,7 +58067,7 @@
       au < deepCrawl ; exists ; 2023 ; South Asia Economic Journal Volume 24 ; 24 ; saea ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; South Asia Economic Journal Volume 25 ; 25 ; saea ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; South Asia Economic Journal Volume 26 ; 26 ; saea ; https://journals.sagepub.com/ ; >
-      au < expected ; exists ; 2026 ; South Asia Economic Journal Volume 27 ; 27 ; saea ; https://journals.sagepub.com/ ; >
+      au < manifest ; exists ; 2026 ; South Asia Economic Journal Volume 27 ; 27 ; saea ; https://journals.sagepub.com/ ; >
 
   }
 
