@@ -306,7 +306,7 @@
     au < doNotProcess ; 2007 ; Biomarkers in Medicine Volume 1 ; 1 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2008 ; Biomarkers in Medicine Volume 2 ; 2 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2009 ; Biomarkers in Medicine Volume 3 ; 3 ; https://www.tandfonline.com/ >
-    au < doNotProcess ; 2010 ; Biomarkers in Medicine Volume 4 ; 4 ; https://www.tandfonline.com/ >
+    au < exists ; 2010 ; Biomarkers in Medicine Volume 4 ; 4 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2011 ; Biomarkers in Medicine Volume 5 ; 5 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2012 ; Biomarkers in Medicine Volume 6 ; 6 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2013 ; Biomarkers in Medicine Volume 7 ; 7 ; https://www.tandfonline.com/ >
@@ -576,7 +576,7 @@
     au < released ; 2008 ; Future Oncology Volume 4 ; 4 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2009 ; Future Oncology Volume 5 ; 5 ; https://www.tandfonline.com/ >
     au < released ; 2010 ; Future Oncology Volume 6 ; 6 ; https://www.tandfonline.com/ >
-    au < doNotProcess ; 2011 ; Future Oncology Volume 7 ; 7 ; https://www.tandfonline.com/ >
+    au < exists ; 2011 ; Future Oncology Volume 7 ; 7 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2012 ; Future Oncology Volume 8 ; 8 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2013 ; Future Oncology Volume 9 ; 9 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2014 ; Future Oncology Volume 10 ; 10 ; https://www.tandfonline.com/ >
@@ -722,7 +722,7 @@
     au < doNotProcess ; 2012 ; Immunotherapy Volume 4 ; 4 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2013 ; Immunotherapy Volume 5 ; 5 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2014 ; Immunotherapy Volume 6 ; 6 ; https://www.tandfonline.com/ >
-    au < doNotProcess ; 2015 ; Immunotherapy Volume 7 ; 7 ; https://www.tandfonline.com/ >
+    au < exists ; 2015 ; Immunotherapy Volume 7 ; 7 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2016 ; Immunotherapy Volume 8 ; 8 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2017 ; Immunotherapy Volume 9 ; 9 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2018 ; Immunotherapy Volume 10 ; 10 ; https://www.tandfonline.com/ >
