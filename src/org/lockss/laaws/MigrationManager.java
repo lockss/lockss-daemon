@@ -364,7 +364,7 @@ public class MigrationManager extends BaseLockssDaemonManager
   public synchronized void startRunner(List<V2AuMover.Args> args)
       throws IOException, IllegalStateException {
     if (isRunning()) {
-      throw new IllegalStateException("Migration is already running, can't start a new one");
+      throw new IllegalStateException("Migrator is already running, can't start a new one");
     }
     startTime = TimeBase.nowMs();
     generation++;
@@ -376,15 +376,22 @@ public class MigrationManager extends BaseLockssDaemonManager
 
   public synchronized void abortCopy(String reason) throws IOException {
     if (!isRunning()) {
-      throw new IllegalStateException("Not running");
+      throw new IllegalStateException("Migrator is not running");
     }
     mover.abortCopy(reason);
+  }
+
+  public synchronized void stopCopy(String reason) throws IOException {
+    if (!isRunning()) {
+      throw new IllegalStateException("Migrator is not running");
+    }
+    mover.stopCopy(reason);
   }
 
   public void resetAllMigrationState()
       throws IllegalStateException, IOException{
     if (isRunning()) {
-      throw new IllegalStateException("Migration state cannot be reset while migration is running.  Please abort the current operation first.");
+      throw new IllegalStateException("Migration state cannot be reset while migrator is running.  Please abort the current operation first.");
     }
     for (ArchivalUnit au : pluginMgr.getAllAus()) {
       AuState aus = AuUtil.getAuState(au);

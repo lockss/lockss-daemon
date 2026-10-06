@@ -185,7 +185,7 @@ public class V2AuMover {
    */
   public static final String PARAM_COPY_ITER_EXECUTOR_SPEC =
     EXEC_PREFIX + "copyIter.spec";
-  public static final String DEFAULT_COPY_ITER_EXECUTOR_SPEC = "2;10";
+  public static final String DEFAULT_COPY_ITER_EXECUTOR_SPEC = "1;10";
 
   /**
    * Retry CU iterators run in this Executor.  Separate from
@@ -642,7 +642,9 @@ public class V2AuMover {
 
   private boolean failed = false;
   private boolean globalAbort = false;
+  private boolean globalStop = false;
   private String abortReason = null;
+  private String stopReason = null;
 
   ConfigManager cfgManager;
   PluginManager pluginManager;
@@ -1111,6 +1113,12 @@ public class V2AuMover {
     globalAbort = true;
   }
 
+  public void stopCopy(String reason) {
+    log.info("Stop requested: " + reason);
+    stopReason = reason;
+    globalStop = true;
+  }
+
   private void waitUntilDone() {
     try {
       // Wait until last AU finishes
@@ -1253,7 +1261,7 @@ public class V2AuMover {
     List<Map.Entry<String, LinkedHashSet<String>>> remaining =
         new ArrayList<>(auMoveQueueByPlugin.entrySet());
     int restartAttempts = 0;
-    while (!remaining.isEmpty() && !isAbort()) {
+    while (!remaining.isEmpty() && !isAbort() && !isStop()) {
       boolean processedSome = false;
       for (Iterator<Map.Entry<String, LinkedHashSet<String>>> it =
                remaining.iterator(); it.hasNext(); ) {
@@ -1303,7 +1311,8 @@ public class V2AuMover {
     BatchLockToken token = new BatchLockToken(pkey, lock);
     try {
       for (String auid : auids) {
-        if (isAbort()) {
+        // If stop or abort requested, skip remaining AUs in this batch
+        if (isAbort() || isStop()) {
           break;
         }
         ArchivalUnit au = pluginManager.getAuFromId(auid);
@@ -1311,8 +1320,6 @@ public class V2AuMover {
           log.warning("AU has been deleted/deactivated: " + auid);
           continue;
         }
-        token.increment();
-        ausLatch.countUp();
         moveAu(au, token);
       }
     } finally {
@@ -1506,6 +1513,8 @@ public class V2AuMover {
   protected void moveAu(ArchivalUnit au, BatchLockToken token) {
     log.debug2("Starting " + au.getName());
     interAuDelay();
+    token.increment();
+    ausLatch.countUp();
     AuStatus auStat = new AuStatus(this, au);
     auStat.setBatchToken(token);
     auStat.getCounters().setParent(totalCounters);
@@ -2932,6 +2941,13 @@ public class V2AuMover {
         return "Aborted";
       }
     }
+    if (isStop()) {
+      if (!StringUtil.isNullString(stopReason)) {
+        return stopReason;
+      } else {
+        return "Stopped";
+      }
+    }
     if (hasBeenStarted) {
       if (isFailed()) {
         return "Failed";
@@ -3167,6 +3183,10 @@ public class V2AuMover {
 
   public boolean isAbort() {
     return globalAbort;
+  }
+
+  public boolean isStop() {
+    return globalStop;
   }
 
   /**
@@ -3428,10 +3448,27 @@ public class V2AuMover {
     }
   }
 
+  String addOptionalReason(String type, String msg) {
+    if (StringUtil.isNullString(msg)) {
+      return type;
+    }
+    return type + " (" + msg + ")";
+  }
+
+  String endStatus() {
+    if (isAbort()) {
+      return addOptionalReason("Aborted", abortReason);
+    }
+    if (isStop()) {
+      return addOptionalReason("Stopped", stopReason);
+    }
+    return "Finished";
+  }
+
   void closeReport(PrintWriter writer, String now) {
     if (writer != null) {
       writer.println("--------------------------------------------------");
-      writer.println((isAbort() ? "Aborted" : "Finished") + " with " +
+      writer.println(endStatus() + " with " +
                      StringUtil.bigNumberOfUnits(totalTimers.getErrorCount(),
                                                  "error") +
                      " at " + now);

@@ -139,7 +139,7 @@ class AuMigrationStatus extends React.Component {
   disableSomeButtons() {
     console.log("disableSomeButtons: " + this.state.running);
     for (const e of document.querySelectorAll("input[type='submit'],input[type='button'],button[type='submit']")) {
-      if (e.value == "Abort") {
+      if (e.value == "Abort" || e.value == "Stop") {
         this.disableIfRunning = false;
       } else {
         this.disableIfRunning = true;
