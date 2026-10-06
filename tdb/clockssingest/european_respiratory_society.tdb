@@ -159,7 +159,7 @@
     }
     {
       param[journal_id] = erj
-      au < ers.ClockssERSScolarisPlugin ; ready ; exists ; 1988 ; European Respiratory Journal Volume 1 ; 1 ; https://publications.ersnet.org/ ; >
+      au < ers.ClockssERSScolarisPlugin ; crawling ; exists ; 1988 ; European Respiratory Journal Volume 1 ; 1 ; https://publications.ersnet.org/ ; >
       au < ers.ClockssERSScolarisPlugin ; manifest ; exists ; 1989 ; European Respiratory Journal Volume 2 ; 2 ; https://publications.ersnet.org/ ; >
       au < ers.ClockssERSScolarisPlugin ; manifest ; exists ; 1990 ; European Respiratory Journal Volume 3 ; 3 ; https://publications.ersnet.org/ ; >
       au < ers.ClockssERSScolarisPlugin ; manifest ; exists ; 1991 ; European Respiratory Journal Volume 4 ; 4 ; https://publications.ersnet.org/ ; >
