@@ -14242,7 +14242,7 @@
       #no longer being published.
 
       au < manifest ; 2024 ; DNA and Cell Biology Reports Volume 5 ; 5 ; dcba ; https://journals.sagepub.com/ >
-      au < exists ; 2025 ; DNA and Cell Biology Reports Volume 6 ; 6 ; dcba ; https://journals.sagepub.com/ >
+      au < manifest ; 2025 ; DNA and Cell Biology Reports Volume 6 ; 6 ; dcba ; https://journals.sagepub.com/ >
 
   }
 
@@ -14258,7 +14258,7 @@
       au < manifest ; 2021 ; Re:GEN Open Volume 1 ; 1 ; dcbb ; https://journals.sagepub.com/ >
       au < manifest ; 2022 ; Re:GEN Open Volume 2 ; 2 ; dcbb ; https://journals.sagepub.com/ >
       au < manifest ; 2023 ; Re:GEN Open Volume 3 ; 3 ; dcbb ; https://journals.sagepub.com/ >
-      au < exists ; 2023 ; Re:GEN Open Volume 4 ; 4 ; dcbb ; https://journals.sagepub.com/ >
+      au < manifest ; 2023 ; Re:GEN Open Volume 4 ; 4 ; dcbb ; https://journals.sagepub.com/ >
 
   }
 
@@ -19090,7 +19090,7 @@
         au < released ; 2025 ; Feminist Review Volume 141 ; 141 ; fera ; https://journals.sagepub.com/ >
         au < manifest ; 2026 ; Feminist Review Volume 142 ; 142 ; fera ; https://journals.sagepub.com/ >
         au < manifest ; 2026 ; Feminist Review Volume 143 ; 143 ; fera ; https://journals.sagepub.com/ >
-        au < expected ; 2026 ; Feminist Review Volume 144 ; 144 ; fera ; https://journals.sagepub.com/ >
+        au < manifest ; 2026 ; Feminist Review Volume 144 ; 144 ; fera ; https://journals.sagepub.com/ >
 
     }
 
@@ -58480,7 +58480,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2023 ; South Asia Economic Journal Volume 24 ; 24 ; saea ; https://journals.sagepub.com/ >
         au < released ; 2024 ; South Asia Economic Journal Volume 25 ; 25 ; saea ; https://journals.sagepub.com/ >
         au < released ; 2025 ; South Asia Economic Journal Volume 26 ; 26 ; saea ; https://journals.sagepub.com/ >
-        au < expected ; 2026 ; South Asia Economic Journal Volume 27 ; 27 ; saea ; https://journals.sagepub.com/ >
+        au < manifest ; 2026 ; South Asia Economic Journal Volume 27 ; 27 ; saea ; https://journals.sagepub.com/ >
 
     }
 
