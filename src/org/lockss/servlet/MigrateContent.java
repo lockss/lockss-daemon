@@ -116,6 +116,7 @@ public class MigrateContent extends LockssServlet {
 
   public static final String ACTION_START= "Start";
   public static final String ACTION_ABORT= "Abort";
+  public static final String ACTION_STOP= "Stop";
   public static final String ACTION_COPY_DB= "CopyDb";
   public static final String ACTION_COPY_CONFIG= "CopyConfig";
 
@@ -288,6 +289,8 @@ public class MigrateContent extends LockssServlet {
         }
       } else if (ACTION_ABORT.equals(action)) {
         doAbort();
+      } else if (ACTION_STOP.equals(action)) {
+        doStop();
       } else if (ACTION_COPY_DB.equals(action)) {
         doCopyDb();
       } else if (ACTION_COPY_CONFIG.equals(action)) {
@@ -542,6 +545,16 @@ public class MigrateContent extends LockssServlet {
     }
   }
 
+  private void doStop() {
+    try {
+      migrationMgr.stopCopy("Stopped due to user request");
+      statusMsg = "Stop requested";
+    } catch (Exception e) {
+      log.error("Couldn't stop", e);
+      errMsg = "Couldn't stop: " + e.getMessage();
+    }
+  }
+
   ArchivalUnit getAu() {
     if (StringUtil.isNullString(auid)) {
       errMsg = "No AU selected";
@@ -634,6 +647,11 @@ public class MigrateContent extends LockssServlet {
     String lbl = migrationMgr.isDryRun() ?
         "Start Dry Run Migration" : "Start Migration";
     ServletUtil.layoutSubmitButton(this, tbl, KEY_ACTION, ACTION_START, lbl, false, false);
+    Input stop = new Input(Input.Submit, KEY_ACTION, ACTION_STOP);
+    stop.attribute("onclick",
+                    "return confirm(\"Do you really want to stop?\");");
+    tbl.add(BUTTON_SPACE);
+    tbl.add(stop);
     Input abort = new Input(Input.Submit, KEY_ACTION, ACTION_ABORT);
     abort.attribute("onclick",
                     "return confirm(\"Do you really want to abort?\");");
