@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>17</string>
+        <string>18</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -151,7 +151,7 @@ POSSIBILITY OF SUCH DAMAGE.
             https://pubs.geoscienceworld.org/gsa/books/edited-volume/2377/Recent-Advancement-in-Geoinformatics-and-Data
             -->
             <string>1,"%s([^/]+/)?(books|edited-volume|monograph|ebooks)(/[^/]+)?(/[^/]+)?/(chapter|book)(-pdf)?/.*", base_url</string>
-            <string>1,"%s([a-z]+/)books/(books|edited-volume|monograph|ebooks)(/[1-9]+)(/[^/]+)$", base_url</string>
+            <string>1,"%s([^/]+/)?books/(book|edited-volume|monograph|ebooks)/[0-9]+/[^/?]+$", base_url</string>
             <string>1,"%sbooks/(book|edited-volume|monograph|ebooks)/[0-9]+/[^/?]+$", base_url</string>
             <string>1,"%sbooks/(book|edited-volume|monograph|ebooks|monograph)-pdf/[0-9]+/[^/?]+\.pdf$", base_url</string>
         </list>
