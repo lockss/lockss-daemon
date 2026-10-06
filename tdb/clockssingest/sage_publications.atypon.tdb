@@ -80,7 +80,7 @@
       #param[journal_id] = aca
 
       au < ready ; exists ; 1997 ; About Campus Volume 1 ; 1 ; acaa ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1998 ; About Campus Volume 2 ; 2 ; acaa ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1998 ; About Campus Volume 2 ; 2 ; acaa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1999 ; About Campus Volume 3 ; 3 ; acaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; About Campus Volume 4 ; 4 ; acaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2001 ; About Campus Volume 5 ; 5 ; acaa ; https://journals.sagepub.com/ ; >
@@ -129,7 +129,7 @@
       au < frozen ; exists ; 1974 ; Abstracts in Anthropology Volume 5 ; 5 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1975 ; Abstracts in Anthropology Volume 6 ; 6 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1978 ; Abstracts in Anthropology Volume 7 ; 7 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1981 ; Abstracts in Anthropology Volume 8 ; 8 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1981 ; Abstracts in Anthropology Volume 8 ; 8 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1982 ; Abstracts in Anthropology Volume 9 ; 9 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1983 ; Abstracts in Anthropology Volume 10 ; 10 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1984 ; Abstracts in Anthropology Volume 11 ; 11 ; aaxa ; https://journals.sagepub.com/ ; >
@@ -149,7 +149,7 @@
       au < ready ; exists ; 1992 ; Abstracts in Anthropology Volume 25 ; 25 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1993 ; Abstracts in Anthropology Volume 26 ; 26 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1993 ; Abstracts in Anthropology Volume 27 ; 27 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1994 ; Abstracts in Anthropology Volume 28 ; 28 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1994 ; Abstracts in Anthropology Volume 28 ; 28 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1994 ; Abstracts in Anthropology Volume 29 ; 29 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1995 ; Abstracts in Anthropology Volume 30 ; 30 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1995 ; Abstracts in Anthropology Volume 31 ; 31 ; aaxa ; https://journals.sagepub.com/ ; >
@@ -163,7 +163,7 @@
       au < frozen ; exists ; 1999 ; Abstracts in Anthropology Volume 39 ; 39 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Abstracts in Anthropology Volume 40 ; 40 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Abstracts in Anthropology Volume 41 ; 41 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2001 ; Abstracts in Anthropology Volume 42 ; 42 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2001 ; Abstracts in Anthropology Volume 42 ; 42 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2001 ; Abstracts in Anthropology Volume 43 ; 43 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Abstracts in Anthropology Volume 44 ; 44 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Abstracts in Anthropology Volume 45 ; 45 ; aaxa ; https://journals.sagepub.com/ ; >
@@ -272,7 +272,7 @@
       au < ready ; exists ; 1966 ; Acta Sociologica Volume 9 ; 9 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1967 ; Acta Sociologica Volume 10 ; 10 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1968 ; Acta Sociologica Volume 11 ; 11 ; asja ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1969 ; Acta Sociologica Volume 12 ; 12 ; asja ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1969 ; Acta Sociologica Volume 12 ; 12 ; asja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1970 ; Acta Sociologica Volume 13 ; 13 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1971 ; Acta Sociologica Volume 14 ; 14 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1972 ; Acta Sociologica Volume 15 ; 15 ; asja ; https://journals.sagepub.com/ ; >
@@ -281,7 +281,7 @@
       au < ready ; exists ; 1975 ; Acta Sociologica Volume 18 ; 18 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1976 ; Acta Sociologica Volume 19 ; 19 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1977 ; Acta Sociologica Volume 20 ; 20 ; asja ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1978 ; Acta Sociologica Volume 21 ; 21 ; asja ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1978 ; Acta Sociologica Volume 21 ; 21 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1979 ; Acta Sociologica Volume 22 ; 22 ; asja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1980 ; Acta Sociologica Volume 23 ; 23 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1981 ; Acta Sociologica Volume 24 ; 24 ; asja ; https://journals.sagepub.com/ ; >
@@ -530,10 +530,10 @@
       au < ready ; exists ; 1992 ; Acupuncture in Medicine Volume 10 ; 10 ; aima ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1993 ; Acupuncture in Medicine Volume 11 ; 11 ; aima ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1994 ; Acupuncture in Medicine Volume 12 ; 12 ; aima ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1995 ; Acupuncture in Medicine Volume 13 ; 13 ; aima ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1995 ; Acupuncture in Medicine Volume 13 ; 13 ; aima ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1996 ; Acupuncture in Medicine Volume 14 ; 14 ; aima ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1997 ; Acupuncture in Medicine Volume 15 ; 15 ; aima ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1998 ; Acupuncture in Medicine Volume 16 ; 16 ; aima ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1998 ; Acupuncture in Medicine Volume 16 ; 16 ; aima ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1999 ; Acupuncture in Medicine Volume 17 ; 17 ; aima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Acupuncture in Medicine Volume 18 ; 18 ; aima ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2001 ; Acupuncture in Medicine Volume 19 ; 19 ; aima ; https://journals.sagepub.com/ ; >
@@ -575,7 +575,7 @@
 
       #param[base_url] = http://adb.sagepub.com/
 
-      au < crawling ; exists ; 1992 ; Adaptive Behavior Volume 1 ; 1 ; adba ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1992 ; Adaptive Behavior Volume 1 ; 1 ; adba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1993 ; Adaptive Behavior Volume 2 ; 2 ; adba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1994 ; Adaptive Behavior Volume 3 ; 3 ; adba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1995 ; Adaptive Behavior Volume 4 ; 4 ; adba ; https://journals.sagepub.com/ ; >
@@ -645,7 +645,7 @@
       au < ready ; exists ; 1977-1978 ; Administration & Society Volume 9 ; 9 ; aasb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1978-1979 ; Administration & Society Volume 10 ; 10 ; aasb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1979-1980 ; Administration & Society Volume 11 ; 11 ; aasb ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1980-1981 ; Administration & Society Volume 12 ; 12 ; aasb ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1980-1981 ; Administration & Society Volume 12 ; 12 ; aasb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1981-1982 ; Administration & Society Volume 13 ; 13 ; aasb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1982-1983 ; Administration & Society Volume 14 ; 14 ; aasb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1983-1984 ; Administration & Society Volume 15 ; 15 ; aasb ; https://journals.sagepub.com/ ; >
@@ -659,7 +659,7 @@
       au < frozen ; exists ; 1991-1992 ; Administration & Society Volume 23 ; 23 ; aasb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1992-1993 ; Administration & Society Volume 24 ; 24 ; aasb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1993-1994 ; Administration & Society Volume 25 ; 25 ; aasb ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1994-1995 ; Administration & Society Volume 26 ; 26 ; aasb ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1994-1995 ; Administration & Society Volume 26 ; 26 ; aasb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1995-1996 ; Administration & Society Volume 27 ; 27 ; aasb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1996-1997 ; Administration & Society Volume 28 ; 28 ; aasb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1997-1998 ; Administration & Society Volume 29 ; 29 ; aasb ; https://journals.sagepub.com/ ; >
@@ -930,7 +930,7 @@
       au < crawling ; exists ; 1972-1973 ; Adult Education Volume 23 ; 23 ; aeqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1973-1974 ; Adult Education Volume 24 ; 24 ; aeqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1974-1975 ; Adult Education Volume 25 ; 25 ; aeqa ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1975-1976 ; Adult Education Volume 26 ; 26 ; aeqa ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1975-1976 ; Adult Education Volume 26 ; 26 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1976-1977 ; Adult Education Volume 27 ; 27 ; aeqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1977-1978 ; Adult Education Volume 28 ; 28 ; aeqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1978-1979 ; Adult Education Volume 29 ; 29 ; aeqa ; https://journals.sagepub.com/ ; >
@@ -961,7 +961,7 @@
       au < ready ; exists ; 1990-1991 ; Adult Education Quarterly Volume 41 ; 41 ; aeqb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1992-1992 ; Adult Education Quarterly Volume 42 ; 42 ; aeqb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1992-1993 ; Adult Education Quarterly Volume 43 ; 43 ; aeqb ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1993-1994 ; Adult Education Quarterly Volume 44 ; 44 ; aeqb ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1993-1994 ; Adult Education Quarterly Volume 44 ; 44 ; aeqb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1994-1995 ; Adult Education Quarterly Volume 45 ; 45 ; aeqb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1995-1996 ; Adult Education Quarterly Volume 46 ; 46 ; aeqb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1996-1997 ; Adult Education Quarterly Volume 47 ; 47 ; aeqb ; https://journals.sagepub.com/ ; >
@@ -1091,7 +1091,7 @@
 
       au < ready ; exists ; 1999 ; Advances in Developing Human Resources Volume 1 ; 1 ; adha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Advances in Developing Human Resources Volume 2 ; 2 ; adha ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2001 ; Advances in Developing Human Resources Volume 3 ; 3 ; adha ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2001 ; Advances in Developing Human Resources Volume 3 ; 3 ; adha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Advances in Developing Human Resources Volume 4 ; 4 ; adha ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2003 ; Advances in Developing Human Resources Volume 5 ; 5 ; adha ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2004 ; Advances in Developing Human Resources Volume 6 ; 6 ; adha ; https://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
@@ -1223,7 +1223,7 @@
       au < ready ; exists ; 1986 ; Affilia Volume 1 ; 1 ; affa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1987 ; Affilia Volume 2 ; 2 ; affa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1988 ; Affilia Volume 3 ; 3 ; affa ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1989 ; Affilia Volume 4 ; 4 ; affa ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1989 ; Affilia Volume 4 ; 4 ; affa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1990 ; Affilia Volume 5 ; 5 ; affa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1991 ; Affilia Volume 6 ; 6 ; affa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1992 ; Affilia Volume 7 ; 7 ; affa ; https://journals.sagepub.com/ ; >
@@ -1459,7 +1459,7 @@
       #journal_id = AID
       #continued_by = 0889-2229
 
-      au < crawling ; exists ; 1983 ; AIDS Research Volume 1 ; 1 ; aidb ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1983 ; AIDS Research Volume 1 ; 1 ; aidb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1986 ; AIDS Research Volume 2 ; 2 ; aidb ; https://journals.sagepub.com/ ; >
 
   }
@@ -1474,7 +1474,7 @@
       #journal_id = AID
       #continues = 0737-6006
 
-      au < crawling ; exists ; 1987 ; AIDS Research and Human Retroviruses Volume 3 ; 3 ; aida ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1987 ; AIDS Research and Human Retroviruses Volume 3 ; 3 ; aida ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1988 ; AIDS Research and Human Retroviruses Volume 4 ; 4 ; aida ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1989 ; AIDS Research and Human Retroviruses Volume 5 ; 5 ; aida ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1990 ; AIDS Research and Human Retroviruses Volume 6 ; 6 ; aida ; https://journals.sagepub.com/ ; >
@@ -1488,7 +1488,7 @@
       au < ready ; exists ; 1998 ; AIDS Research and Human Retroviruses Volume 14 ; 14 ; aida ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1999 ; AIDS Research and Human Retroviruses Volume 15 ; 15 ; aida ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2000 ; AIDS Research and Human Retroviruses Volume 16 ; 16 ; aida ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2001 ; AIDS Research and Human Retroviruses Volume 17 ; 17 ; aida ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2001 ; AIDS Research and Human Retroviruses Volume 17 ; 17 ; aida ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; AIDS Research and Human Retroviruses Volume 18 ; 18 ; aida ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; AIDS Research and Human Retroviruses Volume 19 ; 19 ; aida ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2004 ; AIDS Research and Human Retroviruses Volume 20 ; 20 ; aida ; https://journals.sagepub.com/ ; >
@@ -1702,7 +1702,7 @@
 
       au < ready ; exists ; 1999 ; Alternatives to Laboratory Animals Volume 27 ; 27 ; atla ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Alternatives to Laboratory Animals Volume 28 ; 28 ; atla ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2001 ; Alternatives to Laboratory Animals Volume 29 ; 29 ; atla ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2001 ; Alternatives to Laboratory Animals Volume 29 ; 29 ; atla ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Alternatives to Laboratory Animals Volume 30 ; 30 ; atla ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2003 ; Alternatives to Laboratory Animals Volume 31 ; 31 ; atla ; https://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2004 ; Alternatives to Laboratory Animals Volume 32 ; 32 ; atla ; https://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
@@ -2473,7 +2473,7 @@
       au < manifest ; exists ; 1998 ; American Journal of Medical Quality Volume 13 ; 13 ; ajmb ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 1999 ; American Journal of Medical Quality Volume 14 ; 14 ; ajmb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; American Journal of Medical Quality Volume 15 ; 15 ; ajmb ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2001 ; American Journal of Medical Quality Volume 16 ; 16 ; ajmb ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2001 ; American Journal of Medical Quality Volume 16 ; 16 ; ajmb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; American Journal of Medical Quality Volume 17 ; 17 ; ajmb ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2003 ; American Journal of Medical Quality Volume 18 ; 18 ; ajmb ; https://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2004 ; American Journal of Medical Quality Volume 19 ; 19 ; ajmb ; https://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
@@ -3672,7 +3672,7 @@
       au < frozen ; exists ; 2000 ; The Annals of the American Academy of Political and Social Science Volume 572 ; 572 ; anna ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2001 ; The Annals of the American Academy of Political and Social Science Volume 573 ; 573 ; anna ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2001 ; The Annals of the American Academy of Political and Social Science Volume 574 ; 574 ; anna ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2001 ; The Annals of the American Academy of Political and Social Science Volume 575 ; 575 ; anna ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2001 ; The Annals of the American Academy of Political and Social Science Volume 575 ; 575 ; anna ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2001 ; The Annals of the American Academy of Political and Social Science Volume 576 ; 576 ; anna ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2001 ; The Annals of the American Academy of Political and Social Science Volume 577 ; 577 ; anna ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2001 ; The Annals of the American Academy of Political and Social Science Volume 578 ; 578 ; anna ; https://journals.sagepub.com/ ; >
@@ -4159,21 +4159,21 @@
       au < manifest ; exists ; 2009 ; Antioxidants & Redox Signaling Volume 11 ; 11 ; area ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2010 ; Antioxidants & Redox Signaling Volume 12 ; 12 ; area ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2010 ; Antioxidants & Redox Signaling Volume 13 ; 13 ; area ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2011 ; Antioxidants & Redox Signaling Volume 14 ; 14 ; area ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2011 ; Antioxidants & Redox Signaling Volume 14 ; 14 ; area ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2011 ; Antioxidants & Redox Signaling Volume 15 ; 15 ; area ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2012 ; Antioxidants & Redox Signaling Volume 16 ; 16 ; area ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2012 ; Antioxidants & Redox Signaling Volume 17 ; 17 ; area ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2013 ; Antioxidants & Redox Signaling Volume 18 ; 18 ; area ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2013 ; Antioxidants & Redox Signaling Volume 19 ; 19 ; area ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2014 ; Antioxidants & Redox Signaling Volume 20 ; 20 ; area ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2014 ; Antioxidants & Redox Signaling Volume 21 ; 21 ; area ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2014 ; Antioxidants & Redox Signaling Volume 21 ; 21 ; area ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2015 ; Antioxidants & Redox Signaling Volume 22 ; 22 ; area ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2015 ; Antioxidants & Redox Signaling Volume 23 ; 23 ; area ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2016 ; Antioxidants & Redox Signaling Volume 24 ; 24 ; area ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2016 ; Antioxidants & Redox Signaling Volume 25 ; 25 ; area ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2017 ; Antioxidants & Redox Signaling Volume 26 ; 26 ; area ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2017 ; Antioxidants & Redox Signaling Volume 27 ; 27 ; area ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2018 ; Antioxidants & Redox Signaling Volume 28 ; 28 ; area ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2018 ; Antioxidants & Redox Signaling Volume 28 ; 28 ; area ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2018 ; Antioxidants & Redox Signaling Volume 29 ; 29 ; area ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Antioxidants & Redox Signaling Volume 30 ; 30 ; area ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Antioxidants & Redox Signaling Volume 31 ; 31 ; area ; https://journals.sagepub.com/ ; >
@@ -5391,7 +5391,7 @@
       au < manifest ; exists ; 2007 ; Astrobiology Volume 7 ; 7 ; asba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2008 ; Astrobiology Volume 8 ; 8 ; asba ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2009 ; Astrobiology Volume 9 ; 9 ; asba ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2010 ; Astrobiology Volume 10 ; 10 ; asba ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2010 ; Astrobiology Volume 10 ; 10 ; asba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2011 ; Astrobiology Volume 11 ; 11 ; asba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2012 ; Astrobiology Volume 12 ; 12 ; asba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2013 ; Astrobiology Volume 13 ; 13 ; asba ; https://journals.sagepub.com/ ; >
@@ -6105,7 +6105,7 @@
       #continued_by = 2168-023X
 
       au < ready ; exists ; 2016 ; Bariatric Nursing and Surgical Patient Care Volume 1 ; 1 ; barb ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2017 ; Bariatric Nursing and Surgical Patient Care Volume 2 ; 2 ; barb ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2017 ; Bariatric Nursing and Surgical Patient Care Volume 2 ; 2 ; barb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2018 ; Bariatric Nursing and Surgical Patient Care Volume 3 ; 3 ; barb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Bariatric Nursing and Surgical Patient Care Volume 4 ; 4 ; barb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Bariatric Nursing and Surgical Patient Care Volume 5 ; 5 ; barb ; https://journals.sagepub.com/ ; >
@@ -6662,12 +6662,12 @@
       au < manifest ; exists ; 2009 ; Biopreservation and Biobanking Volume 7 ; 7 ; bpba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2010 ; Biopreservation and Biobanking Volume 8 ; 8 ; bpba ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2011 ; Biopreservation and Biobanking Volume 9 ; 9 ; bpba ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2012 ; Biopreservation and Biobanking Volume 10 ; 10 ; bpba ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2012 ; Biopreservation and Biobanking Volume 10 ; 10 ; bpba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2013 ; Biopreservation and Biobanking Volume 11 ; 11 ; bpba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2014 ; Biopreservation and Biobanking Volume 12 ; 12 ; bpba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2015 ; Biopreservation and Biobanking Volume 13 ; 13 ; bpba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2016 ; Biopreservation and Biobanking Volume 14 ; 14 ; bpba ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2017 ; Biopreservation and Biobanking Volume 15 ; 15 ; bpba ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2017 ; Biopreservation and Biobanking Volume 15 ; 15 ; bpba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2018 ; Biopreservation and Biobanking Volume 16 ; 16 ; bpba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Biopreservation and Biobanking Volume 17 ; 17 ; bpba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Biopreservation and Biobanking Volume 18 ; 18 ; bpba ; https://journals.sagepub.com/ ; >
@@ -6824,7 +6824,7 @@
       au < frozen ; exists ; 2012 ; Biotechnology Law Report Volume 31 ; 31 ; blra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2013 ; Biotechnology Law Report Volume 32 ; 32 ; blra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2014 ; Biotechnology Law Report Volume 33 ; 33 ; blra ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2015 ; Biotechnology Law Report Volume 34 ; 34 ; blra ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2015 ; Biotechnology Law Report Volume 34 ; 34 ; blra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2016 ; Biotechnology Law Report Volume 35 ; 35 ; blra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2017 ; Biotechnology Law Report Volume 36 ; 36 ; blra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2018 ; Biotechnology Law Report Volume 37 ; 37 ; blra ; https://journals.sagepub.com/ ; >
@@ -8776,7 +8776,7 @@
       #journal_id = CCB
 
       au < ready ; exists ; 2016 ; Cannabis & Cannabinoid Research Volume 1 ; 1 ; ccba ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2017 ; Cannabis & Cannabinoid Research Volume 2 ; 2 ; ccba ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2017 ; Cannabis & Cannabinoid Research Volume 2 ; 2 ; ccba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2018 ; Cannabis & Cannabinoid Research Volume 3 ; 3 ; ccba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Cannabis & Cannabinoid Research Volume 4 ; 4 ; ccba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Cannabis & Cannabinoid Research Volume 5 ; 5 ; ccba ; https://journals.sagepub.com/ ; >
@@ -9452,7 +9452,7 @@
       au < ready ; exists ; 2015 ; Childhood Obesity Volume 11 ; 11 ; cdoa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2016 ; Childhood Obesity Volume 12 ; 12 ; cdoa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Childhood Obesity Volume 13 ; 13 ; cdoa ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2018 ; Childhood Obesity Volume 14 ; 14 ; cdoa ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2018 ; Childhood Obesity Volume 14 ; 14 ; cdoa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Childhood Obesity Volume 15 ; 15 ; cdoa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Childhood Obesity Volume 16 ; 16 ; cdoa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Childhood Obesity Volume 17 ; 17 ; cdoa ; https://journals.sagepub.com/ ; >
@@ -10524,7 +10524,7 @@
       au < manifest ; exists ; 2015 ; Clinical Thyroidology Volume 27 ; 27 ; ctha ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Clinical Thyroidology Volume 28 ; 28 ; ctha ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Clinical Thyroidology Volume 29 ; 29 ; ctha ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2018 ; Clinical Thyroidology Volume 30 ; 30 ; ctha ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2018 ; Clinical Thyroidology Volume 30 ; 30 ; ctha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Clinical Thyroidology Volume 31 ; 31 ; ctha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Clinical Thyroidology Volume 32 ; 32 ; ctha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Clinical Thyroidology Volume 33 ; 33 ; ctha ; https://journals.sagepub.com/ ; >
