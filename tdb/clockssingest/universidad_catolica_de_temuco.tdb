@@ -26,14 +26,14 @@
       param[journal_id] = RDCP
       #published 2010 to present
 
-      au < frozen ; exists ; 2010 ; Revista Chilena de Derecho y Ciencia Política Volume 2010 ; 1 ; 2010 ; https://derechoycienciapolitica.uct.cl/ ; >
-      au < frozen ; exists ; 2011 ; Revista Chilena de Derecho y Ciencia Política Volume 2011 ; 2 ; 2011 ; https://derechoycienciapolitica.uct.cl/ ; >
-      au < frozen ; exists ; 2012 ; Revista Chilena de Derecho y Ciencia Política Volume 2012 ; 3 ; 2012 ; https://derechoycienciapolitica.uct.cl/ ; >
-      au < frozen ; exists ; 2013 ; Revista Chilena de Derecho y Ciencia Política Volume 2013 ; 4 ; 2013 ; https://derechoycienciapolitica.uct.cl/ ; >
-      au < frozen ; exists ; 2014 ; Revista Chilena de Derecho y Ciencia Política Volume 2014 ; 5 ; 2014 ; https://derechoycienciapolitica.uct.cl/ ; >
-      au < frozen ; exists ; 2015 ; Revista Chilena de Derecho y Ciencia Política Volume 2015 ; 6 ; 2015 ; https://derechoycienciapolitica.uct.cl/ ; >
-      au < frozen ; exists ; 2016 ; Revista Chilena de Derecho y Ciencia Política Volume 2016 ; 7 ; 2016 ; https://derechoycienciapolitica.uct.cl/ ; >
-      au < frozen ; exists ; 2017 ; Revista Chilena de Derecho y Ciencia Política Volume 2017 ; 8 ; 2017 ; https://derechoycienciapolitica.uct.cl/ ; >
+      au < finished ; manifest ; 2010 ; Revista Chilena de Derecho y Ciencia Política Volume 2010 ; 1 ; 2010 ; https://derechoycienciapolitica.uct.cl/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; Revista Chilena de Derecho y Ciencia Política Volume 2011 ; 2 ; 2011 ; https://derechoycienciapolitica.uct.cl/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; Revista Chilena de Derecho y Ciencia Política Volume 2012 ; 3 ; 2012 ; https://derechoycienciapolitica.uct.cl/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2013 ; Revista Chilena de Derecho y Ciencia Política Volume 2013 ; 4 ; 2013 ; https://derechoycienciapolitica.uct.cl/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2014 ; Revista Chilena de Derecho y Ciencia Política Volume 2014 ; 5 ; 2014 ; https://derechoycienciapolitica.uct.cl/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2015 ; Revista Chilena de Derecho y Ciencia Política Volume 2015 ; 6 ; 2015 ; https://derechoycienciapolitica.uct.cl/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; Revista Chilena de Derecho y Ciencia Política Volume 2016 ; 7 ; 2016 ; https://derechoycienciapolitica.uct.cl/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Revista Chilena de Derecho y Ciencia Política Volume 2017 ; 8 ; 2017 ; https://derechoycienciapolitica.uct.cl/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2018 ; Revista Chilena de Derecho y Ciencia Política Volume 2018 ; 9 ; 2018 ; https://portalrevistas.uct.cl/ ; >
       au < frozen ; exists ; 2019 ; Revista Chilena de Derecho y Ciencia Política Volume 2019 ; 10 ; 2019 ; https://portalrevistas.uct.cl/ ; >
       au < frozen ; exists ; 2020 ; Revista Chilena de Derecho y Ciencia Política Volume 2020 ; 11 ; 2020 ; https://portalrevistas.uct.cl/ ; >
@@ -84,11 +84,11 @@
       #There are special volumes in 1991 and 1999
 
       au < frozen ; exists ; 1984 ; Revista CUHSO Volume 1984 ; 1 ; 1984 ; https://cuhso.uct.cl/ ; >
-      au < frozen ; exists ; 1985 ; Revista CUHSO Volume 1985 ; 2 ; 1985 ; https://cuhso.uct.cl/ ; >
-      au < frozen ; exists ; 1986 ; Revista CUHSO Volume 1986 ; 3 ; 1986 ; https://cuhso.uct.cl/ ; >
-      au < frozen ; exists ; 1998 ; Revista CUHSO Volume 1998 ; 4 ; 1998 ; https://cuhso.uct.cl/ ; >
+      au < finished ; manifest ; 1985 ; Revista CUHSO Volume 1985 ; 2 ; 1985 ; https://cuhso.uct.cl/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1986 ; Revista CUHSO Volume 1986 ; 3 ; 1986 ; https://cuhso.uct.cl/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; Revista CUHSO Volume 1998 ; 4 ; 1998 ; https://cuhso.uct.cl/ ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2000 ; Revista CUHSO Volume 2000 ; 5 ; 2000 ; https://cuhso.uct.cl/ ; >
-      au < frozen ; exists ; 2002 ; Revista CUHSO Volume 2002 ; 6 ; 2002 ; https://cuhso.uct.cl/ ; >
+      au < finished ; manifest ; 2002 ; Revista CUHSO Volume 2002 ; 6 ; 2002 ; https://cuhso.uct.cl/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2003 ; Revista CUHSO Volume 2003 ; 7 ; 2003 ; https://cuhso.uct.cl/ ; >
       au < frozen ; exists ; 2004 ; Revista CUHSO Volume 2004 ; 8 ; 2004 ; https://cuhso.uct.cl/ ; >
       au < frozen ; exists ; 2005 ; Revista CUHSO Volume 2005 ; 9-10 ; 2005 ; https://cuhso.uct.cl/ ; >
@@ -96,7 +96,7 @@
       au < frozen ; exists ; 2007 ; Revista CUHSO Volume 2007 ; 13-14 ; 2007 ; https://cuhso.uct.cl/ ; >
       au < frozen ; exists ; 2008 ; Revista CUHSO Volume 2008 ; 15-16 ; 2008 ; https://cuhso.uct.cl/ ; >
       au < frozen ; exists ; 2009 ; Revista CUHSO Volume 2009 ; 17-18 ; 2009 ; https://cuhso.uct.cl/ ; >
-      au < frozen ; exists ; 2010 ; Revista CUHSO Volume 2010 ; 19-20 ; 2010 ; https://cuhso.uct.cl/ ; >
+      au < finished ; manifest ; 2010 ; Revista CUHSO Volume 2010 ; 19-20 ; 2010 ; https://cuhso.uct.cl/ ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2011 ; Revista CUHSO Volume 2011 ; 21 ; 2011 ; https://cuhso.uct.cl/ ; >
       au < frozen ; exists ; 2012 ; Revista CUHSO Volume 2012 ; 22 ; 2012 ; https://cuhso.uct.cl/ ; >
       au < frozen ; exists ; 2013 ; Revista CUHSO Volume 2013 ; 23 ; 2013 ; https://cuhso.uct.cl/ ; >

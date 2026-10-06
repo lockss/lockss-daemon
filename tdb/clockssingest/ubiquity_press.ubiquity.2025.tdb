@@ -235,8 +235,8 @@
       nondefparam[journal_id] = uh-j-rptchft
 
       au < frozen ; exists ; 1997 ; 1 ; Redescriptions Volume 1997 ; 1997 ; 1 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
-      au < frozen ; exists ; 1998 ; 2 ; Redescriptions Volume 1998 ; 1998 ; 2 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
-      au < frozen ; exists ; 1999 ; 3 ; Redescriptions Volume 1999 ; 1999 ; 3 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
+      au < finished ; manifest ; 1998 ; 2 ; Redescriptions Volume 1998 ; 1998 ; 2 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1999 ; 3 ; Redescriptions Volume 1999 ; 1999 ; 3 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2000 ; 4 ; Redescriptions Volume 2000 ; 2000 ; 4 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2001 ; 5 ; Redescriptions Volume 2001 ; 2001 ; 5 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2002 ; 6 ; Redescriptions Volume 2002 ; 2002 ; 6; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest5.clockss.org:8082 >
@@ -290,7 +290,7 @@
       au < finished ; finished ; 2021 ; 8 ; Modern Languages Open Volume 2021 ; 2021 ; 8 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 9 ; Modern Languages Open Volume 2022 [superseded] ; 2022 ; 9 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Modern Languages Open Volume 2023 ; 2023 ; 10 ; Liverpool University Press ;  ; https://modernlanguagesopen.org/ ; >
-      au < frozen ; exists ; 2024 ; 11 ; Modern Languages Open Volume 2024 ; 2024 ; 11 ; Liverpool University Press ; 403. articles/191/files/submission/proof/article.xsl ; https://modernlanguagesopen.org/ ; >
+      au < finished ; manifest ; 2024 ; 11 ; Modern Languages Open Volume 2024 ; 2024 ; 11 ; Liverpool University Press ; 403. articles/191/files/submission/proof/article.xsl ; https://modernlanguagesopen.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2025 ; 12 ; Modern Languages Open Volume 2025 ; 2025 ; 12 ; Liverpool University Press ; 403. articles/191/files/submission/proof/article.xsl ; https://modernlanguagesopen.org/ ; >
       au < crawling ; exists ; 2026 ; 13 ; Modern Languages Open Volume 2026 ; 2026 ; 13 ; Liverpool University Press ; 403. articles/191/files/submission/proof/article.xsl ; https://modernlanguagesopen.org/ ; >
 
@@ -324,7 +324,7 @@
       au < finished ; finished ; 2020 ; 12 ; Designs for Learning Volume 2020 ; 2020 ; 12 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2021 ; 13 ; Designs for Learning Volume 2021 ; 2021 ; 13 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 14 ; Designs for Learning Volume 2022 [superseded] ; 2022 ; 14 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ ; >
-      au < frozen ; exists ; 2023 ; 15 ; Designs for Learning Volume 2024 ; 2023 ; 15 ; Stockholm University Press ;  ; https://designsforlearning.nu/ ; >
+      au < finished ; manifest ; 2023 ; 15 ; Designs for Learning Volume 2024 ; 2023 ; 15 ; Stockholm University Press ;  ; https://designsforlearning.nu/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 16 ; Designs for Learning Volume 2025 ; 2025 ; 16 ; Stockholm University Press ;  ; https://designsforlearning.nu/ ; >
       au < expected ; exists ; 2026 ; 17 ; Designs for Learning Volume 2026 ; 2026 ; 17 ; Stockholm University Press ;  ; https://designsforlearning.nu/ ; >
 
@@ -342,11 +342,11 @@
       nondefparam[base_url2] = https://account.njtcg.org/
       nondefparam[journal_id] = su-j-njtcg
 
-      au < frozen ; exists ; 2020 ; 1 ; Nordic Journal of Transitions, Careers and Guidance Volume 2020 ; 2020 ; 1 ; Stockholm University Press ;  ; https://njtcg.org/ ; >
-      au < frozen ; exists ; 2021 ; 2 ; Nordic Journal of Transitions, Careers and Guidance Volume 2021 ; 2021 ; 2 ; Stockholm University Press ;  ; https://njtcg.org/ ; >
+      au < finished ; manifest ; 2020 ; 1 ; Nordic Journal of Transitions, Careers and Guidance Volume 2020 ; 2020 ; 1 ; Stockholm University Press ;  ; https://njtcg.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; 2 ; Nordic Journal of Transitions, Careers and Guidance Volume 2021 ; 2021 ; 2 ; Stockholm University Press ;  ; https://njtcg.org/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 3 ; Nordic Journal of Transitions, Careers and Guidance Volume 2022 [superseded] ; 2022 ; 3 ; Stockholm University Press ;  ; https://njtcg.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Nordic Journal of Transitions, Careers and Guidance Volume 2023 ; 2023 ; 4 ; Stockholm University Press ;  ; https://njtcg.org/ ; >
-      au < frozen ; exists ; 2024 ; 5 ; Nordic Journal of Transitions, Careers and Guidance Volume 2024 ; 2024 ; 5 ; Stockholm University Press ;  ; https://njtcg.org/ ; >
+      au < finished ; manifest ; 2024 ; 5 ; Nordic Journal of Transitions, Careers and Guidance Volume 2024 ; 2024 ; 5 ; Stockholm University Press ;  ; https://njtcg.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 6 ; Nordic Journal of Transitions, Careers and Guidance Volume 2025 ; 2025 ; 6 ; Stockholm University Press ;  ; https://njtcg.org/ ; >
       au < crawling ; exists ; 2026 ; 7 ; Nordic Journal of Transitions, Careers and Guidance Volume 2026 ; 2026 ; 7 ; Stockholm University Press ;  ; https://njtcg.org/ ; >
 
@@ -374,7 +374,7 @@
       au < finished ; crawling ; 2021 ; 8 ; Rural Landscapes: Society, Environment, History Volume 2021 ; 2021 ; 8 ; Stockholm University Press ;  ; https://www.rurallandscapesjournal.com/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 9 ; Rural Landscapes: Society, Environment, History Volume 2022 [superseded] ; 2022 ; 9 ; Stockholm University Press ;  ; https://www.rurallandscapesjournal.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Rural Landscapes: Society, Environment, History Volume 2023 ; 2023 ; 10 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ ; >
-      au < frozen ; exists ; 2024 ; 11 ; Rural Landscapes: Society, Environment, History Volume 2024 ; 2024 ; 11 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ ; >
+      au < finished ; manifest ; 2024 ; 11 ; Rural Landscapes: Society, Environment, History Volume 2024 ; 2024 ; 11 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 12 ; Rural Landscapes: Society, Environment, History Volume 2025 ; 2025 ; 12 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ ; >
       au < crawling ; exists ; 2026 ; 13 ; Rural Landscapes: Society, Environment, History Volume 2026 ; 2026 ; 13 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ ; >
 
@@ -394,7 +394,7 @@
       nondefparam[base_url2] = https://account.sjdr.se/
       nondefparam[journal_id] = su-j-sjdr
 
-      au < frozen ; exists ; 1999 ; 1 ; Scandinavian Journal of Disability Research Volume 1 ; 1999 ; 1 ; Stockholm University Press ;  ; https://sjdr.se/ ; >
+      au < finished ; manifest ; 1999 ; 1 ; Scandinavian Journal of Disability Research Volume 1 ; 1999 ; 1 ; Stockholm University Press ;  ; https://sjdr.se/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2000 ; 2 ; Scandinavian Journal of Disability Research Volume 2 ; 2000 ; 2 ; Stockholm University Press ;  ; https://www.sjdr.se/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2001 ; 3 ; Scandinavian Journal of Disability Research Volume 3 ; 2001 ; 3 ; Stockholm University Press ;  ; https://www.sjdr.se/ ; reingest2.clockss.org:8085 >
       au < doesNotExist ; doesNotExist ; 2002 ; 4 ; Scandinavian Journal of Disability Research Volume 4 ; 2002 ; 4 ; Stockholm University Press ;  ; https://sjdr.se/ ; >
@@ -419,7 +419,7 @@
       au < finished ; crawling ; 2021 ; 23 ; Scandinavian Journal of Disability Research Volume 23 ; 2021 ; 23 ; Stockholm University Press ;  ; https://www.sjdr.se/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 24 ; Scandinavian Journal of Disability Research Volume 24 ; 2022 ; 24 ; Stockholm University Press ;  ; https://www.sjdr.se/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 25 ; Scandinavian Journal of Disability Research Volume 25 ; 2023 ; 25 ; Stockholm University Press ;  ; https://sjdr.se/ ; >
-      au < frozen ; exists ; 2024 ; 26 ; Scandinavian Journal of Disability Research Volume 26 ; 2024 ; 26 ; Stockholm University Press ;  ; https://sjdr.se/ ; >
+      au < finished ; manifest ; 2024 ; 26 ; Scandinavian Journal of Disability Research Volume 26 ; 2024 ; 26 ; Stockholm University Press ;  ; https://sjdr.se/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 27 ; Scandinavian Journal of Disability Research Volume 27 ; 2025 ; 27 ; Stockholm University Press ;  ; https://sjdr.se/ ; >
       au < crawling ; exists ; 2026 ; 28 ; Scandinavian Journal of Disability Research Volume 28 ; 2026 ; 28 ; Stockholm University Press ;  ; https://sjdr.se/ ; >
 
@@ -445,7 +445,7 @@
       au < finished ; crawling ; 2021 ; 6 ; Scandinavian Journal of Work and Organizational Psychology Volume 2021 ; 2021 ; 6 ; Stockholm University Press ;  ; https://www.sjwop.com/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 7 ; Scandinavian Journal of Work and Organizational Psychology Volume 2022 [superseded] ; 2022 ; 7 ; Stockholm University Press ;  ; https://www.sjwop.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 8 ; Scandinavian Journal of Work and Organizational Psychology Volume 2023 ; 2023 ; 8 ; Stockholm University Press ;  ; https://sjwop.com/ ; >
-      au < frozen ; exists ; 2024 ; 9 ; Scandinavian Journal of Work and Organizational Psychology Volume 2024 ; 2024 ; 9 ; Stockholm University Press ;  ; https://sjwop.com/ ; >
+      au < finished ; manifest ; 2024 ; 9 ; Scandinavian Journal of Work and Organizational Psychology Volume 2024 ; 2024 ; 9 ; Stockholm University Press ;  ; https://sjwop.com/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2025 ; 10 ; Scandinavian Journal of Work and Organizational Psychology Volume 2025 ; 2025 ; 10 ; Stockholm University Press ;  ; https://sjwop.com/ ; >
       au < crawling ; exists ; 2026 ; 11 ; Scandinavian Journal of Work and Organizational Psychology Volume 2026 ; 2026 ; 11 ; Stockholm University Press ;  ; https://sjwop.com/ ; >
 
@@ -488,7 +488,7 @@
       au < finished ; crawling ; 2021 ; 50 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2021 ; 2021 ; 50 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2022 ; 51 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2022 [superseded] ; 2022 ; 51 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 52 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2023 ; 2023 ; 52 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
-      au < frozen ; exists ; 2024 ; 53 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2024 ; 2024 ; 53 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
+      au < finished ; manifest ; 2024 ; 53 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2024 ; 2024 ; 53 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2025 ; 54 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2025 ; 2025 ; 54 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
       au < crawling ; exists ; 2026 ; 55 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2026 ; 2026 ; 55 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
 
@@ -512,7 +512,7 @@
       au < finished ; crawling ; 2021 ; 4 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2021 ; 2021 ; 4 ; Stockholm University Press ;  ; https://franorfon.org/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 5 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2022 [superseded] ; 2022 ; 5 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2023 ; 2023 ; 6 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
-      au < frozen ; exists ; 2024 ; 7 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2024 ; 2024 ; 7 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
+      au < finished ; manifest ; 2024 ; 7 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2024 ; 2024 ; 7 ; Stockholm University Press ;  ; https://franorfon.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 8 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2025 ; 2025 ; 8 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
       au < crawling ; exists ; 2026 ; 9 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2026 ; 2026 ; 9 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
 
@@ -553,12 +553,12 @@
       au < doNotProcess ; exists ; 1968 ; 20 ; Tellus Volume 1968 ; 1968 ; 20 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
       au < doNotProcess ; exists ; 1969 ; 21 ; Tellus Volume 1969 ; 1969 ; 21 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
       au < doNotProcess ; exists ; 1970 ; 22 ; Tellus Volume 1970 ; 1970 ; 22 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < frozen ; exists ; 1971 ; 23 ; Tellus Volume 1971 ; 1971 ; 23 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < finished ; manifest ; 1971 ; 23 ; Tellus Volume 1971 ; 1971 ; 23 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 1972 ; 24 ; Tellus Volume 1972 ; 1972 ; 24 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < frozen ; exists ; 1973 ; 25 ; Tellus Volume 1973 ; 1973 ; 25 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < frozen ; exists ; 1974 ; 26 ; Tellus Volume 1974 ; 1974 ; 26 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < frozen ; exists ; 1975 ; 27 ; Tellus Volume 1975 ; 1975 ; 27 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < frozen ; exists ; 1976 ; 28 ; Tellus Volume 1976 ; 1976 ; 28 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < finished ; manifest ; 1973 ; 25 ; Tellus Volume 1973 ; 1973 ; 25 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1974 ; 26 ; Tellus Volume 1974 ; 1974 ; 26 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1975 ; 27 ; Tellus Volume 1975 ; 1975 ; 27 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1976 ; 28 ; Tellus Volume 1976 ; 1976 ; 28 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 1977 ; 29 ; Tellus Volume 1977 ; 1977 ; 29 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
       au < frozen ; exists ; 1978 ; 30 ; Tellus Volume 1978 ; 1978 ; 30 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
       au < doNotProcess ; exists ; 1979 ; 31 ; Tellus Volume 1979 ; 1979 ; 31 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
