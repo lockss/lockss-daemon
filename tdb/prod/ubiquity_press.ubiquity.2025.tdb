@@ -114,6 +114,21 @@
 
   }
 
+  {
+
+      title <
+        name = ECEEE Summer Studies Proceedings ;
+        eissn = 2001-7960
+      >
+
+      comment[publisher] = European Council for an Energy Efficient Economy
+      #param[base_url] = https://eceeeproceedings.org/
+      nondefparam[base_url2] = https://account.eceeeproceedings.org/
+      nondefparam[journal_id] = eceee-j-ss
+
+      au < exists ; 2026 ; 1 ; ECEEE Summer Studies Proceedings Volume 2026 ; 2026 ; 1 ; European Council for an Energy Efficient Economy ;  ; https://eceeeproceedings.org/ >
+
+  }
 
   {
 
@@ -787,6 +802,22 @@
       au < released ; 2024 ; 90 ; Annals of Global Health Volume 2024 ; 2024 ; 90 ; Ubiquity Press ; No substance ; https://annalsofglobalhealth.org/ >
       au < released ; 2025 ; 91 ; Annals of Global Health Volume 2025 ; 2025 ; 91 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ >
       au < manifest ; 2026 ; 92 ; Annals of Global Health Volume 2026 ; 2026 ; 92 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ >
+
+  }
+
+  {
+
+      title <
+        name = Architectural History ;
+        eissn = 2059-5670
+      >
+
+      comment[publisher] = Ubiquity Press
+      #param[base_url] = https://architecturalhistoryjournal.com/
+      nondefparam[base_url2] = https://account.architecturalhistoryjournal.com/
+      nondefparam[journal_id] = up-j-ah
+
+      au < exists ; 2026 ; 69 ; Architectural History Volume 2026 ; 2026 ; 69 ; Ubiquity Press ;  ; https://architecturalhistoryjournal.com/ >
 
   }
 
