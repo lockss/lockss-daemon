@@ -38,6 +38,7 @@ import java.nio.channels.*;
 import java.util.*;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.file.PathUtils;
 import org.apache.oro.text.regex.*;
 
 /** Utilities for Files
@@ -469,16 +470,69 @@ public class FileUtil {
     return true;
   }
 
+  private static String normalize(File f) {
+    return f.toPath().normalize().toString().trim();
+  }
+
+  private static boolean isDangerousDirToDelete(File normPath) {
+    return isDangerousDirToDelete(normPath.toPath());
+  }
+
+  /** True if the path is one we that delTree() & fastDelTree() should
+   * reject.
+   * @param normPath an already-normalized path
+   */
+  private static boolean isDangerousDirToDelete(Path normPath) {
+    String pathStr = normPath.toString();
+    return (normPath.getNameCount() == 0 ||
+            pathStr.equals("") ||
+            pathStr.equals("/") ||
+            pathStr.equals(".") ||
+            pathStr.equals("..") ||
+            pathStr.startsWith("../"));
+  }
+
+  /** True if normPath is the current working directory */
+  static boolean isCwd(Path normPath) {
+    Path abs = Paths.get("").toAbsolutePath().normalize();
+    return normPath.equals(abs);
+  }
+
+  /** Normalize the dir name or throw if delTree() should reject it */
+  static Path normalizeAndCheckDirToDelete(File dir) {
+    return normalizeAndCheckDirToDelete(dir.toPath());
+  }
+
+  /** Normalize the dir name or throw if delTree() should reject it */
+  static Path normalizeAndCheckDirToDelete(Path path) {
+    // Check the path before normalizing.  Not completely redundant as
+    // we don't want to accept, e.g., an empty path, no matter what it
+    // resolves to
+    if (isDangerousDirToDelete(path)) {
+      throw new IllegalArgumentException("Cowardly refusing to delete dir: " + path);
+    }
+    Path npath = path.normalize().toAbsolutePath();
+    // Check again after normalizing
+    if (isDangerousDirToDelete(npath)) {
+      throw new IllegalArgumentException("Cowardly refusing to delete dir: " + npath);
+    }
+    // Also ensure the normalized path isn't the current working directory
+    if (isCwd(npath)) {
+      throw new IllegalArgumentException("Cowardly refusing to delete cwd: " + npath);
+    }
+    return npath;
+  }
 
   /** Delete the contents of a directory, leaving the empty directory.
    * @param dir The directory path
    * @return true iff successful
    * @throws {@link IllegalArgumentException} if given a path that exists but isn't a file */
   public static boolean emptyDir(File dir) {
+    Path normPath = normalizeAndCheckDirToDelete(dir);
     try {
-      FileUtils.cleanDirectory(dir);
+      FileUtils.cleanDirectory(normPath.toFile());
     } catch (IOException e) {
-      log.debug("Failed to empty dir, returning false: " + dir, e);
+      log.debug("Failed to empty dir, returning false: " + normPath, e);
       return false;
     }
     return true;
@@ -487,13 +541,18 @@ public class FileUtil {
   /** Delete a directory and its contents.
    * @return true iff successful */
   public static boolean delTree(File dir) {
-    if (!dir.exists()) {
+    Path normPath = normalizeAndCheckDirToDelete(dir);
+    File file = normPath.toFile() ;
+
+    // NOFOLLOW_LINKS so that a dangling symlink is still removed
+    if (!Files.exists(normPath, LinkOption.NOFOLLOW_LINKS)) {
       return true;
     }
+    // XXX isDirectory() check disabled - do we want it?
 //     if (!dir.isDirectory()) {
-//       throw new IllegalArgumentException("Not a directory: " + dir);
+//       throw new IllegalArgumentException("Not a directory: " + file);
 //     }
-    return FileUtils.deleteQuietly(dir);
+    return FileUtils.deleteQuietly(file);
   }
 
   /** Max lines of 'rm' output to log before suppressing the rest */
@@ -503,8 +562,7 @@ public class FileUtil {
    * which is much faster than walking the tree in Java.  Intended for
    * bulk deletion of large trees.
    * @return true iff successful
-   * @throws IllegalArgumentException if the path isn't an absolute path
-   * below the root
+   * @throws IllegalArgumentException if the path isn't allowed
    * @throws IOException if the 'rm' process couldn't be run or was
    * interrupted */
   public static boolean fastDelTree(File dir) throws IOException {
@@ -515,17 +573,12 @@ public class FileUtil {
    * which is much faster than walking the tree in Java.  Intended for
    * bulk deletion of large trees.
    * @return true iff successful
-   * @throws IllegalArgumentException if the path isn't an absolute path
+   * @throws IllegalArgumentException if the path isn't allowed
    * below the root
    * @throws IOException if the 'rm' process couldn't be run or was
    * interrupted */
   public static boolean fastDelTree(Path dir) throws IOException {
-    Path normPath = dir.normalize();
-    // Refuse relative paths and "/".  Do this before the existence check
-    // so that a bogus path is always reported, not silently ignored.
-    if (!normPath.isAbsolute() || normPath.getNameCount() == 0) {
-      throw new IllegalArgumentException("Illegal path " + dir);
-    }
+    Path normPath = normalizeAndCheckDirToDelete(dir);
     // NOFOLLOW_LINKS so that a dangling symlink is still removed
     if (!Files.exists(normPath, LinkOption.NOFOLLOW_LINKS)) {
       return true;

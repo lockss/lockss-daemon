@@ -310,7 +310,7 @@ public class TestFileUtil extends LockssTestCase {
     assertFalse(f1.exists());
     assertTrue(dir.exists());
 
-
+    // Currently legal to delTree() and regular file
 //     try {
 //       FileUtil.delTree(f1);
 //       fail("Should have thrown IllegalArgumentException");
@@ -381,12 +381,19 @@ public class TestFileUtil extends LockssTestCase {
     assertTrue(inTarget.exists());
   }
 
-  public void testFastDelTreeIllegalPath() throws IOException {
-    String[] illegal = {"relative/path", "/", "/tmp/..", ""};
-    for (String path : illegal) {
+  public void testDelTreeIllegalPath() throws IOException {
+    String[] illegal = {"/", "/tmp/..", "tmp/../", "",
+      "..", ".", "../", "./", "../foo", "../foo/"};
+    for (String pathStr : illegal) {
+      Path path0 = Paths.get(pathStr);
       try {
-	FileUtil.fastDelTree(new File(path));
-	fail("fastDelTree(\"" + path + "\") should throw");
+	FileUtil.normalizeAndCheckDirToDelete(path0);
+	fail("normalizeAndCheckDirToDelete(\"" + pathStr + "\") should throw");
+      } catch (IllegalArgumentException e) {
+      }
+      try {
+ 	FileUtil.fastDelTree(path0);
+ 	fail("fastDelTree(\"" + pathStr + "\") should throw");
       } catch (IllegalArgumentException e) {
       }
     }
