@@ -16442,8 +16442,6 @@
     au < doNotProcess ; 2022 ; 2022 ; Islamic Economic Studies Volume 30 ; 30 >
     au < doNotProcess ; 2023 ; 2023 ; Islamic Economic Studies Volume 31 ; 31 >
     au < doNotProcess ; 2024 ; 2024 ; Islamic Economic Studies Volume 32 ; 32 >
-    au < expected ; 2025 ; 2025 ; Islamic Economic Studies Volume 33 ; 33 >
-    au < expected ; 2026 ; 2026 ; Islamic Economic Studies Volume 34 ; 34 >
 
   }
 
@@ -17567,9 +17565,6 @@
       param[journal_id] = eor
 
       au < manifest ; 2023 ; 2023 ; Emerald Open Research Volume 1 ; 1 >
-      au < expected ; 2024 ; 2024 ; Emerald Open Research Volume 2 ; 2 >
-      au < expected ; 2025 ; 2025 ; Emerald Open Research Volume 3 ; 3 >
-      au < expected ; 2026 ; 2026 ; Emerald Open Research Volume 4 ; 4 >
 
   }
 
@@ -17637,8 +17632,6 @@
       au < manifest ; 2022 ; 2022 ; Fulbright Review of Economics and Policy Volume 2 ; 2 >
       au < manifest ; 2023 ; 2023 ; Fulbright Review of Economics and Policy Volume 3 ; 3 >
       au < manifest ; 2024 ; 2024 ; Fulbright Review of Economics and Policy Volume 4 ; 4 >
-      au < exists ; 2025 ; 2025 ; Fulbright Review of Economics and Policy Volume 5 ; 5 >
-      au < expected ; 2026 ; 2026 ; Fulbright Review of Economics and Policy Volume 6 ; 6 >
 
   }
 
@@ -17737,11 +17730,11 @@
       >
       param[journal_id] = ijieom
 
-      au < exists ; 2022 ; 2022 ; International Journal of Industrial Engineering and Operations Management Volume 6 ; 6 >
-      au < exists ; 2023 ; 2023 ; International Journal of Industrial Engineering and Operations Management Volume 7 ; 7 >
-      au < exists ; 2024 ; 2024 ; International Journal of Industrial Engineering and Operations Management Volume 8 ; 8 >
-      au < exists ; 2025 ; 2025 ; International Journal of Industrial Engineering and Operations Management Volume 9 ; 9 >
-      au < expected ; 2026 ; 2026 ; International Journal of Industrial Engineering and Operations Management Volume 10 ; 10 >
+      au < exists ; 2022 ; 2022 ; International Journal of Industrial Engineering and Operations Management Volume 4 ; 4 >
+      au < exists ; 2023 ; 2023 ; International Journal of Industrial Engineering and Operations Management Volume 5 ; 5 >
+      au < exists ; 2024 ; 2024 ; International Journal of Industrial Engineering and Operations Management Volume 6 ; 6 >
+      au < exists ; 2025 ; 2025 ; International Journal of Industrial Engineering and Operations Management Volume 7 ; 7 >
+      au < exists ; 2026 ; 2026 ; International Journal of Industrial Engineering and Operations Management Volume 8 ; 8 >
 
   }
 
@@ -17766,21 +17759,26 @@
         eissn = 2452-1469
       >
       param[journal_id] = jal
+      #2013-2019 preserved through Elsevier
 
-      au < manifest ; 2013 ; 2013 ; Journal of Accounting Literature Volume 31 ; 31 >
-      au < exists ; 2014 ; 2014 ; Journal of Accounting Literature Volume 32 ; 32 >
-      au < exists ; 2015 ; 2015 ; Journal of Accounting Literature Volume 33 ; 33 >
-      au < exists ; 2016 ; 2016 ; Journal of Accounting Literature Volume 34 ; 34 >
-      au < exists ; 2017 ; 2017 ; Journal of Accounting Literature Volume 35 ; 35 >
-      au < exists ; 2018 ; 2018 ; Journal of Accounting Literature Volume 36 ; 36 >
-      au < exists ; 2019 ; 2019 ; Journal of Accounting Literature Volume 37 ; 37 >
-      au < exists ; 2020 ; 2020 ; Journal of Accounting Literature Volume 38 ; 38 >
-      au < exists ; 2021 ; 2021 ; Journal of Accounting Literature Volume 39 ; 39 >
-      au < exists ; 2022 ; 2022 ; Journal of Accounting Literature Volume 40 ; 40 >
-      au < exists ; 2023 ; 2023 ; Journal of Accounting Literature Volume 41 ; 41 >
-      au < exists ; 2024 ; 2024 ; Journal of Accounting Literature Volume 42 ; 42 >
-      au < exists ; 2025 ; 2025 ; Journal of Accounting Literature Volume 43 ; 43 >
-      au < expected ; 2026 ; 2026 ; Journal of Accounting Literature Volume 44 ; 44 >
+      au < doNotProcess ; 2013 ; 2013 ; Journal of Accounting Literature Volume 31 [2013] ; 31 >
+      au < doNotProcess ; 2013 ; 2013 ; Journal of Accounting Literature Volume 32 [2013] ; 32 >
+      au < doNotProcess ; 2014 ; 2014 ; Journal of Accounting Literature Volume 33 [2014] ; 33 >
+      au < doNotProcess ; 2015 ; 2015 ; Journal of Accounting Literature Volume 34 [2015] ; 34 >
+      au < doNotProcess ; 2015 ; 2015 ; Journal of Accounting Literature Volume 35 [2015] ; 35 >
+      au < doNotProcess ; 2016 ; 2016 ; Journal of Accounting Literature Volume 36 [2016] ; 36 >
+      au < doNotProcess ; 2016 ; 2016 ; Journal of Accounting Literature Volume 37 [2016] ; 37 >
+      au < doNotProcess ; 2017 ; 2017 ; Journal of Accounting Literature Volume 38 [2017] ; 38 >
+      au < doNotProcess ; 2017 ; 2017 ; Journal of Accounting Literature Volume 39 [2017] ; 39 >
+      au < doNotProcess ; 2018 ; 2018 ; Journal of Accounting Literature Volume 40 [2018] ; 40 >
+      au < doNotProcess ; 2018 ; 2018 ; Journal of Accounting Literature Volume 41 [2018] ; 41 >
+      au < doNotProcess ; 2019 ; 2019 ; Journal of Accounting Literature Volume 42 [2019] ; 42 >
+      au < doNotProcess ; 2019 ; 2019 ; Journal of Accounting Literature Volume 43 [2019] ; 43 >
+      au < exists ; 2022 ; 2022 ; Journal of Accounting Literature Volume 44 [2022] ; 44 >
+      au < exists ; 2023 ; 2023 ; Journal of Accounting Literature Volume 45 ; 45 >
+      au < exists ; 2024 ; 2024 ; Journal of Accounting Literature Volume 46 ; 46 >
+      au < exists ; 2025 ; 2025 ; Journal of Accounting Literature Volume 47 ; 47 >
+      au < expected ; 2026 ; 2026 ; Journal of Accounting Literature Volume 48 ; 48 >
 
   }
 
@@ -17818,20 +17816,21 @@
       au < manifest ; 2009 ; 2009 ; Journal of Character Education Volume 7 ; 7 >
       au < manifest ; 2010 ; 2010 ; Journal of Character Education Volume 8 ; 8 >
       au < manifest ; 2011 ; 2011 ; Journal of Character Education Volume 9 ; 9 >
-      au < exists ; 2012 ; 2012 ; Journal of Character Education Volume 10 ; 10 >
-      au < exists ; 2013 ; 2013 ; Journal of Character Education Volume 11 ; 11 >
-      au < exists ; 2014 ; 2014 ; Journal of Character Education Volume 12 ; 12 >
-      au < exists ; 2015 ; 2015 ; Journal of Character Education Volume 13 ; 13 >
-      au < exists ; 2016 ; 2016 ; Journal of Character Education Volume 14 ; 14 >
-      au < exists ; 2017 ; 2017 ; Journal of Character Education Volume 15 ; 15 >
-      au < exists ; 2018 ; 2018 ; Journal of Character Education Volume 16 ; 16 >
-      au < exists ; 2019 ; 2019 ; Journal of Character Education Volume 17 ; 17 >
-      au < exists ; 2020 ; 2020 ; Journal of Character Education Volume 18 ; 18 >
-      au < exists ; 2021 ; 2021 ; Journal of Character Education Volume 19 ; 19 >
-      au < exists ; 2022 ; 2022 ; Journal of Character Education Volume 20 ; 20 >
-      au < exists ; 2023 ; 2023 ; Journal of Character Education Volume 21 ; 21 >
-      au < exists ; 2024 ; 2024 ; Journal of Character Education Volume 22 ; 22 >
-      au < exists ; 2025 ; 2025 ; Journal of Character Education Volume 23 ; 23 >
+      au < exists ; 2015 ; 2015 ; Journal of Character Education Volume 10 [2015] ; 10 >
+      au < exists ; 2015 ; 2015 ; Journal of Character Education Volume 11 [2015] ; 11 >
+      au < exists ; 2016 ; 2016 ; Journal of Character Education Volume 11 [2016] ; 11 >
+      au < exists ; 2017 ; 2017 ; Journal of Character Education Volume 12 [2017] ; 12 >
+      au < exists ; 2017 ; 2017 ; Journal of Character Education Volume 13 [2017] ; 13 >
+      au < exists ; 2018 ; 2018 ; Journal of Character Education Volume 13 [2018] ; 13 >
+      au < exists ; 2018 ; 2018 ; Journal of Character Education Volume 14 [2018] ; 14 >
+      au < exists ; 2019 ; 2019 ; Journal of Character Education Volume 15 [2019] ; 15 >
+      au < exists ; 2020 ; 2020 ; Journal of Character Education Volume 16 [2020] ; 16 >
+      au < exists ; 2021 ; 2021 ; Journal of Character Education Volume 17 [2021] ; 17 >
+      au < exists ; 2022 ; 2022 ; Journal of Character Education Volume 18 [2022] ; 18 >
+      au < exists ; 2023 ; 2023 ; Journal of Character Education Volume 18 [2023] ; 18 >
+      au < exists ; 2024 ; 2024 ; Journal of Character Education Volume 19 [2024] ; 19 >
+      au < exists ; 2024 ; 2024 ; Journal of Character Education Volume 20 [2024] ; 20 >
+      au < exists ; 2025 ; 2025 ; Journal of Character Education Volume 21 [2025] ; 21 >
       au < expected ; 2026 ; 2026 ; Journal of Character Education Volume 24 ; 24 >
 
   }
@@ -18063,7 +18062,7 @@
       >
       param[journal_id] = jrtm
 
-      au < expected ; 2026 ; 2026 ; Journal of Responsible Tourism Management Volume 1 ; 1 >
+      au < expected ; 2026 ; 2026 ; Journal of Responsible Tourism Management Volume 6 ; 6 >
 
   }
 
@@ -18255,17 +18254,14 @@
       au < manifest ; 2013 ; 2013 ; Middle Grades Research Journal Volume 8 ; 8 >
       au < manifest ; 2014 ; 2014 ; Middle Grades Research Journal Volume 9 ; 9 >
       au < manifest ; 2015 ; 2015 ; Middle Grades Research Journal Volume 10 ; 10 >
-      au < exists ; 2016 ; 2016 ; Middle Grades Research Journal Volume 11 ; 11 >
-      au < exists ; 2017 ; 2017 ; Middle Grades Research Journal Volume 12 ; 12 >
-      au < exists ; 2018 ; 2018 ; Middle Grades Research Journal Volume 13 ; 13 >
-      au < exists ; 2019 ; 2019 ; Middle Grades Research Journal Volume 14 ; 14 >
-      au < exists ; 2020 ; 2020 ; Middle Grades Research Journal Volume 15 ; 15 >
-      au < exists ; 2021 ; 2021 ; Middle Grades Research Journal Volume 16 ; 16 >
-      au < exists ; 2022 ; 2022 ; Middle Grades Research Journal Volume 17 ; 17 >
-      au < exists ; 2023 ; 2023 ; Middle Grades Research Journal Volume 18 ; 18 >
-      au < exists ; 2024 ; 2024 ; Middle Grades Research Journal Volume 19 ; 19 >
-      au < exists ; 2025 ; 2025 ; Middle Grades Research Journal Volume 20 ; 20 >
-      au < expected ; 2026 ; 2026 ; Middle Grades Research Journal Volume 21 ; 21 >
+      au < exists ; 2015 ; 2015 ; Middle Grades Research Journal Volume 10 [2015] ; 10 >
+      au < exists ; 2016 ; 2016 ; Middle Grades Research Journal Volume 10 [2016] ; 10 >
+      au < exists ; 2017 ; 2017 ; Middle Grades Research Journal Volume 11 [2017] ; 11 >
+      au < exists ; 2018 ; 2018 ; Middle Grades Research Journal Volume 11 [2018] ; 11 >
+      au < exists ; 2019 ; 2019 ; Middle Grades Research Journal Volume 12 [2019] ; 12 >
+      au < exists ; 2022 ; 2022 ; Middle Grades Research Journal Volume 13 [2022] ; 13 >
+      au < exists ; 2023 ; 2023 ; Middle Grades Research Journal Volume 13 [2023] ; 13 >
+      au < exists ; 2024 ; 2024 ; Middle Grades Research Journal Volume 13 [2024] ; 13 >
 
   }
 
@@ -18340,19 +18336,28 @@
       au < manifest ; 2011 ; 2011 ; Quarterly Review of Education Volume 12 ; 12 >
       au < manifest ; 2012 ; 2012 ; Quarterly Review of Education Volume 13 ; 13 >
       au < manifest ; 2013 ; 2013 ; Quarterly Review of Education Volume 14 ; 14 >
-      au < manifest ; 2014 ; 2014 ; Quarterly Review of Education Volume 15 ; 15 >
-      au < manifest ; 2015 ; 2015 ; Quarterly Review of Education Volume 16 ; 16 >
-      au < manifest ; 2016 ; 2016 ; Quarterly Review of Education Volume 17 ; 17 >
-      au < manifest ; 2017 ; 2017 ; Quarterly Review of Education Volume 18 ; 18 >
-      au < manifest ; 2018 ; 2018 ; Quarterly Review of Education Volume 19 ; 19 >
-      au < manifest ; 2019 ; 2019 ; Quarterly Review of Education Volume 20 ; 20 >
-      au < exists ; 2020 ; 2020 ; Quarterly Review of Education Volume 21 ; 21 >
-      au < manifest ; 2021 ; 2021 ; Quarterly Review of Education Volume 22 ; 22 >
-      au < manifest ; 2022 ; 2022 ; Quarterly Review of Education Volume 23 ; 23 >
-      au < manifest ; 2023 ; 2023 ; Quarterly Review of Education Volume 24 ; 24 >
-      au < manifest ; 2024 ; 2024 ; Quarterly Review of Education Volume 25 ; 25 >
-      au < manifest ; 2025 ; 2025 ; Quarterly Review of Education Volume 26 ; 26 >
-      au < manifest ; 2026 ; 2026 ; Quarterly Review of Education Volume 27 ; 27 >
+      au < exists ; 2014 ; 2014 ; Quarterly Review of Education Volume 15 ; 15 >
+      au < exists ; 2015 ; 2015 ; Quarterly Review of Education Volume 15 [2015] ; 15 >
+      au < exists ; 2015 ; 2015 ; Quarterly Review of Education Volume 16 [2015] ; 16 >
+      au < exists ; 2016 ; 2016 ; Quarterly Review of Education Volume 16 [2016] ; 16 >
+      au < exists ; 2016 ; 2016 ; Quarterly Review of Education Volume 17 [2016] ; 17 >
+      au < exists ; 2017 ; 2017 ; Quarterly Review of Education Volume 17 [2017] ; 17 >
+      au < exists ; 2017 ; 2017 ; Quarterly Review of Education Volume 18 [2017] ; 18 >
+      au < exists ; 2018 ; 2018 ; Quarterly Review of Education Volume 18 [2018] ; 18 >
+      au < exists ; 2018 ; 2018 ; Quarterly Review of Education Volume 19 [2018] ; 19 >
+      au < exists ; 2019 ; 2019 ; Quarterly Review of Education Volume 19 [2019] ; 19 >
+      au < exists ; 2019 ; 2019 ; Quarterly Review of Education Volume 20 [2019] ; 20 >
+      au < exists ; 2020 ; 2020 ; Quarterly Review of Education Volume 20 [2020] ; 20 >
+      au < exists ; 2021 ; 2021 ; Quarterly Review of Education Volume 21 [2021] ; 21 >
+      au < exists ; 2021 ; 2021 ; Quarterly Review of Education Volume 22 [2021] ; 22 >
+      au < exists ; 2022 ; 2022 ; Quarterly Review of Education Volume 22 [2022] ; 22 >
+      au < exists ; 2022 ; 2022 ; Quarterly Review of Education Volume 23 [2022] ; 23 >
+      au < exists ; 2023 ; 2023 ; Quarterly Review of Education Volume 23 [2023] ; 23 >
+      au < exists ; 2023 ; 2023 ; Quarterly Review of Education Volume 24 [2023] ; 24 >
+      au < exists ; 2024 ; 2024 ; Quarterly Review of Education Volume 24 [2024] ; 24 >
+      au < exists ; 2024 ; 2024 ; Quarterly Review of Education Volume 25 [2024] ; 25 >
+      au < exists ; 2025 ; 2025 ; Quarterly Review of Education Volume 26 ; 26 >
+      au < exists ; 2026 ; 2026 ; Quarterly Review of Education Volume 27 ; 27 >
 
   }
 
