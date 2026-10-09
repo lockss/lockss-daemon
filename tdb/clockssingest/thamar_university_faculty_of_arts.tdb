@@ -23,8 +23,8 @@
       param[base_url] = https://journal.tu.edu.ye/
       param[journal_id] = arts
 
-      au < frozen ; exists ; 2019 ; Arts for Linguistic & Literary Studies Volume 2019 ; 1 ; 2019 ; >
-      au < frozen ; exists ; 2020 ; Arts for Linguistic & Literary Studies Volume 2020 ; 2 ; 2020 ; >
+      au < finished ; manifest ; 2019 ; Arts for Linguistic & Literary Studies Volume 2019 ; 1 ; 2019 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Arts for Linguistic & Literary Studies Volume 2020 ; 2 ; 2020 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; Arts for Linguistic & Literary Studies Volume 2021 ; 3 ; 2021 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; Arts for Linguistic & Literary Studies Volume 2022 ; 4 ; 2022 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Arts for Linguistic & Literary Studies Volume 2023 ; 5 ; 2023 ; reingest5.clockss.org:8082 >
@@ -44,15 +44,15 @@
       param[base_url] = https://journal.tu.edu.ye/
       param[journal_id] = artsmain
 
-      au < frozen ; exists ; 2001 ; Journal of Arts Volume 2001 ; 1 ; 2001 ; >
-      au < frozen ; exists ; 2002 ; Journal of Arts Volume 2002 ; 1 ; 2002 ; >
+      au < finished ; manifest ; 2001 ; Journal of Arts Volume 2001 ; 1 ; 2001 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; Journal of Arts Volume 2002 ; 1 ; 2002 ; reingest1.clockss.org:8082 >
       au < doesNotExist ; doesNotExist ; 2003 ; Journal of Arts Volume 2003 ; 1 ; 2003 ; >
       au < doesNotExist ; doesNotExist ; 2004 ; Journal of Arts Volume 2004 ; 1 ; 2004 ; >
       au < doesNotExist ; doesNotExist ; 2005 ; Journal of Arts Volume 2005 ; 1 ; 2005 ; >
       au < doesNotExist ; doesNotExist ; 2006 ; Journal of Arts Volume 2006 ; 1 ; 2006 ; >
-      au < frozen ; exists ; 2007 ; Journal of Arts Volume 2007 ; 1 ; 2007 ; >
-      au < frozen ; exists ; 2008 ; Journal of Arts Volume 2008 ; 1 ; 2008 ; >
-      au < frozen ; exists ; 2009 ; Journal of Arts Volume 2009 ; 1 ; 2009 ; >
+      au < finished ; manifest ; 2007 ; Journal of Arts Volume 2007 ; 1 ; 2007 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2008 ; Journal of Arts Volume 2008 ; 1 ; 2008 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2009 ; Journal of Arts Volume 2009 ; 1 ; 2009 ; reingest4.clockss.org:8082 >
       au < doesNotExist ; doesNotExist ; 2010 ; Journal of Arts Volume 2010 ; 1 ; 2010 ; >
       au < doesNotExist ; doesNotExist ; 2011 ; Journal of Arts Volume 2011 ; 1 ; 2011 ; >
       au < doesNotExist ; doesNotExist ; 2012 ; Journal of Arts Volume 2012 ; 1 ; 2012 ; >
@@ -61,9 +61,9 @@
       au < doesNotExist ; doesNotExist ; 2015 ; Journal of Arts Volume 2015 ; 1 ; 2015 ; >
       au < doesNotExist ; doesNotExist ; 2016 ; Journal of Arts Volume 2016 ; 1 ; 2016 ; >
       au < doesNotExist ; doesNotExist ; 2017 ; Journal of Arts Volume 2017 ; 1 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; Journal of Arts Volume 2018 ; 1 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; Journal of Arts Volume 2019 ; 1 ; 2019 ; >
-      au < frozen ; exists ; 2020 ; Journal of Arts Volume 2020 ; 1 ; 2020 ; >
+      au < finished ; manifest ; 2018 ; Journal of Arts Volume 2018 ; 1 ; 2018 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Journal of Arts Volume 2019 ; 1 ; 2019 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Journal of Arts Volume 2020 ; 1 ; 2020 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; Journal of Arts Volume 2021 ; 1 ; 2021 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2022 ; Journal of Arts Volume 2022 ; 2 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; Journal of Arts Volume 2023 ; 3 ; 2023 ; reingest5.clockss.org:8082 >

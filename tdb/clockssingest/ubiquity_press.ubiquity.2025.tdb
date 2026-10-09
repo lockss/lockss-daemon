@@ -1066,7 +1066,7 @@
       au < finished ; crawling ; 2021 ; 20 ; Data Science Journal Volume 2021 ; 2021 ; 20 ; Ubiquity Press ;  ; https://datascience.codata.org/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 21 ; Data Science Journal Volume 2022 [superseded] ; 2022 ; 21 ; Ubiquity Press ;  ; https://datascience.codata.org/ ; >
       au < doNotProcess ; exists ; 2023 ; 22 ; Data Science Journal Volume 2023 ; 2023 ; 22 ; Ubiquity Press ;  ; https://datascience.codata.org/ ; >
-      au < frozen ; exists ; 2024 ; 23 ; Data Science Journal Volume 2024 ; 2024 ; 23 ; Ubiquity Press ;  ; https://datascience.codata.org/ ; >
+      au < finished ; manifest ; 2024 ; 23 ; Data Science Journal Volume 2024 ; 2024 ; 23 ; Ubiquity Press ;  ; https://datascience.codata.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2025 ; 24 ; Data Science Journal Volume 2025 ; 2025 ; 24 ; Ubiquity Press ;  ; https://datascience.codata.org/ ; >
       au < crawling ; exists ; 2026 ; 25 ; Data Science Journal Volume 2026 ; 2026 ; 25 ; Ubiquity Press ;  ; https://datascience.codata.org/ ; >
 
@@ -1117,7 +1117,7 @@
       au < finished ; crawling ; 2021 ; 4 ; Glocality: Undergraduate Academic Journal Volume 2021 ; 2021 ; 4 ; Ubiquity Press ;  ; https://www.glocality.eu/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 5 ; Glocality: Undergraduate Academic Journal Volume 2022 [superseded] ; 2022 ; 5 ; Ubiquity Press ;  ; https://www.glocality.eu/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Glocality: Undergraduate Academic Journal Volume 2023 ; 2023 ; 6 ; Ubiquity Press ;  ; https://glocality.eu/ ; >
-      au < frozen ; exists ; 2024 ; 7 ; Glocality: Undergraduate Academic Journal Volume 2024 ; 2024 ; 7 ; Ubiquity Press ; No substance ; http://glocality.eu/ ; >
+      au < finished ; manifest ; 2024 ; 7 ; Glocality: Undergraduate Academic Journal Volume 2024 ; 2024 ; 7 ; Ubiquity Press ; No substance ; http://glocality.eu/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2025 ; 8 ; Glocality: Undergraduate Academic Journal Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; http://glocality.eu/ ; >
       au < crawling ; exists ; 2026 ; 9 ; Glocality: Undergraduate Academic Journal Volume 2026 ; 2026 ; 9 ; Ubiquity Press ;  ; http://glocality.eu/ ; >
 
@@ -1185,7 +1185,7 @@
       au < finished ; crawling ; 2021 ; 34 ; International Review of Social Psychology Volume 2021 ; 2021 ; 34 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 35 ; International Review of Social Psychology Volume 2022 [superseded] ; 2022 ; 35 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 36 ; International Review of Social Psychology Volume 2023 ; 2023 ; 36 ; Ubiquity Press ;  ; https://rips-irsp.com/ ; >
-      au < frozen ; exists ; 2024 ; 37 ; International Review of Social Psychology Volume 2024 ; 2024 ; 37 ; Ubiquity Press ;  ; https://rips-irsp.com/ ; >
+      au < finished ; manifest ; 2024 ; 37 ; International Review of Social Psychology Volume 2024 ; 2024 ; 37 ; Ubiquity Press ;  ; https://rips-irsp.com/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 38 ; International Review of Social Psychology Volume 2025 ; 2025 ; 38 ; Ubiquity Press ;  ; https://rips-irsp.com/ ; >
       au < crawling ; exists ; 2026 ; 39 ; International Review of Social Psychology Volume 2026 ; 2026 ; 39 ; Ubiquity Press ;  ; https://rips-irsp.com/ ; >
 
@@ -1214,13 +1214,13 @@
       au < finished ; finished ; 2005 ; 3 ; Journal of Circadian Rhythms Volume 2005 ; 2005 ; 3 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2006 ; 4 ; Journal of Circadian Rhythms Volume 2006 ; 2006 ; 4 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2007 ; 5 ; Journal of Circadian Rhythms Volume 2007 ; 2007 ; 5 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2008 ; 6 ; Journal of Circadian Rhythms Volume 2008 ; 2008 ; 6 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; >
-      au < frozen ; exists ; 2009 ; 7 ; Journal of Circadian Rhythms Volume 2009 ; 2009 ; 7 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; >
-      au < frozen ; exists ; 2010 ; 8 ; Journal of Circadian Rhythms Volume 2010 ; 2010 ; 8 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; >
-      au < frozen ; exists ; 2011 ; 9 ; Journal of Circadian Rhythms Volume 2011 ; 2011 ; 9 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; >
-      au < frozen ; exists ; 2012 ; 10 ; Journal of Circadian Rhythms Volume 2012 ; 2012 ; 10 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; >
-      au < frozen ; exists ; 2013 ; 11 ; Journal of Circadian Rhythms Volume 2013 ; 2013 ; 11 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; >
-      au < frozen ; exists ; 2014 ; 12 ; Journal of Circadian Rhythms Volume 2014 ; 2014 ; 12 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; >
+      au < finished ; manifest ; 2008 ; 6 ; Journal of Circadian Rhythms Volume 2008 ; 2008 ; 6 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 7 ; Journal of Circadian Rhythms Volume 2009 ; 2009 ; 7 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 8 ; Journal of Circadian Rhythms Volume 2010 ; 2010 ; 8 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2011 ; 9 ; Journal of Circadian Rhythms Volume 2011 ; 2011 ; 9 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2012 ; 10 ; Journal of Circadian Rhythms Volume 2012 ; 2012 ; 10 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 11 ; Journal of Circadian Rhythms Volume 2013 ; 2013 ; 11 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 12 ; Journal of Circadian Rhythms Volume 2014 ; 2014 ; 12 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 13 ; Journal of Circadian Rhythms Volume 2015 ; 2015 ; 13 ; Ubiquity Press ;  ; http://www.jcircadianrhythms.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; 14 ; Journal of Circadian Rhythms Volume 2016 ; 2016 ; 14 ; Ubiquity Press ;  ; http://www.jcircadianrhythms.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; 15 ; Journal of Circadian Rhythms Volume 2017 ; 2017 ; 15 ; Ubiquity Press ;  ; http://www.jcircadianrhythms.com/ ; reingest1.clockss.org:8082 >
@@ -1230,7 +1230,7 @@
       au < finished ; crawling ; 2021 ; 19 ; Journal of Circadian Rhythms Volume 2021 ; 2021 ; 19 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2022 ; 20 ; Journal of Circadian Rhythms Volume 2022 [superseded] ; 2022 ; 20 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 21 ; Journal of Circadian Rhythms Volume 2023 ; 2023 ; 21 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; >
-      au < frozen ; exists ; 2024 ; 22 ; Journal of Circadian Rhythms Volume 2024 ; 2024 ; 22 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; >
+      au < finished ; manifest ; 2024 ; 22 ; Journal of Circadian Rhythms Volume 2024 ; 2024 ; 22 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 23 ; Journal of Circadian Rhythms Volume 2025 ; 2025 ; 23 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; >
       au < crawling ; exists ; 2026 ; 24 ; Journal of Circadian Rhythms Volume 2026 ; 2026 ; 24 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; >
 
@@ -1253,16 +1253,16 @@
       au < doNotProcess ; exists ; 2013 ; 11 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; 11 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; >
       au < doNotProcess ; exists ; 2014 ; 12 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; 12 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; >
 
-      au < frozen ; exists ; 1996 ; 1 ; Journal of Conservation and Museum Studies Volume 1996 ; 1996 ; 1 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
-      au < frozen ; exists ; 1997 ; 2,3 ; Journal of Conservation and Museum Studies Volume 1997 ; 1997 ; 2,3 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
-      au < frozen ; exists ; 1998 ; 4,5 ; Journal of Conservation and Museum Studies Volume 1998 ; 1998 ; 4,5 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
-      au < frozen ; exists ; 1999 ; 6 ; Journal of Conservation and Museum Studies Volume 1999 ; 1999 ; 6 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
+      au < finished ; manifest ; 1996 ; 1 ; Journal of Conservation and Museum Studies Volume 1996 ; 1996 ; 1 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1997 ; 2,3 ; Journal of Conservation and Museum Studies Volume 1997 ; 1997 ; 2,3 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1998 ; 4,5 ; Journal of Conservation and Museum Studies Volume 1998 ; 1998 ; 4,5 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1999 ; 6 ; Journal of Conservation and Museum Studies Volume 1999 ; 1999 ; 6 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2001 ; 7 ; Journal of Conservation and Museum Studies Volume 2001 ; 2001 ; 7 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2002 ; 8 ; Journal of Conservation and Museum Studies Volume 2002 ; 2002 ; 8 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2011 ; 9 ; Journal of Conservation and Museum Studies Volume 2011 ; 2011 ; 9 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
-      au < frozen ; exists ; 2012 ; 10 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; 10 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
-      au < frozen ; exists ; 2013 ; 11 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; 11 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
-      au < frozen ; exists ; 2014 ; 12 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; 12 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
+      au < finished ; manifest ; 2011 ; 9 ; Journal of Conservation and Museum Studies Volume 2011 ; 2011 ; 9 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; 10 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; 10 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2013 ; 11 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; 11 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2014 ; 12 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; 12 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; 13 ; Journal of Conservation and Museum Studies Volume 2015 ; 2015 ; 13 ; Ubiquity Press ;  ; http://www.jcms-journal.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; 14 ; Journal of Conservation and Museum Studies Volume 2016 ; 2016 ; 14 ; Ubiquity Press ;  ; http://www.jcms-journal.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 15 ; Journal of Conservation and Museum Studies Volume 2017 ; 2017 ; 15 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; reingest4.clockss.org:8082 >
@@ -1271,9 +1271,9 @@
       au < finished ; finished ; 2020 ; 18 ; Journal of Conservation and Museum Studies Volume 2020 ; 2020 ; 18 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; 19 ; Journal of Conservation and Museum Studies Volume 2021 ; 2021 ; 19 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 [superseded] ; 2022 ; 20 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; >
-      au < frozen ; exists ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 ; 2022 ; 20 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
-      au < frozen ; exists ; 2023 ; 21 ; Journal of Conservation and Museum Studies Volume 2023 ; 2023 ; 21 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
-      au < frozen ; exists ; 2025 ; 22 ; Journal of Conservation and Museum Studies Volume 2025 ; 2025 ; 22 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
+      au < finished ; manifest ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 ; 2022 ; 20 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; 21 ; Journal of Conservation and Museum Studies Volume 2023 ; 2023 ; 21 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2025 ; 22 ; Journal of Conservation and Museum Studies Volume 2025 ; 2025 ; 22 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2026 ; 23 ; Journal of Conservation and Museum Studies Volume 2026 ; 2026 ; 23 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
 
   }
@@ -1331,8 +1331,8 @@
       au < superseded ; exists ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 [superseded] ; 2017 ; 2017 ; Ubiquity Press ;  ; http://www-jime.open.ac.uk/ ; >
       
       #non-WWW-
-      au < frozen ; exists ; 1998 ; 1998 ; Journal of Interactive Media in Education Volume 1998 ; 1998 ; 1998 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; >
-      au < frozen ; exists ; 1999 ; 1999 ; Journal of Interactive Media in Education Volume 1999 ; 1999 ; 1999 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; >
+      au < finished ; manifest ; 1998 ; 1998 ; Journal of Interactive Media in Education Volume 1998 ; 1998 ; 1998 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1999 ; 1999 ; Journal of Interactive Media in Education Volume 1999 ; 1999 ; 1999 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2000 ; 2000 ; Journal of Interactive Media in Education Volume 2000 ; 2000 ; 2000 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2001 ; 2001 ; Journal of Interactive Media in Education Volume 2001 ; 2001 ; 2001 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2002 ; 2002 ; Journal of Interactive Media in Education Volume 2002 ; 2002 ; 2002 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest5.clockss.org:8082 >
@@ -1351,12 +1351,12 @@
       au < doNotProcess ; exists ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; 2016 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; 2017 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; 2018 ; Journal of Interactive Media in Education Volume 2018 ; 2018 ; 2018 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2019 ; 2019 ; Journal of Interactive Media in Education Volume 2019 ; 2019 ; 2019 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; >
-      au < frozen ; exists ; 2020 ; 2020 ; Journal of Interactive Media in Education Volume 2020 ; 2020 ; 2020 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; >
-      au < frozen ; exists ; 2021 ; 2021 ; Journal of Interactive Media in Education Volume 2021 ; 2021 ; 2021 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; >
+      au < finished ; manifest ; 2019 ; 2019 ; Journal of Interactive Media in Education Volume 2019 ; 2019 ; 2019 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2020 ; 2020 ; Journal of Interactive Media in Education Volume 2020 ; 2020 ; 2020 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; 2021 ; Journal of Interactive Media in Education Volume 2021 ; 2021 ; 2021 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 2022 ; Journal of Interactive Media in Education Volume 2022 [superseded] ; 2022 ; 2022 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Interactive Media in Education Volume 2023 ; 2023 ; 2023 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; >
-      au < frozen ; exists ; 2024 ; 2024 ; Journal of Interactive Media in Education Volume 2024 ; 2024 ; 2024 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; >
+      au < finished ; manifest ; 2024 ; 2024 ; Journal of Interactive Media in Education Volume 2024 ; 2024 ; 2024 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Journal of Interactive Media in Education Volume 2025 ; 2025 ; 2025 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; >
       au < crawling ; exists ; 2026 ; 2026 ; Journal of Interactive Media in Education Volume 2026 ; 2026 ; 2026 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; >
 
@@ -1405,9 +1405,9 @@
       nondefparam[base_url2] = https://account.openarchaeologydata.metajnl.com/
       nondefparam[journal_id] = up-j-joad
 
-      au < frozen ; exists ; 2012 ; 1 ; Journal of Open Archaeology Data Volume 2012 ; 2012 ; 1 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ ; >
-      au < frozen ; exists ; 2013 ; 2 ; Journal of Open Archaeology Data Volume 2013 ; 2013 ; 2 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ ; >
-      au < frozen ; exists ; 2014 ; 3 ; Journal of Open Archaeology Data Volume 2014 ; 2014 ; 3 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ ; >
+      au < finished ; manifest ; 2012 ; 1 ; Journal of Open Archaeology Data Volume 2012 ; 2012 ; 1 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2013 ; 2 ; Journal of Open Archaeology Data Volume 2013 ; 2013 ; 2 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2014 ; 3 ; Journal of Open Archaeology Data Volume 2014 ; 2014 ; 3 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 4 ; Journal of Open Archaeology Data Volume 2015 ; 2015 ; 4 ; Ubiquity Press ;  ; http://openarchaeologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; 5 ; Journal of Open Archaeology Data Volume 2016 ; 2016 ; 5 ; Ubiquity Press ;  ; http://openarchaeologydata.metajnl.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; 6 ; Journal of Open Archaeology Data Volume 2018 ; 2018 ; 6 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ ; reingest4.clockss.org:8082 >
@@ -1416,7 +1416,7 @@
       au < finished ; crawling ; 2021 ; 9 ; Journal of Open Archaeology Data Volume 2021 ; 2021 ; 9 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 10 ; Journal of Open Archaeology Data Volume 2022 [superseded] ; 2022 ; 10 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 11 ; Journal of Open Archaeology Data Volume 2023 ; 2023 ; 11 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ ; >
-      au < frozen ; exists ; 2024 ; 12 ; Journal of Open Archaeology Data Volume 2024 ; 2024 ; 12 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ ; >
+      au < finished ; manifest ; 2024 ; 12 ; Journal of Open Archaeology Data Volume 2024 ; 2024 ; 12 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 13 ; Journal of Open Archaeology Data Volume 2025 ; 2025 ; 13 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ ; >
       au < crawling ; exists ; 2026 ; 14 ; Journal of Open Archaeology Data Volume 2026 ; 2026 ; 14 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ ; >
 
@@ -1434,7 +1434,7 @@
       nondefparam[base_url2] = https://account.silkroadsarchaeoheritage.org/
       nondefparam[journal_id] = up-j-srah
 
-      au < frozen ; exists ; 2023 ; 1 ; Silk Roads Archaeology and Heritage Volume 2023 ; 2023 ; 1 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ ; >
+      au < finished ; manifest ; 2023 ; 1 ; Silk Roads Archaeology and Heritage Volume 2023 ; 2023 ; 1 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 2 ; Silk Roads Archaeology and Heritage Volume 2025 ; 2025 ; 2 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ ; >
       au < crawling ; exists ; 2026 ; 3 ; Silk Roads Archaeology and Heritage Volume 2026 ; 2026 ; 3 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ ; >
 
@@ -1461,7 +1461,7 @@
       au < finished ; crawling ; 2021 ; 7 ; Journal of Open Humanities Data Volume 2021 ; 2021 ; 7 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2022 ; 8 ; Journal of Open Humanities Data Volume 2022 [superseded] ; 2022 ; 8 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 9 ; Journal of Open Humanities Data Volume 2023 ; 2023 ; 9 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ ; >
-      au < frozen ; exists ; 2024 ; 10 ; Journal of Open Humanities Data Volume 2024 ; 2024 ; 10 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ ; >
+      au < finished ; manifest ; 2024 ; 10 ; Journal of Open Humanities Data Volume 2024 ; 2024 ; 10 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 11 ; Journal of Open Humanities Data Volume 2025 ; 2025 ; 11 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ ; >
       au < crawling ; exists ; 2026 ; 12 ; Journal of Open Humanities Data Volume 2026 ; 2026 ; 12 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ ; >
 
@@ -1479,8 +1479,8 @@
       nondefparam[base_url2] = https://account.openpsychologydata.metajnl.com/
       nondefparam[journal_id] = up-j-jopd
 
-      au < frozen ; exists ; 2013 ; 1 ; Journal of Open Psychology Data Volume 2013 ; 2013 ; 1 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; >
-      au < frozen ; exists ; 2014 ; 2 ; Journal of Open Psychology Data Volume 2014 ; 2014 ; 2 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; >
+      au < finished ; manifest ; 2013 ; 1 ; Journal of Open Psychology Data Volume 2013 ; 2013 ; 1 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 2 ; Journal of Open Psychology Data Volume 2014 ; 2014 ; 2 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015 ; 3 ; Journal of Open Psychology Data Volume 2015 ; 2015 ; 3 ; Ubiquity Press ;  ; http://openpsychologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; 4 ; Journal of Open Psychology Data Volume 2016 ; 2016 ; 4 ; Ubiquity Press ;  ; http://openpsychologydata.metajnl.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 5 ; Journal of Open Psychology Data Volume 2017 ; 2017 ; 5 ; Ubiquity Press ;  ; http://openpsychologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
@@ -1490,7 +1490,7 @@
       au < finished ; crawling ; 2021 ; 9 ; Journal of Open Psychology Data Volume 2021 ; 2021 ; 9 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 10 ; Journal of Open Psychology Data Volume 2022 [superseded] ; 2022 ; 10 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 11 ; Journal of Open Psychology Data Volume 2023 ; 2023 ; 11 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; >
-      au < frozen ; exists ; 2024 ; 12 ; Journal of Open Psychology Data Volume 2024 ; 2024 ; 12 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; >
+      au < finished ; manifest ; 2024 ; 12 ; Journal of Open Psychology Data Volume 2024 ; 2024 ; 12 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2025 ; 13 ; Journal of Open Psychology Data Volume 2025 ; 2025 ; 13 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; >
       au < crawling ; exists ; 2026 ; 14 ; Journal of Open Psychology Data Volume 2026 ; 2026 ; 14 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; >
 
@@ -1519,7 +1519,7 @@
       au < finished ; crawling ; 2021 ; 9 ; Journal of Open Research Software Volume 2021 ; 2021 ; 9 ; Ubiquity Press ;  ; https://openresearchsoftware.metajnl.com/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 10 ; Journal of Open Research Software Volume 2022 [superseded] ; 2022 ; 10 ; Ubiquity Press ;  ; https://openresearchsoftware.metajnl.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 11 ; Journal of Open Research Software Volume 2023 ; 2023 ; 11 ; Ubiquity Press ;  ; https://openresearchsoftware.metajnl.com/ ; >
-      au < frozen ; exists ; 2024 ; 12 ; Journal of Open Research Software Volume 2024 ; 2024 ; 12 ; Ubiquity Press ;  ; https://openresearchsoftware.metajnl.com/ ; >
+      au < finished ; manifest ; 2024 ; 12 ; Journal of Open Research Software Volume 2024 ; 2024 ; 12 ; Ubiquity Press ;  ; https://openresearchsoftware.metajnl.com/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 13 ; Journal of Open Research Software Volume 2025 ; 2025 ; 13 ; Ubiquity Press ;  ; https://openresearchsoftware.metajnl.com/ ; >
       au < crawling ; exists ; 2026 ; 14 ; Journal of Open Research Software Volume 2026 ; 2026 ; 14 ; Ubiquity Press ;  ; https://openresearchsoftware.metajnl.com/ ; >
 
@@ -1568,7 +1568,7 @@
       au < finished ; crawling ; 2021 ; 105 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2021 ; 2021 ; 105 ; Ubiquity Press ;  ; https://www.jbsr.be/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 106 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2022 [superseded] ; 2022 ; 106 ; Ubiquity Press ;  ; https://www.jbsr.be/ ; >
       au < doNotProcess ; exists ; 2023 ; 107 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2023 ; 2023 ; 107 ; Ubiquity Press ;  ; https://www.jbsr.be/ ; >
-      au < frozen ; exists ; 2024 ; 108 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2024 ; 2024 ; 108 ; Ubiquity Press ;  ; https://jbsr.be/ ; >
+      au < finished ; manifest ; 2024 ; 108 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2024 ; 2024 ; 108 ; Ubiquity Press ;  ; https://jbsr.be/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 109 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2025 ; 2025 ; 109 ; Ubiquity Press ;  ; https://jbsr.be/ ; >
       au < crawling ; exists ; 2026 ; 110 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2026 ; 2026 ; 110 ; Ubiquity Press ;  ; https://jbsr.be/ ; >
 
@@ -1630,9 +1630,9 @@
       nondefparam[journal_id] = su-j-jmre
 
       au < superseded ; finished ; 2016 ; 1 ; Journal of Montessori Research & Education Volume 2016 [superseded] ; 2016 ; 1 ; Ubiquity Press ;  ; https://journalofmore.org/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2019 ; 2 ; Journal of Montessori Research & Education Volume 2019 ; 2019 ; 2 ; Ubiquity Press ;  ; https://journalofmore.org/ ; >
-      au < frozen ; exists ; 2021 ; 3 ; Journal of Montessori Research & Education Volume 2021 ; 2021 ; 3 ; Ubiquity Press ;  ; https://journalofmore.org/ ; >
-      au < frozen ; exists ; 2023 ; 4 ; Journal of Montessori Research & Education Volume 2023 ; 2023 ; 4 ; Ubiquity Press ;  ; https://journalofmore.org/ ; >
+      au < finished ; manifest ; 2019 ; 2 ; Journal of Montessori Research & Education Volume 2019 ; 2019 ; 2 ; Ubiquity Press ;  ; https://journalofmore.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; 3 ; Journal of Montessori Research & Education Volume 2021 ; 2021 ; 3 ; Ubiquity Press ;  ; https://journalofmore.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; 4 ; Journal of Montessori Research & Education Volume 2023 ; 2023 ; 4 ; Ubiquity Press ;  ; https://journalofmore.org/ ; reingest2.clockss.org:8085 >
 
   }
 
@@ -1687,7 +1687,7 @@
       au < finished ; crawling ; 2021 ; 15 ; International Journal of the Commons Volume 2021 ; 2021 ; 15 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 16 ; International Journal of the Commons Volume 2022 [superseded] ; 2022 ; 16 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ ; >
       au < doNotProcess ; exists ; 2023 ; 17 ; International Journal of the Commons Volume 2023 ; 2023 ; 17 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ ; >
-      au < frozen ; exists ; 2024 ; 18 ; International Journal of the Commons Volume 2024 ; 2024 ; 18 ; Ubiquity Press ;  ; https://thecommonsjournal.org/ ; >
+      au < finished ; manifest ; 2024 ; 18 ; International Journal of the Commons Volume 2024 ; 2024 ; 18 ; Ubiquity Press ;  ; https://thecommonsjournal.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2025 ; 19 ; International Journal of the Commons Volume 2025 ; 2025 ; 19 ; Ubiquity Press ;  ; https://thecommonsjournal.org/ ; >
       au < crawling ; exists ; 2026 ; 20 ; International Journal of the Commons Volume 2026 ; 2026 ; 20 ; Ubiquity Press ;  ; https://thecommonsjournal.org/ ; >
 
