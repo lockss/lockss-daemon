@@ -241,7 +241,7 @@ public class ProxyManager extends BaseProxyManager {
    * if connection error (timeout, refuse, etc.) */
   static final String PARAM_NO_MANIFEST_INDEX_RESPONSES =
     PREFIX + "noManifestIndexResponses";
-  static final String DEFAULT_NO_MANIFEST_INDEX_RESPONSES = "301;302;303;307";
+  static final String DEFAULT_NO_MANIFEST_INDEX_RESPONSES = "301;302;303;307;308";
 
   /** A semicolon-separated list of HTTP methods that the proxy should
    * never allow */
