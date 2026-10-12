@@ -558,6 +558,7 @@ public class BaseAtyponMetadataUtil {
     if (au_type != null && (MetadataField.PUBLICATION_TYPE_JOURNAL.equals(au_type))) {
       // we probably overcrawled and got a BOOK_CHAP or BOOK while
       // collecting a journal or proceedings
+        log.debug3("BookTdb check: TDB pubType is journal, rejecting BOOK/CHAP item, url=" + am.get(MetadataField.FIELD_ACCESS_URL));
       return false;
     }
 
@@ -574,22 +575,39 @@ public class BaseAtyponMetadataUtil {
     String pubNamePA = (tdbau == null) ? null : tdbau.getPublisherName();
     log.debug3("Publisher Specific Checks for publisher = " + pubNamePA);
 
-    if (StringUtils.isEmpty(foundEISBN) &&
-        StringUtils.isEmpty(foundISBN)) {
-        //if publisher is ASCE Books then check if the doi has the correct eisbn from the tdb file embedded in it
-        //if not, return false
-        if(pubNamePA != null && pubNamePA.equalsIgnoreCase("American Society of Civil Engineers")){
-          if(am.get(MetadataField.FIELD_DOI).contains(AU_EISBN)){
-            log.debug3("the doi is " + am.get(MetadataField.FIELD_DOI) + " and metadata will be emitted");
-            return true;
+
+      log.debug3("BookTdb check: url=" + am.get(MetadataField.FIELD_ACCESS_URL)
+              + "\n  TDB: tdbau=" + (tdbau == null ? "null" : tdbau.getName())
+              + ", pubType=" + au_type
+              + ", publisher=[" + pubNamePA + "]"
+              + ", AU_EISBN(param)=[" + AU_EISBN + "]"
+              + ", AU_ISBN(tdb print)=[" + AU_ISBN + "]"
+              + ", tdbTitle=[" + (tdbau == null ? null : tdbau.getPublicationTitle()) + "]"
+              + "\n  RIS: foundEISBN=[" + foundEISBN + "]"
+              + ", foundISBN=[" + foundISBN + "]"
+              + ", doi=[" + am.get(MetadataField.FIELD_DOI) + "]"
+              + ", pubTitle=[" + am.get(MetadataField.FIELD_PUBLICATION_TITLE) + "]"
+              + ", rawTY=[" + am.getRaw("TY") + "]");
+
+      if (StringUtils.isEmpty(foundEISBN) &&
+              StringUtils.isEmpty(foundISBN)) {
+          // ASCE Books: RIS has no SN, so verify the DOI embeds this AU's ISBN.
+          // ASCE DOIs typically use the PRINT isbn (e.g. 10.1061/9780784405680),
+          // so accept either the eisbn (book_eisbn param) or the tdb print isbn.
+          if (pubNamePA != null && pubNamePA.equalsIgnoreCase("American Society of Civil Engineers")) {
+              String doi = am.get(MetadataField.FIELD_DOI);
+              boolean doiHasEisbn = doi != null && !StringUtils.isEmpty(AU_EISBN) && doi.contains(AU_EISBN);
+              boolean doiHasIsbn  = doi != null && !StringUtils.isEmpty(AU_ISBN)  && doi.contains(AU_ISBN);
+              boolean match = doiHasEisbn || doiHasIsbn;
+
+              log.debug3("ASCE check: doi=[" + doi + "], AU_EISBN=[" + AU_EISBN + "], AU_ISBN=[" + AU_ISBN + "]"
+                      + ", doiContainsEisbn=" + doiHasEisbn
+                      + ", doiContainsIsbn=" + doiHasIsbn
+                      + ", metadata will " + (match ? "" : "not ") + "be emitted");
+              return match;
           }
-          else{
-            log.debug3("the doi is " + am.get(MetadataField.FIELD_DOI) + " and metadata will not be emitted");
-            return false;
-          }
-        }
-      return true; //return true, we have no way of knowing
-    }
+          return true; //return true, we have no way of knowing
+      }
 
     // this is a param...it can't be null, but be safe
     if (AU_EISBN == null) {

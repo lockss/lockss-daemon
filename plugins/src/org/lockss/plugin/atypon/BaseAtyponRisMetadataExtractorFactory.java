@@ -152,10 +152,10 @@ implements FileMetadataExtractorFactory {
       if (am.get(MetadataField.FIELD_DATE) == null) {
         if (am.getRaw("Y1") != null) { // if DA wasn't there, use Y1
           am.put(MetadataField.FIELD_DATE, am.getRaw("Y1"));
-          log.debug3("Metadata Date check: seg_date is set by Y1 field in ris file");
+          log.debug3("Metadata Date check: date is set by Y1 field in ris file");
         }
       } else {
-        log.debug3("Metadata Date check: seg_date already being set : " + am.get(MetadataField.FIELD_DATE));
+        log.debug3("Metadata Date check: date already being set : " + am.get(MetadataField.FIELD_DATE));
       }
 
       /*
@@ -169,7 +169,9 @@ implements FileMetadataExtractorFactory {
           // it is a bad value, but it was recognized as an isbn because of TY type
           ris_type = "BOOK"; //it could be a chapter but until TY is passed through...
         }
-      } 
+      }
+
+        log.debug3("Metadata ris_type check: : " + ris_type);
 
       // Modify or try alternate RIS tag values based after cooking
       postCookProcess(cu,am,ris_type);
