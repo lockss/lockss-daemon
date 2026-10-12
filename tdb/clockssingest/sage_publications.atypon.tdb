@@ -125,7 +125,7 @@
       au < frozen ; exists ; 1970 ; Abstracts in Anthropology Volume 1 ; 1 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1971 ; Abstracts in Anthropology Volume 2 ; 2 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1972 ; Abstracts in Anthropology Volume 3 ; 3 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1973 ; Abstracts in Anthropology Volume 4 ; 4 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1973 ; Abstracts in Anthropology Volume 4 ; 4 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1974 ; Abstracts in Anthropology Volume 5 ; 5 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1975 ; Abstracts in Anthropology Volume 6 ; 6 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1978 ; Abstracts in Anthropology Volume 7 ; 7 ; aaxa ; https://journals.sagepub.com/ ; >
@@ -625,7 +625,7 @@
       au < crawling ; exists ; 1970-1971 ; Journal of Comparative Administration Volume 2 ; 2 ; aasa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1971-1972 ; Journal of Comparative Administration Volume 3 ; 3 ; aasa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1972-1973 ; Journal of Comparative Administration Volume 4 ; 4 ; aasa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1973-1974 ; Journal of Comparative Administration Volume 5 ; 5 ; aasa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1973-1974 ; Journal of Comparative Administration Volume 5 ; 5 ; aasa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -703,7 +703,7 @@
     >
       #param[base_url] = http://asq.sagepub.com/
 
-      au < ready ; exists ; 1999 ; Administrative Science Quarterly Volume 44 ; 44 ; asqa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1999 ; Administrative Science Quarterly Volume 44 ; 44 ; asqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Administrative Science Quarterly Volume 45 ; 45 ; asqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2001 ; Administrative Science Quarterly Volume 46 ; 46 ; asqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Administrative Science Quarterly Volume 47 ; 47 ; asqa ; https://journals.sagepub.com/ ; >
@@ -747,7 +747,7 @@
       au < ready ; exists ; 1984 ; Adsorption Science & Technology Volume 1 ; 1 ; adta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1985 ; Adsorption Science & Technology Volume 2 ; 2 ; adta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1986 ; Adsorption Science & Technology Volume 3 ; 3 ; adta ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1987 ; Adsorption Science & Technology Volume 4 ; 4 ; adta ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1987 ; Adsorption Science & Technology Volume 4 ; 4 ; adta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1988 ; Adsorption Science & Technology Volume 5 ; 5 ; adta ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 1989 ; Adsorption Science & Technology Volume 6 ; 6 ; adta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1990 ; Adsorption Science & Technology Volume 7 ; 7 ; adta ; https://journals.sagepub.com/ ; >
@@ -795,7 +795,7 @@
       #continued_by = 2634-9833
 
 #Years corrected 20250930
-      au < ready ; exists ; 1992 ; Advanced Composites Letters Volume 1 ; 1 ; acma ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1992 ; Advanced Composites Letters Volume 1 ; 1 ; acma ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 1993 ; Advanced Composites Letters Volume 2 ; 2 ; acma ; https://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 1994 ; Advanced Composites Letters Volume 3 ; 3 ; acma ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 1995 ; Advanced Composites Letters Volume 4 ; 4 ; acma ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
@@ -913,10 +913,10 @@
       au < ready ; exists ; 1955-1956 ; Adult Education Volume 6 ; 6 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1956-1957 ; Adult Education Volume 7 ; 7 ; aeqa ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 1957-1958 ; Adult Education Volume 8 ; 8 ; aeqa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1958-1959 ; Adult Education Volume 9 ; 9 ; aeqa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1958-1959 ; Adult Education Volume 9 ; 9 ; aeqa ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 1959-1960 ; Adult Education Volume 10 ; 10 ; aeqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1960-1961 ; Adult Education Volume 11 ; 11 ; aeqa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1961-1962 ; Adult Education Volume 12 ; 12 ; aeqa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1961-1962 ; Adult Education Volume 12 ; 12 ; aeqa ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 1962-1963 ; Adult Education Volume 13 ; 13 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1963-1964 ; Adult Education Volume 14 ; 14 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1964-1965 ; Adult Education Volume 15 ; 15 ; aeqa ; https://journals.sagepub.com/ ; >
@@ -1221,7 +1221,7 @@
       #param[base_url] = http://aff.sagepub.com/
 
       au < ready ; exists ; 1986 ; Affilia Volume 1 ; 1 ; affa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1987 ; Affilia Volume 2 ; 2 ; affa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1987 ; Affilia Volume 2 ; 2 ; affa ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 1988 ; Affilia Volume 3 ; 3 ; affa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1989 ; Affilia Volume 4 ; 4 ; affa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1990 ; Affilia Volume 5 ; 5 ; affa ; https://journals.sagepub.com/ ; >
@@ -1478,7 +1478,7 @@
       au < ready ; exists ; 1988 ; AIDS Research and Human Retroviruses Volume 4 ; 4 ; aida ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1989 ; AIDS Research and Human Retroviruses Volume 5 ; 5 ; aida ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1990 ; AIDS Research and Human Retroviruses Volume 6 ; 6 ; aida ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1991 ; AIDS Research and Human Retroviruses Volume 7 ; 7 ; aida ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1991 ; AIDS Research and Human Retroviruses Volume 7 ; 7 ; aida ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 1992 ; AIDS Research and Human Retroviruses Volume 8 ; 8 ; aida ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1993 ; AIDS Research and Human Retroviruses Volume 9 ; 9 ; aida ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1994 ; AIDS Research and Human Retroviruses Volume 10 ; 10 ; aida ; https://journals.sagepub.com/ ; >
@@ -1700,7 +1700,7 @@
     >
       #param[journal_id] = atl
 
-      au < ready ; exists ; 1999 ; Alternatives to Laboratory Animals Volume 27 ; 27 ; atla ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1999 ; Alternatives to Laboratory Animals Volume 27 ; 27 ; atla ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Alternatives to Laboratory Animals Volume 28 ; 28 ; atla ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2001 ; Alternatives to Laboratory Animals Volume 29 ; 29 ; atla ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Alternatives to Laboratory Animals Volume 30 ; 30 ; atla ; https://journals.sagepub.com/ ; >
@@ -6279,7 +6279,7 @@
         au < frozen ; exists ; 2022-2023 ; Behavioral Disorders Volume 48 ; 48 ; bhda ; https://journals.sagepub.com/ ; >
         au < frozen ; exists ; 2023-2024 ; Behavioral Disorders Volume 49 ; 49 ; bhda ; https://journals.sagepub.com/ ; >
         au < deepCrawl ; exists ; 2024-2025 ; Behavioral Disorders Volume 50 ; 50 ; bhda ; https://journals.sagepub.com/ ; >
-        au < ready ; exists ; 2025-2026 ; Behavioral Disorders Volume 51 ; 51 ; bhda ; https://journals.sagepub.com/ ; >
+        au < crawling ; exists ; 2025-2026 ; Behavioral Disorders Volume 51 ; 51 ; bhda ; https://journals.sagepub.com/ ; >
         au < expected ; exists ; 2026-2027 ; Behavioral Disorders Volume 52 ; 52 ; bhda ; https://journals.sagepub.com/ ; >
 
   }
@@ -6461,7 +6461,7 @@
       au < ready ; exists ; 2015 ; Big Data Volume 3 ; 3 ; biga ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2016 ; Big Data Volume 4 ; 4 ; biga ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2017 ; Big Data Volume 5 ; 5 ; biga ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2018 ; Big Data Volume 6 ; 6 ; biga ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2018 ; Big Data Volume 6 ; 6 ; biga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Big Data Volume 7 ; 7 ; biga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Big Data Volume 8 ; 8 ; biga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Big Data Volume 9 ; 9 ; biga ; https://journals.sagepub.com/ ; >
@@ -6823,7 +6823,7 @@
       au < ready ; exists ; 2011 ; Biotechnology Law Report Volume 30 ; 30 ; blra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2012 ; Biotechnology Law Report Volume 31 ; 31 ; blra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2013 ; Biotechnology Law Report Volume 32 ; 32 ; blra ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2014 ; Biotechnology Law Report Volume 33 ; 33 ; blra ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2014 ; Biotechnology Law Report Volume 33 ; 33 ; blra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2015 ; Biotechnology Law Report Volume 34 ; 34 ; blra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2016 ; Biotechnology Law Report Volume 35 ; 35 ; blra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2017 ; Biotechnology Law Report Volume 36 ; 36 ; blra ; https://journals.sagepub.com/ ; >
@@ -7818,7 +7818,7 @@
       au < deepCrawl ; exists ; 2024 ; Bulletin of Sociological Methodology Volume 162 ; 162 ; bmsa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Bulletin of Sociological Methodology Volume 163 ; 163 ; bmsa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Bulletin of Sociological Methodology Volume 164 ; 164 ; bmsa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2025 ; Bulletin of Sociological Methodology Volume 165-166 ; 165-166 ; bmsa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2025 ; Bulletin of Sociological Methodology Volume 165-166 ; 165-166 ; bmsa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Bulletin of Sociological Methodology Volume 167 ; 167 ; bmsa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Bulletin of Sociological Methodology Volume 168 ; 168 ; bmsa ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2026 ; Bulletin of Sociological Methodology Volume 169-170 ; 169-170 ; bmsa ; https://journals.sagepub.com/ ; >
@@ -43280,7 +43280,7 @@
     au < manifest ; exists ; 2015 ; LGBT Health Volume 2 ; 2 ; lgba ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; LGBT Health Volume 3 ; 3 ; lgba ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; LGBT Health Volume 4 ; 4 ; lgba ; https://journals.sagepub.com/ ; >
-    au < ready ; exists ; 2018 ; LGBT Health Volume 5 ; 5 ; lgba ; https://journals.sagepub.com/ ; >
+    au < crawling ; exists ; 2018 ; LGBT Health Volume 5 ; 5 ; lgba ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2019 ; LGBT Health Volume 6 ; 6 ; lgba ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; LGBT Health Volume 7 ; 7 ; lgba ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; LGBT Health Volume 8 ; 8 ; lgba ; https://journals.sagepub.com/ ; >
@@ -47553,7 +47553,7 @@
     au < manifest ; exists ; 2015 ; New Space Volume 3 ; 3 ; nspa ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; New Space Volume 4 ; 4 ; nspa ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; New Space Volume 5 ; 5 ; nspa ; https://journals.sagepub.com/ ; >
-    au < ready ; exists ; 2018 ; New Space Volume 6 ; 6 ; nspa ; https://journals.sagepub.com/ ; >
+    au < crawling ; exists ; 2018 ; New Space Volume 6 ; 6 ; nspa ; https://journals.sagepub.com/ ; >
     au < ready ; exists ; 2019 ; New Space Volume 7 ; 7 ; nspa ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; New Space Volume 8 ; 8 ; nspa ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; New Space Volume 9 ; 9 ; nspa ; https://journals.sagepub.com/ ; >
@@ -64163,7 +64163,7 @@
       au < crawling ; exists ; 2008 ; Vector-Borne and Zoonotic Diseases Volume 8 ; 8 ; vbza ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2009 ; Vector-Borne and Zoonotic Diseases Volume 9 ; 9 ; vbza ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2010 ; Vector-Borne and Zoonotic Diseases Volume 10 ; 10 ; vbza ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2011 ; Vector-Borne and Zoonotic Diseases Volume 11 ; 11 ; vbza ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2011 ; Vector-Borne and Zoonotic Diseases Volume 11 ; 11 ; vbza ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2012 ; Vector-Borne and Zoonotic Diseases Volume 12 ; 12 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2013 ; Vector-Borne and Zoonotic Diseases Volume 13 ; 13 ; vbza ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2014 ; Vector-Borne and Zoonotic Diseases Volume 14 ; 14 ; vbza ; https://journals.sagepub.com/ ; >
@@ -64471,7 +64471,7 @@
       au < ready ; exists ; 2015 ; Violence and Gender Volume 2 ; 2 ; vlga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2016 ; Violence and Gender Volume 3 ; 3 ; vlga ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2017 ; Violence and Gender Volume 4 ; 4 ; vlga ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2018 ; Violence and Gender Volume 5 ; 5 ; vlga ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2018 ; Violence and Gender Volume 5 ; 5 ; vlga ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2019 ; Violence and Gender Volume 6 ; 6 ; vlga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Violence and Gender Volume 7 ; 7 ; vlga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Violence and Gender Volume 8 ; 8 ; vlga ; https://journals.sagepub.com/ ; >
