@@ -3017,8 +3017,8 @@ public class V2AuMover {
     case DONE:
       if (!auStat.hasV1Content()) {
         sb.append(": No V1 content");
-        break;
       }
+      break;
     case QUEUE:
       if (excludeQueued) {
         return null;
@@ -3275,7 +3275,11 @@ public class V2AuMover {
         return;
       }
       StringBuilder sb = new StringBuilder();
-      auStat.addCounterStatus(sb, opType);
+      if (!auStat.hasV1Content()) {
+        sb.append("No V1 content");
+      } else {
+        auStat.addCounterStatus(sb, opType);
+      }
       String auData = sb.toString();
       reportWriter.println("AU Name: " + auStat.getAuName());
       reportWriter.println("AU ID: " + auStat.getAuId());
