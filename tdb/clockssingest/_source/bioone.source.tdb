@@ -34,36 +34,36 @@
 }
 {
   publisher <
-    name = UniBio Press ;
+    name = ScholAgora ;
     info[contract] = 2013 ;
     info[tester] = S ;
     info[platform] = Source
   >
     hidden[proxy] = DIRECT
-    provider = UniBio Press
+    provider = ScholAgora
     implicit < status ; status2 ; year ; name ; param[directory] >
     plugin = org.lockss.plugin.clockss.bioone.ClockssBioOneSourcePlugin
 
   {
 
     title <
-       name = UniBio Press Source Content
+       name = ScholAgora Source Content
     >
 
     {
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/bioone-released/
 
-      au < zapped ; finished ; 2022 ; UniBio Press Source Content 2022 ; 2022 >
+      au < zapped ; finished ; 2022 ; ScholAgora Source Content 2022 ; 2022 >
       #No more AUs. Moved to https.
 
     }
     {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/bioone-released/
 
-      au < zapped ; finished ; 2023 ; UniBio Press Source Content 2023 ; 2023 >
-      au < readySource ; finished ; 2024 ; UniBio Press Source Content 2024 ; 2024 >
-      au < readySource ; finished ; 2025 ; UniBio Press Source Content 2025 ; 2025 >
-      au < readySource ; crawling ; 2026 ; UniBio Press Source Content 2026 ; 2026 >
+      au < zapped ; finished ; 2023 ; ScholAgora Source Content 2023 ; 2023 >
+      au < readySource ; finished ; 2024 ; ScholAgora Source Content 2024 ; 2024 >
+      au < readySource ; finished ; 2025 ; ScholAgora Source Content 2025 ; 2025 >
+      au < readySource ; crawling ; 2026 ; ScholAgora Source Content 2026 ; 2026 >
 
     }
   }
