@@ -129,7 +129,7 @@
       nondefparam[base_url2] = https://account.eceeeproceedings.org/
       nondefparam[journal_id] = eceee-j-ss
 
-      au < exists ; exists ; 2026 ; 1 ; ECEEE Summer Studies Proceedings Volume 2026 ; 2026 ; 1 ; European Council for an Energy Efficient Economy ;  ; https://eceeeproceedings.org/ ; >
+      au < manifest ; exists ; 2026 ; 1 ; ECEEE Summer Studies Proceedings Volume 2026 ; 2026 ; 1 ; European Council for an Energy Efficient Economy ;  ; https://eceeeproceedings.org/ ; >
 
   }
 
@@ -823,7 +823,7 @@
       nondefparam[base_url2] = https://account.architecturalhistoryjournal.com/
       nondefparam[journal_id] = up-j-ah
 
-      au < exists ; exists ; 2026 ; 69 ; Architectural History Volume 2026 ; 2026 ; 69 ; Ubiquity Press ;  ; https://architecturalhistoryjournal.com/ ; >
+      au < manifest ; exists ; 2026 ; 69 ; Architectural History Volume 2026 ; 2026 ; 69 ; Ubiquity Press ;  ; https://architecturalhistoryjournal.com/ ; >
 
   }
 
@@ -2766,7 +2766,7 @@
       #Previously Gateway Papers (2044-852X) 2010 to 2024
 
       au < deepCrawl ; exists ; 2025 ; 6 ; Studies in Empowering Education Volume 2025 ; 2025 ; 6 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
-      au < manifest ; exists ; 2026 ; 7 ; Studies in Empowering Education Volume 2026 ; 2026 ; 7 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
+      au < ready ; exists ; 2026 ; 7 ; Studies in Empowering Education Volume 2026 ; 2026 ; 7 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
 
   }
 

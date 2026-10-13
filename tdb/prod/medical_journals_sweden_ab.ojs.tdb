@@ -472,6 +472,7 @@
 
       param[base_url] = https://medicaljournalssweden.se/
       param[journal_id] = biid
+      #discontinue publication as of December 31, 2026
 
       au < released ; 2015 ; Biomaterial Investigations in Dentistry Volume 2015 ; 1 ; 2015 >
       au < released ; 2016 ; Biomaterial Investigations in Dentistry Volume 2016 ; 2 ; 2016 >
