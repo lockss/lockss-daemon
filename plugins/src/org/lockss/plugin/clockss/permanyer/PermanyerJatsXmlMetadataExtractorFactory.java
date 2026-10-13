@@ -62,7 +62,7 @@ public class PermanyerJatsXmlMetadataExtractorFactory extends SourceXmlMetadataE
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
       if (JatsPublishingHelper == null) {
-        JatsPublishingHelper = new JatsPublishingSchemaHelper();
+        JatsPublishingHelper = new PermanyerJatsXmlSchemaHelper();
       }
       return JatsPublishingHelper;
     }
