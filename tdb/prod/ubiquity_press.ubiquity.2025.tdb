@@ -126,7 +126,7 @@
       nondefparam[base_url2] = https://account.eceeeproceedings.org/
       nondefparam[journal_id] = eceee-j-ss
 
-      au < exists ; 2026 ; 1 ; ECEEE Summer Studies Proceedings Volume 2026 ; 2026 ; 1 ; European Council for an Energy Efficient Economy ;  ; https://eceeeproceedings.org/ >
+      au < manifest ; 2026 ; 1 ; ECEEE Summer Studies Proceedings Volume 2026 ; 2026 ; 1 ; European Council for an Energy Efficient Economy ;  ; https://eceeeproceedings.org/ >
 
   }
 
@@ -817,7 +817,7 @@
       nondefparam[base_url2] = https://account.architecturalhistoryjournal.com/
       nondefparam[journal_id] = up-j-ah
 
-      au < exists ; 2026 ; 69 ; Architectural History Volume 2026 ; 2026 ; 69 ; Ubiquity Press ;  ; https://architecturalhistoryjournal.com/ >
+      au < manifest ; 2026 ; 69 ; Architectural History Volume 2026 ; 2026 ; 69 ; Ubiquity Press ;  ; https://architecturalhistoryjournal.com/ >
 
   }
 
