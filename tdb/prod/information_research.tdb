@@ -13,12 +13,12 @@
     >
 
     rights = openaccess
-    plugin = uk.org.lockss.plugin.informationresearch.InformationResearchPlugin
-    implicit < status ; year ; name ; param[volume_name] >
-    #NO MANIFEST PAGE CHECKER
 
     {
     param[base_url] = http://www.informationr.net/ir/
+    plugin = uk.org.lockss.plugin.informationresearch.InformationResearchPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+    #NO MANIFEST PAGE CHECKER
 
     au < released ; 1995-1996 ; Information Research Volume 1 ; 1 >
     au < released ; 1996-1997 ; Information Research Volume 2 ; 2 >
@@ -46,13 +46,33 @@
     au < released ; 2019 ; Information Research Volume 24 ; 24 >
     }
     {
-     param[base_url] = https://www.informationr.net/ir/
-     #moved to https://publicera.kb.se/ir
+    param[base_url] = https://www.informationr.net/ir/
+    plugin = uk.org.lockss.plugin.informationresearch.InformationResearchPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+    #NO MANIFEST PAGE CHECKER
+    #moved to https://publicera.kb.se/ir
 
     au < released ; 2020 ; Information Research Volume 25 ; 25 >
     au < released ; 2021 ; Information Research Volume 26 ; 26 >
     au < released ; 2022 ; Information Research Volume 27 ; 27 >
     au < doNotProcess ; 2023 ; Information Research Volume 28 ; 28 > #Crawl completed with no substance, https://informationr.net/infres/issue/view/28-1
+    }
+    {
+    plugin = org.lockss.plugin.ojs3.Ojs3Plugin
+    attr[start_stem] = index.php/ 
+    param[base_url] = https://publicera.kb.se/
+    implicit < status ; year ; param[year] ; name ; volume >
+    
+    param[journal_id] = ir
+    
+    au < doNotProcess ; 2020 ; 2020 ; Information Research Volume 25 ; 25 >
+    au < doNotProcess ; 2021 ; 2021 ; Information Research Volume 26 ; 26 >
+    au < doNotProcess ; 2022 ; 2022 ; Information Research Volume 27 ; 27 >
+    au < manifest ; 2023 ; 2023 ; Information Research Volume 28 ; 28 > 
+    au < manifest ; 2024 ; 2024 ; Information Research Volume 29 ; 29 > 
+    au < manifest ; 2025 ; 2025 ; Information Research Volume 30 ; 30 > 
+    au < manifest ; 2026 ; 2026 ; Information Research Volume 31 ; 31 > 
+
     }
 
   }
