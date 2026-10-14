@@ -81,7 +81,7 @@
 
       au < ready ; exists ; 1997 ; About Campus Volume 1 ; 1 ; acaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1998 ; About Campus Volume 2 ; 2 ; acaa ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1999 ; About Campus Volume 3 ; 3 ; acaa ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1999 ; About Campus Volume 3 ; 3 ; acaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; About Campus Volume 4 ; 4 ; acaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2001 ; About Campus Volume 5 ; 5 ; acaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; About Campus Volume 6 ; 6 ; acaa ; https://journals.sagepub.com/ ; >
@@ -464,14 +464,14 @@
 
       au < ready ; exists ; 1981 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 6 ; 6 ; aeta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1982 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 7 ; 7 ; aeta ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1983 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 8 ; 8 ; aeta ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1983 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 8 ; 8 ; aeta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1984 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 9 ; 9 ; aeta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1985 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 10 ; 10 ; aeta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1986 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 11 ; 11 ; aeta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1987 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 12 ; 12 ; aeta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1988 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 13 ; 13 ; aeta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1989 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 14 ; 14 ; aeta ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1990 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 15 ; 15 ; aeta ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1990 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 15 ; 15 ; aeta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1991 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 16 ; 16 ; aeta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1992 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 17 ; 17 ; aeta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1993 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 18 ; 18 ; aeta ; https://journals.sagepub.com/ ; >
@@ -758,7 +758,7 @@
       au < frozen ; exists ; 1995 ; Adsorption Science & Technology Volume 12 ; 12 ; adta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1996 ; Adsorption Science & Technology Volume 13 ; 13 ; adta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1996 ; Adsorption Science & Technology Volume 14 ; 14 ; adta ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1997 ; Adsorption Science & Technology Volume 15 ; 15 ; adta ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1997 ; Adsorption Science & Technology Volume 15 ; 15 ; adta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1998 ; Adsorption Science & Technology Volume 16 ; 16 ; adta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1999 ; Adsorption Science & Technology Volume 17 ; 17 ; adta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 ; adta ; https://journals.sagepub.com/ ; >
@@ -905,7 +905,7 @@
       #param[base_url] = http://aeq.sagepub.com/
       #continued_by  = 0741-7136
 
-      au < crawling ; exists ; 1950-1951 ; Adult Education Volume 1 ; 1 ; aeqa ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1950-1951 ; Adult Education Volume 1 ; 1 ; aeqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1951-1952 ; Adult Education Volume 2 ; 2 ; aeqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1952-1953 ; Adult Education Volume 3 ; 3 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1953-1954 ; Adult Education Volume 4 ; 4 ; aeqa ; https://journals.sagepub.com/ ; >
@@ -1057,7 +1057,7 @@
       au < ready ; exists ; 1994 ; Advances in Dental Research Volume 8 ; 8 ; adra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1995 ; Advances in Dental Research Volume 9 ; 9 ; adra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1996 ; Advances in Dental Research Volume 10 ; 10 ; adra ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1997 ; Advances in Dental Research Volume 11 ; 11 ; adra ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1997 ; Advances in Dental Research Volume 11 ; 11 ; adra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1998 ; Advances in Dental Research Volume 12 ; 12 ; adra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1999 ; Advances in Dental Research Volume 13 ; 13 ; adra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Advances in Dental Research Volume 14 ; 14 ; adra ; https://journals.sagepub.com/ ; >
@@ -1129,7 +1129,7 @@
     >
       #param[base_url] = http://ase.sagepub.com/
 
-      au < crawling ; exists ; 1997-1998 ; Advances in Structural Engineering Volume 1 ; 1 ; asea ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1997-1998 ; Advances in Structural Engineering Volume 1 ; 1 ; asea ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1998-1999 ; Advances in Structural Engineering Volume 2 ; 2 ; asea ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Advances in Structural Engineering Volume 3 ; 3 ; asea ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2001 ; Advances in Structural Engineering Volume 4 ; 4 ; asea ; https://journals.sagepub.com/ ; >
@@ -1402,7 +1402,7 @@
       au < frozen ; exists ; 1992 ; AIDS Patient Care Volume 6 ; 6 ; adsb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1993 ; AIDS Patient Care Volume 7 ; 7 ; adsb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1994 ; AIDS Patient Care Volume 8 ; 8 ; adsb ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1995 ; AIDS Patient Care Volume 9 ; 9 ; adsb ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1995 ; AIDS Patient Care Volume 9 ; 9 ; adsb ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -1483,7 +1483,7 @@
       au < ready ; exists ; 1993 ; AIDS Research and Human Retroviruses Volume 9 ; 9 ; aida ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1994 ; AIDS Research and Human Retroviruses Volume 10 ; 10 ; aida ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1995 ; AIDS Research and Human Retroviruses Volume 11 ; 11 ; aida ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1996 ; AIDS Research and Human Retroviruses Volume 12 ; 12 ; aida ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1996 ; AIDS Research and Human Retroviruses Volume 12 ; 12 ; aida ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1997 ; AIDS Research and Human Retroviruses Volume 13 ; 13 ; aida ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1998 ; AIDS Research and Human Retroviruses Volume 14 ; 14 ; aida ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1999 ; AIDS Research and Human Retroviruses Volume 15 ; 15 ; aida ; https://journals.sagepub.com/ ; >
@@ -1537,7 +1537,7 @@
       au < frozen ; exists ; 1998 ; Alexandria Volume 10 ; 10 ; alaa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1999 ; Alexandria Volume 11 ; 11 ; alaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Alexandria Volume 12 ; 12 ; alaa ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2001 ; Alexandria Volume 13 ; 13 ; alaa ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2001 ; Alexandria Volume 13 ; 13 ; alaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Alexandria Volume 14 ; 14 ; alaa ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2003 ; Alexandria Volume 15 ; 15 ; alaa ; https://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2004 ; Alexandria Volume 16 ; 16 ; alaa ; https://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
@@ -6921,7 +6921,7 @@
       au < frozen ; exists ; 2013 ; Brain Connectivity Volume 3 ; 3 ; brca ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2014 ; Brain Connectivity Volume 4 ; 4 ; brca ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2015 ; Brain Connectivity Volume 5 ; 5 ; brca ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2016 ; Brain Connectivity Volume 6 ; 6 ; brca ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2016 ; Brain Connectivity Volume 6 ; 6 ; brca ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2017 ; Brain Connectivity Volume 7 ; 7 ; brca ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2018 ; Brain Connectivity Volume 8 ; 8 ; brca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Brain Connectivity Volume 9 ; 9 ; brca ; https://journals.sagepub.com/ ; >
@@ -7019,7 +7019,7 @@
       au < manifest ; exists ; 2009 ; Breastfeeding Medicine Volume 4 ; 4 ; bfma ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2010 ; Breastfeeding Medicine Volume 5 ; 5 ; bfma ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2011 ; Breastfeeding Medicine Volume 6 ; 6 ; bfma ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2012 ; Breastfeeding Medicine Volume 7 ; 7 ; bfma ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2012 ; Breastfeeding Medicine Volume 7 ; 7 ; bfma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2013 ; Breastfeeding Medicine Volume 8 ; 8 ; bfma ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2014 ; Breastfeeding Medicine Volume 9 ; 9 ; bfma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2015 ; Breastfeeding Medicine Volume 10 ; 10 ; bfma ; https://journals.sagepub.com/ ; >
@@ -8749,10 +8749,10 @@
       au < ready ; exists ; 2010 ; Cancer Biotherapy and Radiopharmaceuticals Volume 25 ; 25 ; cbta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2011 ; Cancer Biotherapy and Radiopharmaceuticals Volume 26 ; 26 ; cbta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2012 ; Cancer Biotherapy and Radiopharmaceuticals Volume 27 ; 27 ; cbta ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2013 ; Cancer Biotherapy and Radiopharmaceuticals Volume 28 ; 28 ; cbta ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2013 ; Cancer Biotherapy and Radiopharmaceuticals Volume 28 ; 28 ; cbta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2014 ; Cancer Biotherapy and Radiopharmaceuticals Volume 29 ; 29 ; cbta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2015 ; Cancer Biotherapy and Radiopharmaceuticals Volume 30 ; 30 ; cbta ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2016 ; Cancer Biotherapy and Radiopharmaceuticals Volume 31 ; 31 ; cbta ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2016 ; Cancer Biotherapy and Radiopharmaceuticals Volume 31 ; 31 ; cbta ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Cancer Biotherapy and Radiopharmaceuticals Volume 32 ; 32 ; cbta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2018 ; Cancer Biotherapy and Radiopharmaceuticals Volume 33 ; 33 ; cbta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Cancer Biotherapy and Radiopharmaceuticals Volume 34 ; 34 ; cbta ; https://journals.sagepub.com/ ; >
@@ -9149,7 +9149,7 @@
       au < frozen ; exists ; 2013 ; Cellular Reprogramming Volume 15 ; 15 ; clra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2014 ; Cellular Reprogramming Volume 16 ; 16 ; clra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2015 ; Cellular Reprogramming Volume 17 ; 17 ; clra ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2016 ; Cellular Reprogramming Volume 18 ; 18 ; clra ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2016 ; Cellular Reprogramming Volume 18 ; 18 ; clra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2017 ; Cellular Reprogramming Volume 19 ; 19 ; clra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2018 ; Cellular Reprogramming Volume 20 ; 20 ; clra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Cellular Reprogramming Volume 21 ; 21 ; clra ; https://journals.sagepub.com/ ; >
@@ -64162,7 +64162,7 @@
       au < ready ; exists ; 2007 ; Vector-Borne and Zoonotic Diseases Volume 7 ; 7 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2008 ; Vector-Borne and Zoonotic Diseases Volume 8 ; 8 ; vbza ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2009 ; Vector-Borne and Zoonotic Diseases Volume 9 ; 9 ; vbza ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2010 ; Vector-Borne and Zoonotic Diseases Volume 10 ; 10 ; vbza ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2010 ; Vector-Borne and Zoonotic Diseases Volume 10 ; 10 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2011 ; Vector-Borne and Zoonotic Diseases Volume 11 ; 11 ; vbza ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2012 ; Vector-Borne and Zoonotic Diseases Volume 12 ; 12 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2013 ; Vector-Borne and Zoonotic Diseases Volume 13 ; 13 ; vbza ; https://journals.sagepub.com/ ; >
@@ -64544,7 +64544,7 @@
     #param[base_url] = http://vcj.sagepub.com/
 
       au < frozen ; exists ; 2002 ; Visual Communication Volume 1 ; 1 ; vcja ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2003 ; Visual Communication Volume 2 ; 2 ; vcja ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2003 ; Visual Communication Volume 2 ; 2 ; vcja ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2004 ; Visual Communication Volume 3 ; 3 ; vcja ; https://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2005 ; Visual Communication Volume 4 ; 4 ; vcja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2006 ; Visual Communication Volume 5 ; 5 ; vcja ; https://journals.sagepub.com/ ; >
