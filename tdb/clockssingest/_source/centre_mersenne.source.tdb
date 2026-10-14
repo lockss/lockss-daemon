@@ -23,16 +23,16 @@
       au < zapped ; finished ; 2021 ; Centre Mersenne Source Content 2021 ; 2021 >
       #Plugin update to ignore content - JIRA LXPLUG-2080
       au < zapped ; finished ; 2021 ; Centre Mersenne Source Content 2021_01 ; 2021_01 >
-      au < readySource ; finished ; 2022 ; Centre Mersenne Source Content 2022_01 ; 2022_01 >
+      au < zapped ; finished ; 2022 ; Centre Mersenne Source Content 2022_01 ; 2022_01 >
       #No more AUs. Moved to https.
 
     }
     {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/mersenne-released/
 
-      au < readySource ; finished ; 2023 ; Centre Mersenne Source Content 2023_01 ; 2023_01 >
-      au < readySource ; finished ; 2024 ; Centre Mersenne Source Content 2024_01 ; 2024_01 >
-      au < readySource ; finished ; 2025 ; Centre Mersenne Source Content 2025_01 ; 2025_01 >
+      au < zapped ; finished ; 2023 ; Centre Mersenne Source Content 2023_01 ; 2023_01 >
+      au < zapped ; finished ; 2024 ; Centre Mersenne Source Content 2024_01 ; 2024_01 >
+      au < zapped ; finished ; 2025 ; Centre Mersenne Source Content 2025_01 ; 2025_01 >
       au < readySource ; crawling ; 2026 ; Centre Mersenne Source Content 2026_01 ; 2026_01 >
 
     }
