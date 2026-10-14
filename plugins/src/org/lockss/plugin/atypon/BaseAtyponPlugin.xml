@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>197</string>
+    <string>198</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -354,6 +354,28 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>text/html_link_rewriter_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponHtmlLinkRewriterFactory</string>
   </entry>
+    <!-- UX3 webpack bundles build lazy-chunk URLs at run time (js/<name>-<hash>.js)
+     and fetch releasedAssets//locales/en.json; none of these appear in HTML.
+     This extractor rebuilds them from the chunk tables inside main.bundle-*.js.
+     Register for every mime type JS is served as (ASM serves application/javascript). -->
+    <entry>
+        <string>application/javascript_link_extractor_factory</string>
+        <string>org.lockss.plugin.atypon.BaseAtyponJavaScriptLinkExtractorFactory</string>
+    </entry>
+    <entry>
+        <string>text/javascript_link_extractor_factory</string>
+        <string>org.lockss.plugin.atypon.BaseAtyponJavaScriptLinkExtractorFactory</string>
+    </entry>
+    <entry>
+        <string>application/x-javascript_link_extractor_factory</string>
+        <string>org.lockss.plugin.atypon.BaseAtyponJavaScriptLinkExtractorFactory</string>
+    </entry>
+    <!-- default CSS rewriter mangles url("data:...") (ASM build-*.css Montserrat Subset font),
+     which makes browsers drop ~87% of the stylesheet on replay. Protect data: URIs. -->
+    <entry>
+        <string>text/css_link_rewriter_factory</string>
+        <string>org.lockss.plugin.atypon.BaseAtyponCssLinkRewriterFactory</string>
+    </entry>
   <entry>
     <string>application/x-research-info-systems_filter_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponRisFilterFactory</string>
