@@ -92,12 +92,12 @@
       au < finished ; manifest ; 1981 ; Revista Interamericana de Bibliotecología Volume 1981 ; 1981 ; 4 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 1982 ; Revista Interamericana de Bibliotecología Volume 1982 ; 1982 ; 5 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 1983 ; Revista Interamericana de Bibliotecología Volume 1983 ; 1983 ; 6 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 1984 ; Revista Interamericana de Bibliotecología Volume 1984 ; 1984 ; 7 ; >
+      au < finished ; manifest ; 1984 ; Revista Interamericana de Bibliotecología Volume 1984 ; 1984 ; 7 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 1985 ; Revista Interamericana de Bibliotecología Volume 1985 ; 1985 ; 8 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 1986 ; Revista Interamericana de Bibliotecología Volume 1986 ; 1986 ; 9 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 1987 ; Revista Interamericana de Bibliotecología Volume 1987 ; 1987 ; 10 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 1988 ; Revista Interamericana de Bibliotecología Volume 1988 ; 1988 ; 11 ; >
-      au < frozen ; exists ; 1989 ; Revista Interamericana de Bibliotecología Volume 1989 ; 1989 ; 12 ; >
+      au < finished ; manifest ; 1988 ; Revista Interamericana de Bibliotecología Volume 1988 ; 1988 ; 11 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1989 ; Revista Interamericana de Bibliotecología Volume 1989 ; 1989 ; 12 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 1990 ; Revista Interamericana de Bibliotecología Volume 1990 ; 1990 ; 13 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 1991 ; Revista Interamericana de Bibliotecología Volume 1991 ; 1991 ; 14 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 1992 ; Revista Interamericana de Bibliotecología Volume 1992 ; 1992 ; 15 ; reingest3.clockss.org:8083 >
@@ -209,7 +209,7 @@
       param[journal_id] = iee
 
       au < finished ; manifest ; 1983 ; Investigación y Educación En Enfermería Volume 1983 ; 1983 ; 1 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 1984 ; Investigación y Educación En Enfermería Volume 1984 ; 1984 ; 2 ; >
+      au < finished ; manifest ; 1984 ; Investigación y Educación En Enfermería Volume 1984 ; 1984 ; 2 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 1985 ; Investigación y Educación En Enfermería Volume 1985 ; 1985 ; 3 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 1986 ; Investigación y Educación En Enfermería Volume 1986 ; 1986 ; 4 ; >
       au < finished ; manifest ; 1987 ; Investigación y Educación En Enfermería Volume 1987 ; 1987 ; 5 ; reingest2.clockss.org:8085 >

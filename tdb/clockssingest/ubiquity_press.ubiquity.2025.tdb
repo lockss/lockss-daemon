@@ -1725,7 +1725,7 @@
       au < superseded ; exists ; 2022 ; 17 ; Global Heart Volume 2022 [superseded] ; 2022 ; 17 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
       au < doNotProcess ; exists ; 2023 ; 18 ; Global Heart Volume 2023 ; 2023 ; 18 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
       au < finished ; manifest ; 2024 ; 19 ; Global Heart Volume 2024 ; 2024 ; 19 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2025 ; 20 ; Global Heart Volume 2025 ; 2025 ; 20 ; Ubiquity Press ; 403: https://storage.googleapis.com/jnl-up-j-gh-files/journals/1/articles/1421/67e521b0e7226.png from https://globalheartjournal.com/en/articles/1421 ; https://globalheartjournal.com/ ; >
+      au < finished ; manifest ; 2025 ; 20 ; Global Heart Volume 2025 ; 2025 ; 20 ; Ubiquity Press ; 403: https://storage.googleapis.com/jnl-up-j-gh-files/journals/1/articles/1421/67e521b0e7226.png from https://globalheartjournal.com/en/articles/1421 ; https://globalheartjournal.com/ ; reingest3.clockss.org:8083 >
       au < manifest ; exists ; 2026 ; 21 ; Global Heart Volume 2026 ; 2026 ; 21 ; Ubiquity Press ; 403: https://storage.googleapis.com/jnl-up-j-gh-files/journals/1/articles/1421/67e521b0e7226.png from https://globalheartjournal.com/en/articles/1421 ; https://globalheartjournal.com/ ; >
 
   }
@@ -1751,7 +1751,7 @@
       au < finished ; crawling ; 2021 ; 7 ; Open Quaternary Volume 2021 ; 2021 ; 7 ; Ubiquity Press ;  ; https://www.openquaternary.com/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 8 ; Open Quaternary Volume 2022 [superseded] ; 2022 ; 8 ; Ubiquity Press ;  ; https://www.openquaternary.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 9 ; Open Quaternary Volume 2023 ; 2023 ; 9 ; Ubiquity Press ;  ; https://openquaternary.com/ ; >
-      au < frozen ; exists ; 2024 ; 10 ; Open Quaternary Volume 2024 ; 2024 ; 10 ; Ubiquity Press ;  ; https://openquaternary.com/ ; >
+      au < finished ; manifest ; 2024 ; 10 ; Open Quaternary Volume 2024 ; 2024 ; 10 ; Ubiquity Press ;  ; https://openquaternary.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 11 ; Open Quaternary Volume 2025 ; 2025 ; 11 ; Ubiquity Press ;  ; https://openquaternary.com/ ; >
       au < crawling ; exists ; 2026 ; 12 ; Open Quaternary Volume 2026 ; 2026 ; 12 ; Ubiquity Press ;  ; https://openquaternary.com/ ; >
 
@@ -1773,8 +1773,8 @@
       au < doNotProcess ; exists ; 2013 ; 53 ; Psychologica Belgica Volume 2013 ; 2013 ; 53 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; >
       au < doNotProcess ; exists ; 2014 ; 54 ; Psychologica Belgica Volume 2014 ; 2014 ; 54 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; >
 
-      au < frozen ; exists ; 2001 ; 41 ; Psychologica Belgica Volume 2001 ; 2001 ; 41 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; >
-      au < frozen ; exists ; 2002 ; 42 ; Psychologica Belgica Volume 2002 ; 2002 ; 42 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; >
+      au < finished ; manifest ; 2001 ; 41 ; Psychologica Belgica Volume 2001 ; 2001 ; 41 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; 42 ; Psychologica Belgica Volume 2002 ; 2002 ; 42 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2003 ; 43 ; Psychologica Belgica Volume 2003 ; 2003 ; 43 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2004 ; 44 ; Psychologica Belgica Volume 2004 ; 2004 ; 44 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2005 ; 45 ; Psychologica Belgica Volume 2005 ; 2005 ; 45 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
@@ -2585,11 +2585,11 @@
       au < superseded ; exists ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 [superseded] ; 2020 ; 1 ; Virginia Tech Publishing ; removed www ; https://www.seejournal.org/ ; >
       au < superseded ; exists ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 [superseded] ; 2021 ; 2 ; Virginia Tech Publishing ; removed www ; https://www.seejournal.org/ ; >
 
-      au < frozen ; exists ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 ; 2020 ; 1 ; Virginia Tech Publishing ;  ; https://seejournal.org/ ; >
-      au < frozen ; exists ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 ; 2021 ; 2 ; Virginia Tech Publishing ;  ; https://seejournal.org/ ; >
+      au < finished ; manifest ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 ; 2020 ; 1 ; Virginia Tech Publishing ;  ; https://seejournal.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 ; 2021 ; 2 ; Virginia Tech Publishing ;  ; https://seejournal.org/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 3 ; Studies in Engineering Education Volume 2022 [superseded] ; 2022 ; 3 ; Virginia Tech Publishing ;  ; https://www.seejournal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Studies in Engineering Education Volume 2023 ; 2023 ; 4 ; Virginia Tech Publishing ;  ; https://www.seejournal.org/ ; >
-      au < frozen ; exists ; 2024 ; 5 ; Studies in Engineering Education Volume 2024 ; 2024 ; 5 ; Virginia Tech Publishing ;  ; https://seejournal.org/ ; >
+      au < finished ; manifest ; 2024 ; 5 ; Studies in Engineering Education Volume 2024 ; 2024 ; 5 ; Virginia Tech Publishing ;  ; https://seejournal.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 6 ; Studies in Engineering Education Volume 2025 ; 2025 ; 6 ; Virginia Tech Publishing ;  ; https://seejournal.org/ ; >
       au < crawling ; exists ; 2026 ; 7 ; Studies in Engineering Education Volume 2026 ; 2026 ; 7 ; Virginia Tech Publishing ;  ; https://seejournal.org/ ; >
 
@@ -2607,17 +2607,17 @@
       nondefparam[base_url2] = https://account.jte-journal.org/
       nondefparam[journal_id] = vt-j-jte
 
-      au < frozen ; exists ; 1989 ; 1 ; Journal of Technology Education Volume 1989 ; 1989 ; 1 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
-      au < frozen ; exists ; 1990 ; 1,2 ; Journal of Technology Education Volume 1990 ; 1990 ; 1,2 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
-      au < frozen ; exists ; 1991 ; 2,3 ; Journal of Technology Education Volume 1991 ; 1991 ; 2,3 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
-      au < frozen ; exists ; 1992 ; 3,4 ; Journal of Technology Education Volume 1992 ; 1992 ; 3,4 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
-      au < frozen ; exists ; 1993 ; 4,5 ; Journal of Technology Education Volume 1993 ; 1993 ; 4,5 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
-      au < frozen ; exists ; 1994 ; 5,6 ; Journal of Technology Education Volume 1994 ; 1994 ; 5,6 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
-      au < frozen ; exists ; 1995 ; 6,7 ; Journal of Technology Education Volume 1995 ; 1995 ; 6,7 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
-      au < frozen ; exists ; 1996 ; 7,8 ; Journal of Technology Education Volume 1996 ; 1996 ; 7,8 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
-      au < frozen ; exists ; 1997 ; 8,9 ; Journal of Technology Education Volume 1997 ; 1997 ; 8,9 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
-      au < frozen ; exists ; 1998 ; 9,10 ; Journal of Technology Education Volume 1998 ; 1998 ; 9,10 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
-      au < frozen ; exists ; 1999 ; 10,11 ; Journal of Technology Education Volume 1999 ; 1999 ; 10,11 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
+      au < finished ; manifest ; 1989 ; 1 ; Journal of Technology Education Volume 1989 ; 1989 ; 1 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1990 ; 1,2 ; Journal of Technology Education Volume 1990 ; 1990 ; 1,2 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1991 ; 2,3 ; Journal of Technology Education Volume 1991 ; 1991 ; 2,3 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1992 ; 3,4 ; Journal of Technology Education Volume 1992 ; 1992 ; 3,4 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1993 ; 4,5 ; Journal of Technology Education Volume 1993 ; 1993 ; 4,5 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1994 ; 5,6 ; Journal of Technology Education Volume 1994 ; 1994 ; 5,6 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1995 ; 6,7 ; Journal of Technology Education Volume 1995 ; 1995 ; 6,7 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1996 ; 7,8 ; Journal of Technology Education Volume 1996 ; 1996 ; 7,8 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; 8,9 ; Journal of Technology Education Volume 1997 ; 1997 ; 8,9 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1998 ; 9,10 ; Journal of Technology Education Volume 1998 ; 1998 ; 9,10 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1999 ; 10,11 ; Journal of Technology Education Volume 1999 ; 1999 ; 10,11 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2000 ; 11,12 ; Journal of Technology Education Volume 2000 ; 2000 ; 11,12 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2001 ; 12,13 ; Journal of Technology Education Volume 2001 ; 2001 ; 12,13 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2002 ; 13,14 ; Journal of Technology Education Volume 2002 ; 2002 ; 13,14 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
@@ -2642,7 +2642,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 32,33 ; Journal of Technology Education Volume 2021 ; 2021 ; 32,33 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2022 ; 33,34 ; Journal of Technology Education Volume 2022 ; 2022 ; 33,34 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 34,35 ; Journal of Technology Education Volume 2023 ; 2023 ; 34,35 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
-      au < frozen ; exists ; 2024 ; 35,36 ; Journal of Technology Education Volume 2024 ; 2024 ; 35,36 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
+      au < finished ; manifest ; 2024 ; 35,36 ; Journal of Technology Education Volume 2024 ; 2024 ; 35,36 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 36,37 ; Journal of Technology Education Volume 2025 ; 2025 ; 36,37 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < manifest ; exists ; 2026 ; 38,39 ; Journal of Technology Education Volume 2026 ; 2026 ; 38,39 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
 
@@ -2743,9 +2743,9 @@
       nondefparam[base_url2] = https://account.see.demontfortuniversitypress.org/
       nondefparam[journal_id] = dmu-j-gpajepr
 
-      au < frozen ; exists ; 2010 ; 1 ; Gateway Papers Volume 2010 ; 2010 ; 1 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
-      au < frozen ; exists ; 2021 ; 2 ; Gateway Papers Volume 2021 ; 2021 ; 2 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
-      au < frozen ; exists ; 2022 ; 3 ; Gateway Papers Volume 2022 ; 2022 ; 3 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
+      au < finished ; manifest ; 2010 ; 1 ; Gateway Papers Volume 2010 ; 2010 ; 1 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; 2 ; Gateway Papers Volume 2021 ; 2021 ; 2 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; 3 ; Gateway Papers Volume 2022 ; 2022 ; 3 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2023 ; 4 ; Gateway Papers Volume 2023 ; 2023 ; 4 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
       au < frozen ; exists ; 2024 ; 5 ; Gateway Papers Volume 2024 ; 2024 ; 5 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
       }
@@ -2879,7 +2879,7 @@
       au < frozen ; exists ; 2020 ; 4 ; Journal of Historical Network Research Volume 2020 ; 2020 ; 4 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < frozen ; exists ; 2021 ; 5,6 ; Journal of Historical Network Research Volume 2021 ; 2021 ; 5,6 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < frozen ; exists ; 2022 ; 7 ; Journal of Historical Network Research Volume 2022 ; 2022 ; 7 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
-      au < frozen ; exists ; 2023 ; 8,9 ; Journal of Historical Network Research Volume 2023 ; 2023 ; 8,9 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
+      au < finished ; manifest ; 2023 ; 8,9 ; Journal of Historical Network Research Volume 2023 ; 2023 ; 8,9 ; Université du Luxembourg ;  ; https://jhnr.net/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2024 ; 10 ; Journal of Historical Network Research Volume 2024 ; 2024 ; 10 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < deepCrawl ; exists ; 2025 ; 11 ; Journal of Historical Network Research Volume 2025 ; 2025 ; 11 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < manifest ; exists ; 2026 ; 12 ; Journal of Historical Network Research Volume 2026 ; 2026 ; 12 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
