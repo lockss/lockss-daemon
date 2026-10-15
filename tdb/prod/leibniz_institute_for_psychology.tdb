@@ -68,8 +68,8 @@
       name = Interpersona: An International Journal on Personal Relationships ;
       eissn = 1981-6472
     >
+      {
       #param[base_url] = http://interpersona.psychopen.eu/
-
       param[journal_id] = interpersona
   
       au < ojs2.OJS2Plugin ; down ; 2007 ; Interpersona: An International Journal on Personal Relationships Volume 1 ; 1 ; 2007 ; http://interpersona.psychopen.eu/ >
@@ -90,8 +90,18 @@
       au < ojs3.Ojs3Plugin ; released ; 2022 ; Interpersona: An International Journal on Personal Relationships Volume 16 ; 16 ; 2022 ; https://interpersona.psychopen.eu/ >
       au < ojs3.Ojs3Plugin ; released ; 2023 ; Interpersona: An International Journal on Personal Relationships Volume 17 ; 17 ; 2023 ; https://interpersona.psychopen.eu/ >
       au < ojs3.Ojs3Plugin ; released ; 2024 ; Interpersona: An International Journal on Personal Relationships Volume 18 ; 18 ; 2024 ; https://interpersona.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; manifest ; 2025 ; Interpersona: An International Journal on Personal Relationships Volume 19 ; 19 ; 2025 ; https://interpersona.psychopen.eu/ >
-      #Moved to new publisher
+      au < ojs3.Ojs3Plugin ; doNotProcess ; 2025 ; Interpersona: An International Journal on Personal Relationships Volume 19 ; 19 ; 2025 ; https://interpersona.psychopen.eu/ >
+      #Moved to new url
+      }
+      {
+      #param[base_url] = https://ojs.interpersonajournal.com/
+      param[journal_id] = ojs
+      #not enabled for preservation as of 20261015
+  
+      au < ojs3.Ojs3Plugin ; exists ; 2025 ; Interpersona: An International Journal on Personal Relationships Volume 19 ; 19 ; 2025 ; https://ojs.interpersonajournal.com/ >
+      au < ojs3.Ojs3Plugin ; exists ; 2026 ; Interpersona: An International Journal on Personal Relationships Volume 20 ; 20 ; 2026 ; https://ojs.interpersonajournal.com/ >
+
+      }
   }
 
   {
@@ -253,9 +263,9 @@
 
       param[journal_id] = gep
 
-      au < ojs3.Ojs3Plugin ; manifest ; 2023 ; Global Environmental Psychology Volume 2023 ; 2023 ; 2023 ; https://gep.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; manifest ; 2024 ; Global Environmental Psychology Volume 2024 ; 2024 ; 2024 ; https://gep.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; manifest ; 2025 ; Global Environmental Psychology Volume 2025 ; 2025 ; 2025 ; https://gep.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; ready ; 2023 ; Global Environmental Psychology Volume 2023 ; 2023 ; 2023 ; https://gep.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; ready ; 2024 ; Global Environmental Psychology Volume 2024 ; 2024 ; 2024 ; https://gep.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; ready ; 2025 ; Global Environmental Psychology Volume 2025 ; 2025 ; 2025 ; https://gep.psychopen.eu/ >
       au < ojs3.Ojs3Plugin ; manifest ; 2026 ; Global Environmental Psychology Volume 2026 ; 2026 ; 2026 ; https://gep.psychopen.eu/ >
 
   }
@@ -269,13 +279,13 @@
 
       param[journal_id] = miss
 
-      au < ojs3.Ojs3Plugin ; manifest ; 2019 ; Measurement Instruments for the Social Sciences Volume 2019 ; 2019 ; 2019 ; https://miss.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; manifest ; 2020 ; Measurement Instruments for the Social Sciences Volume 2020 ; 2020 ; 2020 ; https://miss.psychopen.eu/ > 
-      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; Measurement Instruments for the Social Sciences Volume 2021 ; 2021 ; 2021 ; https://miss.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; manifest ; 2022 ; Measurement Instruments for the Social Sciences Volume 2022 ; 2022 ; 2022 ; https://miss.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; manifest ; 2023 ; Measurement Instruments for the Social Sciences Volume 2023 ; 2023 ; 2023 ; https://miss.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; manifest ; 2024 ; Measurement Instruments for the Social Sciences Volume 2024 ; 2024 ; 2024 ; https://miss.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; manifest ; 2025 ; Measurement Instruments for the Social Sciences Volume 2025 ; 2025 ; 2025 ; https://miss.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; ready ; 2019 ; Measurement Instruments for the Social Sciences Volume 2019 ; 2019 ; 2019 ; https://miss.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; ready ; 2020 ; Measurement Instruments for the Social Sciences Volume 2020 ; 2020 ; 2020 ; https://miss.psychopen.eu/ > 
+      au < ojs3.Ojs3Plugin ; ready ; 2021 ; Measurement Instruments for the Social Sciences Volume 2021 ; 2021 ; 2021 ; https://miss.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; ready ; 2022 ; Measurement Instruments for the Social Sciences Volume 2022 ; 2022 ; 2022 ; https://miss.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; ready ; 2023 ; Measurement Instruments for the Social Sciences Volume 2023 ; 2023 ; 2023 ; https://miss.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; ready ; 2024 ; Measurement Instruments for the Social Sciences Volume 2024 ; 2024 ; 2024 ; https://miss.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; ready ; 2025 ; Measurement Instruments for the Social Sciences Volume 2025 ; 2025 ; 2025 ; https://miss.psychopen.eu/ >
       au < ojs3.Ojs3Plugin ; manifest ; 2026 ; Measurement Instruments for the Social Sciences Volume 2026 ; 2026 ; 2026 ; https://miss.psychopen.eu/ >
 
   }
@@ -289,10 +299,10 @@
 
       param[journal_id] = phair
 
-      au < ojs3.Ojs3Plugin ; manifest ; 2022 ; Psychology of Human-Animal Intergroup Relations Volume 2022 ; 2022 ; 2022 ; https://phair.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; manifest ; 2023 ; Psychology of Human-Animal Intergroup Relations Volume 2023 ; 2023 ; 2023 ; https://phair.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; manifest ; 2024 ; Psychology of Human-Animal Intergroup Relations Volume 2024 ; 2024 ; 2024 ; https://phair.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; manifest ; 2025 ; Psychology of Human-Animal Intergroup Relations Volume 2025 ; 2025 ; 2025 ; https://phair.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; ready ; 2022 ; Psychology of Human-Animal Intergroup Relations Volume 2022 ; 2022 ; 2022 ; https://phair.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; ready ; 2023 ; Psychology of Human-Animal Intergroup Relations Volume 2023 ; 2023 ; 2023 ; https://phair.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; ready ; 2024 ; Psychology of Human-Animal Intergroup Relations Volume 2024 ; 2024 ; 2024 ; https://phair.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; ready ; 2025 ; Psychology of Human-Animal Intergroup Relations Volume 2025 ; 2025 ; 2025 ; https://phair.psychopen.eu/ >
       au < ojs3.Ojs3Plugin ; manifest ; 2026 ; Psychology of Human-Animal Intergroup Relations Volume 2026 ; 2026 ; 2026 ; https://phair.psychopen.eu/ >
 
   }
@@ -306,7 +316,7 @@
 
       param[journal_id] = rpio
 
-      au < ojs3.Ojs3Plugin ; manifest ; 2025 ; Research for People in Organizations Volume 2025 ; 2025 ; 2025 ; https://rpio.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; ready ; 2025 ; Research for People in Organizations Volume 2025 ; 2025 ; 2025 ; https://rpio.psychopen.eu/ >
       au < ojs3.Ojs3Plugin ; manifest ; 2026 ; Research for People in Organizations Volume 2026 ; 2026 ; 2026 ; https://rpio.psychopen.eu/ >
 
   }
