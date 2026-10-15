@@ -2,7 +2,7 @@
   publisher <
     name = Southwest Journal of Pulmonary and Critical Care ;
     info[contract] = 2013 ;
-    info[tester] = S ;
+    info[tester] = 4 ;
     info[platform] = WARC
   >
 
@@ -29,7 +29,7 @@
     {
     param[base_url] = https://clockss-ingest.lockss.org/warcfiles/swjpcc-released/
 
-    au < expected ; exists ; 2026 ; Southwest Journal of Pulmonary and Critical Care WARC Content 2026 ; 2026 >
+    au < testing ; exists ; 2026 ; Southwest Journal of Pulmonary and Critical Care WARC Content 2026 ; 2026 >
 
     }
     }
