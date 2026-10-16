@@ -24,35 +24,35 @@
       param[base_url] = https://journals.tubitak.gov.tr/
       param[journal_abbr] = agriculture
 
-      au < frozen ; exists ; 1996 ; Turkish Journal of Agriculture and Forestry Volume 20 ; 20 ; >
-      au < frozen ; exists ; 1997 ; Turkish Journal of Agriculture and Forestry Volume 21 ; 21 ; >
-      au < frozen ; exists ; 1998 ; Turkish Journal of Agriculture and Forestry Volume 22 ; 22 ; >
-      au < frozen ; exists ; 1999 ; Turkish Journal of Agriculture and Forestry Volume 23 ; 23 ; >
-      au < frozen ; exists ; 2000 ; Turkish Journal of Agriculture and Forestry Volume 24 ; 24 ; >
-      au < frozen ; exists ; 2001 ; Turkish Journal of Agriculture and Forestry Volume 25 ; 25 ; >
-      au < frozen ; exists ; 2002 ; Turkish Journal of Agriculture and Forestry Volume 26 ; 26 ; >
-      au < frozen ; exists ; 2003 ; Turkish Journal of Agriculture and Forestry Volume 27 ; 27 ; >
-      au < frozen ; exists ; 2004 ; Turkish Journal of Agriculture and Forestry Volume 28 ; 28 ; >
-      au < frozen ; exists ; 2005 ; Turkish Journal of Agriculture and Forestry Volume 29 ; 29 ; >
-      au < frozen ; exists ; 2006 ; Turkish Journal of Agriculture and Forestry Volume 30 ; 30 ; >
-      au < frozen ; exists ; 2007 ; Turkish Journal of Agriculture and Forestry Volume 31 ; 31 ; >
-      au < frozen ; exists ; 2008 ; Turkish Journal of Agriculture and Forestry Volume 32 ; 32 ; >
-      au < frozen ; exists ; 2009 ; Turkish Journal of Agriculture and Forestry Volume 33 ; 33 ; >
-      au < frozen ; exists ; 2010 ; Turkish Journal of Agriculture and Forestry Volume 34 ; 34 ; >
-      au < frozen ; exists ; 2011 ; Turkish Journal of Agriculture and Forestry Volume 35 ; 35 ; >
-      au < frozen ; exists ; 2012 ; Turkish Journal of Agriculture and Forestry Volume 36 ; 36 ; >
-      au < frozen ; exists ; 2013 ; Turkish Journal of Agriculture and Forestry Volume 37 ; 37 ; >
-      au < frozen ; exists ; 2014 ; Turkish Journal of Agriculture and Forestry Volume 38 ; 38 ; >
-      au < frozen ; exists ; 2015 ; Turkish Journal of Agriculture and Forestry Volume 39 ; 39 ; >
-      au < frozen ; exists ; 2016 ; Turkish Journal of Agriculture and Forestry Volume 40 ; 40 ; >
-      au < frozen ; exists ; 2017 ; Turkish Journal of Agriculture and Forestry Volume 41 ; 41 ; >
-      au < frozen ; exists ; 2018 ; Turkish Journal of Agriculture and Forestry Volume 42 ; 42 ; >
-      au < frozen ; exists ; 2019 ; Turkish Journal of Agriculture and Forestry Volume 43 ; 43 ; >
-      au < frozen ; exists ; 2020 ; Turkish Journal of Agriculture and Forestry Volume 44 ; 44 ; >
-      au < frozen ; exists ; 2021 ; Turkish Journal of Agriculture and Forestry Volume 45 ; 45 ; >
-      au < frozen ; exists ; 2022 ; Turkish Journal of Agriculture and Forestry Volume 46 ; 46 ; >
-      au < frozen ; exists ; 2023 ; Turkish Journal of Agriculture and Forestry Volume 47 ; 47 ; >
-      au < frozen ; exists ; 2024 ; Turkish Journal of Agriculture and Forestry Volume 48 ; 48 ; >
+      au < finished ; manifest ; 1996 ; Turkish Journal of Agriculture and Forestry Volume 20 ; 20 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; Turkish Journal of Agriculture and Forestry Volume 21 ; 21 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; Turkish Journal of Agriculture and Forestry Volume 22 ; 22 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1999 ; Turkish Journal of Agriculture and Forestry Volume 23 ; 23 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2000 ; Turkish Journal of Agriculture and Forestry Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2001 ; Turkish Journal of Agriculture and Forestry Volume 25 ; 25 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; Turkish Journal of Agriculture and Forestry Volume 26 ; 26 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; Turkish Journal of Agriculture and Forestry Volume 27 ; 27 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; Turkish Journal of Agriculture and Forestry Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2005 ; Turkish Journal of Agriculture and Forestry Volume 29 ; 29 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2006 ; Turkish Journal of Agriculture and Forestry Volume 30 ; 30 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; Turkish Journal of Agriculture and Forestry Volume 31 ; 31 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; Turkish Journal of Agriculture and Forestry Volume 32 ; 32 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; Turkish Journal of Agriculture and Forestry Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2010 ; Turkish Journal of Agriculture and Forestry Volume 34 ; 34 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2011 ; Turkish Journal of Agriculture and Forestry Volume 35 ; 35 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; Turkish Journal of Agriculture and Forestry Volume 36 ; 36 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; Turkish Journal of Agriculture and Forestry Volume 37 ; 37 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; Turkish Journal of Agriculture and Forestry Volume 38 ; 38 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2015 ; Turkish Journal of Agriculture and Forestry Volume 39 ; 39 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; Turkish Journal of Agriculture and Forestry Volume 40 ; 40 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Turkish Journal of Agriculture and Forestry Volume 41 ; 41 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Turkish Journal of Agriculture and Forestry Volume 42 ; 42 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Turkish Journal of Agriculture and Forestry Volume 43 ; 43 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2020 ; Turkish Journal of Agriculture and Forestry Volume 44 ; 44 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2021 ; Turkish Journal of Agriculture and Forestry Volume 45 ; 45 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; Turkish Journal of Agriculture and Forestry Volume 46 ; 46 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; Turkish Journal of Agriculture and Forestry Volume 47 ; 47 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; Turkish Journal of Agriculture and Forestry Volume 48 ; 48 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2025 ; Turkish Journal of Agriculture and Forestry Volume 49 ; 49 ; >
       au < crawling ; exists ; 2026 ; Turkish Journal of Agriculture and Forestry Volume 50 ; 50 ; >
 
@@ -70,35 +70,35 @@
       param[base_url] = https://journals.tubitak.gov.tr/
       param[journal_abbr] = biology
 
-      au < frozen ; exists ; 1996 ; Turkish Journal of Biology Volume 20 ; 20 ; >
-      au < frozen ; exists ; 1997 ; Turkish Journal of Biology Volume 21 ; 21 ; >
-      au < frozen ; exists ; 1998 ; Turkish Journal of Biology Volume 22 ; 22 ; >
-      au < frozen ; exists ; 1999 ; Turkish Journal of Biology Volume 23 ; 23 ; >
-      au < frozen ; exists ; 2000 ; Turkish Journal of Biology Volume 24 ; 24 ; >
-      au < frozen ; exists ; 2001 ; Turkish Journal of Biology Volume 25 ; 25 ; >
-      au < frozen ; exists ; 2002 ; Turkish Journal of Biology Volume 26 ; 26 ; >
-      au < frozen ; exists ; 2003 ; Turkish Journal of Biology Volume 27 ; 27 ; >
-      au < frozen ; exists ; 2004 ; Turkish Journal of Biology Volume 28 ; 28 ; >
-      au < frozen ; exists ; 2005 ; Turkish Journal of Biology Volume 29 ; 29 ; >
-      au < frozen ; exists ; 2006 ; Turkish Journal of Biology Volume 30 ; 30 ; >
-      au < frozen ; exists ; 2007 ; Turkish Journal of Biology Volume 31 ; 31 ; >
-      au < frozen ; exists ; 2008 ; Turkish Journal of Biology Volume 32 ; 32 ; >
-      au < frozen ; exists ; 2009 ; Turkish Journal of Biology Volume 33 ; 33 ; >
-      au < frozen ; exists ; 2010 ; Turkish Journal of Biology Volume 34 ; 34 ; >
-      au < frozen ; exists ; 2011 ; Turkish Journal of Biology Volume 35 ; 35 ; >
-      au < frozen ; exists ; 2012 ; Turkish Journal of Biology Volume 36 ; 36 ; >
-      au < frozen ; exists ; 2013 ; Turkish Journal of Biology Volume 37 ; 37 ; >
-      au < frozen ; exists ; 2014 ; Turkish Journal of Biology Volume 38 ; 38 ; >
-      au < frozen ; exists ; 2015 ; Turkish Journal of Biology Volume 39 ; 39 ; >
-      au < frozen ; exists ; 2016 ; Turkish Journal of Biology Volume 40 ; 40 ; >
-      au < frozen ; exists ; 2017 ; Turkish Journal of Biology Volume 41 ; 41 ; >
-      au < frozen ; exists ; 2018 ; Turkish Journal of Biology Volume 42 ; 42 ; >
-      au < frozen ; exists ; 2019 ; Turkish Journal of Biology Volume 43 ; 43 ; >
-      au < frozen ; exists ; 2020 ; Turkish Journal of Biology Volume 44 ; 44 ; >
-      au < frozen ; exists ; 2021 ; Turkish Journal of Biology Volume 45 ; 45 ; >
-      au < frozen ; exists ; 2022 ; Turkish Journal of Biology Volume 46 ; 46 ; >
-      au < frozen ; exists ; 2023 ; Turkish Journal of Biology Volume 47 ; 47 ; >
-      au < frozen ; exists ; 2024 ; Turkish Journal of Biology Volume 48 ; 48 ; >
+      au < finished ; manifest ; 1996 ; Turkish Journal of Biology Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1997 ; Turkish Journal of Biology Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1998 ; Turkish Journal of Biology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1999 ; Turkish Journal of Biology Volume 23 ; 23 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; Turkish Journal of Biology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; Turkish Journal of Biology Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2002 ; Turkish Journal of Biology Volume 26 ; 26 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2003 ; Turkish Journal of Biology Volume 27 ; 27 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; Turkish Journal of Biology Volume 28 ; 28 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; Turkish Journal of Biology Volume 29 ; 29 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; Turkish Journal of Biology Volume 30 ; 30 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2007 ; Turkish Journal of Biology Volume 31 ; 31 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2008 ; Turkish Journal of Biology Volume 32 ; 32 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; Turkish Journal of Biology Volume 33 ; 33 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; Turkish Journal of Biology Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; Turkish Journal of Biology Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2012 ; Turkish Journal of Biology Volume 36 ; 36 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2013 ; Turkish Journal of Biology Volume 37 ; 37 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; Turkish Journal of Biology Volume 38 ; 38 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Turkish Journal of Biology Volume 39 ; 39 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; Turkish Journal of Biology Volume 40 ; 40 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; Turkish Journal of Biology Volume 41 ; 41 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; Turkish Journal of Biology Volume 42 ; 42 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Turkish Journal of Biology Volume 43 ; 43 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Turkish Journal of Biology Volume 44 ; 44 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Turkish Journal of Biology Volume 45 ; 45 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2022 ; Turkish Journal of Biology Volume 46 ; 46 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2023 ; Turkish Journal of Biology Volume 47 ; 47 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; Turkish Journal of Biology Volume 48 ; 48 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; Turkish Journal of Biology Volume 49 ; 49 ; >
       au < crawling ; exists ; 2026 ; Turkish Journal of Biology Volume 50 ; 50 ; >
 
@@ -116,34 +116,34 @@
       param[base_url] = https://journals.tubitak.gov.tr/
       param[journal_abbr] = botany
 
-      au < frozen ; exists ; 1996 ; Turkish Journal of Botany Volume 20 ; 20 ; >
-      au < frozen ; exists ; 1997 ; Turkish Journal of Botany Volume 21 ; 21 ; >
-      au < frozen ; exists ; 1998 ; Turkish Journal of Botany Volume 22 ; 22 ; >
-      au < frozen ; exists ; 1999 ; Turkish Journal of Botany Volume 23 ; 23 ; >
-      au < frozen ; exists ; 2000 ; Turkish Journal of Botany Volume 24 ; 24 ; >
-      au < frozen ; exists ; 2001 ; Turkish Journal of Botany Volume 25 ; 25 ; >
-      au < frozen ; exists ; 2002 ; Turkish Journal of Botany Volume 26 ; 26 ; >
-      au < frozen ; exists ; 2003 ; Turkish Journal of Botany Volume 27 ; 27 ; >
-      au < frozen ; exists ; 2004 ; Turkish Journal of Botany Volume 28 ; 28 ; >
-      au < frozen ; exists ; 2005 ; Turkish Journal of Botany Volume 29 ; 29 ; >
-      au < frozen ; exists ; 2006 ; Turkish Journal of Botany Volume 30 ; 30 ; >
-      au < frozen ; exists ; 2007 ; Turkish Journal of Botany Volume 31 ; 31 ; >
-      au < frozen ; exists ; 2008 ; Turkish Journal of Botany Volume 32 ; 32 ; >
-      au < frozen ; exists ; 2009 ; Turkish Journal of Botany Volume 33 ; 33 ; >
-      au < frozen ; exists ; 2010 ; Turkish Journal of Botany Volume 34 ; 34 ; >
-      au < frozen ; exists ; 2011 ; Turkish Journal of Botany Volume 35 ; 35 ; >
-      au < frozen ; exists ; 2012 ; Turkish Journal of Botany Volume 36 ; 36 ; >
-      au < frozen ; exists ; 2013 ; Turkish Journal of Botany Volume 37 ; 37 ; >
-      au < frozen ; exists ; 2014 ; Turkish Journal of Botany Volume 38 ; 38 ; >
-      au < frozen ; exists ; 2015 ; Turkish Journal of Botany Volume 39 ; 39 ; >
-      au < frozen ; exists ; 2016 ; Turkish Journal of Botany Volume 40 ; 40 ; >
-      au < frozen ; exists ; 2017 ; Turkish Journal of Botany Volume 41 ; 41 ; >
-      au < frozen ; exists ; 2018 ; Turkish Journal of Botany Volume 42 ; 42 ; >
-      au < frozen ; exists ; 2019 ; Turkish Journal of Botany Volume 43 ; 43 ; >
-      au < frozen ; exists ; 2020 ; Turkish Journal of Botany Volume 44 ; 44 ; >
-      au < frozen ; exists ; 2021 ; Turkish Journal of Botany Volume 45 ; 45 ; >
-      au < frozen ; exists ; 2022 ; Turkish Journal of Botany Volume 46 ; 46 ; >
-      au < frozen ; exists ; 2023 ; Turkish Journal of Botany Volume 47 ; 47 ; >
+      au < finished ; manifest ; 1996 ; Turkish Journal of Botany Volume 20 ; 20 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; Turkish Journal of Botany Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1998 ; Turkish Journal of Botany Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1999 ; Turkish Journal of Botany Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; Turkish Journal of Botany Volume 24 ; 24 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; Turkish Journal of Botany Volume 25 ; 25 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; Turkish Journal of Botany Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2003 ; Turkish Journal of Botany Volume 27 ; 27 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2004 ; Turkish Journal of Botany Volume 28 ; 28 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; Turkish Journal of Botany Volume 29 ; 29 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; Turkish Journal of Botany Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; Turkish Journal of Botany Volume 31 ; 31 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2008 ; Turkish Journal of Botany Volume 32 ; 32 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2009 ; Turkish Journal of Botany Volume 33 ; 33 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; Turkish Journal of Botany Volume 34 ; 34 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; Turkish Journal of Botany Volume 35 ; 35 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; Turkish Journal of Botany Volume 36 ; 36 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2013 ; Turkish Journal of Botany Volume 37 ; 37 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2014 ; Turkish Journal of Botany Volume 38 ; 38 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Turkish Journal of Botany Volume 39 ; 39 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; Turkish Journal of Botany Volume 40 ; 40 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Turkish Journal of Botany Volume 41 ; 41 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; Turkish Journal of Botany Volume 42 ; 42 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; Turkish Journal of Botany Volume 43 ; 43 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Turkish Journal of Botany Volume 44 ; 44 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Turkish Journal of Botany Volume 45 ; 45 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; Turkish Journal of Botany Volume 46 ; 46 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2023 ; Turkish Journal of Botany Volume 47 ; 47 ; reingest3.clockss.org:8083 >
       au < testing ; exists ; 2024 ; Turkish Journal of Botany Volume 48 ; 48 ; >
       au < deepCrawl ; exists ; 2025 ; Turkish Journal of Botany Volume 49 ; 49 ; >
       au < crawling ; exists ; 2026 ; Turkish Journal of Botany Volume 50 ; 50 ; >
@@ -162,18 +162,18 @@
       param[base_url] = https://journals.tubitak.gov.tr/
       param[journal_abbr] = chem
 
-      au < frozen ; exists ; 1996 ; Turkish Journal of Chemistry Volume 20 ; 20 ; >
-      au < frozen ; exists ; 1997 ; Turkish Journal of Chemistry Volume 21 ; 21 ; >
-      au < frozen ; exists ; 1998 ; Turkish Journal of Chemistry Volume 22 ; 22 ; >
-      au < frozen ; exists ; 1999 ; Turkish Journal of Chemistry Volume 23 ; 23 ; >
-      au < frozen ; exists ; 2000 ; Turkish Journal of Chemistry Volume 24 ; 24 ; >
-      au < frozen ; exists ; 2001 ; Turkish Journal of Chemistry Volume 25 ; 25 ; >
-      au < frozen ; exists ; 2002 ; Turkish Journal of Chemistry Volume 26 ; 26 ; >
-      au < frozen ; exists ; 2003 ; Turkish Journal of Chemistry Volume 27 ; 27 ; >
-      au < frozen ; exists ; 2004 ; Turkish Journal of Chemistry Volume 28 ; 28 ; >
-      au < frozen ; exists ; 2005 ; Turkish Journal of Chemistry Volume 29 ; 29 ; >
-      au < frozen ; exists ; 2006 ; Turkish Journal of Chemistry Volume 30 ; 30 ; >
-      au < frozen ; exists ; 2007 ; Turkish Journal of Chemistry Volume 31 ; 31 ; >
+      au < finished ; manifest ; 1996 ; Turkish Journal of Chemistry Volume 20 ; 20 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; Turkish Journal of Chemistry Volume 21 ; 21 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; Turkish Journal of Chemistry Volume 22 ; 22 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1999 ; Turkish Journal of Chemistry Volume 23 ; 23 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2000 ; Turkish Journal of Chemistry Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2001 ; Turkish Journal of Chemistry Volume 25 ; 25 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; Turkish Journal of Chemistry Volume 26 ; 26 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; Turkish Journal of Chemistry Volume 27 ; 27 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; Turkish Journal of Chemistry Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2005 ; Turkish Journal of Chemistry Volume 29 ; 29 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2006 ; Turkish Journal of Chemistry Volume 30 ; 30 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; Turkish Journal of Chemistry Volume 31 ; 31 ; reingest5.clockss.org:8082 >
       au < testing ; exists ; 2008 ; Turkish Journal of Chemistry Volume 32 ; 32 ; >
       au < testing ; exists ; 2009 ; Turkish Journal of Chemistry Volume 33 ; 33 ; >
       au < testing ; exists ; 2010 ; Turkish Journal of Chemistry Volume 34 ; 34 ; >
@@ -208,18 +208,18 @@
       param[base_url] = https://journals.tubitak.gov.tr/
       param[journal_abbr] = earth
 
-      au < frozen ; exists ; 1996 ; Turkish Journal of Earth Sciences Volume 5 ; 5 ; >
-      au < frozen ; exists ; 1997 ; Turkish Journal of Earth Sciences Volume 6 ; 6 ; >
-      au < frozen ; exists ; 1998 ; Turkish Journal of Earth Sciences Volume 7 ; 7 ; >
-      au < frozen ; exists ; 1999 ; Turkish Journal of Earth Sciences Volume 8 ; 8 ; >
-      au < frozen ; exists ; 2000 ; Turkish Journal of Earth Sciences Volume 9 ; 9 ; >
-      au < frozen ; exists ; 2001 ; Turkish Journal of Earth Sciences Volume 10 ; 10 ; >
-      au < frozen ; exists ; 2002 ; Turkish Journal of Earth Sciences Volume 11 ; 11 ; >
-      au < frozen ; exists ; 2003 ; Turkish Journal of Earth Sciences Volume 12 ; 12 ; >
-      au < frozen ; exists ; 2004 ; Turkish Journal of Earth Sciences Volume 13 ; 13 ; >
-      au < frozen ; exists ; 2005 ; Turkish Journal of Earth Sciences Volume 14 ; 14 ; >
-      au < frozen ; exists ; 2006 ; Turkish Journal of Earth Sciences Volume 15 ; 15 ; >
-      au < frozen ; exists ; 2007 ; Turkish Journal of Earth Sciences Volume 16 ; 16 ; >
+      au < finished ; manifest ; 1996 ; Turkish Journal of Earth Sciences Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; Turkish Journal of Earth Sciences Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1998 ; Turkish Journal of Earth Sciences Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1999 ; Turkish Journal of Earth Sciences Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; Turkish Journal of Earth Sciences Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; Turkish Journal of Earth Sciences Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; Turkish Journal of Earth Sciences Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2003 ; Turkish Journal of Earth Sciences Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2004 ; Turkish Journal of Earth Sciences Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; Turkish Journal of Earth Sciences Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2006 ; Turkish Journal of Earth Sciences Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; Turkish Journal of Earth Sciences Volume 16 ; 16 ; reingest1.clockss.org:8082 >
       au < testing ; exists ; 2008 ; Turkish Journal of Earth Sciences Volume 17 ; 17 ; >
       au < testing ; exists ; 2009 ; Turkish Journal of Earth Sciences Volume 18 ; 18 ; >
       au < testing ; exists ; 2010 ; Turkish Journal of Earth Sciences Volume 19 ; 19 ; >
@@ -254,19 +254,19 @@
       param[base_url] = https://journals.tubitak.gov.tr/
       param[journal_abbr] = elektrik
 
-      au < frozen ; exists ; 1995 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 3 ; 3 ; >
-      au < frozen ; exists ; 1996 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 4 ; 4 ; >
-      au < frozen ; exists ; 1997 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 5 ; 5 ; >
-      au < frozen ; exists ; 1998 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 6 ; 6 ; >
-      au < frozen ; exists ; 1999 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2000 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 8 ; 8 ; >
-      au < frozen ; exists ; 2001 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 9 ; 9 ; >
-      au < frozen ; exists ; 2002 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 10 ; 10 ; >
-      au < frozen ; exists ; 2003 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 11 ; 11 ; >
-      au < frozen ; exists ; 2004 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 12 ; 12 ; >
-      au < frozen ; exists ; 2005 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 13 ; 13 ; >
-      au < frozen ; exists ; 2006 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 14 ; 14 ; >
-      au < frozen ; exists ; 2007 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 15 ; 15 ; >
+      au < finished ; manifest ; 1995 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1996 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1997 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1999 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2001 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2002 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2006 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2007 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 15 ; 15 ; reingest4.clockss.org:8082 >
       au < testing ; exists ; 2008 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 16 ; 16 ; >
       au < testing ; exists ; 2009 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 17 ; 17 ; >
       au < testing ; exists ; 2010 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 18 ; 18 ; >
@@ -301,18 +301,18 @@
       param[base_url] = https://journals.tubitak.gov.tr/
       param[journal_abbr] = math
 
-      au < frozen ; exists ; 1996 ; Turkish Journal of Mathematics Volume 20 ; 20 ; >
-      au < frozen ; exists ; 1997 ; Turkish Journal of Mathematics Volume 21 ; 21 ; >
-      au < frozen ; exists ; 1998 ; Turkish Journal of Mathematics Volume 22 ; 22 ; >
-      au < frozen ; exists ; 1999 ; Turkish Journal of Mathematics Volume 23 ; 23 ; >
-      au < frozen ; exists ; 2000 ; Turkish Journal of Mathematics Volume 24 ; 24 ; >
-      au < frozen ; exists ; 2001 ; Turkish Journal of Mathematics Volume 25 ; 25 ; >
-      au < frozen ; exists ; 2002 ; Turkish Journal of Mathematics Volume 26 ; 26 ; >
-      au < frozen ; exists ; 2003 ; Turkish Journal of Mathematics Volume 27 ; 27 ; >
-      au < frozen ; exists ; 2004 ; Turkish Journal of Mathematics Volume 28 ; 28 ; >
-      au < frozen ; exists ; 2005 ; Turkish Journal of Mathematics Volume 29 ; 29 ; >
-      au < frozen ; exists ; 2006 ; Turkish Journal of Mathematics Volume 30 ; 30 ; >
-      au < frozen ; exists ; 2007 ; Turkish Journal of Mathematics Volume 31 ; 31 ; >
+      au < finished ; manifest ; 1996 ; Turkish Journal of Mathematics Volume 20 ; 20 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; Turkish Journal of Mathematics Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; Turkish Journal of Mathematics Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1999 ; Turkish Journal of Mathematics Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; Turkish Journal of Mathematics Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2001 ; Turkish Journal of Mathematics Volume 25 ; 25 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; Turkish Journal of Mathematics Volume 26 ; 26 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; Turkish Journal of Mathematics Volume 27 ; 27 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; Turkish Journal of Mathematics Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2005 ; Turkish Journal of Mathematics Volume 29 ; 29 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; Turkish Journal of Mathematics Volume 30 ; 30 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2007 ; Turkish Journal of Mathematics Volume 31 ; 31 ; reingest4.clockss.org:8082 >
       au < testing ; exists ; 2008 ; Turkish Journal of Mathematics Volume 32 ; 32 ; >
       au < testing ; exists ; 2009 ; Turkish Journal of Mathematics Volume 33 ; 33 ; >
       au < testing ; exists ; 2010 ; Turkish Journal of Mathematics Volume 34 ; 34 ; >
@@ -347,18 +347,18 @@
       param[base_url] = https://journals.tubitak.gov.tr/
       param[journal_abbr] = medical
 
-      au < frozen ; exists ; 1996 ; Turkish Journal of Medical Sciences Volume 26 ; 26 ; >
-      au < frozen ; exists ; 1997 ; Turkish Journal of Medical Sciences Volume 27 ; 27 ; >
-      au < frozen ; exists ; 1998 ; Turkish Journal of Medical Sciences Volume 28 ; 28 ; >
-      au < frozen ; exists ; 1999 ; Turkish Journal of Medical Sciences Volume 29 ; 29 ; >
-      au < frozen ; exists ; 2000 ; Turkish Journal of Medical Sciences Volume 30 ; 30 ; >
-      au < frozen ; exists ; 2001 ; Turkish Journal of Medical Sciences Volume 31 ; 31 ; >
-      au < frozen ; exists ; 2002 ; Turkish Journal of Medical Sciences Volume 32 ; 32 ; >
-      au < frozen ; exists ; 2003 ; Turkish Journal of Medical Sciences Volume 33 ; 33 ; >
-      au < frozen ; exists ; 2004 ; Turkish Journal of Medical Sciences Volume 34 ; 34 ; >
-      au < frozen ; exists ; 2005 ; Turkish Journal of Medical Sciences Volume 35 ; 35 ; >
-      au < frozen ; exists ; 2006 ; Turkish Journal of Medical Sciences Volume 36 ; 36 ; >
-      au < frozen ; exists ; 2007 ; Turkish Journal of Medical Sciences Volume 37 ; 37 ; >
+      au < finished ; manifest ; 1996 ; Turkish Journal of Medical Sciences Volume 26 ; 26 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; Turkish Journal of Medical Sciences Volume 27 ; 27 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; Turkish Journal of Medical Sciences Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1999 ; Turkish Journal of Medical Sciences Volume 29 ; 29 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2000 ; Turkish Journal of Medical Sciences Volume 30 ; 30 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; Turkish Journal of Medical Sciences Volume 31 ; 31 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; Turkish Journal of Medical Sciences Volume 32 ; 32 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; Turkish Journal of Medical Sciences Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2004 ; Turkish Journal of Medical Sciences Volume 34 ; 34 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2005 ; Turkish Journal of Medical Sciences Volume 35 ; 35 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; Turkish Journal of Medical Sciences Volume 36 ; 36 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; Turkish Journal of Medical Sciences Volume 37 ; 37 ; reingest1.clockss.org:8082 >
       au < testing ; exists ; 2008 ; Turkish Journal of Medical Sciences Volume 38 ; 38 ; >
       au < testing ; exists ; 2009 ; Turkish Journal of Medical Sciences Volume 39 ; 39 ; >
       au < testing ; exists ; 2010 ; Turkish Journal of Medical Sciences Volume 40 ; 40 ; >
@@ -393,18 +393,18 @@
       param[base_url] = https://journals.tubitak.gov.tr/
       param[journal_abbr] = physics
 
-      au < frozen ; exists ; 1996 ; Turkish Journal of Physics Volume 20 ; 20 ; >
-      au < frozen ; exists ; 1997 ; Turkish Journal of Physics Volume 21 ; 21 ; >
-      au < frozen ; exists ; 1998 ; Turkish Journal of Physics Volume 22 ; 22 ; >
-      au < frozen ; exists ; 1999 ; Turkish Journal of Physics Volume 23 ; 23 ; >
-      au < frozen ; exists ; 2000 ; Turkish Journal of Physics Volume 24 ; 24 ; >
-      au < frozen ; exists ; 2001 ; Turkish Journal of Physics Volume 25 ; 25 ; >
-      au < frozen ; exists ; 2002 ; Turkish Journal of Physics Volume 26 ; 26 ; >
-      au < frozen ; exists ; 2003 ; Turkish Journal of Physics Volume 27 ; 27 ; >
-      au < frozen ; exists ; 2004 ; Turkish Journal of Physics Volume 28 ; 28 ; >
-      au < frozen ; exists ; 2005 ; Turkish Journal of Physics Volume 29 ; 29 ; >
-      au < frozen ; exists ; 2006 ; Turkish Journal of Physics Volume 30 ; 30 ; >
-      au < frozen ; exists ; 2007 ; Turkish Journal of Physics Volume 31 ; 31 ; >
+      au < finished ; manifest ; 1996 ; Turkish Journal of Physics Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1997 ; Turkish Journal of Physics Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1998 ; Turkish Journal of Physics Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1999 ; Turkish Journal of Physics Volume 23 ; 23 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; Turkish Journal of Physics Volume 24 ; 24 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; Turkish Journal of Physics Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2002 ; Turkish Journal of Physics Volume 26 ; 26 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2003 ; Turkish Journal of Physics Volume 27 ; 27 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; Turkish Journal of Physics Volume 28 ; 28 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; Turkish Journal of Physics Volume 29 ; 29 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; Turkish Journal of Physics Volume 30 ; 30 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2007 ; Turkish Journal of Physics Volume 31 ; 31 ; reingest3.clockss.org:8083 >
       au < testing ; exists ; 2008 ; Turkish Journal of Physics Volume 32 ; 32 ; >
       au < testing ; exists ; 2009 ; Turkish Journal of Physics Volume 33 ; 33 ; >
       au < testing ; exists ; 2010 ; Turkish Journal of Physics Volume 34 ; 34 ; >
@@ -412,16 +412,16 @@
       au < testing ; exists ; 2012 ; Turkish Journal of Physics Volume 36 ; 36 ; >
       au < testing ; exists ; 2013 ; Turkish Journal of Physics Volume 37 ; 37 ; >
       au < testing ; exists ; 2014 ; Turkish Journal of Physics Volume 38 ; 38 ; >
-      au < frozen ; exists ; 2015 ; Turkish Journal of Physics Volume 39 ; 39 ; >
+      au < finished ; manifest ; 2015 ; Turkish Journal of Physics Volume 39 ; 39 ; reingest4.clockss.org:8082 >
       au < testing ; exists ; 2016 ; Turkish Journal of Physics Volume 40 ; 40 ; >
-      au < frozen ; exists ; 2017 ; Turkish Journal of Physics Volume 41 ; 41 ; >
-      au < frozen ; exists ; 2018 ; Turkish Journal of Physics Volume 42 ; 42 ; >
-      au < frozen ; exists ; 2019 ; Turkish Journal of Physics Volume 43 ; 43 ; >
-      au < frozen ; exists ; 2020 ; Turkish Journal of Physics Volume 44 ; 44 ; >
-      au < frozen ; exists ; 2021 ; Turkish Journal of Physics Volume 45 ; 45 ; >
-      au < frozen ; exists ; 2022 ; Turkish Journal of Physics Volume 46 ; 46 ; >
-      au < frozen ; exists ; 2023 ; Turkish Journal of Physics Volume 47 ; 47 ; >
-      au < frozen ; exists ; 2024 ; Turkish Journal of Physics Volume 48 ; 48 ; >
+      au < finished ; manifest ; 2017 ; Turkish Journal of Physics Volume 41 ; 41 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Turkish Journal of Physics Volume 42 ; 42 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Turkish Journal of Physics Volume 43 ; 43 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2020 ; Turkish Journal of Physics Volume 44 ; 44 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2021 ; Turkish Journal of Physics Volume 45 ; 45 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; Turkish Journal of Physics Volume 46 ; 46 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; Turkish Journal of Physics Volume 47 ; 47 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; Turkish Journal of Physics Volume 48 ; 48 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2025 ; Turkish Journal of Physics Volume 49 ; 49 ; >
       au < crawling ; exists ; 2026 ; Turkish Journal of Physics Volume 50 ; 50 ; >
 
@@ -439,35 +439,35 @@
       param[base_url] = https://journals.tubitak.gov.tr/
       param[journal_abbr] = veterinary
 
-      au < frozen ; exists ; 1996 ; Turkish Journal of Veterinary & Animal Sciences Volume 20 ; 20 ; >
-      au < frozen ; exists ; 1997 ; Turkish Journal of Veterinary & Animal Sciences Volume 21 ; 21 ; >
-      au < frozen ; exists ; 1998 ; Turkish Journal of Veterinary & Animal Sciences Volume 22 ; 22 ; >
-      au < frozen ; exists ; 1999 ; Turkish Journal of Veterinary & Animal Sciences Volume 23 ; 23 ; >
-      au < frozen ; exists ; 2000 ; Turkish Journal of Veterinary & Animal Sciences Volume 24 ; 24 ; >
-      au < frozen ; exists ; 2001 ; Turkish Journal of Veterinary & Animal Sciences Volume 25 ; 25 ; >
-      au < frozen ; exists ; 2002 ; Turkish Journal of Veterinary & Animal Sciences Volume 26 ; 26 ; >
-      au < frozen ; exists ; 2003 ; Turkish Journal of Veterinary & Animal Sciences Volume 27 ; 27 ; >
-      au < frozen ; exists ; 2004 ; Turkish Journal of Veterinary & Animal Sciences Volume 28 ; 28 ; >
-      au < frozen ; exists ; 2005 ; Turkish Journal of Veterinary & Animal Sciences Volume 29 ; 29 ; >
-      au < frozen ; exists ; 2006 ; Turkish Journal of Veterinary & Animal Sciences Volume 30 ; 30 ; >
-      au < frozen ; exists ; 2007 ; Turkish Journal of Veterinary & Animal Sciences Volume 31 ; 31 ; >
-      au < frozen ; exists ; 2008 ; Turkish Journal of Veterinary & Animal Sciences Volume 32 ; 32 ; >
-      au < frozen ; exists ; 2009 ; Turkish Journal of Veterinary & Animal Sciences Volume 33 ; 33 ; >
-      au < frozen ; exists ; 2010 ; Turkish Journal of Veterinary & Animal Sciences Volume 34 ; 34 ; >
-      au < frozen ; exists ; 2011 ; Turkish Journal of Veterinary & Animal Sciences Volume 35 ; 35 ; >
-      au < frozen ; exists ; 2012 ; Turkish Journal of Veterinary & Animal Sciences Volume 36 ; 36 ; >
-      au < frozen ; exists ; 2013 ; Turkish Journal of Veterinary & Animal Sciences Volume 37 ; 37 ; >
-      au < frozen ; exists ; 2014 ; Turkish Journal of Veterinary & Animal Sciences Volume 38 ; 38 ; >
-      au < frozen ; exists ; 2015 ; Turkish Journal of Veterinary & Animal Sciences Volume 39 ; 39 ; >
-      au < frozen ; exists ; 2016 ; Turkish Journal of Veterinary & Animal Sciences Volume 40 ; 40 ; >
-      au < frozen ; exists ; 2017 ; Turkish Journal of Veterinary & Animal Sciences Volume 41 ; 41 ; >
-      au < frozen ; exists ; 2018 ; Turkish Journal of Veterinary & Animal Sciences Volume 42 ; 42 ; >
-      au < frozen ; exists ; 2019 ; Turkish Journal of Veterinary & Animal Sciences Volume 43 ; 43 ; >
-      au < frozen ; exists ; 2020 ; Turkish Journal of Veterinary & Animal Sciences Volume 44 ; 44 ; >
-      au < frozen ; exists ; 2021 ; Turkish Journal of Veterinary & Animal Sciences Volume 45 ; 45 ; >
-      au < frozen ; exists ; 2022 ; Turkish Journal of Veterinary & Animal Sciences Volume 46 ; 46 ; >
-      au < frozen ; exists ; 2023 ; Turkish Journal of Veterinary & Animal Sciences Volume 47 ; 47 ; >
-      au < frozen ; exists ; 2024 ; Turkish Journal of Veterinary & Animal Sciences Volume 48 ; 48 ; >
+      au < finished ; manifest ; 1996 ; Turkish Journal of Veterinary & Animal Sciences Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1997 ; Turkish Journal of Veterinary & Animal Sciences Volume 21 ; 21 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; Turkish Journal of Veterinary & Animal Sciences Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1999 ; Turkish Journal of Veterinary & Animal Sciences Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; Turkish Journal of Veterinary & Animal Sciences Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2001 ; Turkish Journal of Veterinary & Animal Sciences Volume 25 ; 25 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2002 ; Turkish Journal of Veterinary & Animal Sciences Volume 26 ; 26 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; Turkish Journal of Veterinary & Animal Sciences Volume 27 ; 27 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; Turkish Journal of Veterinary & Animal Sciences Volume 28 ; 28 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; Turkish Journal of Veterinary & Animal Sciences Volume 29 ; 29 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2006 ; Turkish Journal of Veterinary & Animal Sciences Volume 30 ; 30 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2007 ; Turkish Journal of Veterinary & Animal Sciences Volume 31 ; 31 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; Turkish Journal of Veterinary & Animal Sciences Volume 32 ; 32 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; Turkish Journal of Veterinary & Animal Sciences Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; Turkish Journal of Veterinary & Animal Sciences Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2011 ; Turkish Journal of Veterinary & Animal Sciences Volume 35 ; 35 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2012 ; Turkish Journal of Veterinary & Animal Sciences Volume 36 ; 36 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; Turkish Journal of Veterinary & Animal Sciences Volume 37 ; 37 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; Turkish Journal of Veterinary & Animal Sciences Volume 38 ; 38 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Turkish Journal of Veterinary & Animal Sciences Volume 39 ; 39 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; Turkish Journal of Veterinary & Animal Sciences Volume 40 ; 40 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2017 ; Turkish Journal of Veterinary & Animal Sciences Volume 41 ; 41 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Turkish Journal of Veterinary & Animal Sciences Volume 42 ; 42 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Turkish Journal of Veterinary & Animal Sciences Volume 43 ; 43 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Turkish Journal of Veterinary & Animal Sciences Volume 44 ; 44 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; Turkish Journal of Veterinary & Animal Sciences Volume 45 ; 45 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; Turkish Journal of Veterinary & Animal Sciences Volume 46 ; 46 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; Turkish Journal of Veterinary & Animal Sciences Volume 47 ; 47 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; Turkish Journal of Veterinary & Animal Sciences Volume 48 ; 48 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; Turkish Journal of Veterinary & Animal Sciences Volume 49 ; 49 ; >
       au < crawling ; exists ; 2026 ; Turkish Journal of Veterinary & Animal Sciences Volume 50 ; 50 ; >
 
@@ -485,35 +485,35 @@
       param[base_url] = https://journals.tubitak.gov.tr/
       param[journal_abbr] = zoology
 
-      au < frozen ; exists ; 1996 ; Turkish Journal of Zoology Volume 20 ; 20 ; >
-      au < frozen ; exists ; 1997 ; Turkish Journal of Zoology Volume 21 ; 21 ; >
-      au < frozen ; exists ; 1998 ; Turkish Journal of Zoology Volume 22 ; 22 ; >
-      au < frozen ; exists ; 1999 ; Turkish Journal of Zoology Volume 23 ; 23 ; >
-      au < frozen ; exists ; 2000 ; Turkish Journal of Zoology Volume 24 ; 24 ; >
-      au < frozen ; exists ; 2001 ; Turkish Journal of Zoology Volume 25 ; 25 ; >
-      au < frozen ; exists ; 2002 ; Turkish Journal of Zoology Volume 26 ; 26 ; >
-      au < frozen ; exists ; 2003 ; Turkish Journal of Zoology Volume 27 ; 27 ; >
-      au < frozen ; exists ; 2004 ; Turkish Journal of Zoology Volume 28 ; 28 ; >
-      au < frozen ; exists ; 2005 ; Turkish Journal of Zoology Volume 29 ; 29 ; >
-      au < frozen ; exists ; 2006 ; Turkish Journal of Zoology Volume 30 ; 30 ; >
-      au < frozen ; exists ; 2007 ; Turkish Journal of Zoology Volume 31 ; 31 ; >
-      au < frozen ; exists ; 2008 ; Turkish Journal of Zoology Volume 32 ; 32 ; >
-      au < frozen ; exists ; 2009 ; Turkish Journal of Zoology Volume 33 ; 33 ; >
-      au < frozen ; exists ; 2010 ; Turkish Journal of Zoology Volume 34 ; 34 ; >
-      au < frozen ; exists ; 2011 ; Turkish Journal of Zoology Volume 35 ; 35 ; >
-      au < frozen ; exists ; 2012 ; Turkish Journal of Zoology Volume 36 ; 36 ; >
-      au < frozen ; exists ; 2013 ; Turkish Journal of Zoology Volume 37 ; 37 ; >
-      au < frozen ; exists ; 2014 ; Turkish Journal of Zoology Volume 38 ; 38 ; >
-      au < frozen ; exists ; 2015 ; Turkish Journal of Zoology Volume 39 ; 39 ; >
-      au < frozen ; exists ; 2016 ; Turkish Journal of Zoology Volume 40 ; 40 ; >
-      au < frozen ; exists ; 2017 ; Turkish Journal of Zoology Volume 41 ; 41 ; >
-      au < frozen ; exists ; 2018 ; Turkish Journal of Zoology Volume 42 ; 42 ; >
-      au < frozen ; exists ; 2019 ; Turkish Journal of Zoology Volume 43 ; 43 ; >
-      au < frozen ; exists ; 2020 ; Turkish Journal of Zoology Volume 44 ; 44 ; >
-      au < frozen ; exists ; 2021 ; Turkish Journal of Zoology Volume 45 ; 45 ; >
-      au < frozen ; exists ; 2022 ; Turkish Journal of Zoology Volume 46 ; 46 ; >
-      au < frozen ; exists ; 2023 ; Turkish Journal of Zoology Volume 47 ; 47 ; >
-      au < frozen ; exists ; 2024 ; Turkish Journal of Zoology Volume 48 ; 48 ; >
+      au < finished ; manifest ; 1996 ; Turkish Journal of Zoology Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1997 ; Turkish Journal of Zoology Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1998 ; Turkish Journal of Zoology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1999 ; Turkish Journal of Zoology Volume 23 ; 23 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; Turkish Journal of Zoology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; Turkish Journal of Zoology Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2002 ; Turkish Journal of Zoology Volume 26 ; 26 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2003 ; Turkish Journal of Zoology Volume 27 ; 27 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; Turkish Journal of Zoology Volume 28 ; 28 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; Turkish Journal of Zoology Volume 29 ; 29 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; Turkish Journal of Zoology Volume 30 ; 30 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2007 ; Turkish Journal of Zoology Volume 31 ; 31 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2008 ; Turkish Journal of Zoology Volume 32 ; 32 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; Turkish Journal of Zoology Volume 33 ; 33 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; Turkish Journal of Zoology Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; Turkish Journal of Zoology Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2012 ; Turkish Journal of Zoology Volume 36 ; 36 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2013 ; Turkish Journal of Zoology Volume 37 ; 37 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; Turkish Journal of Zoology Volume 38 ; 38 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Turkish Journal of Zoology Volume 39 ; 39 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; Turkish Journal of Zoology Volume 40 ; 40 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; Turkish Journal of Zoology Volume 41 ; 41 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; Turkish Journal of Zoology Volume 42 ; 42 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Turkish Journal of Zoology Volume 43 ; 43 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Turkish Journal of Zoology Volume 44 ; 44 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Turkish Journal of Zoology Volume 45 ; 45 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2022 ; Turkish Journal of Zoology Volume 46 ; 46 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2023 ; Turkish Journal of Zoology Volume 47 ; 47 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; Turkish Journal of Zoology Volume 48 ; 48 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; Turkish Journal of Zoology Volume 49 ; 49 ; >
       au < crawling ; exists ; 2026 ; Turkish Journal of Zoology Volume 50 ; 50 ; >
 
