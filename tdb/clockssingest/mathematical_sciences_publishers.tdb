@@ -711,7 +711,7 @@
 
     au < ready ; exists ; 1953 ; 1953 ; Mathematica Scandinavica Volume 1 ; 1 ; >
     au < ready ; exists ; 1954 ; 1954 ; Mathematica Scandinavica Volume 2 ; 2 ; >
-    au < ready ; exists ; 1955 ; 1955 ; Mathematica Scandinavica Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1955 ; 1955 ; Mathematica Scandinavica Volume 3 ; 3 ; >
     au < ready ; exists ; 1956 ; 1956 ; Mathematica Scandinavica Volume 4 ; 4 ; >
     au < ready ; exists ; 1957 ; 1957 ; Mathematica Scandinavica Volume 5 ; 5 ; >
     au < frozen ; exists ; 1958 ; 1958 ; Mathematica Scandinavica Volume 6 ; 6 ; >
@@ -754,7 +754,7 @@
     au < ready ; exists ; 1995 ; 1995 ; Mathematica Scandinavica Volume 76-77 ; 76-77 ; >
     au < ready ; exists ; 1996 ; 1996 ; Mathematica Scandinavica Volume 78-79 ; 78-79 ; >
     au < crawling ; exists ; 1997 ; 1997 ; Mathematica Scandinavica Volume 80-81 ; 80-81 ; >
-    au < ready ; exists ; 1998 ; 1998 ; Mathematica Scandinavica Volume 82-83 ; 82-83 ; >
+    au < crawling ; exists ; 1998 ; 1998 ; Mathematica Scandinavica Volume 82-83 ; 82-83 ; >
     au < ready ; exists ; 1999 ; 1999 ; Mathematica Scandinavica Volume 84-85 ; 84-85 ; >
     au < ready ; exists ; 2000 ; 2000 ; Mathematica Scandinavica Volume 86-87 ; 86-87 ; >
     au < ready ; exists ; 2001 ; 2001 ; Mathematica Scandinavica Volume 88-89 ; 88-89 ; >
@@ -778,10 +778,10 @@
     au < ready ; exists ; 2019 ; 2019 ; Mathematica Scandinavica Volume 124-125 ; 124-125 ; >
     au < ready ; exists ; 2020 ; 2020 ; Mathematica Scandinavica Volume 126 ; 126 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Mathematica Scandinavica Volume 127 ; 127 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Mathematica Scandinavica Volume 128 ; 128 ; >
-    au < ready ; exists ; 2023 ; 2023 ; Mathematica Scandinavica Volume 129 ; 129 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Mathematica Scandinavica Volume 128 ; 128 ; >
+    au < crawling ; exists ; 2023 ; 2023 ; Mathematica Scandinavica Volume 129 ; 129 ; >
     au < crawling ; exists ; 2024 ; 2024 ; Mathematica Scandinavica Volume 130 ; 130 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Mathematica Scandinavica Volume 131 ; 131 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Mathematica Scandinavica Volume 131 ; 131 ; >
     au < crawling ; exists ; 2026 ; 2026 ; Mathematica Scandinavica Volume 132 ; 132 ; >
 
 
