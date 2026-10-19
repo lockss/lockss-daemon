@@ -916,7 +916,7 @@
       au < frozen ; exists ; 1958-1959 ; Adult Education Volume 9 ; 9 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1959-1960 ; Adult Education Volume 10 ; 10 ; aeqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1960-1961 ; Adult Education Volume 11 ; 11 ; aeqa ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1961-1962 ; Adult Education Volume 12 ; 12 ; aeqa ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1961-1962 ; Adult Education Volume 12 ; 12 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1962-1963 ; Adult Education Volume 13 ; 13 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1963-1964 ; Adult Education Volume 14 ; 14 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1964-1965 ; Adult Education Volume 15 ; 15 ; aeqa ; https://journals.sagepub.com/ ; >
@@ -1478,7 +1478,7 @@
       au < ready ; exists ; 1988 ; AIDS Research and Human Retroviruses Volume 4 ; 4 ; aida ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1989 ; AIDS Research and Human Retroviruses Volume 5 ; 5 ; aida ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1990 ; AIDS Research and Human Retroviruses Volume 6 ; 6 ; aida ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1991 ; AIDS Research and Human Retroviruses Volume 7 ; 7 ; aida ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1991 ; AIDS Research and Human Retroviruses Volume 7 ; 7 ; aida ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1992 ; AIDS Research and Human Retroviruses Volume 8 ; 8 ; aida ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1993 ; AIDS Research and Human Retroviruses Volume 9 ; 9 ; aida ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1994 ; AIDS Research and Human Retroviruses Volume 10 ; 10 ; aida ; https://journals.sagepub.com/ ; >
@@ -1700,7 +1700,7 @@
     >
       #param[journal_id] = atl
 
-      au < crawling ; exists ; 1999 ; Alternatives to Laboratory Animals Volume 27 ; 27 ; atla ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1999 ; Alternatives to Laboratory Animals Volume 27 ; 27 ; atla ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Alternatives to Laboratory Animals Volume 28 ; 28 ; atla ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2001 ; Alternatives to Laboratory Animals Volume 29 ; 29 ; atla ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Alternatives to Laboratory Animals Volume 30 ; 30 ; atla ; https://journals.sagepub.com/ ; >

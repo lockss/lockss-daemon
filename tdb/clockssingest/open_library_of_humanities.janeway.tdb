@@ -1031,7 +1031,7 @@
       #published 2024-2026
       param[base_url] = https://www.regeneration-journal.org/
 
-      au < crawling ; exists ; 2024 ; 1 ; Regeneration: Environment, Art, Culture Volume 2024 ; 2024 ; >
+      au < frozen ; exists ; 2024 ; 1 ; Regeneration: Environment, Art, Culture Volume 2024 ; 2024 ; >
       au < frozen ; exists ; 2025 ; 2 ; Regeneration: Environment, Art, Culture Volume 2025 ; 2025 ; >
       au < notReady ; exists ; 2026 ; 3 ; Regeneration: Environment, Art, Culture Volume 2026 ; 2026 ; > #403 Forbidden, https://www.regeneration-journal.org/article/id/20309/file/212719/
 
@@ -1150,7 +1150,7 @@
       au < frozen ; exists ; 2006 ; 41 ; Zygon: Journal of Religion and Science Volume 2006 ; 2006 ; >
       au < frozen ; exists ; 2007 ; 42 ; Zygon: Journal of Religion and Science Volume 2007 ; 2007 ; >
       au < frozen ; exists ; 2008 ; 43 ; Zygon: Journal of Religion and Science Volume 2008 ; 2008 ; >
-      au < crawling ; exists ; 2009 ; 44 ; Zygon: Journal of Religion and Science Volume 2009 ; 2009 ; >
+      au < frozen ; exists ; 2009 ; 44 ; Zygon: Journal of Religion and Science Volume 2009 ; 2009 ; >
       au < frozen ; exists ; 2010 ; 45 ; Zygon: Journal of Religion and Science Volume 2010 ; 2010 ; >
       au < ready ; exists ; 2011 ; 46 ; Zygon: Journal of Religion and Science Volume 2011 ; 2011 ; >
       au < frozen ; exists ; 2012 ; 47 ; Zygon: Journal of Religion and Science Volume 2012 ; 2012 ; >
