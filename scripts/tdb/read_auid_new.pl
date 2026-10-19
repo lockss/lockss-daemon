@@ -1424,7 +1424,7 @@ while (my $line = <>) {
           $vol_title = $resp_p->request->uri . "+" . $resp_s->request->uri;
           $result = "Redirected";
 
-      } elsif (defined($perm_contents) && ($perm_contents =~ m/$lcl_tag/s) ) {
+      } elsif (defined($perm_contents) && (($perm_contents =~ m/$lcl_tag/s) || ($plugin eq "ClockssPensoftOaiPlugin" && $perm_contents =~ m/$clockss_tag/s)) ) {
         if ($resp_s->is_success) {
           if ($resp_s->content =~ m/results in an empty (set|list)/is) {
             $result = "--EMPTY_LIST--"
@@ -1436,7 +1436,7 @@ while (my $line = <>) {
           $result = "--REQ_FAIL--"
         }
       } else {
-        #printf("URL: %s\n", $perm_url);
+        printf("URL: %s\n", $perm_url);
         $result = "--NO_LOCKSS--"
       }
     } else {

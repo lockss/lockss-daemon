@@ -640,7 +640,20 @@
       au < released ; 2023 ; 2023 ; Food and Ecological Systems Modelling Journal Volume 2023 ; 2023 ; https://fesmj.pensoft.net/ >
       au < released ; 2024 ; 2024 ; Food and Ecological Systems Modelling Journal Volume 2024 ; 2024 ; https://fesmj.pensoft.net/ >
       au < released ; 2025 ; 2025 ; Food and Ecological Systems Modelling Journal Volume 2025 ; 2025 ; https://fesmj.pensoft.net/ >
-      au < manifest ; 2026 ; 2026 ; Food and Ecological Systems Modelling Journal Volume 2026 ; 2026 ; https://fesmj.pensoft.net/ >
+
+  }
+
+  {
+
+      title <
+        name = Agricultural and Environmental Modelling (AEM) ;
+        eissn = 3134-1810
+      >
+
+      param[au_oai_set] = fmj
+
+      #Changed from 2815-3197 Food and Ecological Systems Modelling Journal
+      au < manifest ; 2026 ; 2026 ; Food and Ecological Systems Modelling Journal Volume 2026 ; 2026 ; https://aem.pensoft.net/ >
 
   }
 
@@ -1490,8 +1503,8 @@
 
       param[au_oai_set] = atomiclayerdeposition
 
-      au < released ; 2023 ; 2023 ; Atomic Layer Deposition Volume 2023 ; 2023 ; https://journal.atomiclayerdeposition.com/ >
-      au < manifest ; 2024 ; 2024 ; Atomic Layer Deposition Volume 2024 ; 2024 ; https://journal.atomiclayerdeposition.com/ >
+      au < down ; 2023 ; 2023 ; Atomic Layer Deposition Volume 2023 ; 2023 ; https://journal.atomiclayerdeposition.com/ > #no lockss permission statement, no cc license.
+      au < notReady ; 2024 ; 2024 ; Atomic Layer Deposition Volume 2024 ; 2024 ; https://journal.atomiclayerdeposition.com/ > #no lockss permission statement, no cc license.
 
   }
 
