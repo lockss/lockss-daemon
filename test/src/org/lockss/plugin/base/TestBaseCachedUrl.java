@@ -99,6 +99,67 @@ public class TestBaseCachedUrl extends LockssTestCase {
     public NotVersionedTests() {
     }
 
+    // Repairs of damaged V1 repository nodes (lockss-engineering-tasks#751),
+    // as seen through CachedUrl
+
+    RepositoryNode createThreeVersions(String url) throws Exception {
+      RepositoryNode node =
+        TestRepositoryNodeImpl.createLeaf(repo, url, "content 1", null);
+      TestRepositoryNodeImpl.createContentVersion(node, "content 2", null);
+      TestRepositoryNodeImpl.createContentVersion(node, "content 3", null);
+      return node;
+    }
+
+    void assertVersions(int[] exp, CachedUrl[] vers) throws IOException {
+      int[] actual = new int[vers.length];
+      for (int ix = 0; ix < vers.length; ix++) {
+        actual[ix] = vers[ix].getVersion();
+        assertEquals("content " + Math.min(actual[ix], 3),
+                     StringUtil.fromInputStream(vers[ix].getUnfilteredInputStream()));
+        AuUtil.safeRelease(vers[ix]);
+      }
+      assertEquals(exp, actual);
+    }
+
+    public void testCuAfterVersionNumberRepair() throws Exception {
+      RepositoryNode node = createThreeVersions(url1);
+      TestRepositoryNodeImpl.makeDuplicateVersionState(TestRepositoryNodeImpl.getContentDir(node));
+      CachedUrl cu = mau.makeCachedUrl(url1);
+      // the version shown for the current CU (e.g. by View Content)
+      assertEquals(3, cu.getVersion());
+      assertVersions(new int[] {3, 2, 1}, cu.getCuVersions());
+    }
+
+    public void testCuAfterUnusableCurrentPropsRepair() throws Exception {
+      RepositoryNode node = createThreeVersions(url1);
+      File contentDir = TestRepositoryNodeImpl.getContentDir(node);
+      TestRepositoryNodeImpl.zeroFile(new File(contentDir, "current.props"));
+      mau.addUrlToBeCached(url1);
+      CachedUrl cu = mau.makeCachedUrl(url1);
+      assertTrue(cu.hasContent());
+      assertEquals(2, cu.getVersion());
+      assertEquals("content 2",
+                   StringUtil.fromInputStream(cu.getUnfilteredInputStream()));
+      cu.release();
+    }
+
+    public void testCuVersionWithZeroedPropsMovedAside() throws Exception {
+      RepositoryNode node = createThreeVersions(url1);
+      File contentDir = TestRepositoryNodeImpl.getContentDir(node);
+      TestRepositoryNodeImpl.zeroFile(new File(contentDir, "1.props"));
+      CachedUrl[] vers = mau.makeCachedUrl(url1).getCuVersions();
+      assertEquals(3, vers.length);
+      try {
+        vers[2].getProperties();
+        fail("Version with zeroed props should throw");
+      } catch (LockssRepository.RepositoryStateException e) {
+      } finally {
+        AuUtil.safeRelease(vers[2]);
+      }
+      assertVersions(new int[] {3, 2},
+                     mau.makeCachedUrl(url1).getCuVersions());
+    }
+
     public void testFilterParamDefault() {
       MyCachedUrl cu = new MyCachedUrl(new MyAu(), null);
       cu.openForHashing();
