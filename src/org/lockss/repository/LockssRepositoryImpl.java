@@ -928,9 +928,14 @@ public class LockssRepositoryImpl
           if (oldAuid == null) {
             Properties idProps = getAuIdProperties(path);
             if (idProps != null) {
+              String auid = idProps.getProperty(AU_ID_PROP);
+              if (auid == null) {
+                logger.warning("Not mapping " + path + ", no " + AU_ID_PROP +
+                               " in " + AU_ID_FILE);
+                continue;
+              }
               // XXX intern auid?
-              String auid =
-                StringPool.AUIDS.intern(idProps.getProperty(AU_ID_PROP));;
+              auid = StringPool.AUIDS.intern(auid);
               map.put(auid, pathSlash);
               if (logger.isDebug3()) {
                 logger.debug3("Mapping to: " + map.get(auid) + ": " + auid);
