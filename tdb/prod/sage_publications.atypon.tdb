@@ -77516,21 +77516,21 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         name = NMIMS Management Review ;
         issn = 0971-1023
       >
+      #Published 2023-present. 1998-2022: https://management-review.nmims.edu/all-issues.php
 
-      au < manifest ; 1990 ; NMIMS Management Review Volume 2 ; 2 ; nrma ; https://journals.sagepub.com/ >
-      au < manifest ; 1991 ; NMIMS Management Review Volume 3 ; 3 ; nrma ; https://journals.sagepub.com/ >
-      au < manifest ; 1992 ; NMIMS Management Review Volume 4 ; 4 ; nrma ; https://journals.sagepub.com/ >
-      au < manifest ; 1993 ; NMIMS Management Review Volume 5 ; 5 ; nrma ; https://journals.sagepub.com/ >
+      #au < exists ; 1990 ; NMIMS Management Review Volume 2 ; 2 ; nrma ; https://journals.sagepub.com/ >
+      #au < exists ; 1991 ; NMIMS Management Review Volume 3 ; 3 ; nrma ; https://journals.sagepub.com/ >
+      #au < exists ; 1992 ; NMIMS Management Review Volume 4 ; 4 ; nrma ; https://journals.sagepub.com/ >
+      #au < exists ; 1993 ; NMIMS Management Review Volume 5 ; 5 ; nrma ; https://journals.sagepub.com/ >
+      #au < exists ; 1998 ; NMIMS Management Review Volume 10 ; 10 ; nrma ; https://journals.sagepub.com/ >
+      #au < exists ; 1999 ; NMIMS Management Review Volume 11 ; 11 ; nrma ; https://journals.sagepub.com/ >
+      #au < exists ; 2000 ; NMIMS Management Review Volume 12 ; 12 ; nrma ; https://journals.sagepub.com/ >
+      #au < exists ; 2001 ; NMIMS Management Review Volume 13 ; 13 ; nrma ; https://journals.sagepub.com/ >
+      #au < exists ; 2002 ; NMIMS Management Review Volume 14 ; 14 ; nrma ; https://journals.sagepub.com/ >
 
-      au < manifest ; 1998 ; NMIMS Management Review Volume 10 ; 10 ; nrma ; https://journals.sagepub.com/ >
-      au < notReady ; 1999 ; NMIMS Management Review Volume 11 ; 11 ; nrma ; https://journals.sagepub.com/ >
-      au < notReady ; 2000 ; NMIMS Management Review Volume 12 ; 12 ; nrma ; https://journals.sagepub.com/ >
-      au < manifest ; 2001 ; NMIMS Management Review Volume 13 ; 13 ; nrma ; https://journals.sagepub.com/ >
-      au < manifest ; 2002 ; NMIMS Management Review Volume 14 ; 14 ; nrma ; https://journals.sagepub.com/ >
-      au < released ; 2003 ; NMIMS Management Review Volume 15 ; 15 ; nrma ; https://journals.sagepub.com/ >
-
-      au < released ; 2012 ; NMIMS Management Review Volume 22 ; 22 ; nrma ; https://journals.sagepub.com/ >
-      au < released ; 2013 ; NMIMS Management Review Volume 23 ; 23 ; nrma ; https://journals.sagepub.com/ >
+      au < down ; 2003 ; NMIMS Management Review Volume 15 ; 15 ; nrma ; https://journals.sagepub.com/ >
+      au < down ; 2012 ; NMIMS Management Review Volume 22 ; 22 ; nrma ; https://journals.sagepub.com/ >
+      au < down ; 2013 ; NMIMS Management Review Volume 23 ; 23 ; nrma ; https://journals.sagepub.com/ >
 
       au < released ; 2023 ; NMIMS Management Review Volume 31 ; 31 ; nrma ; https://journals.sagepub.com/ >
       au < released ; 2024 ; NMIMS Management Review Volume 32 ; 32 ; nrma ; https://journals.sagepub.com/ >
