@@ -1686,6 +1686,163 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     }
   }
 
+  RepositoryNodeImpl createVersions(String url, int max) throws Exception {
+    RepositoryNode leaf = repo.createNewNode(url);
+    Properties props = new Properties();
+    for (int ix = 1; ix <= max; ix++) {
+      props.setProperty(PROP_KEY, PROP_VAL_STEM+ix);
+      createContentVersion(leaf, cntnt(ix), props);
+    }
+    return (RepositoryNodeImpl)leaf;
+  }
+
+  // Return a new node object, which reads the node's state from disk
+  RepositoryNodeImpl freshNode(RepositoryNodeImpl leaf) {
+    return new RepositoryNodeImpl(leaf.url, leaf.nodeLocation,
+                                  leaf.repository);
+  }
+
+  void setPropsVersion(File propsFile, int ver) throws Exception {
+    Properties props = new Properties();
+    InputStream is = new FileInputStream(propsFile);
+    props.load(is);
+    is.close();
+    props.setProperty(RepositoryNodeImpl.LOCKSS_VERSION_NUMBER,
+                      Integer.toString(ver));
+    OutputStream os = new FileOutputStream(propsFile);
+    props.store(os, "test");
+    os.close();
+  }
+
+  void zeroFile(File file) throws Exception {
+    long len = file.length();
+    OutputStream os = new FileOutputStream(file);
+    os.write(new byte[(int)len]);
+    os.close();
+  }
+
+  int propsVersion(File propsFile) throws Exception {
+    Properties props = new Properties();
+    InputStream is = new FileInputStream(propsFile);
+    props.load(is);
+    is.close();
+    return Integer.parseInt(props.getProperty(RepositoryNodeImpl.LOCKSS_VERSION_NUMBER));
+  }
+
+  // State left by sealing a new version after current.props was lost (see
+  // lockss-engineering-tasks#751): the old current was renamed to version
+  // 0 and the new current.props says version 1
+  public void testRepairCurrentVersionNumber() throws Exception {
+    String url = "http://www.example.com/versionedcontent.txt";
+    RepositoryNodeImpl leaf = createVersions(url, 3);
+    File contentDir = leaf.getContentDir();
+    File zero = new File(contentDir, "0");
+    File zeroProps = new File(contentDir, "0.props");
+    Files.copy(new File(contentDir, "2").toPath(), zero.toPath());
+    StringUtil.toFile(zeroProps, "#HTTP headers\n\\u0000\\u0000=\n" +
+                      RepositoryNodeImpl.NODE_WAS_INACTIVE_PROPERTY + "=true\n");
+    File curProps = new File(contentDir, "current.props");
+    setPropsVersion(curProps, 1);
+
+    RepositoryNodeImpl node = freshNode(leaf);
+    assertEquals(3, node.getCurrentVersion());
+    assertEquals(3, propsVersion(curProps));
+    assertFalse(zero.exists());
+    assertFalse(zeroProps.exists());
+    assertTrue(new File(contentDir, "0.ERROR").exists());
+    assertTrue(new File(contentDir, "0.props.ERROR").exists());
+    assertFalse(new File(contentDir, "current.props.repair").exists());
+
+    RepositoryNodeVersion[] vers = node.getNodeVersions();
+    assertEquals(3, vers.length);
+    assertEquals(3, vers[0].getVersion());
+    checkVersion(vers[1], 2, null);
+    checkVersion(vers[2], 1, null);
+
+    // The next version no longer overwrites an existing numbered version
+    Properties props = new Properties();
+    props.setProperty(PROP_KEY, PROP_VAL_STEM+4);
+    createContentVersion(node, cntnt(4), props);
+    assertEquals(4, node.getCurrentVersion());
+    vers = node.getNodeVersions();
+    assertEquals(4, vers.length);
+    checkVersion(vers[1], 3, null);
+    checkVersion(vers[2], 2, null);
+    checkVersion(vers[3], 1, null);
+  }
+
+  // Same, without a version 0, as left when the new content is identical
+  // to the old current
+  public void testRepairCurrentVersionNumberNoVersionZero() throws Exception {
+    String url = "http://www.example.com/versionedcontent.txt";
+    RepositoryNodeImpl leaf = createVersions(url, 3);
+    File contentDir = leaf.getContentDir();
+    File curProps = new File(contentDir, "current.props");
+    setPropsVersion(curProps, 1);
+
+    RepositoryNodeImpl node = freshNode(leaf);
+    assertEquals(3, node.getCurrentVersion());
+    assertEquals(3, propsVersion(curProps));
+    assertFalse(new File(contentDir, "0.ERROR").exists());
+    assertEquals(3, node.getNodeVersions().length);
+  }
+
+  public void testNoRepairWhenConsistent() throws Exception {
+    String url = "http://www.example.com/versionedcontent.txt";
+    RepositoryNodeImpl leaf = createVersions(url, 3);
+    File contentDir = leaf.getContentDir();
+    RepositoryNodeImpl node = freshNode(leaf);
+    assertEquals(3, node.getCurrentVersion());
+    assertEquals(3, node.getNodeVersions().length);
+    assertEquals(SetUtil.set("1", "1.props", "2", "2.props",
+                             "current", "current.props"),
+                 new HashSet(Arrays.asList(contentDir.list())));
+  }
+
+  public void testMoveAsideVersionWithZeroedProps() throws Exception {
+    String url = "http://www.example.com/versionedcontent.txt";
+    RepositoryNodeImpl leaf = createVersions(url, 3);
+    File contentDir = leaf.getContentDir();
+    zeroFile(new File(contentDir, "1.props"));
+
+    RepositoryNodeImpl node = freshNode(leaf);
+    RepositoryNodeVersion[] vers = node.getNodeVersions();
+    assertEquals(3, vers.length);
+    checkVersion(vers[1], 2, null);
+    RepositoryNode.RepositoryNodeContents rnc = vers[2].getNodeContents();
+    try {
+      rnc.getProperties();
+      fail("Props of version with zeroed props file should throw");
+    } catch (LockssRepository.RepositoryStateException e) {
+      assertMatchesRE("Malformed props for version 1 ", e.getMessage());
+    } finally {
+      rnc.release();
+    }
+    assertFalse(new File(contentDir, "1").exists());
+    assertFalse(new File(contentDir, "1.props").exists());
+    assertTrue(new File(contentDir, "1.ERROR").exists());
+    assertTrue(new File(contentDir, "1.props.ERROR").exists());
+
+    vers = node.getNodeVersions();
+    assertEquals(2, vers.length);
+    assertEquals(3, vers[0].getVersion());
+    checkVersion(vers[1], 2, null);
+  }
+
+  public void testMoveAsideDoesntOverwrite() throws Exception {
+    String url = "http://www.example.com/versionedcontent.txt";
+    RepositoryNodeImpl leaf = createVersions(url, 1);
+    File contentDir = leaf.getContentDir();
+    File f = new File(contentDir, "x");
+    StringUtil.toFile(f, "one");
+    assertTrue(leaf.moveAside(f));
+    StringUtil.toFile(f, "two");
+    assertTrue(leaf.moveAside(f));
+    assertFalse(leaf.moveAside(f));
+    assertEquals("one", StringUtil.fromFile(new File(contentDir, "x.ERROR")));
+    assertEquals("two", StringUtil.fromFile(new File(contentDir, "x.ERROR.1")));
+  }
+
   public void testGetNodeVersions() throws Exception {
     int max = 5;
     String url = "http://www.example.com/versionedcontent.txt";

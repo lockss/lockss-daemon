@@ -1441,8 +1441,91 @@ public class RepositoryNodeImpl implements RepositoryNode {
       if (currentVersion <= 0) {
         logger.error("Bad content version found: "+currentVersion);
         repository.deactivateInconsistentNode(this);
+      } else if (getVersionedCacheFile(currentVersion).exists()) {
+        // A numbered version never has the current version's number
+        // unless current.props was written with a version number computed
+        // from a missing or corrupt current.props
+        repairCurrentVersionNumber();
       }
     }
+  }
+
+  /**
+   * Renumber the current version to follow the highest numbered version,
+   * and move aside the version 0 left behind by the same error.  Without
+   * this, sealing the next version would rename 'current' over an
+   * existing numbered version.
+   */
+  synchronized void repairCurrentVersionNumber() {
+    if (newVersionOpen || !currentCacheFile.exists()) {
+      logger.warning("Not repairing current version number (" +
+                     currentVersion + ") of " + url +
+                     (newVersionOpen ? ": new version open" : ": no content file"));
+      return;
+    }
+    int maxVersion = 0;
+    for (int ver : getVersionNumbers()) {
+      maxVersion = Math.max(maxVersion, ver);
+    }
+    int oldVersion = currentVersion;
+    int newVersion = maxVersion + 1;
+    Properties newProps = SortedProperties.fromProperties(curProps);
+    newProps.setProperty(LOCKSS_VERSION_NUMBER, Integer.toString(newVersion));
+    File tmpPropsFile = new File(getContentDir(),
+                                 CURRENT_PROPS_FILENAME + ".repair");
+    try {
+      writeProps(tmpPropsFile, newProps, url);
+    } catch (IOException e) {
+      logger.error("Couldn't repair current version number of " + url, e);
+      tmpPropsFile.delete();
+      return;
+    }
+    if (!PlatformUtil.updateAtomically(tmpPropsFile, currentPropsFile)) {
+      logger.error("Couldn't rename repaired props file for " + url);
+      tmpPropsFile.delete();
+      return;
+    }
+    currentVersion = newVersion;
+    curProps = newProps;
+    boolean movedZero = moveAside(getVersionedCacheFile(0));
+    movedZero |= moveAside(getVersionedPropsFile(0));
+    logger.warning("Repaired current version number of " + url + ": " +
+                   oldVersion + " -> " + newVersion +
+                   (movedZero ? ", moved version 0 aside" : ""));
+    if (movedZero) {
+      invalidateCachedValues(true);
+    }
+  }
+
+  static boolean isValidVersionNumber(String ver) {
+    if (ver == null) {
+      return false;
+    }
+    try {
+      return Integer.parseInt(ver) > 0;
+    } catch (NumberFormatException e) {
+      return false;
+    }
+  }
+
+  /**
+   * Rename a malformed file to an unused name with the FAULTY_FILE_EXTENSION
+   * suffix.
+   * @return true iff the file existed and was renamed
+   */
+  boolean moveAside(File file) {
+    if (!file.exists()) {
+      return false;
+    }
+    File target = new File(file.getPath() + FAULTY_FILE_EXTENSION);
+    for (int ix = 1; target.exists(); ix++) {
+      target = new File(file.getPath() + FAULTY_FILE_EXTENSION + "." + ix);
+    }
+    if (!PlatformUtil.updateAtomically(file, target)) {
+      logger.error("Couldn't move aside " + file);
+      return false;
+    }
+    return true;
   }
 
   void maybeDeactivateInconsistentNode() {
@@ -1971,11 +2054,26 @@ public class RepositoryNodeImpl implements RepositoryNode {
       protected Properties getProps() {
 	if (props == null) {
 	  File propsFile = getVersionedPropsFile(version);
+	  Properties verProps;
 	  try {
-	    props = loadProps(propsFile);
+	    verProps = loadProps(propsFile);
 	  } catch (IOException e) {
 	    throw new LockssRepository.RepositoryStateException("Couldn't load versioned properties file: " + propsFile, e);
 	  }
+	  if (!isValidVersionNumber(verProps.getProperty(LOCKSS_VERSION_NUMBER))) {
+	    // Headers are lost (e.g. a zeroed props file).  Move the version
+	    // out of the way so it's no longer listed, served or migrated.
+	    synchronized (RepositoryNodeImpl.this) {
+	      moveAside(getContentFile());
+	      moveAside(propsFile);
+	      invalidateCachedValues(true);
+	    }
+	    String msg = "Malformed props for version " + version + " of " +
+	      url + " (no " + LOCKSS_VERSION_NUMBER + "), moved aside";
+	    logger.warning(msg);
+	    throw new LockssRepository.RepositoryStateException(msg);
+	  }
+	  props = verProps;
 	}
 	return props;
       }
