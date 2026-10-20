@@ -302,6 +302,59 @@ class TestScanFindings(unittest.TestCase):
     self.assertIn('(no readable au.id)', self.res.stdout)
 
 
+@unittest.skipIf(hasattr(os, 'geteuid') and os.geteuid() == 0,
+                 'permissions not enforced for root')
+class TestScanErrors(unittest.TestCase):
+  '''Unreadable files and directories are reported, not fatal.'''
+
+  @classmethod
+  def setUpClass(cls):
+    fx = cls.fx = RepoFixture()
+    a = fx.au('a')
+    cls.badprops = fx.node(a, 'h/badprops', {
+      '1': b'one', '1.props': props(1),
+      'current': b'two', 'current.props': props(2)})
+    fx.node(a, 'h/unreadable_dir/x', {
+      'current': b'c', 'current.props': props(1)})
+    cls.baddir = os.path.join(a, 'h', 'unreadable_dir')
+    fx.node(a, 'h/ok', {'current': b'c', 'current.props': props(1)})
+    b = fx.au('b')
+    fx.node(b, 'h/ok', {'current': b'c', 'current.props': props(1)})
+    cls.badauid = os.path.join(b, '#au_id_file')
+    os.chmod(os.path.join(cls.badprops, 'current.props'), 0)
+    os.chmod(cls.baddir, 0)
+    os.chmod(cls.badauid, 0)
+    cls.res, cls.rows = run_script([fx.cache],
+                                   os.path.join(fx.root, 'out.tsv'))
+
+  @classmethod
+  def tearDownClass(cls):
+    os.chmod(os.path.join(cls.badprops, 'current.props'), 0o644)
+    os.chmod(cls.baddir, 0o755)
+    os.chmod(cls.badauid, 0o644)
+    cls.fx.cleanup()
+
+  def test_completes(self):
+    self.assertEqual(0, self.res.returncode, self.res.stderr)
+    self.assertIn('TOTAL: 2 AUs scanned', self.res.stdout)
+
+  def test_unreadable_props(self):
+    self.assertEqual(['SCAN_ERROR'], codes_for(self.rows, 'h/badprops'))
+
+  def test_unreadable_dir(self):
+    self.assertEqual(['SCAN_ERROR'],
+                     codes_for(self.rows, os.path.join('h', 'unreadable_dir')))
+
+  def test_unreadable_au_id_file(self):
+    au_b = [r for r in self.rows if r['au_dir'].endswith(os.sep + 'b')]
+    self.assertEqual([('SCAN_ERROR', '')], [(r['code'], r['node'])
+                                            for r in au_b])
+    self.assertIn('(no readable au.id)', self.res.stdout)
+
+  def test_other_nodes_scanned(self):
+    self.assertEqual([], codes_for(self.rows, 'h/ok'))
+
+
 class TestScanOrderAndTimeout(unittest.TestCase):
 
   @classmethod

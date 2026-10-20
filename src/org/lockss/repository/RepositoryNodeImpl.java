@@ -165,7 +165,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
   protected Properties curProps;
   protected Properties nodeProps = new Properties();
   private boolean nodePropsLoaded = false;
-  protected int currentVersion = -1;
+  // volatile, and assigned after curInputFile and curProps, so the
+  // unsynchronized fast path in ensureCurrentInfoLoaded() sees them
+  protected volatile int currentVersion = -1;
 
   // convenience file handles
   protected File contentDir = null;
@@ -791,6 +793,20 @@ public class RepositoryNodeImpl implements RepositoryNode {
       currentVersion = determineLastActiveVersion();
     }
 
+    // Sealing renames 'current' to its version number.  Don't start a
+    // version that would overwrite an existing numbered version (e.g. if
+    // repairing the version number failed when the node was loaded).
+    if (!wasInactive && currentVersion > 0 &&
+        getVersionedCacheFile(currentVersion).exists()) {
+      currentVersion = repairCurrentVersionNumber(currentVersion);
+      if (getVersionedCacheFile(currentVersion).exists()) {
+        String err = "Version " + currentVersion + " of " + url +
+          " already exists, not starting a new version";
+        logger.error(err);
+        throw new LockssRepository.RepositoryStateException(err);
+      }
+    }
+
     newVersionOpen = true;
     versionTimeout = Deadline.in(
       CurrentConfig.getLongParam(PARAM_VERSION_TIMEOUT,
@@ -819,6 +835,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
       if (!newPropsSet) {
         throw new UnsupportedOperationException("setNewProperties() not called.");
       }
+      // Make readers wait (in ensureCurrentInfoLoaded()) for the new
+      // version, rather than see its number with the old props
+      curProps = null;
 
       // if the node was inactive, we need to copy the inactive files to
       // 'current' so they can join the standard versioning
@@ -871,6 +890,13 @@ public class RepositoryNodeImpl implements RepositoryNode {
 			    currentCacheFile);
 	    }
             isIdenticalVersion = true;
+          } else if (getVersionedCacheFile(currentVersion).exists() ||
+                     getVersionedPropsFile(currentVersion).exists()) {
+            // Never overwrite an existing numbered version
+            String err = "Version " + currentVersion + " of " + url +
+              " already exists, not overwriting it";
+            logger.error(err);
+            throw new LockssRepository.RepositoryStateException(err);
           } else if (!PlatformUtil.updateAtomically(currentCacheFile,
                                                     getVersionedCacheFile(currentVersion))) {
             String err = "Couldn't rename current content file: " + url;
@@ -1138,8 +1164,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
       throw new LockssRepository.RepositoryStateException("Couldn't rename old versions.");
     }
 
-    currentVersion--;
     curProps = null;
+    currentVersion--;
     invalidateCachedValues(true);
   }
 
@@ -1267,49 +1293,60 @@ public class RepositoryNodeImpl implements RepositoryNode {
    * Run to make sure that all values are initialized and up-to-date.
    */
   void ensureCurrentInfoLoaded() {
-    if ((currentVersion==0) || (currentVersion==INACTIVE_VERSION) ||
-        (currentVersion==DELETED_VERSION)) {
-      // node already initialized and has no active content,
-      // so exit early
+    // Unsynchronized fast path for a loaded node.  currentVersion is read
+    // first; it's assigned after curInputFile and curProps.
+    int ver = currentVersion;
+    if (ver==0 || ver==INACTIVE_VERSION || ver==DELETED_VERSION ||
+        (ver > 0 && curInputFile != null && curProps != null)) {
       return;
-    } else if (currentVersion==-1) {
-      // XXX happens multiple times for dir nodes with no content, as
-      // currentVersion doesn't get changed.  Fix this.
-      initFiles();
-
-      // load the node properties
-      if (!nodePropsLoaded) {
-	try {
-	  loadNodeProps(true);
-	} catch (LockssRepositoryImpl.RepositoryStateException rse) {
-	  currentVersion = DELETED_VERSION;
-	  logger.warning("Renaming faulty 'nodeProps' to 'nodeProps.ERROR'");
-	  if (!PlatformUtil.updateAtomically(nodePropsFile,
-					     new File(nodePropsFile.getAbsolutePath()
-						      + FAULTY_FILE_EXTENSION))) {
-	    logger.error("Error renaming nodeProps file");
-	  }
-	}
-      }
-
-      // no content, so version 0
-      if (!contentDir.exists()) {
-        currentVersion = 0;
-        curInputFile = null;
-        curProps = null;
-        return;
-      }
-
-      // determine if deleted or inactive
-      if (checkIfInactiveOrDeleted()) {
-        return;
-      }
     }
+    // Load under the node lock, so concurrent first loads (which may
+    // repair the node) don't see or act on partly loaded state
+    synchronized (this) {
+      if ((currentVersion==0) || (currentVersion==INACTIVE_VERSION) ||
+          (currentVersion==DELETED_VERSION)) {
+        // node already initialized and has no active content,
+        // so exit early
+        return;
+      } else if (currentVersion==-1) {
+        // XXX happens multiple times for dir nodes with no content, as
+        // currentVersion doesn't get changed.  Fix this.
+        initFiles();
 
-    // make sure content handles are up-to-date
-    // load current info and version
-    if ((curInputFile==null) || (curProps==null)) {
-      loadCurrentInfo();
+        // load the node properties
+        if (!nodePropsLoaded) {
+          try {
+            loadNodeProps(true);
+          } catch (LockssRepositoryImpl.RepositoryStateException rse) {
+            currentVersion = DELETED_VERSION;
+            logger.warning("Renaming faulty 'nodeProps' to 'nodeProps.ERROR'");
+            if (!PlatformUtil.updateAtomically(nodePropsFile,
+                                               new File(nodePropsFile.getAbsolutePath()
+                                                        + FAULTY_FILE_EXTENSION))) {
+              logger.error("Error renaming nodeProps file");
+            }
+          }
+        }
+
+        // no content, so version 0
+        if (!contentDir.exists()) {
+          currentVersion = 0;
+          curInputFile = null;
+          curProps = null;
+          return;
+        }
+
+        // determine if deleted or inactive
+        if (checkIfInactiveOrDeleted()) {
+          return;
+        }
+      }
+
+      // make sure content handles are up-to-date
+      // load current info and version
+      if ((curInputFile==null) || (curProps==null)) {
+        loadCurrentInfo();
+      }
     }
   }
 
@@ -1473,10 +1510,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
    * not repaired)
    */
   synchronized int repairCurrentVersionNumber(int oldVersion) {
-    if (newVersionOpen || !currentCacheFile.exists()) {
+    if (newVersionOpen || !currentCacheFile.exists() || curProps == null) {
       logger.warning("Not repairing current version number (" +
                      oldVersion + ") of " + url +
-                     (newVersionOpen ? ": new version open" : ": no content file"));
+                     (newVersionOpen ? ": new version open"
+                      : (curProps == null ? ": no props loaded"
+                         : ": no content file")));
       return oldVersion;
     }
     int maxVersion = 0;
@@ -1485,19 +1524,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
     int newVersion = maxVersion + 1;
     Properties newProps = SortedProperties.fromProperties(curProps);
-    newProps.setProperty(LOCKSS_VERSION_NUMBER, Integer.toString(newVersion));
-    File tmpPropsFile = new File(getContentDir(),
-                                 CURRENT_PROPS_FILENAME + ".repair");
-    try {
-      writeProps(tmpPropsFile, newProps, url);
-    } catch (IOException e) {
-      logger.error("Couldn't repair current version number of " + url, e);
-      tmpPropsFile.delete();
-      return oldVersion;
-    }
-    if (!renameForRepair(tmpPropsFile, currentPropsFile)) {
-      logger.error("Couldn't rename repaired props file for " + url);
-      tmpPropsFile.delete();
+    if (!rewriteVersionNumber(currentPropsFile, newProps, newVersion)) {
       return oldVersion;
     }
     curProps = newProps;
@@ -1513,13 +1540,38 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   /**
+   * Set the version number in props and replace propsFile with them,
+   * by writing a temp file and renaming it.
+   * @return true iff propsFile was replaced
+   */
+  boolean rewriteVersionNumber(File propsFile, Properties props,
+                               int version) {
+    props.setProperty(LOCKSS_VERSION_NUMBER, Integer.toString(version));
+    File tmpPropsFile = new File(propsFile.getPath() + ".repair");
+    try {
+      writeProps(tmpPropsFile, props, url);
+    } catch (IOException e) {
+      logger.error("Couldn't write " + tmpPropsFile, e);
+      tmpPropsFile.delete();
+      return false;
+    }
+    if (!renameForRepair(tmpPropsFile, propsFile)) {
+      logger.error("Couldn't rename " + tmpPropsFile + " to " + propsFile);
+      tmpPropsFile.delete();
+      return false;
+    }
+    return true;
+  }
+
+  /**
    * Replace a current version whose current.props is missing, unreadable
    * or has no valid version number with the highest numbered version whose
    * props are usable, moving the unusable files aside.  Without this the
    * node is deactivated, and sealing its next version renames 'current'
    * to version 0 and numbers the new version 1.  If no numbered version is
    * usable the node is left without content.
-   * @return false iff the repair couldn't be attempted
+   * @return false iff the repair couldn't be done, in which case current
+   * and current.props are left in place
    */
   synchronized boolean repairCurrentFromNumberedVersion(String reason) {
     if (newVersionOpen) {
@@ -1540,8 +1592,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
                    reason + "), not repairing");
       return false;
     }
-    curInputFile = null;
-    curProps = null;
     int[] vers = getVersionNumbers();
     Arrays.sort(vers);
     for (int ix = vers.length - 1; ix >= 0 && vers[ix] > 0; ix--) {
@@ -1557,9 +1607,22 @@ public class RepositoryNodeImpl implements RepositoryNode {
       if (verProps == null ||
           !isValidVersionNumber(verProps.getProperty(LOCKSS_VERSION_NUMBER))) {
         logger.warning("Moving aside unusable version " + ver + " of " + url);
-        moveAside(verFile);
-        moveAside(verPropsFile);
+        if (!moveAsidePair(verFile, verPropsFile)) {
+          // Don't promote a lower version while this one is in place, as
+          // later versions would be sealed over it
+          restoreAside(curAside, propsAside);
+          logger.error("Couldn't move aside unusable version " + ver +
+                       " of " + url + " (" + reason + "), not repairing");
+          return false;
+        }
         continue;
+      }
+      if (Integer.parseInt(verProps.getProperty(LOCKSS_VERSION_NUMBER)) != ver
+          && !rewriteVersionNumber(verPropsFile, verProps, ver)) {
+        restoreAside(curAside, propsAside);
+        logger.error("Couldn't correct version number in props of version " +
+                     ver + " of " + url + " (" + reason + "), not repairing");
+        return false;
       }
       if (!renameForRepair(verFile, currentCacheFile)) {
         restoreAside(curAside, propsAside);
@@ -1568,23 +1631,32 @@ public class RepositoryNodeImpl implements RepositoryNode {
         throw new LockssRepository.RepositoryStateException(err);
       }
       if (!renameForRepair(verPropsFile, currentPropsFile)) {
-        // put the version back, and the unusable current, so the repair is
-        // retried next time the node is loaded
-        renameForRepair(currentCacheFile, verFile);
-        restoreAside(curAside, propsAside);
+        // Put the version back, then the unusable current, so the repair
+        // is retried next time the node is loaded.  If the version can't be
+        // put back, leave the unusable current aside rather than renaming
+        // it over the version's content.
+        if (renameForRepair(currentCacheFile, verFile)) {
+          restoreAside(curAside, propsAside);
+        } else {
+          logger.error("Couldn't put back version " + ver + " of " + url +
+                       ": its content is in " + currentCacheFile +
+                       " and its props in " + verPropsFile);
+        }
         String err = "Couldn't promote version " + ver + " props to current: " +
           url;
         logger.error(err);
         throw new LockssRepository.RepositoryStateException(err);
       }
-      currentVersion = ver;
       curInputFile = currentCacheFile;
       curProps = verProps;
+      currentVersion = ver;
       logger.warning("Replaced current version of " + url + " (" + reason +
                      ") with version " + ver);
       invalidateCachedValues(true);
       return true;
     }
+    curInputFile = null;
+    curProps = null;
     currentVersion = DELETED_VERSION;
     logger.warning("Moved aside current version of " + url + " (" + reason +
                    "), no usable older version");
@@ -1592,13 +1664,42 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return true;
   }
 
+  /**
+   * Move aside a numbered version's content and props together.  If the
+   * props can't be moved the content is put back.
+   * @return true iff neither file remains in place
+   */
+  boolean moveAsidePair(File content, File props) {
+    File contentAside = moveAside(content);
+    if (content.exists()) {
+      return false;
+    }
+    moveAside(props);
+    if (props.exists()) {
+      restoreFile(contentAside, content);
+      return false;
+    }
+    return true;
+  }
+
   /** Undo moving aside current and current.props after a failed repair */
   private void restoreAside(File curAside, File propsAside) {
-    if (curAside != null) {
-      renameForRepair(curAside, currentCacheFile);
+    restoreFile(curAside, currentCacheFile);
+    restoreFile(propsAside, currentPropsFile);
+  }
+
+  /** Rename a moved-aside file back, unless something now occupies its
+   * original name */
+  private void restoreFile(File aside, File orig) {
+    if (aside == null) {
+      return;
     }
-    if (propsAside != null) {
-      renameForRepair(propsAside, currentPropsFile);
+    if (orig.exists()) {
+      logger.error("Not restoring " + aside + ": " + orig + " exists");
+      return;
+    }
+    if (!renameForRepair(aside, orig)) {
+      logger.error("Couldn't restore " + aside + " to " + orig);
     }
   }
 
@@ -1679,18 +1780,21 @@ public class RepositoryNodeImpl implements RepositoryNode {
       // because of the unusable props; reactivate it so loadCurrentInfo()
       // repairs it.
       synchronized (this) {
-        if ("true".equals(nodeProps.getProperty(INACTIVE_CONTENT_PROPERTY)) &&
-            currentCacheFile.exists() && !hasUsableCurrentProps()) {
+        if (!"true".equals(nodeProps.getProperty(INACTIVE_CONTENT_PROPERTY))) {
+          // reactivated by another thread
+          return false;
+        }
+        if (currentCacheFile.exists() && !hasUsableCurrentProps()) {
           logger.warning("Reactivating node deactivated because of unusable current.props: " + url);
           nodeProps.remove(INACTIVE_CONTENT_PROPERTY);
           writeNodeProperties();
           return false;
         }
+        currentVersion = INACTIVE_VERSION;
+        curInputFile = null;
+        curProps = null;
+        return true;
       }
-      currentVersion = INACTIVE_VERSION;
-      curInputFile = null;
-      curProps = null;
-      return true;
     }
     // XXX This happens a lot.  Does it maybe need to check files only if
     // props aren't loaded, not if neither value is true?
@@ -2191,29 +2295,32 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
       protected Properties getProps() {
 	if (props == null) {
-	  File propsFile = getVersionedPropsFile(version);
-	  Properties verProps;
-	  try {
-	    verProps = loadProps(propsFile);
-	  } catch (IOException e) {
-	    throw new LockssRepository.RepositoryStateException("Couldn't load versioned properties file: " + propsFile, e);
-	  }
-	  if (!isValidVersionNumber(verProps.getProperty(LOCKSS_VERSION_NUMBER))) {
-	    // Headers are lost (e.g. a zeroed props file).  Move the version
-	    // out of the way so it's no longer listed, served or migrated.
-	    synchronized (RepositoryNodeImpl.this) {
-	      moveAside(getContentFile());
-	      if (!getContentFile().exists()) {
-		moveAside(propsFile);
-	      }
-	      invalidateCachedValues(true);
+	  // Check and move aside under the node lock, so the files moved are
+	  // the ones checked
+	  synchronized (RepositoryNodeImpl.this) {
+	    File propsFile = getVersionedPropsFile(version);
+	    Properties verProps;
+	    try {
+	      verProps = loadProps(propsFile);
+	    } catch (IOException e) {
+	      throw new LockssRepository.RepositoryStateException("Couldn't load versioned properties file: " + propsFile, e);
 	    }
-	    String msg = "Malformed props for version " + version + " of " +
-	      url + " (no " + LOCKSS_VERSION_NUMBER + "), moved aside";
-	    logger.warning(msg);
-	    throw new LockssRepository.RepositoryStateException(msg);
+	    if (!isValidVersionNumber(verProps.getProperty(LOCKSS_VERSION_NUMBER))) {
+	      // Headers are lost (e.g. a zeroed props file).  Move the
+	      // version out of the way so it's no longer listed, served or
+	      // migrated.
+	      boolean moved = moveAsidePair(getContentFile(), propsFile);
+	      if (moved) {
+		invalidateCachedValues(true);
+	      }
+	      String msg = "Malformed props for version " + version + " of " +
+		url + " (no " + LOCKSS_VERSION_NUMBER + "), " +
+		(moved ? "moved aside" : "couldn't move aside");
+	      logger.warning(msg);
+	      throw new LockssRepository.RepositoryStateException(msg);
+	    }
+	    props = verProps;
 	  }
-	  props = verProps;
 	}
 	return props;
       }

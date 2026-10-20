@@ -475,7 +475,9 @@ class Scanner(object):
                                for s in row) + '\n')
 
   def find_au_dirs(self, root):
-    for dirpath, dirnames, filenames in os.walk(root):
+    def walk_error(e):
+      sys.stderr.write('Can\'t read %s: %s\n' % (e.filename, e.strerror))
+    for dirpath, dirnames, filenames in os.walk(root, onerror=walk_error):
       if any(m in filenames for m in AU_MARKERS):
         dirnames[:] = []
         yield dirpath
@@ -512,7 +514,7 @@ class Scanner(object):
       return None
     try:
       return parse_java_props(read_bytes(path)).get('au.id')
-    except PropsError:
+    except (PropsError, OSError):
       return None
 
   def scan_au(self, au_dir):
@@ -529,7 +531,11 @@ class Scanner(object):
     }
     if self.verbose:
       print('AU %s  %s' % (au_dir, au['id'] or '(no readable au.id)'))
-    for dirpath, dirnames, filenames in os.walk(au_dir):
+    def walk_error(e):
+      rel = os.path.relpath(e.filename, au_dir)
+      self.emit(au, 'SCAN_ERROR', '' if rel == '.' else rel, None, None,
+                'can\'t read directory: %s' % e.strerror)
+    for dirpath, dirnames, filenames in os.walk(au_dir, onerror=walk_error):
       if self.should_stop(len(self.au_summaries)):
         au['incomplete'] = True
         if self.verbose:

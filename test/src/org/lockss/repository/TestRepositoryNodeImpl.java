@@ -1823,6 +1823,13 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertTrue(new File(contentDir, "1.ERROR").exists());
     assertTrue(new File(contentDir, "1.props.ERROR").exists());
 
+    // the old version object no longer has content
+    try {
+      vers[2].getNodeContents();
+      fail("Moved-aside version should have no content");
+    } catch (UnsupportedOperationException e) {
+    }
+
     vers = node.getNodeVersions();
     assertEquals(2, vers.length);
     assertEquals(3, vers[0].getVersion());
@@ -2126,6 +2133,233 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
                  StringUtil.fromFile(new File(contentDir, "current")));
   }
 
+  // If version 2's props can't be promoted and its content can't be put
+  // back, the unusable current isn't renamed over version 2's content
+  public void testCurrentRepairRollbackDoesntOverwrite() throws Exception {
+    String url = "http://www.example.com/versionedcontent.txt";
+    RepositoryNodeImpl leaf = createVersions(url, 3);
+    File contentDir = leaf.getContentDir();
+    zeroFile(new File(contentDir, "current.props"));
+
+    MyMockRepositoryNode node = new MyMockRepositoryNode(leaf);
+    node.failRenames.add("2.props>current.props");
+    node.failRenames.add("current>2");
+    try {
+      node.hasContent();
+      fail("Failed promotion should throw");
+    } catch (LockssRepository.RepositoryStateException e) {
+      assertMatchesRE("Couldn't promote version 2 props", e.getMessage());
+    }
+    assertEquals(cntnt(2),
+                 StringUtil.fromFile(new File(contentDir, "current")));
+    assertEquals(cntnt(3),
+                 StringUtil.fromFile(new File(contentDir, "current.ERROR")));
+    assertTrue(new File(contentDir, "2.props").exists());
+  }
+
+  // If an unusable version can't be moved aside, no lower version is
+  // promoted (later versions would be sealed over it); the node is left
+  // as it was and deactivated, as before the repair existed
+  public void testCurrentRepairStopsIfUnusableVersionCantMove()
+      throws Exception {
+    checkCurrentRepairStopsIfUnusableVersionCantMove("3>3.ERROR");
+  }
+
+  public void testCurrentRepairStopsIfUnusableVersionPropsCantMove()
+      throws Exception {
+    checkCurrentRepairStopsIfUnusableVersionCantMove("3.props>3.props.ERROR");
+  }
+
+  void checkCurrentRepairStopsIfUnusableVersionCantMove(String failRename)
+      throws Exception {
+    String url = "http://www.example.com/versionedcontent.txt";
+    RepositoryNodeImpl leaf = createVersions(url, 4);
+    File contentDir = leaf.getContentDir();
+    zeroFile(new File(contentDir, "current.props"));
+    zeroFile(new File(contentDir, "3.props"));
+
+    MyMockRepositoryNode node = new MyMockRepositoryNode(leaf);
+    node.failRenames.add(failRename);
+    assertFalse(node.hasContent());
+    assertTrue(node.isContentInactive());
+    assertEquals(cntnt(4),
+                 StringUtil.fromFile(new File(contentDir, "current")));
+    assertTrue(new File(contentDir, "current.props").exists());
+    assertEquals(cntnt(3), StringUtil.fromFile(new File(contentDir, "3")));
+    assertTrue(new File(contentDir, "3.props").exists());
+    assertEquals(Collections.EMPTY_SET, setAsideFiles(contentDir));
+
+    // repaired once the renames work
+    RepositoryNodeImpl fresh = freshNode(leaf);
+    assertEquals(2, fresh.getCurrentVersion());
+    assertTrue(new File(contentDir, "3.ERROR").exists());
+  }
+
+  // A promoted version whose props carry a different (valid) number is
+  // renumbered to match its file, so memory and disk agree
+  public void testCurrentRepairNormalizesVersionNumber() throws Exception {
+    String url = "http://www.example.com/versionedcontent.txt";
+    RepositoryNodeImpl leaf = createVersions(url, 3);
+    File contentDir = leaf.getContentDir();
+    zeroFile(new File(contentDir, "current.props"));
+    setPropsVersion(new File(contentDir, "2.props"), 7);
+
+    RepositoryNodeImpl node = freshNode(leaf);
+    assertEquals(2, node.getCurrentVersion());
+    assertEquals(2, propsVersion(new File(contentDir, "current.props")));
+    assertEquals(2, freshNode(leaf).getCurrentVersion());
+    checkNextVersion(node, 3);
+  }
+
+  // A renumbering that failed when the node was loaded is retried before a
+  // new version is started on the same node object
+  public void testFailedRenumberRetriedBeforeNewVersion() throws Exception {
+    String url = "http://www.example.com/versionedcontent.txt";
+    RepositoryNodeImpl leaf = createVersions(url, 3);
+    File contentDir = leaf.getContentDir();
+    makeDuplicateVersionState(contentDir);
+
+    MyMockRepositoryNode node = new MyMockRepositoryNode(leaf);
+    node.failRenames.add("current.props.repair>current.props");
+    assertEquals(1, node.getCurrentVersion());
+    node.failRenames.clear();
+    Properties props = new Properties();
+    props.setProperty(PROP_KEY, PROP_VAL_STEM+4);
+    createContentVersion(node, cntnt(4), props);
+    assertEquals(4, node.getCurrentVersion());
+    for (int ix = 1; ix <= 3; ix++) {
+      assertEquals(cntnt(ix),
+                   StringUtil.fromFile(new File(contentDir, "" + ix)));
+    }
+    assertNoVersionZero(contentDir);
+  }
+
+  // If the renumbering keeps failing, no new version is started, so
+  // version 1 isn't overwritten
+  public void testNoNewVersionWhileRenumberFails() throws Exception {
+    String url = "http://www.example.com/versionedcontent.txt";
+    RepositoryNodeImpl leaf = createVersions(url, 3);
+    File contentDir = leaf.getContentDir();
+    makeDuplicateVersionState(contentDir);
+
+    MyMockRepositoryNode node = new MyMockRepositoryNode(leaf);
+    node.failRenames.add("current.props.repair>current.props");
+    assertEquals(1, node.getCurrentVersion());
+    try {
+      node.makeNewVersion();
+      fail("makeNewVersion() should refuse to overwrite version 1");
+    } catch (LockssRepository.RepositoryStateException e) {
+      assertMatchesRE("Version 1 .* already exists", e.getMessage());
+    }
+    assertEquals(cntnt(1), StringUtil.fromFile(new File(contentDir, "1")));
+    assertEquals(cntnt(3),
+                 StringUtil.fromFile(new File(contentDir, "current")));
+  }
+
+  // sealNewVersion() never renames current over an existing numbered
+  // version, whatever led to the collision
+  public void testSealDoesntOverwriteNumberedVersion() throws Exception {
+    String url = "http://www.example.com/versionedcontent.txt";
+    RepositoryNodeImpl leaf = createVersions(url, 3);
+    File contentDir = leaf.getContentDir();
+    leaf.makeNewVersion();
+    writeToLeaf(leaf, cntnt(4));
+    leaf.setNewProperties(new Properties());
+    StringUtil.toFile(new File(contentDir, "3"), "existing 3");
+    try {
+      leaf.sealNewVersion();
+      fail("sealNewVersion() should refuse to overwrite version 3");
+    } catch (LockssRepository.RepositoryStateException e) {
+      assertMatchesRE("Version 3 .* already exists, not overwriting",
+                      e.getMessage());
+    }
+    assertEquals("existing 3",
+                 StringUtil.fromFile(new File(contentDir, "3")));
+    assertEquals(cntnt(3),
+                 StringUtil.fromFile(new File(contentDir, "current")));
+  }
+
+  // Props that can't be read for a reason other than lost contents aren't
+  // moved aside
+  public void testUnreadableVersionPropsNotMovedAside() throws Exception {
+    String url = "http://www.example.com/versionedcontent.txt";
+    RepositoryNodeImpl leaf = createVersions(url, 3);
+    File contentDir = leaf.getContentDir();
+    File props1 = new File(contentDir, "1.props");
+    assertTrue(props1.setReadable(false));
+    try {
+      if (props1.canRead()) {
+        log.info("Can't make file unreadable (running as root?), skipping");
+        return;
+      }
+      RepositoryNodeImpl node = freshNode(leaf);
+      RepositoryNodeVersion[] vers = node.getNodeVersions();
+      RepositoryNode.RepositoryNodeContents rnc = vers[2].getNodeContents();
+      try {
+        rnc.getProperties();
+        fail("Unreadable props should throw");
+      } catch (LockssRepository.RepositoryStateException e) {
+        assertMatchesRE("Couldn't load versioned properties", e.getMessage());
+      } finally {
+        rnc.release();
+      }
+      assertTrue(new File(contentDir, "1").exists());
+      assertTrue(props1.exists());
+      assertEquals(Collections.EMPTY_SET, setAsideFiles(contentDir));
+    } finally {
+      props1.setReadable(true);
+    }
+  }
+
+  // Readers racing to load a node deactivated for unusable current.props
+  // all see the repaired content, and none leaves it marked inactive
+  public void testConcurrentReactivation() throws Exception {
+    final int nReaders = 6;
+    for (int iter = 0; iter < 25; iter++) {
+      String url = "http://www.example.com/react" + iter + ".txt";
+      RepositoryNodeImpl leaf = createVersions(url, 3);
+      File contentDir = leaf.getContentDir();
+      zeroFile(new File(contentDir, "current.props"));
+      setNodeInactiveFlag(leaf);
+      final RepositoryNodeImpl node = freshNode(leaf);
+      final List<Throwable> errors =
+        Collections.synchronizedList(new ArrayList<Throwable>());
+      final java.util.concurrent.CyclicBarrier barrier =
+        new java.util.concurrent.CyclicBarrier(nReaders);
+      List<Thread> threads = new ArrayList<Thread>();
+      for (int ix = 0; ix < nReaders; ix++) {
+        threads.add(new Thread() {
+            public void run() {
+              try {
+                barrier.await();
+                if (!node.hasContent()) {
+                  throw new AssertionError("Saw no content");
+                }
+                if (node.getCurrentVersion() != 2) {
+                  throw new AssertionError("Saw version " +
+                                           node.getCurrentVersion());
+                }
+              } catch (Throwable t) {
+                errors.add(t);
+              }
+            }});
+      }
+      for (Thread t : threads) {
+        t.start();
+      }
+      for (Thread t : threads) {
+        t.join(TIMEOUT_SHOULDNT);
+        assertFalse("Thread hung (deadlock?)", t.isAlive());
+      }
+      if (!errors.isEmpty()) {
+        throw new Exception("Iteration " + iter + ": " + errors.get(0),
+                            errors.get(0));
+      }
+      assertFalse(node.isContentInactive());
+      assertEquals(2, node.getCurrentVersion());
+    }
+  }
+
   public void testVersionNumberRepairCantRename() throws Exception {
     String url = "http://www.example.com/versionedcontent.txt";
     RepositoryNodeImpl leaf = createVersions(url, 3);
@@ -2199,11 +2433,12 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
               try {
                 barrier.await();
                 for (int jx = 0; jx < 50; jx++) {
-                  if (node.hasContent()) {
-                    int ver = node.getCurrentVersion();
-                    if (ver != expRepaired && ver != expNext) {
-                      throw new AssertionError("Saw current version " + ver);
-                    }
+                  if (!node.hasContent()) {
+                    throw new AssertionError("Saw no content");
+                  }
+                  int ver = node.getCurrentVersion();
+                  if (ver != expRepaired && ver != expNext) {
+                    throw new AssertionError("Saw current version " + ver);
                   }
                   RepositoryNodeVersion[] vers = node.getNodeVersions();
                   if (readProps) {
