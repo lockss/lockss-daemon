@@ -1422,26 +1422,39 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	try {
 	  curProps = loadProps(currentPropsFile);
 	} catch (FileNotFoundException e) {
-	  // No error if file not found, just treat as deleted
-	  currentVersion = DELETED_VERSION;
+	  // No error if file not found, just treat as deleted, unless there's
+	  // content without props
+	  if (!(currentCacheFile.exists() &&
+		repairCurrentFromNumberedVersion("no current.props"))) {
+	    currentVersion = DELETED_VERSION;
+	  }
 	  return;
 	} catch (IOException e) {
 	  logger.error("Error loading props from " + currentPropsFile, e);
 	  throw new LockssRepository.RepositoryStateException("Couldn't load version from properties file.", e);
 	} catch (RuntimeException e) {
-	  // Error loading props, treat as deleted
-	  currentVersion = DELETED_VERSION;
+	  // Error loading props, treat as deleted, unless there's content
+	  if (!(currentCacheFile.exists() &&
+		repairCurrentFromNumberedVersion("unreadable current.props"))) {
+	    currentVersion = DELETED_VERSION;
+	  }
 	  return;
 	}
       }
     }
     if (curProps!=null) {
-      currentVersion =
-	Integer.parseInt(curProps.getProperty(LOCKSS_VERSION_NUMBER, "-1"));
-      if (currentVersion <= 0) {
-        logger.error("Bad content version found: "+currentVersion);
-        repository.deactivateInconsistentNode(this);
-      } else if (getVersionedCacheFile(currentVersion).exists()) {
+      String ver = curProps.getProperty(LOCKSS_VERSION_NUMBER);
+      if (!isValidVersionNumber(ver)) {
+        logger.error("Bad content version found: " + (ver == null ? -1 : ver) +
+                     " (" + url + ")");
+        if (!repairCurrentFromNumberedVersion("bad version number in current.props")) {
+          currentVersion = -1;
+          repository.deactivateInconsistentNode(this);
+        }
+        return;
+      }
+      currentVersion = Integer.parseInt(ver);
+      if (getVersionedCacheFile(currentVersion).exists()) {
         // A numbered version never has the current version's number
         // unless current.props was written with a version number computed
         // from a missing or corrupt current.props
@@ -1494,6 +1507,75 @@ public class RepositoryNodeImpl implements RepositoryNode {
                    (movedZero ? ", moved version 0 aside" : ""));
     if (movedZero) {
       invalidateCachedValues(true);
+    }
+  }
+
+  /**
+   * Replace a current version whose current.props is missing, unreadable
+   * or has no valid version number with the highest numbered version whose
+   * props are usable, moving the unusable files aside.  Without this the
+   * node is deactivated, and sealing its next version renames 'current'
+   * to version 0 and numbers the new version 1.  If no numbered version is
+   * usable the node is left without content.
+   * @return false iff the repair couldn't be attempted
+   */
+  synchronized boolean repairCurrentFromNumberedVersion(String reason) {
+    if (newVersionOpen) {
+      logger.warning("Not repairing current version of " + url + " (" +
+                     reason + "): new version open");
+      return false;
+    }
+    moveAside(currentCacheFile);
+    moveAside(currentPropsFile);
+    curInputFile = null;
+    curProps = null;
+    int[] vers = getVersionNumbers();
+    Arrays.sort(vers);
+    for (int ix = vers.length - 1; ix >= 0 && vers[ix] > 0; ix--) {
+      int ver = vers[ix];
+      File verFile = getVersionedCacheFile(ver);
+      File verPropsFile = getVersionedPropsFile(ver);
+      Properties verProps = null;
+      try {
+        verProps = loadProps(verPropsFile);
+      } catch (IOException | RuntimeException e) {
+        // missing or unreadable, handled below
+      }
+      if (verProps == null ||
+          !isValidVersionNumber(verProps.getProperty(LOCKSS_VERSION_NUMBER))) {
+        logger.warning("Moving aside unusable version " + ver + " of " + url);
+        moveAside(verFile);
+        moveAside(verPropsFile);
+        continue;
+      }
+      if (!PlatformUtil.updateAtomically(verFile, currentCacheFile) ||
+          !PlatformUtil.updateAtomically(verPropsFile, currentPropsFile)) {
+        String err = "Couldn't promote version " + ver + " to current: " + url;
+        logger.error(err);
+        throw new LockssRepository.RepositoryStateException(err);
+      }
+      currentVersion = ver;
+      curInputFile = currentCacheFile;
+      curProps = verProps;
+      logger.warning("Replaced current version of " + url + " (" + reason +
+                     ") with version " + ver);
+      invalidateCachedValues(true);
+      return true;
+    }
+    currentVersion = DELETED_VERSION;
+    logger.warning("Moved aside current version of " + url + " (" + reason +
+                   "), no usable older version");
+    invalidateCachedValues(true);
+    return true;
+  }
+
+  /** True iff current.props can be loaded and has a valid version number */
+  boolean hasUsableCurrentProps() {
+    try {
+      return isValidVersionNumber(loadProps(currentPropsFile)
+                                  .getProperty(LOCKSS_VERSION_NUMBER));
+    } catch (IOException | RuntimeException e) {
+      return false;
     }
   }
 
@@ -1552,6 +1634,16 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
     String isInactive = nodeProps.getProperty(INACTIVE_CONTENT_PROPERTY);
     if ((isInactive != null) && (isInactive.equals("true"))) {
+      // Normal deactivation renames 'current' to 'inactive'.  An inactive
+      // node with 'current' and an unusable current.props was deactivated
+      // because of the unusable props; reactivate it so loadCurrentInfo()
+      // repairs it.
+      if (currentCacheFile.exists() && !hasUsableCurrentProps()) {
+        logger.warning("Reactivating node deactivated because of unusable current.props: " + url);
+        nodeProps.remove(INACTIVE_CONTENT_PROPERTY);
+        writeNodeProperties();
+        return false;
+      }
       currentVersion = INACTIVE_VERSION;
       curInputFile = null;
       curProps = null;

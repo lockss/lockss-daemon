@@ -1829,6 +1829,175 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     checkVersion(vers[1], 2, null);
   }
 
+  void assertNoVersionZero(File contentDir) {
+    assertFalse(new File(contentDir, "0").exists());
+    assertFalse(new File(contentDir, "0.props").exists());
+  }
+
+  // Seal a new version and check it follows the existing ones
+  void checkNextVersion(RepositoryNodeImpl node, int expVer) throws Exception {
+    Properties props = new Properties();
+    props.setProperty(PROP_KEY, PROP_VAL_STEM+expVer);
+    createContentVersion(node, cntnt(expVer), props);
+    assertEquals(expVer, node.getCurrentVersion());
+    assertNoVersionZero(node.getContentDir());
+    RepositoryNodeImpl fresh = freshNode(node);
+    assertEquals(expVer, fresh.getCurrentVersion());
+  }
+
+  public void testRepairZeroedCurrentProps() throws Exception {
+    String url = "http://www.example.com/versionedcontent.txt";
+    RepositoryNodeImpl leaf = createVersions(url, 3);
+    File contentDir = leaf.getContentDir();
+    zeroFile(new File(contentDir, "current.props"));
+
+    RepositoryNodeImpl node = freshNode(leaf);
+    assertTrue(node.hasContent());
+    assertFalse(node.isContentInactive());
+    assertEquals(2, node.getCurrentVersion());
+    assertEquals(2, propsVersion(new File(contentDir, "current.props")));
+    assertEquals(cntnt(2),
+                 StringUtil.fromFile(new File(contentDir, "current")));
+    assertEquals(cntnt(3),
+                 StringUtil.fromFile(new File(contentDir, "current.ERROR")));
+    assertTrue(new File(contentDir, "current.props.ERROR").exists());
+    RepositoryNodeVersion[] vers = node.getNodeVersions();
+    assertEquals(2, vers.length);
+    checkVersion(vers[1], 1, null);
+    checkNextVersion(node, 3);
+  }
+
+  public void testRepairMissingCurrentProps() throws Exception {
+    String url = "http://www.example.com/versionedcontent.txt";
+    RepositoryNodeImpl leaf = createVersions(url, 3);
+    File contentDir = leaf.getContentDir();
+    assertTrue(new File(contentDir, "current.props").delete());
+
+    RepositoryNodeImpl node = freshNode(leaf);
+    assertTrue(node.hasContent());
+    assertEquals(2, node.getCurrentVersion());
+    assertTrue(new File(contentDir, "current.ERROR").exists());
+    assertFalse(new File(contentDir, "current.props.ERROR").exists());
+    checkNextVersion(node, 3);
+  }
+
+  public void testRepairUnparseableCurrentProps() throws Exception {
+    String url = "http://www.example.com/versionedcontent.txt";
+    RepositoryNodeImpl leaf = createVersions(url, 3);
+    File contentDir = leaf.getContentDir();
+    StringUtil.toFile(new File(contentDir, "current.props"),
+                      "\\uxxxxfoo=bar\n");
+
+    RepositoryNodeImpl node = freshNode(leaf);
+    assertTrue(node.hasContent());
+    assertEquals(2, node.getCurrentVersion());
+    checkNextVersion(node, 3);
+  }
+
+  public void testRepairNonIntegerCurrentVersion() throws Exception {
+    String url = "http://www.example.com/versionedcontent.txt";
+    RepositoryNodeImpl leaf = createVersions(url, 3);
+    File contentDir = leaf.getContentDir();
+    File curProps = new File(contentDir, "current.props");
+    Properties props = new Properties();
+    props.setProperty(RepositoryNodeImpl.LOCKSS_VERSION_NUMBER, "x3");
+    OutputStream os = new FileOutputStream(curProps);
+    props.store(os, "test");
+    os.close();
+
+    RepositoryNodeImpl node = freshNode(leaf);
+    assertTrue(node.hasContent());
+    assertEquals(2, node.getCurrentVersion());
+  }
+
+  public void testRepairCurrentPropsSkipsUnusableVersions() throws Exception {
+    String url = "http://www.example.com/versionedcontent.txt";
+    RepositoryNodeImpl leaf = createVersions(url, 4);
+    File contentDir = leaf.getContentDir();
+    zeroFile(new File(contentDir, "current.props"));
+    zeroFile(new File(contentDir, "3.props"));
+    assertTrue(new File(contentDir, "2.props").delete());
+
+    RepositoryNodeImpl node = freshNode(leaf);
+    assertEquals(1, node.getCurrentVersion());
+    assertEquals(cntnt(1),
+                 StringUtil.fromFile(new File(contentDir, "current")));
+    assertTrue(new File(contentDir, "3.ERROR").exists());
+    assertTrue(new File(contentDir, "3.props.ERROR").exists());
+    assertTrue(new File(contentDir, "2.ERROR").exists());
+    assertEquals(1, node.getNodeVersions().length);
+    checkNextVersion(node, 2);
+  }
+
+  public void testRepairCurrentPropsNoUsableVersion() throws Exception {
+    String url = "http://www.example.com/versionedcontent.txt";
+    RepositoryNodeImpl leaf = createVersions(url, 1);
+    File contentDir = leaf.getContentDir();
+    zeroFile(new File(contentDir, "current.props"));
+
+    RepositoryNodeImpl node = freshNode(leaf);
+    assertFalse(node.hasContent());
+    assertFalse(node.isContentInactive());
+    assertFalse(new File(contentDir, "current").exists());
+    assertTrue(new File(contentDir, "current.ERROR").exists());
+    // The next version is a clean version 1, not a version 0 plus 1
+    checkNextVersion(node, 1);
+  }
+
+  void setNodeInactiveFlag(RepositoryNodeImpl leaf) throws Exception {
+    Properties props = new Properties();
+    if (leaf.nodePropsFile.exists()) {
+      InputStream is = new FileInputStream(leaf.nodePropsFile);
+      props.load(is);
+      is.close();
+    }
+    props.setProperty(RepositoryNodeImpl.INACTIVE_CONTENT_PROPERTY, "true");
+    OutputStream os = new FileOutputStream(leaf.nodePropsFile);
+    props.store(os, "test");
+    os.close();
+  }
+
+  // State left by the previous handling of a zeroed current.props: the node
+  // is flagged inactive but 'current' was never renamed to 'inactive'
+  public void testReactivateNodeDeactivatedForBadCurrentProps()
+      throws Exception {
+    String url = "http://www.example.com/versionedcontent.txt";
+    RepositoryNodeImpl leaf = createVersions(url, 3);
+    File contentDir = leaf.getContentDir();
+    zeroFile(new File(contentDir, "current.props"));
+    setNodeInactiveFlag(leaf);
+
+    RepositoryNodeImpl node = freshNode(leaf);
+    assertFalse(node.isContentInactive());
+    assertTrue(node.hasContent());
+    assertEquals(2, node.getCurrentVersion());
+    Properties nodeProps = new Properties();
+    InputStream is = new FileInputStream(leaf.nodePropsFile);
+    nodeProps.load(is);
+    is.close();
+    assertNull(nodeProps.getProperty(RepositoryNodeImpl.INACTIVE_CONTENT_PROPERTY));
+    // and is listed as a child
+    RepositoryNode dirEntry = repo.getNode("http://www.example.com");
+    List childUrls = new ArrayList();
+    for (Iterator it = dirEntry.listChildren(null, false); it.hasNext(); ) {
+      childUrls.add(((RepositoryNode)it.next()).getNodeUrl());
+    }
+    assertEquals(ListUtil.list(url), childUrls);
+    checkNextVersion(node, 3);
+  }
+
+  // An inactive node whose 'current' has usable props isn't reactivated
+  public void testNoReactivateWithUsableCurrentProps() throws Exception {
+    String url = "http://www.example.com/versionedcontent.txt";
+    RepositoryNodeImpl leaf = createVersions(url, 2);
+    setNodeInactiveFlag(leaf);
+
+    RepositoryNodeImpl node = freshNode(leaf);
+    assertTrue(node.isContentInactive());
+    assertFalse(node.hasContent());
+    assertFalse(new File(leaf.getContentDir(), "current.ERROR").exists());
+  }
+
   public void testMoveAsideDoesntOverwrite() throws Exception {
     String url = "http://www.example.com/versionedcontent.txt";
     RepositoryNodeImpl leaf = createVersions(url, 1);
