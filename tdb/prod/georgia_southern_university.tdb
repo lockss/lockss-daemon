@@ -1,9 +1,7 @@
 {
   publisher <
     name = Georgia Southern University ;
-    info[contract] = 2012 ;
-    info[tester] = 5 ;
-    info[poller] = 6
+    info[tester] = 5
   >
 
     plugin = org.lockss.plugin.bepress.BePressPlugin

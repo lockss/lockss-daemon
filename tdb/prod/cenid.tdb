@@ -1,11 +1,7 @@
 {
 
   publisher <
-    name = Centro de Estudios e Investigaciones para el Desarrollo Docente ;
-    info[contract] = 2019 ;
-    info[back] = 2015 ;
-    info[tester] = 8 ;
-    info[poller] = 8
+    name = Centro de Estudios e Investigaciones para el Desarrollo Docente
   >
 
     implicit < status ; year ; name ; volume ; param[year] >
