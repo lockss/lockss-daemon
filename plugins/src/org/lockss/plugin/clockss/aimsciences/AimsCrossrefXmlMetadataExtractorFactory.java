@@ -62,6 +62,10 @@ import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
   private static final Logger log = Logger.getLogger(AimsCrossrefXmlMetadataExtractorFactory.class);
 
+  // Grep-able tag for the temporary diagnostic logging, e.g.
+  //   grep "AIMS-MDX" daemon.log
+  private static final String DIAG = "AIMS-MDX: ";
+
   private static SourceXmlSchemaHelper AimsCRPublishingHelper = null;
   private static final String AIMS_PUBLISHER = "American Institute of Mathematical Sciences";
 
@@ -76,27 +80,37 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
+      // DIAGNOSTIC: record every XML file handed to this extractor, and flag
+      // any whose filename is not crossref.xml (e.g. PorticoArchive.xml).
+      String url = cu.getUrl();
+      String fname = FilenameUtils.getName(url);
+      if (fname == null || !fname.toLowerCase().endsWith("crossref.xml")) {
+        log.warning(DIAG + "NON-CROSSREF file sent to CrossRef extractor: " + url);
+      } else {
+        log.info(DIAG + "parsing " + url);
+      }
+
       // Once you have it, just keep returning the same one. It won't change.
       if (AimsCRPublishingHelper == null) {
           AimsCRPublishingHelper = new CrossRefSchemaHelper();
       }
       return AimsCRPublishingHelper;
     }
-    
+
 
 
     /* In this case, the filename is found using the doi as directory levels to "paper.pdf"
-     * so in foo.zip with a doi of '10.3934/proc.2015.0085" defined in 
+     * so in foo.zip with a doi of '10.3934/proc.2015.0085" defined in
      * foo.zip!/crossref.xml
      *     foo.zip!/10.3934/proc.2015.0085/paper.pdf
-     * but we've also seen this variation 
+     * but we've also seen this variation
      *     foo.zip!/proc.2015.0085.pdf
      * which is at the same level as the crossref.xml and uses the 2nd part of the doi as filename
-     * 
-     * 2018 the file naming changed completely. 
+     *
+     * 2018 the file naming changed completely.
      * Now the PDF filename is
      * doi_first/JID.YEAR.ISSUE.FIRSTPAGE/Paper.pdf
-     * 
+     *
      */
     @Override
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
@@ -111,11 +125,26 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
       String altName = cuBase + doiSecond + ".pdf";
       //2018 options
       String pubJID = oneAM.getRaw(CrossRefSchemaHelper.pub_abbrev);
-      String pubJIDAlt = oneAM.getRaw(CrossRefSchemaHelper.pub_abbrev).toLowerCase();
-      String pubJIDAlt2 = oneAM.getRaw(CrossRefSchemaHelper.pub_abbrev).toUpperCase();
       String pubYear = oneAM.getRaw(CrossRefSchemaHelper.pub_year);
       String pubIssue = oneAM.getRaw(CrossRefSchemaHelper.pub_issue);
       String artPage = oneAM.getRaw(CrossRefSchemaHelper.art_sp);
+
+      // DIAGNOSTIC: the original NPE (line 114) was pubJID.toLowerCase()
+      // when the record has no <abbrev_title>. Log exactly which file/record
+      // is missing the values, then continue instead of killing the reindex.
+      if (pubJID == null || doiValue == null || pubYear == null
+          || pubIssue == null || artPage == null) {
+        log.warning(DIAG + "record with missing fields in " + cu.getUrl()
+            + " | doi=" + doiValue
+            + " | pub_abbrev=" + pubJID
+            + " | pub_year=" + pubYear
+            + " | pub_issue=" + pubIssue
+            + " | art_sp=" + artPage
+            + " | rawKeys=" + oneAM.rawKeySet());
+      }
+
+      String pubJIDAlt = (pubJID == null) ? null : pubJID.toLowerCase();
+      String pubJIDAlt2 = (pubJID == null) ? null : pubJID.toUpperCase();
 
       log.debug3("looking for: pubIssue = " + pubIssue);
 
@@ -136,6 +165,16 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
        */
 
       List<String> returnList = new ArrayList<String>();
+
+      returnList.add(pdfName);
+      returnList.add(altName);
+
+      // 2018-style names need the journal abbreviation; skip them if absent
+      if (pubJID == null) {
+        log.warning(DIAG + "no pub_abbrev, only 2017-style PDF names tried for doi="
+            + doiValue + " in " + cu.getUrl() + " -> " + pdfName + " , " + altName);
+        return returnList;
+      }
 
       String name2018WithDoi = cuBase + doiFirst + "/" + pubJID + "." + pubYear + "." + pubIssue + "." + artPage + "/Paper.pdf";
       String name2018AltWithDoi = cuBase + doiFirst + "/" + pubJIDAlt + "." + pubYear + "." + pubIssue + "." + artPage + "/Paper.pdf";
@@ -158,9 +197,6 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
 
       log.debug3("adding name2018WithDoi = " + name2018WithDoi + ", name2018Alt2WithDoi = " + name2018Alt2WithDoi);
 
-      returnList.add(pdfName);
-      returnList.add(altName);
-
       returnList.add(name2018WithDoi);
       returnList.add(name2018AltWithDoi);
       returnList.add(name2018AltWithDoi2);
@@ -178,9 +214,9 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
 
       return returnList;
     }
-    
+
     @Override
-    protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
+    protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
         CachedUrl cu, ArticleMetadata thisAM) {
 
       log.debug3("in AIMS postCookProcess");
@@ -194,9 +230,22 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
 
       log.debug3("access_url === " + originalUrl);
 
+      // DIAGNOSTIC: guard against the next NPE in this method
+      if (originalUrl == null) {
+        log.warning(DIAG + "null access_url for record in " + cu.getUrl()
+            + " | doi=" + thisAM.get(MetadataField.FIELD_DOI));
+        return;
+      }
+
       if (originalUrl.contains("aimsciences-released/2024_01/MINE")) {
 
         String article_title = thisAM.get(MetadataField.FIELD_ARTICLE_TITLE);
+
+        if (article_title == null) {
+          log.warning(DIAG + "MINE record with no article title in " + cu.getUrl()
+              + " | access_url=" + originalUrl);
+          return;
+        }
 
         String newAccessUrl = null;
 
