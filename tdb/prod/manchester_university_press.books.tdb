@@ -50,7 +50,7 @@
     au < released ; 2018 ; 9781526130969 ;  ; 9781526130969 ; Intelligence and national security policymaking on Iraq >
     au < released ; 2018 ; 9781526130990 ;  ; 9781526130990 ; Culture and international conflict resolution >
     au < released ; 2018 ; 9781526131010 ;  ; 9781526131010 ; The Northern Ireland experience of conflict and agreement >
-    au < notReady ; 2018 ; 9781526135063 ;  ; 9781526135063 ; Syria and the chemical weapons taboo > #no substance
+    au < ready ; 2018 ; 9781526135063 ;  ; 9781526135063 ; Syria and the chemical weapons taboo > #no substance
     au < released ; 2018 ; 9781526135070 ;  ; 9781526135070 ; Order and conflict >
     au < released ; 2015 ; 9781784991548 ;  ; 9781784991548 ; Anti-terrorism, citizenship and security >
     au < released ; 2015 ; 9781784997168 ;  ; 9781784997168 ; Violence and the state >
@@ -238,20 +238,20 @@
     #Manchester Hive
     param[base_url] = https://www.manchesterhive.com/
 
-    au < manifest ; 1984 ; ; 9781526119544 ; 9781526119544 ; Propaganda and Empire (9781526119544) >
-    au < manifest ; 1986 ; ; 9781526119568 ; 9781526119568 ; Imperialism and Popular Culture (9781526119568) >
-    au < manifest ; 1988 ; ; 9781526119506 ; 9781526119506 ; At Duty's Call (9781526119506) >
-    au < manifest ; 1988 ; ; 9781526123657 ; 9781526123657 ; Ephemeral vistas (9781526123657) >
-    au < manifest ; 1988 ; ; 9781526123596 ; 9781526123596 ; Images of the army (9781526123596) >
-    au < manifest ; 1988 ; ; 9781526123664 ; 9781526123664 ; Imperial medicine and indigenous societies (9781526123664) >
-    au < manifest ; 1988 ; ; 9781526119582 ; 9781526119582 ; The empire of nature (9781526119582) >
-    au < manifest ; 1989 ; ; 9781526123558 ; 9781526123558 ; Imperialism and juvenile literature (9781526123558) >
-    au < manifest ; 1990 ; ; 9781526123589 ; 9781526123589 ; Air power and colonial control (9781526123589) >
-    au < manifest ; 1990 ; ; 9781526123534 ; 9781526123534 ; Asia in Western fiction (9781526123534) >
-    au < manifest ; 1990 ; ; 9781526123541 ; 9781526123541 ; Emigrants and empire (9781526123541) >
-    au < manifest ; 1990 ; ; 9781526119520 ; 9781526119520 ; Empire and sexuality (9781526119520) >
-    au < manifest ; 1990 ; ; 9781526123671 ; 9781526123671 ; Imperialism and the natural world (9781526123671) >
-    au < manifest ; 1991 ; ; 9781526123619 ; 9781526123619 ; Acts of supremacy (9781526123619) >
+    au < ready ; 1984 ; ; 9781526119544 ; 9781526119544 ; Propaganda and Empire (9781526119544) >
+    au < ready ; 1986 ; ; 9781526119568 ; 9781526119568 ; Imperialism and Popular Culture (9781526119568) >
+    au < ready ; 1988 ; ; 9781526119506 ; 9781526119506 ; At Duty's Call (9781526119506) >
+    au < ready ; 1988 ; ; 9781526123657 ; 9781526123657 ; Ephemeral vistas (9781526123657) >
+    au < ready ; 1988 ; ; 9781526123596 ; 9781526123596 ; Images of the army (9781526123596) >
+    au < ready ; 1988 ; ; 9781526123664 ; 9781526123664 ; Imperial medicine and indigenous societies (9781526123664) >
+    au < ready ; 1988 ; ; 9781526119582 ; 9781526119582 ; The empire of nature (9781526119582) >
+    au < ready ; 1989 ; ; 9781526123558 ; 9781526123558 ; Imperialism and juvenile literature (9781526123558) >
+    au < ready ; 1990 ; ; 9781526123589 ; 9781526123589 ; Air power and colonial control (9781526123589) >
+    au < ready ; 1990 ; ; 9781526123534 ; 9781526123534 ; Asia in Western fiction (9781526123534) >
+    au < ready ; 1990 ; ; 9781526123541 ; 9781526123541 ; Emigrants and empire (9781526123541) >
+    au < ready ; 1990 ; ; 9781526119520 ; 9781526119520 ; Empire and sexuality (9781526119520) >
+    au < ready ; 1990 ; ; 9781526123671 ; 9781526123671 ; Imperialism and the natural world (9781526123671) >
+    au < ready ; 1991 ; ; 9781526123619 ; 9781526123619 ; Acts of supremacy (9781526123619) >
     au < manifest ; 1992 ; ; 9781526125637 ; 9781526125637 ; Over her dead body (9781526125637) >
     au < manifest ; 1992 ; ; 9781526123688 ; 9781526123688 ; Policing and decolonisation (9781526123688) >
     au < manifest ; 1992 ; ; 9781526123695 ; 9781526123695 ; Policing the empire (9781526123695) >

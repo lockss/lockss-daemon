@@ -23,18 +23,18 @@
 
        #journal_id = tdp
 
-       au < manifest ; 2014 ; 3D Printing and Additive Manufacturing Volume 1 ; 1 ; tdpa ; https://journals.sagepub.com/ >
-       au < manifest ; 2015 ; 3D Printing and Additive Manufacturing Volume 2 ; 2 ; tdpa ; https://journals.sagepub.com/ >
-       au < manifest ; 2016 ; 3D Printing and Additive Manufacturing Volume 3 ; 3 ; tdpa ; https://journals.sagepub.com/ >
-       au < manifest ; 2017 ; 3D Printing and Additive Manufacturing Volume 4 ; 4 ; tdpa ; https://journals.sagepub.com/ >
-       au < manifest ; 2018 ; 3D Printing and Additive Manufacturing Volume 5 ; 5 ; tdpa ; https://journals.sagepub.com/ >
-       au < manifest ; 2019 ; 3D Printing and Additive Manufacturing Volume 6 ; 6 ; tdpa ; https://journals.sagepub.com/ >
-       au < manifest ; 2020 ; 3D Printing and Additive Manufacturing Volume 7 ; 7 ; tdpa ; https://journals.sagepub.com/ >
-       au < manifest ; 2021 ; 3D Printing and Additive Manufacturing Volume 8 ; 8 ; tdpa ; https://journals.sagepub.com/ >
-       au < manifest ; 2022 ; 3D Printing and Additive Manufacturing Volume 9 ; 9 ; tdpa ; https://journals.sagepub.com/ >
-       au < manifest ; 2023 ; 3D Printing and Additive Manufacturing Volume 10 ; 10 ; tdpa ; https://journals.sagepub.com/ >
-       au < manifest ; 2024 ; 3D Printing and Additive Manufacturing Volume 11 ; 11 ; tdpa ; https://journals.sagepub.com/ >
-       au < manifest ; 2025 ; 3D Printing and Additive Manufacturing Volume 12 ; 12 ; tdpa ; https://journals.sagepub.com/ >
+       au < ready ; 2014 ; 3D Printing and Additive Manufacturing Volume 1 ; 1 ; tdpa ; https://journals.sagepub.com/ >
+       au < ready ; 2015 ; 3D Printing and Additive Manufacturing Volume 2 ; 2 ; tdpa ; https://journals.sagepub.com/ >
+       au < ready ; 2016 ; 3D Printing and Additive Manufacturing Volume 3 ; 3 ; tdpa ; https://journals.sagepub.com/ >
+       au < ready ; 2017 ; 3D Printing and Additive Manufacturing Volume 4 ; 4 ; tdpa ; https://journals.sagepub.com/ >
+       au < ready ; 2018 ; 3D Printing and Additive Manufacturing Volume 5 ; 5 ; tdpa ; https://journals.sagepub.com/ >
+       au < ready ; 2019 ; 3D Printing and Additive Manufacturing Volume 6 ; 6 ; tdpa ; https://journals.sagepub.com/ >
+       au < ready ; 2020 ; 3D Printing and Additive Manufacturing Volume 7 ; 7 ; tdpa ; https://journals.sagepub.com/ >
+       au < ready ; 2021 ; 3D Printing and Additive Manufacturing Volume 8 ; 8 ; tdpa ; https://journals.sagepub.com/ >
+       au < ready ; 2022 ; 3D Printing and Additive Manufacturing Volume 9 ; 9 ; tdpa ; https://journals.sagepub.com/ >
+       au < ready ; 2023 ; 3D Printing and Additive Manufacturing Volume 10 ; 10 ; tdpa ; https://journals.sagepub.com/ >
+       au < ready ; 2024 ; 3D Printing and Additive Manufacturing Volume 11 ; 11 ; tdpa ; https://journals.sagepub.com/ >
+       au < ready ; 2025 ; 3D Printing and Additive Manufacturing Volume 12 ; 12 ; tdpa ; https://journals.sagepub.com/ >
        au < manifest ; 2026 ; 3D Printing and Additive Manufacturing Volume 13 ; 13 ; tdpa ; https://journals.sagepub.com/ >
 
   }
@@ -4408,7 +4408,7 @@
       au < down ; 2018 ; Applied Biosafety Volume 23 ; 23 ; apbb ; https://journals.sagepub.com/ >
       au < down ; 2019 ; Applied Biosafety Volume 24 ; 24 ; apbb ; https://journals.sagepub.com/ >
       au < doNotProcess ; 2020 ; Applied Biosafety Volume 25 ; 25 ; apbb ; https://journals.sagepub.com/ >
-      au < manifest ; 2021 ; Applied Biosafety Volume 26 ; 26 ; apbb ; https://journals.sagepub.com/ >
+      au < ready ; 2021 ; Applied Biosafety Volume 26 ; 26 ; apbb ; https://journals.sagepub.com/ >
       au < released ; 2022 ; Applied Biosafety Volume 27 ; 27 ; apbb ; https://journals.sagepub.com/ >
       au < released ; 2023 ; Applied Biosafety Volume 28 ; 28 ; apbb ; https://journals.sagepub.com/ >
       au < released ; 2024 ; Applied Biosafety Volume 29 ; 29 ; apbb ; https://journals.sagepub.com/ >
@@ -4764,7 +4764,7 @@
         au < manifest ; 1996-1997 ; Armed Forces & Society Volume 23 ; 23 ; afsa ; https://journals.sagepub.com/ >
         au < manifest ; 1997-1998 ; Armed Forces & Society Volume 24 ; 24 ; afsa ; https://journals.sagepub.com/ >
         au < manifest ; 1998-1999 ; Armed Forces & Society Volume 25 ; 25 ; afsa ; https://journals.sagepub.com/ >
-        au < manifest ; 1999-2000 ; Armed Forces & Society Volume 26 ; 26 ; afsa ; https://journals.sagepub.com/ >
+        au < ready ; 1999-2000 ; Armed Forces & Society Volume 26 ; 26 ; afsa ; https://journals.sagepub.com/ >
         au < released ; 2000-2001 ; Armed Forces & Society Volume 27 ; 27 ; afsa ; https://journals.sagepub.com/ >
         au < released ; 2001-2002 ; Armed Forces & Society Volume 28 ; 28 ; afsa ; https://journals.sagepub.com/ >
         au < doNotProcess ; 2002-2003 ; Armed Forces & Society Volume 29 ; 29 ; afsa ; https://journals.sagepub.com/ >
@@ -4803,7 +4803,7 @@
       >
         #journal_id = atha
 
-        au < manifest ; 2002 ; Arthaniti: Journal of Economic Theory and Practice Volume 1 ; 1 ; atha ; https://journals.sagepub.com/ >
+        au < ready ; 2002 ; Arthaniti: Journal of Economic Theory and Practice Volume 1 ; 1 ; atha ; https://journals.sagepub.com/ >
         au < released ; 2003 ; Arthaniti: Journal of Economic Theory and Practice Volume 2 ; 2 ; atha ; https://journals.sagepub.com/ >
         au < released ; 2004 ; Arthaniti: Journal of Economic Theory and Practice Volume 3 ; 3 ; atha ; https://journals.sagepub.com/ >
         au < released ; 2005 ; Arthaniti: Journal of Economic Theory and Practice Volume 4 ; 4 ; atha ; https://journals.sagepub.com/ >
@@ -4888,8 +4888,8 @@
       au < manifest ; 1998 ; Asia-Pacific Journal of Rural Development Volume 8 ; 8 ; jrda ; https://journals.sagepub.com/ >
       au < manifest ; 1999 ; Asia-Pacific Journal of Rural Development Volume 9 ; 9 ; jrda ; https://journals.sagepub.com/ >
       au < released ; 2000 ; Asia-Pacific Journal of Rural Development Volume 10 ; 10 ; jrda ; https://journals.sagepub.com/ >
-      au < manifest ; 2001 ; Asia-Pacific Journal of Rural Development Volume 11 ; 11 ; jrda ; https://journals.sagepub.com/ >
-      au < manifest ; 2002 ; Asia-Pacific Journal of Rural Development Volume 12 ; 12 ; jrda ; https://journals.sagepub.com/ >
+      au < ready ; 2001 ; Asia-Pacific Journal of Rural Development Volume 11 ; 11 ; jrda ; https://journals.sagepub.com/ >
+      au < ready ; 2002 ; Asia-Pacific Journal of Rural Development Volume 12 ; 12 ; jrda ; https://journals.sagepub.com/ >
       au < released ; 2003 ; Asia-Pacific Journal of Rural Development Volume 13 ; 13 ; jrda ; https://journals.sagepub.com/ >
       au < released ; 2004 ; Asia-Pacific Journal of Rural Development Volume 14 ; 14 ; jrda ; https://journals.sagepub.com/ >
       au < released ; 2005 ; Asia-Pacific Journal of Rural Development Volume 15 ; 15 ; jrda ; https://journals.sagepub.com/ >
@@ -4966,7 +4966,7 @@
         au < manifest ; 1998 ; Asia Pacific Journal of Human Resources Volume 36 ; 36 ; apja ; https://journals.sagepub.com/ >
         au < manifest ; 1999 ; Asia Pacific Journal of Human Resources Volume 37 ; 37 ; apja ; https://journals.sagepub.com/ >
         au < released ; 2000 ; Asia Pacific Journal of Human Resources Volume 38 ; 38 ; apja ; https://journals.sagepub.com/ >
-        au < manifest ; 2001 ; Asia Pacific Journal of Human Resources Volume 39 ; 39 ; apja ; https://journals.sagepub.com/ >
+        au < ready ; 2001 ; Asia Pacific Journal of Human Resources Volume 39 ; 39 ; apja ; https://journals.sagepub.com/ >
         au < released ; 2002 ; Asia Pacific Journal of Human Resources Volume 40 ; 40 ; apja ; https://journals.sagepub.com/ >
         au < released ; 2003 ; Asia Pacific Journal of Human Resources Volume 41 ; 41 ; apja ; https://journals.sagepub.com/ >
         au < released ; 2004 ; Asia Pacific Journal of Human Resources Volume 42 ; 42 ; apja ; https://journals.sagepub.com/ >
@@ -5002,7 +5002,7 @@
         au < manifest ; 1975 ; Asia Pacific Journal of Public Health Volume 10 ; 10 ; apha ; https://journals.sagepub.com/ >
         au < manifest ; 1976 ; Asia Pacific Journal of Public Health Volume 11 ; 11 ; apha ; https://journals.sagepub.com/ >
         au < released ; 2000 ; Asia Pacific Journal of Public Health Volume 12 ; 12 ; apha ; https://journals.sagepub.com/ >
-        au < manifest ; 2001 ; Asia Pacific Journal of Public Health Volume 13 ; 13 ; apha ; https://journals.sagepub.com/ >
+        au < ready ; 2001 ; Asia Pacific Journal of Public Health Volume 13 ; 13 ; apha ; https://journals.sagepub.com/ >
         au < released ; 2002 ; Asia Pacific Journal of Public Health Volume 14 ; 14 ; apha ; https://journals.sagepub.com/ >
         au < released ; 2003 ; Asia Pacific Journal of Public Health Volume 15 ; 15 ; apha ; https://journals.sagepub.com/ >
         au < released ; 2004 ; Asia Pacific Journal of Public Health Volume 16 ; 16 ; apha ; https://journals.sagepub.com/ >
@@ -5049,7 +5049,7 @@
       au < manifest ; 1998 ; Asian and Pacific Migration Journal Volume 7 ; 7 ; amja ; https://journals.sagepub.com/ >
       au < manifest ; 1999 ; Asian and Pacific Migration Journal Volume 8 ; 8 ; amja ; https://journals.sagepub.com/ >
       au < released ; 2000 ; Asian and Pacific Migration Journal Volume 9 ; 9 ; amja ; https://journals.sagepub.com/ >
-      au < manifest ; 2001 ; Asian and Pacific Migration Journal Volume 10 ; 10 ; amja ; https://journals.sagepub.com/ >
+      au < ready ; 2001 ; Asian and Pacific Migration Journal Volume 10 ; 10 ; amja ; https://journals.sagepub.com/ >
       au < released ; 2002 ; Asian and Pacific Migration Journal Volume 11 ; 11 ; amja ; https://journals.sagepub.com/ >
       au < released ; 2003 ; Asian and Pacific Migration Journal Volume 12 ; 12 ; amja ; https://journals.sagepub.com/ >
       au < released ; 2004 ; Asian and Pacific Migration Journal Volume 13 ; 13 ; amja ; https://journals.sagepub.com/ >
@@ -5095,7 +5095,7 @@
       au < manifest ; 1998 ; Asian Cardiovascular and Thoracic Annals Volume 6 ; 6 ; aana ; https://journals.sagepub.com/ >
       au < manifest ; 1999 ; Asian Cardiovascular and Thoracic Annals Volume 7 ; 7 ; aana ; https://journals.sagepub.com/ >
       au < released ; 2000 ; Asian Cardiovascular and Thoracic Annals Volume 8 ; 8 ; aana ; https://journals.sagepub.com/ >
-      au < manifest ; 2001 ; Asian Cardiovascular and Thoracic Annals Volume 9 ; 9 ; aana ; https://journals.sagepub.com/ >
+      au < ready ; 2001 ; Asian Cardiovascular and Thoracic Annals Volume 9 ; 9 ; aana ; https://journals.sagepub.com/ >
       au < released ; 2002 ; Asian Cardiovascular and Thoracic Annals Volume 10 ; 10 ; aana ; https://journals.sagepub.com/ >
       au < released ; 2003 ; Asian Cardiovascular and Thoracic Annals Volume 11 ; 11 ; aana ; https://journals.sagepub.com/ >
       au < released ; 2004 ; Asian Cardiovascular and Thoracic Annals Volume 12 ; 12 ; aana ; https://journals.sagepub.com/ >
@@ -5335,8 +5335,8 @@
         au < manifest ; 1998 ; Assessment Volume 5 ; 5 ; asma ; https://journals.sagepub.com/ >
         au < manifest ; 1999 ; Assessment Volume 6 ; 6 ; asma ; https://journals.sagepub.com/ >
         au < released ; 2000 ; Assessment Volume 7 ; 7 ; asma ; https://journals.sagepub.com/ >
-        au < manifest ; 2001 ; Assessment Volume 8 ; 8 ; asma ; https://journals.sagepub.com/ >
-        au < manifest ; 2002 ; Assessment Volume 9 ; 9 ; asma ; https://journals.sagepub.com/ >
+        au < ready ; 2001 ; Assessment Volume 8 ; 8 ; asma ; https://journals.sagepub.com/ >
+        au < ready ; 2002 ; Assessment Volume 9 ; 9 ; asma ; https://journals.sagepub.com/ >
         au < released ; 2003 ; Assessment Volume 10 ; 10 ; asma ; https://journals.sagepub.com/ >
         au < released ; 2004 ; Assessment Volume 11 ; 11 ; asma ; https://journals.sagepub.com/ >
         au < doNotProcess ; 2005 ; Assessment Volume 12 ; 12 ; asma ; https://journals.sagepub.com/ >
@@ -5407,15 +5407,15 @@
     >
       #journal_id = ASB
 
-      au < manifest ; 2001 ; Astrobiology Volume 1 ; 1 ; asba ; https://journals.sagepub.com/ >
-      au < manifest ; 2002 ; Astrobiology Volume 2 ; 2 ; asba ; https://journals.sagepub.com/ >
-      au < manifest ; 2003 ; Astrobiology Volume 3 ; 3 ; asba ; https://journals.sagepub.com/ >
-      au < manifest ; 2004 ; Astrobiology Volume 4 ; 4 ; asba ; https://journals.sagepub.com/ >
-      au < manifest ; 2005 ; Astrobiology Volume 5 ; 5 ; asba ; https://journals.sagepub.com/ >
-      au < manifest ; 2006 ; Astrobiology Volume 6 ; 6 ; asba ; https://journals.sagepub.com/ >
-      au < manifest ; 2007 ; Astrobiology Volume 7 ; 7 ; asba ; https://journals.sagepub.com/ >
-      au < manifest ; 2008 ; Astrobiology Volume 8 ; 8 ; asba ; https://journals.sagepub.com/ >
-      au < manifest ; 2009 ; Astrobiology Volume 9 ; 9 ; asba ; https://journals.sagepub.com/ >
+      au < ready ; 2001 ; Astrobiology Volume 1 ; 1 ; asba ; https://journals.sagepub.com/ >
+      au < ready ; 2002 ; Astrobiology Volume 2 ; 2 ; asba ; https://journals.sagepub.com/ >
+      au < ready ; 2003 ; Astrobiology Volume 3 ; 3 ; asba ; https://journals.sagepub.com/ >
+      au < ready ; 2004 ; Astrobiology Volume 4 ; 4 ; asba ; https://journals.sagepub.com/ >
+      au < ready ; 2005 ; Astrobiology Volume 5 ; 5 ; asba ; https://journals.sagepub.com/ >
+      au < ready ; 2006 ; Astrobiology Volume 6 ; 6 ; asba ; https://journals.sagepub.com/ >
+      au < ready ; 2007 ; Astrobiology Volume 7 ; 7 ; asba ; https://journals.sagepub.com/ >
+      au < ready ; 2008 ; Astrobiology Volume 8 ; 8 ; asba ; https://journals.sagepub.com/ >
+      au < ready ; 2009 ; Astrobiology Volume 9 ; 9 ; asba ; https://journals.sagepub.com/ >
       au < released ; 2010 ; Astrobiology Volume 10 ; 10 ; asba ; https://journals.sagepub.com/ >
       au < released ; 2011 ; Astrobiology Volume 11 ; 11 ; asba ; https://journals.sagepub.com/ >
       au < released ; 2012 ; Astrobiology Volume 12 ; 12 ; asba ; https://journals.sagepub.com/ >
@@ -5466,23 +5466,23 @@
       au < manifest ; 1999 ; Asymptotic Analysis Volume 19 ; 19 ; asya ; https://journals.sagepub.com/ >
       au < manifest ; 1999 ; Asymptotic Analysis Volume 20 ; 20 ; asya ; https://journals.sagepub.com/ >
       au < manifest ; 1999 ; Asymptotic Analysis Volume 21 ; 21 ; asya ; https://journals.sagepub.com/ >
-      au < manifest ; 2000 ; Asymptotic Analysis Volume 22 ; 22 ; asya ; https://journals.sagepub.com/ >
-      au < manifest ; 2000 ; Asymptotic Analysis Volume 23 ; 23 ; asya ; https://journals.sagepub.com/ >
-      au < manifest ; 2000 ; Asymptotic Analysis Volume 24 ; 24 ; asya ; https://journals.sagepub.com/ >
-      au < manifest ; 2001 ; Asymptotic Analysis Volume 25 ; 25 ; asya ; https://journals.sagepub.com/ >
-      au < manifest ; 2001 ; Asymptotic Analysis Volume 26 ; 26 ; asya ; https://journals.sagepub.com/ >
-      au < manifest ; 2001 ; Asymptotic Analysis Volume 27 ; 27 ; asya ; https://journals.sagepub.com/ >
-      au < manifest ; 2001 ; Asymptotic Analysis Volume 28 ; 28 ; asya ; https://journals.sagepub.com/ >
-      au < manifest ; 2002 ; Asymptotic Analysis Volume 29 ; 29 ; asya ; https://journals.sagepub.com/ >
-      au < manifest ; 2002 ; Asymptotic Analysis Volume 30 ; 30 ; asya ; https://journals.sagepub.com/ >
-      au < manifest ; 2002 ; Asymptotic Analysis Volume 31 ; 31 ; asya ; https://journals.sagepub.com/ >
-      au < manifest ; 2002 ; Asymptotic Analysis Volume 32 ; 32 ; asya ; https://journals.sagepub.com/ >
-      au < manifest ; 2003 ; Asymptotic Analysis Volume 33 ; 33 ; asya ; https://journals.sagepub.com/ >
-      au < manifest ; 2003 ; Asymptotic Analysis Volume 34 ; 34 ; asya ; https://journals.sagepub.com/ >
-      au < manifest ; 2003 ; Asymptotic Analysis Volume 35 ; 35 ; asya ; https://journals.sagepub.com/ >
-      au < manifest ; 2003 ; Asymptotic Analysis Volume 36 ; 36 ; asya ; https://journals.sagepub.com/ >
-      au < manifest ; 2004 ; Asymptotic Analysis Volume 37 ; 37 ; asya ; https://journals.sagepub.com/ >
-      au < manifest ; 2004 ; Asymptotic Analysis Volume 38 ; 38 ; asya ; https://journals.sagepub.com/ >
+      au < ready ; 2000 ; Asymptotic Analysis Volume 22 ; 22 ; asya ; https://journals.sagepub.com/ >
+      au < ready ; 2000 ; Asymptotic Analysis Volume 23 ; 23 ; asya ; https://journals.sagepub.com/ >
+      au < ready ; 2000 ; Asymptotic Analysis Volume 24 ; 24 ; asya ; https://journals.sagepub.com/ >
+      au < ready ; 2001 ; Asymptotic Analysis Volume 25 ; 25 ; asya ; https://journals.sagepub.com/ >
+      au < ready ; 2001 ; Asymptotic Analysis Volume 26 ; 26 ; asya ; https://journals.sagepub.com/ >
+      au < ready ; 2001 ; Asymptotic Analysis Volume 27 ; 27 ; asya ; https://journals.sagepub.com/ >
+      au < ready ; 2001 ; Asymptotic Analysis Volume 28 ; 28 ; asya ; https://journals.sagepub.com/ >
+      au < ready ; 2002 ; Asymptotic Analysis Volume 29 ; 29 ; asya ; https://journals.sagepub.com/ >
+      au < ready ; 2002 ; Asymptotic Analysis Volume 30 ; 30 ; asya ; https://journals.sagepub.com/ >
+      au < ready ; 2002 ; Asymptotic Analysis Volume 31 ; 31 ; asya ; https://journals.sagepub.com/ >
+      au < ready ; 2002 ; Asymptotic Analysis Volume 32 ; 32 ; asya ; https://journals.sagepub.com/ >
+      au < ready ; 2003 ; Asymptotic Analysis Volume 33 ; 33 ; asya ; https://journals.sagepub.com/ >
+      au < ready ; 2003 ; Asymptotic Analysis Volume 34 ; 34 ; asya ; https://journals.sagepub.com/ >
+      au < ready ; 2003 ; Asymptotic Analysis Volume 35 ; 35 ; asya ; https://journals.sagepub.com/ >
+      au < ready ; 2003 ; Asymptotic Analysis Volume 36 ; 36 ; asya ; https://journals.sagepub.com/ >
+      au < ready ; 2004 ; Asymptotic Analysis Volume 37 ; 37 ; asya ; https://journals.sagepub.com/ >
+      au < ready ; 2004 ; Asymptotic Analysis Volume 38 ; 38 ; asya ; https://journals.sagepub.com/ >
       au < manifest ; 2004 ; Asymptotic Analysis Volume 39 ; 39 ; asya ; https://journals.sagepub.com/ >
       au < manifest ; 2004 ; Asymptotic Analysis Volume 40 ; 40 ; asya ; https://journals.sagepub.com/ >
       au < manifest ; 2005 ; Asymptotic Analysis Volume 41 ; 41 ; asya ; https://journals.sagepub.com/ >
@@ -46432,7 +46432,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     au < manifest ; 2008 ; Microbial Drug Resistance Volume 14 ; 14 ; mdra ; https://journals.sagepub.com/ >
     au < manifest ; 2009 ; Microbial Drug Resistance Volume 15 ; 15 ; mdra ; https://journals.sagepub.com/ >
     au < released ; 2010 ; Microbial Drug Resistance Volume 16 ; 16 ; mdra ; https://journals.sagepub.com/ >
-    au < manifest ; 2011 ; Microbial Drug Resistance Volume 17 ; 17 ; mdra ; https://journals.sagepub.com/ >
+    au < ready ; 2011 ; Microbial Drug Resistance Volume 17 ; 17 ; mdra ; https://journals.sagepub.com/ >
     au < released ; 2012 ; Microbial Drug Resistance Volume 18 ; 18 ; mdra ; https://journals.sagepub.com/ >
     au < released ; 2013 ; Microbial Drug Resistance Volume 19 ; 19 ; mdra ; https://journals.sagepub.com/ >
     au < released ; 2014 ; Microbial Drug Resistance Volume 20 ; 20 ; mdra ; https://journals.sagepub.com/ >
