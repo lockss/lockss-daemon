@@ -28,20 +28,20 @@
       au < doNotProcess ; exists ; 2013 ; Oncology Letters Volume 6 ; 6 ; >
       au < doNotProcess ; exists ; 2014 ; Oncology Letters Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2014 ; Oncology Letters Volume 8 ; 8 ; >
-      au < frozen ; exists ; 2015 ; Oncology Letters Volume 9 ; 9 ; >
-      au < frozen ; exists ; 2015 ; Oncology Letters Volume 10 ; 10 ; >
-      au < frozen ; exists ; 2016 ; Oncology Letters Volume 11 ; 11 ; >
-      au < frozen ; exists ; 2016 ; Oncology Letters Volume 12 ; 12 ; >
-      au < frozen ; exists ; 2017 ; Oncology Letters Volume 13 ; 13 ; >
-      au < frozen ; exists ; 2017 ; Oncology Letters Volume 14 ; 14 ; >
+      au < finished ; manifest ; 2015 ; Oncology Letters Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2015 ; Oncology Letters Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; Oncology Letters Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; Oncology Letters Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Oncology Letters Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; Oncology Letters Volume 14 ; 14 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2018 ; Oncology Letters Volume 15 ; 15 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Oncology Letters Volume 16 ; 16 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Oncology Letters Volume 17 ; 17 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Oncology Letters Volume 18 ; 18 ; >
-      au < frozen ; exists ; 2020 ; Oncology Letters Volume 19 ; 19 ; >
-      au < frozen ; exists ; 2020 ; Oncology Letters Volume 20 ; 20 ; >
-      au < frozen ; exists ; 2021 ; Oncology Letters Volume 21 ; 21 ; >
-      au < frozen ; exists ; 2021 ; Oncology Letters Volume 22 ; 22 ; >
+      au < finished ; manifest ; 2020 ; Oncology Letters Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Oncology Letters Volume 20 ; 20 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Oncology Letters Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Oncology Letters Volume 22 ; 22 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; Oncology Letters Volume 23 ; 23 ; >
       au < deepCrawl ; exists ; 2022 ; Oncology Letters Volume 24 ; 24 ; >
       #Discontinue Preservation asked by Publisher, LXPUB-774
@@ -83,7 +83,7 @@
       au < finished ; manifest ; 2004 ; International Journal of Oncology Volume 24 ; 24 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2004 ; International Journal of Oncology Volume 25 ; 25 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2005 ; International Journal of Oncology Volume 26 ; 26 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2005 ; International Journal of Oncology Volume 27 ; 27 ; >
+      au < finished ; manifest ; 2005 ; International Journal of Oncology Volume 27 ; 27 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2006 ; International Journal of Oncology Volume 28 ; 28 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2006 ; International Journal of Oncology Volume 29 ; 29 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2007 ; International Journal of Oncology Volume 30 ; 30 ; reingest3.clockss.org:8083 >
@@ -102,20 +102,20 @@
       au < frozen ; exists ; 2013 ; International Journal of Oncology Volume 43 ; 43 ; >
       au < frozen ; exists ; 2014 ; International Journal of Oncology Volume 44 ; 44 ; >
       au < frozen ; exists ; 2014 ; International Journal of Oncology Volume 45 ; 45 ; >
-      au < frozen ; exists ; 2015 ; International Journal of Oncology Volume 46 ; 46 ; >
-      au < frozen ; exists ; 2015 ; International Journal of Oncology Volume 47 ; 47 ; >
-      au < frozen ; exists ; 2016 ; International Journal of Oncology Volume 48 ; 48 ; >
-      au < frozen ; exists ; 2016 ; International Journal of Oncology Volume 49 ; 49 ; >
-      au < frozen ; exists ; 2017 ; International Journal of Oncology Volume 50 ; 50 ; >
-      au < frozen ; exists ; 2017 ; International Journal of Oncology Volume 51 ; 51 ; >
+      au < finished ; manifest ; 2015 ; International Journal of Oncology Volume 46 ; 46 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; International Journal of Oncology Volume 47 ; 47 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; International Journal of Oncology Volume 48 ; 48 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; International Journal of Oncology Volume 49 ; 49 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; International Journal of Oncology Volume 50 ; 50 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2017 ; International Journal of Oncology Volume 51 ; 51 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Oncology Volume 52 ; 52 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Oncology Volume 53 ; 53 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Oncology Volume 54 ; 54 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Oncology Volume 55 ; 55 ; >
-      au < frozen ; exists ; 2020 ; International Journal of Oncology Volume 56 ; 56 ; >
+      au < finished ; manifest ; 2020 ; International Journal of Oncology Volume 56 ; 56 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; International Journal of Oncology Volume 57 ; 57 ; >
-      au < frozen ; exists ; 2021 ; International Journal of Oncology Volume 58 ; 58 ; >
-      au < frozen ; exists ; 2021 ; International Journal of Oncology Volume 59 ; 59 ; >
+      au < finished ; manifest ; 2021 ; International Journal of Oncology Volume 58 ; 58 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; International Journal of Oncology Volume 59 ; 59 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; International Journal of Oncology Volume 60 ; 60 ; >
       au < deepCrawl ; exists ; 2022 ; International Journal of Oncology Volume 61 ; 61 ; >
       au < deepCrawl ; exists ; 2023 ; International Journal of Oncology Volume 62 ; 62 ; >
@@ -140,19 +140,19 @@
   
       au < doNotProcess ; exists ; 2013 ; Molecular and Clinical Oncology Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2014 ; Molecular and Clinical Oncology Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2015 ; Molecular and Clinical Oncology Volume 3 ; 3 ; >
-      au < frozen ; exists ; 2016 ; Molecular and Clinical Oncology Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2016 ; Molecular and Clinical Oncology Volume 5 ; 5 ; >
-      au < frozen ; exists ; 2017 ; Molecular and Clinical Oncology Volume 6 ; 6 ; >
-      au < frozen ; exists ; 2017 ; Molecular and Clinical Oncology Volume 7 ; 7 ; >
+      au < finished ; manifest ; 2015 ; Molecular and Clinical Oncology Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; Molecular and Clinical Oncology Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; Molecular and Clinical Oncology Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Molecular and Clinical Oncology Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Molecular and Clinical Oncology Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2018 ; Molecular and Clinical Oncology Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Molecular and Clinical Oncology Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Molecular and Clinical Oncology Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Molecular and Clinical Oncology Volume 11 ; 11 ; >
-      au < frozen ; exists ; 2020 ; Molecular and Clinical Oncology Volume 12 ; 12 ; >
-      au < frozen ; exists ; 2020 ; Molecular and Clinical Oncology Volume 13 ; 13 ; >
-      au < frozen ; exists ; 2021 ; Molecular and Clinical Oncology Volume 14 ; 14 ; >
-      au < frozen ; exists ; 2021 ; Molecular and Clinical Oncology Volume 15 ; 15 ; >
+      au < finished ; manifest ; 2020 ; Molecular and Clinical Oncology Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2020 ; Molecular and Clinical Oncology Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Molecular and Clinical Oncology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Molecular and Clinical Oncology Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Molecular and Clinical Oncology Volume 16 ; 16 ; >
       au < deepCrawl ; exists ; 2022 ; Molecular and Clinical Oncology Volume 17 ; 17 ; >
       #Discontinue Preservation asked by Publisher, LXPUB-774
@@ -168,7 +168,7 @@
       
       param[journal_id] = etm
   
-      au < frozen ; exists ; 2010 ; Experimental and Therapeutic Medicine Volume 1 ; 1 ; >
+      au < finished ; manifest ; 2010 ; Experimental and Therapeutic Medicine Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2011 ; Experimental and Therapeutic Medicine Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2012 ; Experimental and Therapeutic Medicine Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2012 ; Experimental and Therapeutic Medicine Volume 4 ; 4 ; >
@@ -176,20 +176,20 @@
       au < doNotProcess ; exists ; 2013 ; Experimental and Therapeutic Medicine Volume 6 ; 6 ; >
       au < doNotProcess ; exists ; 2014 ; Experimental and Therapeutic Medicine Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2014 ; Experimental and Therapeutic Medicine Volume 8 ; 8 ; >
-      au < frozen ; exists ; 2015 ; Experimental and Therapeutic Medicine Volume 9 ; 9 ; >
-      au < frozen ; exists ; 2015 ; Experimental and Therapeutic Medicine Volume 10 ; 10 ; >
-      au < frozen ; exists ; 2016 ; Experimental and Therapeutic Medicine Volume 11 ; 11 ; >
-      au < frozen ; exists ; 2016 ; Experimental and Therapeutic Medicine Volume 12 ; 12 ; >
-      au < frozen ; exists ; 2017 ; Experimental and Therapeutic Medicine Volume 13 ; 13 ; >
-      au < frozen ; exists ; 2017 ; Experimental and Therapeutic Medicine Volume 14 ; 14 ; >
+      au < finished ; manifest ; 2015 ; Experimental and Therapeutic Medicine Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2015 ; Experimental and Therapeutic Medicine Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; Experimental and Therapeutic Medicine Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; Experimental and Therapeutic Medicine Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Experimental and Therapeutic Medicine Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Experimental and Therapeutic Medicine Volume 14 ; 14 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2018 ; Experimental and Therapeutic Medicine Volume 15 ; 15 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Experimental and Therapeutic Medicine Volume 16 ; 16 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Experimental and Therapeutic Medicine Volume 17 ; 17 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Experimental and Therapeutic Medicine Volume 18 ; 18 ; >
-      au < frozen ; exists ; 2020 ; Experimental and Therapeutic Medicine Volume 19 ; 19 ; >
-      au < frozen ; exists ; 2020 ; Experimental and Therapeutic Medicine Volume 20 ; 20 ; >
+      au < finished ; manifest ; 2020 ; Experimental and Therapeutic Medicine Volume 19 ; 19 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2020 ; Experimental and Therapeutic Medicine Volume 20 ; 20 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2021 ; Experimental and Therapeutic Medicine Volume 21 ; 21 ; > #500 Error https://www.spandidos-publications.com/10.3892/www.chigene.org
-      au < frozen ; exists ; 2021 ; Experimental and Therapeutic Medicine Volume 22 ; 22 ; >
+      au < finished ; manifest ; 2021 ; Experimental and Therapeutic Medicine Volume 22 ; 22 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Experimental and Therapeutic Medicine Volume 23 ; 23 ; >
       au < deepCrawl ; exists ; 2022 ; Experimental and Therapeutic Medicine Volume 24 ; 24 ; >
       #Discontinue Preservation asked by Publisher, LXPUB-774
@@ -239,20 +239,20 @@
       au < frozen ; exists ; 2013 ; International Journal of Molecular Medicine Volume 32 ; 32 ; >
       au < frozen ; exists ; 2014 ; International Journal of Molecular Medicine Volume 33 ; 33 ; >
       au < frozen ; exists ; 2014 ; International Journal of Molecular Medicine Volume 34 ; 34 ; >
-      au < frozen ; exists ; 2015 ; International Journal of Molecular Medicine Volume 35 ; 35 ; >
-      au < frozen ; exists ; 2015 ; International Journal of Molecular Medicine Volume 36 ; 36 ; >
-      au < frozen ; exists ; 2016 ; International Journal of Molecular Medicine Volume 37 ; 37 ; >
-      au < frozen ; exists ; 2016 ; International Journal of Molecular Medicine Volume 38 ; 38 ; >
-      au < frozen ; exists ; 2017 ; International Journal of Molecular Medicine Volume 39 ; 39 ; >
-      au < frozen ; exists ; 2017 ; International Journal of Molecular Medicine Volume 40 ; 40 ; >
+      au < finished ; manifest ; 2015 ; International Journal of Molecular Medicine Volume 35 ; 35 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; International Journal of Molecular Medicine Volume 36 ; 36 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; International Journal of Molecular Medicine Volume 37 ; 37 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; International Journal of Molecular Medicine Volume 38 ; 38 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; International Journal of Molecular Medicine Volume 39 ; 39 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; International Journal of Molecular Medicine Volume 40 ; 40 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Molecular Medicine Volume 41 ; 41 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Molecular Medicine Volume 42 ; 42 ; >
-      au < frozen ; exists ; 2019 ; International Journal of Molecular Medicine Volume 43 ; 43 ; >
-      au < frozen ; exists ; 2019 ; International Journal of Molecular Medicine Volume 44 ; 44 ; >
-      au < frozen ; exists ; 2020 ; International Journal of Molecular Medicine Volume 45 ; 45 ; >
-      au < frozen ; exists ; 2020 ; International Journal of Molecular Medicine Volume 46 ; 46 ; >
-      au < frozen ; exists ; 2021 ; International Journal of Molecular Medicine Volume 47 ; 47 ; >
-      au < frozen ; exists ; 2021 ; International Journal of Molecular Medicine Volume 48 ; 48 ; >
+      au < finished ; manifest ; 2019 ; International Journal of Molecular Medicine Volume 43 ; 43 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; International Journal of Molecular Medicine Volume 44 ; 44 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2020 ; International Journal of Molecular Medicine Volume 45 ; 45 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; International Journal of Molecular Medicine Volume 46 ; 46 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; International Journal of Molecular Medicine Volume 47 ; 47 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; International Journal of Molecular Medicine Volume 48 ; 48 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; International Journal of Molecular Medicine Volume 49 ; 49 ; >
       au < deepCrawl ; exists ; 2022 ; International Journal of Molecular Medicine Volume 50 ; 50 ; >
       au < deepCrawl ; exists ; 2023 ; International Journal of Molecular Medicine Volume 51 ; 51 ; >
@@ -277,19 +277,19 @@
   
       au < doNotProcess ; exists ; 2013 ; Biomedical Reports Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2014 ; Biomedical Reports Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2015 ; Biomedical Reports Volume 3 ; 3 ; >
-      au < frozen ; exists ; 2016 ; Biomedical Reports Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2016 ; Biomedical Reports Volume 5 ; 5 ; >
-      au < frozen ; exists ; 2017 ; Biomedical Reports Volume 6 ; 6 ; >
-      au < frozen ; exists ; 2017 ; Biomedical Reports Volume 7 ; 7 ; >
+      au < finished ; manifest ; 2015 ; Biomedical Reports Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; Biomedical Reports Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; Biomedical Reports Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Biomedical Reports Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Biomedical Reports Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2018 ; Biomedical Reports Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Biomedical Reports Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Biomedical Reports Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Biomedical Reports Volume 11 ; 11 ; >
-      au < frozen ; exists ; 2020 ; Biomedical Reports Volume 12 ; 12 ; >
+      au < finished ; manifest ; 2020 ; Biomedical Reports Volume 12 ; 12 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2020 ; Biomedical Reports Volume 13 ; 13 ; >
-      au < frozen ; exists ; 2021 ; Biomedical Reports Volume 14 ; 14 ; >
-      au < frozen ; exists ; 2021 ; Biomedical Reports Volume 15 ; 15 ; >
+      au < finished ; manifest ; 2021 ; Biomedical Reports Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Biomedical Reports Volume 15 ; 15 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Biomedical Reports Volume 16 ; 16 ; >
       au < deepCrawl ; exists ; 2022 ; Biomedical Reports Volume 17 ; 17 ; >
       #Discontinue Preservation asked by Publisher, LXPUB-774
@@ -329,7 +329,7 @@
       au < frozen ; exists ; 2009 ; Oncology Reports Volume 22 ; 22 ; >
       au < frozen ; exists ; 2010 ; Oncology Reports Volume 23 ; 23 ; >
       au < frozen ; exists ; 2010 ; Oncology Reports Volume 24 ; 24 ; >
-      au < frozen ; exists ; 2011 ; Oncology Reports Volume 25 ; 25 ; >
+      au < finished ; manifest ; 2011 ; Oncology Reports Volume 25 ; 25 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2011 ; Oncology Reports Volume 26 ; 26 ; >
       au < frozen ; exists ; 2012 ; Oncology Reports Volume 27 ; 27 ; >
       au < frozen ; exists ; 2012 ; Oncology Reports Volume 28 ; 28 ; >
@@ -337,20 +337,20 @@
       au < frozen ; exists ; 2013 ; Oncology Reports Volume 30 ; 30 ; >
       au < frozen ; exists ; 2014 ; Oncology Reports Volume 31 ; 31 ; >
       au < frozen ; exists ; 2014 ; Oncology Reports Volume 32 ; 32 ; >
-      au < frozen ; exists ; 2015 ; Oncology Reports Volume 33 ; 33 ; >
-      au < frozen ; exists ; 2015 ; Oncology Reports Volume 34 ; 34 ; >
-      au < frozen ; exists ; 2016 ; Oncology Reports Volume 35 ; 35 ; >
-      au < frozen ; exists ; 2016 ; Oncology Reports Volume 36 ; 36 ; >
-      au < frozen ; exists ; 2017 ; Oncology Reports Volume 37 ; 37 ; >
-      au < frozen ; exists ; 2017 ; Oncology Reports Volume 38 ; 38 ; >
+      au < finished ; manifest ; 2015 ; Oncology Reports Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2015 ; Oncology Reports Volume 34 ; 34 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; Oncology Reports Volume 35 ; 35 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; Oncology Reports Volume 36 ; 36 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Oncology Reports Volume 37 ; 37 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Oncology Reports Volume 38 ; 38 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2018 ; Oncology Reports Volume 39 ; 39 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Oncology Reports Volume 40 ; 40 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Oncology Reports Volume 41 ; 41 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Oncology Reports Volume 42 ; 42 ; >
-      au < frozen ; exists ; 2020 ; Oncology Reports Volume 43 ; 43 ; >
+      au < finished ; manifest ; 2020 ; Oncology Reports Volume 43 ; 43 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2020 ; Oncology Reports Volume 44 ; 44 ; >
-      au < frozen ; exists ; 2021 ; Oncology Reports Volume 45 ; 45 ; >
-      au < frozen ; exists ; 2021 ; Oncology Reports Volume 46 ; 46 ; >
+      au < finished ; manifest ; 2021 ; Oncology Reports Volume 45 ; 45 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Oncology Reports Volume 46 ; 46 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Oncology Reports Volume 47 ; 47 ; >
       au < deepCrawl ; exists ; 2022 ; Oncology Reports Volume 48 ; 48 ; >
       au < deepCrawl ; exists ; 2023 ; Oncology Reports Volume 49 ; 49 ; >
@@ -383,20 +383,20 @@
       au < doNotProcess ; exists ; 2013 ; Molecular Medicine Reports Volume 8 ; 8 ; >
       au < doNotProcess ; exists ; 2014 ; Molecular Medicine Reports Volume 9 ; 9 ; >
       au < doNotProcess ; exists ; 2014 ; Molecular Medicine Reports Volume 10 ; 10 ; >
-      au < frozen ; exists ; 2015 ; Molecular Medicine Reports Volume 11 ; 11 ; >
-      au < frozen ; exists ; 2015 ; Molecular Medicine Reports Volume 12 ; 12 ; >
-      au < frozen ; exists ; 2016 ; Molecular Medicine Reports Volume 13 ; 13 ; >
-      au < frozen ; exists ; 2016 ; Molecular Medicine Reports Volume 14 ; 14 ; >
-      au < frozen ; exists ; 2017 ; Molecular Medicine Reports Volume 15 ; 15 ; >
-      au < frozen ; exists ; 2017 ; Molecular Medicine Reports Volume 16 ; 16 ; >
+      au < finished ; manifest ; 2015 ; Molecular Medicine Reports Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Molecular Medicine Reports Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; Molecular Medicine Reports Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; Molecular Medicine Reports Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Molecular Medicine Reports Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Molecular Medicine Reports Volume 16 ; 16 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2018 ; Molecular Medicine Reports Volume 17 ; 17 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Molecular Medicine Reports Volume 18 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Molecular Medicine Reports Volume 19 ; 19 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Molecular Medicine Reports Volume 20 ; 20 ; >
-      au < frozen ; exists ; 2020 ; Molecular Medicine Reports Volume 21 ; 21 ; >
-      au < frozen ; exists ; 2020 ; Molecular Medicine Reports Volume 22 ; 22 ; >
-      au < frozen ; exists ; 2021 ; Molecular Medicine Reports Volume 23 ; 23 ; >
-      au < frozen ; exists ; 2021 ; Molecular Medicine Reports Volume 24 ; 24 ; >
+      au < finished ; manifest ; 2020 ; Molecular Medicine Reports Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2020 ; Molecular Medicine Reports Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2021 ; Molecular Medicine Reports Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Molecular Medicine Reports Volume 24 ; 24 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Molecular Medicine Reports Volume 25 ; 25 ; >
       au < deepCrawl ; exists ; 2022 ; Molecular Medicine Reports Volume 26 ; 26 ; >
       au < frozen ; exists ; 2023 ; Molecular Medicine Reports Volume 27 ; 27 ; >
@@ -421,7 +421,7 @@
   
       au < doNotProcess ; doNotProcess ; 2019 ; World Academy of Sciences Journal Volume 1 ; 1 ; >
       au < frozen ; exists ; 2020 ; World Academy of Sciences Journal Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2021 ; World Academy of Sciences Journal Volume 3 ; 3 ; >
+      au < finished ; manifest ; 2021 ; World Academy of Sciences Journal Volume 3 ; 3 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; World Academy of Sciences Journal Volume 4 ; 4 ; >
       #Discontinue Preservation asked by Publisher, LXPUB-774
 
