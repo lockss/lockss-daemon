@@ -362,17 +362,11 @@ public class MigrateSettings extends LockssServlet {
             if (!isTargetConfigFetched) {
               errMsg = "Missing database configuration";
             } else if (DbManagerSql.isTypeDerby(mCfg.get(DbManager.PARAM_DATASOURCE_CLASSNAME))) {
-              dbError = "Derby not supported";
+              dbError = "Derby not supported on target";
             } else if (StringUtil.isNullString(dbPass)) {
               dbError = "Missing database password";
-            } else if (!dryRunEnabled &&
-                       !migrationMgr.isTargetInMigrationMode(hostname, cfgUiPort,
-                                                             userName, userPass)) {
-              errMsg = "Non-dry run migration cannot be performed when target is not in migration mode";
-            } else if (dryRunEnabled &&
-                       migrationMgr.isTargetInMigrationMode(hostname, cfgUiPort,
-                                                            userName, userPass)) {
-              errMsg = "Dry run migration cannot be performed when target is in migration mode";
+            } else if (!isLegalNext()) {
+              // No action - when false, isLegalNext sets errMsg
             } else if (!migrationMgr.isInMigrationMode()) {
               // Populate remaining migration configuration parameters
               mCfg.put(V2_DOT + DbManager.PARAM_DATASOURCE_PASSWORD, dbPass);
@@ -444,6 +438,27 @@ public class MigrateSettings extends LockssServlet {
     session.setAttribute(KEY_DRY_RUN_ENABLED, dryRunEnabled);
     session.setAttribute(KEY_DELETE_AUS, isDeleteAusEnabled);
     session.setAttribute(KEY_MIGRATION_CONFIG, mCfg);
+  }
+
+  // Error if v1 in real migration mode != target in migration mode
+  private boolean isLegalNext() {
+    try {
+      boolean isTargetInMigrationMode =
+        migrationMgr.isTargetInMigrationMode(hostname, cfgUiPort,
+                                             userName, userPass);
+      if (!dryRunEnabled && !isTargetInMigrationMode) {
+        errMsg = "Permanent migration can be performed only when target is in migration mode";
+        return false;
+      } else if (dryRunEnabled && isTargetInMigrationMode) {
+        errMsg = "Dry run migration can be performed only when target is not in migration mode";
+        return false;
+      }
+      return true;
+    } catch (IOException e) {
+      log.error("Error retrieving target configuration in Next", e);
+      errMsg = "V2 not responding, can't proceed";
+      return false;
+    }
   }
 
   private void redirectToMigrateContent() throws IOException {
