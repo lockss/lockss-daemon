@@ -121,7 +121,7 @@
     >
     
     param[journal_id] = ifdd20
-    This title has ceased (2023).
+    # This title has ceased (2023).
 
     au < doNotProcess ; 2019 ; Future Drug Discover Volume 1 ; 1 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2020 ; Future Drug Discover Volume 2 ; 2 ; https://www.tandfonline.com/ >
@@ -195,7 +195,7 @@
     >
     
     param[journal_id] = iipk20
-    This title has ceased (2023).
+    # This title has ceased (2023).
 
    au < doNotProcess ; 2016 ; International Journal of Pharmacokinetics Volume 1 ; 1 ; https://www.tandfonline.com/ >
    au < doNotProcess ; 2017 ; International Journal of Pharmacokinetics Volume 2 ; 2 ; https://www.tandfonline.com/ >
@@ -215,7 +215,7 @@
     >
     
     param[journal_id] = ippa20
-    This journal has ceased (2025).
+    # This journal has ceased (2025).
 
     au < doNotProcess ; 2012 ; Pharmaceutical Patent Analyst Volume 1 ; 1 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2013 ; Pharmaceutical Patent Analyst Volume 2 ; 2 ; https://www.tandfonline.com/ >
@@ -343,7 +343,7 @@
     >
     
     param[journal_id] = ibmt20
-    This title has ceased (2023).
+    # This title has ceased (2023).
 
     au < doNotProcess ; 2012 ; Breast Cancer Management Volume 1 ; 1 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2013 ; Breast Cancer Management Volume 2 ; 2 ; https://www.tandfonline.com/ >
@@ -757,7 +757,7 @@
 
     param[journal_id] = iije21
     #continues = 2045-0869
-    This journal has ceased (2025).
+    # This journal has ceased (2025).
 
     au < exists ; 2024 ; Future Endocrinology & Metabolism Volume 11 ; 11 ; https://www.tandfonline.com/ >
     au < exists ; 2025 ; Future Endocrinology & Metabolism Volume 12 ; 12 ; https://www.tandfonline.com/ >
@@ -773,7 +773,7 @@
     >
     
     param[journal_id] = iijh20
-    This title has ceased (2023).
+    # This title has ceased (2023).
 
     au < doNotProcess ; 2012 ; International Journal of Hematologic Oncology Volume 1 ; 1 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2013 ; International Journal of Hematologic Oncology Volume 2 ; 2 ; https://www.tandfonline.com/ >
@@ -799,7 +799,7 @@
     >
     
     param[journal_id] =
-    This title has ceased (2023).
+    # This title has ceased (2023).
 
     au < doNotProcess ; 2017 ; Journal of 3D Printing in Medicine Volume 1 ; 1 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2018 ; Journal of 3D Printing in Medicine Volume 2 ; 2 ; https://www.tandfonline.com/ >
