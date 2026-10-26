@@ -34,11 +34,11 @@
       au < finished ; finished ; 2018 ; Advances in Physiology Education Volume 42 ; 42 ; https://www.physiology.org/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2019 ; Advances in Physiology Education Volume 43 [superseded] ; 43 ; https://www.physiology.org/ ; >
       au < finished ; finished ; 2019 ; Advances in Physiology Education Volume 43 ; 43 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; Advances in Physiology Education Volume 44 ; 44 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2021 ; Advances in Physiology Education Volume 45 ; 45 ; https://journals.physiology.org/ ; >
+      au < finished ; manifest ; 2020 ; Advances in Physiology Education Volume 44 ; 44 ; https://journals.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Advances in Physiology Education Volume 45 ; 45 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; Advances in Physiology Education Volume 46 ; 46 ; https://journals.physiology.org/ ; >
       au < deepCrawl ; exists ; 2023 ; Advances in Physiology Education Volume 47 ; 47 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2024 ; Advances in Physiology Education Volume 48 ; 48 ; https://journals.physiology.org/ ; >
+      au < finished ; manifest ; 2024 ; Advances in Physiology Education Volume 48 ; 48 ; https://journals.physiology.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; Advances in Physiology Education Volume 49 ; 49 ; https://journals.physiology.org/ ; >
       au < crawling ; exists ; 2026 ; Advances in Physiology Education Volume 50 ; 50 ; https://journals.physiology.org/ ; >
 
@@ -208,46 +208,46 @@
     #au < doNotProcess ; exists ; 1947 ; American Journal of Physiology Volume 149 ; 149 ; https://www.physiology.org/ ; >
     au < ready ; exists ; 1947 ; American Journal of Physiology Volume 150 ; 150 ; https://journals.physiology.org/ ; >
     au < frozen ; exists ; 1947 ; American Journal of Physiology Volume 151 ; 151 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1947-1948 ; American Journal of Physiology Volume 152 ; 152 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1948 ; American Journal of Physiology Volume 153 ; 153 ; https://journals.physiology.org/ ; >
+    au < finished ; manifest ; 1947-1948 ; American Journal of Physiology Volume 152 ; 152 ; https://journals.physiology.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1948 ; American Journal of Physiology Volume 153 ; 153 ; https://journals.physiology.org/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1948 ; American Journal of Physiology Volume 154 ; 154 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1948 ; American Journal of Physiology Volume 155 ; 155 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1949 ; American Journal of Physiology Volume 156 ; 156 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1949 ; American Journal of Physiology Volume 157 ; 157 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1949 ; American Journal of Physiology Volume 158 ; 158 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1949 ; American Journal of Physiology Volume 159 ; 159 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1949-1950 ; American Journal of Physiology Volume 160 ; 160 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1950 ; American Journal of Physiology Volume 161 ; 161 ; https://journals.physiology.org/ ; >
+    au < finished ; manifest ; 1948 ; American Journal of Physiology Volume 155 ; 155 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1949 ; American Journal of Physiology Volume 156 ; 156 ; https://journals.physiology.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1949 ; American Journal of Physiology Volume 157 ; 157 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1949 ; American Journal of Physiology Volume 158 ; 158 ; https://journals.physiology.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1949 ; American Journal of Physiology Volume 159 ; 159 ; https://journals.physiology.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1949-1950 ; American Journal of Physiology Volume 160 ; 160 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1950 ; American Journal of Physiology Volume 161 ; 161 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1950 ; American Journal of Physiology Volume 162 ; 162 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1950 ; American Journal of Physiology Volume 163 ; 163 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1950-1951 ; American Journal of Physiology Volume 164 ; 164 ; https://journals.physiology.org/ ; >
+    au < finished ; manifest ; 1950 ; American Journal of Physiology Volume 163 ; 163 ; https://journals.physiology.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1950-1951 ; American Journal of Physiology Volume 164 ; 164 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1951 ; American Journal of Physiology Volume 165 ; 165 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1951 ; American Journal of Physiology Volume 166 ; 166 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1951 ; American Journal of Physiology Volume 167 ; 167 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1951-1952 ; American Journal of Physiology Volume 168 ; 168 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1952 ; American Journal of Physiology Volume 169 ; 169 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1952 ; American Journal of Physiology Volume 170 ; 170 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1952 ; American Journal of Physiology Volume 171 ; 171 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1952-1953 ; American Journal of Physiology Volume 172 ; 172 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1953 ; American Journal of Physiology Volume 173 ; 173 ; https://journals.physiology.org/ ; >
+    au < finished ; manifest ; 1951 ; American Journal of Physiology Volume 166 ; 166 ; https://journals.physiology.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1951 ; American Journal of Physiology Volume 167 ; 167 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1951-1952 ; American Journal of Physiology Volume 168 ; 168 ; https://journals.physiology.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1952 ; American Journal of Physiology Volume 169 ; 169 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1952 ; American Journal of Physiology Volume 170 ; 170 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1952 ; American Journal of Physiology Volume 171 ; 171 ; https://journals.physiology.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1952-1953 ; American Journal of Physiology Volume 172 ; 172 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1953 ; American Journal of Physiology Volume 173 ; 173 ; https://journals.physiology.org/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1953 ; American Journal of Physiology Volume 174 ; 174 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1953 ; American Journal of Physiology Volume 175 ; 175 ; https://journals.physiology.org/ ; >
+    au < finished ; manifest ; 1953 ; American Journal of Physiology Volume 175 ; 175 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1953-1954 ; American Journal of Physiology Volume 176 ; 176 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1954 ; American Journal of Physiology Volume 177 ; 177 ; https://journals.physiology.org/ ; >
+    au < finished ; manifest ; 1954 ; American Journal of Physiology Volume 177 ; 177 ; https://journals.physiology.org/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1954 ; American Journal of Physiology Volume 178 ; 178 ; https://journals.physiology.org/ ; >
     au < frozen ; exists ; 1954 ; American Journal of Physiology Volume 179 ; 179 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1954-1955 ; American Journal of Physiology Volume 180 ; 180 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1955 ; American Journal of Physiology Volume 181 ; 181 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1955 ; American Journal of Physiology Volume 182 ; 182 ; https://journals.physiology.org/ ; >
+    au < finished ; manifest ; 1954-1955 ; American Journal of Physiology Volume 180 ; 180 ; https://journals.physiology.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1955 ; American Journal of Physiology Volume 181 ; 181 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1955 ; American Journal of Physiology Volume 182 ; 182 ; https://journals.physiology.org/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1955 ; American Journal of Physiology Volume 183 ; 183 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1955-1956 ; American Journal of Physiology Volume 184 ; 184 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1956 ; American Journal of Physiology Volume 185 ; 185 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1956 ; American Journal of Physiology Volume 186 ; 186 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1956 ; American Journal of Physiology Volume 187 ; 187 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1956-1957 ; American Journal of Physiology Volume 188 ; 188 ; https://journals.physiology.org/ ; >
+    au < finished ; manifest ; 1955-1956 ; American Journal of Physiology Volume 184 ; 184 ; https://journals.physiology.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1956 ; American Journal of Physiology Volume 185 ; 185 ; https://journals.physiology.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1956 ; American Journal of Physiology Volume 186 ; 186 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1956 ; American Journal of Physiology Volume 187 ; 187 ; https://journals.physiology.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1956-1957 ; American Journal of Physiology Volume 188 ; 188 ; https://journals.physiology.org/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1957 ; American Journal of Physiology Volume 189 ; 189 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1957 ; American Journal of Physiology Volume 190 ; 190 ; https://journals.physiology.org/ ; >
-    au < frozen ; exists ; 1957 ; American Journal of Physiology Volume 191 ; 191 ; https://journals.physiology.org/ ; >
+    au < finished ; manifest ; 1957 ; American Journal of Physiology Volume 190 ; 190 ; https://journals.physiology.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1957 ; American Journal of Physiology Volume 191 ; 191 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
     au < ready ; exists ; 1957-1958 ; American Journal of Physiology Volume 192 ; 192 ; https://journals.physiology.org/ ; >
     au < frozen ; exists ; 1958 ; American Journal of Physiology Volume 193 ; 193 ; https://journals.physiology.org/ ; >
     au < frozen ; exists ; 1958 ; American Journal of Physiology Volume 194 ; 194 ; https://journals.physiology.org/ ; >
@@ -320,8 +320,8 @@
       au < finished ; finished ; 2019 ; American Journal of Physiology - Cell Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2020 ; American Journal of Physiology - Cell Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
       au < frozen ; exists ; 2020 ; American Journal of Physiology - Cell Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2021 ; American Journal of Physiology - Cell Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2021 ; American Journal of Physiology - Cell Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
+      au < finished ; manifest ; 2021 ; American Journal of Physiology - Cell Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2021 ; American Journal of Physiology - Cell Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2022 ; American Journal of Physiology - Cell Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
       au < frozen ; exists ; 2022 ; American Journal of Physiology - Cell Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
       au < deepCrawl ; exists ; 2023 ; American Journal of Physiology - Cell Physiology Volume 324 ; 324 ; https://journals.physiology.org/ ; >
@@ -421,8 +421,8 @@
       au < finished ; finished ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2020 ; American Journal of Physiology - Endocrinology and Metabolism Volume 318 ; 318 ; https://journals.physiology.org/ ; >
       au < frozen ; exists ; 2020 ; American Journal of Physiology - Endocrinology and Metabolism Volume 319 ; 319 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2021 ; American Journal of Physiology - Endocrinology and Metabolism Volume 320 ; 320 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2021 ; American Journal of Physiology - Endocrinology and Metabolism Volume 321 ; 321 ; https://journals.physiology.org/ ; >
+      au < finished ; manifest ; 2021 ; American Journal of Physiology - Endocrinology and Metabolism Volume 320 ; 320 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; American Journal of Physiology - Endocrinology and Metabolism Volume 321 ; 321 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; American Journal of Physiology - Endocrinology and Metabolism Volume 322 ; 322 ; https://journals.physiology.org/ ; >
       au < deepCrawl ; exists ; 2022 ; American Journal of Physiology - Endocrinology and Metabolism Volume 323 ; 323 ; https://journals.physiology.org/ ; >
       au < deepCrawl ; exists ; 2023 ; American Journal of Physiology - Endocrinology and Metabolism Volume 324 ; 324 ; https://journals.physiology.org/ ; >
@@ -563,9 +563,9 @@
       au < frozen ; exists ; 2020 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
       au < frozen ; exists ; 2020 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
       au < frozen ; exists ; 2021 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2021 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
+      au < finished ; manifest ; 2021 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2022 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
+      au < finished ; manifest ; 2022 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 324 ; 324 ; https://journals.physiology.org/ ; >
       au < deepCrawl ; exists ; 2023 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 325 ; 325 ; https://journals.physiology.org/ ; >
       au < frozen ; exists ; 2024 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 326 ; 326 ; https://journals.physiology.org/ ; >
@@ -661,11 +661,11 @@
       au < finished ; finished ; 2019 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2019 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2020 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2021 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2021 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
+      au < finished ; manifest ; 2020 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2021 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2022 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
+      au < finished ; manifest ; 2022 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 324 ; 324 ; https://journals.physiology.org/ ; >
       au < deepCrawl ; exists ; 2023 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 325 ; 325 ; https://journals.physiology.org/ ; >
       au < deepCrawl ; exists ; 2024 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 326 ; 326 ; https://journals.physiology.org/ ; >
@@ -783,7 +783,7 @@
       au < finished ; finished ; 2019 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
       au < frozen ; exists ; 2020 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2021 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < finished ; manifest ; 2021 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2021 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
       au < deepCrawl ; exists ; 2022 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
       au < deepCrawl ; exists ; 2022 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
@@ -894,7 +894,7 @@
       au < finished ; finished ; 2019 ; American Journal of Physiology - Renal Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; American Journal of Physiology - Renal Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
       au < frozen ; exists ; 2020 ; American Journal of Physiology - Renal Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2021 ; American Journal of Physiology - Renal Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < finished ; manifest ; 2021 ; American Journal of Physiology - Renal Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2021 ; American Journal of Physiology - Renal Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
       au < frozen ; exists ; 2022 ; American Journal of Physiology - Renal Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
       au < frozen ; exists ; 2022 ; American Journal of Physiology - Renal Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
@@ -940,7 +940,7 @@
       au < finished ; finished ; 2019 ; Journal of Applied Physiology Volume 127 ; 127 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; Journal of Applied Physiology Volume 128 ; 128 ; https://journals.physiology.org/ ; >
       au < frozen ; exists ; 2020 ; Journal of Applied Physiology Volume 129 ; 129 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2021 ; Journal of Applied Physiology Volume 130 ; 130 ; https://journals.physiology.org/ ; >
+      au < finished ; manifest ; 2021 ; Journal of Applied Physiology Volume 130 ; 130 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2021 ; Journal of Applied Physiology Volume 131 ; 131 ; https://journals.physiology.org/ ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Applied Physiology Volume 132 ; 132 ; https://journals.physiology.org/ ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Applied Physiology Volume 133 ; 133 ; https://journals.physiology.org/ ; >
