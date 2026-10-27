@@ -77,7 +77,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbQueryBuilder:0.3.3]";
+  public static final String VERSION = "[TdbQueryBuilder:0.3.4]";
   
   /**
    * <p>
@@ -225,19 +225,21 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * </p>
    * 
    * @since 1.70
+   * @see Au#STATUS_READY
    * @see Au#STATUS_CRAWLING
+   * @see Au#STATUS_ING_NOT_READY
    * @see Au#STATUS_DEEP_CRAWL
    * @see Au#STATUS_FROZEN
-   * @see Au#STATUS_ING_NOT_READY
    * @see Au#STATUS_FINISHED
    * @see Au#STATUS_DOWN
    * @see Au#STATUS_SUPERSEDED
    */
   public static final List<String> CLOCKSS_INGEST_STATUSES =
-      AppUtil.ul(Au.STATUS_CRAWLING,
+      AppUtil.ul(Au.STATUS_READY,
+                 Au.STATUS_CRAWLING,
+                 Au.STATUS_ING_NOT_READY,
                  Au.STATUS_DEEP_CRAWL,
                  Au.STATUS_FROZEN,
-                 Au.STATUS_ING_NOT_READY,
                  Au.STATUS_FINISHED,
                  Au.STATUS_DOWN,
                  Au.STATUS_SUPERSEDED);
@@ -325,14 +327,20 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * </p>
    * 
    * @since 1.67
+   * @see Au#STATUS_READY
    * @see Au#STATUS_CRAWLING
+   * @see Au#STATUS_ING_NOT_READY
+   * @see Au#STATUS_DEEP_CRAWL
    * @see Au#STATUS_FROZEN
    * @see Au#STATUS_FINISHED
    * @see Au#STATUS_DOWN
    * @see Au#STATUS_SUPERSEDED
    */  
   public static final List<String> CLOCKSS_PRODUCTION_STATUSES =
-      AppUtil.ul(Au.STATUS_CRAWLING,
+      AppUtil.ul(Au.STATUS_READY,
+                 Au.STATUS_CRAWLING,
+                 Au.STATUS_ING_NOT_READY,
+                 Au.STATUS_DEEP_CRAWL,
                  Au.STATUS_FROZEN,
                  Au.STATUS_FINISHED,
                  Au.STATUS_DOWN,

@@ -52,7 +52,7 @@ public class TdbParse {
    * 
    * @since 1.72
    */
-  public static final String VERSION = "[TdbParse:0.2.1]";
+  public static final String VERSION = "[TdbParse:0.2.2]";
 
   /**
    * @since 1.72
