@@ -270,7 +270,7 @@
     au < finished ; manifest ; 2000 ; 9780784404843 ; 9780784478844 ; 9780784404843 ; National Geotechnical Experimentation Sites (9780784404843) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2000 ; 9780784404911 ; 9780784470640 ; 9780784404911 ; Crisis Management in Construction Projects (9780784404911) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2000 ; 9780784405277 ; 9780784470695 ; 9780784405277 ; Groundwater Contamination by Organic Pollutants (9780784405277) ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2001 ; 9780784405680 ; 9780784475003 ; 9780784475003 ; Soils Magic (9780784475003) ; >
+    au < frozen ; exists ; 2001 ; 9780784405680 ; 9780784475003 ; 9780784475003 ; Soils Magic (9780784475003) ; >
     au < finished ; manifest ; 2001 ; 9780784404270 ; 9780784470442 ; 9780784404270 ; Groundwater and Soil Remediation : Process Design and Cost Estimating of Proven Technologies (9780784404270) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; 9780784404645 ; 9780784470596 ; 9780784404645 ; Transportation Engineering Basics (9780784404645) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; 9780784405260 ; 9780784470688 ; 9780784405260 ; Civil Engineering Practice in the Twenty-First Century : Knowledge and Skills for Design and Management (9780784405260) ; reingest1.clockss.org:8082 >
@@ -908,7 +908,7 @@
     au < frozen ; exists ; 2005 ; 9780784407585 ;  ; 9780784407585 ; H2GEO, Geotechnical Engineering for Water Resources, GPP 2 (9780784407585) ; >
     au < frozen ; exists ; 2005 ; 9780784407592 ;  ; 9780784407592 ; Baltimore Civil Engineering History (9780784407592) ; >
     au < frozen ; exists ; 2005 ; 9780784407714 ;  ; 9780784407714 ; Soil Constitutive Models, Evaluation, Selection, and Calibration, GSP 128 (9780784407714) ; >
-    au < crawling ; exists ; 2012 ; 9780784407721 ;  ; 9780784407721 ; Advances in Designing and Testing Deep Foundations (9780784407721) ; >
+    au < frozen ; exists ; 2012 ; 9780784407721 ;  ; 9780784407721 ; Advances in Designing and Testing Deep Foundations (9780784407721) ; >
     au < frozen ; exists ; 2005 ; 9780784407615 ;  ; 9780784407615 ; California and the World Ocean '02, Revisiting and Revising California’s Ocean Agenda (9780784407615) ; >
     au < ready ; exists ; 2005 ; 9780784407974 ;  ; 9780784407974 ; Geomechanics, Testing, Modeling, and Simulation, GSP 143 (9780784407974) ; >
     au < frozen ; exists ; 2005 ; 9780784407530 ;  ; 9780784407530 ; Structures Congress 2005, Metropolis and Beyond (9780784407530) ; >
@@ -986,7 +986,7 @@
     au < frozen ; exists ; 2012 ; 9780784409176 ;  ; 9780784409176 ; Advances in Measurement and Modeling of Soil Behavior (9780784409176) ; >
     au < frozen ; exists ; 2012 ; 9780784409145 ;  ; 9780784409145 ; Probabilistic Applications in Geotechnical Engineering (9780784409145) ; >
     au < frozen ; exists ; 2012 ; 9780784409060 ;  ; 9780784409060 ; Problematic Soils and Rocks and In Situ Characterization (9780784409060) ; >
-    au < crawling ; exists ; 2012 ; 9780784409046 ;  ; 9780784409046 ; Dynamic Response and Soil Properties (9780784409046) ; >
+    au < frozen ; exists ; 2012 ; 9780784409046 ;  ; 9780784409046 ; Dynamic Response and Soil Properties (9780784409046) ; >
     au < frozen ; exists ; 2012 ; 9780784409169 ;  ; 9780784409169 ; Soil Improvement (9780784409169) ; >
     au < frozen ; exists ; 2012 ; 9780784409152 ;  ; 9780784409152 ; Advances in Shallow Foundations (9780784409152) ; >
     au < frozen ; exists ; 2012 ; 9780784409084 ;  ; 9780784409084 ; Innovative Applications of Geophysics in Civil Engineering (9780784409084) ; >
@@ -1043,7 +1043,7 @@
     au < frozen ; exists ; 2009 ; 9780784410462 ; 9780784472934 ; 9780784410462 ; Soils and Rock Instrumentation, Behavior, and Modeling, Selected Papers from the 2009 GeoHunan International Conference, GSP 194 (9780784410462) ; >
     au < ready ; exists ; 2009 ; 9780784410431 ; 9780784472903 ; 9780784410431 ; Road Pavement Material Characterization and Rehabilitation, Selected Papers from the 2009 GeoHunan International Conference, GSP 191 (9780784410431) ; >
     au < frozen ; exists ; 2009 ; 9780784410417 ; 9780784472880 ; 9780784410417 ; Characterization, Modeling, and Performance of Geomaterials, Selected Papers from the 2009 GeoHunan International Conference, GSP 189 (9780784410417) ; >
-    au < crawling ; exists ; 2009 ; 9780784410448 ; 9780784472910 ; 9780784410448 ; Recent Advancement in Soil Behavior, in Situ Test Methods, Pile Foundations, and Tunneling, Selected Papers from the 2009 GeoHunan International Conference, GSP 192 (9780784410448) ; >
+    au < frozen ; exists ; 2009 ; 9780784410448 ; 9780784472910 ; 9780784410448 ; Recent Advancement in Soil Behavior, in Situ Test Methods, Pile Foundations, and Tunneling, Selected Papers from the 2009 GeoHunan International Conference, GSP 192 (9780784410448) ; >
     au < frozen ; exists ; 2009 ; 9780784410479 ; 9780784472941 ; 9780784410479 ; Performance Modeling and Evaluation of Pavement Systems and Materials, Selected Papers from the 2009 GeoHunan International Conference, GSP 195 (9780784410479) ; >
     au < frozen ; exists ; 2009 ; 9780784410493 ; 9780784472965 ; 9780784410493 ; Slope Stability, Retaining Walls, and Foundations, Selected Papers from the 2009 GeoHunan International Conference, GSP 197 (9780784410493) ; >
     au < frozen ; exists ; 2009 ; 9780784410486 ; 9780784472958 ; 9780784410486 ; New Technologies in Construction and Rehabilitation of Portland Cement Concrete Pavement and Bridge Deck Pavement, Selected Papers from the 2009 GeoHunan International Conference, GSP 196 (9780784410486) ; >
@@ -1275,7 +1275,7 @@
     au < frozen ; exists ; 2017 ;  ; 9780784480441 ; 9780784480441 ; Geotechnical Frontiers 2017, Transportation Facilities, Structures, and Site Investigation, GSP 277 (9780784480441) ; >
     au < frozen ; exists ; 2017 ;  ; 9780784480434 ; 9780784480434 ; Geotechnical Frontiers 2017, Waste Containment, Barriers, Remediation, and Sustainable Geoengineering, GSP 276 (9780784480434) ; >
     au < ready ; exists ; 2017 ;  ; 9780784480489 ; 9780784480489 ; Geotechnical Frontiers 2017, Seismic Performance and Liquefaction, GSP 281 (9780784480489) ; >
-    au < crawling ; exists ; 2017 ;  ; 9780784480472 ; 9780784480472 ; Geotechnical Frontiers 2017, Geotechnical Materials, Modeling, and Testing, GSP 280 (9780784480472) ; >
+    au < frozen ; exists ; 2017 ;  ; 9780784480472 ; 9780784480472 ; Geotechnical Frontiers 2017, Geotechnical Materials, Modeling, and Testing, GSP 280 (9780784480472) ; >
     au < frozen ; exists ; 2017 ;  ; 9780784480403 ; 9780784480403 ; Structures Congress 2017, Bridges and Transportation Structures (9780784480403) ; >
     au < frozen ; exists ; 2017 ;  ; 9780784480397 ; 9780784480397 ; Structures Congress 2017, Blast, Impact Loading, and Response of Structures (9780784480397) ; >
     au < frozen ; exists ; 2017 ;  ; 9780784480427 ; 9780784480427 ; Structures Congress 2017, Business, Professional Practice, Education, Research, and Disaster Management (9780784480427) ; >
