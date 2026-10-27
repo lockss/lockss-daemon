@@ -38,24 +38,26 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'''
 __tutorial__ = '''
 Usage: check-v1-repo.py [-v] [--tsv FILE] [--seed N] [--timeout DURATION]
                         [--min-aus N] [--verify-content]
-                        REPO_DIR [REPO_DIR ...]
+                        (REPO_DIR ... | --au-dir AU_DIR ...)
 
-REPO_DIR is any directory above one or more AU directories (an AU directory is
-one containing #au_id_file or #au_state.xml), e.g. /cache0/gamma/cache or
-/cache0/gamma/cache/b. Nothing is modified.
+Each REPO_DIR is a V1 repository's cache directory (e.g. /cache0/gamma/cache).
+Its immediate subdirectories that contain #au_id_file or #au_state.xml are the
+AU directories; other subdirectories are skipped. Alternatively, --au-dir
+(repeatable) names single AU directories (e.g. /cache0/gamma/cache/b). Give
+either REPO_DIRs or --au-dirs, not both. Nothing is modified.
 
 The summary lists, per AU, how many nodes have each finding. -v prints every
 finding; --tsv writes every finding as a tab-separated row (au_dir, au_id,
 severity, code, node, url, file, detail).
 
-AUs (from all REPO_DIRs together) and the directories within each AU are
-scanned in random order. The summary prints the seed; pass it to --seed to
+AUs (from all REPO_DIRs together) are scanned in random order; each AU is
+scanned in directory order. The summary prints the seed; pass it to --seed to
 repeat the same order.
 
---timeout DURATION (e.g. 900, 90s, 30m, 2h) stops the scan once DURATION has
-elapsed: the directory being scanned is finished, the report is written, and
-the script exits. The summary marks the AU that was cut short as INCOMPLETE
-and counts the AUs that weren't reached.
+--timeout DURATION (e.g. 900, 90s, 30m, 2h) stops starting new AUs once
+DURATION has elapsed. The AU in progress is finished, the report is written,
+and the script exits. The summary counts the AU directories that weren't
+scanned.
 
 --verify-content reads every content file in full (slower: the scan otherwise
 reads only props files and the first and last block of content). It checks
@@ -63,11 +65,8 @@ each version against its x-lockss-checksum header and looks for all-NUL 4 KB
 blocks, the signature of the partial zeroing seen in #751.
 
 --min-aus N (default 10) keeps a too-short timeout from producing an empty
-report: the scan doesn't stop until at least N AUs (or all of them, if fewer)
-have been scanned completely, even if that runs past the timeout. The timeout
-also applies while AU directories are being found, which proceeds in random
-order and stops once N have been found; the not-scanned count is then
-unknown.
+report: at least N AUs (or all of them, if fewer) are scanned, even if that
+runs past the timeout.
 
 DAMAGE findings:
   VERSION_ZERO            '0' or '0.props' exists. The detail compares '0' with
@@ -94,6 +93,15 @@ DAMAGE findings:
                           block runs, if any.
   AUX_ZEROED              #node_props, #au_id_file, #au_state.xml, etc.
                           consisting entirely of (or containing) NUL bytes.
+
+WARNING findings:
+  AUX_UNPARSEABLE         #node_props that java.util.Properties would reject.
+                          V1 treats the node as deleted and renames the file
+                          to #node_props.ERROR.
+  AUX_EMPTY               A zero-length #node_props, #au_id_file, etc. V1
+                          doesn't write these empty (except possibly a node's
+                          #agreement file, when no peers have agreed), so it
+                          may be corruption.
 
 INFO findings:
   NODE_MARKED_INACTIVE, NODE_MARKED_DELETED  Flags in #node_props.
@@ -130,6 +138,7 @@ DELETED_KEY = 'node.isDeleted'
 FAULTY_EXT = '.ERROR'
 
 DAMAGE = 'DAMAGE'
+WARNING = 'WARNING'
 INFO = 'INFO'
 
 SEVERITY = {
@@ -147,6 +156,8 @@ SEVERITY = {
   'CONTENT_ZEROED': DAMAGE,
   'CONTENT_CHECKSUM_MISMATCH': DAMAGE,
   'AUX_ZEROED': DAMAGE,
+  'AUX_UNPARSEABLE': WARNING,
+  'AUX_EMPTY': WARNING,
   'NODE_MARKED_INACTIVE': INFO,
   'NODE_MARKED_DELETED': INFO,
   'INACTIVE_FILES': INFO,
@@ -434,7 +445,7 @@ class Scanner(object):
     self.timed_out = False
     self.au_summaries = []
     self.n_au_not_scanned = 0
-    self.discovery_incomplete = False
+    self.n_not_au = 0
     self.ran_past_timeout = False
 
   def expired(self):
@@ -468,44 +479,46 @@ class Scanner(object):
     row = (au['dir'], au['id'], sev, code, node, url or '', fname or '',
            detail)
     if self.verbose:
-      print('  %-6s %-24s %s %s%s' % (
+      print('  %-7s %-24s %s %s%s' % (
         sev, code, node or '.', ('[%s] ' % fname) if fname else '', detail))
     if self.tsv:
       self.tsv.write('\t'.join(s.replace('\t', ' ').replace('\n', ' ')
                                for s in row) + '\n')
 
-  def find_au_dirs(self, root):
-    def walk_error(e):
-      sys.stderr.write('Can\'t read %s: %s\n' % (e.filename, e.strerror))
-    for dirpath, dirnames, filenames in os.walk(root, onerror=walk_error):
-      if any(m in filenames for m in AU_MARKERS):
-        dirnames[:] = []
-        yield dirpath
-      else:
-        self.rng.shuffle(dirnames)
+  @staticmethod
+  def is_au_dir(path):
+    return any(os.path.isfile(os.path.join(path, m)) for m in AU_MARKERS)
 
-  def scan_roots(self, roots):
-    au_dirs = []
-    roots = list(roots)
-    self.rng.shuffle(roots)
+  def candidate_dirs(self, root):
+    '''A repository's immediate subdirectories.  Whether each is an AU
+    directory is checked when it's reached, so finding them costs one
+    directory listing.'''
+    try:
+      # Sorted so the shuffle in scan_roots() depends only on --seed, not on
+      # the filesystem's listing order
+      dirs = sorted(e.path for e in os.scandir(root)
+                    if e.is_dir(follow_symlinks=False))
+    except OSError as e:
+      sys.stderr.write('Can\'t read %s: %s\n' % (root, e.strerror))
+      return []
+    if not dirs:
+      sys.stderr.write('No AU directories in %s\n' % root)
+    return dirs
+
+  def scan_roots(self, roots, au_dirs=()):
+    '''Scan the AU directories in the repository directories roots, and
+    the AU directories au_dirs, in random order.'''
+    dirs = list(au_dirs)
     for root in roots:
-      found = False
-      for au_dir in self.find_au_dirs(root):
-        found = True
-        au_dirs.append(au_dir)
-        if self.should_stop(len(au_dirs)):
-          self.discovery_incomplete = True
-          break
-      if self.discovery_incomplete:
-        break
-      if not found:
-        sys.stderr.write('No AU directories (containing %s) under %s\n'
-                         % (' or '.join(AU_MARKERS), root))
-    self.rng.shuffle(au_dirs)
-    for ix, au_dir in enumerate(au_dirs):
+      dirs.extend(self.candidate_dirs(root))
+    self.rng.shuffle(dirs)
+    for ix, au_dir in enumerate(dirs):
       if self.should_stop(len(self.au_summaries)):
-        self.n_au_not_scanned = len(au_dirs) - ix
+        self.n_au_not_scanned = len(dirs) - ix
         break
+      if not self.is_au_dir(au_dir):
+        self.n_not_au += 1
+        continue
       self.scan_au(au_dir)
 
   def read_au_id(self, au_dir):
@@ -527,7 +540,6 @@ class Scanner(object):
       'zeroed_mtimes': [],
       'n_nodes': 0,
       'n_versions': 0,
-      'incomplete': False,
     }
     if self.verbose:
       print('AU %s  %s' % (au_dir, au['id'] or '(no readable au.id)'))
@@ -536,12 +548,6 @@ class Scanner(object):
       self.emit(au, 'SCAN_ERROR', '' if rel == '.' else rel, None, None,
                 'can\'t read directory: %s' % e.strerror)
     for dirpath, dirnames, filenames in os.walk(au_dir, onerror=walk_error):
-      if self.should_stop(len(self.au_summaries)):
-        au['incomplete'] = True
-        if self.verbose:
-          print('  (timeout: AU scan incomplete)')
-        break
-      self.rng.shuffle(dirnames)
       rel = os.path.relpath(dirpath, au_dir)
       if rel == '.':
         rel = ''
@@ -574,16 +580,14 @@ class Scanner(object):
       if os.path.islink(path) or not os.path.isfile(path):
         continue
       size = os.path.getsize(path)
-      if size == 0:
-        continue
       if fname.endswith(FAULTY_EXT):
         self.emit(au, 'FAULTY_RENAMED', rel, None, fname, '%d bytes' % size)
         continue
-      if size > 4 * 1024 * 1024:
+      if size == 0:
+        self.emit(au, 'AUX_EMPTY', rel, None, fname, '0 bytes')
         continue
-      data = read_bytes(path)
-      nuls = data.count(0)
-      if nuls == len(data):
+      nuls = count_nuls(path)
+      if nuls == size:
         self.emit(au, 'AUX_ZEROED', rel, None, fname,
                   '%d bytes, all NUL' % size)
       elif nuls and fname in ('#node_props', '#au_id_file'):
@@ -591,8 +595,9 @@ class Scanner(object):
                   '%d of %d bytes NUL' % (nuls, size))
       if fname == '#node_props' and nuls == 0:
         try:
-          np = parse_java_props(data)
-        except PropsError:
+          np = parse_java_props(read_bytes(path))
+        except PropsError as e:
+          self.emit(au, 'AUX_UNPARSEABLE', rel, None, fname, str(e))
           continue
         if np.get(INACTIVE_KEY) == 'true':
           self.emit(au, 'NODE_MARKED_INACTIVE', rel, None, fname,
@@ -770,8 +775,7 @@ class Scanner(object):
         self.timeout, self.min_aus, outcome, elapsed))
     for au in self.au_summaries:
       print()
-      print('AU %s%s' % (au['dir'],
-                         '   INCOMPLETE (timeout)' if au['incomplete'] else ''))
+      print('AU %s' % au['dir'])
       print('   id: %s' % (au['id'] or '(no readable au.id)'))
       print('   %d nodes, %d content versions, %d nodes with damage' % (
         au['n_nodes'], au['n_versions'], au['n_damaged']))
@@ -781,26 +785,23 @@ class Scanner(object):
           fmt_mtime(au['zeroed_range'][1])))
       for code in SEVERITY:
         if au['counts'][code]:
-          print('   %-6s %-24s %6d files/items in %6d nodes' % (
+          print('   %-7s %-24s %6d files/items in %6d nodes' % (
             SEVERITY[code], code, au['counts'][code], au['n_nodes_with'][code]))
           total[code] += au['counts'][code]
           total_nodes[code] += au['n_nodes_with'][code]
     print()
-    n_incomplete = sum(1 for au in self.au_summaries if au['incomplete'])
-    if self.discovery_incomplete:
-      not_scanned = ('unknown number not scanned '
-                     '(timeout expired while finding AUs)')
-    else:
-      not_scanned = '%d not scanned' % self.n_au_not_scanned
-    print('TOTAL: %d AUs scanned%s, %s, %d nodes, %d nodes with damage' % (
+    if self.n_not_au:
+      print('Skipped %d directories without %s' %
+            (self.n_not_au, ' or '.join(AU_MARKERS)))
+    print('TOTAL: %d AUs scanned, %d not scanned, %d nodes, '
+          '%d nodes with damage' % (
       len(self.au_summaries),
-      ' (%d incomplete)' % n_incomplete if n_incomplete else '',
-      not_scanned,
+      self.n_au_not_scanned,
       sum(au['n_nodes'] for au in self.au_summaries),
       sum(au['n_damaged'] for au in self.au_summaries)))
     for code in SEVERITY:
       if total[code]:
-        print('   %-6s %-24s %6d files/items in %6d nodes' % (
+        print('   %-7s %-24s %6d files/items in %6d nodes' % (
           SEVERITY[code], code, total[code], total_nodes[code]))
 
 
@@ -809,7 +810,12 @@ def main():
     description=__doc__,
     epilog=__tutorial__,
     formatter_class=argparse.RawDescriptionHelpFormatter)
-  parser.add_argument('repo_dirs', nargs='+', metavar='REPO_DIR')
+  parser.add_argument('repo_dirs', nargs='*', metavar='REPO_DIR',
+                      help='repository cache directory, whose subdirectories '
+                      'are AU directories')
+  parser.add_argument('--au-dir', action='append', default=[],
+                      metavar='AU_DIR', dest='au_dirs',
+                      help='an AU directory to scan (repeatable)')
   parser.add_argument('-v', '--verbose', action='store_true',
                       help='print every finding')
   parser.add_argument('--tsv', metavar='FILE',
@@ -817,8 +823,8 @@ def main():
   parser.add_argument('--seed', type=int,
                       help='seed for the random scan order (default: random)')
   parser.add_argument('--timeout', type=parse_duration, metavar='DURATION',
-                      help='stop after DURATION (e.g. 900, 30m, 2h), '
-                      'finishing the current directory')
+                      help='stop starting new AUs after DURATION (e.g. 900, '
+                      '30m, 2h); the AU in progress is finished')
   parser.add_argument('--verify-content', action='store_true',
                       help='read all content: check x-lockss-checksum and '
                       'look for all-NUL 4 KB blocks')
@@ -828,10 +834,21 @@ def main():
   args = parser.parse_args()
   if args.min_aus < 0:
     parser.error('--min-aus must be >= 0')
+  if not args.repo_dirs and not args.au_dirs:
+    parser.error('at least one REPO_DIR or --au-dir is required')
+  if args.repo_dirs and args.au_dirs:
+    parser.error('give either REPO_DIRs or --au-dir, not both')
   for root in args.repo_dirs:
     if not os.path.isdir(root):
-      sys.stderr.write('Not a directory: %s\n' % root)
-      return 2
+      parser.error('not a directory: %s' % root)
+    if Scanner.is_au_dir(root):
+      parser.error('%s is an AU directory; use --au-dir %s' % (root, root))
+  for au_dir in args.au_dirs:
+    if not os.path.isdir(au_dir):
+      parser.error('not a directory: %s' % au_dir)
+    if not Scanner.is_au_dir(au_dir):
+      parser.error('%s is not an AU directory (no %s)' %
+                   (au_dir, ' or '.join(AU_MARKERS)))
   seed = args.seed
   if seed is None:
     seed = random.SystemRandom().randrange(1 << 32)
@@ -842,7 +859,7 @@ def main():
   try:
     scanner = Scanner(args.verbose, tsv, random.Random(seed), args.timeout,
                       args.min_aus, args.verify_content)
-    scanner.scan_roots(args.repo_dirs)
+    scanner.scan_roots(args.repo_dirs, args.au_dirs)
     scanner.print_summary(seed)
   finally:
     if tsv:

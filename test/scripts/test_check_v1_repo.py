@@ -36,6 +36,7 @@ import csv
 import hashlib
 import importlib.util
 import os
+import random
 import shutil
 import subprocess
 import sys
@@ -218,7 +219,17 @@ class TestScanFindings(unittest.TestCase):
     fx.node(a, 'h/zeronodeprops', {
       'current': b'c', 'current.props': props(1)},
             node_props=b'\x00' * 100)
+    fx.node(a, 'h/emptynodeprops', {
+      'current': b'c', 'current.props': props(1)}, node_props=b'')
+    fx.node(a, 'h/badnodeprops', {
+      'current': b'c', 'current.props': props(1)},
+            node_props=b'k=\\uZZZZ\n')
     fx.au('b', au_id_bytes=b'\x00' * 200)
+    # larger than any limit on how much of an aux file is read
+    c = fx.au('c')
+    fx.write(os.path.join(c, '#au_state.xml'), b'\x00' * (5 * 1024 * 1024))
+    # not an AU directory; the AU-like directory inside it isn't found
+    fx.au(os.path.join('notau', 'inner'))
     cls.tsv = os.path.join(fx.root, 'out.tsv')
     cls.res, cls.rows = run_script([fx.cache], cls.tsv)
     cls.tsv_v = os.path.join(fx.root, 'out-v.tsv')
@@ -231,7 +242,11 @@ class TestScanFindings(unittest.TestCase):
 
   def test_runs(self):
     self.assertEqual(0, self.res.returncode, self.res.stderr)
-    self.assertIn('TOTAL: 2 AUs scanned', self.res.stdout)
+    self.assertIn('TOTAL: 3 AUs scanned', self.res.stdout)
+
+  def test_only_top_level_dirs_are_aus(self):
+    self.assertIn('Skipped 1 directories without', self.res.stdout)
+    self.assertEqual([], [r for r in self.rows if 'notau' in r['au_dir']])
 
   def test_healthy(self):
     self.assertEqual([], codes_for(self.rows, 'h/healthy'))
@@ -296,6 +311,16 @@ class TestScanFindings(unittest.TestCase):
 
   def test_aux_files(self):
     self.assertEqual(['AUX_ZEROED'], codes_for(self.rows, 'h/zeronodeprops'))
+    au_c = [r for r in self.rows if r['au_dir'].endswith(os.sep + 'c')]
+    self.assertEqual([('AUX_ZEROED', '#au_state.xml')],
+                     [(r['code'], r['file']) for r in au_c])
+
+  def test_aux_warnings(self):
+    by_node = dict((r['node'], (r['severity'], r['code'])) for r in self.rows
+                   if r['node'] in ('h/emptynodeprops', 'h/badnodeprops'))
+    self.assertEqual({'h/emptynodeprops': ('WARNING', 'AUX_EMPTY'),
+                      'h/badnodeprops': ('WARNING', 'AUX_UNPARSEABLE')},
+                     by_node)
     au_b = [r for r in self.rows if r['au_dir'].endswith(os.sep + 'b')]
     self.assertEqual([('AUX_ZEROED', '#au_id_file')],
                      [(r['code'], r['file']) for r in au_b])
@@ -397,8 +422,7 @@ class TestScanOrderAndTimeout(unittest.TestCase):
     res, rows = run_script(['--timeout', '0', '--min-aus', '2',
                             self.fx.cache], self.tsv('t2.tsv'))
     self.assertEqual(0, res.returncode, res.stderr)
-    self.assertIn('TOTAL: 2 AUs scanned', res.stdout)
-    self.assertIn('unknown number not scanned', res.stdout)
+    self.assertIn('TOTAL: 2 AUs scanned, 4 not scanned', res.stdout)
     self.assertIn('continued to reach min AUs', res.stdout)
     self.assertEqual(2, len(set(r['au_dir'] for r in rows)))
     # AUs within the minimum are scanned completely
@@ -407,7 +431,7 @@ class TestScanOrderAndTimeout(unittest.TestCase):
   def test_timeout_zero_no_min(self):
     res, rows = run_script(['--timeout', '0', '--min-aus', '0',
                             self.fx.cache], self.tsv('t0.tsv'))
-    self.assertIn('TOTAL: 0 AUs scanned', res.stdout)
+    self.assertIn('TOTAL: 0 AUs scanned, 6 not scanned', res.stdout)
     self.assertEqual([], rows)
 
   def test_min_aus_above_total(self):
@@ -420,11 +444,75 @@ class TestScanOrderAndTimeout(unittest.TestCase):
     res, rows = run_script([self.fx.cache], self.tsv('all.tsv'))
     self.assertIn('TOTAL: 6 AUs scanned, 0 not scanned', res.stdout)
 
+  def test_au_dir_option(self):
+    res, rows = run_script(['--au-dir', os.path.join(self.fx.cache, 'a3'),
+                            '--au-dir', os.path.join(self.fx.cache, 'a4')],
+                           self.tsv('one.tsv'))
+    self.assertEqual(0, res.returncode, res.stderr)
+    self.assertIn('TOTAL: 2 AUs scanned, 0 not scanned', res.stdout)
+    self.assertEqual(8, len(rows))
+
+  def test_repo_dir_and_au_dir_rejected(self):
+    res, _ = run_script(['--au-dir', os.path.join(self.fx.cache, 'a3'),
+                         self.fx.cache])
+    self.assertEqual(2, res.returncode)
+    self.assertIn('either REPO_DIRs or --au-dir, not both', res.stderr)
+
+  def test_au_dir_as_repo_dir_rejected(self):
+    au = os.path.join(self.fx.cache, 'a3')
+    res, _ = run_script([au])
+    self.assertEqual(2, res.returncode)
+    self.assertIn('is an AU directory; use --au-dir', res.stderr)
+
+  def test_repo_dir_as_au_dir_rejected(self):
+    res, _ = run_script(['--au-dir', self.fx.cache])
+    self.assertEqual(2, res.returncode)
+    self.assertIn('is not an AU directory', res.stderr)
+
+  def test_no_dirs_rejected(self):
+    res, _ = run_script([])
+    self.assertEqual(2, res.returncode)
+    self.assertIn('at least one REPO_DIR or --au-dir', res.stderr)
+
+  def test_within_au_order_independent_of_seed(self):
+    orders = set()
+    for seed in range(3):
+      _, rows = run_script(['--seed', str(seed),
+                            '--au-dir', os.path.join(self.fx.cache, 'a0')],
+                           self.tsv('w%d.tsv' % seed))
+      orders.add(tuple(r['node'] for r in rows))
+    self.assertEqual(1, len(orders))
+
   def test_bad_args(self):
     res, _ = run_script(['--min-aus', '-1', self.fx.cache])
     self.assertNotEqual(0, res.returncode)
     res, _ = run_script([os.path.join(self.fx.root, 'nonexistent')])
     self.assertEqual(2, res.returncode)
+
+
+class TestTimeoutFinishesAu(unittest.TestCase):
+
+  def test_au_in_progress_is_finished(self):
+    fx = RepoFixture()
+    try:
+      for ix in range(3):
+        a = fx.au('a%d' % ix)
+        for jx in range(5):
+          fx.node(a, 'h/n%d' % jx, {
+            'current': b'c', 'current.props': props(1)})
+
+      class TimeoutDuringFirstAu(cvr.Scanner):
+        def scan_content_dir(self, *args):
+          super(TimeoutDuringFirstAu, self).scan_content_dir(*args)
+          self.timed_out = True
+
+      sc = TimeoutDuringFirstAu(False, None, random.Random(1), 3600, 0, False)
+      sc.scan_roots([fx.cache])
+      self.assertEqual(1, len(sc.au_summaries))
+      self.assertEqual(5, sc.au_summaries[0]['n_nodes'])
+      self.assertEqual(2, sc.n_au_not_scanned)
+    finally:
+      fx.cleanup()
 
 
 if __name__ == '__main__':
