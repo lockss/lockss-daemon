@@ -759,8 +759,8 @@
     #continues = 2045-0869
     # This journal has ceased (2025).
 
-    au < exists ; 2024 ; Future Endocrinology & Metabolism Volume 11 ; 11 ; https://www.tandfonline.com/ >
-    au < exists ; 2025 ; Future Endocrinology & Metabolism Volume 12 ; 12 ; https://www.tandfonline.com/ >
+    au < manifest ; 2024 ; Future Endocrinology & Metabolism Volume 11 ; 11 ; https://www.tandfonline.com/ >
+    au < manifest ; 2025 ; Future Endocrinology & Metabolism Volume 12 ; 12 ; https://www.tandfonline.com/ >
 
   }
 
