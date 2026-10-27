@@ -241,14 +241,18 @@ while (my $line = <>) {
     #printf("man_url=%s\n",$man_url);  #debug
     $base_url_short = substr(uri_unescape($param{base_url}), 0, -1);
     my $req = HTTP::Request->new(GET, $man_url);
+    sleep(3);
     my $resp = $ua->request($req);
+    sleep(3);
     #print($resp->headers_as_string); #debug
     my $man_contents = $resp->is_success ? $resp->content : "";
     if (! $resp->is_success) {
         $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     #} elsif ($req->url ne $resp->request->uri) {
     } elsif (($req->url ne $resp->request->uri) && ($resp->request->uri !~ m/\?implicit-login=true/)) {
+        sleep(3);
         $vol_title = $resp->request->uri;
+        sleep(3);
         $result = "Redirected";
     } elsif (! defined($man_contents)) {
         $result = "--NOT_DEF--";
@@ -279,7 +283,9 @@ while (my $line = <>) {
         } else {
             my $pl_url = $1;
             my $req_pl = HTTP::Request->new(GET, $pl_url);
+            sleep(3);
             my $resp_pl = $ua->request($req_pl);
+            sleep(3);
             #print("Result:$result");
             if ($pl_url eq "") {
                 $result = "EmptyProbeLink";
@@ -301,6 +307,7 @@ while (my $line = <>) {
                 $vol_title = $pl_url;
             } else {
                 $result = "Manifest";
+                sleep(2);
             }
         }
     } else {
