@@ -7,21 +7,21 @@
     info[tester] = 5 ;
     info[platform] = TYPO3
   >
-  
+
   plugin = org.lockss.plugin.interresearch.ClockssInterResearch2026JournalsPlugin
   implicit < status ; status2 ; year ; param[volume_name] ; name ; hidden[proxy] >
   #plugin = org.lockss.plugin.interresearch.ClockssInterResearchPlugin
   #implicit < status ; status2 ; year ; param[year] ; param[volume] ; name ; hidden[proxy] >
   param[base_url] = https://www.int-res.com/
   #####Permission statement at https://www.int-res.com/lockss
-  #####Process content at the end of the year when all volumes are online. 
-  
+  #####Process content at the end of the year when all volumes are online.
+
   {
-  
+
     title <
       name = Marine Ecology Progress Series ;
       issn = 0171-8630 ;
-      eissn = 1616-1599 
+      eissn = 1616-1599
     >
       #published 1978 to present
       param[journal_id] = meps
@@ -30,7 +30,7 @@
       au < exists ; exists ; 2009 ; 374-397 ; Marine Ecology Progress Series Volume 2009 ; >
       au < exists ; exists ; 2010 ; 398-425 ; Marine Ecology Progress Series Volume 2010 ; >
       au < exists ; exists ; 2011 ; 426-448 ; Marine Ecology Progress Series Volume 2011 ; >
-      au < exists ; exists ; 2012 ; 449-471 ; Marine Ecology Progress Series Volume 2012 ; >
+      au < testing ; exists ; 2012 ; 449-471 ; Marine Ecology Progress Series Volume 2012 ; >
       au < exists ; exists ; 2013 ; 472-496 ; Marine Ecology Progress Series Volume 2013 ; >
       au < exists ; exists ; 2014 ; 497-519 ; Marine Ecology Progress Series Volume 2014 ; >
       au < exists ; exists ; 2015 ; 520-542 ; Marine Ecology Progress Series Volume 2015 ; >
@@ -53,7 +53,7 @@
       au < exists ; exists ; 2026 ; 782 ; Marine Ecology Progress Series Volume 2026 ; >
       au < exists ; exists ; 2026 ; 783 ; Marine Ecology Progress Series Volume 2026 ; >
       au < exists ; exists ; 2026 ; 784 ; Marine Ecology Progress Series Volume 2026 ; >
-      au < exists ; exists ; 2026 ; 785 ; Marine Ecology Progress Series Volume 2026 ; >
+      au < testing ; exists ; 2026 ; 785 ; Marine Ecology Progress Series Volume 2026 ; >
       au < exists ; exists ; 2026 ; 786 ; Marine Ecology Progress Series Volume 2026 ; >
       au < exists ; exists ; 2026 ; 787 ; Marine Ecology Progress Series Volume 2026 ; >
       au < exists ; exists ; 2026 ; 788 ; Marine Ecology Progress Series Volume 2026 ; >
@@ -62,7 +62,7 @@
       au < exists ; exists ; 2026 ; 791 ; Marine Ecology Progress Series Volume 2026 ; >
       au < exists ; exists ; 2026 ; 792 ; Marine Ecology Progress Series Volume 2026 ; >
       au < exists ; exists ; 2026 ; 793 ; Marine Ecology Progress Series Volume 2026 ; >
-      au < exists ; exists ; 2026 ; 794 ; Marine Ecology Progress Series Volume 2026 ; >
+      au < testing ; exists ; 2026 ; 794 ; Marine Ecology Progress Series Volume 2026 ; >
       au < exists ; exists ; 2026 ; 795 ; Marine Ecology Progress Series Volume 2026 ; >
       au < exists ; exists ; 2026 ; 796 ; Marine Ecology Progress Series Volume 2026 ; >
       au < exists ; exists ; 2026 ; 797 ; Marine Ecology Progress Series Volume 2026 ; >
@@ -72,21 +72,21 @@
   }
 
   {
-  
+
     title <
       name = Diseases of Aquatic Organisms ;
       issn = 0177-5103 ;
-      eissn = 1616-1580 
+      eissn = 1616-1580
     >
       #published 1985 to present
       param[journal_id] = dao
 
-      au < exists ; exists ; 2010 ; 88 ; Diseases of Aquatic Organisms Volume 88 ; >
+      au < testing ; exists ; 2010 ; 88 ; Diseases of Aquatic Organisms Volume 88 ; >
       au < exists ; exists ; 2010 ; 89 ; Diseases of Aquatic Organisms Volume 89 ; >
       au < exists ; exists ; 2010 ; 90 ; Diseases of Aquatic Organisms Volume 90 ; >
       au < exists ; exists ; 2010 ; 91 ; Diseases of Aquatic Organisms Volume 91 ; >
       au < exists ; exists ; 2010 ; 92 ; Diseases of Aquatic Organisms Volume 92 ; >
-      au < exists ; exists ; 2011 ; 93 ; Diseases of Aquatic Organisms Volume 93 ; >
+      au < testing ; exists ; 2011 ; 93 ; Diseases of Aquatic Organisms Volume 93 ; >
       au < exists ; exists ; 2011 ; 94 ; Diseases of Aquatic Organisms Volume 94 ; >
       au < exists ; exists ; 2011 ; 95 ; Diseases of Aquatic Organisms Volume 95 ; >
       au < exists ; exists ; 2011 ; 96 ; Diseases of Aquatic Organisms Volume 96 ; >
@@ -95,7 +95,7 @@
       au < exists ; exists ; 2012 ; 99 ; Diseases of Aquatic Organisms Volume 99 ; >
       au < exists ; exists ; 2012 ; 100 ; Diseases of Aquatic Organisms Volume 100 ; >
       au < exists ; exists ; 2012 ; 101 ; Diseases of Aquatic Organisms Volume 101 ; >
-      au < exists ; exists ; 2012 ; 102 ; Diseases of Aquatic Organisms Volume 102 ; >
+      au < testing ; exists ; 2012 ; 102 ; Diseases of Aquatic Organisms Volume 102 ; >
       au < exists ; exists ; 2013 ; 103 ; Diseases of Aquatic Organisms Volume 103 ; >
       au < exists ; exists ; 2013 ; 104 ; Diseases of Aquatic Organisms Volume 104 ; >
       au < exists ; exists ; 2013 ; 105 ; Diseases of Aquatic Organisms Volume 105 ; >
@@ -106,7 +106,7 @@
       au < exists ; exists ; 2014 ; 110 ; Diseases of Aquatic Organisms Volume 110 ; >
       au < exists ; exists ; 2014 ; 111 ; Diseases of Aquatic Organisms Volume 111 ; >
       au < exists ; exists ; 2014 ; 112 ; Diseases of Aquatic Organisms Volume 112 ; >
-      au < exists ; exists ; 2015 ; 113 ; Diseases of Aquatic Organisms Volume 113 ; >
+      au < testing ; exists ; 2015 ; 113 ; Diseases of Aquatic Organisms Volume 113 ; >
       au < exists ; exists ; 2015 ; 114 ; Diseases of Aquatic Organisms Volume 114 ; >
       au < exists ; exists ; 2015 ; 115 ; Diseases of Aquatic Organisms Volume 115 ; >
       au < exists ; exists ; 2015 ; 116 ; Diseases of Aquatic Organisms Volume 116 ; >
@@ -115,7 +115,7 @@
       au < exists ; exists ; 2016 ; 119 ; Diseases of Aquatic Organisms Volume 119 ; >
       au < exists ; exists ; 2016 ; 120 ; Diseases of Aquatic Organisms Volume 120 ; >
       au < exists ; exists ; 2016 ; 121 ; Diseases of Aquatic Organisms Volume 121 ; >
-      au < exists ; exists ; 2016 ; 122 ; Diseases of Aquatic Organisms Volume 122 ; >
+      au < testing ; exists ; 2016 ; 122 ; Diseases of Aquatic Organisms Volume 122 ; >
       au < exists ; exists ; 2017 ; 123 ; Diseases of Aquatic Organisms Volume 123 ; >
       au < exists ; exists ; 2017 ; 124 ; Diseases of Aquatic Organisms Volume 124 ; >
       au < exists ; exists ; 2017 ; 125 ; Diseases of Aquatic Organisms Volume 125 ; >
@@ -123,7 +123,7 @@
       au < exists ; exists ; 2017 ; 127 ; Diseases of Aquatic Organisms Volume 127 ; >
       au < exists ; exists ; 2018 ; 128 ; Diseases of Aquatic Organisms Volume 128 ; >
       au < exists ; exists ; 2018 ; 129 ; Diseases of Aquatic Organisms Volume 129 ; >
-      au < exists ; exists ; 2018 ; 130 ; Diseases of Aquatic Organisms Volume 130 ; >
+      au < testing ; exists ; 2018 ; 130 ; Diseases of Aquatic Organisms Volume 130 ; >
       au < exists ; exists ; 2018 ; 131 ; Diseases of Aquatic Organisms Volume 131 ; >
       au < exists ; exists ; 2018 ; 132 ; Diseases of Aquatic Organisms Volume 132 ; >
       au < exists ; exists ; 2019 ; 133 ; Diseases of Aquatic Organisms Volume 133 ; >
@@ -154,7 +154,7 @@
       au < doNotProcess ; doNotProcess ; 2024 ; 158 ; Diseases of Aquatic Organisms Volume 158 ; >
       au < doNotProcess ; doNotProcess ; 2024 ; 159 ; Diseases of Aquatic Organisms Volume 159 ; >
       au < doNotProcess ; doNotProcess ; 2024 ; 160 ; Diseases of Aquatic Organisms Volume 160 ; >
-      au < exists ; exists ; 2025 ; 161 ; Diseases of Aquatic Organisms Volume 161 ; >
+      au < testing ; exists ; 2025 ; 161 ; Diseases of Aquatic Organisms Volume 161 ; >
       au < exists ; exists ; 2025 ; 162 ; Diseases of Aquatic Organisms Volume 162 ; >
       au < exists ; exists ; 2025 ; 163 ; Diseases of Aquatic Organisms Volume 163 ; >
       au < exists ; exists ; 2025 ; 164 ; Diseases of Aquatic Organisms Volume 164 ; >
@@ -166,11 +166,11 @@
   }
 
   {
-  
+
     title <
       name = Climate Research ;
       issn = 0936-577X ;
-      eissn = 1616-1572 
+      eissn = 1616-1572
     >
       #published 1990 to present
       param[journal_id] = cr
@@ -178,7 +178,7 @@
       au < exists ; exists ; 2010 ; 41 ; Climate Research Volume 41 ; >
       au < exists ; exists ; 2010 ; 42 ; Climate Research Volume 42 ; >
       au < exists ; exists ; 2010 ; 43 ; Climate Research Volume 43 ; >
-      au < exists ; exists ; 2010 ; 44 ; Climate Research Volume 44 ; >
+      au < testing; exists ; 2010 ; 44 ; Climate Research Volume 44 ; >
       au < exists ; exists ; 2011 ; 45 ; Climate Research Volume 45 ; >
       au < exists ; exists ; 2011 ; 46 ; Climate Research Volume 46 ; >
       au < exists ; exists ; 2011 ; 47 ; Climate Research Volume 47 ; >
@@ -196,13 +196,13 @@
       au < exists ; exists ; 2014 ; 59 ; Climate Research Volume 59 ; >
       au < exists ; exists ; 2014 ; 60 ; Climate Research Volume 60 ; >
       au < exists ; exists ; 2014 ; 61 ; Climate Research Volume 61 ; >
-      au < exists ; exists ; 2015 ; 62 ; Climate Research Volume 62 ; >
+      au < testing ; exists ; 2015 ; 62 ; Climate Research Volume 62 ; >
       au < exists ; exists ; 2015 ; 63 ; Climate Research Volume 63 ; >
       au < exists ; exists ; 2015 ; 64 ; Climate Research Volume 64 ; >
       au < exists ; exists ; 2015 ; 65 ; Climate Research Volume 65 ; >
       au < exists ; exists ; 2016 ; 66 ; Climate Research Volume 66 ; >
       au < exists ; exists ; 2016 ; 67 ; Climate Research Volume 67 ; >
-      au < exists ; exists ; 2016 ; 68 ; Climate Research Volume 68 ; >
+      au < testing ; exists ; 2016 ; 68 ; Climate Research Volume 68 ; >
       au < exists ; exists ; 2016 ; 69 ; Climate Research Volume 69 ; >
       au < exists ; exists ; 2017 ; 70 ; Climate Research Volume 70 ; >
       au < exists ; exists ; 2017 ; 71 ; Climate Research Volume 71 ; >
@@ -228,7 +228,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 91 ; Climate Research Volume 91 ; >
       au < doNotProcess ; doNotProcess ; 2024 ; 92 ; Climate Research Volume 92 ; >
       au < doNotProcess ; doNotProcess ; 2024 ; 93 ; Climate Research Volume 93 ; >
-      au < exists ; exists ; 2025 ; 94 ; Climate Research Volume 94 ; >
+      au < testing ; exists ; 2025 ; 94 ; Climate Research Volume 94 ; >
       au < exists ; exists ; 2025 ; 95 ; Climate Research Volume 95 ; >
       au < exists ; exists ; 2026 ; 96 ; Climate Research Volume 96 ; >
       au < exists ; exists ; 2026 ; 97 ; Climate Research Volume 97 ; >
@@ -236,11 +236,11 @@
   }
 
   {
-  
+
     title <
       name = Aquatic Microbial Ecology ;
       issn = 0948-3055 ;
-      eissn = 1616-1564 
+      eissn = 1616-1564
     >
       #published 1995 to present
       param[journal_id] = ame
@@ -249,7 +249,7 @@
       au < exists ; exists ; 2010 ; 59 ; Aquatic Microbial Ecology Volume 59 ; >
       au < exists ; exists ; 2010 ; 60 ; Aquatic Microbial Ecology Volume 60 ; >
       au < exists ; exists ; 2010 ; 61 ; Aquatic Microbial Ecology Volume 61 ; >
-      au < exists ; exists ; 2011 ; 62 ; Aquatic Microbial Ecology Volume 62 ; >
+      au < testing ; exists ; 2011 ; 62 ; Aquatic Microbial Ecology Volume 62 ; >
       au < exists ; exists ; 2011 ; 63 ; Aquatic Microbial Ecology Volume 63 ; >
       au < exists ; exists ; 2011 ; 64 ; Aquatic Microbial Ecology Volume 64 ; >
       au < exists ; exists ; 2011 ; 65 ; Aquatic Microbial Ecology Volume 65 ; >
@@ -257,7 +257,7 @@
       au < exists ; exists ; 2012 ; 67 ; Aquatic Microbial Ecology Volume 67 ; >
       au < exists ; exists ; 2012 ; 68 ; Aquatic Microbial Ecology Volume 68 ; >
       au < exists ; exists ; 2012 ; 69 ; Aquatic Microbial Ecology Volume 69 ; >
-      au < exists ; exists ; 2013 ; 70 ; Aquatic Microbial Ecology Volume 70 ; >
+      au < testing ; exists ; 2013 ; 70 ; Aquatic Microbial Ecology Volume 70 ; >
       au < exists ; exists ; 2013 ; 71 ; Aquatic Microbial Ecology Volume 71 ; >
       au < exists ; exists ; 2013 ; 72 ; Aquatic Microbial Ecology Volume 72 ; >
       au < exists ; exists ; 2014 ; 73 ; Aquatic Microbial Ecology Volume 73 ; >
@@ -265,7 +265,7 @@
       au < exists ; exists ; 2015 ; 75 ; Aquatic Microbial Ecology Volume 75 ; >
       au < exists ; exists ; 2015 ; 76 ; Aquatic Microbial Ecology Volume 76 ; >
       au < exists ; exists ; 2016 ; 77 ; Aquatic Microbial Ecology Volume 77 ; >
-      au < exists ; exists ; 2016 ; 78 ; Aquatic Microbial Ecology Volume 78 ; >
+      au < testing ; exists ; 2016 ; 78 ; Aquatic Microbial Ecology Volume 78 ; >
       au < exists ; exists ; 2017 ; 79 ; Aquatic Microbial Ecology Volume 79 ; >
       au < exists ; exists ; 2018 ; 80 ; Aquatic Microbial Ecology Volume 80 ; >
       au < exists ; exists ; 2018 ; 81 ; Aquatic Microbial Ecology Volume 81 ; >
@@ -284,11 +284,11 @@
   }
 
   {
-  
+
     title <
       name = Ethics in Science and Enviromental Politics ;
       issn = 1611-8014 ;
-      eissn = 1863-5415 
+      eissn = 1863-5415
     >
       #published 2001 to present
       param[journal_id] = esep
@@ -314,11 +314,11 @@
   }
 
   {
-  
+
     title <
       name = Endangered Species Research ;
       issn = 1863-5407 ;
-      eissn = 1613-4796 
+      eissn = 1613-4796
     >
       #published 2004 to present
       param[journal_id] = esr
@@ -328,7 +328,7 @@
       au < exists ; exists ; 2010 ; 12 ; Endangered Species Research Volume 12 ; >
       au < exists ; exists ; 2011 ; 13 ; Endangered Species Research Volume 13 ; >
       au < exists ; exists ; 2011 ; 14 ; Endangered Species Research Volume 14 ; >
-      au < exists ; exists ; 2011 ; 15 ; Endangered Species Research Volume 15 ; >
+      au < testing ; exists ; 2011 ; 15 ; Endangered Species Research Volume 15 ; >
       au < exists ; exists ; 2012 ; 16 ; Endangered Species Research Volume 16 ; >
       au < exists ; exists ; 2012 ; 17 ; Endangered Species Research Volume 17 ; >
       au < exists ; exists ; 2012 ; 18 ; Endangered Species Research Volume 18 ; >
@@ -379,11 +379,11 @@
   }
 
   {
-  
+
     title <
       name = Aquatic Biology ;
       issn = 1864-7782 ;
-      eissn = 1864-7790 
+      eissn = 1864-7790
     >
       #published 2007 to present
       param[journal_id] = ab
@@ -392,7 +392,7 @@
       au < exists ; exists ; 2010 ; 10 ; Aquatic Biology Volume 10 ; >
       au < exists ; exists ; 2010 ; 11 ; Aquatic Biology Volume 11 ; >
       au < exists ; exists ; 2011 ; 12 ; Aquatic Biology Volume 12 ; >
-      au < exists ; exists ; 2011 ; 13 ; Aquatic Biology Volume 13 ; >
+      au < testing ; exists ; 2011 ; 13 ; Aquatic Biology Volume 13 ; >
       au < exists ; exists ; 2011 ; 14 ; Aquatic Biology Volume 14 ; >
       au < exists ; exists ; 2012 ; 15 ; Aquatic Biology Volume 15 ; >
       au < exists ; exists ; 2012 ; 16 ; Aquatic Biology Volume 16 ; >
@@ -400,7 +400,7 @@
       au < exists ; exists ; 2013 ; 18 ; Aquatic Biology Volume 18 ; >
       au < exists ; exists ; 2013 ; 19 ; Aquatic Biology Volume 19 ; >
       au < exists ; exists ; 2013 ; 20 ; Aquatic Biology Volume 20 ; >
-      au < exists ; exists ; 2014 ; 21 ; Aquatic Biology Volume 21 ; >
+      au < testing ; exists ; 2014 ; 21 ; Aquatic Biology Volume 21 ; >
       au < exists ; exists ; 2014 ; 22 ; Aquatic Biology Volume 22 ; >
       au < exists ; exists ; 2015 ; 23 ; Aquatic Biology Volume 23 ; >
       au < exists ; exists ; 2015 ; 24 ; Aquatic Biology Volume 24 ; >
@@ -419,11 +419,11 @@
   }
 
   {
-  
+
     title <
       name = Aquaculture Environment Interactions ;
       issn = 1869-215X ;
-      eissn = 1869-7534 
+      eissn = 1869-7534
     >
       #published 2009 to present
       param[journal_id] = aei
