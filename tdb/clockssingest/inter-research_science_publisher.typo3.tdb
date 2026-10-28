@@ -8,7 +8,7 @@
     info[platform] = TYPO3
   >
   
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.interresearch.ClockssInterResearch2026JournalsPlugin
   implicit < status ; status2 ; year ; param[volume_name] ; name ; hidden[proxy] >
   #plugin = org.lockss.plugin.interresearch.ClockssInterResearchPlugin
   #implicit < status ; status2 ; year ; param[year] ; param[volume] ; name ; hidden[proxy] >
@@ -149,11 +149,11 @@
       param[journal_id] = esep
 
       au < exists ; exists ; 2010 ; 10 ; Ethics in Science and Enviromental Politics Volume 10 ; >
-      au < exists ; exists ; 2011 ; 11 ; Ethics in Science and Enviromental Politics Volume 11 ; >
+      au < testing ; exists ; 2011 ; 11 ; Ethics in Science and Enviromental Politics Volume 11 ; >
       au < exists ; exists ; 2012 ; 12 ; Ethics in Science and Enviromental Politics Volume 12 ; >
       au < exists ; exists ; 2013 ; 13 ; Ethics in Science and Enviromental Politics Volume 13 ; >
       au < exists ; exists ; 2014 ; 14 ; Ethics in Science and Enviromental Politics Volume 14 ; >
-      au < exists ; exists ; 2015 ; 15 ; Ethics in Science and Enviromental Politics Volume 15 ; >
+      au < testing ; exists ; 2015 ; 15 ; Ethics in Science and Enviromental Politics Volume 15 ; >
       au < exists ; exists ; 2016 ; 16 ; Ethics in Science and Enviromental Politics Volume 16 ; >
       au < exists ; exists ; 2017 ; 17 ; Ethics in Science and Enviromental Politics Volume 17 ; >
       au < exists ; exists ; 2018 ; 18 ; Ethics in Science and Enviromental Politics Volume 18 ; >
@@ -163,7 +163,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 22 ; Ethics in Science and Enviromental Politics Volume 22 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 23 ; Ethics in Science and Enviromental Politics Volume 23 ; >
       au < doNotProcess ; doNotProcess ; 2024 ; 24 ; Ethics in Science and Enviromental Politics Volume 24 ; >
-      au < exists ; exists ; 2025 ; 25 ; Ethics in Science and Enviromental Politics Volume 25 ; >
+      au < testing ; exists ; 2025 ; 25 ; Ethics in Science and Enviromental Politics Volume 25 ; >
       au < exists ; exists ; 2026 ; 26 ; Ethics in Science and Enviromental Politics Volume 26 ; >
 
   }
@@ -200,7 +200,7 @@
       au < exists ; exists ; 2016 ; 29 ; Endangered Species Research Volume 29 ; >
       au < exists ; exists ; 2016 ; 30 ; Endangered Species Research Volume 30 ; >
       au < exists ; exists ; 2016 ; 31 ; Endangered Species Research Volume 31 ; >
-      au < exists ; exists ; 2017 ; 32 ; Endangered Species Research Volume 32 ; >
+      au < testing ; exists ; 2017 ; 32 ; Endangered Species Research Volume 32 ; >
       au < exists ; exists ; 2017 ; 33 ; Endangered Species Research Volume 33 ; >
       au < exists ; exists ; 2017 ; 34 ; Endangered Species Research Volume 34 ; >
       au < exists ; exists ; 2018 ; 35 ; Endangered Species Research Volume 35 ; >
@@ -224,10 +224,10 @@
       au < doNotProcess ; doNotProcess ; 2024 ; 53 ; Endangered Species Research Volume 53 ; >
       au < doNotProcess ; doNotProcess ; 2024 ; 54 ; Endangered Species Research Volume 54 ; >
       au < doNotProcess ; doNotProcess ; 2024 ; 55 ; Endangered Species Research Volume 55 ; >
-      au < exists ; exists ; 2025 ; 56 ; Endangered Species Research Volume 56 ; >
+      au < testing ; exists ; 2025 ; 56 ; Endangered Species Research Volume 56 ; >
       au < exists ; exists ; 2025 ; 57 ; Endangered Species Research Volume 57 ; >
       au < exists ; exists ; 2025 ; 58 ; Endangered Species Research Volume 58 ; >
-      au < exists ; exists ; 2026 ; 59 ; Endangered Species Research Volume 59 ; >
+      au < testing ; exists ; 2026 ; 59 ; Endangered Species Research Volume 59 ; >
       au < exists ; exists ; 2026 ; 60 ; Endangered Species Research Volume 60 ; >
       au < exists ; exists ; 2026 ; 61 ; Endangered Species Research Volume 61 ; >
 
@@ -260,7 +260,7 @@
       au < exists ; exists ; 2015 ; 23 ; Aquatic Biology Volume 23 ; >
       au < exists ; exists ; 2015 ; 24 ; Aquatic Biology Volume 24 ; >
       au < exists ; exists ; 2016 ; 25 ; Aquatic Biology Volume 25 ; >
-      au < exists ; exists ; 2017 ; 26 ; Aquatic Biology Volume 26 ; >
+      au < testing ; exists ; 2017 ; 26 ; Aquatic Biology Volume 26 ; >
       au < exists ; exists ; 2018 ; 27 ; Aquatic Biology Volume 27 ; >
       au < exists ; exists ; 2019 ; 28 ; Aquatic Biology Volume 28 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 29 ; Aquatic Biology Volume 29 ; >
@@ -285,12 +285,12 @@
 
       au < exists ; exists ; 2012 ; 1 ; Aquaculture Environment Interactions Volume 1 ; >
       au < exists ; exists ; 2012 ; 2 ; Aquaculture Environment Interactions Volume 2 ; >
-      au < exists ; exists ; 2013 ; 3 ; Aquaculture Environment Interactions Volume 3 ; >
+      au < testing ; exists ; 2013 ; 3 ; Aquaculture Environment Interactions Volume 3 ; >
       au < exists ; exists ; 2013 ; 4 ; Aquaculture Environment Interactions Volume 4 ; >
       au < exists ; exists ; 2014 ; 5 ; Aquaculture Environment Interactions Volume 5 ; >
       au < exists ; exists ; 2014 ; 6 ; Aquaculture Environment Interactions Volume 6 ; >
       au < exists ; exists ; 2015 ; 7 ; Aquaculture Environment Interactions Volume 7 ; >
-      au < exists ; exists ; 2016 ; 8 ; Aquaculture Environment Interactions Volume 8 ; >
+      au < testing ; exists ; 2016 ; 8 ; Aquaculture Environment Interactions Volume 8 ; >
       au < exists ; exists ; 2017 ; 9 ; Aquaculture Environment Interactions Volume 9 ; >
       au < exists ; exists ; 2018 ; 10 ; Aquaculture Environment Interactions Volume 10 ; >
       au < exists ; exists ; 2019 ; 11 ; Aquaculture Environment Interactions Volume 11 ; >
@@ -299,7 +299,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 14 ; Aquaculture Environment Interactions Volume 14 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 15 ; Aquaculture Environment Interactions Volume 15 ; >
       au < doNotProcess ; doNotProcess ; 2024 ; 16 ; Aquaculture Environment Interactions Volume 16 ; >
-      au < exists ; exists ; 2025 ; 17 ; Aquaculture Environment Interactions Volume 17 ; >
+      au < testing ; exists ; 2025 ; 17 ; Aquaculture Environment Interactions Volume 17 ; >
       au < exists ; exists ; 2026 ; 18 ; Aquaculture Environment Interactions Volume 18 ; >
 
   }
