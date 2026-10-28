@@ -963,31 +963,31 @@
       au < notReady ; exists ; 1999 ; 79 ; International Labour Review Volume 1999 ; 1999 ; > #no articles found and do not redirect to https://en.ilr-rit.org/lockss?year=1999
       au < notReady ; exists ; 2000 ; 80 ; International Labour Review Volume 2000 ; 2000 ; > #no articles found and do not redirect to https://en.ilr-rit.org/lockss?year=2000
       au < notReady ; exists ; 2001 ; 81 ; International Labour Review Volume 2001 ; 2001 ; > #no articles found and do not redirect to https://en.ilr-rit.org/lockss?year=2001
-      au < testing ; exists ; 2002 ; 82 ; International Labour Review Volume 2002 ; 2002 ; >
+      au < notReady ; exists ; 2002 ; 82 ; International Labour Review Volume 2002 ; 2002 ; > #LOCKSS-5539
       au < notReady ; exists ; 2003 ; 83 ; International Labour Review Volume 2003 ; 2003 ; > #no articles found and do not redirect to https://en.ilr-rit.org/lockss?year=2003
-      au < testing ; exists ; 2004 ; 84 ; International Labour Review Volume 2004 ; 2004 ; >
+      au < notReady ; exists ; 2004 ; 84 ; International Labour Review Volume 2004 ; 2004 ; > #LOCKSS-5539
       au < notReady ; exists ; 2005 ; 85 ; International Labour Review Volume 2005 ; 2005 ; > #no articles found and do not redirect to https://en.ilr-rit.org/lockss?year=2005
-      au < testing ; exists ; 2006 ; 86 ; International Labour Review Volume 2006 ; 2006 ; >
-      au < testing ; exists ; 2007 ; 87 ; International Labour Review Volume 2007 ; 2007 ; >
-      au < testing ; exists ; 2008 ; 88 ; International Labour Review Volume 2008 ; 2008 ; >
-      au < testing ; exists ; 2009 ; 89 ; International Labour Review Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 90 ; International Labour Review Volume 2010 ; 2010 ; >
-      au < testing ; exists ; 2011 ; 91 ; International Labour Review Volume 2011 ; 2011 ; >
-      au < testing ; exists ; 2012 ; 92 ; International Labour Review Volume 2012 ; 2012 ; >
-      au < testing ; exists ; 2013 ; 93 ; International Labour Review Volume 2013 ; 2013 ; >
-      au < testing ; exists ; 2014 ; 94 ; International Labour Review Volume 2014 ; 2014 ; >
-      au < testing ; exists ; 2015 ; 95 ; International Labour Review Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 96 ; International Labour Review Volume 2016 ; 2016 ; >
-      au < testing ; exists ; 2017 ; 97 ; International Labour Review Volume 2017 ; 2017 ; >
-      au < testing ; exists ; 2018 ; 98 ; International Labour Review Volume 2018 ; 2018 ; >
-      au < testing ; exists ; 2019 ; 99 ; International Labour Review Volume 2019 ; 2019 ; >
-      au < testing ; exists ; 2020 ; 100 ; International Labour Review Volume 2020 ; 2020 ; >
-      au < testing ; exists ; 2021 ; 101 ; International Labour Review Volume 2021 ; 2021 ; >
-      au < testing ; exists ; 2022 ; 102 ; International Labour Review Volume 2022 ; 2022 ; >
-      au < testing ; exists ; 2023 ; 103 ; International Labour Review Volume 2023 ; 2023 ; >
-      au < testing ; exists ; 2024 ; 104 ; International Labour Review Volume 2024 ; 2024 ; >
+      au < notReady ; exists ; 2006 ; 86 ; International Labour Review Volume 2006 ; 2006 ; >
+      au < notReady ; exists ; 2007 ; 87 ; International Labour Review Volume 2007 ; 2007 ; >
+      au < notReady ; exists ; 2008 ; 88 ; International Labour Review Volume 2008 ; 2008 ; >
+      au < notReady ; exists ; 2009 ; 89 ; International Labour Review Volume 2009 ; 2009 ; >
+      au < notReady ; exists ; 2010 ; 90 ; International Labour Review Volume 2010 ; 2010 ; >
+      au < notReady ; exists ; 2011 ; 91 ; International Labour Review Volume 2011 ; 2011 ; >
+      au < notReady ; exists ; 2012 ; 92 ; International Labour Review Volume 2012 ; 2012 ; >
+      au < notReady ; exists ; 2013 ; 93 ; International Labour Review Volume 2013 ; 2013 ; >
+      au < notReady ; exists ; 2014 ; 94 ; International Labour Review Volume 2014 ; 2014 ; >
+      au < notReady ; exists ; 2015 ; 95 ; International Labour Review Volume 2015 ; 2015 ; >
+      au < notReady ; exists ; 2016 ; 96 ; International Labour Review Volume 2016 ; 2016 ; >
+      au < notReady ; exists ; 2017 ; 97 ; International Labour Review Volume 2017 ; 2017 ; >
+      au < notReady ; exists ; 2018 ; 98 ; International Labour Review Volume 2018 ; 2018 ; >
+      au < notReady ; exists ; 2019 ; 99 ; International Labour Review Volume 2019 ; 2019 ; >
+      au < notReady ; exists ; 2020 ; 100 ; International Labour Review Volume 2020 ; 2020 ; >
+      au < notReady ; exists ; 2021 ; 101 ; International Labour Review Volume 2021 ; 2021 ; >
+      au < notReady ; exists ; 2022 ; 102 ; International Labour Review Volume 2022 ; 2022 ; >
+      au < notReady ; exists ; 2023 ; 103 ; International Labour Review Volume 2023 ; 2023 ; >
+      au < notReady ; exists ; 2024 ; 104 ; International Labour Review Volume 2024 ; 2024 ; >
       au < frozen ; exists ; 2025 ; 105 ; International Labour Review Volume 2025 ; 2025 ; >
-      au < testing ; exists ; 2026 ; 106 ; International Labour Review Volume 2026 ; 2026 ; >
+      au < notReady ; exists ; 2026 ; 106 ; International Labour Review Volume 2026 ; 2026 ; >
 
   }
 
@@ -1001,7 +1001,7 @@
       #published 2026-2026
       param[base_url] = https://www.philosophical-logic.org/
 
-      au < testing ; exists ; 2026 ; 1 ; Philosophical Logic Volume 2026 ; 2026 ; >
+      au < notReady ; exists ; 2026 ; 1 ; Philosophical Logic Volume 2026 ; 2026 ; >
 
   }
 
