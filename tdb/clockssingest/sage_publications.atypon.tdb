@@ -79,7 +79,7 @@
 
       #param[journal_id] = aca
 
-      au < crawling ; exists ; 1997 ; About Campus Volume 1 ; 1 ; acaa ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1997 ; About Campus Volume 1 ; 1 ; acaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1998 ; About Campus Volume 2 ; 2 ; acaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1999 ; About Campus Volume 3 ; 3 ; acaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; About Campus Volume 4 ; 4 ; acaa ; https://journals.sagepub.com/ ; >
@@ -128,12 +128,12 @@
       au < frozen ; exists ; 1973 ; Abstracts in Anthropology Volume 4 ; 4 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1974 ; Abstracts in Anthropology Volume 5 ; 5 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1975 ; Abstracts in Anthropology Volume 6 ; 6 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1978 ; Abstracts in Anthropology Volume 7 ; 7 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1978 ; Abstracts in Anthropology Volume 7 ; 7 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1981 ; Abstracts in Anthropology Volume 8 ; 8 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1982 ; Abstracts in Anthropology Volume 9 ; 9 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1983 ; Abstracts in Anthropology Volume 10 ; 10 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1984 ; Abstracts in Anthropology Volume 11 ; 11 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1985 ; Abstracts in Anthropology Volume 12 ; 12 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1985 ; Abstracts in Anthropology Volume 12 ; 12 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1986 ; Abstracts in Anthropology Volume 13 ; 13 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1987 ; Abstracts in Anthropology Volume 14 ; 14 ; aaxa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1987 ; Abstracts in Anthropology Volume 15 ; 15 ; aaxa ; https://journals.sagepub.com/ ; >
@@ -158,8 +158,8 @@
       au < frozen ; exists ; 1997 ; Abstracts in Anthropology Volume 34 ; 34 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1997 ; Abstracts in Anthropology Volume 35 ; 35 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1998 ; Abstracts in Anthropology Volume 36 ; 36 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1998 ; Abstracts in Anthropology Volume 37 ; 37 ; aaxa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1999 ; Abstracts in Anthropology Volume 38 ; 38 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1998 ; Abstracts in Anthropology Volume 37 ; 37 ; aaxa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1999 ; Abstracts in Anthropology Volume 38 ; 38 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1999 ; Abstracts in Anthropology Volume 39 ; 39 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Abstracts in Anthropology Volume 40 ; 40 ; aaxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Abstracts in Anthropology Volume 41 ; 41 ; aaxa ; https://journals.sagepub.com/ ; >
@@ -222,7 +222,7 @@
       au < frozen ; exists ; 1998 ; Accounting History Volume 3 ; 3 ; acha ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1999 ; Accounting History Volume 4 ; 4 ; acha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Accounting History Volume 5 ; 5 ; acha ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2001 ; Accounting History Volume 6 ; 6 ; acha ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2001 ; Accounting History Volume 6 ; 6 ; acha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Accounting History Volume 7 ; 7 ; acha ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2003 ; Accounting History Volume 8 ; 8 ; acha ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2004 ; Accounting History Volume 9 ; 9 ; acha ; https://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
@@ -265,7 +265,7 @@
       au < ready ; exists ; 1957 ; Acta Sociologica Volume 2 ; 2 ; asja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1958 ; Acta Sociologica Volume 3 ; 3 ; asja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1959 ; Acta Sociologica Volume 4 ; 4 ; asja ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1962 ; Acta Sociologica Volume 5 ; 5 ; asja ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1962 ; Acta Sociologica Volume 5 ; 5 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1963 ; Acta Sociologica Volume 6 ; 6 ; asja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1964 ; Acta Sociologica Volume 7 ; 7 ; asja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1965 ; Acta Sociologica Volume 8 ; 8 ; asja ; https://journals.sagepub.com/ ; >
@@ -276,7 +276,7 @@
       au < frozen ; exists ; 1970 ; Acta Sociologica Volume 13 ; 13 ; asja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1971 ; Acta Sociologica Volume 14 ; 14 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1972 ; Acta Sociologica Volume 15 ; 15 ; asja ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1973 ; Acta Sociologica Volume 16 ; 16 ; asja ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1973 ; Acta Sociologica Volume 16 ; 16 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1974 ; Acta Sociologica Volume 17 ; 17 ; asja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1975 ; Acta Sociologica Volume 18 ; 18 ; asja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1976 ; Acta Sociologica Volume 19 ; 19 ; asja ; https://journals.sagepub.com/ ; >
@@ -463,7 +463,7 @@
       #journal_id = aet
 
       au < ready ; exists ; 1981 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 6 ; 6 ; aeta ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1982 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 7 ; 7 ; aeta ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1982 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 7 ; 7 ; aeta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1983 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 8 ; 8 ; aeta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1984 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 9 ; 9 ; aeta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1985 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 10 ; 10 ; aeta ; https://journals.sagepub.com/ ; >
@@ -623,7 +623,7 @@
 
       au < frozen ; exists ; 1969-1970 ; Journal of Comparative Administration Volume 1 ; 1 ; aasa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1970-1971 ; Journal of Comparative Administration Volume 2 ; 2 ; aasa ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1971-1972 ; Journal of Comparative Administration Volume 3 ; 3 ; aasa ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1971-1972 ; Journal of Comparative Administration Volume 3 ; 3 ; aasa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1972-1973 ; Journal of Comparative Administration Volume 4 ; 4 ; aasa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1973-1974 ; Journal of Comparative Administration Volume 5 ; 5 ; aasa ; https://journals.sagepub.com/ ; >
 
@@ -651,7 +651,7 @@
       au < frozen ; exists ; 1983-1984 ; Administration & Society Volume 15 ; 15 ; aasb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1984-1985 ; Administration & Society Volume 16 ; 16 ; aasb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1985-1986 ; Administration & Society Volume 17 ; 17 ; aasb ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1986-1987 ; Administration & Society Volume 18 ; 18 ; aasb ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1986-1987 ; Administration & Society Volume 18 ; 18 ; aasb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1987-1988 ; Administration & Society Volume 19 ; 19 ; aasb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1988-1989 ; Administration & Society Volume 20 ; 20 ; aasb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1989-1990 ; Administration & Society Volume 21 ; 21 ; aasb ; https://journals.sagepub.com/ ; >
@@ -1329,7 +1329,7 @@
       #journal_id = eaia
       #continued_by = 3050-4554
 
-      au < ready ; exists ; 1987 ; AI Communications Volume 0 ; 0 ; eaia ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1987 ; AI Communications Volume 0 ; 0 ; eaia ; https://journals.sagepub.com/ ; >
 
       au < frozen ; exists ; 2014-2016 ; AI Communications Volume 29 ; 29 ; eaia ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2017 ; AI Communications Volume 30 ; 30 ; eaia ; https://journals.sagepub.com/ ; >
@@ -1396,7 +1396,7 @@
 
       au < ready ; exists ; 1987 ; AIDS Patient Care Volume 1 ; 1 ; adsb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1988 ; AIDS Patient Care Volume 2 ; 2 ; adsb ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1989 ; AIDS Patient Care Volume 3 ; 3 ; adsb ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1989 ; AIDS Patient Care Volume 3 ; 3 ; adsb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1990 ; AIDS Patient Care Volume 4 ; 4 ; adsb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1991 ; AIDS Patient Care Volume 5 ; 5 ; adsb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1992 ; AIDS Patient Care Volume 6 ; 6 ; adsb ; https://journals.sagepub.com/ ; >
@@ -1475,8 +1475,8 @@
       #continues = 0737-6006
 
       au < frozen ; exists ; 1987 ; AIDS Research and Human Retroviruses Volume 3 ; 3 ; aida ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1988 ; AIDS Research and Human Retroviruses Volume 4 ; 4 ; aida ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1989 ; AIDS Research and Human Retroviruses Volume 5 ; 5 ; aida ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1988 ; AIDS Research and Human Retroviruses Volume 4 ; 4 ; aida ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1989 ; AIDS Research and Human Retroviruses Volume 5 ; 5 ; aida ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1990 ; AIDS Research and Human Retroviruses Volume 6 ; 6 ; aida ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1991 ; AIDS Research and Human Retroviruses Volume 7 ; 7 ; aida ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1992 ; AIDS Research and Human Retroviruses Volume 8 ; 8 ; aida ; https://journals.sagepub.com/ ; >
@@ -1532,7 +1532,7 @@
       au < frozen ; exists ; 1993 ; Alexandria Volume 5 ; 5 ; alaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1994 ; Alexandria Volume 6 ; 6 ; alaa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1995 ; Alexandria Volume 7 ; 7 ; alaa ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1996 ; Alexandria Volume 8 ; 8 ; alaa ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1996 ; Alexandria Volume 8 ; 8 ; alaa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1997 ; Alexandria Volume 9 ; 9 ; alaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1998 ; Alexandria Volume 10 ; 10 ; alaa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1999 ; Alexandria Volume 11 ; 11 ; alaa ; https://journals.sagepub.com/ ; >
@@ -2738,7 +2738,7 @@
       au < manifest ; exists ; 1998 ; The American Review of Public Administration Volume 28 ; 28 ; arpb ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 1999 ; The American Review of Public Administration Volume 29 ; 29 ; arpb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; The American Review of Public Administration Volume 30 ; 30 ; arpb ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2001 ; The American Review of Public Administration Volume 31 ; 31 ; arpb ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2001 ; The American Review of Public Administration Volume 31 ; 31 ; arpb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; The American Review of Public Administration Volume 32 ; 32 ; arpb ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2003 ; The American Review of Public Administration Volume 33 ; 33 ; arpb ; https://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2004 ; The American Review of Public Administration Volume 34 ; 34 ; arpb ; https://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
@@ -6826,7 +6826,7 @@
       au < frozen ; exists ; 2014 ; Biotechnology Law Report Volume 33 ; 33 ; blra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2015 ; Biotechnology Law Report Volume 34 ; 34 ; blra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2016 ; Biotechnology Law Report Volume 35 ; 35 ; blra ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2017 ; Biotechnology Law Report Volume 36 ; 36 ; blra ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2017 ; Biotechnology Law Report Volume 36 ; 36 ; blra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2018 ; Biotechnology Law Report Volume 37 ; 37 ; blra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Biotechnology Law Report Volume 38 ; 38 ; blra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Biotechnology Law Report Volume 39 ; 39 ; blra ; https://journals.sagepub.com/ ; >
@@ -6919,7 +6919,7 @@
       au < ready ; exists ; 2011 ; Brain Connectivity Volume 1 ; 1 ; brca ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2012 ; Brain Connectivity Volume 2 ; 2 ; brca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2013 ; Brain Connectivity Volume 3 ; 3 ; brca ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2014 ; Brain Connectivity Volume 4 ; 4 ; brca ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2014 ; Brain Connectivity Volume 4 ; 4 ; brca ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2015 ; Brain Connectivity Volume 5 ; 5 ; brca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2016 ; Brain Connectivity Volume 6 ; 6 ; brca ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2017 ; Brain Connectivity Volume 7 ; 7 ; brca ; https://journals.sagepub.com/ ; >
@@ -9447,7 +9447,7 @@
       au < ready ; exists ; 2010 ; Childhood Obesity Volume 6 Issue 4 to 6 ; 6 ; cdoa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2011 ; Childhood Obesity Volume 7 ; 7 ; cdoa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2012 ; Childhood Obesity Volume 8 ; 8 ; cdoa ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2013 ; Childhood Obesity Volume 9 ; 9 ; cdoa ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2013 ; Childhood Obesity Volume 9 ; 9 ; cdoa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2014 ; Childhood Obesity Volume 10 ; 10 ; cdoa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2015 ; Childhood Obesity Volume 11 ; 11 ; cdoa ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2016 ; Childhood Obesity Volume 12 ; 12 ; cdoa ; https://journals.sagepub.com/ ; >
@@ -10849,7 +10849,7 @@
       au < frozen ; exists ; 2022-2023 ; Communication Disorders Quarterly Volume 44 ; 44 ; cdqc ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2023-2024 ; Communication Disorders Quarterly Volume 45 ; 45 ; cdqc ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2024-2025 ; Communication Disorders Quarterly Volume 46 ; 46 ; cdqc ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2025-2026 ; Communication Disorders Quarterly Volume 47 ; 47 ; cdqc ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2025-2026 ; Communication Disorders Quarterly Volume 47 ; 47 ; cdqc ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2026-2027 ; Communication Disorders Quarterly Volume 48 ; 48 ; cdqc ; https://journals.sagepub.com/ ; >
 
   }
@@ -16456,7 +16456,7 @@
       au < finished ; manifest ; 2022 ; Environmental Policy and Law Volume 52 ; 52 ; epla ; https://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2022-2024 ; Environmental Policy and Law Volume 53 ; 53 ; epla ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Environmental Policy and Law Volume 54 ; 54 ; epla ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2025-2026 ; Environmental Policy and Law Volume 55 ; 55 ; epla ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2025-2026 ; Environmental Policy and Law Volume 55 ; 55 ; epla ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2026-2027 ; Environmental Policy and Law Volume 56 ; 56 ; epla ; https://journals.sagepub.com/ ; >
 
   }
@@ -21454,7 +21454,7 @@
       au < manifest ; exists ; 2015 ; Health Security Volume 13 ; 13 ; hsca ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Health Security Volume 14 ; 14 ; hsca ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Health Security Volume 15 ; 15 ; hsca ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2018 ; Health Security Volume 16 ; 16 ; hsca ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2018 ; Health Security Volume 16 ; 16 ; hsca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Health Security Volume 17 ; 17 ; hsca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Health Security Volume 18 ; 18 ; hsca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Health Security Volume 19 ; 19 ; hsca ; https://journals.sagepub.com/ ; >
@@ -32630,7 +32630,7 @@
       au < deepCrawl ; exists ; 2023-2024 ; Journal of Disability Policy Studies Volume 34 ; 34 ; dpsa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Journal of Disability Policy Studies Volume 35 ; 35 ; dpsa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025-2026 ; Journal of Disability Policy Studies Volume 36 ; 36 ; dpsa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2026-2027 ; Journal of Disability Policy Studies Volume 37 ; 37 ; dpsa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2026-2027 ; Journal of Disability Policy Studies Volume 37 ; 37 ; dpsa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -34541,7 +34541,7 @@
     au < manifest ; exists ; 2015 ; Journal of Gynecologic Surgery Volume 31 ; 31 ; gyna ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; Journal of Gynecologic Surgery Volume 32 ; 32 ; gyna ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; Journal of Gynecologic Surgery Volume 33 ; 33 ; gyna ; https://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Journal of Gynecologic Surgery Volume 34 ; 34 ; gyna ; https://journals.sagepub.com/ ; >
+    au < frozen ; exists ; 2018 ; Journal of Gynecologic Surgery Volume 34 ; 34 ; gyna ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2019 ; Journal of Gynecologic Surgery Volume 35 ; 35 ; gyna ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; Journal of Gynecologic Surgery Volume 36 ; 36 ; gyna ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; Journal of Gynecologic Surgery Volume 37 ; 37 ; gyna ; https://journals.sagepub.com/ ; >
@@ -44165,7 +44165,7 @@
     au < manifest ; exists ; 2016 ; Lymphatic Research and Biology Volume 14 ; 14 ; lrba ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; Lymphatic Research and Biology Volume 15 ; 15 ; lrba ; https://journals.sagepub.com/ ; >
     au < ready ; exists ; 2018 ; Lymphatic Research and Biology Volume 16 ; 16 ; lrba ; https://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2019 ; Lymphatic Research and Biology Volume 17 ; 17 ; lrba ; https://journals.sagepub.com/ ; >
+    au < frozen ; exists ; 2019 ; Lymphatic Research and Biology Volume 17 ; 17 ; lrba ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; Lymphatic Research and Biology Volume 18 ; 18 ; lrba ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; Lymphatic Research and Biology Volume 19 ; 19 ; lrba ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2022 ; Lymphatic Research and Biology Volume 20 ; 20 ; lrba ; https://journals.sagepub.com/ ; >
@@ -46152,7 +46152,7 @@
     au < manifest ; exists ; 2016 ; Monoclonal Antibodies in Immunodiagnosis & Immunotherapy Volume 35 ; 35 ; maia ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; Monoclonal Antibodies in Immunodiagnosis & Immunotherapy Volume 36 ; 36 ; maia ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2018 ; Monoclonal Antibodies in Immunodiagnosis & Immunotherapy Volume 37 ; 37 ; maia ; https://journals.sagepub.com/ ; >
-    au < ready ; exists ; 2019 ; Monoclonal Antibodies in Immunodiagnosis & Immunotherapy Volume 38 ; 38 ; maia ; https://journals.sagepub.com/ ; >
+    au < crawling ; exists ; 2019 ; Monoclonal Antibodies in Immunodiagnosis & Immunotherapy Volume 38 ; 38 ; maia ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; Monoclonal Antibodies in Immunodiagnosis & Immunotherapy Volume 39 ; 39 ; maia ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; Monoclonal Antibodies in Immunodiagnosis & Immunotherapy Volume 40 ; 40 ; maia ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2022 ; Monoclonal Antibodies in Immunodiagnosis & Immunotherapy Volume 41 ; 41 ; maia ; https://journals.sagepub.com/ ; >
@@ -61345,7 +61345,7 @@
       au < manifest ; exists ; 2012 ; Tissue Engineering Part B: Reviews Volume 18 ; 18 ; teba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2013 ; Tissue Engineering Part B: Reviews Volume 19 ; 19 ; teba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2014 ; Tissue Engineering Part B: Reviews Volume 20 ; 20 ; teba ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2015 ; Tissue Engineering Part B: Reviews Volume 21 ; 21 ; teba ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2015 ; Tissue Engineering Part B: Reviews Volume 21 ; 21 ; teba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2016 ; Tissue Engineering Part B: Reviews Volume 22 ; 22 ; teba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2017 ; Tissue Engineering Part B: Reviews Volume 23 ; 23 ; teba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2018 ; Tissue Engineering Part B: Reviews Volume 24 ; 24 ; teba ; https://journals.sagepub.com/ ; >
@@ -62337,25 +62337,25 @@
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1838 ; 1838 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1839 ; 1839 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1840 ; 1840 ; trra ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2003 ; Transportation Research Record Volume 1841 ; 1841 ; trra ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1841 ; 1841 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1842 ; 1842 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1843 ; 1843 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1844 ; 1844 ; trra ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2003 ; Transportation Research Record Volume 1845 ; 1845 ; trra ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1845 ; 1845 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1846 ; 1846 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1847 ; 1847 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1848 ; 1848 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1849 ; 1849 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1850 ; 1850 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1851 ; 1851 ; trra ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2003 ; Transportation Research Record Volume 1852 ; 1852 ; trra ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2003 ; Transportation Research Record Volume 1852 ; 1852 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1853 ; 1853 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1854 ; 1854 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1855 ; 1855 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1856 ; 1856 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1857 ; 1857 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1858 ; 1858 ; trra ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2003 ; Transportation Research Record Volume 1859 ; 1859 ; trra ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1859 ; 1859 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1860 ; 1860 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1861 ; 1861 ; trra ; https://journals.sagepub.com/ ; >
 
@@ -64157,7 +64157,7 @@
       au < frozen ; exists ; 2002 ; Vector-Borne and Zoonotic Diseases Volume 2 ; 2 ; vbza ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Vector-Borne and Zoonotic Diseases Volume 3 ; 3 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2004 ; Vector-Borne and Zoonotic Diseases Volume 4 ; 4 ; vbza ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2005 ; Vector-Borne and Zoonotic Diseases Volume 5 ; 5 ; vbza ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2005 ; Vector-Borne and Zoonotic Diseases Volume 5 ; 5 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2006 ; Vector-Borne and Zoonotic Diseases Volume 6 ; 6 ; vbza ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2007 ; Vector-Borne and Zoonotic Diseases Volume 7 ; 7 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2008 ; Vector-Borne and Zoonotic Diseases Volume 8 ; 8 ; vbza ; https://journals.sagepub.com/ ; >
@@ -64521,7 +64521,7 @@
       au < frozen ; exists ; 2014 ; Viral Immunology Volume 27 ; 27 ; vima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2015 ; Viral Immunology Volume 28 ; 28 ; vima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2016 ; Viral Immunology Volume 29 ; 29 ; vima ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2017 ; Viral Immunology Volume 30 ; 30 ; vima ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2017 ; Viral Immunology Volume 30 ; 30 ; vima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2018 ; Viral Immunology Volume 31 ; 31 ; vima ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2019 ; Viral Immunology Volume 32 ; 32 ; vima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Viral Immunology Volume 33 ; 33 ; vima ; https://journals.sagepub.com/ ; >
@@ -64689,7 +64689,7 @@
       au < manifest ; exists ; 2007 ; Web Intelligence and Agent Systems Volume 5 ; 5 ; weba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2008 ; Web Intelligence and Agent Systems Volume 6 ; 6 ; weba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2009 ; Web Intelligence and Agent Systems Volume 7 ; 7 ; weba ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2010 ; Web Intelligence and Agent Systems Volume 8 ; 8 ; weba ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2010 ; Web Intelligence and Agent Systems Volume 8 ; 8 ; weba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2011 ; Web Intelligence and Agent Systems Volume 9 ; 9 ; weba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2012 ; Web Intelligence and Agent Systems Volume 10 ; 10 ; weba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2013 ; Web Intelligence and Agent Systems Volume 11 ; 11 ; weba ; https://journals.sagepub.com/ ; >

@@ -23,7 +23,7 @@
 
       #implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
 
-      au < crawling ; exists ; 2025 ; Journal of Intelligent Informatics, Networking, and Cybersecurity Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2025 ; Journal of Intelligent Informatics, Networking, and Cybersecurity Volume 1 ; 1 ; >
       au < crawling ; exists ; 2026 ; Journal of Intelligent Informatics, Networking, and Cybersecurity Volume 2 ; 2 ; >
 
   }
