@@ -130,6 +130,11 @@ public class InterResearch2026JournalsHtmlHashFilterFactory implements FilterFac
         // <span class="article__access-type">open access</span></span>.
         // Same open-access flip as data-sorting above.
         HtmlNodeFilters.tagWithAttribute("span", "class", "article__access"),
+
+        // Journal banner: cover, ISSNs, nav, description, and the stats grid
+        // (Impact Factor, Acceptance Rate, Time in Review, Total Annual Downloads).
+        // Downloads changes daily, the rest yearly; none of it is article content.
+        HtmlNodeFilters.tagWithAttribute("section", "x-ref", "menu"),
     };
 
     InputStream filteredStream = new HtmlFilterInputStream(in, encoding,

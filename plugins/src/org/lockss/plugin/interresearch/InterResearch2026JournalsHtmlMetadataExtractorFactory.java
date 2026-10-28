@@ -61,20 +61,7 @@ public class InterResearch2026JournalsHtmlMetadataExtractorFactory
 
     private static final MultiMap tagMap = new MultiValueMap();
 
-    /*
-      citation_* tags confirmed on
-      https://www.int-res.com/journals/meps/articles/meps14992 :
-        citation_title, citation_publication_date ("2025/11/27"),
-        citation_journal_title, citation_journal_abbreviation (x2),
-        citation_issn (x2: 1616-1599 online, 0171-8630 print, not labelled),
-        citation_journal_publisher ("Inter-Research"),
-        citation_volume, citation_firstpage, citation_lastpage, citation_doi,
-        citation_pdf_url, citation_abstract_html_url, citation_xml_url,
-        citation_author (+ _email, _orcid), citation_keywords (comma-separated).
-      No citation_issue (MEPS has no issues).
-      ISSNs are not mapped: the two citation_issn tags can't be told apart,
-      so ISSN/eISSN come from the TDB.
-    */
+
     static {
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
@@ -85,9 +72,6 @@ public class InterResearch2026JournalsHtmlMetadataExtractorFactory
       tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
       tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
       tagMap.put("citation_author", MetadataField.FIELD_AUTHOR);
-      tagMap.put("citation_keywords",
-                 new MetadataField(MetadataField.FIELD_KEYWORDS,
-                                   MetadataField.splitAt(",")));
     }
 
     @Override
