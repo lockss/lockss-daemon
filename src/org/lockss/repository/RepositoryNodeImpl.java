@@ -789,8 +789,13 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
     // if restoring from deletion or inactivation
     if (isContentInactive() || isDeleted()) {
+      int lastVersion = determineLastActiveVersion();
+      if (lastVersion > 0 && !getInactiveCacheFile().exists() &&
+          getVersionedCacheFile(lastVersion).exists()) {
+        lastVersion = repairInactiveVersionCollision(lastVersion);
+      }
       wasInactive = true;
-      currentVersion = determineLastActiveVersion();
+      currentVersion = lastVersion;
     }
 
     // Sealing renames 'current' to its version number.  Don't start a
@@ -814,6 +819,47 @@ public class RepositoryNodeImpl implements RepositoryNode {
     isIdenticalVersion = false;
   }
 
+  /**
+   * Handle an inactive node without inactive content whose inactive.props
+   * has the number of an existing numbered version, as left by
+   * deactivating a node whose 'current' was missing, if reactivating it
+   * when it was loaded failed (see hasLostCurrent()).  Sealing the next
+   * version would otherwise rename inactive.props over that version's
+   * props.  If the numbered version has no props, inactive.props are its
+   * props (sealing was interrupted before renaming them) and are put back;
+   * otherwise inactive.props are moved aside.
+   * @param version the version number in inactive.props
+   * @return the highest numbered version, which the new version follows
+   */
+  int repairInactiveVersionCollision(int version) {
+    File inactivePropsFile = getInactivePropsFile();
+    File verPropsFile = getVersionedPropsFile(version);
+    if (!verPropsFile.exists()) {
+      if (!renameForRepair(inactivePropsFile, verPropsFile)) {
+        String err = "Couldn't restore props of version " + version +
+          " of " + url + " from " + inactivePropsFile;
+        logger.error(err);
+        throw new LockssRepository.RepositoryStateException(err);
+      }
+      logger.warning("Restored props of version " + version + " of " + url +
+                     " from " + inactivePropsFile);
+    } else {
+      if (moveAside(inactivePropsFile) == null) {
+        String err = "Couldn't move aside " + inactivePropsFile +
+          ", version " + version + " of " + url + " already exists";
+        logger.error(err);
+        throw new LockssRepository.RepositoryStateException(err);
+      }
+      logger.warning("Moved aside inactive props of " + url + ": version " +
+                     version + " already exists");
+    }
+    int maxVersion = 0;
+    for (int ver : getVersionNumbers()) {
+      maxVersion = Math.max(maxVersion, ver);
+    }
+    return maxVersion;
+  }
+
   private boolean isIdenticalVersion = false;
 
   public boolean isIdenticalVersion() {
@@ -834,6 +880,20 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
       if (!newPropsSet) {
         throw new UnsupportedOperationException("setNewProperties() not called.");
+      }
+      // Without current content (e.g. it was lost), the current props are
+      // renamed below to the current version's numbered props file.  Never
+      // overwrite an existing one.
+      boolean hasCurContent = currentCacheFile.exists() ||
+        (wasInactive && getInactiveCacheFile().exists());
+      boolean hasCurProps = currentPropsFile.exists() ||
+        (wasInactive && getInactivePropsFile().exists());
+      if (!hasCurContent && hasCurProps &&
+          getVersionedPropsFile(currentVersion).exists()) {
+        String err = "Props of version " + currentVersion + " of " + url +
+          " already exist, not overwriting them";
+        logger.error(err);
+        throw new LockssRepository.RepositoryStateException(err);
       }
       // Make readers wait (in ensureCurrentInfoLoaded()) for the new
       // version, rather than see its number with the old props
@@ -859,16 +919,19 @@ public class RepositoryNodeImpl implements RepositoryNode {
         }
 
         // add the 'was inactive' property so the knowledge isn't lost
-        try {
-          Properties myProps = loadProps(currentPropsFile);
-          myProps.setProperty(NODE_WAS_INACTIVE_PROPERTY, "true");
-	  writeProps(currentPropsFile, myProps, url);
-        } catch (IOException e) {
-          logger.error("Couldn't set 'was inactive' property for last version of: "+url,
-		       e);
-        } catch (LockssRepository.RepositoryStateException e) {
-          logger.error("Couldn't set 'was inactive' property for last version of: "+url,
-		       e);
+        // (there are no props if the inactive props were moved aside)
+        if (currentPropsFile.exists()) {
+          try {
+            Properties myProps = loadProps(currentPropsFile);
+            myProps.setProperty(NODE_WAS_INACTIVE_PROPERTY, "true");
+            writeProps(currentPropsFile, myProps, url);
+          } catch (IOException e) {
+            logger.error("Couldn't set 'was inactive' property for last version of: "+url,
+                         e);
+          } catch (LockssRepository.RepositoryStateException e) {
+            logger.error("Couldn't set 'was inactive' property for last version of: "+url,
+                         e);
+          }
         }
 
 
@@ -1490,10 +1553,19 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
       int version = Integer.parseInt(ver);
       if (getVersionedCacheFile(version).exists()) {
-        // A numbered version never has the current version's number
-        // unless current.props was written with a version number computed
-        // from a missing or corrupt current.props
-        version = repairCurrentVersionNumber(version);
+        if (!currentCacheFile.exists()) {
+          if (!getVersionedPropsFile(version).exists()) {
+            restoreInterruptedSeal(version);
+          } else if (repairCurrentFromNumberedVersion(
+                       "no current content, version " + version + " exists")) {
+            return;
+          }
+        } else {
+          // A numbered version never has the current version's number
+          // unless current.props was written with a version number computed
+          // from a missing or corrupt current.props
+          version = repairCurrentVersionNumber(version);
+        }
       }
       // Assign only the final value; readers don't synchronize
       currentVersion = version;
@@ -1537,6 +1609,31 @@ public class RepositoryNodeImpl implements RepositoryNode {
       invalidateCachedValues(true);
     }
     return newVersion;
+  }
+
+  /**
+   * Put back the current content of a node whose sealing of a new version
+   * was interrupted after renaming 'current' to its version number and
+   * before renaming current.props to match.
+   * @param version the version number in current.props
+   * @return true iff repaired
+   */
+  synchronized boolean restoreInterruptedSeal(int version) {
+    if (newVersionOpen) {
+      logger.warning("Not restoring current version " + version + " of " +
+                     url + ": new version open");
+      return false;
+    }
+    if (!renameForRepair(getVersionedCacheFile(version), currentCacheFile)) {
+      logger.error("Couldn't restore version " + version + " of " + url +
+                   " to current");
+      return false;
+    }
+    curInputFile = currentCacheFile;
+    logger.warning("Restored version " + version + " of " + url +
+                   " to current, after an interrupted seal");
+    invalidateCachedValues(true);
+    return true;
   }
 
   /**
@@ -1705,11 +1802,34 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   /** True iff current.props can be loaded and has a valid version number */
   boolean hasUsableCurrentProps() {
-    try {
-      return isValidVersionNumber(loadProps(currentPropsFile)
-                                  .getProperty(LOCKSS_VERSION_NUMBER));
-    } catch (IOException | RuntimeException e) {
+    return readVersionNumber(currentPropsFile) > 0;
+  }
+
+  /**
+   * True if the node has neither 'current' nor 'inactive' content, and its
+   * props (current.props, else inactive.props) have the number of an
+   * existing numbered version: the state left by deactivating a node
+   * after a failed read of its missing 'current'.
+   */
+  boolean hasLostCurrent() {
+    if (currentCacheFile.exists() || getInactiveCacheFile().exists()) {
       return false;
+    }
+    int ver = readVersionNumber(currentPropsFile.exists() ? currentPropsFile
+                                : getInactivePropsFile());
+    return ver > 0 && getVersionedCacheFile(ver).exists();
+  }
+
+  /**
+   * @return the valid version number in propsFile, or -1 if it's missing,
+   * unreadable or has no valid version number
+   */
+  int readVersionNumber(File propsFile) {
+    try {
+      String ver = loadProps(propsFile).getProperty(LOCKSS_VERSION_NUMBER);
+      return isValidVersionNumber(ver) ? Integer.parseInt(ver) : -1;
+    } catch (IOException | RuntimeException e) {
+      return -1;
     }
   }
 
@@ -1777,8 +1897,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
     if ((isInactive != null) && (isInactive.equals("true"))) {
       // Normal deactivation renames 'current' to 'inactive'.  An inactive
       // node with 'current' and an unusable current.props was deactivated
-      // because of the unusable props; reactivate it so loadCurrentInfo()
-      // repairs it.
+      // because of the unusable props, and one with neither 'current' nor
+      // 'inactive' whose props have an existing numbered version's number
+      // was deactivated because 'current' was missing.  Reactivate them so
+      // loadCurrentInfo() repairs them.
       synchronized (this) {
         if (!"true".equals(nodeProps.getProperty(INACTIVE_CONTENT_PROPERTY))) {
           // reactivated by another thread
@@ -1789,6 +1911,19 @@ public class RepositoryNodeImpl implements RepositoryNode {
           nodeProps.remove(INACTIVE_CONTENT_PROPERTY);
           writeNodeProperties();
           return false;
+        }
+        if (hasLostCurrent()) {
+          File inactivePropsFile = getInactivePropsFile();
+          // current.props exists if an earlier reactivation was interrupted
+          if (currentPropsFile.exists() ||
+              renameForRepair(inactivePropsFile, currentPropsFile)) {
+            logger.warning("Reactivating node deactivated because of missing current: " + url);
+            nodeProps.remove(INACTIVE_CONTENT_PROPERTY);
+            writeNodeProperties();
+            return false;
+          }
+          logger.error("Couldn't rename " + inactivePropsFile + " to " +
+                       currentPropsFile + ", not reactivating " + url);
         }
         currentVersion = INACTIVE_VERSION;
         curInputFile = null;

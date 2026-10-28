@@ -934,7 +934,6 @@ public class LockssRepositoryImpl
                                " in " + AU_ID_FILE);
                 continue;
               }
-              // XXX intern auid?
               auid = StringPool.AUIDS.intern(auid);
               map.put(auid, pathSlash);
               if (logger.isDebug3()) {

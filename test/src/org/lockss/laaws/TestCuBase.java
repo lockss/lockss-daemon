@@ -97,6 +97,21 @@ public class TestCuBase extends LockssTestCase {
     return res;
   }
 
+  // Leaf URLs under prefix, listed as CachedUrlSet iteration lists them
+  List<String> nodeUrls(String prefix) {
+    CachedUrlSet cus =
+      mau.makeCachedUrlSet(new RangeCachedUrlSetSpec(prefix));
+    List<String> res = new ArrayList<String>();
+    for (Iterator<CachedUrlSetNode> it = cus.contentHashIterator();
+         it.hasNext(); ) {
+      CachedUrlSetNode cusn = it.next();
+      if (cusn.isLeaf()) {
+        res.add(cusn.getUrl());
+      }
+    }
+    return res;
+  }
+
   List<String> errors(CuBase cb) {
     return cb.task.getAuStatus().getErrors();
   }
@@ -142,6 +157,22 @@ public class TestCuBase extends LockssTestCase {
     // Not listed, so not reported, the next time
     cb = buildCompatMap();
     assertEquals(ListUtil.list(3, 2), mappedVersions(cb));
+    assertEmpty(errors(cb));
+  }
+
+  // A node deactivated by a failed read of its missing 'current' is
+  // reactivated and repaired, so the migrator finds and copies it
+  public void testDeactivatedLostCurrentRepaired() throws Exception {
+    RepositoryNodeImpl node = (RepositoryNodeImpl)createVersions(3);
+    TestRepositoryNodeImpl.makeLostCurrentState(
+      TestRepositoryNodeImpl.getContentDir(node));
+    TestRepositoryNodeImpl.deactivateWithoutCurrent(node);
+    TestRepositoryNodeImpl.clearNodeCache(repo);
+    // The migrator iterates the AU's CachedUrlSet, whose node listing
+    // leaves out inactive leaves
+    assertEquals(ListUtil.list(URL), nodeUrls("http://www.example.com/testDir"));
+    CuBase cb = buildCompatMap();
+    assertEquals(ListUtil.list(2, 1), mappedVersions(cb));
     assertEmpty(errors(cb));
   }
 

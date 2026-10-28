@@ -156,9 +156,11 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
   public void testLocalRepository_GetAuMapZeroedAuIdFile() throws Exception {
     mau.setAuId("barfoo");
+
     String location1 = getCacheLocation() + "ab";
     LockssRepositoryImpl.saveAuIdProperties(location1,
                                             PropUtil.fromArgs(AU_ID_PROP, "bar1"));
+
     // An #au_id_file whose contents have been lost (all NUL bytes)
     String location2 = getCacheLocation() + "acc";
     File dir2 = new File(location2);
@@ -170,15 +172,18 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
     LockssRepositoryImpl.LocalRepository localRepo =
       LockssRepositoryImpl.getLocalRepository(mau);
+
     // Cause map to be built afresh
     localRepo.auMap = null;
     Map aumap = localRepo.getAuMap();
     assertEquals(addSlash(location1), aumap.get("bar1"));
     assertFalse(aumap.containsKey(null));
     assertFalse(aumap.containsValue(addSlash(location2)));
+
     String location3 = getCacheLocation() + "add";
     LockssRepositoryImpl.saveAuIdProperties(location3,
                                             PropUtil.fromArgs(AU_ID_PROP, "bar3"));
+    
     // update map with new entries
     localRepo.updateAuMap();
     aumap = localRepo.getAuMap();
