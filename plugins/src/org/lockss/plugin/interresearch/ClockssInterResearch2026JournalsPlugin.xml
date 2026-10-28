@@ -1,0 +1,222 @@
+<!--
+
+    Copyright (c) 2000-2026, Board of Trustees of Leland Stanford Jr. University
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are met:
+
+    1. Redistributions of source code must retain the above copyright notice,
+    this list of conditions and the following disclaimer.
+
+    2. Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+    3. Neither the name of the copyright holder nor the names of its contributors
+    may be used to endorse or promote products derived from this software without
+    specific prior written permission.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+    ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+    POSSIBILITY OF SUCH DAMAGE.
+-->
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>development</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.interresearch.ClockssInterResearch2026JournalsPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>Inter-Research Science Publisher 2026 Journals Plugin (CLOCKSS)</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Base URL, e.g. https://www.int-res.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>journal_id</key>
+                <displayName>Journal Identifier</displayName>
+                <description>Identifier for journal (often used as part of file names)</description>
+                <type>1</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <!-- String, not int: the volume list has "617-618" -->
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>volume_name</key>
+                <displayName>Volume Name</displayName>
+                <description>Volume name, e.g. 774</description>
+                <type>1</type>
+                <size>20</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+        </list>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"Inter-Research Science Publisher 2026 Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    </entry>
+    <entry>
+        <string>au_start_url</string>
+        <string>"%sjournals/%s/volumes/%s", base_url, journal_id, volume_name</string>
+    </entry>
+    <entry>
+        <string>au_permission_url</string>
+        <string>"%slockss", base_url</string>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <!-- year-folder PDF: /articles/meps2025/774/m774p073.pdf,
+                 /articles/meps2019/617/m617p007.pdf (vol. 617-618) -->
+            <string>"^%sarticles/%s[0-9]{4}/[0-9]+/[^/]+\.pdf$", base_url, journal_id</string>
+            <!-- open-access PDF: /articles/meps_oa/m617p081.pdf -->
+            <string>"^%sarticles/%s_oa/[^/]+\.pdf$", base_url, journal_id</string>
+            <!-- Feature Article PDF: /articles/feature/m774p001.pdf -->
+            <string>"^%sarticles/feature/[^/]+\.pdf$", base_url</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <!-- Tracking, cookie consent, third-party widgets: never collected -->
+            <string>2,"^https://www\.googletagmanager\.com/"</string>
+            <string>2,"^https://cloud\.ccm19\.de/"</string>
+            <string>2,"^https://crossmark-cdn\.crossref\.org/"</string>
+            <!-- Live-only endpoints: search, keyword search, "latest volume" redirect -->
+            <string>2,"^%s(searchresult|advancedsearch)", base_url</string>
+            <string>2,"^%sjournals/%s/volumes\?", base_url, journal_id</string>
+            <!-- CDN assets needed for replay (Font Awesome CSS + webfonts, jQuery) -->
+            <string>1,"^https://cdnjs\.cloudflare\.com/ajax/libs/font-awesome/"</string>
+            <string>1,"^https://code\.jquery\.com/jquery-[0-9.]+(\.min)?\.js$"</string>
+            <!-- Same-host static assets; TYPO3 appends ?<timestamp> cache busters
+                 e.g. /typo3temp/assets/js/7f6f...e.js?1791980028 -->
+            <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff2?|dfont|otf)(\?[0-9]+)?$", url_host(base_url)</string>
+            <!-- Manifest: this AU's volume page only. Every other volume page
+                 (sidebar list, Previous/Next Volume) falls through and is not collected. -->
+            <string>1,"^%sjournals/%s/volumes/%s$", base_url, journal_id, volume_name</string>
+            <!-- Article landing pages. ASSUMPTION: article id = journal_id + digits
+                 (meps14992); confirm on a second journal. No volume in the URL, see
+                 OVERCRAWL NOTE at the top. -->
+            <string>1,"^%sjournals/%s/articles/%s[0-9]+$", base_url, journal_id, journal_id</string>
+            <!-- Year-folder PDF (subscriber and "Free Access"):
+                   /articles/meps2025/774/m774p073.pdf
+                   /articles/meps2019/617/m617p007.pdf   (vol. 617-618: first number only)
+                 NOT volume-scoped, same reason as the OA rule below. -->
+            <string>1,"^%sarticles/%s[0-9]{4}/[0-9]+/[^/]+\.pdf$", base_url, journal_id</string>
+            <!-- Open-access PDF: /articles/meps_oa/m617p081.pdf. NOT volume-scoped
+                 (shared folder; double volumes use the first number only). -->
+            <string>1,"^%sarticles/%s_oa/[a-z]+[0-9]+p[0-9]+[^/]*\.pdf$", base_url, journal_id</string>
+            <!-- Supplements: /articles/suppl/m774p073_supp.pdf, m617p081_supp.pdf.
+                 NOT volume-scoped, same reason; prefix letter differs per journal. -->
+            <string>1,"^%sarticles/suppl/[a-z]+[0-9]+p[0-9]+[^/]*$", base_url</string>
+            <!-- Feature Article PDF: /articles/feature/m774p001.pdf (meps15002).
+                 Folder has no journal_id; NOT volume-scoped (see header). -->
+            <string>1,"^%sarticles/feature/[a-z]+[0-9]+p[0-9]+[^/]*\.pdf$", base_url</string>
+        </list>
+    </entry>
+    <entry>
+        <string>text/html_crawl_filter_factory</string>
+        <string>org.lockss.plugin.interresearch.InterResearch2026JournalsHtmlCrawlFilterFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_filter_factory</string>
+        <string>org.lockss.plugin.interresearch.InterResearch2026JournalsHtmlHashFilterFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.interresearch.InterResearch2026JournalsArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.interresearch.InterResearch2026JournalsArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*</string>
+                <string>org.lockss.plugin.interresearch.InterResearch2026JournalsHtmlMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>au_repair_from_peer_if_missing_url_pattern</string>
+        <list>
+            <string>".+[.](bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)(\?.*)?$"</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_url_poll_result_weight</string>
+        <list>
+            <string>".+[.](bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)(\?.*)?$", 0</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_permitted_host_pattern</string>
+        <list>
+            <string>cdnjs\.cloudflare\.com</string>
+            <string>code\.jquery\.com</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_refetch_depth</string>
+        <int>1</int>
+    </entry>
+    <entry>
+        <string>plugin_fetch_rate_limiter_source</string>
+        <string>host:base_url</string>
+    </entry>
+    <entry>
+        <string>clockss_override</string>
+        <map>
+            <entry>
+                <string>au_def_pause_time</string>
+                <long>100</long>
+            </entry>
+        </map>
+    </entry>
+</map>
