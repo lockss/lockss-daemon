@@ -22,9 +22,11 @@ echo "###Ready Sage not $year" >> $t/tmp_Sage
 
 #Emerald Journals in order by year
 echo "###Ready Emerald Journals $year" > $t/tmp_EmeraldJ  #clear out file
-./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "ClockssEmeraldSilverchairPlugin" and year is "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_EmeraldJ
+./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "ClockssEmeraldSilverchairPlugin" and year is "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/emerald*.tdb | shuf >> $t/tmp_EmeraldJ
+./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "ClockssEmeraldSilverchairBooksPlugin" and year is "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/emerald*.tdb | shuf >> $t/tmp_EmeraldJ
 echo "###Ready Emerald Journals not $year" >> $t/tmp_EmeraldJ
-./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "ClockssEmeraldSilverchairPlugin" and year is not "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_EmeraldJ
+./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "ClockssEmeraldSilverchairPlugin" and year is not "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/emerald*.tdb | shuf >> $t/tmp_EmeraldJ
+./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "ClockssEmeraldSilverchairBooksPlugin" and year is not "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/emerald*.tdb | shuf >> $t/tmp_EmeraldJ
 
 #Manifest
 #Don't include this year or last year so that new titles get tested for at least two years.
@@ -62,9 +64,17 @@ echo "###Ready Emerald Journals not $year" >> $t/tmp_EmeraldJ
 echo "###Ready New Contract for $year" > $t/tmp_New_Contract  #clear out file
 ./scripts/tdb/tdbout -Y -a -Q 'publisher:info[contract] is "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_New_Contract
 echo "###Ready Misc $year" > $t/tmp_Misc  #clear out file
-./scripts/tdb/tdbout -Y -a -Q 'publisher:info[contract] is not "'$year'" and year is "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | grep -v ClockssSageAtyponJournals | grep -v ClockssEmeraldSilverchairPlugin | shuf >> $t/tmp_Misc
+./scripts/tdb/tdbout -Y -a -Q 'publisher:info[contract] is not "'$year'" and year is "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | \
+    grep -v ClockssSageAtyponJournals | \
+    grep -v ClockssEmeraldSilverchairPlugin | \
+    grep -v ClockssEmeraldSilverchairBooksPlugin | \
+    shuf >> $t/tmp_Misc
 echo "###Ready Misc not $year" >> $t/tmp_Misc
-./scripts/tdb/tdbout -Y -a -Q 'publisher:info[contract] is not "'$year'" and year is not "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | grep -v ClockssSageAtyponJournals | grep -v ClockssEmeraldSilverchairPlugin | shuf >> $t/tmp_Misc
+./scripts/tdb/tdbout -Y -a -Q 'publisher:info[contract] is not "'$year'" and year is not "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | \
+    grep -v ClockssSageAtyponJournals | \
+    grep -v ClockssEmeraldSilverchairPlugin | \
+    grep -v ClockssEmeraldSilverchairBooksPlugin | \
+    shuf >> $t/tmp_Misc
 #Single Ingest Machines: all publishers
 echo "*********************" >> $t/tmp_Misc
 echo "###Ready Misc Ingest1" >> $t/tmp_Misc
