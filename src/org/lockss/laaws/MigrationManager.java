@@ -451,15 +451,11 @@ public class MigrationManager extends BaseLockssDaemonManager
   }
 
   public boolean isTargetInMigrationMode(String hostname, int cfgUiPort,
-                                         String userName, String userPass) {
-    try {
-      Configuration v2cfg =
-        getConfigFromMigrationTarget(hostname, cfgUiPort, userName, userPass);
-      return isTargetInMigrationMode(v2cfg);
-    } catch (IOException e) {
-      log.error("Can't retrieve target configuration", e);
-      return false;
-    }
+                                         String userName, String userPass)
+      throws IOException {
+    Configuration v2cfg =
+      getConfigFromMigrationTarget(hostname, cfgUiPort, userName, userPass);
+    return isTargetInMigrationMode(v2cfg);
   }
 
   public boolean isTargetInMigrationMode(Configuration v2cfg) {

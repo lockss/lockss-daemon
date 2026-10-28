@@ -1016,19 +1016,28 @@ public class V2AuMover {
     currentStatus = "Checking V2 services";
 
     try {
-      checkV2ServicesAvailable();
-      openReportFiles(firstArgs); // must follow checkV2ServicesAvailable
+      checkV2ServicesAvailable(); // must be called before openReportFiles()
+    } catch (IOException e) {
+      openReportFiles(firstArgs);
+      String msg = "Aborted - couldn't read V2 API status";
+      currentStatus = msg + ": " + e.getMessage();;
+      setFailed(true);
+      log.error(msg, e);
+      logReportAndError(msg);
+    }
+    try {
+      openReportFiles(firstArgs);
       DaemonVersion v2RepoVer = new DaemonVersion(getRepoSvcVersion());
       if (v2RepoVer.compareTo(MIN_V2_REPO_VERSION) < 0) {
         currentStatus = "Failed - target is running version " + v2RepoVer +
           ", version " + MIN_V2_REPO_VERSION + " or higher is required.";
-        failed = true;
+        setFailed(true);
       }
       else if (!isDryRun() &&
           !migrationMgr.isTargetInMigrationMode(hostName, cfgUiPort,
                                                 userName, userPass)) {
         currentStatus = "Failed - target is not in migration mode";
-        failed = true;
+        setFailed(true);
       } else {
         migrationMgr.setInMigrationMode(true);
         for (Args args : argsLst) {
@@ -1042,7 +1051,9 @@ public class V2AuMover {
       }
     } catch (IOException e) {
       openReportFiles(firstArgs);
-      String msg = "Couldn't read V2 API status, aborting";
+      String msg = "Aborted - couldn't read V2 config";
+      currentStatus = msg + ": " + e.getMessage();;
+      setFailed(true);
       log.error(msg, e);
       logReportAndError(msg);
     } finally {

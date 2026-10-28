@@ -262,6 +262,7 @@ public class DebugPanel extends LockssServlet {
 
   private void doReloadConfig() {
     cfgMgr.requestReload();
+    statusMsg = "Config reload requested";
   }
 
   private void doThrow() throws IOException {
