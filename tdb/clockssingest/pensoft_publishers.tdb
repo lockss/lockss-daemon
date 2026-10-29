@@ -754,7 +754,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Journal of Orthoptera Research Volume 2023 ; 2023 ; https://jor.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Orthoptera Research Volume 2024 ; 2024 ; https://jor.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Journal of Orthoptera Research Volume 2025 ; 2025 ; https://jor.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Journal of Orthoptera Research Volume 2026 ; 2026 ; https://jor.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Journal of Orthoptera Research Volume 2026 ; 2026 ; https://jor.pensoft.net/ ; >
 
   }
 
@@ -841,7 +841,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Modern Electronic Materials Volume 2023 ; 2023 ; https://moem.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Modern Electronic Materials Volume 2024 ; 2024 ; https://moem.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Modern Electronic Materials Volume 2025 ; 2025 ; https://moem.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Modern Electronic Materials Volume 2026 ; 2026 ; https://moem.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Modern Electronic Materials Volume 2026 ; 2026 ; https://moem.pensoft.net/ ; >
 
   }
 
@@ -863,7 +863,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Nuclear Energy and Technology Volume 2023 ; 2023 ; https://nucet.pensoft.net/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Nuclear Energy and Technology Volume 2024 ; 2024 ; https://nucet.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Nuclear Energy and Technology Volume 2025 ; 2025 ; https://nucet.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Nuclear Energy and Technology Volume 2026 ; 2026 ; https://nucet.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Nuclear Energy and Technology Volume 2026 ; 2026 ; https://nucet.pensoft.net/ ; >
 
   }
 
@@ -887,7 +887,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; One Ecosystem Volume 2023 ; 2023 ; https://oneecosystem.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; One Ecosystem Volume 2024 ; 2024 ; https://oneecosystem.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; One Ecosystem Volume 2025 ; 2025 ; https://oneecosystem.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; One Ecosystem Volume 2026 ; 2026 ; https://oneecosystem.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; One Ecosystem Volume 2026 ; 2026 ; https://oneecosystem.pensoft.net/ ; >
 
   }
 
@@ -1094,7 +1094,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; NeoTropical Biology and Conservation Volume 2023 ; 2023 ; https://neotropical.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; NeoTropical Biology and Conservation Volume 2024 ; 2024 ; https://neotropical.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; NeoTropical Biology and Conservation Volume 2025 ; 2025 ; https://neotropical.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; NeoTropical Biology and Conservation Volume 2026 ; 2026 ; https://neotropical.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; NeoTropical Biology and Conservation Volume 2026 ; 2026 ; https://neotropical.pensoft.net/ ; >
 
   }
 
@@ -1224,7 +1224,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Silva Balcanica Volume 2023 ; 2023 ; https://silvabalcanica.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Silva Balcanica Volume 2024 ; 2024 ; https://silvabalcanica.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Silva Balcanica Volume 2025 ; 2025 ; https://silvabalcanica.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Silva Balcanica Volume 2026 ; 2026 ; https://silvabalcanica.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Silva Balcanica Volume 2026 ; 2026 ; https://silvabalcanica.pensoft.net/ ; >
 
   }
 
@@ -1343,7 +1343,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Journal of the Bulgarian Geographical Society Volume 2023 ; 2023 ; https://jbgs.arphahub.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of the Bulgarian Geographical Society Volume 2024 ; 2024 ; https://jbgs.arphahub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Journal of the Bulgarian Geographical Society Volume 2025 ; 2025 ; https://jbgs.arphahub.com/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Journal of the Bulgarian Geographical Society Volume 2026 ; 2026 ; https://jbgs.arphahub.com/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Journal of the Bulgarian Geographical Society Volume 2026 ; 2026 ; https://jbgs.arphahub.com/ ; >
 
   }
 
@@ -1399,7 +1399,7 @@
       #Moved from Plant Sociology
 
       au < deepCrawl ; exists ; 2025 ; 2025 ; Vegetation Ecology and Diversity Volume 2025 ; 2025 ; https://ved.arphahub.com/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Vegetation Ecology and Diversity Volume 2026 ; 2026 ; https://ved.arphahub.com/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Vegetation Ecology and Diversity Volume 2026 ; 2026 ; https://ved.arphahub.com/ ; >
 
   }
 
@@ -1461,7 +1461,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Zitteliana Volume 2023 ; 2023 ; https://zitteliana.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 2024 ; Zitteliana Volume 2024 ; 2024 ; https://zitteliana.pensoft.net/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Zitteliana Volume 2025 ; 2025 ; https://zitteliana.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Zitteliana Volume 2026 ; 2026 ; https://zitteliana.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Zitteliana Volume 2026 ; 2026 ; https://zitteliana.pensoft.net/ ; >
 
   }
 
@@ -1701,7 +1701,7 @@
       au < exists ; exists ; 2023 ; 2023 ; Bulgarian Society of Medical Sciences Journal Volume 2023 ; 2023 ; https://bsms.arphahub.com/ ; >
       au < finished ; manifest ; 2024 ; 2024 ; Bulgarian Society of Medical Sciences Journal Volume 2024 ; 2024 ; https://bsms.arphahub.com/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Bulgarian Society of Medical Sciences Journal Volume 2025 ; 2025 ; https://bsms.arphahub.com/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Bulgarian Society of Medical Sciences Journal Volume 2026 ; 2026 ; https://bsms.arphahub.com/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Bulgarian Society of Medical Sciences Journal Volume 2026 ; 2026 ; https://bsms.arphahub.com/ ; >
 
   }
 
@@ -1883,7 +1883,7 @@
 
       au < finished ; manifest ; 2024 ; 2024 ; Frontiers of Biogeography Volume 2024 ; 2024 ; https://biogeography.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Frontiers of Biogeography Volume 2025 ; 2025 ; https://biogeography.pensoft.net/ ; >
-      au < ready ; exists ; 2026 ; 2026 ; Frontiers of Biogeography Volume 2026 ; 2026 ; https://biogeography.pensoft.net/ ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Frontiers of Biogeography Volume 2026 ; 2026 ; https://biogeography.pensoft.net/ ; >
 
   }
 
