@@ -81,7 +81,7 @@
     au < ingNotReady ; exists ; 2019 ; Journal of Nuclear Medicine Volume 60 ; 60 ; > #LOCKSS-5686, possible overcrawl
     au < ingNotReady ; exists ; 2020 ; Journal of Nuclear Medicine Volume 61 ; 61 ; > #LOCKSS-5686, possible overcrawl
     au < ingNotReady ; exists ; 2021 ; Journal of Nuclear Medicine Volume 62 ; 62 ; > #LOCKSS-5686, possible overcrawl
-    au < deepCrawl ; exists ; 2022 ; Journal of Nuclear Medicine Volume 63 ; 63 ; >
+    au < frozen ; exists ; 2022 ; Journal of Nuclear Medicine Volume 63 ; 63 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Nuclear Medicine Volume 64 ; 64 ; >
     au < deepCrawl ; exists ; 2024 ; Journal of Nuclear Medicine Volume 65 ; 65 ; >
     au < deepCrawl ; exists ; 2025 ; Journal of Nuclear Medicine Volume 66 ; 66 ; >
@@ -146,7 +146,7 @@
     au < finished ; manifest ; 2019 ; Journal of Nuclear Medicine Technology Volume 47 ; 47 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Journal of Nuclear Medicine Technology Volume 48 ; 48 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Journal of Nuclear Medicine Technology Volume 49 ; 49 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2022 ; Journal of Nuclear Medicine Technology Volume 50 ; 50 ; >
+    au < frozen ; exists ; 2022 ; Journal of Nuclear Medicine Technology Volume 50 ; 50 ; >
     au < finished ; manifest ; 2023 ; Journal of Nuclear Medicine Technology Volume 51 ; 51 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; Journal of Nuclear Medicine Technology Volume 52 ; 52 ; >
     au < deepCrawl ; exists ; 2025 ; Journal of Nuclear Medicine Technology Volume 53 ; 53 ; >
