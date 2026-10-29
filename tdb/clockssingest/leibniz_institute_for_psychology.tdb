@@ -96,16 +96,7 @@
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2023 ; Interpersona: An International Journal on Personal Relationships Volume 17 ; 17 ; 2023 ; https://interpersona.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2024 ; Interpersona: An International Journal on Personal Relationships Volume 18 ; 18 ; 2024 ; https://interpersona.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; superseded ; exists ; 2025 ; Interpersona: An International Journal on Personal Relationships Volume 19 [superseded] ; 19 ; 2025 ; https://interpersona.psychopen.eu/ ; >
-      #Moved to new url
-      }
-      {
-      #param[base_url] = https://ojs.interpersonajournal.com/
-      param[journal_id] = ojs
-      #not enabled for preservation as of 20261015
-
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2025 ; Interpersona: An International Journal on Personal Relationships Volume 19 ; 19 ; 2025 ; https://ojs.interpersonajournal.com/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2026 ; Interpersona: An International Journal on Personal Relationships Volume 20 ; 20 ; 2026 ; https://ojs.interpersonajournal.com/ ; >
-
+      #Moved to new publisher. LOCKSS-2464
       }
   }
 
