@@ -371,6 +371,10 @@
       #published 2004 to present
       param[journal_id] = esr
 
+      au < exists ; exists ; 2004-2005 ; 1 ; Endangered Species Research Volume 1 ; >
+      au < exists ; exists ; 2006 ; 2 ; Endangered Species Research Volume 2 ; >
+      au < exists ; exists ; 2007 ; 3 ; Endangered Species Research Volume 3 ; >
+
       au < exists ; exists ; 2010 ; 10 ; Endangered Species Research Volume 10 ; >
       au < exists ; exists ; 2010 ; 11 ; Endangered Species Research Volume 11 ; >
       au < exists ; exists ; 2010 ; 12 ; Endangered Species Research Volume 12 ; >
@@ -436,12 +440,22 @@
       #published 2007 to present
       param[journal_id] = ab
 
+      au < exists ; exists ; 2012-2015 ; SEDAO 1 ; Aquatic Biology Volume SEDAO 1 ; >
+
+      au < exists ; exists ; 2007-2008 ; 1 ; Aquatic Biology Volume 1 ; >
+      au < exists ; exists ; 2008 ; 2 ; Aquatic Biology Volume 2 ; >
+      au < exists ; exists ; 2008 ; 3 ; Aquatic Biology Volume 3 ; >
+      au < exists ; exists ; 2008-2009 ; 4 ; Aquatic Biology Volume 4 ; >
+      au < exists ; exists ; 2009 ; 5 ; Aquatic Biology Volume 5 ; >
+      au < exists ; exists ; 2009 ; 6 ; Aquatic Biology Volume 6 ; >
+      au < exists ; exists ; 2009 ; 7 ; Aquatic Biology Volume 7 ; >
+      au < exists ; exists ; 2009-2010 ; 8 ; Aquatic Biology Volume 8 ; >
       au < exists ; exists ; 2010 ; 9 ; Aquatic Biology Volume 9 ; >
       au < exists ; exists ; 2010 ; 10 ; Aquatic Biology Volume 10 ; >
-      au < exists ; exists ; 2010 ; 11 ; Aquatic Biology Volume 11 ; >
+      au < exists ; exists ; 2010-2011 ; 11 ; Aquatic Biology Volume 11 ; >
       au < exists ; exists ; 2011 ; 12 ; Aquatic Biology Volume 12 ; >
       au < exists ; exists ; 2011 ; 13 ; Aquatic Biology Volume 13 ; >
-      au < exists ; exists ; 2011 ; 14 ; Aquatic Biology Volume 14 ; >
+      au < exists ; exists ; 2011-2012 ; 14 ; Aquatic Biology Volume 14 ; >
       au < exists ; exists ; 2012 ; 15 ; Aquatic Biology Volume 15 ; >
       au < exists ; exists ; 2012 ; 16 ; Aquatic Biology Volume 16 ; >
       au < exists ; exists ; 2012 ; 17 ; Aquatic Biology Volume 17 ; >
@@ -450,8 +464,8 @@
       au < exists ; exists ; 2013 ; 20 ; Aquatic Biology Volume 20 ; >
       au < exists ; exists ; 2014 ; 21 ; Aquatic Biology Volume 21 ; >
       au < exists ; exists ; 2014 ; 22 ; Aquatic Biology Volume 22 ; >
-      au < exists ; exists ; 2015 ; 23 ; Aquatic Biology Volume 23 ; >
-      au < exists ; exists ; 2015 ; 24 ; Aquatic Biology Volume 24 ; >
+      au < exists ; exists ; 2014-2015 ; 23 ; Aquatic Biology Volume 23 ; >
+      au < exists ; exists ; 2015-2016 ; 24 ; Aquatic Biology Volume 24 ; >
       au < exists ; exists ; 2016 ; 25 ; Aquatic Biology Volume 25 ; >
       au < testing ; exists ; 2017 ; 26 ; Aquatic Biology Volume 26 ; >
       au < exists ; exists ; 2018 ; 27 ; Aquatic Biology Volume 27 ; >
