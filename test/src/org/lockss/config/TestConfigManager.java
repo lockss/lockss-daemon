@@ -1339,12 +1339,126 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("111", config.get(deactPrefix + ".foo"));
     assertEquals("true", config.get(deactPrefix + "." + PluginManager.AU_PARAM_DISABLED));
     assertTrue(config.getConfigTree(deletePrefix).isEmpty());
+
+    // The deleted AU is recorded as migrated, the deactivated one isn't
+    assertTrue(mgr.isMigratedAuid(deleteAuid));
+    assertFalse(mgr.isMigratedAuid(deactAuid));
+    assertEquals(ListUtil.list(ListUtil.list("MIGRATED", deleteAuid)),
+                 readRecords(mgr.getCacheConfigFile(CONFIG_FILE_MIGRATED_AUS)));
   }
 
   public void testProcessAuTxtJournalNoJournal() throws Exception {
     String tmpdir = getTempDir().toString();
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tmpdir);
     assertFalse(mgr.processAuTxtJournal());
+  }
+
+  List<List<String>> readRecords(File file) throws IOException {
+    List<List<String>> res = new ArrayList<List<String>>();
+    try (Reader rdr = new FileReader(file);
+         CSVParser parser = CSVFormat.DEFAULT.parse(rdr)) {
+      for (CSVRecord rec : parser) {
+        List<String> fields = new ArrayList<String>();
+        for (String field : rec) {
+          fields.add(field);
+        }
+        res.add(fields);
+      }
+    }
+    return res;
+  }
+
+  void writeRecords(File file, String... lines) throws IOException {
+    try (Writer writer = new FileWriter(file)) {
+      for (String line : lines) {
+        writer.write(line + "\r\n");
+      }
+    }
+  }
+
+  public void testMigratedAuidsRecord() throws Exception {
+    String tmpdir = getTempDir().toString();
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tmpdir);
+    File file = mgr.getCacheConfigFile(CONFIG_FILE_MIGRATED_AUS);
+    assertEquals("au-migrated.txt", file.getName());
+    assertFalse(file.exists());
+
+    mgr.addMigratedAuid("auid1");
+    mgr.addMigratedAuids(ListUtil.list("auid2", "auid3", "auid1"));
+    mgr.removeMigratedAuid("auid2");
+    // No record for an AU that wasn't migrated
+    mgr.removeMigratedAuid("never");
+    assertTrue(mgr.isMigratedAuid("auid1"));
+    assertFalse(mgr.isMigratedAuid("auid2"));
+    assertTrue(mgr.isMigratedAuid("auid3"));
+    assertFalse(mgr.isMigratedAuid("never"));
+
+    // One record per change, in order, none for the repeated auid1
+    List expected = ListUtil.list(ListUtil.list("MIGRATED", "auid1"),
+                                  ListUtil.list("MIGRATED", "auid2"),
+                                  ListUtil.list("MIGRATED", "auid3"),
+                                  ListUtil.list("READDED", "auid2"));
+    assertEquals(expected, readRecords(file));
+
+    // An empty batch, as when a processed journal has no DELETE entries,
+    // opens the file to sync it but adds no record and keeps the existing ones
+    mgr.addMigratedAuids(Collections.<String>emptyList());
+    assertEquals(expected, readRecords(file));
+
+    // Reloading, as at startup, clears the set and replays the records in
+    // order
+    mgr.loadMigratedAuids();
+    assertTrue(mgr.isMigratedAuid("auid1"));
+    assertFalse(mgr.isMigratedAuid("auid2"));
+    assertTrue(mgr.isMigratedAuid("auid3"));
+
+    // Reset forgets them and deletes the record
+    mgr.resetMigratedAuids();
+    assertFalse(mgr.isMigratedAuid("auid1"));
+    assertFalse(file.exists());
+  }
+
+  // The record is loaded when the cache config dir becomes known, as at
+  // startup, replacing whatever was remembered before
+  public void testMigratedAuidsLoadedWithCacheConfigDir() throws Exception {
+    String tmpdir = getTempDir().toString();
+    File dir = new File(tmpdir, ConfigManager.DEFAULT_CONFIG_PATH);
+    assertTrue(dir.mkdirs());
+    writeRecords(new File(dir, CONFIG_FILE_MIGRATED_AUS),
+                 "MIGRATED,auid1", "MIGRATED,auid2", "READDED,auid1");
+    mgr.addMigratedAuid("auid0");
+    assertTrue(mgr.isMigratedAuid("auid0"));
+
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tmpdir);
+    assertEquals(dir, mgr.getCacheConfigDir());
+    assertFalse(mgr.isMigratedAuid("auid0"));
+    assertFalse(mgr.isMigratedAuid("auid1"));
+    assertTrue(mgr.isMigratedAuid("auid2"));
+  }
+
+  // Blank, short and unknown records are skipped, the rest still applied
+  public void testMigratedAuidsRecordMalformed() throws Exception {
+    String tmpdir = getTempDir().toString();
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tmpdir);
+    writeRecords(mgr.getCacheConfigFile(CONFIG_FILE_MIGRATED_AUS),
+                 "MIGRATED,auid1", "", "bogus", "FROB,auid2",
+                 "MIGRATED,auid2", "READDED,auid1");
+    mgr.loadMigratedAuids();
+    assertFalse(mgr.isMigratedAuid("auid1"));
+    assertTrue(mgr.isMigratedAuid("auid2"));
+    assertFalse(mgr.isMigratedAuid("bogus"));
+  }
+
+  // Without a cache config dir the record is kept in memory only
+  public void testMigratedAuidsNoCacheConfigDir() throws Exception {
+    assertNull(mgr.getCacheConfigDir());
+    mgr.addMigratedAuid("auid1");
+    mgr.addMigratedAuids(ListUtil.list("auid2"));
+    assertTrue(mgr.isMigratedAuid("auid1"));
+    assertTrue(mgr.isMigratedAuid("auid2"));
+    mgr.removeMigratedAuid("auid1");
+    assertFalse(mgr.isMigratedAuid("auid1"));
+    assertFalse(new File(CONFIG_FILE_MIGRATED_AUS).exists());
   }
 
   public void testLoadTitleDb() throws IOException {

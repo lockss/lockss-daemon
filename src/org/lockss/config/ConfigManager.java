@@ -390,6 +390,11 @@ public class ConfigManager implements LockssManager {
   public static final String CONFIG_FILE_PLUGIN_CONFIG = "plugin.txt";
   public static final String CONFIG_FILE_AU_CONFIG = "au.txt";
   public static final String CONFIG_FILE_AU_CONFIG_JOURNAL = "au-journal.txt";
+  /** Record of the AUs migrated to V2 and deleted here; see
+   * {@link #migratedAuids} */
+  public static final String CONFIG_FILE_MIGRATED_AUS = "au-migrated.txt";
+  static final String MIGRATED_AUS_ACTION_MIGRATED = "MIGRATED";
+  static final String MIGRATED_AUS_ACTION_READDED = "READDED";
   public static final String CONFIG_FILE_BUNDLED_TITLE_DB = "titledb.xml";
   public static final String CONFIG_FILE_CONTENT_SERVERS =
     "content_servers_config.txt";
@@ -677,10 +682,17 @@ public class ConfigManager implements LockssManager {
   private List<Pattern> expertConfigDenyPats;
   private boolean enableExpertConfig;
 
-  /** Set of migrated deleted AUs, to prevent re-adding them during
-   * migration */
+  /** AUs that were migrated to V2 and deleted here, so that Add AUs
+   * doesn't offer them again.  Kept across restarts in {@value
+   * #CONFIG_FILE_MIGRATED_AUS} in the cache config dir, one CSV record
+   * per line: MIGRATED,auid when an AU is deleted after migration,
+   * READDED,auid when one is deliberately added again.  The file is
+   * append-only and is replayed in order at startup. */
   private Set<String> migratedAuids =
     Collections.synchronizedSet(new HashSet<>());
+
+  /** Serializes changes to migratedAuids and to its file */
+  private final Object migratedAuidsLock = new Object();
 
   /** Set of AUs whose deactivation or deletion has been journalled but not
    * yet applied to au.txt, to prevent them being restarted during migration */
@@ -2031,6 +2043,7 @@ public class ConfigManager implements LockssManager {
     }
     cacheConfigDir = findRelDataDir(v, relConfigPath, true);
     cacheConfigInited = true;
+    loadMigratedAuids();
   }
 
   private void initCacheConfig(List configGenerations) {
@@ -2324,6 +2337,7 @@ public class ConfigManager implements LockssManager {
     }
 
     int cnt = 0;
+    List<String> deletedAuids = new ArrayList<>();
     try (Reader rdr = new FileReader(journal);
          CSVParser parser = CSVFormat.DEFAULT.parse(rdr)) {
       for (CSVRecord rec : parser) {
@@ -2341,7 +2355,7 @@ public class ConfigManager implements LockssManager {
 
         switch (action) {
           case "DELETE":
-            addMigratedAuid(auid);
+            deletedAuids.add(auid);
             fileConfig.removeConfigTree(prefix);
             cnt++;
             break;
@@ -2364,6 +2378,10 @@ public class ConfigManager implements LockssManager {
 
     writeCacheConfigFile(fileConfig, CONFIG_FILE_AU_CONFIG, "AU Configuration");
 
+    // The deleted AUs are recorded as migrated, and the record synced,
+    // before the journal is deleted, so a crash in between can't lose them
+    addMigratedAuids(deletedAuids);
+
     // The deactivations are now recorded in au.txt, so they no longer need
     // to be remembered separately
     resetPendingAuTxtAuids();
@@ -2375,20 +2393,138 @@ public class ConfigManager implements LockssManager {
     return true;
   }
 
+  /** Remember that an AU was migrated to V2 and deleted here.  The record
+   * is appended but not synced: until the au.txt journal is processed its
+   * DELETE entry replays this at startup, and {@link
+   * #processAuTxtJournal()} syncs the record before deleting the
+   * journal. */
   public void addMigratedAuid(String auid) {
-    migratedAuids.add(auid);
+    synchronized (migratedAuidsLock) {
+      if (migratedAuids.add(auid)) {
+        appendMigratedAuidRecords(MIGRATED_AUS_ACTION_MIGRATED,
+                                  Collections.singletonList(auid), false);
+      }
+    }
   }
 
+  /** Remember that the AUs were migrated to V2 and deleted here, with one
+   * write and one sync for all of them. */
+  public void addMigratedAuids(Collection<String> auids) {
+    synchronized (migratedAuidsLock) {
+      List<String> added = new ArrayList<>();
+      for (String auid : auids) {
+        if (migratedAuids.add(auid)) {
+          added.add(auid);
+        }
+      }
+      appendMigratedAuidRecords(MIGRATED_AUS_ACTION_MIGRATED, added, true);
+    }
+  }
+
+  /** Forget that an AU was migrated: it has deliberately been added
+   * again. */
   public void removeMigratedAuid(String auid) {
-    migratedAuids.remove(auid);
+    synchronized (migratedAuidsLock) {
+      if (migratedAuids.remove(auid)) {
+        appendMigratedAuidRecords(MIGRATED_AUS_ACTION_READDED,
+                                  Collections.singletonList(auid), true);
+      }
+    }
   }
 
+  /** Forget all migrated AUs and delete their record.  For tests. */
   public void resetMigratedAuids() {
-    migratedAuids.clear();
+    synchronized (migratedAuidsLock) {
+      migratedAuids.clear();
+      if (cacheConfigDir != null) {
+        File file = getCacheConfigFile(CONFIG_FILE_MIGRATED_AUS);
+        if (file.exists() && !FileUtil.safeDeleteFile(file)) {
+          log.warning("Couldn't delete migrated AUs record: " + file);
+        }
+      }
+    }
   }
 
   public boolean isMigratedAuid(String auid) {
     return migratedAuids.contains(auid);
+  }
+
+  /** Replace the migrated AUs with those recorded in the file, if there
+   * is a cache config dir.  Called when the dir is first known, before
+   * the au.txt journal is replayed. */
+  void loadMigratedAuids() {
+    synchronized (migratedAuidsLock) {
+      migratedAuids.clear();
+      if (cacheConfigDir == null) {
+        return;
+      }
+      File file = getCacheConfigFile(CONFIG_FILE_MIGRATED_AUS);
+      if (!file.exists()) {
+        return;
+      }
+      try (Reader rdr = new InputStreamReader(new FileInputStream(file),
+                                              "UTF-8");
+           CSVParser parser = CSVFormat.DEFAULT.parse(rdr)) {
+        for (CSVRecord rec : parser) {
+          if (rec.size() == 0 ||
+              (rec.size() == 1 && StringUtil.isNullString(rec.get(0)))) {
+            continue;
+          }
+          if (rec.size() < 2) {
+            log.warning("Ignoring malformed migrated AUs record: " + rec);
+            continue;
+          }
+          String action = rec.get(0);
+          String auid = rec.get(1);
+          switch (action) {
+          case MIGRATED_AUS_ACTION_MIGRATED:
+            migratedAuids.add(auid);
+            break;
+          case MIGRATED_AUS_ACTION_READDED:
+            migratedAuids.remove(auid);
+            break;
+          default:
+            log.warning("Ignoring unknown migrated AUs record action: " +
+                        action);
+          }
+        }
+      } catch (IOException e) {
+        log.error("Couldn't read migrated AUs record: " + file, e);
+      }
+      log.info("Loaded " + migratedAuids.size() + " migrated AUIDs from " +
+               file);
+    }
+  }
+
+  /** Append a record for each AUID to the migrated AUs file.  With sync
+   * true the file is opened and synced even if there are no AUIDs, so
+   * that earlier unsynced records reach the disk.  Called with
+   * migratedAuidsLock held. */
+  private void appendMigratedAuidRecords(String action,
+                                         Collection<String> auids,
+                                         boolean sync) {
+    if (cacheConfigDir == null) {
+      log.debug("No cache config dir, not recording migrated AUs");
+      return;
+    }
+    if (auids.isEmpty() && !sync) {
+      return;
+    }
+    File file = getCacheConfigFile(CONFIG_FILE_MIGRATED_AUS);
+    try (FileOutputStream fos = new FileOutputStream(file, true);
+         OutputStreamWriter osw = new OutputStreamWriter(fos, "UTF-8");
+         CSVPrinter printer = new CSVPrinter(osw, CSVFormat.DEFAULT)) {
+      for (String auid : auids) {
+        printer.printRecord(action, auid);
+      }
+      printer.flush();
+      if (sync) {
+        fos.getFD().sync();
+      }
+    } catch (IOException e) {
+      log.error("Couldn't record " + auids.size() + " " + action +
+                " AUIDs in " + file, e);
+    }
   }
 
   public void addPendingAuTxtAuid(String auid) {

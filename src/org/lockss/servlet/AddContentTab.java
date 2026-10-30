@@ -423,9 +423,15 @@ public class AddContentTab extends LockssServlet {
             divTable.addCell(titleTable, "colspan=\"7\"");
             int rowCount = 0;
             for (TitleConfig tc : configList) {
+                String auid = tc.getAuId(pluginMgr);
+                ArchivalUnit au = pluginMgr.getAuFromId(auid);
+                if (au == null && pluginMgr.isMigratedAuid(auid)) {
+                    // Migrated to V2 and deleted here, so not addable
+                    // again; left out as RemoteApi.findAusInSetsToAdd() does
+                    continue;
+                }
                 String rowClass = rowCss(rowCount);
                 TdbAu tdbAu = tc.getTdbAu();
-                ArchivalUnit au = pluginMgr.getAuFromId(tc.getAuId(pluginMgr));
                 String auName = HtmlUtil.encode(tc.getDisplayName(), HtmlUtil.ENCODE_TEXT);
                 String cleanedAuName = cleanAuName(auName);
                 divTable.newRow();

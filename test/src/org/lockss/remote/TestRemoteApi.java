@@ -617,6 +617,105 @@ public class TestRemoteApi extends LockssTestCase {
     }
   }
 
+  Configuration twoAuConfig(String auid1, String auid2) {
+    Properties p1 = new Properties();
+    p1.put(ConfigParamDescr.BASE_URL.getKey(), "http://foo.bar/");
+    p1.put(ConfigParamDescr.VOLUME_NUMBER.getKey(), "7");
+    Properties p2 = new Properties();
+    p2.put(ConfigParamDescr.BASE_URL.getKey(), "http://example.com/");
+    p2.put(ConfigParamDescr.VOLUME_NUMBER.getKey(), "42");
+    assertEquals(auid1, PluginManager.generateAuId(PID1, p1));
+    assertEquals(auid2, PluginManager.generateAuId(PID1, p2));
+    Configuration config = addAuTree(null, auid1, p1);
+    return addAuTree(config, auid2, p2);
+  }
+
+  static final String MIG_AUID1 =
+    PluginManager.generateAuId(PID1,
+			       PropUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(),
+						 "http://foo.bar/",
+						 ConfigParamDescr.VOLUME_NUMBER.getKey(),
+						 "7"));
+  static final String MIG_AUID2 =
+    PluginManager.generateAuId(PID1,
+			       PropUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(),
+						 "http://example.com/",
+						 ConfigParamDescr.VOLUME_NUMBER.getKey(),
+						 "42"));
+
+  // An AU migrated to V2 and deleted here isn't added back by a batch
+  // add, the path restore, Add Content and the AU config web service use
+  public void testBatchAddRefusesMigratedAu() throws Exception {
+    Configuration config = twoAuConfig(MIG_AUID1, MIG_AUID2);
+    mpm.migratedAuids.add(MIG_AUID1);
+
+    RemoteApi.BatchAuStatus bas =
+      rapi.batchAddAus(RemoteApi.BATCH_ADD_ADD, config, null);
+    assertEquals(2, bas.getStatusList().size());
+    RemoteApi.BatchAuStatus.Entry ent1 = findEntry(bas, MIG_AUID1);
+    assertEquals("Migrated", ent1.getStatus());
+    assertFalse(ent1.isOk());
+    assertMatchesRE("migrated to LOCKSS 2.x", ent1.getExplanation());
+    assertEquals("Added", findEntry(bas, MIG_AUID2).getStatus());
+
+    // Only the other AU was created
+    assertEquals(1, mpm.actions.size());
+    Pair pair = (Pair)mpm.actions.get(0);
+    assertEquals(MIG_AUID2, PluginManager.generateAuId((Plugin)pair.one,
+						       (Configuration)pair.two));
+  }
+
+  // Restoring a backup in which a migrated AU is inactive doesn't put it
+  // back in au.txt either
+  public void testRestoreRefusesInactiveMigratedAu() throws Exception {
+    Configuration config = twoAuConfig(MIG_AUID1, MIG_AUID2);
+    config.put(PluginManager.auConfigPrefix(MIG_AUID1) + "."
+	       + PluginManager.AU_PARAM_DISABLED, "true");
+    mpm.migratedAuids.add(MIG_AUID1);
+
+    RemoteApi.BatchAuStatus bas =
+      rapi.batchProcessAus(false, RemoteApi.BATCH_ADD_RESTORE, config, null);
+    assertEquals(2, bas.getStatusList().size());
+    assertEquals("Migrated", findEntry(bas, MIG_AUID1).getStatus());
+    assertFalse(findEntry(bas, MIG_AUID1).isOk());
+    assertTrue(findEntry(bas, MIG_AUID2).isOk());
+    assertTrue(bas.hasOk());
+
+    bas = rapi.batchProcessAus(true, RemoteApi.BATCH_ADD_RESTORE, config, null);
+    assertEquals("Migrated", findEntry(bas, MIG_AUID1).getStatus());
+    assertEquals("Added", findEntry(bas, MIG_AUID2).getStatus());
+    assertEquals(1, mpm.actions.size());
+  }
+
+  // Reactivating an inactive AU is unaffected by the record: it's in
+  // au.txt, so it wasn't deleted
+  public void testReactivateIgnoresMigratedRecord() throws Exception {
+    Configuration config = twoAuConfig(MIG_AUID1, MIG_AUID2);
+    Configuration stored = config.getConfigTree(
+      PluginManager.auConfigPrefix(MIG_AUID1)).copy();
+    stored.put(PluginManager.AU_PARAM_DISABLED, "true");
+    mpm.setStoredConfig(MIG_AUID1, stored);
+    mpm.migratedAuids.add(MIG_AUID1);
+
+    Configuration tree = ConfigManager.newConfiguration();
+    tree.addAsSubTree(stored, PluginManager.auConfigPrefix(MIG_AUID1));
+    RemoteApi.BatchAuStatus bas =
+      rapi.batchProcessAus(true, RemoteApi.BATCH_ADD_REACTIVATE, tree, null);
+    assertEquals("Added", findEntry(bas, MIG_AUID1).getStatus());
+    assertEquals(1, mpm.actions.size());
+  }
+
+  public void testAddByAuIdRefusesMigratedAu() throws Exception {
+    mpm.migratedAuids.add(MIG_AUID1);
+    RemoteApi.BatchAuStatus bas = rapi.addByAuId(MIG_AUID1, null);
+    assertEquals(1, bas.getStatusList().size());
+    RemoteApi.BatchAuStatus.Entry ent = findEntry(bas, MIG_AUID1);
+    assertEquals("Migrated", ent.getStatus());
+    assertFalse(ent.isOk());
+    assertMatchesRE("migrated to LOCKSS 2.x", ent.getExplanation());
+    assertEmpty(mpm.actions);
+  }
+
 
   class Pair {
     Object one, two;
@@ -696,6 +795,12 @@ public class TestRemoteApi extends LockssTestCase {
 
     public Configuration getStoredAuConfiguration(String auid) {
       return (Configuration)storedConfigs.get(auid);
+    }
+
+    Set<String> migratedAuids = new HashSet<String>();
+
+    public boolean isMigratedAuid(String auid) {
+      return migratedAuids.contains(auid);
     }
 
     public Configuration getCurrentAuConfiguration(String auid) {

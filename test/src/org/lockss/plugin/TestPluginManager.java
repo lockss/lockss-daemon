@@ -807,6 +807,50 @@ public class TestPluginManager extends LockssTestCase {
     assertTrue(mgr.isMigratedAuid(auid));
   }
 
+  // Of the AUs V2 has, only those neither configured nor running here
+  // are recorded as migrated
+  public void testRecordMigratedAuids() throws Exception {
+    mgr.startService();
+    minimalConfig();
+    String pid = new ThrowingMockPlugin().getPluginId();
+    String key = PluginManager.pluginKeyFromId(pid);
+
+    assertTrue(mgr.ensurePluginLoaded(key));
+    ThrowingMockPlugin plugin = (ThrowingMockPlugin) mgr.getPlugin(key);
+    Properties props = new Properties();
+    props.put("a", "active");
+    ArchivalUnit activeAu = mgr.createAndSaveAuConfiguration(plugin, props);
+    // An inactive AU: in the current config but not running, as after a
+    // reload
+    String inactive = PluginManager.generateAuId(key, "a~inactive");
+    ConfigurationUtil.addFromArgs(PluginManager.auConfigPrefix(inactive) + "."
+                                  + PluginManager.AU_PARAM_DISABLED, "true");
+    assertTrue(mgr.isInactiveAuId(inactive));
+    assertNull(mgr.getAuFromId(inactive));
+    String absent1 = PluginManager.generateAuId(key, "a~absent1");
+    String absent2 = PluginManager.generateAuId(key, "a~absent2");
+    theDaemon.getConfigManager().addMigratedAuid(absent2);
+    // V2's own plugin registry AU, which this daemon doesn't have
+    String registry =
+      PluginManager.generateAuId(RegistryPlugin.PLUGIN_ID,
+                                 PropUtil.fromArgs("base_url",
+                                                   "http://props.example.com/"));
+
+      List<String> v2Auids = ListUtil.list(activeAu.getAuId(), inactive,
+                                         absent1, absent2, registry);
+    // absent2 was already recorded
+    assertEquals(1, mgr.recordMigratedAuids(v2Auids));
+    assertTrue(mgr.isMigratedAuid(absent1));
+    assertTrue(mgr.isMigratedAuid(absent2));
+    assertFalse(mgr.isMigratedAuid(activeAu.getAuId()));
+    assertFalse(mgr.isMigratedAuid(inactive));
+    assertFalse(mgr.isMigratedAuid(registry));
+    assertEquals(0, mgr.recordMigratedAuids(v2Auids));
+    assertTrue(theDaemon.getConfigManager()
+               .getCacheConfigFile(ConfigManager.CONFIG_FILE_MIGRATED_AUS)
+               .exists());
+  }
+
   // ensure getAllAus() returns AUs in title sorted order
   public void testGetAllAus() throws Exception {
     mgr.startService();

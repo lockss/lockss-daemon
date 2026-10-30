@@ -1578,8 +1578,44 @@ public class PluginManager
     }
   }
 
+  /** True if the AU was migrated to V2 and deleted here, so mustn't be
+   * added again */
   public boolean isMigratedAuid(String auid) {
     return configMgr.isMigratedAuid(auid);
+  }
+
+  /**
+   * Record as migrated those of the given AUs (the ones V2 has) that this
+   * daemon has neither configured nor running.  An AU that V2 has but
+   * this daemon doesn't was migrated and deleted, possibly before this
+   * daemon kept the record; whether or not this box deleted it, it
+   * mustn't be added here again.  AUs configured but inactive
+   * (deactivated after a migration with errors) aren't recorded, so they
+   * stay reactivatable, and neither are plugin registry AUs, which are
+   * internal to each daemon.
+   * @param auids the AUIDs V2 has
+   * @return the number of AUs newly recorded
+   */
+  public int recordMigratedAuids(Collection<String> auids) {
+    synchronized (auAddDelLock) {
+      List<String> toRecord = new ArrayList<>();
+      for (String auid : auids) {
+        if (auid.indexOf('&') < 0) {
+          log.warning("Ignoring illegal AUID from V2: " + auid);
+          continue;
+        }
+        // The current config includes au.txt.  An AU added since the
+        // last reload isn't in it yet, but is running
+        if (getCurrentAuConfiguration(auid).isEmpty()
+            && auMap.get(auid) == null
+            && !RegistryPlugin.PLUGIN_ID.equals(pluginNameFromAuId(auid))
+            && !configMgr.isMigratedAuid(auid)) {
+          toRecord.add(auid);
+        }
+      }
+      configMgr.addMigratedAuids(toRecord);
+      return toRecord.size();
+    }
   }
 
   /**

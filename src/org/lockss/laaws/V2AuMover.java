@@ -45,6 +45,8 @@ import org.lockss.laaws.MigrationManager.OpType;
 import org.lockss.laaws.api.rs.StreamingArtifactsApi;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.V2RestClient;
+import org.lockss.laaws.model.cfg.AuConfigPageInfo;
+import org.lockss.laaws.model.cfg.AuConfiguration;
 import org.lockss.laaws.model.rs.*;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.*;
@@ -2201,7 +2203,8 @@ public class V2AuMover {
   }
 
   /**
-   * Get all of the Aus known to the V2 repository.
+   * Get all of the Aus known to the V2 repository, and record as migrated
+   * those AUs V2 has that this daemon doesn't.
    * @throws IOException if repostitory is unreachable.
    */
   void getV2Aus() throws IOException {
@@ -2215,9 +2218,7 @@ public class V2AuMover {
         token = pageInfo.getPageInfo().getContinuationToken();
       } while (!isAbort() && !StringUtil.isNullString(token));
     } catch (ApiException apie) {
-      if (apie.getCode() == 404) {
-        return;
-      } else {
+      if (apie.getCode() != 404) {
         //LockssRestServiceException: The namespace does not exist
         String err = "Error occurred while retrieving V2 AU list: " + apie.getMessage();
         totalCounters.addError(err);
@@ -2226,6 +2227,50 @@ public class V2AuMover {
           : apie.getCode() + " - " + apie.getMessage();
         throw new IOException("Unable to get AU List from V2 Repository: " + msg);
       }
+      // 404: the namespace doesn't exist yet, so the repository has no AUs
+    }
+    recordAusMigratedToV2();
+  }
+
+  /**
+   * Record here the AUs that V2 has, in its repository or configured in
+   * its configuration service, but that this daemon has neither
+   * configured nor running, so that Add AUs doesn't offer them.  They
+   * were migrated and deleted, possibly before this daemon kept the
+   * record (lockss-engineering-tasks#753).  Not done in a dry run.
+   */
+  void recordAusMigratedToV2() {
+    if (isDryRun()) {
+      log.debug("Dry run, not recording AUs migrated to V2");
+      return;
+    }
+    Set<String> auids = new HashSet<>(v2Aus);
+    try {
+      // The configuration service also has the AUs migrated without
+      // content, which the repository doesn't list
+      // content, which the repository doesn't list.  GET /aus is
+      // paginated like the repository's.
+      String token = null;
+      do {
+        AuConfigPageInfo page = cfgAusApiClient.getAllAuConfig(null, token);
+        for (AuConfiguration auc : page.getAuConfigs()) {
+          auids.add(auc.getAuId());
+        }
+        token = page.getPageInfo() == null ? null
+          : page.getPageInfo().getContinuationToken();
+      } while (!isAbort() && !StringUtil.isNullString(token));
+    } catch (ApiException apie) {
+      // Not fatal: the repository's AUs are recorded now, the rest at the
+      // next run
+      log.warning("Couldn't get V2 AU configurations, recording only the AUs with content: "
+                  + apie.getMessage());
+    }
+    int n = pluginManager.recordMigratedAuids(auids);
+    if (n > 0) {
+      String msg = "Recorded " + StringUtil.numberOfUnits(n, "AU") +
+        " migrated to V2 but not configured here";
+      log.info(msg);
+      logReport(msg);
     }
   }
 

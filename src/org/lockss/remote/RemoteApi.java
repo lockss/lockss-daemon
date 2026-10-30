@@ -1192,6 +1192,14 @@ public class RemoteApi
       stat.setStatus("Error", STATUS_ORDER_ERROR);
       stat.setExplanation("Internal inconsistency: " +
 			  "AU exists but is not in config file");
+    } else if (addOp != BATCH_ADD_REACTIVATE && pluginMgr.isMigratedAuid(auid)) {
+      // no current config because the AU was migrated to V2 and deleted
+      // here; don't add it back, active or inactive.  Add AUs leaves
+      // these out of its list; this covers restore and the other adders.
+      stat.setConfig(auConfig);
+      stat.setStatus("Migrated", STATUS_ORDER_LOW);
+      stat.setExplanation("Already migrated to LOCKSS 2.x and deleted " +
+			  "from this box");
     } else if (!AuUtil.isConfigCompatibleWithPlugin(auConfig,
 						    pluginp.getPlugin())) {
       // no current config, new config not compatible with plugin
@@ -2049,6 +2057,19 @@ public class RemoteApi
       statusEntry.setName(au.getName(), au.getPlugin());
       statusEntry.setStatus("Configured", STATUS_ORDER_WARN);
       statusEntry.setExplanation("AU already exists: " + au.getName());
+      status.add(statusEntry);
+
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
+      return status;
+    }
+
+    // Check whether the archival unit was migrated to V2 and deleted here.
+    if (pluginMgr.isMigratedAuid(auId)) {
+      // Yes: Report the problem.
+      statusEntry.setName(auId);
+      statusEntry.setStatus("Migrated", STATUS_ORDER_WARN);
+      statusEntry.setExplanation("Already migrated to LOCKSS 2.x and " +
+				 "deleted from this box: " + auId);
       status.add(statusEntry);
 
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
