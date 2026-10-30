@@ -380,6 +380,45 @@ class TestIsRegistryAuid(unittest.TestCase):
     self.assertFalse(rma.is_registry_auid(''))
 
 
+class TtyStringIO(io.StringIO):
+  '''A StringIO that claims to be a terminal.'''
+  def isatty(self):
+    return True
+
+
+class TestProgressBar(unittest.TestCase):
+  def test_not_a_terminal_draws_nothing(self):
+    out = io.StringIO()
+    bar = rma.ProgressBar('dirs', 3, stream=out)
+    for _ in range(3):
+      bar.advance()
+    bar.finish()
+    self.assertEqual('', out.getvalue())
+    self.assertEqual(3, bar.done)
+
+  def test_terminal(self):
+    out = TtyStringIO()
+    ticks = iter([0, 0.01, 0.02, 0.5])
+    bar = rma.ProgressBar('dirs', 4, stream=out, interval=0.1,
+                          clock=lambda: next(ticks))
+    bar.advance()                       # first call always draws
+    self.assertEqual('\r[%s] 1/4 dirs' % ('#' * 10 + '.' * 30),
+                     out.getvalue())
+    bar.advance()                       # 0.01 after the first: no redraw
+    bar.advance()                       # 0.02: no redraw
+    self.assertEqual(1, out.getvalue().count('\r'))
+    bar.advance()                       # last one always draws
+    self.assertTrue(out.getvalue().endswith('\r[%s] 4/4 dirs' % ('#' * 40)))
+    bar.finish()
+    self.assertTrue(out.getvalue().endswith('4/4 dirs\n'))
+
+  def test_empty_total_draws_nothing(self):
+    out = TtyStringIO()
+    bar = rma.ProgressBar('dirs', 0, stream=out)
+    bar.finish()
+    self.assertEqual('', out.getvalue())
+
+
 class TestScanRepo(unittest.TestCase):
 
   def setUp(self):
@@ -428,10 +467,12 @@ class TestScanRepo(unittest.TestCase):
     a2 = make_au_dir(cache2, 'b', AUID_A, hosts=['www.example.com'])
     index = {}
     stats = {'au_dirs': 0, 'dirs_skipped': 0}
-    rma.scan_repo(cache1, index, stats)
-    rma.scan_repo(cache2, index, stats)
+    bar = rma.ProgressBar('dirs', 2, stream=io.StringIO())
+    rma.scan_repo(cache1, index, stats, bar)
+    rma.scan_repo(cache2, index, stats, bar, rma.list_au_dirs(cache2))
     self.assertEqual({AUID_A: [(a1, 0), (a2, 1)]}, index)
     self.assertEqual(2, stats['au_dirs'])
+    self.assertEqual(2, bar.done)
     rows = rma.candidate_rows({AUID_A}, {AUID_A}, index)
     self.assertEqual([{'auid': AUID_A, 'repo_dir': a1 + ';' + a2,
                        'has_content': 1, 'content_entries': 1}], rows)

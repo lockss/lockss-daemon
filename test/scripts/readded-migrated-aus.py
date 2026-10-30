@@ -131,6 +131,9 @@ holding au.txt:
                             were fetched and how many each service listed.
                             Written as soon as the fetch is done, so that
                             it is kept if the repository scan then fails.
+
+While the AU directories are scanned, a progress bar is drawn on stderr if
+stderr is a terminal; it is left out when stderr is redirected.
 '''
 
 import argparse
@@ -144,6 +147,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -485,26 +489,81 @@ def count_content_entries(au_dir):
     return UNKNOWN_ENTRIES
 
 
-def scan_repo(cache, index, stats):
-  '''Add the AU directories under cache to index: auid -> list of
-  (au_dir, content_entries).  Updates stats['au_dirs'] and
-  stats['dirs_skipped'].'''
+class ProgressBar(object):
+  '''A progress bar on stream, redrawn in place at most every interval
+  seconds and completed with a newline by finish().  Nothing is drawn
+  unless the stream is a terminal, so that redirected stderr only gets
+  the messages.'''
+  WIDTH = 40
+
+  def __init__(self, label, total, stream=None, interval=0.1,
+               clock=time.monotonic):
+    self.label = label
+    self.total = total
+    self.stream = sys.stderr if stream is None else stream
+    self.interval = interval
+    self.clock = clock
+    self.done = 0
+    self.drawn = False
+    self.last_draw = None
+    isatty = getattr(self.stream, 'isatty', None)
+    self.enabled = total > 0 and isatty is not None and isatty()
+
+  def advance(self, n=1):
+    self.done += n
+    if not self.enabled:
+      return
+    now = self.clock()
+    if self.last_draw is None or now - self.last_draw >= self.interval \
+       or self.done >= self.total:
+      self.draw()
+      self.last_draw = now
+
+  def draw(self):
+    done = min(self.done, self.total)
+    filled = self.WIDTH * done // self.total
+    self.stream.write('\r[%s%s] %d/%d %s' % ('#' * filled,
+                                            '.' * (self.WIDTH - filled),
+                                            done, self.total, self.label))
+    self.stream.flush()
+    self.drawn = True
+
+  def finish(self):
+    if self.drawn:
+      self.stream.write('\n')
+      self.stream.flush()
+
+
+def list_au_dirs(cache):
+  '''The sorted subdirectories of cache, symbolic links left out.'''
   try:
-    subdirs = sorted(e.path for e in os.scandir(cache)
-                     if e.is_dir(follow_symlinks=False))
+    return sorted(e.path for e in os.scandir(cache)
+                  if e.is_dir(follow_symlinks=False))
   except OSError as e:
     raise SurveyError('Can\'t read %s: %s' % (cache, e.strerror))
+
+
+def scan_repo(cache, index, stats, progress=None, subdirs=None):
+  '''Add the AU directories under cache to index: auid -> list of
+  (au_dir, content_entries).  Updates stats['au_dirs'] and
+  stats['dirs_skipped'].  subdirs is list_au_dirs(cache) if already
+  listed; progress, a ProgressBar, is advanced once per directory.'''
+  if subdirs is None:
+    subdirs = list_au_dirs(cache)
   for au_dir in subdirs:
     try:
       auid = parse_java_props(read_bytes(os.path.join(au_dir, AU_ID_FILE))) \
         .get(AU_ID_PROP, '').strip()
     except (OSError, PropsError):
       auid = ''
-    if not auid:
+    if auid:
+      stats['au_dirs'] += 1
+      index.setdefault(auid, []).append((au_dir,
+                                         count_content_entries(au_dir)))
+    else:
       stats['dirs_skipped'] += 1
-      continue
-    stats['au_dirs'] += 1
-    index.setdefault(auid, []).append((au_dir, count_content_entries(au_dir)))
+    if progress is not None:
+      progress.advance()
 
 
 def candidate_rows(active, v2, index):
@@ -642,8 +701,16 @@ def survey(au_txt, repos, out, v2_file=None, v2_host=None,
   v2 -= registry
   index = {}
   stats = {'au_dirs': 0, 'dirs_skipped': 0}
-  for repo in repos:
-    scan_repo(cache_dir(repo), index, stats)
+  # List every repository first, so that the bar knows its total
+  caches = [cache_dir(repo) for repo in repos]
+  listed = [(cache, list_au_dirs(cache)) for cache in caches]
+  progress = ProgressBar('AU directories scanned',
+                         sum(len(subdirs) for _, subdirs in listed))
+  try:
+    for cache, subdirs in listed:
+      scan_repo(cache, index, stats, progress, subdirs)
+  finally:
+    progress.finish()
   rows = candidate_rows(active, v2, index)
   with_content = [r for r in rows if r['has_content']]
   to_delete = [r for r in rows if not r['has_content']]
