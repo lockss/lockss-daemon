@@ -709,8 +709,8 @@
     param[journal_id] = mscand
     #This journal is on a different platform from the others. Open Journal Systems 3.4.0.10
 
-    au < ready ; exists ; 1953 ; 1953 ; Mathematica Scandinavica Volume 1 ; 1 ; >
-    au < ready ; exists ; 1954 ; 1954 ; Mathematica Scandinavica Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1953 ; 1953 ; Mathematica Scandinavica Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1954 ; 1954 ; Mathematica Scandinavica Volume 2 ; 2 ; >
     au < frozen ; exists ; 1955 ; 1955 ; Mathematica Scandinavica Volume 3 ; 3 ; >
     au < crawling ; exists ; 1956 ; 1956 ; Mathematica Scandinavica Volume 4 ; 4 ; >
     au < crawling ; exists ; 1957 ; 1957 ; Mathematica Scandinavica Volume 5 ; 5 ; >
@@ -743,12 +743,12 @@
     au < frozen ; exists ; 1984 ; 1984 ; Mathematica Scandinavica Volume 54-55 ; 54-55 ; >
     au < crawling ; exists ; 1985 ; 1985 ; Mathematica Scandinavica Volume 56-57 ; 56-57 ; >
     au < crawling ; exists ; 1986 ; 1986 ; Mathematica Scandinavica Volume 58-59 ; 58-59 ; >
-    au < ready ; exists ; 1987 ; 1987 ; Mathematica Scandinavica Volume 60-61 ; 60-61 ; >
+    au < crawling ; exists ; 1987 ; 1987 ; Mathematica Scandinavica Volume 60-61 ; 60-61 ; >
     au < frozen ; exists ; 1988 ; 1988 ; Mathematica Scandinavica Volume 62-63 ; 62-63 ; >
     au < crawling ; exists ; 1989 ; 1989 ; Mathematica Scandinavica Volume 64-65 ; 64-65 ; >
     au < crawling ; exists ; 1990 ; 1990 ; Mathematica Scandinavica Volume 66-67 ; 66-67 ; >
     au < crawling ; exists ; 1991 ; 1991 ; Mathematica Scandinavica Volume 68-69 ; 68-69 ; >
-    au < ready ; exists ; 1992 ; 1992 ; Mathematica Scandinavica Volume 70-71 ; 70-71 ; >
+    au < crawling ; exists ; 1992 ; 1992 ; Mathematica Scandinavica Volume 70-71 ; 70-71 ; >
     au < frozen ; exists ; 1993 ; 1993 ; Mathematica Scandinavica Volume 72-73 ; 72-73 ; >
     au < crawling ; exists ; 1994 ; 1994 ; Mathematica Scandinavica Volume 74-75 ; 74-75 ; >
     au < crawling ; exists ; 1995 ; 1995 ; Mathematica Scandinavica Volume 76-77 ; 76-77 ; >
@@ -756,7 +756,7 @@
     au < frozen ; exists ; 1997 ; 1997 ; Mathematica Scandinavica Volume 80-81 ; 80-81 ; >
     au < frozen ; exists ; 1998 ; 1998 ; Mathematica Scandinavica Volume 82-83 ; 82-83 ; >
     au < crawling ; exists ; 1999 ; 1999 ; Mathematica Scandinavica Volume 84-85 ; 84-85 ; >
-    au < ready ; exists ; 2000 ; 2000 ; Mathematica Scandinavica Volume 86-87 ; 86-87 ; >
+    au < crawling ; exists ; 2000 ; 2000 ; Mathematica Scandinavica Volume 86-87 ; 86-87 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Mathematica Scandinavica Volume 88-89 ; 88-89 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Mathematica Scandinavica Volume 90-91 ; 90-91 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Mathematica Scandinavica Volume 92-93 ; 92-93 ; >

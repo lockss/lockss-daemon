@@ -297,7 +297,7 @@
       au < frozen ; exists ; 1991 ; Acta Sociologica Volume 34 ; 34 ; asja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1992 ; Acta Sociologica Volume 35 ; 35 ; asja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1993 ; Acta Sociologica Volume 36 ; 36 ; asja ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1994 ; Acta Sociologica Volume 37 ; 37 ; asja ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1994 ; Acta Sociologica Volume 37 ; 37 ; asja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1995 ; Acta Sociologica Volume 38 ; 38 ; asja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1996 ; Acta Sociologica Volume 39 ; 39 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1997 ; Acta Sociologica Volume 40 ; 40 ; asja ; https://journals.sagepub.com/ ; >
@@ -642,7 +642,7 @@
       au < frozen ; exists ; 1974-1975 ; Administration & Society Volume 6 ; 6 ; aasb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1975-1976 ; Administration & Society Volume 7 ; 7 ; aasb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1976-1977 ; Administration & Society Volume 8 ; 8 ; aasb ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1977-1978 ; Administration & Society Volume 9 ; 9 ; aasb ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1977-1978 ; Administration & Society Volume 9 ; 9 ; aasb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1978-1979 ; Administration & Society Volume 10 ; 10 ; aasb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1979-1980 ; Administration & Society Volume 11 ; 11 ; aasb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1980-1981 ; Administration & Society Volume 12 ; 12 ; aasb ; https://journals.sagepub.com/ ; >
@@ -910,7 +910,7 @@
       au < ready ; exists ; 1952-1953 ; Adult Education Volume 3 ; 3 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1953-1954 ; Adult Education Volume 4 ; 4 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1954-1955 ; Adult Education Volume 5 ; 5 ; aeqa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1955-1956 ; Adult Education Volume 6 ; 6 ; aeqa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1955-1956 ; Adult Education Volume 6 ; 6 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1956-1957 ; Adult Education Volume 7 ; 7 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1957-1958 ; Adult Education Volume 8 ; 8 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1958-1959 ; Adult Education Volume 9 ; 9 ; aeqa ; https://journals.sagepub.com/ ; >
@@ -1047,14 +1047,14 @@
     >
       #param[base_url] = http://adr.sagepub.com/
 
-      au < ready ; exists ; 1987 ; Advances in Dental Research Volume 1 ; 1 ; adra ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1987 ; Advances in Dental Research Volume 1 ; 1 ; adra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1988 ; Advances in Dental Research Volume 2 ; 2 ; adra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1989 ; Advances in Dental Research Volume 3 ; 3 ; adra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1990 ; Advances in Dental Research Volume 4 ; 4 ; adra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1991 ; Advances in Dental Research Volume 5 ; 5 ; adra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1992 ; Advances in Dental Research Volume 6 ; 6 ; adra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1993 ; Advances in Dental Research Volume 7 ; 7 ; adra ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1994 ; Advances in Dental Research Volume 8 ; 8 ; adra ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1994 ; Advances in Dental Research Volume 8 ; 8 ; adra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1995 ; Advances in Dental Research Volume 9 ; 9 ; adra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1996 ; Advances in Dental Research Volume 10 ; 10 ; adra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1997 ; Advances in Dental Research Volume 11 ; 11 ; adra ; https://journals.sagepub.com/ ; >
@@ -1480,7 +1480,7 @@
       au < ready ; exists ; 1990 ; AIDS Research and Human Retroviruses Volume 6 ; 6 ; aida ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1991 ; AIDS Research and Human Retroviruses Volume 7 ; 7 ; aida ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1992 ; AIDS Research and Human Retroviruses Volume 8 ; 8 ; aida ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1993 ; AIDS Research and Human Retroviruses Volume 9 ; 9 ; aida ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1993 ; AIDS Research and Human Retroviruses Volume 9 ; 9 ; aida ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1994 ; AIDS Research and Human Retroviruses Volume 10 ; 10 ; aida ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1995 ; AIDS Research and Human Retroviruses Volume 11 ; 11 ; aida ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1996 ; AIDS Research and Human Retroviruses Volume 12 ; 12 ; aida ; https://journals.sagepub.com/ ; >
@@ -5609,7 +5609,7 @@
       au < frozen ; exists ; 2022-2023 ; Assessment for Effective Intervention Volume 48 ; 48 ; aeib ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2023-2024 ; Assessment for Effective Intervention Volume 49 ; 49 ; aeib ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Assessment for Effective Intervention Volume 50 ; 50 ; aeib ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2025-2026 ; Assessment for Effective Intervention Volume 51 ; 51 ; aeib ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2025-2026 ; Assessment for Effective Intervention Volume 51 ; 51 ; aeib ; https://journals.sagepub.com/ ; >
       au < expected ; exists ; 2026-2027 ; Assessment for Effective Intervention Volume 52 ; 52 ; aeib ; https://journals.sagepub.com/ ; >
 
   }
@@ -6459,7 +6459,7 @@
       au < frozen ; exists ; 2013 ; Big Data Volume 1 ; 1 ; biga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2014 ; Big Data Volume 2 ; 2 ; biga ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2015 ; Big Data Volume 3 ; 3 ; biga ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2016 ; Big Data Volume 4 ; 4 ; biga ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2016 ; Big Data Volume 4 ; 4 ; biga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2017 ; Big Data Volume 5 ; 5 ; biga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2018 ; Big Data Volume 6 ; 6 ; biga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Big Data Volume 7 ; 7 ; biga ; https://journals.sagepub.com/ ; >
@@ -8748,7 +8748,7 @@
       au < manifest ; exists ; 2009 ; Cancer Biotherapy and Radiopharmaceuticals Volume 24 ; 24 ; cbta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2010 ; Cancer Biotherapy and Radiopharmaceuticals Volume 25 ; 25 ; cbta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2011 ; Cancer Biotherapy and Radiopharmaceuticals Volume 26 ; 26 ; cbta ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2012 ; Cancer Biotherapy and Radiopharmaceuticals Volume 27 ; 27 ; cbta ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2012 ; Cancer Biotherapy and Radiopharmaceuticals Volume 27 ; 27 ; cbta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2013 ; Cancer Biotherapy and Radiopharmaceuticals Volume 28 ; 28 ; cbta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2014 ; Cancer Biotherapy and Radiopharmaceuticals Volume 29 ; 29 ; cbta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2015 ; Cancer Biotherapy and Radiopharmaceuticals Volume 30 ; 30 ; cbta ; https://journals.sagepub.com/ ; >
@@ -38079,7 +38079,7 @@
     au < manifest ; exists ; 2015 ; Journal of Neurotrauma Volume 31 ; 31 ; nrta ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; Journal of Neurotrauma Volume 32 ; 32 ; nrta ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; Journal of Neurotrauma Volume 33 ; 33 ; nrta ; https://journals.sagepub.com/ ; >
-    au < ready ; exists ; 2018 ; Journal of Neurotrauma Volume 34 ; 34 ; nrta ; https://journals.sagepub.com/ ; >
+    au < crawling ; exists ; 2018 ; Journal of Neurotrauma Volume 34 ; 34 ; nrta ; https://journals.sagepub.com/ ; >
     au < ready ; exists ; 2019 ; Journal of Neurotrauma Volume 35 ; 35 ; nrta ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; Journal of Neurotrauma Volume 36 ; 36 ; nrta ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; Journal of Neurotrauma Volume 37 ; 37 ; nrta ; https://journals.sagepub.com/ ; >
@@ -47554,7 +47554,7 @@
     au < manifest ; exists ; 2016 ; New Space Volume 4 ; 4 ; nspa ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; New Space Volume 5 ; 5 ; nspa ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2018 ; New Space Volume 6 ; 6 ; nspa ; https://journals.sagepub.com/ ; >
-    au < ready ; exists ; 2019 ; New Space Volume 7 ; 7 ; nspa ; https://journals.sagepub.com/ ; >
+    au < crawling ; exists ; 2019 ; New Space Volume 7 ; 7 ; nspa ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; New Space Volume 8 ; 8 ; nspa ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; New Space Volume 9 ; 9 ; nspa ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2022 ; New Space Volume 10 ; 10 ; nspa ; https://journals.sagepub.com/ ; >
@@ -59290,7 +59290,7 @@
       au < manifest ; exists ; 2015 ; Sustainability : The Journal of Record Volume 8 ; 8 ; sclb ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Sustainability : The Journal of Record Volume 9 ; 9 ; sclb ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Sustainability : The Journal of Record Volume 10 ; 10 ; sclb ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2018 ; Sustainability : The Journal of Record Volume 11 ; 11 ; sclb ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2018 ; Sustainability : The Journal of Record Volume 11 ; 11 ; sclb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Sustainability : The Journal of Record Volume 12 ; 12 ; sclb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Sustainability : The Journal of Record Volume 13 ; 13 ; sclb ; https://journals.sagepub.com/ ; >
 
@@ -62340,7 +62340,7 @@
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1841 ; 1841 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1842 ; 1842 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1843 ; 1843 ; trra ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2003 ; Transportation Research Record Volume 1844 ; 1844 ; trra ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2003 ; Transportation Research Record Volume 1844 ; 1844 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1845 ; 1845 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1846 ; 1846 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1847 ; 1847 ; trra ; https://journals.sagepub.com/ ; >
@@ -63631,7 +63631,7 @@
       au < manifest ; exists ; 2000 ; Tumori Journal Volume 86 ; 86 ; tmja ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2001 ; Tumori Journal Volume 87 ; 87 ; tmja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Tumori Journal Volume 88 ; 88 ; tmja ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2003 ; Tumori Journal Volume 89 ; 89 ; tmja ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2003 ; Tumori Journal Volume 89 ; 89 ; tmja ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2004 ; Tumori Journal Volume 90 ; 90 ; tmja ; https://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2005 ; Tumori Journal Volume 91 ; 91 ; tmja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2006 ; Tumori Journal Volume 92 ; 92 ; tmja ; https://journals.sagepub.com/ ; >
@@ -63922,7 +63922,7 @@
       au < manifest ; exists ; 2000 ; Urban Studies Volume 37 ; 37 ; usja ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2001 ; Urban Studies Volume 38 ; 38 ; usja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Urban Studies Volume 39 ; 39 ; usja ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2003 ; Urban Studies Volume 40 ; 40 ; usja ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2003 ; Urban Studies Volume 40 ; 40 ; usja ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2004 ; Urban Studies Volume 41 ; 41 ; usja ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2005 ; Urban Studies Volume 42 ; 42 ; usja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2006 ; Urban Studies Volume 43 ; 43 ; usja ; https://journals.sagepub.com/ ; >
@@ -64155,7 +64155,7 @@
 
       au < manifest ; exists ; 2001 ; Vector-Borne and Zoonotic Diseases Volume 1 ; 1 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Vector-Borne and Zoonotic Diseases Volume 2 ; 2 ; vbza ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2003 ; Vector-Borne and Zoonotic Diseases Volume 3 ; 3 ; vbza ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2003 ; Vector-Borne and Zoonotic Diseases Volume 3 ; 3 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2004 ; Vector-Borne and Zoonotic Diseases Volume 4 ; 4 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2005 ; Vector-Borne and Zoonotic Diseases Volume 5 ; 5 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2006 ; Vector-Borne and Zoonotic Diseases Volume 6 ; 6 ; vbza ; https://journals.sagepub.com/ ; >
@@ -64164,7 +64164,7 @@
       au < ready ; exists ; 2009 ; Vector-Borne and Zoonotic Diseases Volume 9 ; 9 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2010 ; Vector-Borne and Zoonotic Diseases Volume 10 ; 10 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2011 ; Vector-Borne and Zoonotic Diseases Volume 11 ; 11 ; vbza ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2012 ; Vector-Borne and Zoonotic Diseases Volume 12 ; 12 ; vbza ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2012 ; Vector-Borne and Zoonotic Diseases Volume 12 ; 12 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2013 ; Vector-Borne and Zoonotic Diseases Volume 13 ; 13 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2014 ; Vector-Borne and Zoonotic Diseases Volume 14 ; 14 ; vbza ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2015 ; Vector-Borne and Zoonotic Diseases Volume 15 ; 15 ; vbza ; https://journals.sagepub.com/ ; >
@@ -64512,7 +64512,7 @@
       au < frozen ; exists ; 2005 ; Viral Immunology Volume 18 ; 18 ; vima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2006 ; Viral Immunology Volume 19 ; 19 ; vima ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2007 ; Viral Immunology Volume 20 ; 20 ; vima ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2008 ; Viral Immunology Volume 21 ; 21 ; vima ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2008 ; Viral Immunology Volume 21 ; 21 ; vima ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2009 ; Viral Immunology Volume 22 ; 22 ; vima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2010 ; Viral Immunology Volume 23 ; 23 ; vima ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2011 ; Viral Immunology Volume 24 ; 24 ; vima ; https://journals.sagepub.com/ ; >
