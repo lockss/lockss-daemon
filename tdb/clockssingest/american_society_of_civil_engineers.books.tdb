@@ -528,15 +528,15 @@
     au < doesNotExist ; exists ; 2000 ; 9780784404256 ; 9780784470428 ; 9780784470428 ; Geometric Design Projects for Highways (9780784404256) ; >
     #au < manifest ; exists ; 2004 ; 9780784407264 ; 9780784471098 ; 9780784407264 ; Design of Marine Facilities for the Berthing, Mooring, and Repair of Vessels (9780784407264) ; > #duplicate
     au < frozen ; exists ; 2014 ;  ; 9780784477991 ; 9780784477991 ; LEAME Software and User's Manual (9780784477991) ; >
-    au < frozen ; exists ; 2025 ; 9780784416365 ; 9780784486245 ; 9780784486245 ; Design Snow Loads for Ground Mounted Solar Panels (9780784486245) ; >
-    au < frozen ; exists ; 2025 ; 9780784416297 ; 9780784485897 ; 9780784485897 ; Design of Blast-Resistant Buildings in Energy and Industrial Facilities (9780784485897) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486276 ; 9780784486276 ; Low Impact Development Hydrologic Modeling (9780784486276) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486399 ; 9780784486399 ; Prestandard for Assessing the Embodied Carbon of Structural Systems for Buildings (9780784486399) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784485927 ; 9780784485927 ; SE 2050 Commitment Program (9780784485927) ; >
-    au < frozen ; exists ; 2025 ; 9780784416334 ; 9780784486061 ; 9780784486061 ; Scouring at Bridge Piers Using Artificial Intelligence Models (9780784486061) ; >
+    au < finished ; manifest ; 2025 ; 9780784416365 ; 9780784486245 ; 9780784486245 ; Design Snow Loads for Ground Mounted Solar Panels (9780784486245) ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ; 9780784416297 ; 9780784485897 ; 9780784485897 ; Design of Blast-Resistant Buildings in Energy and Industrial Facilities (9780784485897) ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486276 ; 9780784486276 ; Low Impact Development Hydrologic Modeling (9780784486276) ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486399 ; 9780784486399 ; Prestandard for Assessing the Embodied Carbon of Structural Systems for Buildings (9780784486399) ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2025 ;  ; 9780784485927 ; 9780784485927 ; SE 2050 Commitment Program (9780784485927) ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2025 ; 9780784416334 ; 9780784486061 ; 9780784486061 ; Scouring at Bridge Piers Using Artificial Intelligence Models (9780784486061) ; reingest3.clockss.org:8083 >
     au < doesNotExist ; exists ; 2025 ; 9780784416341 ; 9780784486092 ; 9780784486092 ; Static Slope Stability in Practice (9780784486092) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486337 ; 9780784486337 ; Structural Reliability Guidance in ASCE 7-22 (9780784486337) ; >
-    au < frozen ; exists ; 2025 ; 9780784416358 ; 9780784486160 ; 9780784486160 ; Waterfront Facilities Inspection and Assessment (9780784486160) ; >
+    au < finished ; manifest ; 2025 ;  ; 9780784486337 ; 9780784486337 ; Structural Reliability Guidance in ASCE 7-22 (9780784486337) ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ; 9780784416358 ; 9780784486160 ; 9780784486160 ; Waterfront Facilities Inspection and Assessment (9780784486160) ; reingest2.clockss.org:8085 >
 
     # Not books
     au < doesNotExist ; exists ; 2015 ;  ; 9780784479001 ; 9780784479001 ; Publishing Proceedings with ASCE : A Guide for Editors and Conference Committees (9780784479001) ; >
@@ -760,7 +760,7 @@
     #au < exists ; exists ; 2023 ; 9780784415955 ; 9780784483831 ; 9780784415955 ; Specification for the Design of Cold-Formed Stainless Steel Structural Members (9780784415955) ; >
     #au < exists ; exists ; 2023 ;  ; 9780784484807 ; 9780784484807 ; Tier 1 Checklists for Seismic Evaluation and Retrofit of Existing Buildings: Fillable Forms for Standard ASCE/SEI 41-23 (9780784484807) ; >
     #au < exists ; exists ; 2025 ; 9780784414347 ; 9780784480496 ; 9780784414347 ; Calculation of the Saturated Hydraulic Conductivity of Fine-Grained Soils (9780784414347) ; >
-    au < frozen ; exists ; 2025 ; 9780784416259 ; 9780784485781 ; 9780784485781 ; Flood Resistant Design and Construction (9780784485781) ; >
+    au < finished ; manifest ; 2025 ; 9780784416259 ; 9780784485781 ; 9780784485781 ; Flood Resistant Design and Construction (9780784485781) ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1545,43 +1545,43 @@
     #au < exists ; exists ; 2001 ; 9780784405826 ;  ; 9780784405826 ; Automated People Movers (9780784405826) ; >
     #au < exists ; exists ; 2008 ; 9780784410059 ;  ; 9780784410059 ; Airfield and Highway Pavements (9780784410059) ; >
     #au < exists ; exists ; 2012 ; 9780784412435 ;  ; 9780784412435 ; Civil Engineering and Urban Planning 2012 (9780784412435) ; > #duplicate
-    au < frozen ; exists ; 2025 ;  ; 9780784486214 ; 9780784486214 ; Airfield and Highway Pavements 2025 (9780784486214) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486221 ; 9780784486221 ; Airfield and Highway Pavements 2025 (9780784486221) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486238 ; 9780784486238 ; Airfield and Highway Pavements 2025 (9780784486238) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486269 ; 9780784486269 ; CICTP 2025 (9780784486269) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486481 ; 9780784486481 ; CISSC 2025 (9780784486481) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486115 ; 9780784486115 ; Computing in Civil Engineering 2024 (9780784486115) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486122 ; 9780784486122 ; Computing in Civil Engineering 2024 (9780784486122) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486139 ; 9780784486139 ; Computing in Civil Engineering 2024 (9780784486139) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486542 ; 9780784486542 ; Electrical Transmission and Substation Structures 2025 (9780784486542) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784485682 ; 9780784485682 ; Geo-EnvironMeet 2025 (9780784485682) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784485699 ; 9780784485699 ; Geo-EnvironMeet 2025 (9780784485699) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784485705 ; 9780784485705 ; Geo-EnvironMeet 2025 (9780784485705) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486498 ; 9780784486498 ; Geo-Extreme 2025 (9780784486498) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486504 ; 9780784486504 ; Geo-Extreme 2025 (9780784486504) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486511 ; 9780784486511 ; Geo-Extreme 2025 (9780784486511) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486528 ; 9780784486528 ; Geo-Extreme 2025 (9780784486528) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486535 ; 9780784486535 ; Geo-Extreme 2025 (9780784486535) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784485880 ; 9780784485880 ; Geoenvironmental Engineering (9780784485880) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784485965 ; 9780784485965 ; Geotechnical Frontiers 2025 (9780784485965) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784485972 ; 9780784485972 ; Geotechnical Frontiers 2025 (9780784485972) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784485989 ; 9780784485989 ; Geotechnical Frontiers 2025 (9780784485989) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784485996 ; 9780784485996 ; Geotechnical Frontiers 2025 (9780784485996) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486009 ; 9780784486009 ; Geotechnical Frontiers 2025 (9780784486009) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486016 ; 9780784486016 ; Geotechnical Frontiers 2025 (9780784486016) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486047 ; 9780784486047 ; ICCESP 2024 (9780784486047) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784485910 ; 9780784485910 ; ICCREM 2024 (9780784485910) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486627 ; 9780784486627 ; ICCREM 2025 (9780784486627) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784485941 ; 9780784485941 ; ICRT 2024 (9780784485941) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486191 ; 9780784486191 ; International Conference on Transportation and Development 2025 (9780784486191) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486207 ; 9780784486207 ; International Conference on Transportation and Development 2025 (9780784486207) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486368 ; 9780784486368 ; Pipelines 2025 (9780784486368) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486375 ; 9780784486375 ; Pipelines 2025 (9780784486375) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486382 ; 9780784486382 ; Pipelines 2025 (9780784486382) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486146 ; 9780784486146 ; Ports 2025 (9780784486146) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486153 ; 9780784486153 ; Ports 2025 (9780784486153) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486085 ; 9780784486085 ; Structures Congress 2025 (9780784486085) ; >
-    au < frozen ; exists ; 2025 ;  ; 9780784486184 ; 9780784486184 ; World Environmental and Water Resources Congress 2025 (9780784486184) ; >
+    au < finished ; manifest ; 2025 ;  ; 9780784486214 ; 9780784486214 ; Airfield and Highway Pavements 2025 (9780784486214) ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486221 ; 9780784486221 ; Airfield and Highway Pavements 2025 (9780784486221) ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486238 ; 9780784486238 ; Airfield and Highway Pavements 2025 (9780784486238) ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486269 ; 9780784486269 ; CICTP 2025 (9780784486269) ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486481 ; 9780784486481 ; CISSC 2025 (9780784486481) ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486115 ; 9780784486115 ; Computing in Civil Engineering 2024 (9780784486115) ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486122 ; 9780784486122 ; Computing in Civil Engineering 2024 (9780784486122) ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486139 ; 9780784486139 ; Computing in Civil Engineering 2024 (9780784486139) ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486542 ; 9780784486542 ; Electrical Transmission and Substation Structures 2025 (9780784486542) ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784485682 ; 9780784485682 ; Geo-EnvironMeet 2025 (9780784485682) ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784485699 ; 9780784485699 ; Geo-EnvironMeet 2025 (9780784485699) ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784485705 ; 9780784485705 ; Geo-EnvironMeet 2025 (9780784485705) ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486498 ; 9780784486498 ; Geo-Extreme 2025 (9780784486498) ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486504 ; 9780784486504 ; Geo-Extreme 2025 (9780784486504) ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486511 ; 9780784486511 ; Geo-Extreme 2025 (9780784486511) ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486528 ; 9780784486528 ; Geo-Extreme 2025 (9780784486528) ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486535 ; 9780784486535 ; Geo-Extreme 2025 (9780784486535) ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784485880 ; 9780784485880 ; Geoenvironmental Engineering (9780784485880) ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2025 ;  ; 9780784485965 ; 9780784485965 ; Geotechnical Frontiers 2025 (9780784485965) ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784485972 ; 9780784485972 ; Geotechnical Frontiers 2025 (9780784485972) ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784485989 ; 9780784485989 ; Geotechnical Frontiers 2025 (9780784485989) ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784485996 ; 9780784485996 ; Geotechnical Frontiers 2025 (9780784485996) ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486009 ; 9780784486009 ; Geotechnical Frontiers 2025 (9780784486009) ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486016 ; 9780784486016 ; Geotechnical Frontiers 2025 (9780784486016) ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486047 ; 9780784486047 ; ICCESP 2024 (9780784486047) ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784485910 ; 9780784485910 ; ICCREM 2024 (9780784485910) ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486627 ; 9780784486627 ; ICCREM 2025 (9780784486627) ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784485941 ; 9780784485941 ; ICRT 2024 (9780784485941) ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486191 ; 9780784486191 ; International Conference on Transportation and Development 2025 (9780784486191) ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486207 ; 9780784486207 ; International Conference on Transportation and Development 2025 (9780784486207) ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486368 ; 9780784486368 ; Pipelines 2025 (9780784486368) ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486375 ; 9780784486375 ; Pipelines 2025 (9780784486375) ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486382 ; 9780784486382 ; Pipelines 2025 (9780784486382) ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486146 ; 9780784486146 ; Ports 2025 (9780784486146) ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486153 ; 9780784486153 ; Ports 2025 (9780784486153) ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486085 ; 9780784486085 ; Structures Congress 2025 (9780784486085) ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2025 ;  ; 9780784486184 ; 9780784486184 ; World Environmental and Water Resources Congress 2025 (9780784486184) ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2026 ;  ; 9780784486603 ; 9780784486603 ; ASCE Convention 2025 (9780784486603) ; >
 
   }
