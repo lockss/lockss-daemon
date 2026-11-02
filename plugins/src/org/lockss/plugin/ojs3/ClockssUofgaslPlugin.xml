@@ -48,7 +48,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.ojs3.Ojs3Plugin</string>
+    <string>org.lockss.plugin.ojs3.ClockssOjs3Plugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
@@ -59,12 +59,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>"University of Florida George A. Smathers Libraries Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <entry>
-    <string>clockss_override</string>
-    <map>
-      <entry>
-        <string>au_def_pause_time</string>
-        <long>12000</long>
-      </entry>
-    </map>
-  </entry>  
+    <string>au_def_pause_time</string>
+    <long>12000</long>
+  </entry>
 </map>
