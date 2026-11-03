@@ -1316,6 +1316,8 @@ public class TestConfigManager extends LockssTestCase {
             PropUtil.fromArgs("one", "1", "two", "2"));
     String deleteAuid = PluginManager.generateAuId(pluginKey,
             PropUtil.fromArgs("one", "3", "two", "4"));
+    String migratedAuid = PluginManager.generateAuId(pluginKey,
+            PropUtil.fromArgs("one", "5", "two", "6"));
     String deactPrefix = PluginManager.auConfigPrefix(deactAuid);
     String deletePrefix = PluginManager.auConfigPrefix(deleteAuid);
 
@@ -1330,6 +1332,9 @@ public class TestConfigManager extends LockssTestCase {
          CSVPrinter printer = new CSVPrinter(writer, CSVFormat.DEFAULT)) {
       printer.printRecord("DEACTIVATE", deactAuid);
       printer.printRecord("DELETE", deleteAuid);
+      // Not configured: recorded.  Configured: ignored.
+      printer.printRecord("MIGRATED", migratedAuid);
+      printer.printRecord("MIGRATED", deactAuid);
     }
 
     assertTrue(mgr.processAuTxtJournal());
@@ -1340,10 +1345,14 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("true", config.get(deactPrefix + "." + PluginManager.AU_PARAM_DISABLED));
     assertTrue(config.getConfigTree(deletePrefix).isEmpty());
 
-    // The deleted AU is recorded as migrated, the deactivated one isn't
+    // The deleted AU and the unconfigured MIGRATED one are recorded as
+    // migrated, the deactivated one isn't, even though a MIGRATED entry
+    // named it
     assertTrue(mgr.isMigratedAuid(deleteAuid));
+    assertTrue(mgr.isMigratedAuid(migratedAuid));
     assertFalse(mgr.isMigratedAuid(deactAuid));
-    assertEquals(ListUtil.list(ListUtil.list("MIGRATED", deleteAuid)),
+    assertEquals(ListUtil.list(ListUtil.list("MIGRATED", deleteAuid),
+                               ListUtil.list("MIGRATED", migratedAuid)),
                  readRecords(mgr.getCacheConfigFile(CONFIG_FILE_MIGRATED_AUS)));
   }
 

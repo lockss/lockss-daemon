@@ -2312,6 +2312,9 @@ public class ConfigManager implements LockssManager {
    * Apply pending journaled AU delete/deactivate operations to au.txt.
    * This is called during startup before au.txt is included in the current
    * configuration, and may also be called explicitly after migration.
+   * A MIGRATED entry only records the AU as migrated to V2, if au.txt
+   * doesn't configure it; it is how the record is filled in for AUs
+   * deleted before the daemon kept it (lockss-engineering-tasks#753).
    *
    * @return true if a journal was found and applied
    * @throws IOException if the journal or au.txt could not be processed
@@ -2337,7 +2340,7 @@ public class ConfigManager implements LockssManager {
     }
 
     int cnt = 0;
-    List<String> deletedAuids = new ArrayList<>();
+    List<String> toRecord = new ArrayList<>();
     try (Reader rdr = new FileReader(journal);
          CSVParser parser = CSVFormat.DEFAULT.parse(rdr)) {
       for (CSVRecord rec : parser) {
@@ -2355,9 +2358,19 @@ public class ConfigManager implements LockssManager {
 
         switch (action) {
           case "DELETE":
-            deletedAuids.add(auid);
+            toRecord.add(auid);
             fileConfig.removeConfigTree(prefix);
             cnt++;
+            break;
+
+          case "MIGRATED":
+            if (fileConfig.getConfigTree(prefix).isEmpty()) {
+              toRecord.add(auid);
+              cnt++;
+            } else {
+              log.warning("Ignoring migrated journal entry for configured AU: "
+                          + auid);
+            }
             break;
 
           case "DEACTIVATE":
@@ -2378,9 +2391,10 @@ public class ConfigManager implements LockssManager {
 
     writeCacheConfigFile(fileConfig, CONFIG_FILE_AU_CONFIG, "AU Configuration");
 
-    // The deleted AUs are recorded as migrated, and the record synced,
-    // before the journal is deleted, so a crash in between can't lose them
-    addMigratedAuids(deletedAuids);
+    // The deleted and the MIGRATED AUs are recorded as migrated, and the
+    // record synced, before the journal is deleted, so a crash in between
+    // can't lose them
+    addMigratedAuids(toRecord);
 
     // The deactivations are now recorded in au.txt, so they no longer need
     // to be remembered separately

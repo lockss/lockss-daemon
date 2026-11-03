@@ -105,6 +105,12 @@ leaves the AU directory in the repository, where nothing refers to it any
 more; with-content.tsv says which directories those are, to remove by hand
 once V2 is known to have what they hold.
 
+The journal file also gets a MIGRATED record for every V2 AUID that au.txt
+doesn't configure at all, active or not. The daemon only records those in
+au-migrated.txt, so that Add AUs refuses them from then on; this fills in
+the record for AUs migrated and deleted before the daemon kept one. Plugin
+registry AUs are left out.
+
 Output in OUT_DIR, which must not be in a repository or in the directory
 holding au.txt:
 
@@ -118,13 +124,15 @@ holding au.txt:
                             unless --delete-with-content is given.
   au-journal-additions.csv  a DELETE record for each candidate without
                             content or without an AU directory, or, with
-                            --delete-with-content, for every candidate, in
-                            the format of the daemon's au-journal.txt. To
-                            apply it: stop the daemon, append the file to
-                            au-journal.txt in the config directory, start
-                            the daemon. It removes those AUs from au.txt
-                            before loading it and logs "Processed N AU
-                            config journal entries".
+                            --delete-with-content, for every candidate,
+                            then a MIGRATED record for each V2 AUID not
+                            in au.txt, in the format of the daemon's
+                            au-journal.txt. To apply it: stop the daemon,
+                            append the file to au-journal.txt in the
+                            config directory, start the daemon. It removes
+                            the DELETE AUs from au.txt before loading it,
+                            records both kinds in au-migrated.txt and logs
+                            "Processed N AU config journal entries".
   summary.txt               the counts also printed on stdout
   v2-auids.txt              with --host: the fetched AUIDs, one per line,
                             after two # lines saying where and when they
@@ -163,8 +171,10 @@ AU_PARAM_DISABLED = 'reserved.disabled'
 AU_ID_FILE = '#au_id_file'
 AU_ID_PROP = 'au.id'
 CACHE_ROOT_NAME = 'cache'
-# The action ConfigManager.processAuTxtJournal() applies as a deletion
+# The actions ConfigManager.processAuTxtJournal() applies as a deletion
+# and as a record of migration without deletion
 JOURNAL_DELETE = 'DELETE'
+JOURNAL_MIGRATED = 'MIGRATED'
 # RegistryPlugin.PLUGIN_ID in src/org/lockss/plugin/RegistryPlugin.java is
 # "org.lockss.plugin.RegistryPlugin"; this is it as a plugin key, with |
 # for .  Registry AUs are internal to each daemon
@@ -593,13 +603,16 @@ def write_tsv(path, rows):
     w.writerows(rows)
 
 
-def write_journal(path, auids):
-  '''DELETE records in the format of au-journal.txt: the csv module's
-  default dialect matches commons-csv CSVFormat.DEFAULT.'''
+def write_journal(path, deletes, migrated):
+  '''DELETE records for deletes, then MIGRATED records for migrated, in
+  the format of au-journal.txt: the csv module's default dialect matches
+  commons-csv CSVFormat.DEFAULT.'''
   with open(path, 'w', newline='') as f:
     w = csv.writer(f)
-    for auid in auids:
+    for auid in deletes:
       w.writerow([JOURNAL_DELETE, auid])
+    for auid in migrated:
+      w.writerow([JOURNAL_MIGRATED, auid])
 
 
 def summary_lines(counts, delete_with_content=False):
@@ -623,6 +636,7 @@ def summary_lines(counts, delete_with_content=False):
     ('no_dir', '    of which without an AU directory'),
     ('with_content', '  with content, to delete too' if delete_with_content
                      else '  with content, to decide'),
+    ('to_record', 'V2 AUIDs not in au.txt, to record as migrated'),
     ('registry', 'Plugin registry AUs left out'),
     ('au_dirs', 'AU directories scanned'),
     ('dirs_skipped', 'Directories skipped (no readable %s)' % AU_ID_FILE),
@@ -712,6 +726,7 @@ def survey(au_txt, repos, out, v2_file=None, v2_host=None,
   finally:
     progress.finish()
   rows = candidate_rows(active, v2, index)
+  to_record = sorted(v2 - active - inactive)
   with_content = [r for r in rows if r['has_content']]
   to_delete = [r for r in rows if not r['has_content']]
   counts = {
@@ -722,6 +737,7 @@ def survey(au_txt, repos, out, v2_file=None, v2_host=None,
     'to_delete': len(to_delete),
     'no_dir': sum(1 for r in to_delete if not r['repo_dir']),
     'with_content': len(with_content),
+    'to_record': len(to_record),
     'registry': len(registry),
     'au_dirs': stats['au_dirs'],
     'dirs_skipped': stats['dirs_skipped'],
@@ -736,7 +752,7 @@ def survey(au_txt, repos, out, v2_file=None, v2_host=None,
     write_tsv(os.path.join(out, OUT_CANDIDATES), rows)
     write_tsv(os.path.join(out, OUT_WITH_CONTENT), with_content)
     write_journal(os.path.join(out, OUT_JOURNAL),
-                  [r['auid'] for r in journal])
+                  [r['auid'] for r in journal], to_record)
     with open(os.path.join(out, OUT_SUMMARY), 'w') as f:
       f.write('\n'.join(lines) + '\n')
   except OSError as e:

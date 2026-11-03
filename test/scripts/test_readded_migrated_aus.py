@@ -67,6 +67,7 @@ AUID_F = PLUGIN + '&base_url~http%3A%2F%2Fwww%2Eexample%2Ecom%2F&volume_name~6'
 REGISTRY = 'org|lockss|plugin|RegistryPlugin'
 AUID_R1 = REGISTRY + '&base_url~http%3A%2F%2Fprops%2Elockss%2Eorg%3A8001%2Fplugins%2F'
 AUID_R2 = REGISTRY + '&base_url~http%3A%2F%2Fprops%2Elockss%2Eorg%3A8001%2Fv2plugins%2F'
+ONLY_V2 = 'org|lockss|plugin|OnlyInV2&a~1'
 
 
 def au_txt_entry(auid, params):
@@ -521,7 +522,8 @@ class TestEndToEnd(unittest.TestCase):
   '''A: active, in V2, no content.  B: active, in V2, content.  C: active,
   in V2, no AU dir.  D: active, not in V2.  E: inactive, in V2.  F: active,
   in V2, a dir in each repo, one with content.  R1: a plugin registry AU,
-  active in au.txt and in V2.  R2: a plugin registry AU only in V2.'''
+  active in au.txt and in V2.  R2: a plugin registry AU only in V2.
+  ONLY_V2: in V2, not in au.txt, so to record as migrated.'''
 
   def setUp(self):
     self.tmp = tempfile.mkdtemp()
@@ -545,8 +547,7 @@ class TestEndToEnd(unittest.TestCase):
     self.v2 = os.path.join(self.tmp, 'v2-auids.txt')
     with open(self.v2, 'w') as f:
       f.write('\n'.join(['# v2', AUID_A, AUID_B, AUID_C, AUID_E, AUID_F,
-                         'org|lockss|plugin|OnlyInV2&a~1', AUID_R1, AUID_R2,
-                         '']))
+                         ONLY_V2, AUID_R1, AUID_R2, '']))
     self.r1 = os.path.join(self.tmp, 'r1')
     self.r2 = os.path.join(self.tmp, 'r2')
     c1 = os.path.join(self.r1, 'cache')
@@ -596,7 +597,9 @@ class TestEndToEnd(unittest.TestCase):
     self.assertNotIn(b'\n\n', raw)
     with open(journal, newline='') as f:
       records = list(csv.reader(f))
-    self.assertEqual([['DELETE', AUID_A], ['DELETE', AUID_C]], records)
+    self.assertEqual([['DELETE', AUID_A], ['DELETE', AUID_C],
+                      ['MIGRATED', ONLY_V2]], records)
+    # E is inactive but configured, so not recorded either
     for auid in (AUID_B, AUID_D, AUID_E, AUID_F, AUID_R1, AUID_R2):
       self.assertNotIn(auid.encode('latin-1'), raw)
     # The registry AUs are left out of every list and counted
@@ -617,6 +620,7 @@ class TestEndToEnd(unittest.TestCase):
       ('without content, to delete', 2),
       ('of which without an AU directory', 1),
       ('with content, to decide', 2),
+      ('V2 AUIDs not in au.txt, to record as migrated', 1),
       ('Plugin registry AUs left out', 2),
       ('AU directories scanned', 5),
       ('Directories skipped (no readable #au_id_file)', 1),
@@ -642,10 +646,11 @@ class TestEndToEnd(unittest.TestCase):
     self.assertEqual([AUID_B, AUID_F], [r['auid'] for r in with_content])
     with open(os.path.join(self.out, 'au-journal-additions.csv'),
               newline='') as f:
-      self.assertEqual([['DELETE', r['auid']] for r in rows],
+      self.assertEqual([['DELETE', r['auid']] for r in rows]
+                       + [['MIGRATED', ONLY_V2]],
                        list(csv.reader(f)))
     lines = res.stdout.splitlines()
-    self.assertEqual(11, len(lines))
+    self.assertEqual(12, len(lines))
     self.assertNotIn('to decide', res.stdout)
     labels = [line.rsplit(':', 1)[0].strip() for line in lines]
     i = labels.index('with content, to delete too')
@@ -740,11 +745,10 @@ class TestEndToEnd(unittest.TestCase):
     '''The same AUIDs as the file in setUp, split between the two
     services, give the same candidates; the fetched list is written and
     reads back; the summary says what each service listed.'''
-    only_v2 = 'org|lockss|plugin|OnlyInV2&a~1'
     repo, cfg = FakeService(), FakeService()
     try:
       repo.pages(([AUID_A, AUID_B, AUID_R1], 't1'), ([AUID_C, AUID_F], None))
-      cfg.aus(([AUID_A, AUID_E], 'c1'), ([only_v2, AUID_R2], None))
+      cfg.aus(([AUID_A, AUID_E], 'c1'), ([ONLY_V2, AUID_R2], None))
       res = run_script(self.host_args(repo, cfg))
     finally:
       repo.close()
@@ -756,7 +760,8 @@ class TestEndToEnd(unittest.TestCase):
                      sorted(r['auid'] for r in rows))
     with open(os.path.join(self.out, 'au-journal-additions.csv'),
               newline='') as f:
-      self.assertEqual([['DELETE', AUID_A], ['DELETE', AUID_C]],
+      self.assertEqual([['DELETE', AUID_A], ['DELETE', AUID_C],
+                        ['MIGRATED', ONLY_V2]],
                        list(csv.reader(f)))
     v2_path = os.path.join(self.out, 'v2-auids.txt')
     with open(v2_path) as f:
@@ -768,12 +773,12 @@ class TestEndToEnd(unittest.TestCase):
     self.assertEqual('# repository service: 5, configuration service: 4',
                      lines[1])
     self.assertEqual(sorted(lines[2:]), lines[2:])
-    fetched = {AUID_A, AUID_B, AUID_C, AUID_E, AUID_F, only_v2, AUID_R1,
+    fetched = {AUID_A, AUID_B, AUID_C, AUID_E, AUID_F, ONLY_V2, AUID_R1,
                AUID_R2}
     self.assertEqual(fetched, set(lines[2:]))
     self.assertEqual(fetched, rma.read_v2_auids(v2_path))
     lines = res.stdout.splitlines()
-    self.assertEqual(13, len(lines))
+    self.assertEqual(14, len(lines))
     labels = [line.rsplit(':', 1)[0].strip() for line in lines]
     i = labels.index('V2 AUIDs read')
     self.assertEqual(['from the repository service',
@@ -788,7 +793,7 @@ class TestEndToEnd(unittest.TestCase):
                        '--repo', self.r1, '--repo', self.r2, '--out', out2])
     self.assertEqual(0, res2.returncode, res2.stderr)
     self.assertEqual(rows, read_tsv(os.path.join(out2, 'candidates.tsv')))
-    self.assertEqual(11, len(res2.stdout.splitlines()))
+    self.assertEqual(12, len(res2.stdout.splitlines()))
 
   def test_host_local_checks_before_fetch(self):
     repo, cfg = FakeService(), FakeService()
