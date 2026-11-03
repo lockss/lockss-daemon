@@ -225,6 +225,21 @@
 
     {
     title <
+      name = North Carolina Literary Review ;
+      issn = 1063-0724 ;
+      eissn = 2165-1809
+
+    >
+
+      attr[journal_id] = 916
+
+      au < manifest ; 2025 ; North Carolina Literary Review Volume 34 [2025] ; 20919 >
+      au < manifest ; 2026 ; North Carolina Literary Review Volume 35 [2026] ; 20928 >
+
+    }
+
+    {
+    title <
       name = Southeastern Geographer ;
       issn = 0038-366X  ;
       eissn = 1549-6929  ;

@@ -7029,7 +7029,7 @@
     au < doNotProcess ; 2021 ; 2021 ; Journal of Agribusiness in Developing and Emerging Economies Volume 11 ; 11 >
     au < doNotProcess ; 2022 ; 2022 ; Journal of Agribusiness in Developing and Emerging Economies Volume 12 ; 12 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Agribusiness in Developing and Emerging Economies Volume 13 ; 13 >
-    au < manifest ; 2024 ; 2024 ; Journal of Agribusiness in Developing and Emerging Economies Volume 14 ; 14 >
+    au < ready ; 2024 ; 2024 ; Journal of Agribusiness in Developing and Emerging Economies Volume 14 ; 14 >
     au < released ; 2025 ; 2025 ; Journal of Agribusiness in Developing and Emerging Economies Volume 15 ; 15 >
     au < manifest ; 2026 ; 2026 ; Journal of Agribusiness in Developing and Emerging Economies Volume 16 ; 16 >
 
@@ -8494,7 +8494,7 @@
     au < doNotProcess ; 2021 ; 2021 ; Journal of Health Organization and Management Volume 35 ; 35 >
     au < doNotProcess ; 2022 ; 2022 ; Journal of Health Organization and Management Volume 36 ; 36 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Health Organization and Management Volume 37 ; 37 >
-    au < manifest ; 2024 ; 2024 ; Journal of Health Organization and Management Volume 38 ; 38 >
+    au < ready ; 2024 ; 2024 ; Journal of Health Organization and Management Volume 38 ; 38 >
     au < released ; 2025 ; 2025 ; Journal of Health Organization and Management Volume 39 ; 39 >
     au < released ; 2026 ; 2026 ; Journal of Health Organization and Management Volume 40 ; 40 >
 
@@ -17437,7 +17437,7 @@
       >
       param[journal_id] = 4dp
 
-      au < manifest ; 2025 ; 2025 ; 4D printing Volume 1 ; 1 >
+      au < ready ; 2025 ; 2025 ; 4D printing Volume 1 ; 1 >
       au < manifest ; 2026 ; 2026 ; 4D printing Volume 2 ; 2 >
 
   }
@@ -17467,7 +17467,7 @@
       >
       param[journal_id] = aiie
 
-      au < manifest ; 2025 ; 2025 ; Artificial Intelligence in Education Volume 1 ; 1 >
+      au < ready ; 2025 ; 2025 ; Artificial Intelligence in Education Volume 1 ; 1 >
       au < manifest ; 2026 ; 2026 ; Artificial Intelligence in Education Volume 2 ; 2 >
 
   }
@@ -17481,10 +17481,10 @@
       >
       param[journal_id] = baj
 
-      au < manifest ; 2022 ; 2022 ; Business Analyst Journal Volume 43 ; 43 >
+      au < ready ; 2022 ; 2022 ; Business Analyst Journal Volume 43 ; 43 >
       au < manifest ; 2023 ; 2023 ; Business Analyst Journal Volume 44 ; 44 >
       au < manifest ; 2024 ; 2024 ; Business Analyst Journal Volume 45 ; 45 >
-      au < manifest ; 2025 ; 2025 ; Business Analyst Journal Volume 46 ; 46 >
+      au < ready ; 2025 ; 2025 ; Business Analyst Journal Volume 46 ; 46 >
       au < released ; 2026 ; 2026 ; Business Analyst Journal Volume 47 ; 47 >
 
   }
@@ -17499,7 +17499,7 @@
       param[journal_id] = cemj
 
       au < manifest ; 2023 ; 2023 ; Central European Management Journal Volume 31 ; 31 >
-      au < manifest ; 2024 ; 2024 ; Central European Management Journal Volume 32 ; 32 >
+      au < ready ; 2024 ; 2024 ; Central European Management Journal Volume 32 ; 32 >
       au < released ; 2025 ; 2025 ; Central European Management Journal Volume 33 ; 33 >
       au < manifest ; 2026 ; 2026 ; Central European Management Journal Volume 34 ; 34 >
 
@@ -17514,7 +17514,7 @@
       >
       param[journal_id] = cafr
 
-      au < manifest ; 2022 ; 2022 ; China Accounting and Finance Review Volume 24 ; 24 >
+      au < ready ; 2022 ; 2022 ; China Accounting and Finance Review Volume 24 ; 24 >
       au < manifest ; 2023 ; 2023 ; China Accounting and Finance Review Volume 25 ; 25 >
       au < manifest ; 2024 ; 2024 ; China Accounting and Finance Review Volume 26 ; 26 >
       au < manifest ; 2025 ; 2025 ; China Accounting and Finance Review Volume 27 ; 27 >
@@ -17531,7 +17531,7 @@
       >
       param[journal_id] = dts
 
-      au < manifest ; 2022 ; 2022 ; Digital Transformation and Society Volume 1 ; 1 >
+      au < ready ; 2022 ; 2022 ; Digital Transformation and Society Volume 1 ; 1 >
       au < released ; 2023 ; 2023 ; Digital Transformation and Society Volume 2 ; 2 >
       au < manifest ; 2024 ; 2024 ; Digital Transformation and Society Volume 3 ; 3 >
       au < manifest ; 2025 ; 2025 ; Digital Transformation and Society Volume 4 ; 4 >
@@ -17548,8 +17548,8 @@
       >
       param[journal_id] = econ
 
-      au < manifest ; 2022 ; 2022 ; EconomiA Volume 23 ; 23 >
-      au < manifest ; 2023 ; 2023 ; EconomiA Volume 24 ; 24 >
+      au < ready ; 2022 ; 2022 ; EconomiA Volume 23 ; 23 >
+      au < ready ; 2023 ; 2023 ; EconomiA Volume 24 ; 24 >
       au < manifest ; 2024 ; 2024 ; EconomiA Volume 25 ; 25 >
       au < manifest ; 2025 ; 2025 ; EconomiA Volume 26 ; 26 >
       au < manifest ; 2026 ; 2026 ; EconomiA Volume 27 ; 27 >
@@ -17577,11 +17577,11 @@
       >
       param[journal_id] = ejms
 
-      au < manifest ; 2020 ; 2020 ; European Journal of Management Studies Volume 25 ; 25 >
+      au < ready ; 2020 ; 2020 ; European Journal of Management Studies Volume 25 ; 25 >
       au < manifest ; 2021 ; 2021 ; European Journal of Management Studies Volume 26 ; 26 >
-      au < manifest ; 2022 ; 2022 ; European Journal of Management Studies Volume 27 ; 27 >
+      au < ready ; 2022 ; 2022 ; European Journal of Management Studies Volume 27 ; 27 >
       au < manifest ; 2023 ; 2023 ; European Journal of Management Studies Volume 28 ; 28 >
-      au < manifest ; 2024 ; 2024 ; European Journal of Management Studies Volume 29 ; 29 >
+      au < ready ; 2024 ; 2024 ; European Journal of Management Studies Volume 29 ; 29 >
       au < manifest ; 2025 ; 2025 ; European Journal of Management Studies Volume 30 ; 30 >
       au < manifest ; 2026 ; 2026 ; European Journal of Management Studies Volume 31 ; 31 >
 
@@ -17610,7 +17610,7 @@
       >
       param[journal_id] = febe
 
-      au < manifest ; 2021 ; 2021 ; Frontiers in Engineering and Built Environment Volume 1 ; 1 >
+      au < ready ; 2021 ; 2021 ; Frontiers in Engineering and Built Environment Volume 1 ; 1 >
       au < manifest ; 2022 ; 2022 ; Frontiers in Engineering and Built Environment Volume 2 ; 2 >
       au < manifest ; 2023 ; 2023 ; Frontiers in Engineering and Built Environment Volume 3 ; 3 >
       au < released ; 2024 ; 2024 ; Frontiers in Engineering and Built Environment Volume 4 ; 4 >
@@ -17645,7 +17645,7 @@
       param[journal_id] = irjms
 
       au < manifest ; 2022 ; 2022 ; IIM Ranchi Journal of Management Studies Volume 1 ; 1 >
-      au < manifest ; 2023 ; 2023 ; IIM Ranchi Journal of Management Studies Volume 2 ; 2 >
+      au < ready ; 2023 ; 2023 ; IIM Ranchi Journal of Management Studies Volume 2 ; 2 >
       au < manifest ; 2024 ; 2024 ; IIM Ranchi Journal of Management Studies Volume 3 ; 3 >
       au < released ; 2025 ; 2025 ; IIM Ranchi Journal of Management Studies Volume 4 ; 4 >
       au < manifest ; 2026 ; 2026 ; IIM Ranchi Journal of Management Studies Volume 5 ; 5 >
@@ -17730,9 +17730,9 @@
       >
       param[journal_id] = ijieom
 
-      au < manifest ; 2022 ; 2022 ; International Journal of Industrial Engineering and Operations Management Volume 4 ; 4 >
+      au < ready ; 2022 ; 2022 ; International Journal of Industrial Engineering and Operations Management Volume 4 ; 4 >
       au < manifest ; 2023 ; 2023 ; International Journal of Industrial Engineering and Operations Management Volume 5 ; 5 >
-      au < manifest ; 2024 ; 2024 ; International Journal of Industrial Engineering and Operations Management Volume 6 ; 6 >
+      au < ready ; 2024 ; 2024 ; International Journal of Industrial Engineering and Operations Management Volume 6 ; 6 >
       au < manifest ; 2025 ; 2025 ; International Journal of Industrial Engineering and Operations Management Volume 7 ; 7 >
       au < manifest ; 2026 ; 2026 ; International Journal of Industrial Engineering and Operations Management Volume 8 ; 8 >
 
@@ -17774,8 +17774,8 @@
       au < doNotProcess ; 2018 ; 2018 ; Journal of Accounting Literature Volume 41 [2018] ; 41 >
       au < doNotProcess ; 2019 ; 2019 ; Journal of Accounting Literature Volume 42 [2019] ; 42 >
       au < doNotProcess ; 2019 ; 2019 ; Journal of Accounting Literature Volume 43 [2019] ; 43 >
-      au < manifest ; 2022 ; 2022 ; Journal of Accounting Literature Volume 44 [2022] ; 44 >
-      au < manifest ; 2023 ; 2023 ; Journal of Accounting Literature Volume 45 ; 45 >
+      au < ready ; 2022 ; 2022 ; Journal of Accounting Literature Volume 44 [2022] ; 44 >
+      au < ready ; 2023 ; 2023 ; Journal of Accounting Literature Volume 45 ; 45 >
       au < manifest ; 2024 ; 2024 ; Journal of Accounting Literature Volume 46 ; 46 >
       au < manifest ; 2025 ; 2025 ; Journal of Accounting Literature Volume 47 ; 47 >
       au < manifest ; 2026 ; 2026 ; Journal of Accounting Literature Volume 48 ; 48 >
@@ -17792,8 +17792,8 @@
       param[journal_id] = jbse
 
       au < manifest ; 2023 ; 2023 ; Journal of Blood Service Economics Volume 2 ; 2 >
-      au < manifest ; 2024 ; 2024 ; Journal of Blood Service Economics Volume 3 ; 3 >
-      au < manifest ; 2025 ; 2025 ; Journal of Blood Service Economics Volume 4 ; 4 >
+      au < ready ; 2024 ; 2024 ; Journal of Blood Service Economics Volume 3 ; 3 >
+      au < ready ; 2025 ; 2025 ; Journal of Blood Service Economics Volume 4 ; 4 >
       au < expected ; 2026 ; 2026 ; Journal of Blood Service Economics Volume 5 ; 5 >
 
   }
@@ -17826,8 +17826,8 @@
       au < manifest ; 2019 ; 2019 ; Journal of Character Education Volume 15 [2019] ; 15 >
       au < manifest ; 2020 ; 2020 ; Journal of Character Education Volume 16 [2020] ; 16 >
       au < manifest ; 2021 ; 2021 ; Journal of Character Education Volume 17 [2021] ; 17 >
-      au < manifest ; 2022 ; 2022 ; Journal of Character Education Volume 18 [2022] ; 18 >
-      au < manifest ; 2023 ; 2023 ; Journal of Character Education Volume 18 [2023] ; 18 >
+      au < ready ; 2022 ; 2022 ; Journal of Character Education Volume 18 [2022] ; 18 >
+      au < ready ; 2023 ; 2023 ; Journal of Character Education Volume 18 [2023] ; 18 >
       au < manifest ; 2024 ; 2024 ; Journal of Character Education Volume 19 [2024] ; 19 >
       au < manifest ; 2024 ; 2024 ; Journal of Character Education Volume 20 [2024] ; 20 >
       au < manifest ; 2025 ; 2025 ; Journal of Character Education Volume 21 [2025] ; 21 >
@@ -17847,8 +17847,8 @@
       au < manifest ; 2019 ; 2019 ; Journal of Economics and Development Volume 21 ; 21 >
       au < manifest ; 2020 ; 2020 ; Journal of Economics and Development Volume 22 ; 22 >
       au < manifest ; 2021 ; 2021 ; Journal of Economics and Development Volume 23 ; 23 >
-      au < manifest ; 2022 ; 2022 ; Journal of Economics and Development Volume 24 ; 24 >
-      au < manifest ; 2023 ; 2023 ; Journal of Economics and Development Volume 25 ; 25 >
+      au < ready ; 2022 ; 2022 ; Journal of Economics and Development Volume 24 ; 24 >
+      au < ready ; 2023 ; 2023 ; Journal of Economics and Development Volume 25 ; 25 >
       au < manifest ; 2024 ; 2024 ; Journal of Economics and Development Volume 26 ; 26 >
       au < manifest ; 2025 ; 2025 ; Journal of Economics and Development Volume 27 ; 27 >
       au < manifest ; 2026 ; 2026 ; Journal of Economics and Development Volume 28 ; 28 >
@@ -17864,7 +17864,7 @@
       >
       param[journal_id] = jebde
 
-      au < manifest ; 2022 ; 2022 ; Journal of Electronic Business & Digital Economics Volume 1 ; 1 >
+      au < ready ; 2022 ; 2022 ; Journal of Electronic Business & Digital Economics Volume 1 ; 1 >
       au < manifest ; 2023 ; 2023 ; Journal of Electronic Business & Digital Economics Volume 2 ; 2 >
       au < manifest ; 2024 ; 2024 ; Journal of Electronic Business & Digital Economics Volume 3 ; 3 >
       au < manifest ; 2025 ; 2025 ; Journal of Electronic Business & Digital Economics Volume 4 ; 4 >
@@ -17881,8 +17881,8 @@
       >
       param[journal_id] = jidt
 
-      au < manifest ; 2024 ; 2024 ; Journal of Innovative Digital Transformation Volume 1 ; 1 >
-      au < manifest ; 2025 ; 2025 ; Journal of Innovative Digital Transformation Volume 2 ; 2 >
+      au < ready ; 2024 ; 2024 ; Journal of Innovative Digital Transformation Volume 1 ; 1 >
+      au < ready ; 2025 ; 2025 ; Journal of Innovative Digital Transformation Volume 2 ; 2 >
       au < expected ; 2026 ; 2026 ; Journal of Innovative Digital Transformation Volume 3 ; 3 >
 
   }
@@ -17946,7 +17946,7 @@
       au < manifest ; 2020 ; 2020 ; Journal of International Logistics and Trade Volume 18 ; 18 >
       au < manifest ; 2021 ; 2021 ; Journal of International Logistics and Trade Volume 19 ; 19 >
       au < manifest ; 2022 ; 2022 ; Journal of International Logistics and Trade Volume 20 ; 20 >
-      au < manifest ; 2023 ; 2023 ; Journal of International Logistics and Trade Volume 21 ; 21 >
+      au < ready ; 2023 ; 2023 ; Journal of International Logistics and Trade Volume 21 ; 21 >
       au < released ; 2024 ; 2024 ; Journal of International Logistics and Trade Volume 22 ; 22 >
       au < manifest ; 2025 ; 2025 ; Journal of International Logistics and Trade Volume 23 ; 23 >
       au < manifest ; 2026 ; 2026 ; Journal of International Logistics and Trade Volume 24 ; 24 >
@@ -17966,7 +17966,7 @@
       au < manifest ; 2022 ; 2022 ; Journal of Internet and Digital Economics Volume 2 ; 2 >
       au < manifest ; 2023 ; 2023 ; Journal of Internet and Digital Economics Volume 3 ; 3 >
       au < manifest ; 2024 ; 2024 ; Journal of Internet and Digital Economics Volume 4 ; 4 >
-      au < manifest ; 2025 ; 2025 ; Journal of Internet and Digital Economics Volume 5 ; 5 >
+      au < ready ; 2025 ; 2025 ; Journal of Internet and Digital Economics Volume 5 ; 5 >
       au < manifest ; 2026 ; 2026 ; Journal of Internet and Digital Economics Volume 6 ; 6 >
 
   }
@@ -18015,7 +18015,7 @@
       au < manifest ; 2020 ; 2020 ; Journal of Leadership Education Volume 19 ; 19 >
       au < manifest ; 2021 ; 2021 ; Journal of Leadership Education Volume 20 ; 20 >
       au < manifest ; 2022 ; 2022 ; Journal of Leadership Education Volume 21 ; 21 >
-      au < manifest ; 2023 ; 2023 ; Journal of Leadership Education Volume 22 ; 22 >
+      au < ready ; 2023 ; 2023 ; Journal of Leadership Education Volume 22 ; 22 >
       au < manifest ; 2024 ; 2024 ; Journal of Leadership Education Volume 23 ; 23 >
       au < manifest ; 2025 ; 2025 ; Journal of Leadership Education Volume 24 ; 24 >
       au < manifest ; 2026 ; 2026 ; Journal of Leadership Education Volume 25 ; 25 >
@@ -18033,7 +18033,7 @@
 
       au < released ; 2021 ; 2021 ; Journal of Money and Business Volume 1 ; 1 >
       au < manifest ; 2022 ; 2022 ; Journal of Money and Business Volume 2 ; 2 >
-      au < manifest ; 2023 ; 2023 ; Journal of Money and Business Volume 3 ; 3 >
+      au < ready ; 2023 ; 2023 ; Journal of Money and Business Volume 3 ; 3 >
       au < released ; 2024 ; 2024 ; Journal of Money and Business Volume 4 ; 4 >
       au < manifest ; 2025 ; 2025 ; Journal of Money and Business Volume 5 ; 5 >
       au < expected ; 2026 ; 2026 ; Journal of Money and Business Volume 6 ; 6 >
@@ -18118,7 +18118,7 @@
       param[journal_id] = lbsjmr
 
       au < manifest ; 2022 ; 2022 ; LBS Journal of Management & Research Volume 20 ; 20 >
-      au < manifest ; 2023 ; 2023 ; LBS Journal of Management & Research Volume 21 ; 21 >
+      au < ready ; 2023 ; 2023 ; LBS Journal of Management & Research Volume 21 ; 21 >
       au < manifest ; 2024 ; 2024 ; LBS Journal of Management & Research Volume 22 ; 22 >
       au < manifest ; 2025 ; 2025 ; LBS Journal of Management & Research Volume 23 ; 23 >
       au < released ; 2026 ; 2026 ; LBS Journal of Management & Research Volume 24 ; 24 >
@@ -18212,7 +18212,7 @@
       >
       param[journal_id] = manm
 
-      au < manifest ; 2022 ; 2022 ; Management Matters Volume 19 ; 19 >
+      au < ready ; 2022 ; 2022 ; Management Matters Volume 19 ; 19 >
       au < manifest ; 2023 ; 2023 ; Management Matters Volume 20 ; 20 >
       au < released ; 2024 ; 2024 ; Management Matters Volume 21 ; 21 >
       au < manifest ; 2025 ; 2025 ; Management Matters Volume 22 ; 22 >
@@ -18273,9 +18273,9 @@
       >
       param[journal_id] = ocj
 
-      au < manifest ; 2021 ; 2021 ; Organizational Cybersecurity Journal: Practice, Process and People Volume 1 ; 1 >
+      au < ready ; 2021 ; 2021 ; Organizational Cybersecurity Journal: Practice, Process and People Volume 1 ; 1 >
       au < released ; 2022 ; 2022 ; Organizational Cybersecurity Journal: Practice, Process and People Volume 2 ; 2 >
-      au < manifest ; 2023 ; 2023 ; Organizational Cybersecurity Journal: Practice, Process and People Volume 3 ; 3 >
+      au < ready ; 2023 ; 2023 ; Organizational Cybersecurity Journal: Practice, Process and People Volume 3 ; 3 >
       au < manifest ; 2024 ; 2024 ; Organizational Cybersecurity Journal: Practice, Process and People Volume 4 ; 4 >
       au < manifest ; 2025 ; 2025 ; Organizational Cybersecurity Journal: Practice, Process and People Volume 5 ; 5 >
       au < released ; 2026 ; 2026 ; Organizational Cybersecurity Journal: Practice, Process and People Volume 6 ; 6 >
@@ -18291,7 +18291,7 @@
       >
       param[journal_id] = pdsp
 
-      au < manifest ; 2023 ; 2023 ; PDS Partners: Bridging Research to Practice Volume 18 ; 18 >
+      au < ready ; 2023 ; 2023 ; PDS Partners: Bridging Research to Practice Volume 18 ; 18 >
       au < manifest ; 2024 ; 2024 ; PDS Partners: Bridging Research to Practice Volume 19 ; 19 >
       au < manifest ; 2025 ; 2025 ; PDS Partners: Bridging Research to Practice Volume 20 ; 20 >
       au < manifest ; 2026 ; 2026 ; PDS Partners: Bridging Research to Practice Volume 21 ; 21 >
@@ -18307,7 +18307,7 @@
       param[journal_id] = qea
 
       au < released ; 2024 ; 2024 ; Quality Education for All Volume 1 ; 1 >
-      au < manifest ; 2025 ; 2025 ; Quality Education for All Volume 2 ; 2 >
+      au < ready ; 2025 ; 2025 ; Quality Education for All Volume 2 ; 2 >
       au < manifest ; 2026 ; 2026 ; Quality Education for All Volume 3 ; 3 >
 
   }
@@ -18349,9 +18349,9 @@
       au < manifest ; 2020 ; 2020 ; Quarterly Review of Education Volume 20 [2020] ; 20 >
       au < manifest ; 2021 ; 2021 ; Quarterly Review of Education Volume 21 [2021] ; 21 >
       au < manifest ; 2021 ; 2021 ; Quarterly Review of Education Volume 22 [2021] ; 22 >
-      au < manifest ; 2022 ; 2022 ; Quarterly Review of Education Volume 22 [2022] ; 22 >
+      au < ready ; 2022 ; 2022 ; Quarterly Review of Education Volume 22 [2022] ; 22 >
       au < manifest ; 2022 ; 2022 ; Quarterly Review of Education Volume 23 [2022] ; 23 >
-      au < manifest ; 2023 ; 2023 ; Quarterly Review of Education Volume 23 [2023] ; 23 >
+      au < ready ; 2023 ; 2023 ; Quarterly Review of Education Volume 23 [2023] ; 23 >
       au < manifest ; 2023 ; 2023 ; Quarterly Review of Education Volume 24 [2023] ; 24 >
       au < manifest ; 2024 ; 2024 ; Quarterly Review of Education Volume 24 [2024] ; 24 >
       au < manifest ; 2024 ; 2024 ; Quarterly Review of Education Volume 25 [2024] ; 25 >
@@ -18385,8 +18385,8 @@
       >
       param[journal_id] = samamj
 
-      au < manifest ; 2024 ; 2024 ; SAM Advanced Management Journal Volume 89 ; 89 >
-      au < manifest ; 2025 ; 2025 ; SAM Advanced Management Journal Volume 90 ; 90 >
+      au < ready ; 2024 ; 2024 ; SAM Advanced Management Journal Volume 89 ; 89 >
+      au < ready ; 2025 ; 2025 ; SAM Advanced Management Journal Volume 90 ; 90 >
       au < manifest ; 2026 ; 2026 ; SAM Advanced Management Journal Volume 91 ; 91 >
 
   }
@@ -18419,7 +18419,7 @@
       param[journal_id] = sup
 
       au < manifest ; 2023 ; 2023 ; School-University Partnerships Volume 16 ; 16 >
-      au < manifest ; 2024 ; 2024 ; School-University Partnerships Volume 17 ; 17 >
+      au < ready ; 2024 ; 2024 ; School-University Partnerships Volume 17 ; 17 >
       au < manifest ; 2025 ; 2025 ; School-University Partnerships Volume 18 ; 18 >
       au < manifest ; 2026 ; 2026 ; School-University Partnerships Volume 19 ; 19 >
 
@@ -18434,11 +18434,11 @@
       >
       param[journal_id] = seamj
 
-      au < manifest ; 2020 ; 2020 ; Southeast Asia: A Multidisciplinary Journal Volume 20 ; 20 >
+      au < ready ; 2020 ; 2020 ; Southeast Asia: A Multidisciplinary Journal Volume 20 ; 20 >
       au < manifest ; 2021 ; 2021 ; Southeast Asia: A Multidisciplinary Journal Volume 21 ; 21 >
       au < manifest ; 2022 ; 2022 ; Southeast Asia: A Multidisciplinary Journal Volume 22 ; 22 >
       au < manifest ; 2023 ; 2023 ; Southeast Asia: A Multidisciplinary Journal Volume 23 ; 23 >
-      au < manifest ; 2024 ; 2024 ; Southeast Asia: A Multidisciplinary Journal Volume 24 ; 24 >
+      au < ready ; 2024 ; 2024 ; Southeast Asia: A Multidisciplinary Journal Volume 24 ; 24 >
       au < manifest ; 2025 ; 2025 ; Southeast Asia: A Multidisciplinary Journal Volume 25 ; 25 >
       au < released ; 2026 ; 2026 ; Southeast Asia: A Multidisciplinary Journal Volume 26 ; 26 >
 
@@ -18483,7 +18483,7 @@
       au < manifest ; 2020 ; 2020 ; The CASE Journal Volume 16 ; 16 >
       au < manifest ; 2021 ; 2021 ; The CASE Journal Volume 17 ; 17 >
       au < manifest ; 2022 ; 2022 ; The CASE Journal Volume 18 ; 18 >
-      au < manifest ; 2023 ; 2023 ; The CASE Journal Volume 19 ; 19 >
+      au < ready ; 2023 ; 2023 ; The CASE Journal Volume 19 ; 19 >
       au < manifest ; 2024 ; 2024 ; The CASE Journal Volume 20 ; 20 >
       au < released ; 2025 ; 2025 ; The CASE Journal Volume 21 ; 21 >
       au < manifest ; 2026 ; 2026 ; The CASE Journal Volume 22 ; 22 >
@@ -18506,7 +18506,7 @@
       au < manifest ; 2019 ; 2019 ; The SoJo Journal Volume 4 ; 4 >
       au < doesNotExist ; 2020 ; 2020 ; The SoJo Journal Volume 5 ; 5 >
       au < manifest ; 2021 ; 2021 ; The SoJo Journal Volume 6 ; 6 >
-      au < manifest ; 2022 ; 2022 ; The SoJo Journal Volume 7 ; 7 >
+      au < ready ; 2022 ; 2022 ; The SoJo Journal Volume 7 ; 7 >
       au < manifest ; 2023 ; 2023 ; The SoJo Journal Volume 8 ; 8 >
       au < manifest ; 2024 ; 2024 ; The SoJo Journal Volume 9 ; 9 >
       au < released ; 2025 ; 2025 ; The SoJo Journal Volume 11 ; 11 >
@@ -18523,7 +18523,7 @@
       param[journal_id] = uss
 
       au < manifest ; 2024 ; 2024 ; Urbanization, Sustainability and Society Volume 1 ; 1 >
-      au < manifest ; 2025 ; 2025 ; Urbanization, Sustainability and Society Volume 2 ; 2 >
+      au < ready ; 2025 ; 2025 ; Urbanization, Sustainability and Society Volume 2 ; 2 >
       au < manifest ; 2026 ; 2026 ; Urbanization, Sustainability and Society Volume 3 ; 3 >
 
   }
