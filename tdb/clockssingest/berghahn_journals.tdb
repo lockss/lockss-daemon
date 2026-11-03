@@ -25,7 +25,7 @@
     #param[journal_issn] = 1755-2923
     
     au < finished ; manifest ; 2008 ; Anthropological Journal of European Cultures Volume 17 ; 17 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2009 ; Anthropological Journal of European Cultures Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2009 ; Anthropological Journal of European Cultures Volume 18 ; 18 ; >
     au < finished ; manifest ; 2010 ; Anthropological Journal of European Cultures Volume 19 ; 19 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2011 ; Anthropological Journal of European Cultures Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Anthropological Journal of European Cultures Volume 21 ; 21 ; >
@@ -58,8 +58,8 @@
     param[journal_id] = aia
     #param[journal_issn] = 0967-201X
      
-    au < crawling ; exists ; 2005 ; Anthropology in Action Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2006 ; Anthropology in Action Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2005 ; Anthropology in Action Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2006 ; Anthropology in Action Volume 13 ; 13 ; >
     au < finished ; manifest ; 2007 ; Anthropology in Action Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2008 ; Anthropology in Action Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2009 ; Anthropology in Action Volume 16 ; 16 ; reingest4.clockss.org:8082 >
@@ -95,7 +95,7 @@
     param[journal_id] = ame
     #param[journal_issn] = 1746-0719
     
-    au < crawling ; exists ; 2006 ; Anthropology of the Middle East Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2006 ; Anthropology of the Middle East Volume 1 ; 1 ; >
     au < frozen ; exists ; 2007 ; Anthropology of the Middle East Volume 2 ; 2 ; >
     au < finished ; manifest ; 2008 ; Anthropology of the Middle East Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; Anthropology of the Middle East Volume 4 ; 4 ; reingest1.clockss.org:8082 >
@@ -153,7 +153,7 @@
        
     au < finished ; manifest ; 2007 ; Aspasia Volume 1 ; 1 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2008 ; Aspasia Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2009 ; Aspasia Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2009 ; Aspasia Volume 3 ; 3 ; >
     au < finished ; crawling ; 2010 ; Aspasia Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2011 ; Aspasia Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Aspasia Volume 6 ; 6 ; >
@@ -187,8 +187,8 @@
        
     au < finished ; manifest ; 2007 ; Boyhood Studies Volume 1 ; 1 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2008 ; Boyhood Studies Volume 2 ; 2 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2009 ; Boyhood Studies Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2010 ; Boyhood Studies Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2009 ; Boyhood Studies Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2010 ; Boyhood Studies Volume 4 ; 4 ; >
     au < finished ; crawling ; 2011 ; Boyhood Studies Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; Boyhood Studies Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2013 ; Boyhood Studies Volume 7 ; 7 ; reingest1.clockss.org:8082 >
@@ -306,8 +306,8 @@
     #param[journal_issn] = 1807-9326
 
     au < finished ; manifest ; 2005 ; Contributions to the History of Concepts Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2006 ; Contributions to the History of Concepts Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2007 ; Contributions to the History of Concepts Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2006 ; Contributions to the History of Concepts Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2007 ; Contributions to the History of Concepts Volume 3 ; 3 ; >
     au < finished ; manifest ; 2008 ; Contributions to the History of Concepts Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; Contributions to the History of Concepts Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2011 ; Contributions to the History of Concepts Volume 6 ; 6 ; >
@@ -345,12 +345,12 @@
       #they moved to eissn just before going offline
       #param[journal_issn] = 1752-2293
             
-      au < crawling ; exists ; 1997 ; Critical Survey Volume 9 ; 9 ; >
-      au < crawling ; exists ; 1998 ; Critical Survey Volume 10 ; 10 ; >
-      au < crawling ; exists ; 1999 ; Critical Survey Volume 11 ; 11 ; >
-      au < crawling ; exists ; 2000 ; Critical Survey Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2001 ; Critical Survey Volume 13 ; 13 ; >
-      au < crawling ; exists ; 2002 ; Critical Survey Volume 14 ; 14 ; >
+      au < frozen ; exists ; 1997 ; Critical Survey Volume 9 ; 9 ; >
+      au < frozen ; exists ; 1998 ; Critical Survey Volume 10 ; 10 ; >
+      au < frozen ; exists ; 1999 ; Critical Survey Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2000 ; Critical Survey Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2001 ; Critical Survey Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2002 ; Critical Survey Volume 14 ; 14 ; >
       au < finished ; manifest ; 2003 ; Critical Survey Volume 15 ; 15 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2004 ; Critical Survey Volume 16 ; 16 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2005 ; Critical Survey Volume 17 ; 17 ; reingest1.clockss.org:8082 >
@@ -358,7 +358,7 @@
       au < finished ; manifest ; 2007 ; Critical Survey Volume 19 ; 19 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2008 ; Critical Survey Volume 20 ; 20 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; Critical Survey Volume 21 ; 21 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2010 ; Critical Survey Volume 22 ; 22 ; >
+      au < frozen ; exists ; 2010 ; Critical Survey Volume 22 ; 22 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Critical Survey Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Critical Survey Volume 24 ; 24 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Critical Survey Volume 25 ; 25 ; >
@@ -411,12 +411,12 @@
     #param[journal_issn] = 1362-024X
       
     au < finished ; manifest ; 2003 ; Durkheimian Studies Volume 9 ; 9 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2004 ; Durkheimian Studies Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2004 ; Durkheimian Studies Volume 10 ; 10 ; >
     au < finished ; manifest ; 2005 ; Durkheimian Studies Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2006 ; Durkheimian Studies Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2007 ; Durkheimian Studies Volume 13 ; 13 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2008 ; Durkheimian Studies Volume 14 ; 14 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2009 ; Durkheimian Studies Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2009 ; Durkheimian Studies Volume 15 ; 15 ; >
     au < finished ; manifest ; 2010 ; Durkheimian Studies Volume 16 ; 16 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2011 ; Durkheimian Studies Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Durkheimian Studies Volume 18 ; 18 ; >
@@ -473,7 +473,7 @@
      
     au < finished ; manifest ; 2008 ; European Comic Art Volume 1 ; 1 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; European Comic Art Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2010 ; European Comic Art Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2010 ; European Comic Art Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; European Comic Art Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; European Comic Art Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; European Comic Art Volume 6 ; 6 ; >
@@ -506,16 +506,16 @@
     #param[journal_issn] = 0014-3006
    
     au < crawling ; exists ; 1999 ; European Judaism Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2000 ; European Judaism Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2001 ; European Judaism Volume 34 ; 34 ; >
+    au < frozen ; exists ; 2000 ; European Judaism Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2001 ; European Judaism Volume 34 ; 34 ; >
     au < finished ; manifest ; 2002 ; European Judaism Volume 35 ; 35 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2003 ; European Judaism Volume 36 ; 36 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2004 ; European Judaism Volume 37 ; 37 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; European Judaism Volume 38 ; 38 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2006 ; European Judaism Volume 39 ; 39 ; >
+    au < frozen ; exists ; 2006 ; European Judaism Volume 39 ; 39 ; >
     au < finished ; manifest ; 2007 ; European Judaism Volume 40 ; 40 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2008 ; European Judaism Volume 41 ; 41 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2009 ; European Judaism Volume 42 ; 42 ; >
+    au < frozen ; exists ; 2009 ; European Judaism Volume 42 ; 42 ; >
     au < finished ; manifest ; 2010 ; European Judaism Volume 43 ; 43 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2011 ; European Judaism Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; European Judaism Volume 45 ; 45 ; >
@@ -554,7 +554,7 @@
     au < finished ; manifest ; 2007 ; Focaal Volume 2007 ; 2007 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2008 ; Focaal Volume 2008 ; 2008 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2009 ; Focaal Volume 2009 ; 2009 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2010 ; Focaal Volume 2010 ; 2010 ; >
+    au < frozen ; exists ; 2010 ; Focaal Volume 2010 ; 2010 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Focaal Volume 2011 ; 2011 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Focaal Volume 2012 ; 2012 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Focaal Volume 2013 ; 2013 ; >
@@ -594,7 +594,7 @@
     au < finished ; manifest ; 2004 ; French Politics, Culture & Society Volume 22 ; 22 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; French Politics, Culture & Society Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2006 ; French Politics, Culture & Society Volume 24 ; 24 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2007 ; French Politics, Culture & Society Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2007 ; French Politics, Culture & Society Volume 25 ; 25 ; >
     au < finished ; manifest ; 2008 ; French Politics, Culture & Society Volume 26 ; 26 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; French Politics, Culture & Society Volume 27 ; 27 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2010 ; French Politics, Culture & Society Volume 28 ; 28 ; reingest3.clockss.org:8083 >
@@ -632,7 +632,7 @@
     au < finished ; manifest ; 1998 ; German Politics and Society Volume 16 ; 16 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1999 ; German Politics and Society Volume 17 ; 17 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2000 ; German Politics and Society Volume 18 ; 18 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2001 ; German Politics and Society Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2001 ; German Politics and Society Volume 19 ; 19 ; >
     au < finished ; manifest ; 2002 ; German Politics and Society Volume 20 ; 20 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2003 ; German Politics and Society Volume 21 ; 21 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2004 ; German Politics and Society Volume 22 ; 22 ; reingest2.clockss.org:8085 >
@@ -673,7 +673,7 @@
     param[journal_id] = girlhood-studies
     #param[journal_issn] = 1938-8209
 
-    au < crawling ; exists ; 2008 ; Girlhood Studies Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2008 ; Girlhood Studies Volume 1 ; 1 ; >
     au < finished ; manifest ; 2009 ; Girlhood Studies Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2010 ; Girlhood Studies Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2011 ; Girlhood Studies Volume 4 ; 4 ; >
@@ -802,11 +802,11 @@
     au < finished ; manifest ; 2000 ; Italian Politics Volume 15 ; 15 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; Italian Politics Volume 16 ; 16 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2002 ; Italian Politics Volume 17 ; 17 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2003 ; Italian Politics Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2003 ; Italian Politics Volume 18 ; 18 ; >
     au < finished ; manifest ; 2004 ; Italian Politics Volume 19 ; 19 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2005 ; Italian Politics Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2005 ; Italian Politics Volume 20 ; 20 ; >
     au < finished ; manifest ; 2006 ; Italian Politics Volume 21 ; 21 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2007 ; Italian Politics Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2007 ; Italian Politics Volume 22 ; 22 ; >
     au < finished ; manifest ; 2008 ; Italian Politics Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2009 ; Italian Politics Volume 24 ; 24 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2010 ; Italian Politics Volume 25 ; 25 ; reingest4.clockss.org:8082 >
@@ -871,7 +871,7 @@
     au < finished ; manifest ; 2002 ; Journeys Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2003 ; Journeys Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2004 ; Journeys Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2005 ; Journeys Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2005 ; Journeys Volume 6 ; 6 ; >
     au < finished ; manifest ; 2006 ; Journeys Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2007 ; Journeys Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2008 ; Journeys Volume 9 ; 9 ; reingest2.clockss.org:8085 >
@@ -903,8 +903,8 @@
     #param[journal_issn] = 1755-2273
        
     au < finished ; manifest ; 2008 ; Learning and Teaching (LATISS) Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2009 ; Learning and Teaching (LATISS) Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2010 ; Learning and Teaching (LATISS) Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2009 ; Learning and Teaching (LATISS) Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2010 ; Learning and Teaching (LATISS) Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Learning and Teaching (LATISS) Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Learning and Teaching (LATISS) Volume 5 ; 5 ; >
     au < finished ; finished ; 2013 ; Learning and Teaching (LATISS) Volume 6 ; 6 ; reingest1.clockss.org:8082 >
@@ -1009,7 +1009,7 @@
     au < finished ; manifest ; 2007 ; Nature and Culture Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2008 ; Nature and Culture Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; Nature and Culture Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2010 ; Nature and Culture Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2010 ; Nature and Culture Volume 5 ; 5 ; >
     au < finished ; finished ; 2011 ; Nature and Culture Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2012 ; Nature and Culture Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Nature and Culture Volume 8 ; 8 ; >
@@ -1141,7 +1141,7 @@
     param[journal_id] = religion-and-society
     #param[journal_issn] = 2150-9298
 
-    au < crawling ; exists ; 2010 ; Religion and Society: Advances in Research Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2010 ; Religion and Society: Advances in Research Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Religion and Society: Advances in Research Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Religion and Society: Advances in Research Volume 3 ; 3 ; >
     au < finished ; finished ; 2013 ; Religion and Society: Advances in Research Volume 4 ; 4 ; reingest5.clockss.org:8082 >
@@ -1181,7 +1181,7 @@
     au < finished ; manifest ; 2003 ; Sartre Studies International Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2004 ; Sartre Studies International Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; Sartre Studies International Volume 11 ; 11 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2006 ; Sartre Studies International Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2006 ; Sartre Studies International Volume 12 ; 12 ; >
     au < finished ; manifest ; 2007 ; Sartre Studies International Volume 13 ; 13 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2008 ; Sartre Studies International Volume 14 ; 14 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2009 ; Sartre Studies International Volume 15 ; 15 ; reingest3.clockss.org:8083 >
@@ -1318,14 +1318,14 @@
 
 
     au < crawling ; exists ; 1997 ; Theoria Volume 44 ; 44 ; >
-    au < crawling ; exists ; 1998 ; Theoria Volume 45 ; 45 ; >
-    au < crawling ; exists ; 1999 ; Theoria Volume 46 ; 46 ; >
+    au < frozen ; exists ; 1998 ; Theoria Volume 45 ; 45 ; >
+    au < frozen ; exists ; 1999 ; Theoria Volume 46 ; 46 ; >
     au < finished ; manifest ; 2000 ; Theoria Volume 47 ; 47 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2001 ; Theoria Volume 48 ; 48 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2002 ; Theoria Volume 49 ; 49 ; >
     au < finished ; manifest ; 2003 ; Theoria Volume 50 ; 50 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2004 ; Theoria Volume 51 ; 51 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2005 ; Theoria Volume 52 ; 52 ; >
+    au < frozen ; exists ; 2005 ; Theoria Volume 52 ; 52 ; >
     au < notReady ; exists ; 2006 ; Theoria Volume 53 ; 53 ; > #Crawl completed with no substance, LOCKSS-5521
     au < finished ; manifest ; 2007 ; Theoria Volume 54 ; 54 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2008 ; Theoria Volume 55 ; 55 ; reingest1.clockss.org:8082 >
