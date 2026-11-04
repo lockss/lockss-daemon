@@ -1246,6 +1246,7 @@ while (my $line = <>) {
 
 # thin child of ClockssOJS2 but with a different start_url and no permission_url
   } elsif (($plugin eq "ClockssJidcOJS2Plugin") || 
+           ($plugin eq "ClockssUofgaslPlugin") || 
            ($plugin eq "ClockssEscrsPlugin") || 
            ($plugin eq "ClockssOjs3Plugin" && $param{base_url} !~ "talenta") || 
            ($plugin eq "ClockssOjs3Plugin" && $param{base_url} !~ "tcsuckhoelaohoa") || 
@@ -1319,7 +1320,7 @@ while (my $line = <>) {
         } else {
             $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
         }
-        sleep(4);
+        sleep(5); #A little slower for the U of Florida
 
 # thin child of OJS2 but with a different start_url and no permission_url
   } elsif (($plugin eq "Ojs3Plugin") ||
