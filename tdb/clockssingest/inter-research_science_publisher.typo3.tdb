@@ -543,6 +543,20 @@
       #published 1995 to present
       param[journal_id] = ame
 
+      au < exists ; exists ; 1995 ; 9 ; Aquatic Microbial Ecology Volume 9 ; >
+      au < exists ; exists ; 1996 ; 10 ; Aquatic Microbial Ecology Volume 10 ; >
+      au < exists ; exists ; 1996 ; 11 ; Aquatic Microbial Ecology Volume 11 ; >
+      au < exists ; exists ; 1997 ; 12 ; Aquatic Microbial Ecology Volume 12 ; >
+      au < exists ; exists ; 1997 ; 13 ; Aquatic Microbial Ecology Volume 13 ; >
+      au < exists ; exists ; 1998 ; 14 ; Aquatic Microbial Ecology Volume 14 ; >
+      au < exists ; exists ; 1998 ; 15 ; Aquatic Microbial Ecology Volume 15 ; >
+      au < exists ; exists ; 1998-1999 ; 16 ; Aquatic Microbial Ecology Volume 16 ; >
+      au < exists ; exists ; 1999 ; 17 ; Aquatic Microbial Ecology Volume 17 ; >
+      au < exists ; exists ; 1999 ; 18 ; Aquatic Microbial Ecology Volume 18 ; >
+      au < exists ; exists ; 1999 ; 19 ; Aquatic Microbial Ecology Volume 19 ; >
+      au < exists ; exists ; 1999 ; 20 ; Aquatic Microbial Ecology Volume 20 ; >
+      au < exists ; exists ; 2000 ; 21 ; Aquatic Microbial Ecology Volume 21 ; >
+
       au < exists ; exists ; 2010 ; 58 ; Aquatic Microbial Ecology Volume 58 ; >
       au < exists ; exists ; 2010 ; 59 ; Aquatic Microbial Ecology Volume 59 ; >
       au < exists ; exists ; 2010 ; 60 ; Aquatic Microbial Ecology Volume 60 ; >
@@ -588,20 +602,25 @@
       issn = 1611-8014 ;
       eissn = 1863-5415
     >
-      #published 2001 to present
+      #published 2000 to present
       param[journal_id] = esep
+      #Complete
 
       au < exists ; exists ; 2000 ; 1 ; Ethics in Science and Enviromental Politics Volume 1 ; >
       au < exists ; exists ; 2001 ; 2 ; Ethics in Science and Enviromental Politics Volume 2 ; >
       au < exists ; exists ; 2002-2003 ; 3 ; Ethics in Science and Enviromental Politics Volume 3 ; >
       au < exists ; exists ; 2003-2004 ; 4 ; Ethics in Science and Enviromental Politics Volume 4 ; >
-
+      au < exists ; exists ; 2005 ; 5 ; Ethics in Science and Enviromental Politics Volume 5 ; >
+      au < exists ; exists ; 2006 ; 6 ; Ethics in Science and Enviromental Politics Volume 6 ; >
+      au < exists ; exists ; 2007 ; 7 ; Ethics in Science and Enviromental Politics Volume 7 ; >
+      au < exists ; exists ; 2008 ; 8 ; Ethics in Science and Enviromental Politics Volume 8 ; >
+      au < exists ; exists ; 2009 ; 9 ; Ethics in Science and Enviromental Politics Volume 9 ; >
       au < exists ; exists ; 2010 ; 10 ; Ethics in Science and Enviromental Politics Volume 10 ; >
       au < ready ; exists ; 2011 ; 11 ; Ethics in Science and Enviromental Politics Volume 11 ; >
       au < exists ; exists ; 2012 ; 12 ; Ethics in Science and Enviromental Politics Volume 12 ; >
-      au < exists ; exists ; 2013 ; 13 ; Ethics in Science and Enviromental Politics Volume 13 ; >
+      au < exists ; exists ; 2013-2014 ; 13 ; Ethics in Science and Enviromental Politics Volume 13 ; >
       au < exists ; exists ; 2014 ; 14 ; Ethics in Science and Enviromental Politics Volume 14 ; >
-      au < ready ; exists ; 2015 ; 15 ; Ethics in Science and Enviromental Politics Volume 15 ; >
+      au < ready ; exists ; 2015-2016 ; 15 ; Ethics in Science and Enviromental Politics Volume 15 ; >
       au < exists ; exists ; 2016 ; 16 ; Ethics in Science and Enviromental Politics Volume 16 ; >
       au < exists ; exists ; 2017 ; 17 ; Ethics in Science and Enviromental Politics Volume 17 ; >
       au < exists ; exists ; 2018 ; 18 ; Ethics in Science and Enviromental Politics Volume 18 ; >
@@ -625,6 +644,7 @@
     >
       #published 2004 to present
       param[journal_id] = esr
+      #Complete
 
       au < exists ; exists ; 2004-2005 ; 1 ; Endangered Species Research Volume 1 ; >
       au < exists ; exists ; 2006 ; 2 ; Endangered Species Research Volume 2 ; >
@@ -638,23 +658,23 @@
       au < exists ; exists ; 2008-2010 ; 10 ; Endangered Species Research Volume 10 ; >
       au < exists ; exists ; 2010 ; 11 ; Endangered Species Research Volume 11 ; >
       au < exists ; exists ; 2010 ; 12 ; Endangered Species Research Volume 12 ; >
-      au < exists ; exists ; 2011 ; 13 ; Endangered Species Research Volume 13 ; >
+      au < exists ; exists ; 2010-2011 ; 13 ; Endangered Species Research Volume 13 ; >
       au < exists ; exists ; 2011 ; 14 ; Endangered Species Research Volume 14 ; >
       au < exists ; exists ; 2011 ; 15 ; Endangered Species Research Volume 15 ; >
       au < exists ; exists ; 2012 ; 16 ; Endangered Species Research Volume 16 ; >
       au < exists ; exists ; 2012 ; 17 ; Endangered Species Research Volume 17 ; >
       au < exists ; exists ; 2012 ; 18 ; Endangered Species Research Volume 18 ; >
-      au < exists ; exists ; 2013 ; 19 ; Endangered Species Research Volume 19 ; >
+      au < exists ; exists ; 2012-2013 ; 19 ; Endangered Species Research Volume 19 ; >
       au < exists ; exists ; 2013 ; 20 ; Endangered Species Research Volume 20 ; >
       au < exists ; exists ; 2013 ; 21 ; Endangered Species Research Volume 21 ; >
       au < exists ; exists ; 2014 ; 22 ; Endangered Species Research Volume 22 ; >
       au < exists ; exists ; 2014 ; 23 ; Endangered Species Research Volume 23 ; >
       au < exists ; exists ; 2014 ; 24 ; Endangered Species Research Volume 24 ; >
       au < exists ; exists ; 2014 ; 25 ; Endangered Species Research Volume 25 ; >
-      au < exists ; exists ; 2015 ; 26 ; Endangered Species Research Volume 26 ; >
+      au < exists ; exists ; 2014-2015 ; 26 ; Endangered Species Research Volume 26 ; >
       au < exists ; exists ; 2015 ; 27 ; Endangered Species Research Volume 27 ; >
       au < exists ; exists ; 2015 ; 28 ; Endangered Species Research Volume 28 ; >
-      au < exists ; exists ; 2016 ; 29 ; Endangered Species Research Volume 29 ; >
+      au < exists ; exists ; 2015-2016 ; 29 ; Endangered Species Research Volume 29 ; >
       au < exists ; exists ; 2016 ; 30 ; Endangered Species Research Volume 30 ; >
       au < exists ; exists ; 2016 ; 31 ; Endangered Species Research Volume 31 ; >
       au < ready ; exists ; 2017 ; 32 ; Endangered Species Research Volume 32 ; >
