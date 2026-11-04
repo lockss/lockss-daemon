@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Society of Spanish & Spanish-American Studies
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:609
+
+    {
+    title <
+      name = Anales de la literatura española contemporánea / Annals of Contemporary Spanish Literature ;
+      issn = 0272-1635 ;
+      eissn = 2327-4182
+
+    >
+
+      attr[journal_id] = 915
+
+      au < manifest ; 2026 ; Anales de la literatura española contemporánea / Annals of Contemporary Spanish Literature Volume 51 [2026] ; 20873 >
+
+    }
+
+}

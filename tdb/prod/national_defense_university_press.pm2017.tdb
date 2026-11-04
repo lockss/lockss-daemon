@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = National Defense University Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:610
+
+    {
+    title <
+      name = Joint Force Quarterly ;
+      issn = 1070-0692 ;
+      eissn = 1559-6702
+
+    >
+
+      attr[journal_id] = 923
+
+      au < manifest ; 2024 ; Joint Force Quarterly Volume 113 [2024] ; 21074 >
+      au < manifest ; 2025 ; Joint Force Quarterly Volume 116 [2025] ; 21071 >
+
+    }
+
+}
