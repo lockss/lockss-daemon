@@ -51,20 +51,20 @@ public class EmeraldBooksDoiArticleIteratorFactory implements ArticleIteratorFac
     private static final String DOI_ROOT_TEMPLATE = "\"%s\", base_url";
 
     /*
-     * {base_url}(books|ebooks)/(book|edited-volume|monograph)/{numeric id}/
+     * {base_url}(books|ebooks)/(oa-)?(book|edited-volume|monograph)/{numeric id}/
      *
      * No optional publication-slug branch: Emerald serves books directly off base_url
      * with no slug segment. Insert "([^/.]+/)?" after %s if a DOI-style AU ever turns up
      * on a Silverchair site that does use one.
      */
     private static final String DOI_PATTERN_TEMPLATE =
-            "\"^%s(books|ebooks)/(book|edited-volume|monograph)/[0-9]+/\", base_url";
+            "\"^%s(books|ebooks)/(oa-)?(book|edited-volume|monograph)/[0-9]+/\", base_url";
 
     /*
      * Group 1 spans the whole match, so the replacement below is an identity transform.
      */
     private static final Pattern DOI_BOOK_LANDING_PAGE_PATTERN = Pattern.compile(
-            "(/(?:books|ebooks)/(?:book|edited-volume|monograph)/[0-9]+/[^/.?&#]+)$",
+            "(/(?:books|ebooks)/(?:oa-)?(?:book|edited-volume|monograph)/[0-9]+/[^/.?&#]+)$",
             Pattern.CASE_INSENSITIVE);
 
     private static final String DOI_BOOK_LANDING_PAGE_REPLACEMENT = "$1";
