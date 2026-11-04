@@ -45,14 +45,14 @@
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2016 ; 2016 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2016 ; 2016 ; https://journals.whitingbirch.net/ ; reingest1.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2017 ; 2017 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2017 ; 2017 ; https://journals.whitingbirch.net/ ; reingest2.clockss.org:8085 >
       au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2018 ; 2018 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2018 ; 2018 ; https://journals.whitingbirch.net/ ; reingest2.clockss.org:8085 > #no successful crawl on ingest3
-      au < ojs3.ClockssOjs3Plugin ; doesNotExist ; doesNotExist ; 2019 ; 2019 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2019 ; 2019 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2019 ; 2019 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2019 ; 2019 ; https://journals.whitingbirch.net/ ; >
       au < ojs3.ClockssOjs3Plugin ; finished ; finished ; 2020 ; 2020 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 29 ; 29 ; https://journals.whitingbirch.net/ ; reingest5.clockss.org:8082 >
-      au < ojs3.ClockssOjs3Plugin ; doesNotExist ; doesNotExist ; 2021 ; 2021 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 30 ; 30 ; https://journals.whitingbirch.net/ ; > #Content exists
-      au < ojs3.ClockssOjs3Plugin ; doesNotExist ; doesNotExist ; 2022 ; 2022 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 31 ; 31 ; https://journals.whitingbirch.net/ ; >
-      au < ojs3.ClockssOjs3Plugin ; doesNotExist ; doesNotExist ; 2023 ; 2023 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 32 ; 32 ; https://journals.whitingbirch.net/ ; >
-      au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2024 ; 2024 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 33 ; 33 ; https://journals.whitingbirch.net/ ; >
-      au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2025 ; 2025 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 34 ; 34 ; https://journals.whitingbirch.net/ ; >
-      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2026 ; 2026 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 35 ; 35 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2021 ; 2021 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 30 ; 30 ; https://journals.whitingbirch.net/ ; > #Content exists
+      au < ojs3.ClockssOjs3Plugin ; doesNotExist ; doesNotExist ; 2022 ; 2022 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2022 ; 2022 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2023 ; 2023 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 32 ; 32 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2024 ; 2024 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 31 ; 31 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2025 ; 2025 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 32 ; 32 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2026 ; 2026 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 33 ; 33 ; https://journals.whitingbirch.net/ ; >
 
     }
     
@@ -78,21 +78,21 @@
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2009 ; 2009 ; The Journal of Practice Teaching and Learning Volume 2009 ; 9 ; https://journals.whitingbirch.net/ ; >
       au < ojs2.ClockssOJS2Plugin ; doNotProcess ; doNotProcess ; 2010 ; 2010 ; The Journal of Practice Teaching and Learning Volume 2010 ; 10 ; https://journals.whitingbirch.net/ ; >
       au < ojs2.ClockssOJS2Plugin ; doNotProcess ; doNotProcess ; 2011 ; 2011 ; The Journal of Practice Teaching and Learning Volume 2011 ; 11 ; https://journals.whitingbirch.net/ ; >
-      au < ojs2.ClockssOJS2Plugin ; doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Journal of Practice Teaching and Learning Volume 2013 ; 12 ; https://journals.whitingbirch.net/ ; >
-      au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2014 ; 2014 ; The Journal of Practice Teaching and Learning Volume 2014 ; 13 ; http://journals.whitingbirch.net/ ; >
+      au < ojs2.ClockssOJS2Plugin ; doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Journal of Practice Teaching and Learning Volume 2013 ; 11-12 ; https://journals.whitingbirch.net/ ; >
+      au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2014 ; 2014 ; The Journal of Practice Teaching and Learning Volume 2014 ; 12-13 ; http://journals.whitingbirch.net/ ; >
 
       au < ojs2.ClockssOJS2Plugin ; superseded ; exists ; 2016 ; 2016 ; The Journal of Practice Teaching and Learning Volume 2016 [superseded] ; 14 ; http://journals.whitingbirch.net/ ; >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2016 ; 2016 ; The Journal of Practice Teaching and Learning Volume 2016 ; 14 ; https://journals.whitingbirch.net/ ; reingest1.clockss.org:8082 >
-      au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2017 ; 2017 ; The Journal of Practice Teaching and Learning Volume 2017 ; 15 ; https://journals.whitingbirch.net/ ; reingest2.clockss.org:8085 >
-      au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2018 ; 2018 ; The Journal of Practice Teaching and Learning Volume 2018 ; 16 ; https://journals.whitingbirch.net/ ; reingest1.clockss.org:8082 >
-      au < ojs3.ClockssOjs3Plugin ; doesNotExist ; doesNotExist ; 2019 ; 2019 ; The Journal of Practice Teaching and Learning Volume 2019 ; 0 ; https://journals.whitingbirch.net/ ; >
+      au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2017 ; 2017 ; The Journal of Practice Teaching and Learning Volume 2017 ; 14 ; https://journals.whitingbirch.net/ ; reingest2.clockss.org:8085 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2018 ; 2018 ; The Journal of Practice Teaching and Learning Volume 2018 ; 15 ; https://journals.whitingbirch.net/ ; reingest1.clockss.org:8082 >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2019 ; 2019 ; The Journal of Practice Teaching and Learning Volume 2019 ; 16 ; https://journals.whitingbirch.net/ ; >
       au < ojs3.ClockssOjs3Plugin ; finished ; frozen ; 2020 ; 2020 ; The Journal of Practice Teaching and Learning Volume 2020 ; 17 ; https://journals.whitingbirch.net/ ; reingest5.clockss.org:8082 >
-      au < ojs3.ClockssOjs3Plugin ; doesNotExist ; doesNotExist ; 2021 ; 2021 ; The Journal of Practice Teaching and Learning Volume 2021 ; 17 ; https://journals.whitingbirch.net/ ; >
-      au < ojs3.ClockssOjs3Plugin ; doesNotExist ; doesNotExist ; 2022 ; 2022 ; The Journal of Practice Teaching and Learning Volume 2022 ; 18 ; https://journals.whitingbirch.net/ ; >
-      au < ojs3.ClockssOjs3Plugin ; doesNotExist ; doesNotExist ; 2023 ; 2023 ; The Journal of Practice Teaching and Learning Volume 2023 ; 19 ; https://journals.whitingbirch.net/ ; >
-      au < ojs3.ClockssOjs3Plugin ; finished ; manifest ; 2024 ; 2024 ; The Journal of Practice Teaching and Learning Volume 2024 ; 20 ; https://journals.whitingbirch.net/ ; reingest3.clockss.org:8083 >
-      au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2025 ; 2025 ; The Journal of Practice Teaching and Learning Volume 2025 ; 21 ; https://journals.whitingbirch.net/ ; >
-      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2026 ; 2026 ; The Journal of Practice Teaching and Learning Volume 2026 ; 22 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2021 ; 2021 ; The Journal of Practice Teaching and Learning Volume 2021 ; 18 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2022 ; 2022 ; The Journal of Practice Teaching and Learning Volume 2022 ; 19 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2023 ; 2023 ; The Journal of Practice Teaching and Learning Volume 2023 ; 19-21 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; finished ; manifest ; 2024 ; 2024 ; The Journal of Practice Teaching and Learning Volume 2024 ; 22 ; https://journals.whitingbirch.net/ ; reingest3.clockss.org:8083 >
+      au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2025 ; 2025 ; The Journal of Practice Teaching and Learning Volume 2025 ; 23 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2026 ; 2026 ; The Journal of Practice Teaching and Learning Volume 2026 ; 23-24 ; https://journals.whitingbirch.net/ ; >
 
     }
     
@@ -128,9 +128,8 @@
 
       au < ojs3.ClockssOjs3Plugin ; finished ; finished ; 2018 ; 2018 ; Social Work and Social Sciences Review Volume 2018 ; 2018 ; https://journals.whitingbirch.net/ ; reingest1.clockss.org:8082 >
       au < ojs3.ClockssOjs3Plugin ; finished ; frozen ; 2019 ; 2019 ; Social Work and Social Sciences Review Volume 2019 ; 2019 ; https://journals.whitingbirch.net/ ; reingest1.clockss.org:8082 >
-    #nothing published in 2020 & 2021
-      au < ojs3.ClockssOjs3Plugin ; doesNotExist ; doesNotExist ; 2020 ; 2020 ; Social Work and Social Sciences Review Volume 2020 ; 2020 ; https://journals.whitingbirch.net/ ; >
-      au < ojs3.ClockssOjs3Plugin ; doesNotExist ; doesNotExist ; 2021 ; 2021 ; Social Work and Social Sciences Review Volume 2021 ; 2021 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2020 ; 2020 ; Social Work and Social Sciences Review Volume 2020 ; 2020 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2021 ; 2021 ; Social Work and Social Sciences Review Volume 2021 ; 2021 ; https://journals.whitingbirch.net/ ; >
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2022 ; 2022 ; Social Work and Social Sciences Review Volume 2022 ; 2022 ; https://journals.whitingbirch.net/ ; >
       au < ojs3.ClockssOjs3Plugin ; deepCrawl ; exists ; 2023 ; 2023 ; Social Work and Social Sciences Review Volume 2023 ; 2023 ; https://journals.whitingbirch.net/ ; >
       au < ojs3.ClockssOjs3Plugin ; deepCrawl ; exists ; 2024 ; 2024 ; Social Work and Social Sciences Review Volume 2024 ; 2024 ; https://journals.whitingbirch.net/ ; >
