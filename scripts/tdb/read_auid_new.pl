@@ -1274,6 +1274,10 @@ while (my $line = <>) {
         } elsif (uri_unescape($param{base_url}) =~ m/talenta\.usu\.ac\.id/) {  #https://talenta.usu.ac.id
             $url = sprintf("%s%s/gateway/clockss?year=%d",
             $param{base_url}, $param{journal_id}, $param{year});
+        } elsif ($plugin eq "ClockssUofgaslPlugin") {
+            $url = sprintf("%sindex.php/%s/gateway/clockss?year=%d",
+            $param{base_url}, $param{journal_id}, $param{year});
+            sleep(8); #A little slower for the U of Florida
         } elsif ($plugin eq "ClockssUbiquityPartnerNetworkPlugin") {
             $url = sprintf("%sindex.php/%s/gateway/clockss?year=%d",
             $param{base_url2}, $param{journal_id}, $param{year});
@@ -1320,7 +1324,7 @@ while (my $line = <>) {
         } else {
             $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
         }
-        sleep(5); #A little slower for the U of Florida
+        sleep(4); #A little slower for the U of Florida
 
 # thin child of OJS2 but with a different start_url and no permission_url
   } elsif (($plugin eq "Ojs3Plugin") ||
