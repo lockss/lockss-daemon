@@ -10,11 +10,8 @@
 
   plugin = org.lockss.plugin.interresearch.ClockssInterResearch2026JournalsPlugin
   implicit < status ; status2 ; year ; param[volume_name] ; name ; hidden[proxy] >
-  #plugin = org.lockss.plugin.interresearch.ClockssInterResearchPlugin
-  #implicit < status ; status2 ; year ; param[year] ; param[volume] ; name ; hidden[proxy] >
   param[base_url] = https://www.int-res.com/
   #####Permission statement at https://www.int-res.com/lockss
-  #####Process content at the end of the year when all volumes are online.
 
   {
 
@@ -556,32 +553,45 @@
       au < exists ; exists ; 1999 ; 19 ; Aquatic Microbial Ecology Volume 19 ; >
       au < exists ; exists ; 1999 ; 20 ; Aquatic Microbial Ecology Volume 20 ; >
       au < exists ; exists ; 2000 ; 21 ; Aquatic Microbial Ecology Volume 21 ; >
+      au < exists ; exists ; 2000 ; 22 ; Aquatic Microbial Ecology Volume 22 ; >
+      au < exists ; exists ; 2000-2001 ; 23 ; Aquatic Microbial Ecology Volume 23 ; >
+      au < exists ; exists ; 2001 ; 24 ; Aquatic Microbial Ecology Volume 24 ; >
+      au < exists ; exists ; 2001 ; 25 ; Aquatic Microbial Ecology Volume 25 ; >
+      au < exists ; exists ; 2001-2002 ; 26 ; Aquatic Microbial Ecology Volume 26 ; >
+      au < exists ; exists ; 2002 ; 27 ; Aquatic Microbial Ecology Volume 27 ; >
+      au < exists ; exists ; 2002 ; 28 ; Aquatic Microbial Ecology Volume 28 ; >
+      au < exists ; exists ; 2002 ; 29 ; Aquatic Microbial Ecology Volume 29 ; >
+      au < exists ; exists ; 2002-2003 ; 30 ; Aquatic Microbial Ecology Volume 30 ; >
+      au < exists ; exists ; 2003 ; 31 ; Aquatic Microbial Ecology Volume 31 ; >
+      au < exists ; exists ; 2003 ; 32 ; Aquatic Microbial Ecology Volume 32 ; >
+      au < exists ; exists ; 2003 ; 33 ; Aquatic Microbial Ecology Volume 33 ; >
+      au < exists ; exists ; 2004 ; 34 ; Aquatic Microbial Ecology Volume 34 ; >
 
-      au < exists ; exists ; 2010 ; 58 ; Aquatic Microbial Ecology Volume 58 ; >
+      au < exists ; exists ; 2009-2010 ; 58 ; Aquatic Microbial Ecology Volume 58 ; >
       au < exists ; exists ; 2010 ; 59 ; Aquatic Microbial Ecology Volume 59 ; >
       au < exists ; exists ; 2010 ; 60 ; Aquatic Microbial Ecology Volume 60 ; >
       au < exists ; exists ; 2010 ; 61 ; Aquatic Microbial Ecology Volume 61 ; >
       au < exists ; exists ; 2011 ; 62 ; Aquatic Microbial Ecology Volume 62 ; >
       au < exists ; exists ; 2011 ; 63 ; Aquatic Microbial Ecology Volume 63 ; >
       au < exists ; exists ; 2011 ; 64 ; Aquatic Microbial Ecology Volume 64 ; >
-      au < exists ; exists ; 2011 ; 65 ; Aquatic Microbial Ecology Volume 65 ; >
+      au < exists ; exists ; 2011-2012 ; 65 ; Aquatic Microbial Ecology Volume 65 ; >
       au < exists ; exists ; 2012 ; 66 ; Aquatic Microbial Ecology Volume 66 ; >
       au < exists ; exists ; 2012 ; 67 ; Aquatic Microbial Ecology Volume 67 ; >
-      au < exists ; exists ; 2012 ; 68 ; Aquatic Microbial Ecology Volume 68 ; >
+      au < exists ; exists ; 2012-2013 ; 68 ; Aquatic Microbial Ecology Volume 68 ; >
       au < exists ; exists ; 2012 ; 69 ; Aquatic Microbial Ecology Volume 69 ; >
       au < exists ; exists ; 2013 ; 70 ; Aquatic Microbial Ecology Volume 70 ; >
-      au < exists ; exists ; 2013 ; 71 ; Aquatic Microbial Ecology Volume 71 ; >
-      au < exists ; exists ; 2013 ; 72 ; Aquatic Microbial Ecology Volume 72 ; >
+      au < exists ; exists ; 2013-2014 ; 71 ; Aquatic Microbial Ecology Volume 71 ; >
+      au < exists ; exists ; 2014 ; 72 ; Aquatic Microbial Ecology Volume 72 ; >
       au < exists ; exists ; 2014 ; 73 ; Aquatic Microbial Ecology Volume 73 ; >
       au < exists ; exists ; 2014 ; 74 ; Aquatic Microbial Ecology Volume 74 ; >
       au < exists ; exists ; 2015 ; 75 ; Aquatic Microbial Ecology Volume 75 ; >
-      au < exists ; exists ; 2015 ; 76 ; Aquatic Microbial Ecology Volume 76 ; >
+      au < exists ; exists ; 2015-2016 ; 76 ; Aquatic Microbial Ecology Volume 76 ; >
       au < exists ; exists ; 2016 ; 77 ; Aquatic Microbial Ecology Volume 77 ; >
-      au < exists ; exists ; 2016 ; 78 ; Aquatic Microbial Ecology Volume 78 ; >
+      au < exists ; exists ; 2016-2017 ; 78 ; Aquatic Microbial Ecology Volume 78 ; >
       au < exists ; exists ; 2017 ; 79 ; Aquatic Microbial Ecology Volume 79 ; >
       au < exists ; exists ; 2018 ; 80 ; Aquatic Microbial Ecology Volume 80 ; >
       au < exists ; exists ; 2018 ; 81 ; Aquatic Microbial Ecology Volume 81 ; >
-      au < exists ; exists ; 2019 ; 82 ; Aquatic Microbial Ecology Volume 82 ; >
+      au < exists ; exists ; 2018-2019 ; 82 ; Aquatic Microbial Ecology Volume 82 ; >
       au < exists ; exists ; 2019 ; 83 ; Aquatic Microbial Ecology Volume 83 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 84 ; Aquatic Microbial Ecology Volume 84 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 85 ; Aquatic Microbial Ecology Volume 85 ; >
