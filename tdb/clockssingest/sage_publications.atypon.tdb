@@ -466,7 +466,7 @@
       au < frozen ; exists ; 1982 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 7 ; 7 ; aeta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1983 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 8 ; 8 ; aeta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1984 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 9 ; 9 ; aeta ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1985 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 10 ; 10 ; aeta ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1985 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 10 ; 10 ; aeta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1986 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 11 ; 11 ; aeta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1987 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 12 ; 12 ; aeta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1988 ; Acupuncture & Electro-Therapeutics Research: International Journal of Integrated Medicine Volume 13 ; 13 ; aeta ; https://journals.sagepub.com/ ; >
@@ -528,7 +528,7 @@
       au < frozen ; exists ; 1990 ; Acupuncture in Medicine Volume 8 ; 8 ; aima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1991 ; Acupuncture in Medicine Volume 9 ; 9 ; aima ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1992 ; Acupuncture in Medicine Volume 10 ; 10 ; aima ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1993 ; Acupuncture in Medicine Volume 11 ; 11 ; aima ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1993 ; Acupuncture in Medicine Volume 11 ; 11 ; aima ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1994 ; Acupuncture in Medicine Volume 12 ; 12 ; aima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1995 ; Acupuncture in Medicine Volume 13 ; 13 ; aima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1996 ; Acupuncture in Medicine Volume 14 ; 14 ; aima ; https://journals.sagepub.com/ ; >
@@ -536,7 +536,7 @@
       au < frozen ; exists ; 1998 ; Acupuncture in Medicine Volume 16 ; 16 ; aima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1999 ; Acupuncture in Medicine Volume 17 ; 17 ; aima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Acupuncture in Medicine Volume 18 ; 18 ; aima ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2001 ; Acupuncture in Medicine Volume 19 ; 19 ; aima ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2001 ; Acupuncture in Medicine Volume 19 ; 19 ; aima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Acupuncture in Medicine Volume 20 ; 20 ; aima ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2003 ; Acupuncture in Medicine Volume 21 ; 21 ; aima ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2004 ; Acupuncture in Medicine Volume 22 ; 22 ; aima ; https://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
@@ -579,7 +579,7 @@
       au < frozen ; exists ; 1993 ; Adaptive Behavior Volume 2 ; 2 ; adba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1994 ; Adaptive Behavior Volume 3 ; 3 ; adba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1995 ; Adaptive Behavior Volume 4 ; 4 ; adba ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1996 ; Adaptive Behavior Volume 5 ; 5 ; adba ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1996 ; Adaptive Behavior Volume 5 ; 5 ; adba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1997 ; Adaptive Behavior Volume 6 ; 6 ; adba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1999 ; Adaptive Behavior Volume 7 ; 7 ; adba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Adaptive Behavior Volume 8 ; 8 ; adba ; https://journals.sagepub.com/ ; >
@@ -759,7 +759,7 @@
       au < frozen ; exists ; 1996 ; Adsorption Science & Technology Volume 13 ; 13 ; adta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1996 ; Adsorption Science & Technology Volume 14 ; 14 ; adta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1997 ; Adsorption Science & Technology Volume 15 ; 15 ; adta ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1998 ; Adsorption Science & Technology Volume 16 ; 16 ; adta ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1998 ; Adsorption Science & Technology Volume 16 ; 16 ; adta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1999 ; Adsorption Science & Technology Volume 17 ; 17 ; adta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 ; adta ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2001 ; Adsorption Science & Technology Volume 19 ; 19 ; adta ; https://journals.sagepub.com/ ; >
@@ -906,8 +906,8 @@
       #continued_by  = 0741-7136
 
       au < frozen ; exists ; 1950-1951 ; Adult Education Volume 1 ; 1 ; aeqa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1951-1952 ; Adult Education Volume 2 ; 2 ; aeqa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1952-1953 ; Adult Education Volume 3 ; 3 ; aeqa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1951-1952 ; Adult Education Volume 2 ; 2 ; aeqa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1952-1953 ; Adult Education Volume 3 ; 3 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1953-1954 ; Adult Education Volume 4 ; 4 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1954-1955 ; Adult Education Volume 5 ; 5 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1955-1956 ; Adult Education Volume 6 ; 6 ; aeqa ; https://journals.sagepub.com/ ; >
@@ -929,7 +929,7 @@
       au < frozen ; exists ; 1971-1972 ; Adult Education Volume 22 ; 22 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1972-1973 ; Adult Education Volume 23 ; 23 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1973-1974 ; Adult Education Volume 24 ; 24 ; aeqa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1974-1975 ; Adult Education Volume 25 ; 25 ; aeqa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1974-1975 ; Adult Education Volume 25 ; 25 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1975-1976 ; Adult Education Volume 26 ; 26 ; aeqa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1976-1977 ; Adult Education Volume 27 ; 27 ; aeqa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1977-1978 ; Adult Education Volume 28 ; 28 ; aeqa ; https://journals.sagepub.com/ ; >
@@ -1416,7 +1416,7 @@
       #journal_id = ADS
       #continues = 0893-5068
 
-      au < ready ; exists ; 1996 ; AIDS Patient Care and STDs Volume 10 ; 10 ; adsa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1996 ; AIDS Patient Care and STDs Volume 10 ; 10 ; adsa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1997 ; AIDS Patient Care and STDs Volume 11 ; 11 ; adsa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1998 ; AIDS Patient Care and STDs Volume 12 ; 12 ; adsa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1999 ; AIDS Patient Care and STDs Volume 13 ; 13 ; adsa ; https://journals.sagepub.com/ ; >
@@ -1535,7 +1535,7 @@
       au < frozen ; exists ; 1996 ; Alexandria Volume 8 ; 8 ; alaa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1997 ; Alexandria Volume 9 ; 9 ; alaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1998 ; Alexandria Volume 10 ; 10 ; alaa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1999 ; Alexandria Volume 11 ; 11 ; alaa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1999 ; Alexandria Volume 11 ; 11 ; alaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Alexandria Volume 12 ; 12 ; alaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2001 ; Alexandria Volume 13 ; 13 ; alaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Alexandria Volume 14 ; 14 ; alaa ; https://journals.sagepub.com/ ; >
@@ -2224,7 +2224,7 @@
       au < manifest ; exists ; 1998 ; American Journal of Evaluation Volume 19 ; 19 ; ajec ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 1999 ; American Journal of Evaluation Volume 20 ; 20 ; ajec ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; American Journal of Evaluation Volume 21 ; 21 ; ajec ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2001 ; American Journal of Evaluation Volume 22 ; 22 ; ajec ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2001 ; American Journal of Evaluation Volume 22 ; 22 ; ajec ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; American Journal of Evaluation Volume 23 ; 23 ; ajec ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2003 ; American Journal of Evaluation Volume 24 ; 24 ; ajec ; https://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2004 ; American Journal of Evaluation Volume 25 ; 25 ; ajec ; https://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
@@ -4157,7 +4157,7 @@
       au < manifest ; exists ; 2007 ; Antioxidants & Redox Signaling Volume 9 ; 9 ; area ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2008 ; Antioxidants & Redox Signaling Volume 10 ; 10 ; area ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2009 ; Antioxidants & Redox Signaling Volume 11 ; 11 ; area ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2010 ; Antioxidants & Redox Signaling Volume 12 ; 12 ; area ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2010 ; Antioxidants & Redox Signaling Volume 12 ; 12 ; area ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2010 ; Antioxidants & Redox Signaling Volume 13 ; 13 ; area ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2011 ; Antioxidants & Redox Signaling Volume 14 ; 14 ; area ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2011 ; Antioxidants & Redox Signaling Volume 15 ; 15 ; area ; https://journals.sagepub.com/ ; >
@@ -8750,7 +8750,7 @@
       au < frozen ; exists ; 2011 ; Cancer Biotherapy and Radiopharmaceuticals Volume 26 ; 26 ; cbta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2012 ; Cancer Biotherapy and Radiopharmaceuticals Volume 27 ; 27 ; cbta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2013 ; Cancer Biotherapy and Radiopharmaceuticals Volume 28 ; 28 ; cbta ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2014 ; Cancer Biotherapy and Radiopharmaceuticals Volume 29 ; 29 ; cbta ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2014 ; Cancer Biotherapy and Radiopharmaceuticals Volume 29 ; 29 ; cbta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2015 ; Cancer Biotherapy and Radiopharmaceuticals Volume 30 ; 30 ; cbta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2016 ; Cancer Biotherapy and Radiopharmaceuticals Volume 31 ; 31 ; cbta ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Cancer Biotherapy and Radiopharmaceuticals Volume 32 ; 32 ; cbta ; https://journals.sagepub.com/ ; >
@@ -8777,7 +8777,7 @@
 
       au < frozen ; exists ; 2016 ; Cannabis & Cannabinoid Research Volume 1 ; 1 ; ccba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2017 ; Cannabis & Cannabinoid Research Volume 2 ; 2 ; ccba ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2018 ; Cannabis & Cannabinoid Research Volume 3 ; 3 ; ccba ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2018 ; Cannabis & Cannabinoid Research Volume 3 ; 3 ; ccba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Cannabis & Cannabinoid Research Volume 4 ; 4 ; ccba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Cannabis & Cannabinoid Research Volume 5 ; 5 ; ccba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Cannabis & Cannabinoid Research Volume 6 ; 6 ; ccba ; https://journals.sagepub.com/ ; >
@@ -9143,14 +9143,14 @@
       #journal_id = CLR
       #continues = 1536-2302
 
-      au < ready ; exists ; 2010 ; Cellular Reprogramming Volume 12 ; 12 ; clra ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2010 ; Cellular Reprogramming Volume 12 ; 12 ; clra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2011 ; Cellular Reprogramming Volume 13 ; 13 ; clra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2012 ; Cellular Reprogramming Volume 14 ; 14 ; clra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2013 ; Cellular Reprogramming Volume 15 ; 15 ; clra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2014 ; Cellular Reprogramming Volume 16 ; 16 ; clra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2015 ; Cellular Reprogramming Volume 17 ; 17 ; clra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2016 ; Cellular Reprogramming Volume 18 ; 18 ; clra ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2017 ; Cellular Reprogramming Volume 19 ; 19 ; clra ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2017 ; Cellular Reprogramming Volume 19 ; 19 ; clra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2018 ; Cellular Reprogramming Volume 20 ; 20 ; clra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Cellular Reprogramming Volume 21 ; 21 ; clra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Cellular Reprogramming Volume 22 ; 22 ; clra ; https://journals.sagepub.com/ ; >
@@ -12565,7 +12565,7 @@
     >
       #journal_id = TCJ
 
-      au < ready ; exists ; 2018 ; The CRISPR Journal Volume 1 ; 1 ; tcja ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2018 ; The CRISPR Journal Volume 1 ; 1 ; tcja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; The CRISPR Journal Volume 2 ; 2 ; tcja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; The CRISPR Journal Volume 3 ; 3 ; tcja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; The CRISPR Journal Volume 4 ; 4 ; tcja ; https://journals.sagepub.com/ ; >
@@ -30184,7 +30184,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Journal of Building Physics Volume 46 ; 46 ; jend ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Journal of Building Physics Volume 47 ; 47 ; jend ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2024-2025 ; Journal of Building Physics Volume 48 ; 48 ; jend ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2025-2026 ; Journal of Building Physics Volume 49 ; 49 ; jend ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2025-2026 ; Journal of Building Physics Volume 49 ; 49 ; jend ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2026-2027 ; Journal of Building Physics Volume 50 ; 50 ; jend ; https://journals.sagepub.com/ ; >
 
   }
@@ -35027,7 +35027,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; Journal of Historical Research in Music Education Volume 44 ; 44 ; jhrb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; Journal of Historical Research in Music Education Volume 45 ; 45 ; jhrb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2024-2025 ; Journal of Historical Research in Music Education Volume 46 ; 46 ; jhrb ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2025-2026 ; Journal of Historical Research in Music Education Volume 47 ; 47 ; jhrb ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2025-2026 ; Journal of Historical Research in Music Education Volume 47 ; 47 ; jhrb ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2026-2027 ; Journal of Historical Research in Music Education Volume 48 ; 48 ; jhrb ; https://journals.sagepub.com/ ; >
 
   }
@@ -37691,7 +37691,7 @@
     au < manifest ; exists ; 2015 ; Journal of Medicinal Food Volume 18 ; 18 ; mefa ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; Journal of Medicinal Food Volume 19 ; 19 ; mefa ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; Journal of Medicinal Food Volume 20 ; 20 ; mefa ; https://journals.sagepub.com/ ; >
-    au < ready ; exists ; 2018 ; Journal of Medicinal Food Volume 21 ; 21 ; mefa ; https://journals.sagepub.com/ ; >
+    au < crawling ; exists ; 2018 ; Journal of Medicinal Food Volume 21 ; 21 ; mefa ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2019 ; Journal of Medicinal Food Volume 22 ; 22 ; mefa ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; Journal of Medicinal Food Volume 23 ; 23 ; mefa ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; Journal of Medicinal Food Volume 24 ; 24 ; mefa ; https://journals.sagepub.com/ ; >
@@ -44164,7 +44164,7 @@
     au < manifest ; exists ; 2015 ; Lymphatic Research and Biology Volume 13 ; 13 ; lrba ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; Lymphatic Research and Biology Volume 14 ; 14 ; lrba ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; Lymphatic Research and Biology Volume 15 ; 15 ; lrba ; https://journals.sagepub.com/ ; >
-    au < ready ; exists ; 2018 ; Lymphatic Research and Biology Volume 16 ; 16 ; lrba ; https://journals.sagepub.com/ ; >
+    au < crawling ; exists ; 2018 ; Lymphatic Research and Biology Volume 16 ; 16 ; lrba ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2019 ; Lymphatic Research and Biology Volume 17 ; 17 ; lrba ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; Lymphatic Research and Biology Volume 18 ; 18 ; lrba ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; Lymphatic Research and Biology Volume 19 ; 19 ; lrba ; https://journals.sagepub.com/ ; >
@@ -61213,7 +61213,7 @@
       au < manifest ; exists ; 2016 ; Thyroid Volume 26 ; 26 ; thya ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Thyroid Volume 27 ; 27 ; thya ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2018 ; Thyroid Volume 28 ; 28 ; thya ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2019 ; Thyroid Volume 29 ; 29 ; thya ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2019 ; Thyroid Volume 29 ; 29 ; thya ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Thyroid Volume 30 ; 30 ; thya ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Thyroid Volume 31 ; 31 ; thya ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; Thyroid Volume 32 ; 32 ; thya ; https://journals.sagepub.com/ ; >
@@ -61318,7 +61318,7 @@
       au < manifest ; exists ; 2016 ; Tissue Engineering Part A Volume 22 ; 22 ; teaa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Tissue Engineering Part A Volume 23 ; 23 ; teaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2018 ; Tissue Engineering Part A Volume 24 ; 24 ; teaa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2019 ; Tissue Engineering Part A Volume 25 ; 25 ; teaa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2019 ; Tissue Engineering Part A Volume 25 ; 25 ; teaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Tissue Engineering Part A Volume 26 ; 26 ; teaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Tissue Engineering Part A Volume 27 ; 27 ; teaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; Tissue Engineering Part A Volume 28 ; 28 ; teaa ; https://journals.sagepub.com/ ; >
@@ -61498,7 +61498,7 @@
 
       au < manifest ; exists ; 2001 ; Tourist Studies Volume 1 ; 1 ; toua ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Tourist Studies Volume 2 ; 2 ; toua ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2003 ; Tourist Studies Volume 3 ; 3 ; toua ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2003 ; Tourist Studies Volume 3 ; 3 ; toua ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2004 ; Tourist Studies Volume 4 ; 4 ; toua ; https://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2005 ; Tourist Studies Volume 5 ; 5 ; toua ; https://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2006 ; Tourist Studies Volume 6 ; 6 ; toua ; https://journals.sagepub.com/ ; >
@@ -61633,7 +61633,7 @@
       au < manifest ; exists ; 2000 ; Toxicology and Industrial Health Volume 16 ; 16 ; tiha ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2001 ; Toxicology and Industrial Health Volume 17 ; 17 ; tiha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Toxicology and Industrial Health Volume 18 ; 18 ; tiha ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2003 ; Toxicology and Industrial Health Volume 19 ; 19 ; tiha ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2003 ; Toxicology and Industrial Health Volume 19 ; 19 ; tiha ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2004 ; Toxicology and Industrial Health Volume 20 ; 20 ; tiha ; https://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2005 ; Toxicology and Industrial Health Volume 21 ; 21 ; tiha ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2006 ; Toxicology and Industrial Health Volume 22 ; 22 ; tiha ; https://journals.sagepub.com/ ; >
@@ -61707,7 +61707,7 @@
       au < manifest ; exists ; 2000 ; Transactions of the Institute of Measurement and Control Volume 22 ; 22 ; tima ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2001 ; Transactions of the Institute of Measurement and Control Volume 23 ; 23 ; tima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Transactions of the Institute of Measurement and Control Volume 24 ; 24 ; tima ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2003 ; Transactions of the Institute of Measurement and Control Volume 25 ; 25 ; tima ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2003 ; Transactions of the Institute of Measurement and Control Volume 25 ; 25 ; tima ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2004 ; Transactions of the Institute of Measurement and Control Volume 26 ; 26 ; tima ; https://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2005 ; Transactions of the Institute of Measurement and Control Volume 27 ; 27 ; tima ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2006 ; Transactions of the Institute of Measurement and Control Volume 28 ; 28 ; tima ; https://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
@@ -61946,7 +61946,7 @@
     >
       #journal_id = TRG
 
-      au < ready ; exists ; 2016 ; Transgender Health Volume 1 ; 1 ; trga ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2016 ; Transgender Health Volume 1 ; 1 ; trga ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2017 ; Transgender Health Volume 2 ; 2 ; trga ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2018 ; Transgender Health Volume 3 ; 3 ; trga ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2019 ; Transgender Health Volume 4 ; 4 ; trga ; https://journals.sagepub.com/ ; >
@@ -62327,7 +62327,7 @@
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1828 ; 1828 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1829 ; 1829 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1830 ; 1830 ; trra ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2003 ; Transportation Research Record Volume 1831 ; 1831 ; trra ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2003 ; Transportation Research Record Volume 1831 ; 1831 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1832 ; 1832 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1833 ; 1833 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1834 ; 1834 ; trra ; https://journals.sagepub.com/ ; >
@@ -62338,7 +62338,7 @@
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1839 ; 1839 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1840 ; 1840 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1841 ; 1841 ; trra ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2003 ; Transportation Research Record Volume 1842 ; 1842 ; trra ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2003 ; Transportation Research Record Volume 1842 ; 1842 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1843 ; 1843 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1844 ; 1844 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1845 ; 1845 ; trra ; https://journals.sagepub.com/ ; >
@@ -63495,7 +63495,7 @@
       au < manifest ; exists ; 2000 ; Traumatology Volume 6 ; 6 ; tmta ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2001 ; Traumatology Volume 7 ; 7 ; tmta ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Traumatology Volume 8 ; 8 ; tmta ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2003 ; Traumatology Volume 9 ; 9 ; tmta ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2003 ; Traumatology Volume 9 ; 9 ; tmta ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2004 ; Traumatology Volume 10 ; 10 ; tmta ; https://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2005 ; Traumatology Volume 11 ; 11 ; tmta ; https://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2006 ; Traumatology Volume 12 ; 12 ; tmta ; https://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
@@ -64517,7 +64517,7 @@
       au < frozen ; exists ; 2010 ; Viral Immunology Volume 23 ; 23 ; vima ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2011 ; Viral Immunology Volume 24 ; 24 ; vima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2012 ; Viral Immunology Volume 25 ; 25 ; vima ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2013 ; Viral Immunology Volume 26 ; 26 ; vima ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2013 ; Viral Immunology Volume 26 ; 26 ; vima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2014 ; Viral Immunology Volume 27 ; 27 ; vima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2015 ; Viral Immunology Volume 28 ; 28 ; vima ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2016 ; Viral Immunology Volume 29 ; 29 ; vima ; https://journals.sagepub.com/ ; >
@@ -65090,7 +65090,7 @@
       au < manifest ; exists ; 2000 ; Work, Employment & Society Volume 14 ; 14 ; wesa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2001 ; Work, Employment & Society Volume 15 ; 15 ; wesa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Work, Employment & Society Volume 16 ; 16 ; wesa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2003 ; Work, Employment & Society Volume 17 ; 17 ; wesa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2003 ; Work, Employment & Society Volume 17 ; 17 ; wesa ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2004 ; Work, Employment & Society Volume 18 ; 18 ; wesa ; https://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2005 ; Work, Employment & Society Volume 19 ; 19 ; wesa ; https://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2006 ; Work, Employment & Society Volume 20 ; 20 ; wesa ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
