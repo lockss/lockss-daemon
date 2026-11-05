@@ -289,7 +289,7 @@
       au < frozen ; exists ; 1983 ; Acta Sociologica Volume 26 ; 26 ; asja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1984 ; Acta Sociologica Volume 27 ; 27 ; asja ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1985 ; Acta Sociologica Volume 28 ; 28 ; asja ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1986 ; Acta Sociologica Volume 29 ; 29 ; asja ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1986 ; Acta Sociologica Volume 29 ; 29 ; asja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1987 ; Acta Sociologica Volume 30 ; 30 ; asja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1988 ; Acta Sociologica Volume 31 ; 31 ; asja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1989 ; Acta Sociologica Volume 32 ; 32 ; asja ; https://journals.sagepub.com/ ; >
@@ -952,21 +952,21 @@
       #continues = 0001-8481
 
       au < frozen ; exists ; 1983-1984 ; Adult Education Quarterly Volume 34 ; 34 ; aeqb ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1984-1985 ; Adult Education Quarterly Volume 35 ; 35 ; aeqb ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1984-1985 ; Adult Education Quarterly Volume 35 ; 35 ; aeqb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1985-1986 ; Adult Education Quarterly Volume 36 ; 36 ; aeqb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1986-1987 ; Adult Education Quarterly Volume 37 ; 37 ; aeqb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1987-1988 ; Adult Education Quarterly Volume 38 ; 38 ; aeqb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1988-1989 ; Adult Education Quarterly Volume 39 ; 39 ; aeqb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1990-1990 ; Adult Education Quarterly Volume 40 ; 40 ; aeqb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1990-1991 ; Adult Education Quarterly Volume 41 ; 41 ; aeqb ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1992-1992 ; Adult Education Quarterly Volume 42 ; 42 ; aeqb ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1992-1992 ; Adult Education Quarterly Volume 42 ; 42 ; aeqb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1992-1993 ; Adult Education Quarterly Volume 43 ; 43 ; aeqb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1993-1994 ; Adult Education Quarterly Volume 44 ; 44 ; aeqb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1994-1995 ; Adult Education Quarterly Volume 45 ; 45 ; aeqb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1995-1996 ; Adult Education Quarterly Volume 46 ; 46 ; aeqb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1996-1997 ; Adult Education Quarterly Volume 47 ; 47 ; aeqb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1997-1998 ; Adult Education Quarterly Volume 48 ; 48 ; aeqb ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1998-1999 ; Adult Education Quarterly Volume 49 ; 49 ; aeqb ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1998-1999 ; Adult Education Quarterly Volume 49 ; 49 ; aeqb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1999-2000 ; Adult Education Quarterly Volume 50 ; 50 ; aeqb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000-2001 ; Adult Education Quarterly Volume 51 ; 51 ; aeqb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2001-2002 ; Adult Education Quarterly Volume 52 ; 52 ; aeqb ; https://journals.sagepub.com/ ; >
@@ -1056,7 +1056,7 @@
       au < frozen ; exists ; 1993 ; Advances in Dental Research Volume 7 ; 7 ; adra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1994 ; Advances in Dental Research Volume 8 ; 8 ; adra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1995 ; Advances in Dental Research Volume 9 ; 9 ; adra ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1996 ; Advances in Dental Research Volume 10 ; 10 ; adra ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1996 ; Advances in Dental Research Volume 10 ; 10 ; adra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1997 ; Advances in Dental Research Volume 11 ; 11 ; adra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1998 ; Advances in Dental Research Volume 12 ; 12 ; adra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1999 ; Advances in Dental Research Volume 13 ; 13 ; adra ; https://journals.sagepub.com/ ; >
@@ -1460,7 +1460,7 @@
       #continued_by = 0889-2229
 
       au < frozen ; exists ; 1983 ; AIDS Research Volume 1 ; 1 ; aidb ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 1986 ; AIDS Research Volume 2 ; 2 ; aidb ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 1986 ; AIDS Research Volume 2 ; 2 ; aidb ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -5394,7 +5394,7 @@
       au < frozen ; exists ; 2010 ; Astrobiology Volume 10 ; 10 ; asba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2011 ; Astrobiology Volume 11 ; 11 ; asba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2012 ; Astrobiology Volume 12 ; 12 ; asba ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2013 ; Astrobiology Volume 13 ; 13 ; asba ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2013 ; Astrobiology Volume 13 ; 13 ; asba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2014 ; Astrobiology Volume 14 ; 14 ; asba ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2015 ; Astrobiology Volume 15 ; 15 ; asba ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2016 ; Astrobiology Volume 16 ; 16 ; asba ; https://journals.sagepub.com/ ; >
@@ -6917,12 +6917,12 @@
       #journal_id = BRC
 
       au < ready ; exists ; 2011 ; Brain Connectivity Volume 1 ; 1 ; brca ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2012 ; Brain Connectivity Volume 2 ; 2 ; brca ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2012 ; Brain Connectivity Volume 2 ; 2 ; brca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2013 ; Brain Connectivity Volume 3 ; 3 ; brca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2014 ; Brain Connectivity Volume 4 ; 4 ; brca ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2015 ; Brain Connectivity Volume 5 ; 5 ; brca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2016 ; Brain Connectivity Volume 6 ; 6 ; brca ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2017 ; Brain Connectivity Volume 7 ; 7 ; brca ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2017 ; Brain Connectivity Volume 7 ; 7 ; brca ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2018 ; Brain Connectivity Volume 8 ; 8 ; brca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Brain Connectivity Volume 9 ; 9 ; brca ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Brain Connectivity Volume 10 ; 10 ; brca ; https://journals.sagepub.com/ ; >
@@ -47534,7 +47534,7 @@
       au < deepCrawl ; exists ; 2022-2023 ; New Solutions Volume 32 ; 32 ; newa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2023-2024 ; New Solutions Volume 33 ; 33 ; newa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; New Solutions Volume 34 ; 34 ; newa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2025-2026 ; New Solutions Volume 35 ; 35 ; newa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2025-2026 ; New Solutions Volume 35 ; 35 ; newa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2026-2027 ; New Solutions Volume 36 ; 36 ; newa ; https://journals.sagepub.com/ ; >
 
   }
@@ -49332,7 +49332,7 @@
     au < manifest ; exists ; 2015 ; Pediatric Allergy, Immunology, and Pulmonology Volume 28 ; 28 ; paia ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2016 ; Pediatric Allergy, Immunology, and Pulmonology Volume 29 ; 29 ; paia ; https://journals.sagepub.com/ ; >
     au < manifest ; exists ; 2017 ; Pediatric Allergy, Immunology, and Pulmonology Volume 30 ; 30 ; paia ; https://journals.sagepub.com/ ; >
-    au < ready ; exists ; 2018 ; Pediatric Allergy, Immunology, and Pulmonology Volume 31 ; 31 ; paia ; https://journals.sagepub.com/ ; >
+    au < crawling ; exists ; 2018 ; Pediatric Allergy, Immunology, and Pulmonology Volume 31 ; 31 ; paia ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2019 ; Pediatric Allergy, Immunology, and Pulmonology Volume 32 ; 32 ; paia ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; Pediatric Allergy, Immunology, and Pulmonology Volume 33 ; 33 ; paia ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; Pediatric Allergy, Immunology, and Pulmonology Volume 34 ; 34 ; paia ; https://journals.sagepub.com/ ; >
@@ -58349,7 +58349,7 @@
       au < manifest ; exists ; 2016 ; Sport Marketing Quarterly Volume 25 ; 25 ; qsma ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Sport Marketing Quarterly Volume 26 ; 26 ; qsma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2018 ; Sport Marketing Quarterly Volume 27 ; 27 ; qsma ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2019 ; Sport Marketing Quarterly Volume 28 ; 28 ; qsma ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2019 ; Sport Marketing Quarterly Volume 28 ; 28 ; qsma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Sport Marketing Quarterly Volume 29 ; 29 ; qsma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Sport Marketing Quarterly Volume 30 ; 30 ; qsma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; Sport Marketing Quarterly Volume 31 ; 31 ; qsma ; https://journals.sagepub.com/ ; >
@@ -62332,7 +62332,7 @@
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1833 ; 1833 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1834 ; 1834 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1835 ; 1835 ; trra ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2003 ; Transportation Research Record Volume 1836 ; 1836 ; trra ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2003 ; Transportation Research Record Volume 1836 ; 1836 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1837 ; 1837 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1838 ; 1838 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1839 ; 1839 ; trra ; https://journals.sagepub.com/ ; >
@@ -62343,8 +62343,8 @@
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1844 ; 1844 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1845 ; 1845 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1846 ; 1846 ; trra ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2003 ; Transportation Research Record Volume 1847 ; 1847 ; trra ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2003 ; Transportation Research Record Volume 1848 ; 1848 ; trra ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2003 ; Transportation Research Record Volume 1847 ; 1847 ; trra ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2003 ; Transportation Research Record Volume 1848 ; 1848 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1849 ; 1849 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1850 ; 1850 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1851 ; 1851 ; trra ; https://journals.sagepub.com/ ; >
@@ -63412,7 +63412,7 @@
       au < manifest ; exists ; 2000 ; Trauma Volume 2 ; 2 ; traa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2001 ; Trauma Volume 3 ; 3 ; traa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Trauma Volume 4 ; 4 ; traa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2003 ; Trauma Volume 5 ; 5 ; traa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2003 ; Trauma Volume 5 ; 5 ; traa ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2004 ; Trauma Volume 6 ; 6 ; traa ; https://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2005 ; Trauma Volume 7 ; 7 ; traa ; https://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2006 ; Trauma Volume 8 ; 8 ; traa ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
@@ -63525,7 +63525,7 @@
       au < manifest ; exists ; 1999 ; Trends in Amplification Volume 4 ; 4 ; tiaa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2001 ; Trends in Amplification Volume 5 ; 5 ; tiaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Trends in Amplification Volume 6 ; 6 ; tiaa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2003 ; Trends in Amplification Volume 7 ; 7 ; tiaa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2003 ; Trends in Amplification Volume 7 ; 7 ; tiaa ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2004 ; Trends in Amplification Volume 8 ; 8 ; tiaa ; https://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2005 ; Trends in Amplification Volume 9 ; 9 ; tiaa ; https://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2006 ; Trends in Amplification Volume 10 ; 10 ; tiaa ; https://journals.sagepub.com/ ; >
@@ -64161,7 +64161,7 @@
       au < frozen ; exists ; 2006 ; Vector-Borne and Zoonotic Diseases Volume 6 ; 6 ; vbza ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2007 ; Vector-Borne and Zoonotic Diseases Volume 7 ; 7 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2008 ; Vector-Borne and Zoonotic Diseases Volume 8 ; 8 ; vbza ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2009 ; Vector-Borne and Zoonotic Diseases Volume 9 ; 9 ; vbza ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2009 ; Vector-Borne and Zoonotic Diseases Volume 9 ; 9 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2010 ; Vector-Borne and Zoonotic Diseases Volume 10 ; 10 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2011 ; Vector-Borne and Zoonotic Diseases Volume 11 ; 11 ; vbza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2012 ; Vector-Borne and Zoonotic Diseases Volume 12 ; 12 ; vbza ; https://journals.sagepub.com/ ; >
