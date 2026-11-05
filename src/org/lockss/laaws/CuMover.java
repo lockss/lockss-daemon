@@ -178,7 +178,7 @@ public class CuMover extends CuBase {
       log.warning(err);
       // Very elegant: if target ran out of space, preempt decision
       // about recording vs reporting the error and always report it
-      if (auMover.isNoSpaceMessage(apie.getMessage())) {
+      if (V2AuMover.isNoSpaceMessage(apie.getMessage())) {
         addArtError(err);
         auMover.abortCopy("Aborted because target disk is full");
       } else {

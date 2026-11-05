@@ -42,6 +42,23 @@ public class LockssRestHttpException extends IOException {
   private String path;
   private String serverErrorType;
 
+  /** No-arg constructor; used by Gson when deserializing the flat
+   * (controller-advice) error shape. */
+  public LockssRestHttpException() {
+  }
+
+  /** Construct from an HTTP status and message, for error bodies that
+   * don't match the flat shape (see V2AuMover.parseErrorBody()). */
+  public LockssRestHttpException(int status, String message) {
+    this.status = status;
+    this.message = message;
+  }
+
+  public LockssRestHttpException(int status, String error, String message) {
+    this(status, message);
+    this.error = error;
+  }
+
   public long getTimestamp() {
     return timestamp;
   }

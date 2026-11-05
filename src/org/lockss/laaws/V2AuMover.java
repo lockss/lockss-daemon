@@ -32,6 +32,9 @@ import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.builder.*;
 import org.apache.commons.lang3.StringUtils;
@@ -2272,10 +2275,8 @@ public class V2AuMover {
           } else {
             errCode = response.code();
             errMsg=response.message();
-            Gson gson = new Gson();
             String bodyStr = response.body().string();
-            lrhe = gson.fromJson(bodyStr,
-                                 LockssRestHttpException.class);
+            lrhe = parseErrorBody(errCode, bodyStr);
             logErrorBody(response, bodyStr, lrhe);
             if (isNonRetryableResponse(errCode, lrhe)) {
               // no retries
@@ -2327,32 +2328,94 @@ public class V2AuMover {
       if (errCode == 501) {
         throw new UnsupportedOperationException(msg);
       }
-      if (lrhe != null) {
+      // parseErrorBody() never returns null.  A fallback LRHE (empty or
+      // unparseable body) has no error and an empty message; it carries
+      // less information than the status line, so throw the IOException
+      // in that case as before.
+      if (lrhe != null && (!StringUtil.isNullString(lrhe.getMessage())
+                           || !StringUtil.isNullString(lrhe.getError()))) {
         throw lrhe;
       }
       throw new IOException(msg);
     }
+  }
 
-    private boolean isNonRetryableResponse(int errCode,
-                                           LockssRestHttpException lrhe) {
-      switch (errCode) {
-      case 400:
-      case 401:
-      case 403:
-      case 404:
-      case 501:
-        return true;
-      case 500:
-      case 507:                         // Insufficient Storage
-        return (isNoSpaceMessage(lrhe.getMessage()));
-      default:
-        return false;
-      }
+  static boolean isNonRetryableResponse(int errCode,
+                                        LockssRestHttpException lrhe) {
+    switch (errCode) {
+    case 400:
+    case 401:
+    case 403:
+    case 404:
+    case 501:
+      return true;
+    case 500:
+    case 507:                         // Insufficient Storage
+      return lrhe != null && isNoSpaceMessage(lrhe.getMessage());
+    default:
+      return false;
     }
   }
 
-  public boolean isNoSpaceMessage(String msg) {
+  public static boolean isNoSpaceMessage(String msg) {
     return StringUtils.containsIgnoreCase(msg, "No space");
+  }
+
+  /**
+   * Parse the body of a non-2xx V2 REST response into a
+   * LockssRestHttpException.  Handles both error shapes the V2 services
+   * produce:
+   * <ul>
+   * <li>flat (Spring controller advice):
+   * <code>{"timestamp":..,"status":500,"error":"..","message":"..","path":".."}</code>,
+   * mapped directly onto LockssRestHttpException;</li>
+   * <li>nested (lockss-core JsonUtil.toJsonError):
+   * <code>{"error":{"code":500,"message":".."}}</code>, mapped to
+   * status = error.code (httpStatus if absent), message = error.message,
+   * error = the raw JSON text of the nested object.</li>
+   * </ul>
+   * For an empty, null, or unparseable body, or any body that is not a
+   * JSON object, returns an LRHE with status = httpStatus and message =
+   * the trimmed raw body (possibly empty).  Never returns null and never
+   * throws a JsonParseException.
+   */
+  static LockssRestHttpException parseErrorBody(int httpStatus, String body) {
+    String raw = body == null ? "" : body.trim();
+    if (raw.isEmpty()) {
+      return new LockssRestHttpException(httpStatus, raw);
+    }
+    try {
+      JsonElement el = JsonParser.parseString(raw);
+      if (el == null || !el.isJsonObject()) {
+        return new LockssRestHttpException(httpStatus, raw);
+      }
+      JsonObject obj = el.getAsJsonObject();
+      JsonElement err = obj.get("error");
+      if (err != null && err.isJsonObject()) {
+        JsonObject errObj = err.getAsJsonObject();
+        int status = httpStatus;
+        JsonElement code = errObj.get("code");
+        if (code != null && code.isJsonPrimitive()
+            && code.getAsJsonPrimitive().isNumber()) {
+          status = code.getAsInt();
+        }
+        String message = raw;
+        JsonElement msg = errObj.get("message");
+        if (msg != null && msg.isJsonPrimitive()) {
+          message = msg.getAsString();
+        }
+        return new LockssRestHttpException(status, errObj.toString(), message);
+      }
+      LockssRestHttpException lrhe =
+        new Gson().fromJson(el, LockssRestHttpException.class);
+      if (lrhe == null) {
+        return new LockssRestHttpException(httpStatus, raw);
+      }
+      return lrhe;
+    } catch (RuntimeException e) {
+      log.debug2("Couldn't parse error body: " + raw, e);
+      return new LockssRestHttpException(httpStatus, raw);
+    }
   }
 
   void logErrorBody(Response response, String bodyStr,
