@@ -315,7 +315,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Archives Animal Breeding Volume 62 ; 62 ; >
       au < finished ; finished ; 2020 ; 2020 ; Archives Animal Breeding Volume 63 ; 63 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Archives Animal Breeding Volume 64 ; 64 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2022 ; 2022 ; Archives Animal Breeding Volume 65 ; 65 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Archives Animal Breeding Volume 65 ; 65 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Archives Animal Breeding Volume 66 ; 66 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Archives Animal Breeding Volume 67 ; 67 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Archives Animal Breeding Volume 68 ; 68 ; >
@@ -354,7 +354,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Atmospheric Chemistry and Physics Volume 19 ; 19 ; >
       au < finished ; frozen ; 2020 ; 2020 ; Atmospheric Chemistry and Physics Volume 20 ; 20 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Atmospheric Chemistry and Physics Volume 21 ; 21 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2022 ; 2022 ; Atmospheric Chemistry and Physics Volume 22 ; 22 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Atmospheric Chemistry and Physics Volume 22 ; 22 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Atmospheric Chemistry and Physics Volume 23 ; 23 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Atmospheric Chemistry and Physics Volume 24 ; 24 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Atmospheric Chemistry and Physics Volume 25 ; 25 ; >
@@ -388,7 +388,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Atmospheric Measurement Techniques Volume 12 ; 12 ; >
       au < finished ; frozen ; 2020 ; 2020 ; Atmospheric Measurement Techniques Volume 13 ; 13 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Atmospheric Measurement Techniques Volume 14 ; 14 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2022 ; 2022 ; Atmospheric Measurement Techniques Volume 15 ; 15 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Atmospheric Measurement Techniques Volume 15 ; 15 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Atmospheric Measurement Techniques Volume 16 ; 16 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Atmospheric Measurement Techniques Volume 17 ; 17 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Atmospheric Measurement Techniques Volume 18 ; 18 ; >
@@ -537,7 +537,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Earth Surface Dynamics Volume 7 ; 7 ; >
       au < finished ; frozen ; 2020 ; 2020 ; Earth Surface Dynamics Volume 8 ; 8 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2021 ; 2021 ; Earth Surface Dynamics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2022 ; 2022 ; Earth Surface Dynamics Volume 10 ; 10 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Earth Surface Dynamics Volume 10 ; 10 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Earth Surface Dynamics Volume 11 ; 11 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Earth Surface Dynamics Volume 12 ; 12 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Earth Surface Dynamics Volume 13 ; 13 ; >
@@ -600,7 +600,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Earth System Science Data Volume 11 ; 11 ; >
       au < finished ; finished ; 2020 ; 2020 ; Earth System Science Data Volume 12 ; 12 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Earth System Science Data Volume 13 ; 13 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2022 ; 2022 ; Earth System Science Data Volume 14 ; 14 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Earth System Science Data Volume 14 ; 14 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Earth System Science Data Volume 15 ; 15 ; >
       au < finished ; manifest ; 2024 ; 2024 ; Earth System Science Data Volume 16 ; 16 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Earth System Science Data Volume 17 ; 17 ; >
@@ -708,7 +708,7 @@
 
       au < finished ; finished ; 2020 ; 2020 ; European Journal of Mineralogy Volume 32 ; 32 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; European Journal of Mineralogy Volume 33 ; 33 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2022 ; 2022 ; European Journal of Mineralogy Volume 34 ; 34 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; European Journal of Mineralogy Volume 34 ; 34 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; European Journal of Mineralogy Volume 35 ; 35 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; European Journal of Mineralogy Volume 36 ; 36 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; European Journal of Mineralogy Volume 37 ; 37 ; >
@@ -848,7 +848,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Geographica Helvetica Volume 74 ; 74 ; >
       au < finished ; finished ; 2020 ; 2020 ; Geographica Helvetica Volume 75 ; 75 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Geographica Helvetica Volume 76 ; 76 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2022 ; 2022 ; Geographica Helvetica Volume 77 ; 77 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Geographica Helvetica Volume 77 ; 77 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Geographica Helvetica Volume 78 ; 78 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Geographica Helvetica Volume 79 ; 79 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Geographica Helvetica Volume 80 ; 80 ; >
@@ -870,7 +870,7 @@
       au < finished ; finished ; 2019 ; 2019 ; Geoscience Communication Volume 2 ; 2 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; 2020 ; Geoscience Communication Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2021 ; 2021 ; Geoscience Communication Volume 4 ; 4 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2022 ; 2022 ; Geoscience Communication Volume 5 ; 5 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Geoscience Communication Volume 5 ; 5 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Geoscience Communication Volume 6 ; 6 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Geoscience Communication Volume 7 ; 7 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Geoscience Communication Volume 8 ; 8 ; >
