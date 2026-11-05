@@ -3164,6 +3164,8 @@ public class V2AuMover {
     case DONE:
       if (!auStat.hasV1Content()) {
         sb.append(": No V1 content");
+      } else {
+        auStat.addCounterStatus(sb, opType, ": ");
       }
       break;
     case QUEUE:
