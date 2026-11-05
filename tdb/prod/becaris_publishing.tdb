@@ -39,4 +39,17 @@
 
   }
 
+  {
+  
+    title < 
+      name = Journal of Patient Centricity ;
+      eissn = 2978-8579
+    >
+    
+    param[journal_id] = jpc
+    param[base_url] = https://becarispublishing.com/
+
+    au < exists ; 2026 ; Journal of Patient Centricity Volume 1 ; 1 >
+
+  }
 }

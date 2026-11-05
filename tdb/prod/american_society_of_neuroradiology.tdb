@@ -58,9 +58,13 @@
         au < HighWirePressH20Plugin ; down ; 2010 ; American Journal of Neuroradiology Volume 31 ; 31 >
         au < HighWirePressH20Plugin ; down ; 2011 ; American Journal of Neuroradiology Volume 32 ; 32 >
         au < HighWirePressH20Plugin ; down ; 2012 ; American Journal of Neuroradiology Volume 33 ; 33 >
-        au < HighWirePressH20Plugin ; down ; 2013 ; American Journal of Neuroradiology Volume 34 ; 34 >
-        au < HighWirePressH20Plugin ; down ; 2014 ; American Journal of Neuroradiology Volume 35 ; 35 >
-        au < HighWirePressH20Plugin ; down ; 2015 ; American Journal of Neuroradiology Volume 36 ; 36 >
+        au < HighWirePressH20Plugin ; superseded ; 2013 ; American Journal of Neuroradiology Volume 34 [superseded] ; 34 >
+        au < HighWirePressH20Plugin ; superseded ; 2014 ; American Journal of Neuroradiology Volume 35 [superseded] ; 35 >
+        au < HighWirePressH20Plugin ; superseded ; 2015 ; American Journal of Neuroradiology Volume 36 [superseded] ; 36 >
+
+        au < asnr.AsnrDrupalPlugin ; exists ; 2013 ; American Journal of Neuroradiology Volume 34 ; 34 >
+        au < asnr.AsnrDrupalPlugin ; exists ; 2014 ; American Journal of Neuroradiology Volume 35 ; 35 >
+        au < asnr.AsnrDrupalPlugin ; exists ; 2015 ; American Journal of Neuroradiology Volume 36 ; 36 >
         au < asnr.AsnrDrupalPlugin ; released ; 2016 ; American Journal of Neuroradiology Volume 37 ; 37 >
         au < asnr.AsnrDrupalPlugin ; released ; 2017 ; American Journal of Neuroradiology Volume 38 ; 38 >
         au < asnr.AsnrDrupalPlugin ; released ; 2018 ; American Journal of Neuroradiology Volume 39 ; 39 >
