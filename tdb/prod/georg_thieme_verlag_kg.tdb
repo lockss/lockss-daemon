@@ -2355,7 +2355,7 @@
 
   {
     title <
-      name = Gesundheitswesen Das ;
+      name = Das Gesundheitswesen ;
       issn = 0941-3790 ;
       eissn = 1439-4421 ;
       doi = 10.1055/s-00000022
@@ -2364,33 +2364,33 @@
     param[journal_id] = 10.1055/s-00000022
     comment[years] = 2000-current
 
-   au < doNotProcess ; 2000 ; 2000 ; Gesundheitswesen Das Volume 62 ; 62 >
-   au < doNotProcess ; 2001 ; 2001 ; Gesundheitswesen Das Volume 63 ; 63 >
-   au < doNotProcess ; 2002 ; 2002 ; Gesundheitswesen Das Volume 64 ; 64 >
-   au < doNotProcess ; 2003 ; 2003 ; Gesundheitswesen Das Volume 65 ; 65 >
-   au < doNotProcess ; 2004 ; 2004 ; Gesundheitswesen Das Volume 66 ; 66 >
-   au < doNotProcess ; 2005 ; 2005 ; Gesundheitswesen Das Volume 67 ; 67 >
-   au < doNotProcess ; 2006 ; 2006 ; Gesundheitswesen Das Volume 68 ; 68 >
-   au < doNotProcess ; 2007 ; 2007 ; Gesundheitswesen Das Volume 69 ; 69 >
-   au < doNotProcess ; 2008 ; 2008 ; Gesundheitswesen Das Volume 70 ; 70 >
-   au < doNotProcess ; 2009 ; 2009 ; Gesundheitswesen Das Volume 71 ; 71 >
-   au < released ; 2010 ; 2010 ; Gesundheitswesen Das Volume 72 ; 72 >
-   au < released ; 2011 ; 2011 ; Gesundheitswesen Das Volume 73 ; 73 >
-   au < released ; 2012 ; 2012 ; Gesundheitswesen Das Volume 74 ; 74 >
-   au < released ; 2013 ; 2013 ; Gesundheitswesen Das Volume 75 ; 75 >
-   au < released ; 2014 ; 2014 ; Gesundheitswesen Das Volume 76 ; 76 >
-   au < released ; 2015 ; 2015 ; Gesundheitswesen Das Volume 77 ; 77 >
-   au < released ; 2016 ; 2016 ; Gesundheitswesen Das Volume 78 ; 78 >
-   au < released ; 2017 ; 2017 ; Gesundheitswesen Das Volume 79 ; 79 >
-   au < released ; 2018 ; 2018 ; Gesundheitswesen Das Volume 80 ; 80 >
-   au < released ; 2019 ; 2019 ; Gesundheitswesen Das Volume 81 ; 81 >
-   au < released ; 2020 ; 2020 ; Gesundheitswesen Das Volume 82 ; 82 >
-   au < released ; 2021 ; 2021 ; Gesundheitswesen Das Volume 83 ; 83 >
-   au < released ; 2022 ; 2022 ; Gesundheitswesen Das Volume 84 ; 84 >
-   au < released ; 2023 ; 2023 ; Gesundheitswesen Das Volume 85 ; 85 >
-   au < released ; 2024 ; 2024 ; Gesundheitswesen Das Volume 86 ; 86 >
-   au < released ; 2025 ; 2025 ; Gesundheitswesen Das Volume 87 ; 87 >
-   au < manifest ; 2026 ; 2026 ; Gesundheitswesen Das Volume 88 ; 88 >
+   au < doNotProcess ; 2000 ; 2000 ; Das Gesundheitswesen Volume 62 ; 62 >
+   au < doNotProcess ; 2001 ; 2001 ; Das Gesundheitswesen Volume 63 ; 63 >
+   au < doNotProcess ; 2002 ; 2002 ; Das Gesundheitswesen Volume 64 ; 64 >
+   au < doNotProcess ; 2003 ; 2003 ; Das Gesundheitswesen Volume 65 ; 65 >
+   au < doNotProcess ; 2004 ; 2004 ; Das Gesundheitswesen Volume 66 ; 66 >
+   au < doNotProcess ; 2005 ; 2005 ; Das Gesundheitswesen Volume 67 ; 67 >
+   au < doNotProcess ; 2006 ; 2006 ; Das Gesundheitswesen Volume 68 ; 68 >
+   au < doNotProcess ; 2007 ; 2007 ; Das Gesundheitswesen Volume 69 ; 69 >
+   au < doNotProcess ; 2008 ; 2008 ; Das Gesundheitswesen Volume 70 ; 70 >
+   au < doNotProcess ; 2009 ; 2009 ; Das Gesundheitswesen Volume 71 ; 71 >
+   au < released ; 2010 ; 2010 ; Das Gesundheitswesen Volume 72 ; 72 >
+   au < released ; 2011 ; 2011 ; Das Gesundheitswesen Volume 73 ; 73 >
+   au < released ; 2012 ; 2012 ; Das Gesundheitswesen Volume 74 ; 74 >
+   au < released ; 2013 ; 2013 ; Das Gesundheitswesen Volume 75 ; 75 >
+   au < released ; 2014 ; 2014 ; Das Gesundheitswesen Volume 76 ; 76 >
+   au < released ; 2015 ; 2015 ; Das Gesundheitswesen Volume 77 ; 77 >
+   au < released ; 2016 ; 2016 ; Das Gesundheitswesen Volume 78 ; 78 >
+   au < released ; 2017 ; 2017 ; Das Gesundheitswesen Volume 79 ; 79 >
+   au < released ; 2018 ; 2018 ; Das Gesundheitswesen Volume 80 ; 80 >
+   au < released ; 2019 ; 2019 ; Das Gesundheitswesen Volume 81 ; 81 >
+   au < released ; 2020 ; 2020 ; Das Gesundheitswesen Volume 82 ; 82 >
+   au < released ; 2021 ; 2021 ; Das Gesundheitswesen Volume 83 ; 83 >
+   au < released ; 2022 ; 2022 ; Das Gesundheitswesen Volume 84 ; 84 >
+   au < released ; 2023 ; 2023 ; Das Gesundheitswesen Volume 85 ; 85 >
+   au < released ; 2024 ; 2024 ; Das Gesundheitswesen Volume 86 ; 86 >
+   au < released ; 2025 ; 2025 ; Das Gesundheitswesen Volume 87 ; 87 >
+   au < manifest ; 2026 ; 2026 ; Das Gesundheitswesen Volume 88 ; 88 >
 
   }
 
@@ -2489,7 +2489,7 @@
 
   {
     title <
-      name = Hebamme Die ;
+      name = Die Hebamme ;
       issn = 0932-8122 ;
       eissn = 1439-4197 ;
       doi = 10.1055/s-00000024
@@ -2498,29 +2498,29 @@
     param[journal_id] = 10.1055/s-00000024
     comment[years] = 2004-current
 
-   au < doNotProcess ; 2004 ; 2004 ; Hebamme Die Volume 17 ; 17 >
-   au < doNotProcess ; 2005 ; 2005 ; Hebamme Die Volume 18 ; 18 >
-   au < doNotProcess ; 2006 ; 2006 ; Hebamme Die Volume 19 ; 19 >
-   au < doNotProcess ; 2007 ; 2007 ; Hebamme Die Volume 20 ; 20 >
-   au < doNotProcess ; 2008 ; 2008 ; Hebamme Die Volume 21 ; 21 >
-   au < doNotProcess ; 2009 ; 2009 ; Hebamme Die Volume 22 ; 22 >
-   au < released ; 2010 ; 2010 ; Hebamme Die Volume 23 ; 23 >
-   au < released ; 2011 ; 2011 ; Hebamme Die Volume 24 ; 24 >
-   au < released ; 2012 ; 2012 ; Hebamme Die Volume 25 ; 25 >
-   au < released ; 2013 ; 2013 ; Hebamme Die Volume 26 ; 26 >
-   au < released ; 2014 ; 2014 ; Hebamme Die Volume 27 ; 27 >
-   au < released ; 2015 ; 2015 ; Hebamme Die Volume 28 ; 28 >
-   au < released ; 2016 ; 2016 ; Hebamme Die Volume 29 ; 29 >
-   au < released ; 2017 ; 2017 ; Hebamme Die Volume 30 ; 30 >
-   au < released ; 2018 ; 2018 ; Hebamme Die Volume 31 ; 31 >
-   au < released ; 2019 ; 2019 ; Hebamme Die Volume 32 ; 32 >
-   au < released ; 2020 ; 2020 ; Hebamme Die Volume 33 ; 33 >
-   au < released ; 2021 ; 2021 ; Hebamme Die Volume 34 ; 34 >
-   au < released ; 2022 ; 2022 ; Hebamme Die Volume 35 ; 35 >
-   au < released ; 2023 ; 2023 ; Hebamme Die Volume 36 ; 36 >
-   au < released ; 2024 ; 2024 ; Hebamme Die Volume 37 ; 37 >
-   au < released ; 2025 ; 2025 ; Hebamme Die Volume 38 ; 38 >
-   au < manifest ; 2026 ; 2026 ; Hebamme Die Volume 39 ; 39 >
+   au < doNotProcess ; 2004 ; 2004 ; Die Hebamme Volume 17 ; 17 >
+   au < doNotProcess ; 2005 ; 2005 ; Die Hebamme Volume 18 ; 18 >
+   au < doNotProcess ; 2006 ; 2006 ; Die Hebamme Volume 19 ; 19 >
+   au < doNotProcess ; 2007 ; 2007 ; Die Hebamme Volume 20 ; 20 >
+   au < doNotProcess ; 2008 ; 2008 ; Die Hebamme Volume 21 ; 21 >
+   au < doNotProcess ; 2009 ; 2009 ; Die Hebamme Volume 22 ; 22 >
+   au < released ; 2010 ; 2010 ; Die Hebamme Volume 23 ; 23 >
+   au < released ; 2011 ; 2011 ; Die Hebamme Volume 24 ; 24 >
+   au < released ; 2012 ; 2012 ; Die Hebamme Volume 25 ; 25 >
+   au < released ; 2013 ; 2013 ; Die Hebamme Volume 26 ; 26 >
+   au < released ; 2014 ; 2014 ; Die Hebamme Volume 27 ; 27 >
+   au < released ; 2015 ; 2015 ; Die Hebamme Volume 28 ; 28 >
+   au < released ; 2016 ; 2016 ; Die Hebamme Volume 29 ; 29 >
+   au < released ; 2017 ; 2017 ; Die Hebamme Volume 30 ; 30 >
+   au < released ; 2018 ; 2018 ; Die Hebamme Volume 31 ; 31 >
+   au < released ; 2019 ; 2019 ; Die Hebamme Volume 32 ; 32 >
+   au < released ; 2020 ; 2020 ; Die Hebamme Volume 33 ; 33 >
+   au < released ; 2021 ; 2021 ; Die Hebamme Volume 34 ; 34 >
+   au < released ; 2022 ; 2022 ; Die Hebamme Volume 35 ; 35 >
+   au < released ; 2023 ; 2023 ; Die Hebamme Volume 36 ; 36 >
+   au < released ; 2024 ; 2024 ; Die Hebamme Volume 37 ; 37 >
+   au < released ; 2025 ; 2025 ; Die Hebamme Volume 38 ; 38 >
+   au < manifest ; 2026 ; 2026 ; Die Hebamme Volume 39 ; 39 >
 
   }
 
@@ -3919,7 +3919,7 @@
 
   {
     title <
-      name = Klinikarzt Der ;
+      name = Der Klinikarzt ;
       issn = 0341-2350 ;
       eissn = 1439-3859 ;
       doi = 10.1055/s-00000030
@@ -3928,24 +3928,24 @@
     param[journal_id] = 10.1055/s-00000030
     comment[years] = 2003-2020
 
-    au < doNotProcess ; 2003 ; 2003 ; Klinikarzt Der Volume 32 ; 32 >
-    au < doNotProcess ; 2004 ; 2004 ; Klinikarzt Der Volume 33 ; 33 >
-    au < doNotProcess ; 2005 ; 2005 ; Klinikarzt Der Volume 34 ; 34 >
-    au < doNotProcess ; 2006 ; 2006 ; Klinikarzt Der Volume 35 ; 35 >
-    au < doNotProcess ; 2007 ; 2007 ; Klinikarzt Der Volume 36 ; 36 >
-    au < doNotProcess ; 2008 ; 2008 ; Klinikarzt Der Volume 37 ; 37 >
-    au < doNotProcess ; 2009 ; 2009 ; Klinikarzt Der Volume 38 ; 38 >
-    au < released ; 2010 ; 2010 ; Klinikarzt Der Volume 39 ; 39 >
-    au < released ; 2011 ; 2011 ; Klinikarzt Der Volume 40 ; 40 >
-    au < released ; 2012 ; 2012 ; Klinikarzt Der Volume 41 ; 41 >
-    au < released ; 2013 ; 2013 ; Klinikarzt Der Volume 42 ; 42 >
-    au < released ; 2014 ; 2014 ; Klinikarzt Der Volume 43 ; 43 >
-    au < released ; 2015 ; 2015 ; Klinikarzt Der Volume 44 ; 44 >
-    au < released ; 2016 ; 2016 ; Klinikarzt Der Volume 45 ; 45 >
-    au < released ; 2017 ; 2017 ; Klinikarzt Der Volume 46 ; 46 >
-    au < released ; 2018 ; 2018 ; Klinikarzt Der Volume 47 ; 47 >
-    au < released ; 2019 ; 2019 ; Klinikarzt Der Volume 48 ; 48 >
-    au < released ; 2020 ; 2020 ; Klinikarzt Der Volume 49 ; 49 >
+    au < doNotProcess ; 2003 ; 2003 ; Der Klinikarzt Volume 32 ; 32 >
+    au < doNotProcess ; 2004 ; 2004 ; Der Klinikarzt Volume 33 ; 33 >
+    au < doNotProcess ; 2005 ; 2005 ; Der Klinikarzt Volume 34 ; 34 >
+    au < doNotProcess ; 2006 ; 2006 ; Der Klinikarzt Volume 35 ; 35 >
+    au < doNotProcess ; 2007 ; 2007 ; Der Klinikarzt Volume 36 ; 36 >
+    au < doNotProcess ; 2008 ; 2008 ; Der Klinikarzt Volume 37 ; 37 >
+    au < doNotProcess ; 2009 ; 2009 ; Der Klinikarzt Volume 38 ; 38 >
+    au < released ; 2010 ; 2010 ; Der Klinikarzt Volume 39 ; 39 >
+    au < released ; 2011 ; 2011 ; Der Klinikarzt Volume 40 ; 40 >
+    au < released ; 2012 ; 2012 ; Der Klinikarzt Volume 41 ; 41 >
+    au < released ; 2013 ; 2013 ; Der Klinikarzt Volume 42 ; 42 >
+    au < released ; 2014 ; 2014 ; Der Klinikarzt Volume 43 ; 43 >
+    au < released ; 2015 ; 2015 ; Der Klinikarzt Volume 44 ; 44 >
+    au < released ; 2016 ; 2016 ; Der Klinikarzt Volume 45 ; 45 >
+    au < released ; 2017 ; 2017 ; Der Klinikarzt Volume 46 ; 46 >
+    au < released ; 2018 ; 2018 ; Der Klinikarzt Volume 47 ; 47 >
+    au < released ; 2019 ; 2019 ; Der Klinikarzt Volume 48 ; 48 >
+    au < released ; 2020 ; 2020 ; Der Klinikarzt Volume 49 ; 49 >
 
   }
 
@@ -4635,7 +4635,7 @@
 
   {
     title <
-      name = Notarzt Der ;
+      name = Der Notarzt ;
       issn = 0177-2309 ;
       eissn = 1438-8693 ;
       doi = 10.1055/s-00000043
@@ -4644,34 +4644,34 @@
     param[journal_id] = 10.1055/s-00000043
     comment[years] = 1999-current
 
-    au < doNotProcess ; 1999 ; 1999 ; Notarzt Der Volume 15 ; 15 >
-    au < doNotProcess ; 2000 ; 2000 ; Notarzt Der Volume 16 ; 16 >
-    au < doNotProcess ; 2001 ; 2001 ; Notarzt Der Volume 17 ; 17 >
-    au < doNotProcess ; 2002 ; 2002 ; Notarzt Der Volume 18 ; 18 >
-    au < doNotProcess ; 2003 ; 2003 ; Notarzt Der Volume 19 ; 19 >
-    au < doNotProcess ; 2004 ; 2004 ; Notarzt Der Volume 20 ; 20 >
-    au < doNotProcess ; 2005 ; 2005 ; Notarzt Der Volume 21 ; 21 >
-    au < doNotProcess ; 2006 ; 2006 ; Notarzt Der Volume 22 ; 22 >
-    au < doNotProcess ; 2007 ; 2007 ; Notarzt Der Volume 23 ; 23 >
-    au < doNotProcess ; 2008 ; 2008 ; Notarzt Der Volume 24 ; 24 >
-    au < doNotProcess ; 2009 ; 2009 ; Notarzt Der Volume 25 ; 25 >
-    au < released ; 2010 ; 2010 ; Notarzt Der Volume 26 ; 26 >
-    au < released ; 2011 ; 2011 ; Notarzt Der Volume 27 ; 27 >
-    au < released ; 2012 ; 2012 ; Notarzt Der Volume 28 ; 28 >
-    au < released ; 2013 ; 2013 ; Notarzt Der Volume 29 ; 29 >
-    au < released ; 2014 ; 2014 ; Notarzt Der Volume 30 ; 30 >
-    au < released ; 2015 ; 2015 ; Notarzt Der Volume 31 ; 31 >
-    au < released ; 2016 ; 2016 ; Notarzt Der Volume 32 ; 32 >
-    au < released ; 2017 ; 2017 ; Notarzt Der Volume 33 ; 33 >
-    au < released ; 2018 ; 2018 ; Notarzt Der Volume 34 ; 34 >
-    au < released ; 2019 ; 2019 ; Notarzt Der Volume 35 ; 35 >
-    au < released ; 2020 ; 2020 ; Notarzt Der Volume 36 ; 36 >
-    au < released ; 2021 ; 2021 ; Notarzt Der Volume 37 ; 37 >
-    au < released ; 2022 ; 2022 ; Notarzt Der Volume 38 ; 38 >
-    au < released ; 2023 ; 2023 ; Notarzt Der Volume 39 ; 39 >
-    au < released ; 2024 ; 2024 ; Notarzt Der Volume 40 ; 40 >
-    au < released ; 2025 ; 2025 ; Notarzt Der Volume 41 ; 41 >
-    au < manifest ; 2026 ; 2026 ; Notarzt Der Volume 42 ; 42 >
+    au < doNotProcess ; 1999 ; 1999 ; Der Notarzt Volume 15 ; 15 >
+    au < doNotProcess ; 2000 ; 2000 ; Der Notarzt Volume 16 ; 16 >
+    au < doNotProcess ; 2001 ; 2001 ; Der Notarzt Volume 17 ; 17 >
+    au < doNotProcess ; 2002 ; 2002 ; Der Notarzt Volume 18 ; 18 >
+    au < doNotProcess ; 2003 ; 2003 ; Der Notarzt Volume 19 ; 19 >
+    au < doNotProcess ; 2004 ; 2004 ; Der Notarzt Volume 20 ; 20 >
+    au < doNotProcess ; 2005 ; 2005 ; Der Notarzt Volume 21 ; 21 >
+    au < doNotProcess ; 2006 ; 2006 ; Der Notarzt Volume 22 ; 22 >
+    au < doNotProcess ; 2007 ; 2007 ; Der Notarzt Volume 23 ; 23 >
+    au < doNotProcess ; 2008 ; 2008 ; Der Notarzt Volume 24 ; 24 >
+    au < doNotProcess ; 2009 ; 2009 ; Der Notarzt Volume 25 ; 25 >
+    au < released ; 2010 ; 2010 ; Der Notarzt Volume 26 ; 26 >
+    au < released ; 2011 ; 2011 ; Der Notarzt Volume 27 ; 27 >
+    au < released ; 2012 ; 2012 ; Der Notarzt Volume 28 ; 28 >
+    au < released ; 2013 ; 2013 ; Der Notarzt Volume 29 ; 29 >
+    au < released ; 2014 ; 2014 ; Der Notarzt Volume 30 ; 30 >
+    au < released ; 2015 ; 2015 ; Der Notarzt Volume 31 ; 31 >
+    au < released ; 2016 ; 2016 ; Der Notarzt Volume 32 ; 32 >
+    au < released ; 2017 ; 2017 ; Der Notarzt Volume 33 ; 33 >
+    au < released ; 2018 ; 2018 ; Der Notarzt Volume 34 ; 34 >
+    au < released ; 2019 ; 2019 ; Der Notarzt Volume 35 ; 35 >
+    au < released ; 2020 ; 2020 ; Der Notarzt Volume 36 ; 36 >
+    au < released ; 2021 ; 2021 ; Der Notarzt Volume 37 ; 37 >
+    au < released ; 2022 ; 2022 ; Der Notarzt Volume 38 ; 38 >
+    au < released ; 2023 ; 2023 ; Der Notarzt Volume 39 ; 39 >
+    au < released ; 2024 ; 2024 ; Der Notarzt Volume 40 ; 40 >
+    au < released ; 2025 ; 2025 ; Der Notarzt Volume 41 ; 41 >
+    au < manifest ; 2026 ; 2026 ; Der Notarzt Volume 42 ; 42 >
 
   }
 
@@ -5752,7 +5752,7 @@
 
   {
     title <
-      name = Rehabilitation Die ;
+      name = Die Rehabilitation ;
       issn = 0034-3536 ;
       eissn = 1439-1309 ;
       doi = 10.1055/s-00000065
@@ -5761,33 +5761,33 @@
     param[journal_id] = 10.1055/s-00000065
     comment[years] = 2000-current
 
-   au < doNotProcess ; 2000 ; 2000 ; Rehabilitation Die Volume 39 ; 39 >
-   au < doNotProcess ; 2001 ; 2001 ; Rehabilitation Die Volume 40 ; 40 >
-   au < doNotProcess ; 2002 ; 2002 ; Rehabilitation Die Volume 41 ; 41 >
-   au < doNotProcess ; 2003 ; 2003 ; Rehabilitation Die Volume 42 ; 42 >
-   au < doNotProcess ; 2004 ; 2004 ; Rehabilitation Die Volume 43 ; 43 >
-   au < doNotProcess ; 2005 ; 2005 ; Rehabilitation Die Volume 44 ; 44 >
-   au < doNotProcess ; 2006 ; 2006 ; Rehabilitation Die Volume 45 ; 45 >
-   au < doNotProcess ; 2007 ; 2007 ; Rehabilitation Die Volume 46 ; 46 >
-   au < doNotProcess ; 2008 ; 2008 ; Rehabilitation Die Volume 47 ; 47 >
-   au < doNotProcess ; 2009 ; 2009 ; Rehabilitation Die Volume 48 ; 48 >
-   au < released ; 2010 ; 2010 ; Rehabilitation Die Volume 49 ; 49 >
-   au < released ; 2011 ; 2011 ; Rehabilitation Die Volume 50 ; 50 >
-   au < released ; 2012 ; 2012 ; Rehabilitation Die Volume 51 ; 51 >
-   au < released ; 2013 ; 2013 ; Rehabilitation Die Volume 52 ; 52 >
-   au < released ; 2014 ; 2014 ; Rehabilitation Die Volume 53 ; 53 >
-   au < released ; 2015 ; 2015 ; Rehabilitation Die Volume 54 ; 54 >
-   au < released ; 2016 ; 2016 ; Rehabilitation Die Volume 55 ; 55 >
-   au < released ; 2017 ; 2017 ; Rehabilitation Die Volume 56 ; 56 >
-   au < released ; 2018 ; 2018 ; Rehabilitation Die Volume 57 ; 57 >
-   au < released ; 2019 ; 2019 ; Rehabilitation Die Volume 58 ; 58 >
-   au < released ; 2020 ; 2020 ; Rehabilitation Die Volume 59 ; 59 >
-   au < released ; 2021 ; 2021 ; Rehabilitation Die Volume 60 ; 60 >
-   au < released ; 2022 ; 2022 ; Rehabilitation Die Volume 61 ; 61 >
-   au < released ; 2023 ; 2023 ; Rehabilitation Die Volume 62 ; 62 >
-   au < released ; 2024 ; 2024 ; Rehabilitation Die Volume 63 ; 63 >
-   au < released ; 2025 ; 2025 ; Rehabilitation Die Volume 64 ; 64 >
-   au < manifest ; 2026 ; 2026 ; Rehabilitation Die Volume 65 ; 65 >
+   au < doNotProcess ; 2000 ; 2000 ; Die Rehabilitation Volume 39 ; 39 >
+   au < doNotProcess ; 2001 ; 2001 ; Die Rehabilitation Volume 40 ; 40 >
+   au < doNotProcess ; 2002 ; 2002 ; Die Rehabilitation Volume 41 ; 41 >
+   au < doNotProcess ; 2003 ; 2003 ; Die Rehabilitation Volume 42 ; 42 >
+   au < doNotProcess ; 2004 ; 2004 ; Die Rehabilitation Volume 43 ; 43 >
+   au < doNotProcess ; 2005 ; 2005 ; Die Rehabilitation Volume 44 ; 44 >
+   au < doNotProcess ; 2006 ; 2006 ; Die Rehabilitation Volume 45 ; 45 >
+   au < doNotProcess ; 2007 ; 2007 ; Die Rehabilitation Volume 46 ; 46 >
+   au < doNotProcess ; 2008 ; 2008 ; Die Rehabilitation Volume 47 ; 47 >
+   au < doNotProcess ; 2009 ; 2009 ; Die Rehabilitation Volume 48 ; 48 >
+   au < released ; 2010 ; 2010 ; Die Rehabilitation Volume 49 ; 49 >
+   au < released ; 2011 ; 2011 ; Die Rehabilitation Volume 50 ; 50 >
+   au < released ; 2012 ; 2012 ; Die Rehabilitation Volume 51 ; 51 >
+   au < released ; 2013 ; 2013 ; Die Rehabilitation Volume 52 ; 52 >
+   au < released ; 2014 ; 2014 ; Die Rehabilitation Volume 53 ; 53 >
+   au < released ; 2015 ; 2015 ; Die Rehabilitation Volume 54 ; 54 >
+   au < released ; 2016 ; 2016 ; Die Rehabilitation Volume 55 ; 55 >
+   au < released ; 2017 ; 2017 ; Die Rehabilitation Volume 56 ; 56 >
+   au < released ; 2018 ; 2018 ; Die Rehabilitation Volume 57 ; 57 >
+   au < released ; 2019 ; 2019 ; Die Rehabilitation Volume 58 ; 58 >
+   au < released ; 2020 ; 2020 ; Die Rehabilitation Volume 59 ; 59 >
+   au < released ; 2021 ; 2021 ; Die Rehabilitation Volume 60 ; 60 >
+   au < released ; 2022 ; 2022 ; Die Rehabilitation Volume 61 ; 61 >
+   au < released ; 2023 ; 2023 ; Die Rehabilitation Volume 62 ; 62 >
+   au < released ; 2024 ; 2024 ; Die Rehabilitation Volume 63 ; 63 >
+   au < released ; 2025 ; 2025 ; Die Rehabilitation Volume 64 ; 64 >
+   au < manifest ; 2026 ; 2026 ; Die Rehabilitation Volume 65 ; 65 >
 
   }
 
