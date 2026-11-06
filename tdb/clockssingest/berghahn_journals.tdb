@@ -1141,23 +1141,22 @@
     param[journal_id] = religion-and-society
     #param[journal_issn] = 2150-9298
 
-    au < frozen ; exists ; 2010 ; Religion and Society: Advances in Research Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 2011 ; Religion and Society: Advances in Research Volume 2 ; 2 ; >
-    au < doNotProcess ; doNotProcess ; 2012 ; Religion and Society: Advances in Research Volume 3 ; 3 ; >
-    au < finished ; finished ; 2013 ; Religion and Society: Advances in Research Volume 4 ; 4 ; reingest5.clockss.org:8082 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Religion and Society: Advances in Research Volume 5 ; 5 ; >
-    au < finished ; finished ; 2015 ; Religion and Society: Advances in Research Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Religion and Society: Advances in Research Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2017 ; Religion and Society: Advances in Research Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2018 ; Religion and Society: Advances in Research Volume 9 ; 9 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2019 ; Religion and Society: Advances in Research Volume 10 ; 10 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2020 ; Religion and Society: Advances in Research Volume 11 ; 11 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2021 ; Religion and Society: Advances in Research Volume 12 ; 12 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2022 ; Religion and Society: Advances in Research Volume 13 ; 13 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2023 ; Religion and Society: Advances in Research Volume 14 ; 14 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2024 ; Religion and Society: Advances in Research Volume 15 ; 15 ; >
-    au < ingNotReady ; exists ; 2025 ; Religion and Society: Advances in Research Volume 16 ; 16 ; > #LOCKSS-5730, missing figures
-    au < expected ; exists ; 2026 ; Religion and Society: Advances in Research Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2011 ; Religion and Society: Advances in Research Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Religion and Society: Advances in Research Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Religion and Society: Advances in Research Volume 3 ; 3 ; >
+    au < finished ; finished ; 2014 ; Religion and Society: Advances in Research Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+    au < doNotProcess ; doNotProcess ; 2015 ; Religion and Society: Advances in Research Volume 5 ; 5 ; >
+    au < finished ; finished ; 2016 ; Religion and Society: Advances in Research Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Religion and Society: Advances in Research Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2018 ; Religion and Society: Advances in Research Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Religion and Society: Advances in Research Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2020 ; Religion and Society: Advances in Research Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2021 ; Religion and Society: Advances in Research Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2022 ; Religion and Society: Advances in Research Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2023 ; Religion and Society: Advances in Research Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2024 ; Religion and Society: Advances in Research Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2025 ; Religion and Society: Advances in Research Volume 15 ; 15 ; >
+    au < ingNotReady ; exists ; 2026 ; Religion and Society: Advances in Research Volume 16 ; 16 ; > #LOCKSS-5730, missing figures
 
   }
 
