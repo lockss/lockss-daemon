@@ -249,6 +249,23 @@ public class LcapRouter
     PeerIdentity myPeerId = idMgr.getLocalPeerIdentity(Poll.V3_PROTOCOL);
 
     if (migrateTo != null) {
+
+      // Handle pre-1.78 V1 nodes with missing destination.  Extra
+      // check in migration mode to ensure it's not a malformed
+      // message from our migration target
+      if (lmsg.getDestinationId() == null) {
+        if (lmsg.getOriginatorId() == myPeerId ||
+            lmsg.getOriginatorId() == migrateTo) {
+          log.warning("Attempt to forward msg with null destination. src: "
+                      + lmsg.getOriginatorId());
+          return;
+        } else {
+          log.debug2("Message addressed to null, processing anyway: " + pmsg);
+          handleLocalInboundMessage(pmsg, lmsg);
+          return;
+        }
+      }
+
       if (lmsg.getDestinationId() != myPeerId) {
         // Forward-outbound message from V2: Send message to destination peer
         try {
@@ -303,7 +320,7 @@ public class LcapRouter
       handleLocalInboundMessage(pmsg, lmsg);
     } else {
       log.warning("Message addressed to " + lmsg.getDestinationId() +
-                  " but forwarding disabled; processing anyway: " + pmsg);
+                  " but forwarding disabled; ignoring: " + pmsg);
     }
   }
 
