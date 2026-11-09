@@ -1,0 +1,94 @@
+{
+
+  publisher <
+    name = Nepal Medical Association ;
+    info[contract] = 2026 ;
+    info[back] = 2026 ;
+    info[tester] = 5 ;
+    info[platform] = OJS3. Open Journal Systems 3.3.0.7
+  >
+
+    #OJS3
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+
+  {
+  
+    title < 
+      name = Journal of Nepal Medical Association ;
+      issn = 0028-2715 ;
+      eissn = 1815-672X
+    >
+
+      param[base_url] = https://jnma.com.np/
+      param[journal_id] = jnma
+
+      au < exists ; exists ; 1963 ; Journal of Nepal Medical Association Volume 1 ; 1 ; 1963 ; >
+      au < exists ; exists ; 1964 ; Journal of Nepal Medical Association Volume 2 ; 2 ; 1964 ; >
+      au < exists ; exists ; 1965 ; Journal of Nepal Medical Association Volume 3 ; 3 ; 1965 ; >
+      au < doesNotExist ; doesNotExist ; 1966 ; Journal of Nepal Medical Association Volume 4 ; 4 ; 1966 ; >
+      au < exists ; exists ; 1967 ; Journal of Nepal Medical Association Volume 5 ; 5 ; 1967 ; >
+      au < exists ; exists ; 1968 ; Journal of Nepal Medical Association Volume 6 ; 6 ; 1968 ; >
+      au < exists ; exists ; 1969 ; Journal of Nepal Medical Association Volume 7 ; 7 ; 1969 ; >
+      au < exists ; exists ; 1970 ; Journal of Nepal Medical Association Volume 8 ; 8 ; 1970 ; >
+      au < exists ; exists ; 1971 ; Journal of Nepal Medical Association Volume 9 ; 9 ; 1971 ; >
+      au < exists ; exists ; 1972 ; Journal of Nepal Medical Association Volume 10 ; 10 ; 1972 ; >
+      au < exists ; exists ; 1973 ; Journal of Nepal Medical Association Volume 11 ; 11 ; 1973 ; >
+      au < exists ; exists ; 1974 ; Journal of Nepal Medical Association Volume 12 ; 12 ; 1974 ; >
+      au < exists ; exists ; 1975 ; Journal of Nepal Medical Association Volume 13 ; 13 ; 1975 ; >
+      au < doesNotExist ; doesNotExist ; 1976 ; Journal of Nepal Medical Association Volume 14 ; 14 ; 1976 ; >
+      au < exists ; exists ; 1977 ; Journal of Nepal Medical Association Volume 15 ; 15 ; 1977 ; >
+      au < exists ; exists ; 1978 ; Journal of Nepal Medical Association Volume 16 ; 16 ; 1978 ; >
+      au < exists ; exists ; 1979 ; Journal of Nepal Medical Association Volume 17 ; 17 ; 1979 ; >
+      au < doesNotExist ; doesNotExist ; 1980 ; Journal of Nepal Medical Association Volume 18 ; 18 ; 1980 ; >
+      au < exists ; exists ; 1981 ; Journal of Nepal Medical Association Volume 19 ; 19 ; 1981 ; >
+      au < exists ; exists ; 1982 ; Journal of Nepal Medical Association Volume 20 ; 20 ; 1982 ; >
+      au < exists ; exists ; 1983 ; Journal of Nepal Medical Association Volume 21 ; 21 ; 1983 ; >
+      au < exists ; exists ; 1984 ; Journal of Nepal Medical Association Volume 22 ; 22 ; 1984 ; >
+      au < exists ; exists ; 1985 ; Journal of Nepal Medical Association Volume 23 ; 23 ; 1985 ; >
+      au < exists ; exists ; 1986 ; Journal of Nepal Medical Association Volume 24 ; 24 ; 1986 ; >
+      au < doesNotExist ; doesNotExist ; 1987 ; Journal of Nepal Medical Association Volume 25 ; 25 ; 1987 ; >
+      au < exists ; exists ; 1988 ; Journal of Nepal Medical Association Volume 26 ; 26 ; 1988 ; >
+      au < doesNotExist ; doesNotExist ; 1989 ; Journal of Nepal Medical Association Volume 27 ; 27 ; 1989 ; >
+      au < doesNotExist ; doesNotExist ; 1990 ; Journal of Nepal Medical Association Volume 28 ; 28 ; 1990 ; >
+      au < doesNotExist ; doesNotExist ; 1991 ; Journal of Nepal Medical Association Volume 29 ; 29 ; 1991 ; >
+      au < exists ; exists ; 1992 ; Journal of Nepal Medical Association Volume 30 ; 30 ; 1992 ; >
+      au < doesNotExist ; doesNotExist ; 1993 ; Journal of Nepal Medical Association Volume 31 ; 31 ; 1993 ; >
+      au < exists ; exists ; 1994 ; Journal of Nepal Medical Association Volume 32 ; 32 ; 1994 ; >
+      au < doesNotExist ; doesNotExist ; 1995 ; Journal of Nepal Medical Association Volume 33 ; 33 ; 1995 ; >
+      au < exists ; exists ; 1996 ; Journal of Nepal Medical Association Volume 34 ; 34 ; 1996 ; >
+      au < exists ; exists ; 1997 ; Journal of Nepal Medical Association Volume 35-36 ; 35-36 ; 1997 ; >
+      au < exists ; exists ; 1998 ; Journal of Nepal Medical Association Volume 37 ; 37 ; 1998 ; >
+      au < exists ; exists ; 1999 ; Journal of Nepal Medical Association Volume 38 ; 38 ; 1999 ; >
+      au < exists ; exists ; 2000 ; Journal of Nepal Medical Association Volume 39 ; 39 ; 2000 ; >
+      au < exists ; exists ; 2001 ; Journal of Nepal Medical Association Volume 40 ; 40 ; 2001 ; >
+      au < exists ; exists ; 2002 ; Journal of Nepal Medical Association Volume 41 ; 41 ; 2002 ; >
+      au < exists ; exists ; 2003 ; Journal of Nepal Medical Association Volume 42 ; 42 ; 2003 ; >
+      au < exists ; exists ; 2004 ; Journal of Nepal Medical Association Volume 43 ; 43 ; 2004 ; >
+      au < exists ; exists ; 2005 ; Journal of Nepal Medical Association Volume 44 ; 44 ; 2005 ; >
+      au < exists ; exists ; 2006 ; Journal of Nepal Medical Association Volume 45 ; 45 ; 2006 ; >
+      au < exists ; exists ; 2007 ; Journal of Nepal Medical Association Volume 46 ; 46 ; 2007 ; >
+      au < exists ; exists ; 2008 ; Journal of Nepal Medical Association Volume 47 ; 47 ; 2008 ; >
+      au < exists ; exists ; 2009 ; Journal of Nepal Medical Association Volume 48 ; 48 ; 2009 ; >
+      au < exists ; exists ; 2010 ; Journal of Nepal Medical Association Volume 49 ; 49 ; 2010 ; >
+      au < exists ; exists ; 2011 ; Journal of Nepal Medical Association Volume 50 ; 50 ; 2011 ; >
+      au < exists ; exists ; 2012 ; Journal of Nepal Medical Association Volume 51 ; 51 ; 2012 ; >
+      au < exists ; exists ; 2013 ; Journal of Nepal Medical Association Volume 52 ; 52 ; 2013 ; >
+      au < exists ; exists ; 2014 ; Journal of Nepal Medical Association Volume 53 ; 53 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Journal of Nepal Medical Association Volume 54 ; 54 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Journal of Nepal Medical Association Volume 55 ; 55 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Journal of Nepal Medical Association Volume 56 (2017) ; 56 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Journal of Nepal Medical Association Volume 56 (2018) ; 56 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Journal of Nepal Medical Association Volume 57 ; 57 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Journal of Nepal Medical Association Volume 58 ; 58 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Journal of Nepal Medical Association Volume 59 ; 59 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Journal of Nepal Medical Association Volume 60 ; 60 ; 2022 ; >
+      au < exists ; exists ; 2023 ; Journal of Nepal Medical Association Volume 61 ; 61 ; 2023 ; >
+      au < exists ; exists ; 2024 ; Journal of Nepal Medical Association Volume 62 ; 62 ; 2024 ; >
+      au < exists ; exists ; 2025 ; Journal of Nepal Medical Association Volume 63 ; 63 ; 2025 ; >
+      au < exists ; exists ; 2026 ; Journal of Nepal Medical Association Volume 64 ; 64 ; 2026 ; >
+
+  }
+
+}
