@@ -31,6 +31,7 @@ import java.io.*;
 import java.lang.management.*;
 import java.sql.*;
 import java.util.*;
+import org.lockss.alert.Alert;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.TdbAu;
 import org.lockss.daemon.*;
@@ -418,6 +419,7 @@ public class ReindexingTask {
     final String DEBUG_HEADER = "commitMetadata(): ";
     Connection conn = null;
     long removedArticleCount = 0L;
+    boolean auPreviouslyIndexed = false;
 
     try {
       // Get a connection to the database.
@@ -430,6 +432,10 @@ public class ReindexingTask {
       // For a full reindex, remove the old Archival Unit metadata before adding
       // the new metadata.
       if (needFullReindex) {
+        // An AU without a metadata row has never been indexed, so it has no
+        // prior article count to compare with the result of this full metadata
+        // reindex.
+        auPreviouslyIndexed = mdManagerSql.findAuMdByAuId(conn, auId) != null;
         removedArticleCount = mdManagerSql.removeAuMetadataItems(conn, auId);
         log.info("Reindexing task for AU '" + auName + "' removed "
             + removedArticleCount + " database items.");
@@ -472,6 +478,9 @@ public class ReindexingTask {
         status = ReindexingStatus.Success;
       }
 
+      maybeRaiseArticleCountChangedAlert(auPreviouslyIndexed,
+          removedArticleCount, updatedArticleCount);
+
       // Update the successful re-indexing count.
       mdManager.addToSuccessfulReindexingTasks(this);
 
@@ -506,6 +515,35 @@ public class ReindexingTask {
       setStatusIfRunning(ReindexingStatus.Failed, re);
     } finally {
       DbManager.safeRollbackAndClose(conn);
+    }
+  }
+
+  /**
+   * Raises an alert if a committed full metadata reindex of an already indexed
+   * AU changed the AU's article count. A failure to raise the alert is logged
+   * and does not affect the outcome of the task.
+   *
+   * @param auPreviouslyIndexed
+   *          <code>true</code> if the AU had metadata before this task.
+   * @param before
+   *          The number of articles in the AU before the full metadata reindex.
+   * @param after
+   *          The number of articles in the AU after the full metadata reindex.
+   */
+  private void maybeRaiseArticleCountChangedAlert(boolean auPreviouslyIndexed,
+      long before, long after) {
+    if (!needFullReindex || !auPreviouslyIndexed || before == after) {
+      return;
+    }
+
+    try {
+      LockssDaemon.getLockssDaemon().getAlertManager()
+          .raiseAlert(Alert.auAlert(Alert.ARTICLE_COUNT_CHANGED, au),
+              "Full metadata reindex changed the article count: " + before
+                  + " before, " + after + " after.");
+    } catch (RuntimeException re) {
+      log.error("Cannot raise article count changed alert for AU '" + auName
+          + "'", re);
     }
   }
 

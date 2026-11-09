@@ -2103,7 +2103,7 @@ public class MetadataManagerSql {
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private Long findAuMdByAuId(Connection conn, String auId) throws DbException {
+  Long findAuMdByAuId(Connection conn, String auId) throws DbException {
     final String DEBUG_HEADER = "findAuMdByAuId(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
 

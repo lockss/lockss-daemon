@@ -204,6 +204,10 @@ public class Alert {
     cAlert("PollFinished").
     setAttribute(ATTR_SEVERITY, SEVERITY_INFO);
 
+  public static final Alert ARTICLE_COUNT_CHANGED =
+    cAlert("ArticleCountChanged").
+    setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
+
   public static final Alert CACHE_DOWN =
     new Alert("BoxDown").
     setAttribute(ATTR_SEVERITY, SEVERITY_ERROR);
