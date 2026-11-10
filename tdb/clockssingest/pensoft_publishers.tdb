@@ -297,7 +297,7 @@
     au < finished ; manifest ; 2023 ; 80-89 ; NeoBiota Volume 2023 ; 2023 ; https://neobiota.pensoft.net/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 90-96 ; NeoBiota Volume 2024 ; 2024 ; https://neobiota.pensoft.net/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2025 ; 97-104 ; NeoBiota Volume 2025 ; 2025 ; https://neobiota.pensoft.net/ ; >
-    au < manifest ; exists ; 2026 ; 105-112 ; NeoBiota Volume 2026 ; 2026 ; https://neobiota.pensoft.net/ ; >
+    au < ready ; exists ; 2026 ; 105-112 ; NeoBiota Volume 2026 ; 2026 ; https://neobiota.pensoft.net/ ; >
 
    }
 
@@ -357,7 +357,7 @@
     au < finished ; manifest ; 2023 ; 217-236 ; PhytoKeys Volume 2023 ; 2023 ; https://phytokeys.pensoft.net/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 237-250 ; PhytoKeys Volume 2024 ; 2024 ; https://phytokeys.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2025 ; 251-268 ; PhytoKeys Volume 2025 ; 2025 ; https://phytokeys.pensoft.net/ ; >
-    au < manifest ; exists ; 2026 ; 269-286 ; PhytoKeys Volume 2026 ; 2026 ; https://phytokeys.pensoft.net/ ; >
+    au < ready ; exists ; 2026 ; 269-286 ; PhytoKeys Volume 2026 ; 2026 ; https://phytokeys.pensoft.net/ ; >
 
    }
   
@@ -422,7 +422,7 @@
     au < finished ; manifest ; 2023 ; 1138-1187 ; ZooKeys Volume 2023 ; 2023 ; https://zookeys.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 1188-1221 ; ZooKeys Volume 2024 ; 2024 ; https://zookeys.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2025 ; 1222-1265 ; ZooKeys Volume 2025 ; 2025 ; https://zookeys.pensoft.net/ ; >
-    au < manifest ; exists ; 2026 ; 1266-1309 ; ZooKeys Volume 2026 ; 2026 ; https://zookeys.pensoft.net/ ; >
+    au < ready ; exists ; 2026 ; 1266-1309 ; ZooKeys Volume 2026 ; 2026 ; https://zookeys.pensoft.net/ ; >
 
    }
    
@@ -1261,7 +1261,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Vegetation Classification and Survey Volume 2023 ; 2023 ; https://vcs.pensoft.net/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Vegetation Classification and Survey Volume 2024 ; 2024 ; https://vcs.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Vegetation Classification and Survey Volume 2025 ; 2025 ; https://vcs.pensoft.net/ ; >
-      au < manifest ; exists ; 2026 ; 2026 ; Vegetation Classification and Survey Volume 2026 ; 2026 ; https://vcs.pensoft.net/ ; >
+      au < ready ; exists ; 2026 ; 2026 ; Vegetation Classification and Survey Volume 2026 ; 2026 ; https://vcs.pensoft.net/ ; >
 
   }
 

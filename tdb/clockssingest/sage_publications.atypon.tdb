@@ -26,19 +26,19 @@
 
        #journal_id = tdp
 
-       au < manifest ; exists ; 2014 ; 3D Printing and Additive Manufacturing Volume 1 ; 1 ; tdpa ; https://journals.sagepub.com/ ; >
-       au < manifest ; exists ; 2015 ; 3D Printing and Additive Manufacturing Volume 2 ; 2 ; tdpa ; https://journals.sagepub.com/ ; >
-       au < manifest ; exists ; 2016 ; 3D Printing and Additive Manufacturing Volume 3 ; 3 ; tdpa ; https://journals.sagepub.com/ ; >
-       au < manifest ; exists ; 2017 ; 3D Printing and Additive Manufacturing Volume 4 ; 4 ; tdpa ; https://journals.sagepub.com/ ; >
-       au < manifest ; exists ; 2018 ; 3D Printing and Additive Manufacturing Volume 5 ; 5 ; tdpa ; https://journals.sagepub.com/ ; >
-       au < manifest ; exists ; 2019 ; 3D Printing and Additive Manufacturing Volume 6 ; 6 ; tdpa ; https://journals.sagepub.com/ ; >
-       au < manifest ; exists ; 2020 ; 3D Printing and Additive Manufacturing Volume 7 ; 7 ; tdpa ; https://journals.sagepub.com/ ; >
-       au < manifest ; exists ; 2021 ; 3D Printing and Additive Manufacturing Volume 8 ; 8 ; tdpa ; https://journals.sagepub.com/ ; >
-       au < manifest ; exists ; 2022 ; 3D Printing and Additive Manufacturing Volume 9 ; 9 ; tdpa ; https://journals.sagepub.com/ ; >
-       au < manifest ; exists ; 2023 ; 3D Printing and Additive Manufacturing Volume 10 ; 10 ; tdpa ; https://journals.sagepub.com/ ; >
-       au < manifest ; exists ; 2024 ; 3D Printing and Additive Manufacturing Volume 11 ; 11 ; tdpa ; https://journals.sagepub.com/ ; >
-       au < manifest ; exists ; 2025 ; 3D Printing and Additive Manufacturing Volume 12 ; 12 ; tdpa ; https://journals.sagepub.com/ ; >
-       au < manifest ; exists ; 2026 ; 3D Printing and Additive Manufacturing Volume 13 ; 13 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < ready ; exists ; 2014 ; 3D Printing and Additive Manufacturing Volume 1 ; 1 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < ready ; exists ; 2015 ; 3D Printing and Additive Manufacturing Volume 2 ; 2 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < ready ; exists ; 2016 ; 3D Printing and Additive Manufacturing Volume 3 ; 3 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < ready ; exists ; 2017 ; 3D Printing and Additive Manufacturing Volume 4 ; 4 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < ready ; exists ; 2018 ; 3D Printing and Additive Manufacturing Volume 5 ; 5 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < ready ; exists ; 2019 ; 3D Printing and Additive Manufacturing Volume 6 ; 6 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < ready ; exists ; 2020 ; 3D Printing and Additive Manufacturing Volume 7 ; 7 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < ready ; exists ; 2021 ; 3D Printing and Additive Manufacturing Volume 8 ; 8 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < ready ; exists ; 2022 ; 3D Printing and Additive Manufacturing Volume 9 ; 9 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < ready ; exists ; 2023 ; 3D Printing and Additive Manufacturing Volume 10 ; 10 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < ready ; exists ; 2024 ; 3D Printing and Additive Manufacturing Volume 11 ; 11 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < ready ; exists ; 2025 ; 3D Printing and Additive Manufacturing Volume 12 ; 12 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < ready ; exists ; 2026 ; 3D Printing and Additive Manufacturing Volume 13 ; 13 ; tdpa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -1779,9 +1779,9 @@
       #param[base_url] = http://abs.sagepub.com/
       #continued_by = 0002-7642
 
-      au < manifest ; exists ; 1957-1958 ; Political Research, Organization and Design Volume 1 ; 1 ; absa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1958-1959 ; Political Research, Organization and Design Volume 2 ; 2 ; absa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1959-1960 ; Political Research, Organization and Design Volume 3 ; 3 ; absa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1957-1958 ; Political Research, Organization and Design Volume 1 ; 1 ; absa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1958-1959 ; Political Research, Organization and Design Volume 2 ; 2 ; absa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1959-1960 ; Political Research, Organization and Design Volume 3 ; 3 ; absa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -1795,45 +1795,45 @@
       #param[base_url] = http://abs.sagepub.com/
       #continues = 1930-2665
 
-      au < manifest ; exists ; 1960-1961 ; American Behavioral Scientist Volume 4 ; 4 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1961-1962 ; American Behavioral Scientist Volume 5 ; 5 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1962-1963 ; American Behavioral Scientist Volume 6 ; 6 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1963-1964 ; American Behavioral Scientist Volume 7 ; 7 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1964-1965 ; American Behavioral Scientist Volume 8 ; 8 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1965-1966 ; American Behavioral Scientist Volume 9 ; 9 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1966-1967 ; American Behavioral Scientist Volume 10 ; 10 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1967-1968 ; American Behavioral Scientist Volume 11 ; 11 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1968-1969 ; American Behavioral Scientist Volume 12 ; 12 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1969-1970 ; American Behavioral Scientist Volume 13 ; 13 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1970-1971 ; American Behavioral Scientist Volume 14 ; 14 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1971-1972 ; American Behavioral Scientist Volume 15 ; 15 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1972-1973 ; American Behavioral Scientist Volume 16 ; 16 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1973-1974 ; American Behavioral Scientist Volume 17 ; 17 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1974-1975 ; American Behavioral Scientist Volume 18 ; 18 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1975-1976 ; American Behavioral Scientist Volume 19 ; 19 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1976-1977 ; American Behavioral Scientist Volume 20 ; 20 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1977-1978 ; American Behavioral Scientist Volume 21 ; 21 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1978-1979 ; American Behavioral Scientist Volume 22 ; 22 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1979-1980 ; American Behavioral Scientist Volume 23 ; 23 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1980-1981 ; American Behavioral Scientist Volume 24 ; 24 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1981-1982 ; American Behavioral Scientist Volume 25 ; 25 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1982-1983 ; American Behavioral Scientist Volume 26 ; 26 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1983-1984 ; American Behavioral Scientist Volume 27 ; 27 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1984-1985 ; American Behavioral Scientist Volume 28 ; 28 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1985-1986 ; American Behavioral Scientist Volume 29 ; 29 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1986-1987 ; American Behavioral Scientist Volume 30 ; 30 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1987-1988 ; American Behavioral Scientist Volume 31 ; 31 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1988-1989 ; American Behavioral Scientist Volume 32 ; 32 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1989-1990 ; American Behavioral Scientist Volume 33 ; 33 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1990-1991 ; American Behavioral Scientist Volume 34 ; 34 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1991-1992 ; American Behavioral Scientist Volume 35 ; 35 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1992-1993 ; American Behavioral Scientist Volume 36 ; 36 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1993-1994 ; American Behavioral Scientist Volume 37 ; 37 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1994-1995 ; American Behavioral Scientist Volume 38 ; 38 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1995-1996 ; American Behavioral Scientist Volume 39 ; 39 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1996-1997 ; American Behavioral Scientist Volume 40 ; 40 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1997-1998 ; American Behavioral Scientist Volume 41 ; 41 ; absb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1998-1999 ; American Behavioral Scientist Volume 42 ; 42 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1960-1961 ; American Behavioral Scientist Volume 4 ; 4 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1961-1962 ; American Behavioral Scientist Volume 5 ; 5 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1962-1963 ; American Behavioral Scientist Volume 6 ; 6 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1963-1964 ; American Behavioral Scientist Volume 7 ; 7 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1964-1965 ; American Behavioral Scientist Volume 8 ; 8 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1965-1966 ; American Behavioral Scientist Volume 9 ; 9 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1966-1967 ; American Behavioral Scientist Volume 10 ; 10 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1967-1968 ; American Behavioral Scientist Volume 11 ; 11 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1968-1969 ; American Behavioral Scientist Volume 12 ; 12 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1969-1970 ; American Behavioral Scientist Volume 13 ; 13 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1970-1971 ; American Behavioral Scientist Volume 14 ; 14 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1971-1972 ; American Behavioral Scientist Volume 15 ; 15 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1972-1973 ; American Behavioral Scientist Volume 16 ; 16 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1973-1974 ; American Behavioral Scientist Volume 17 ; 17 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1974-1975 ; American Behavioral Scientist Volume 18 ; 18 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1975-1976 ; American Behavioral Scientist Volume 19 ; 19 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1976-1977 ; American Behavioral Scientist Volume 20 ; 20 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1977-1978 ; American Behavioral Scientist Volume 21 ; 21 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1978-1979 ; American Behavioral Scientist Volume 22 ; 22 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1979-1980 ; American Behavioral Scientist Volume 23 ; 23 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1980-1981 ; American Behavioral Scientist Volume 24 ; 24 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1981-1982 ; American Behavioral Scientist Volume 25 ; 25 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1982-1983 ; American Behavioral Scientist Volume 26 ; 26 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1983-1984 ; American Behavioral Scientist Volume 27 ; 27 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1984-1985 ; American Behavioral Scientist Volume 28 ; 28 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1985-1986 ; American Behavioral Scientist Volume 29 ; 29 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1986-1987 ; American Behavioral Scientist Volume 30 ; 30 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1987-1988 ; American Behavioral Scientist Volume 31 ; 31 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1988-1989 ; American Behavioral Scientist Volume 32 ; 32 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1989-1990 ; American Behavioral Scientist Volume 33 ; 33 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1990-1991 ; American Behavioral Scientist Volume 34 ; 34 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1991-1992 ; American Behavioral Scientist Volume 35 ; 35 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1992-1993 ; American Behavioral Scientist Volume 36 ; 36 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1993-1994 ; American Behavioral Scientist Volume 37 ; 37 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1994-1995 ; American Behavioral Scientist Volume 38 ; 38 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1995-1996 ; American Behavioral Scientist Volume 39 ; 39 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1996-1997 ; American Behavioral Scientist Volume 40 ; 40 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1997-1998 ; American Behavioral Scientist Volume 41 ; 41 ; absb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1998-1999 ; American Behavioral Scientist Volume 42 ; 42 ; absb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 1999-2000 ; American Behavioral Scientist Volume 43 ; 43 ; absb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000-2001 ; American Behavioral Scientist Volume 44 ; 44 ; absb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2001-2002 ; American Behavioral Scientist Volume 45 ; 45 ; absb ; https://journals.sagepub.com/ ; >
@@ -1874,46 +1874,46 @@
     >
       #param[base_url] = http://aex.sagepub.com/
 
-      au < manifest ; exists ; 1960 ; The American Economist Volume 4 ; 4 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1961 ; The American Economist Volume 5 ; 5 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1962 ; The American Economist Volume 6 ; 6 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1963 ; The American Economist Volume 7 ; 7 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1964 ; The American Economist Volume 8 ; 8 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1965 ; The American Economist Volume 9 ; 9 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1966 ; The American Economist Volume 10 ; 10 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1967 ; The American Economist Volume 11 ; 11 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1968 ; The American Economist Volume 12 ; 12 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1969 ; The American Economist Volume 13 ; 13 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1970 ; The American Economist Volume 14 ; 14 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1971 ; The American Economist Volume 15 ; 15 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1972 ; The American Economist Volume 16 ; 16 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1973 ; The American Economist Volume 17 ; 17 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1974 ; The American Economist Volume 18 ; 18 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1975 ; The American Economist Volume 19 ; 19 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1976 ; The American Economist Volume 20 ; 20 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1977 ; The American Economist Volume 21 ; 21 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1978 ; The American Economist Volume 22 ; 22 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1979 ; The American Economist Volume 23 ; 23 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1980 ; The American Economist Volume 24 ; 24 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1981 ; The American Economist Volume 25 ; 25 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1982 ; The American Economist Volume 26 ; 26 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1983 ; The American Economist Volume 27 ; 27 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1984 ; The American Economist Volume 28 ; 28 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1985 ; The American Economist Volume 29 ; 29 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1986 ; The American Economist Volume 30 ; 30 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1987 ; The American Economist Volume 31 ; 31 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1988 ; The American Economist Volume 32 ; 32 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1989 ; The American Economist Volume 33 ; 33 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1990 ; The American Economist Volume 34 ; 34 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1991 ; The American Economist Volume 35 ; 35 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1992 ; The American Economist Volume 36 ; 36 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1993 ; The American Economist Volume 37 ; 37 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1994 ; The American Economist Volume 38 ; 38 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1995 ; The American Economist Volume 39 ; 39 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1996 ; The American Economist Volume 40 ; 40 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1997 ; The American Economist Volume 41 ; 41 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1998 ; The American Economist Volume 42 ; 42 ; aexb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1999 ; The American Economist Volume 43 ; 43 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1960 ; The American Economist Volume 4 ; 4 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1961 ; The American Economist Volume 5 ; 5 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1962 ; The American Economist Volume 6 ; 6 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1963 ; The American Economist Volume 7 ; 7 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1964 ; The American Economist Volume 8 ; 8 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1965 ; The American Economist Volume 9 ; 9 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1966 ; The American Economist Volume 10 ; 10 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1967 ; The American Economist Volume 11 ; 11 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1968 ; The American Economist Volume 12 ; 12 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1969 ; The American Economist Volume 13 ; 13 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1970 ; The American Economist Volume 14 ; 14 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1971 ; The American Economist Volume 15 ; 15 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1972 ; The American Economist Volume 16 ; 16 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1973 ; The American Economist Volume 17 ; 17 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1974 ; The American Economist Volume 18 ; 18 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1975 ; The American Economist Volume 19 ; 19 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1976 ; The American Economist Volume 20 ; 20 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1977 ; The American Economist Volume 21 ; 21 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1978 ; The American Economist Volume 22 ; 22 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1979 ; The American Economist Volume 23 ; 23 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1980 ; The American Economist Volume 24 ; 24 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1981 ; The American Economist Volume 25 ; 25 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1982 ; The American Economist Volume 26 ; 26 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1983 ; The American Economist Volume 27 ; 27 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1984 ; The American Economist Volume 28 ; 28 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1985 ; The American Economist Volume 29 ; 29 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1986 ; The American Economist Volume 30 ; 30 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1987 ; The American Economist Volume 31 ; 31 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1988 ; The American Economist Volume 32 ; 32 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1989 ; The American Economist Volume 33 ; 33 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1990 ; The American Economist Volume 34 ; 34 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1991 ; The American Economist Volume 35 ; 35 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1992 ; The American Economist Volume 36 ; 36 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1993 ; The American Economist Volume 37 ; 37 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1994 ; The American Economist Volume 38 ; 38 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1995 ; The American Economist Volume 39 ; 39 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1996 ; The American Economist Volume 40 ; 40 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1997 ; The American Economist Volume 41 ; 41 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1998 ; The American Economist Volume 42 ; 42 ; aexb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1999 ; The American Economist Volume 43 ; 43 ; aexb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; The American Economist Volume 44 ; 44 ; aexb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2001 ; The American Economist Volume 45 ; 45 ; aexb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; The American Economist Volume 46 ; 46 ; aexb ; https://journals.sagepub.com/ ; >
@@ -1954,11 +1954,11 @@
     >
       #param[base_url] = http://aer.sagepub.com/
 
-      au < manifest ; exists ; 1964 ; American Educational Research Journal Volume 1 ; 1 ; aera ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1965 ; American Educational Research Journal Volume 2 ; 2 ; aera ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1966 ; American Educational Research Journal Volume 3 ; 3 ; aera ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1967 ; American Educational Research Journal Volume 4 ; 4 ; aera ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 1968 ; American Educational Research Journal Volume 5 ; 5 ; aera ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1964 ; American Educational Research Journal Volume 1 ; 1 ; aera ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1965 ; American Educational Research Journal Volume 2 ; 2 ; aera ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1966 ; American Educational Research Journal Volume 3 ; 3 ; aera ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1967 ; American Educational Research Journal Volume 4 ; 4 ; aera ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 1968 ; American Educational Research Journal Volume 5 ; 5 ; aera ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 1969 ; American Educational Research Journal Volume 6 ; 6 ; aera ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 1970 ; American Educational Research Journal Volume 7 ; 7 ; aera ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 1971 ; American Educational Research Journal Volume 8 ; 8 ; aera ; https://journals.sagepub.com/ ; >
@@ -14133,8 +14133,8 @@
 
       au < manifest ; exists ; 2021 ; Re:GEN Open Volume 1 ; 1 ; dcbb ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2022 ; Re:GEN Open Volume 2 ; 2 ; dcbb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2023 ; Re:GEN Open Volume 3 ; 3 ; dcbb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2023 ; Re:GEN Open Volume 4 ; 4 ; dcbb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2023 ; Re:GEN Open Volume 3 ; 3 ; dcbb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2023 ; Re:GEN Open Volume 4 ; 4 ; dcbb ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -18925,7 +18925,7 @@
       au < frozen ; exists ; 2025 ; Feminist Review Volume 141 ; 141 ; fera ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2026 ; Feminist Review Volume 142 ; 142 ; fera ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2026 ; Feminist Review Volume 143 ; 143 ; fera ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Feminist Review Volume 144 ; 144 ; fera ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Feminist Review Volume 144 ; 144 ; fera ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -19713,7 +19713,7 @@
        au < manifest ; exists ; 2020 ; Gaming Law Review Volume 24 ; 24 ; glra ; https://journals.sagepub.com/ ; >
        au < manifest ; exists ; 2021 ; Gaming Law Review Volume 25 ; 25 ; glra ; https://journals.sagepub.com/ ; >
        au < manifest ; exists ; 2022 ; Gaming Law Review Volume 26 ; 26 ; glra ; https://journals.sagepub.com/ ; >
-       au < manifest ; exists ; 2023 ; Gaming Law Review Volume 27 ; 27 ; glra ; https://journals.sagepub.com/ ; >
+       au < ready ; exists ; 2023 ; Gaming Law Review Volume 27 ; 27 ; glra ; https://journals.sagepub.com/ ; >
        au < manifest ; exists ; 2024 ; Gaming Law Review Volume 28 ; 28 ; glra ; https://journals.sagepub.com/ ; >
        au < manifest ; exists ; 2025 ; Gaming Law Review Volume 29 ; 29 ; glra ; https://journals.sagepub.com/ ; >
        au < manifest ; exists ; 2026 ; Gaming Law Review Volume 30 ; 30 ; glra ; https://journals.sagepub.com/ ; >
@@ -21206,7 +21206,7 @@
       au < deepCrawl ; exists ; 2023 ; Health Informatics Journal Volume 29 ; 29 ; jhib ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Health Informatics Journal Volume 30 ; 30 ; jhib ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Health Informatics Journal Volume 31 ; 31 ; jhib ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Health Informatics Journal Volume 32 ; 32 ; jhib ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Health Informatics Journal Volume 32 ; 32 ; jhib ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -23122,7 +23122,7 @@
       au < deepCrawl ; exists ; 2023-2024 ; Imagination, Cognition and Personality Volume 43 ; 43 ; icaa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Imagination, Cognition and Personality Volume 44 ; 44 ; icaa ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2025-2026 ; Imagination, Cognition and Personality Volume 45 ; 45 ; icaa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026-2027 ; Imagination, Cognition and Personality Volume 46 ; 46 ; icaa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026-2027 ; Imagination, Cognition and Personality Volume 46 ; 46 ; icaa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -25688,7 +25688,7 @@
       au < deepCrawl ; exists ; 2023 ; International Journal of Engine Research Volume 24 ; 24 ; jera ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; International Journal of Engine Research Volume 25 ; 25 ; jera ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; International Journal of Engine Research Volume 26 ; 26 ; jera ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; International Journal of Engine Research Volume 27 ; 27 ; jera ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; International Journal of Engine Research Volume 27 ; 27 ; jera ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -25844,7 +25844,7 @@
       au < deepCrawl ; exists ; 2023 ; International Journal of Social Determinants of Health and Health Services Volume 53 ; 53 ; johb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; International Journal of Social Determinants of Health and Health Services Volume 54 ; 54 ; johb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; International Journal of Social Determinants of Health and Health Services Volume 55 ; 55 ; johb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; International Journal of Social Determinants of Health and Health Services Volume 56 ; 56 ; johb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; International Journal of Social Determinants of Health and Health Services Volume 56 ; 56 ; johb ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -27412,7 +27412,7 @@
       au < deepCrawl ; exists ; 2023-2024 ; Community Health Equity Research & Policy Volume 44 ; 44 ; qchb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Community Health Equity Research & Policy Volume 45 ; 45 ; qchb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2025-2026 ; Community Health Equity Research & Policy Volume 46 ; 46 ; qchb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026-2027 ; Community Health Equity Research & Policy Volume 47 ; 47 ; qchb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026-2027 ; Community Health Equity Research & Policy Volume 47 ; 47 ; qchb ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -28391,7 +28391,7 @@
       au < deepCrawl ; exists ; 2023 ; Irish Theological Quarterly Volume 88 ; 88 ; itqa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Irish Theological Quarterly Volume 89 ; 89 ; itqa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Irish Theological Quarterly Volume 90 ; 90 ; itqa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Irish Theological Quarterly Volume 91 ; 91 ; itqa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Irish Theological Quarterly Volume 91 ; 91 ; itqa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -28941,11 +28941,11 @@
       au < manifest ; exists ; 2019 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 32 ; 32 ; pdda ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2020 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 33 ; 33 ; pdda ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2021 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 34 ; 34 ; pdda ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2022 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 35 ; 35 ; pdda ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2022 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 35 ; 35 ; pdda ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2023 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 36 ; 36 ; pdda ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2024 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 37 ; 37 ; pdda ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2025 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 38 ; 38 ; pdda ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 39 ; 39 ; pdda ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Aerosol Medicine and Pulmonary Drug Delivery Volume 39 ; 39 ; pdda ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -33197,7 +33197,7 @@
       au < deepCrawl ; exists ; 2023-2024 ; Journal of Educational Technology Systems Volume 52 ; 52 ; etsa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; Journal of Educational Technology Systems Volume 53 ; 53 ; etsa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2025-2026 ; Journal of Educational Technology Systems Volume 54 ; 54 ; etsa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026-2027 ; Journal of Educational Technology Systems Volume 55 ; 55 ; etsa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026-2027 ; Journal of Educational Technology Systems Volume 55 ; 55 ; etsa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -33497,7 +33497,7 @@
       au < manifest ; exists ; 2023 ; Journal of Endourology Volume 37 ; 37 ; enra ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2024 ; Journal of Endourology Volume 38 ; 38 ; enra ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2025 ; Journal of Endourology Volume 39 ; 39 ; enra ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Endourology Volume 40 ; 40 ; enra ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Endourology Volume 40 ; 40 ; enra ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -33755,7 +33755,7 @@
       au < deepCrawl ; exists ; 2023 ; The Journal of Environment & Development Volume 32 ; 32 ; jeda ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; The Journal of Environment & Development Volume 33 ; 33 ; jeda ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; The Journal of Environment & Development Volume 34 ; 34 ; jeda ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; The Journal of Environment & Development Volume 35 ; 35 ; jeda ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; The Journal of Environment & Development Volume 35 ; 35 ; jeda ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -33962,7 +33962,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Experiential Education Volume 46 ; 46 ; jeea ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Experiential Education Volume 47 ; 47 ; jeea ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Experiential Education Volume 48 ; 48 ; jeea ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Experiential Education Volume 49 ; 49 ; jeea ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Experiential Education Volume 49 ; 49 ; jeea ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -34495,7 +34495,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Geriatric Psychiatry and Neurology Volume 36 ; 36 ; jgpb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Geriatric Psychiatry and Neurology Volume 37 ; 37 ; jgpb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Geriatric Psychiatry and Neurology Volume 38 ; 38 ; jgpb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Geriatric Psychiatry and Neurology Volume 39 ; 39 ; jgpb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Geriatric Psychiatry and Neurology Volume 39 ; 39 ; jgpb ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -34868,7 +34868,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Hispanic Higher Education Volume 22 ; 22 ; jhha ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Hispanic Higher Education Volume 23 ; 23 ; jhha ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Hispanic Higher Education Volume 24 ; 24 ; jhha ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Hispanic Higher Education Volume 25 ; 25 ; jhha ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Hispanic Higher Education Volume 25 ; 25 ; jhha ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -35084,7 +35084,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Holistic Nursing Volume 41 ; 41 ; jhna ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Holistic Nursing Volume 42 ; 42 ; jhna ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Journal of Holistic Nursing Volume 43 ; 43 ; jhna ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Holistic Nursing Volume 44 ; 44 ; jhna ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Holistic Nursing Volume 44 ; 44 ; jhna ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -35175,7 +35175,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Hospitality & Tourism Research Volume 47 ; 47 ; jhtd ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Hospitality & Tourism Research Volume 48 ; 48 ; jhtd ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Hospitality & Tourism Research Volume 49 ; 49 ; jhtd ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Hospitality & Tourism Research Volume 50 ; 50 ; jhtd ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Hospitality & Tourism Research Volume 50 ; 50 ; jhtd ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -35436,7 +35436,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Indian Orthodontic Society Volume 57 ; 57 ; jioa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Indian Orthodontic Society Volume 58 ; 58 ; jioa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Indian Orthodontic Society Volume 59 ; 59 ; jioa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Indian Orthodontic Society Volume 60 ; 60 ; jioa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Indian Orthodontic Society Volume 60 ; 60 ; jioa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -36317,7 +36317,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Interdisciplinary Economics Volume 35 ; 35 ; jiea ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Interdisciplinary Economics Volume 36 ; 36 ; jiea ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Interdisciplinary Economics Volume 37 ; 37 ; jiea ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Interdisciplinary Economics Volume 38 ; 38 ; jiea ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Interdisciplinary Economics Volume 38 ; 38 ; jiea ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -36687,7 +36687,7 @@
       au < manifest ; exists ; 2021 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 31 ; 31 ; lata ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2022 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 32 ; 32 ; lata ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2023 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 33 ; 33 ; lata ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2024 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 34 ; 34 ; lata ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2024 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 34 ; 34 ; lata ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2025 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 35 ; 35 ; lata ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2026 ; Journal of Laparoendoscopic & Advanced Surgical Techniques Volume 36 ; 36 ; lata ; https://journals.sagepub.com/ ; >
 
@@ -36840,7 +36840,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Leadership & Organizational Studies Volume 30 ; 30 ; jlob ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Leadership & Organizational Studies Volume 31 ; 31 ; jlob ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Leadership & Organizational Studies Volume 32 ; 32 ; jlob ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Leadership & Organizational Studies Volume 33 ; 33 ; jlob ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Leadership & Organizational Studies Volume 33 ; 33 ; jlob ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -37118,7 +37118,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 42 ; 42 ; lfna ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 43 ; 43 ; lfna ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 44 ; 44 ; lfna ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 45 ; 45 ; lfna ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 45 ; 45 ; lfna ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -37176,7 +37176,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Macromarketing Volume 43 ; 43 ; jmka ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Macromarketing Volume 44 ; 44 ; jmka ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Macromarketing Volume 45 ; 45 ; jmka ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Macromarketing Volume 46 ; 46 ; jmka ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Macromarketing Volume 46 ; 46 ; jmka ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -38229,7 +38229,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Onco-Nephrology Volume 7 ; 7 ; jnpa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Onco-Nephrology Volume 8 ; 8 ; jnpa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Onco-Nephrology Volume 9 ; 9 ; jnpa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Onco-Nephrology Volume 10 ; 10 ; jnpa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Onco-Nephrology Volume 10 ; 10 ; jnpa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -40266,7 +40266,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Sandwich Structures and Materials Volume 25 ; 25 ; jsma ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Sandwich Structures and Materials Volume 26 ; 26 ; jsma ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Sandwich Structures and Materials Volume 27 ; 27 ; jsma ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Sandwich Structures and Materials Volume 28 ; 28 ; jsma ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Sandwich Structures and Materials Volume 28 ; 28 ; jsma ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -40416,7 +40416,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Service Research Volume 26 ; 26 ; jsra ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Service Research Volume 27 ; 27 ; jsra ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Service Research Volume 28 ; 28 ; jsra ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Service Research Volume 29 ; 29 ; jsra ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Service Research Volume 29 ; 29 ; jsra ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -41008,7 +41008,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Sports Economics Volume 24 ; 24 ; jsea ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Sports Economics Volume 25 ; 25 ; jsea ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Sports Economics Volume 26 ; 26 ; jsea ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Sports Economics Volume 27 ; 27 ; jsea ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Sports Economics Volume 27 ; 27 ; jsea ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -41284,7 +41284,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Teacher Education Volume 74 ; 74 ; jtea ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Teacher Education Volume 75 ; 75 ; jtea ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Journal of Teacher Education Volume 76 ; 76 ; jtea ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Teacher Education Volume 77 ; 77 ; jtea ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Teacher Education Volume 77 ; 77 ; jtea ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -42177,7 +42177,7 @@
       au < deepCrawl ; exists ; 2023 ; Journal of Travel Research Volume 62 ; 62 ; jtrb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Travel Research Volume 63 ; 63 ; jtrb ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Journal of Travel Research Volume 64 ; 64 ; jtrb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Travel Research Volume 65 ; 65 ; jtrb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Travel Research Volume 65 ; 65 ; jtrb ; https://journals.sagepub.com/ ; >
 
     }
 
@@ -42740,7 +42740,7 @@
       au < finished ; manifest ; 2024 ; Journal of Vocational Rehabilitation Volume 61 ; 61 ; jvra ; https://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2025 ; Journal of Vocational Rehabilitation Volume 62 ; 62 ; jvra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Journal of Vocational Rehabilitation Volume 63 ; 63 ; jvra ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Journal of Vocational Rehabilitation Volume 64 ; 64 ; jvra ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Journal of Vocational Rehabilitation Volume 64 ; 64 ; jvra ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2026 ; Journal of Vocational Rehabilitation Volume 65 ; 65 ; jvra ; https://journals.sagepub.com/ ; >
 
   }
@@ -43570,7 +43570,7 @@
       au < deepCrawl ; exists ; 2023 ; Language Testing Volume 40 ; 40 ; ltja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Language Testing Volume 41 ; 41 ; ltja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Language Testing Volume 42 ; 42 ; ltja ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Language Testing Volume 43 ; 43 ; ltja ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Language Testing Volume 43 ; 43 ; ltja ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -43965,7 +43965,7 @@
       au < deepCrawl ; exists ; 2023 ; The Linacre Quarterly Volume 90 ; 90 ; lqra ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; The Linacre Quarterly Volume 91 ; 91 ; lqra ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; The Linacre Quarterly Volume 92 ; 92 ; lqra ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; The Linacre Quarterly Volume 93 ; 93 ; lqra ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; The Linacre Quarterly Volume 93 ; 93 ; lqra ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -44172,7 +44172,7 @@
     au < frozen ; exists ; 2023 ; Lymphatic Research and Biology Volume 21 ; 21 ; lrba ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2024 ; Lymphatic Research and Biology Volume 22 ; 22 ; lrba ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2025 ; Lymphatic Research and Biology Volume 23 ; 23 ; lrba ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2026 ; Lymphatic Research and Biology Volume 24 ; 24 ; lrba ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2026 ; Lymphatic Research and Biology Volume 24 ; 24 ; lrba ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -44592,7 +44592,7 @@
       au < deepCrawl ; exists ; 2023 ; Marketing Theory Volume 23 ; 23 ; mtqa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Marketing Theory Volume 24 ; 24 ; mtqa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Marketing Theory Volume 25 ; 25 ; mtqa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Marketing Theory Volume 26 ; 26 ; mtqa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Marketing Theory Volume 26 ; 26 ; mtqa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -45805,7 +45805,7 @@
     au < frozen ; exists ; 2023 ; Microbial Drug Resistance Volume 29 ; 29 ; mdra ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2024 ; Microbial Drug Resistance Volume 30 ; 30 ; mdra ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2025 ; Microbial Drug Resistance Volume 31 ; 31 ; mdra ; https://journals.sagepub.com/ ; >
-    au < manifest ; exists ; 2026 ; Microbial Drug Resistance Volume 32 ; 32 ; mdra ; https://journals.sagepub.com/ ; >
+    au < ready ; exists ; 2026 ; Microbial Drug Resistance Volume 32 ; 32 ; mdra ; https://journals.sagepub.com/ ; >
 
    }
 
@@ -47447,7 +47447,7 @@
         au < deepCrawl ; exists ; 2023 ; New Labor Forum Volume 32 ; 32 ; nlfa ; https://journals.sagepub.com/ ; >
         au < deepCrawl ; exists ; 2024 ; New Labor Forum Volume 33 ; 33 ; nlfa ; https://journals.sagepub.com/ ; >
         au < deepCrawl ; exists ; 2025 ; New Labor Forum Volume 34 ; 34 ; nlfa ; https://journals.sagepub.com/ ; >
-        au < manifest ; exists ; 2026 ; New Labor Forum Volume 35 ; 35 ; nlfa ; https://journals.sagepub.com/ ; >
+        au < ready ; exists ; 2026 ; New Labor Forum Volume 35 ; 35 ; nlfa ; https://journals.sagepub.com/ ; >
 
     }
 
@@ -47748,7 +47748,7 @@
       au < deepCrawl ; exists ; 2023 ; NHRD Network Journal Volume 16 ; 16 ; nhra ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; NHRD Network Journal Volume 17 ; 17 ; nhra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; NHRD Network Journal Volume 18 ; 18 ; nhra ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; NHRD Network Journal Volume 19 ; 19 ; nhra ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; NHRD Network Journal Volume 19 ; 19 ; nhra ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -48058,7 +48058,7 @@
       au < deepCrawl ; exists ; 2023 ; North American Archaeologist Volume 44 ; 44 ; naaa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; North American Archaeologist Volume 45 ; 45 ; naaa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; North American Archaeologist Volume 46 ; 46 ; naaa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; North American Archaeologist Volume 47 ; 47 ; naaa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; North American Archaeologist Volume 47 ; 47 ; naaa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -50271,7 +50271,7 @@
       #continues = 1549-5418
 
       au < manifest ; exists ; 2019 ; Photobiomodulation, Photomedicine, and Laser Surgery Volume 37 ; 37 ; phoa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2020 ; Photobiomodulation, Photomedicine, and Laser Surgery Volume 38 ; 38 ; phoa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2020 ; Photobiomodulation, Photomedicine, and Laser Surgery Volume 38 ; 38 ; phoa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2021 ; Photobiomodulation, Photomedicine, and Laser Surgery Volume 39 ; 39 ; phoa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2022 ; Photobiomodulation, Photomedicine, and Laser Surgery Volume 40 ; 40 ; phoa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2023 ; Photobiomodulation, Photomedicine, and Laser Surgery Volume 41 ; 41 ; phoa ; https://journals.sagepub.com/ ; >
@@ -51652,7 +51652,7 @@
       au < deepCrawl ; exists ; 2023 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 237 ; 237 ; piac ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 238 ; 238 ; piac ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2025 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 239 ; 239 ; piac ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 240 ; 240 ; piac ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 240 ; 240 ; piac ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -52065,7 +52065,7 @@
       au < deepCrawl ; exists ; 2023 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 237 ; 237 ; pihb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 238 ; 238 ; pihb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 239 ; 239 ; pihb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 240 ; 240 ; pihb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 240 ; 240 ; pihb ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -52780,7 +52780,7 @@
       au < deepCrawl ; exists ; 2023 ; Progress in Transplantation Volume 33 ; 33 ; pitb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Progress in Transplantation Volume 34 ; 34 ; pitb ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Progress in Transplantation Volume 35 ; 35 ; pitb ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Progress in Transplantation Volume 36 ; 36 ; pitb ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Progress in Transplantation Volume 36 ; 36 ; pitb ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -53476,7 +53476,7 @@
       au < deepCrawl ; exists ; 2023 ; Public Relations Inquiry Volume 12 ; 12 ; pria ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Public Relations Inquiry Volume 13 ; 13 ; pria ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Public Relations Inquiry Volume 14 ; 14 ; pria ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Public Relations Inquiry Volume 15 ; 15 ; pria ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Public Relations Inquiry Volume 15 ; 15 ; pria ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -53760,7 +53760,7 @@
       au < deepCrawl ; exists ; 2023 ; Qualitative Research Volume 23 ; 23 ; qrja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Qualitative Research Volume 24 ; 24 ; qrja ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Qualitative Research Volume 25 ; 25 ; qrja ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Qualitative Research Volume 26 ; 26 ; qrja ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Qualitative Research Volume 26 ; 26 ; qrja ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -53959,7 +53959,7 @@
       au < deepCrawl ; exists ; 2023 ; Quarterly Journal of Experimental Psychology Volume 76 ; 76 ; qjpd ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024 ; Quarterly Journal of Experimental Psychology Volume 77 ; 77 ; qjpd ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2025 ; Quarterly Journal of Experimental Psychology Volume 78 ; 78 ; qjpd ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026 ; Quarterly Journal of Experimental Psychology Volume 79 ; 79 ; qjpd ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026 ; Quarterly Journal of Experimental Psychology Volume 79 ; 79 ; qjpd ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -59443,7 +59443,7 @@
       au < deepCrawl ; exists ; 2023-2024 ; TEACHING Exceptional Children Volume 56 ; 56 ; tcxa ; https://journals.sagepub.com/ ; >
       au < deepCrawl ; exists ; 2024-2025 ; TEACHING Exceptional Children Volume 57 ; 57 ; tcxa ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2025-2026 ; TEACHING Exceptional Children Volume 58 ; 58 ; tcxa ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2026-2027 ; TEACHING Exceptional Children Volume 59 ; 59 ; tcxa ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2026-2027 ; TEACHING Exceptional Children Volume 59 ; 59 ; tcxa ; https://journals.sagepub.com/ ; >
 
   }
 
@@ -64341,7 +64341,7 @@
       au < manifest ; exists ; 2017 ; Videourology Volume 31 ; 31 ; vida ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2018 ; Videourology Volume 32 ; 32 ; vida ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2019 ; Videourology Volume 33 ; 33 ; vida ; https://journals.sagepub.com/ ; >
-      au < manifest ; exists ; 2020 ; Videourology Volume 34 ; 34 ; vida ; https://journals.sagepub.com/ ; >
+      au < ready ; exists ; 2020 ; Videourology Volume 34 ; 34 ; vida ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2021 ; Videourology Volume 35 ; 35 ; vida ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2022 ; Videourology Volume 36 ; 36 ; vida ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2023 ; Videourology Volume 37 ; 37 ; vida ; https://journals.sagepub.com/ ; >
@@ -69740,7 +69740,7 @@
         au < deepCrawl ; exists ; 2023 ; Journal of Telemedicine and Telecare Volume 29 ; 29 ; jtta ; https://journals.sagepub.com/ ; >
         au < deepCrawl ; exists ; 2024 ; Journal of Telemedicine and Telecare Volume 30 ; 30 ; jtta ; https://journals.sagepub.com/ ; >
         au < deepCrawl ; exists ; 2025 ; Journal of Telemedicine and Telecare Volume 31 ; 31 ; jtta ; https://journals.sagepub.com/ ; >
-        au < manifest ; exists ; 2026 ; Journal of Telemedicine and Telecare Volume 32 ; 32 ; jtta ; https://journals.sagepub.com/ ; >
+        au < ready ; exists ; 2026 ; Journal of Telemedicine and Telecare Volume 32 ; 32 ; jtta ; https://journals.sagepub.com/ ; >
 
     }
 
@@ -71722,7 +71722,7 @@
       au < frozen ; exists ; 2019 ; Therapeutic Advances in Gastrointestinal Endoscopy Volume 12 ; 12 ; cmgc ; https://journals.sagepub.com/ ;  >
       au < frozen ; exists ; 2020 ; Therapeutic Advances in Gastrointestinal Endoscopy Volume 13 ; 13 ; cmgc ; https://journals.sagepub.com/ ;  >
       au < frozen ; exists ; 2021 ; Therapeutic Advances in Gastrointestinal Endoscopy Volume 14 ; 14 ; cmgc ; https://journals.sagepub.com/ ;  >
-      au < manifest ; exists ; 2022 ; Therapeutic Advances in Gastrointestinal Endoscopy Volume 15 ; 15 ; cmgc ; https://journals.sagepub.com/ ;  >
+      au < ready ; exists ; 2022 ; Therapeutic Advances in Gastrointestinal Endoscopy Volume 15 ; 15 ; cmgc ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2023 ; Therapeutic Advances in Gastrointestinal Endoscopy Volume 16 ; 16 ; cmgc ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2024 ; Therapeutic Advances in Gastrointestinal Endoscopy Volume 17 ; 17 ; cmgc ; https://journals.sagepub.com/ ;  >
       au < deepCrawl ; exists ; 2025 ; Therapeutic Advances in Gastrointestinal Endoscopy Volume 18 ; 18 ; cmgc ; https://journals.sagepub.com/ ;  >
