@@ -381,37 +381,122 @@
       param[journal_id] = dao
 
       au < manifest ; exists ; 1984 ; 1 ; Diseases of Aquatic Organisms Volume 1 ; >
-
-      au < manifest ; exists ; 2010 ; 88 ; Diseases of Aquatic Organisms Volume 88 ; >
+      au < exists ; exists ; 1985 ; 2 ; Diseases of Aquatic Organisms Volume 2 ; >
+      au < exists ; exists ; 1986 ; 3 ; Diseases of Aquatic Organisms Volume 3 ; >
+      au < exists ; exists ; 1987 ; 4 ; Diseases of Aquatic Organisms Volume 4 ; >
+      au < exists ; exists ; 1987 ; 5 ; Diseases of Aquatic Organisms Volume 5 ; >
+      au < exists ; exists ; 1988 ; 6 ; Diseases of Aquatic Organisms Volume 6 ; >
+      au < exists ; exists ; 1988 ; 7 ; Diseases of Aquatic Organisms Volume 7 ; >
+      au < exists ; exists ; 1989 ; 8 ; Diseases of Aquatic Organisms Volume 8 ; >
+      au < exists ; exists ; 1989 ; 9 ; Diseases of Aquatic Organisms Volume 9 ; >
+      au < exists ; exists ; 1990 ; 10 ; Diseases of Aquatic Organisms Volume 10 ; >
+      au < exists ; exists ; 1990 ; 11 ; Diseases of Aquatic Organisms Volume 11 ; >
+      au < exists ; exists ; 1990 ; 12 ; Diseases of Aquatic Organisms Volume 12 ; >
+      au < exists ; exists ; 1991 ; 13 ; Diseases of Aquatic Organisms Volume 13 ; >
+      au < exists ; exists ; 1991-1992 ; 14 ; Diseases of Aquatic Organisms Volume 14 ; >
+      au < exists ; exists ; 1992 ; 15 ; Diseases of Aquatic Organisms Volume 15 ; >
+      au < exists ; exists ; 1992 ; 16 ; Diseases of Aquatic Organisms Volume 16 ; >
+      au < exists ; exists ; 1992 ; 17 ; Diseases of Aquatic Organisms Volume 17 ; >
+      au < exists ; exists ; 1993 ; 18 ; Diseases of Aquatic Organisms Volume 18 ; >
+      au < exists ; exists ; 1993 ; 19 ; Diseases of Aquatic Organisms Volume 19 ; >
+      au < exists ; exists ; 1994 ; 20 ; Diseases of Aquatic Organisms Volume 20 ; >
+      au < exists ; exists ; 1995 ; 21 ; Diseases of Aquatic Organisms Volume 21 ; >
+      au < exists ; exists ; 1995 ; 22 ; Diseases of Aquatic Organisms Volume 22 ; >
+      au < exists ; exists ; 1995 ; 23 ; Diseases of Aquatic Organisms Volume 23 ; >
+      au < exists ; exists ; 1996 ; 24 ; Diseases of Aquatic Organisms Volume 24 ; >
+      au < exists ; exists ; 1996 ; 25 ; Diseases of Aquatic Organisms Volume 25 ; >
+      au < exists ; exists ; 1996 ; 26 ; Diseases of Aquatic Organisms Volume 26 ; >
+      au < exists ; exists ; 1996 ; 27 ; Diseases of Aquatic Organisms Volume 27 ; >
+      au < exists ; exists ; 1997 ; 28 ; Diseases of Aquatic Organisms Volume 28 ; >
+      au < exists ; exists ; 1997 ; 29 ; Diseases of Aquatic Organisms Volume 29 ; >
+      au < exists ; exists ; 1997 ; 30 ; Diseases of Aquatic Organisms Volume 30 ; >
+      au < exists ; exists ; 1997 ; 31 ; Diseases of Aquatic Organisms Volume 31 ; >
+      au < exists ; exists ; 1998 ; 32 ; Diseases of Aquatic Organisms Volume 32 ; >
+      au < exists ; exists ; 1998 ; 33 ; Diseases of Aquatic Organisms Volume 33 ; >
+      au < exists ; exists ; 1998 ; 34 ; Diseases of Aquatic Organisms Volume 34 ; >
+      au < exists ; exists ; 1999 ; 35 ; Diseases of Aquatic Organisms Volume 35 ; >
+      au < exists ; exists ; 1999 ; 36 ; Diseases of Aquatic Organisms Volume 36 ; >
+      au < exists ; exists ; 1999 ; 37 ; Diseases of Aquatic Organisms Volume 37 ; >
+      au < exists ; exists ; 1999 ; 38 ; Diseases of Aquatic Organisms Volume 38 ; >
+      au < exists ; exists ; 1999-2000 ; 39 ; Diseases of Aquatic Organisms Volume 39 ; >
+      au < exists ; exists ; 2000 ; 40 ; Diseases of Aquatic Organisms Volume 40 ; >
+      au < exists ; exists ; 2000 ; 41 ; Diseases of Aquatic Organisms Volume 41 ; >
+      au < exists ; exists ; 2000 ; 42 ; Diseases of Aquatic Organisms Volume 42 ; >
+      au < exists ; exists ; 2000 ; 43 ; Diseases of Aquatic Organisms Volume 43 ; >
+      au < exists ; exists ; 2001 ; 44 ; Diseases of Aquatic Organisms Volume 44 ; >
+      au < exists ; exists ; 2001 ; 45 ; Diseases of Aquatic Organisms Volume 45 ; >
+      au < exists ; exists ; 2001 ; 46 ; Diseases of Aquatic Organisms Volume 46 ; >
+      au < exists ; exists ; 2001 ; 47 ; Diseases of Aquatic Organisms Volume 47 ; >
+      au < exists ; exists ; 2001-2002 ; 48 ; Diseases of Aquatic Organisms Volume 48 ; >
+      au < exists ; exists ; 2002 ; 49 ; Diseases of Aquatic Organisms Volume 49 ; >
+      au < exists ; exists ; 2002 ; 50 ; Diseases of Aquatic Organisms Volume 50 ; >
+      au < exists ; exists ; 2002 ; 51 ; Diseases of Aquatic Organisms Volume 51 ; >
+      au < exists ; exists ; 2002 ; 52 ; Diseases of Aquatic Organisms Volume 52 ; >
+      au < exists ; exists ; 2003 ; 53 ; Diseases of Aquatic Organisms Volume 53 ; >
+      au < exists ; exists ; 2003 ; 54 ; Diseases of Aquatic Organisms Volume 54 ; >
+      au < exists ; exists ; 2003 ; 55 ; Diseases of Aquatic Organisms Volume 55 ; >
+      au < exists ; exists ; 2003 ; 56 ; Diseases of Aquatic Organisms Volume 56 ; >
+      au < exists ; exists ; 2003 ; 57 ; Diseases of Aquatic Organisms Volume 57 ; >
+      au < exists ; exists ; 2004 ; 58 ; Diseases of Aquatic Organisms Volume 58 ; >
+      au < exists ; exists ; 2004 ; 59 ; Diseases of Aquatic Organisms Volume 59 ; >
+      au < exists ; exists ; 2004 ; 60 ; Diseases of Aquatic Organisms Volume 60 ; >
+      au < exists ; exists ; 2004 ; 61 ; Diseases of Aquatic Organisms Volume 61 ; >
+      au < exists ; exists ; 2004 ; 62 ; Diseases of Aquatic Organisms Volume 62 ; >
+      au < exists ; exists ; 2005 ; 63 ; Diseases of Aquatic Organisms Volume 63 ; >
+      au < exists ; exists ; 2005 ; 64 ; Diseases of Aquatic Organisms Volume 64 ; >
+      au < exists ; exists ; 2005 ; 65 ; Diseases of Aquatic Organisms Volume 65 ; >
+      au < exists ; exists ; 2005 ; 66 ; Diseases of Aquatic Organisms Volume 66 ; >
+      au < exists ; exists ; 2005 ; 67 ; Diseases of Aquatic Organisms Volume 67 ; >
+      au < exists ; exists ; 2005-2006 ; 68 ; Diseases of Aquatic Organisms Volume 68 ; >
+      au < exists ; exists ; 2006 ; 69 ; Diseases of Aquatic Organisms Volume 69 ; >
+      au < exists ; exists ; 2006 ; 70 ; Diseases of Aquatic Organisms Volume 70 ; >
+      au < exists ; exists ; 2006 ; 71 ; Diseases of Aquatic Organisms Volume 71 ; >
+      au < exists ; exists ; 2006 ; 72 ; Diseases of Aquatic Organisms Volume 72 ; >
+      au < exists ; exists ; 2006-2007 ; 73 ; Diseases of Aquatic Organisms Volume 73 ; >
+      au < exists ; exists ; 2007 ; 74 ; Diseases of Aquatic Organisms Volume 74 ; >
+      au < exists ; exists ; 2007 ; 75 ; Diseases of Aquatic Organisms Volume 75 ; >
+      au < exists ; exists ; 2007 ; 76 ; Diseases of Aquatic Organisms Volume 76 ; >
+      au < exists ; exists ; 2007 ; 77 ; Diseases of Aquatic Organisms Volume 77 ; >
+      au < exists ; exists ; 2007-2008 ; 78 ; Diseases of Aquatic Organisms Volume 78 ; >
+      au < exists ; exists ; 2008 ; 79 ; Diseases of Aquatic Organisms Volume 79 ; >
+      au < exists ; exists ; 2008 ; 80 ; Diseases of Aquatic Organisms Volume 80 ; >
+      au < exists ; exists ; 2008 ; 81 ; Diseases of Aquatic Organisms Volume 81 ; >
+      au < exists ; exists ; 2008 ; 82 ; Diseases of Aquatic Organisms Volume 82 ; >
+      au < exists ; exists ; 2009 ; 83 ; Diseases of Aquatic Organisms Volume 83 ; >
+      au < exists ; exists ; 2009 ; 84 ; Diseases of Aquatic Organisms Volume 84 ; >
+      au < exists ; exists ; 2009 ; 85 ; Diseases of Aquatic Organisms Volume 85 ; >
+      au < exists ; exists ; 2009 ; 86 ; Diseases of Aquatic Organisms Volume 86 ; >
+      au < exists ; exists ; 2009 ; 87 ; Diseases of Aquatic Organisms Volume 87 ; >
+      au < manifest ; exists ; 2009-2010 ; 88 ; Diseases of Aquatic Organisms Volume 88 ; >
       au < manifest ; exists ; 2010 ; 89 ; Diseases of Aquatic Organisms Volume 89 ; >
       au < manifest ; exists ; 2010 ; 90 ; Diseases of Aquatic Organisms Volume 90 ; >
       au < manifest ; exists ; 2010 ; 91 ; Diseases of Aquatic Organisms Volume 91 ; >
       au < manifest ; exists ; 2010 ; 92 ; Diseases of Aquatic Organisms Volume 92 ; >
-      au < manifest ; exists ; 2011 ; 93 ; Diseases of Aquatic Organisms Volume 93 ; >
+      au < manifest ; exists ; 2010-2011 ; 93 ; Diseases of Aquatic Organisms Volume 93 ; >
       au < manifest ; exists ; 2011 ; 94 ; Diseases of Aquatic Organisms Volume 94 ; >
       au < manifest ; exists ; 2011 ; 95 ; Diseases of Aquatic Organisms Volume 95 ; >
       au < manifest ; exists ; 2011 ; 96 ; Diseases of Aquatic Organisms Volume 96 ; >
-      au < manifest ; exists ; 2011 ; 97 ; Diseases of Aquatic Organisms Volume 97 ; >
+      au < manifest ; exists ; 2011-2012 ; 97 ; Diseases of Aquatic Organisms Volume 97 ; >
       au < manifest ; exists ; 2012 ; 98 ; Diseases of Aquatic Organisms Volume 98 ; >
       au < manifest ; exists ; 2012 ; 99 ; Diseases of Aquatic Organisms Volume 99 ; >
       au < manifest ; exists ; 2012 ; 100 ; Diseases of Aquatic Organisms Volume 100 ; >
       au < manifest ; exists ; 2012 ; 101 ; Diseases of Aquatic Organisms Volume 101 ; >
-      au < manifest ; exists ; 2012 ; 102 ; Diseases of Aquatic Organisms Volume 102 ; >
+      au < manifest ; exists ; 2012-2013 ; 102 ; Diseases of Aquatic Organisms Volume 102 ; >
       au < manifest ; exists ; 2013 ; 103 ; Diseases of Aquatic Organisms Volume 103 ; >
       au < manifest ; exists ; 2013 ; 104 ; Diseases of Aquatic Organisms Volume 104 ; >
       au < manifest ; exists ; 2013 ; 105 ; Diseases of Aquatic Organisms Volume 105 ; >
       au < manifest ; exists ; 2013 ; 106 ; Diseases of Aquatic Organisms Volume 106 ; >
-      au < manifest ; exists ; 2013 ; 107 ; Diseases of Aquatic Organisms Volume 107 ; >
+      au < manifest ; exists ; 2013-2014 ; 107 ; Diseases of Aquatic Organisms Volume 107 ; >
       au < manifest ; exists ; 2014 ; 108 ; Diseases of Aquatic Organisms Volume 108 ; >
       au < manifest ; exists ; 2014 ; 109 ; Diseases of Aquatic Organisms Volume 109 ; >
       au < manifest ; exists ; 2014 ; 110 ; Diseases of Aquatic Organisms Volume 110 ; >
       au < manifest ; exists ; 2014 ; 111 ; Diseases of Aquatic Organisms Volume 111 ; >
-      au < manifest ; exists ; 2014 ; 112 ; Diseases of Aquatic Organisms Volume 112 ; >
+      au < manifest ; exists ; 2014-2015 ; 112 ; Diseases of Aquatic Organisms Volume 112 ; >
       au < manifest ; exists ; 2015 ; 113 ; Diseases of Aquatic Organisms Volume 113 ; >
       au < manifest ; exists ; 2015 ; 114 ; Diseases of Aquatic Organisms Volume 114 ; >
       au < manifest ; exists ; 2015 ; 115 ; Diseases of Aquatic Organisms Volume 115 ; >
       au < manifest ; exists ; 2015 ; 116 ; Diseases of Aquatic Organisms Volume 116 ; >
-      au < manifest ; exists ; 2015 ; 117 ; Diseases of Aquatic Organisms Volume 117 ; >
+      au < manifest ; exists ; 2015-2016 ; 117 ; Diseases of Aquatic Organisms Volume 117 ; >
       au < manifest ; exists ; 2016 ; 118 ; Diseases of Aquatic Organisms Volume 118 ; >
       au < manifest ; exists ; 2016 ; 119 ; Diseases of Aquatic Organisms Volume 119 ; >
       au < manifest ; exists ; 2016 ; 120 ; Diseases of Aquatic Organisms Volume 120 ; >
