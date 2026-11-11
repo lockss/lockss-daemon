@@ -39,15 +39,15 @@
 
       au < zapped ; finished ; 2021 ; Philosophy Documentation Center Source Content (Back Content) 2021_01 ; 2021_01 >
       au < zapped ; finished ; 2021 ; Philosophy Documentation Center Source Content 2021_02 ; 2021_02 >
-      au < readySource ; finished ; 2022 ; Philosophy Documentation Center Source Content 2022_01 ; 2022_01 >
+      au < zapped ; finished ; 2022 ; Philosophy Documentation Center Source Content 2022_01 ; 2022_01 >
       #No more AUs. Moving to https.
       }
       {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/phildoccenter-released/
 
-      au < readySource ; finished ; 2023 ; Philosophy Documentation Center Source Content 2023_01 ; 2023_01 >
-      au < readySource ; finished ; 2024 ; Philosophy Documentation Center Source Content 2024_01 ; 2024_01 >
-      au < readySource ; finished ; 2025 ; Philosophy Documentation Center Source Content 2025_01 ; 2025_01 >
+      au < zapped ; finished ; 2023 ; Philosophy Documentation Center Source Content 2023_01 ; 2023_01 >
+      au < zapped ; finished ; 2024 ; Philosophy Documentation Center Source Content 2024_01 ; 2024_01 >
+      au < zapped ; finished ; 2025 ; Philosophy Documentation Center Source Content 2025_01 ; 2025_01 >
       au < readySource ; crawling ; 2026 ; Philosophy Documentation Center Source Content 2026_01 ; 2026_01 >
 
       }
