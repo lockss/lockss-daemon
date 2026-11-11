@@ -60,6 +60,7 @@ public class GeorgThiemeVerlagHtmlCrawlFilterFactory implements FilterFactory {
         // Do not crawl header or footer for links
         new TagNameFilter("header"),
         new TagNameFilter("footer"),
+        HtmlNodeFilters.tagWithAttributeRegex("li", "data-crawling", "false"),
         // Contains navigation items that can link off AU
         HtmlNodeFilters.tagWithAttribute("div", "id", "navPanel"),
         HtmlNodeFilters.tagWithAttribute("ul", "id", "overviewNavigation"),
