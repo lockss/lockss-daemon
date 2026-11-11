@@ -2192,6 +2192,30 @@ public class DbManager extends BaseLockssDaemonManager
    * Acquires an exclusive database lock to serialize metadata write operations.
    * Blocks until no other transaction holds the lock. The lock is released when
    * the connection's transaction is committed or rolled back.
+   * <p>
+   * This is the concurrency contract for all of the
+   * <code>findOrCreateXxx()</code> operations on this class and
+   * {@link DbManagerSql}: they are implemented as a non-atomic "select, then
+   * insert if absent" sequence against tables that carry unique indices (for
+   * instance <code>publisher(publisher_name)</code> and
+   * <code>provider(provider_name)</code>). Two transactions that run such a
+   * sequence concurrently for the same value can both miss on the select and
+   * then both insert, and the loser gets a unique-constraint violation. On
+   * PostgreSQL that violation aborts the whole transaction, so it cannot be
+   * recovered from by simply re-reading the row.
+   * <p>
+   * Every transaction that calls a <code>findOrCreateXxx()</code> method must
+   * therefore call this method first, as the very first statement of the
+   * transaction, and must hold the lock until it commits or rolls back.
+   * Acquiring the lock first (rather than part-way through a transaction that
+   * has already written other metadata rows) is what keeps the lock ordering
+   * consistent and avoids deadlocks between metadata writers. The callers are
+   * the metadata reindexing task, the migration database copy, and the
+   * subscription and COUNTER managers.
+   * <p>
+   * Note that the lock is released by <em>every</em> commit, so a routine that
+   * commits once per item inside a loop has to re-acquire the lock at the start
+   * of each of those per-item transactions, not once before the loop.
    *
    * @param conn
    *          A Connection with the database connection to be used.

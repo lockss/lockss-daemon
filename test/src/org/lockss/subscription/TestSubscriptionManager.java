@@ -52,6 +52,7 @@ import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.TitleConfig;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
+import org.lockss.db.LockCountingDbManager;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
@@ -80,7 +81,7 @@ public class TestSubscriptionManager extends LockssTestCase {
   private PluginManager pluginManager;
   private SubscriptionManager subManager;
   private SubscriptionManagerSql subManagerSql;
-  private DbManager dbManager;
+  private LockCountingDbManager dbManager;
   private MetadataManager metadataManager;
   private RemoteApi remoteApi;
 
@@ -114,7 +115,8 @@ public class TestSubscriptionManager extends LockssTestCase {
     remoteApi = theDaemon.getRemoteApi();
     remoteApi.startService();
 
-    dbManager = getTestDbManager(tempDirPath);
+    dbManager = new LockCountingDbManager();
+    getTestDbManager(tempDirPath, dbManager);
 
     metadataManager = new MetadataManager();
     theDaemon.setMetadataManager(metadataManager);
@@ -1722,6 +1724,31 @@ public class TestSubscriptionManager extends LockssTestCase {
 	config.get(paramPrefix + "base_url"));
     assertEquals("false", config.get(paramPrefix + "pub_down"));
     assertEquals("param4value", config.get(paramPrefix + "param4key"));
+  }
+
+  /**
+   * Checks that determining the Total Subscription setting takes the metadata
+   * write lock. It find-or-creates the publisher used by that feature against
+   * the same metadata database that the reindexing task and the migration
+   * database copy write to.
+   *
+   * @throws Exception
+   */
+  public void testFindTotalSubscriptionTakesTheMetadataWriteLock()
+      throws Exception {
+    Connection conn = dbManager.getConnection();
+
+    try {
+      dbManager.resetMetadataWriteLockCount();
+
+      subManager.findTotalSubscription(conn);
+
+      assertEquals(1, dbManager.getMetadataWriteLockCount());
+      assertNotNull(dbManager.findPublisher(conn,
+	  SubscriptionManager.ALL_PUBLISHERS_NAME));
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
   }
 
   public void testBackupSubscriptions() throws Exception {

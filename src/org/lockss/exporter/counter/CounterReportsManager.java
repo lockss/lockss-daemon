@@ -505,6 +505,10 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
     boolean success = false;
 
     try {
+      // Serialize this metadata write transaction against all the other
+      // metadata writers before creating anything.
+      dbManager.lockMetadataWrite(conn);
+
       errorMessage = "Cannot get the identifier of the publisher used for the "
 	  + "aggregation of all title requests";
 
@@ -2967,6 +2971,10 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
 	    + "bookTypeAggregates.size() = " + bookTypeAggregates.size());
 
 	try {
+	  // Serialize this metadata write transaction against all the other
+	  // metadata writers before creating anything.
+	  dbManager.lockMetadataWrite(conn);
+
 	  // Load the book type aggregates.
 	  for (Map<String, String> bookTypeAggregate : bookTypeAggregates) {
 	    loadBookTypeAggregate(conn, bookTypeAggregate);
@@ -3003,6 +3011,10 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
 	    + "journalTypeAggregates.size() = " + journalTypeAggregates.size());
 
 	try {
+	  // Serialize this metadata write transaction against all the other
+	  // metadata writers before creating anything.
+	  dbManager.lockMetadataWrite(conn);
+
 	  // Load the journal type aggregates.
 	  for (Map<String, String> journalTypeAggregate
 	      : journalTypeAggregates) {
@@ -3043,6 +3055,10 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
 	    + journalPubYearAggregates.size());
 
 	try {
+	  // Serialize this metadata write transaction against all the other
+	  // metadata writers before creating anything.
+	  dbManager.lockMetadataWrite(conn);
+
 	  // Load the journal publication year aggregates.
 	  for (Map<String, String> journalPubYearAggregate
 	      : journalPubYearAggregates) {

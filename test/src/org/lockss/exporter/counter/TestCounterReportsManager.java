@@ -34,6 +34,7 @@ package org.lockss.exporter.counter;
 import java.io.PrintWriter;
 import org.lockss.daemon.Cron;
 import org.lockss.db.DbManager;
+import org.lockss.db.LockCountingDbManager;
 import org.lockss.exporter.counter.CounterReportsManager;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.test.ConfigurationUtil;
@@ -49,7 +50,7 @@ import org.lockss.util.IOUtil;
  */
 public class TestCounterReportsManager extends LockssTestCase {
   private MockLockssDaemon theDaemon;
-  private DbManager dbManager;
+  private LockCountingDbManager dbManager;
   private MetadataManager metadataManager;
   private CounterReportsManager counterReportsManager;
 
@@ -66,7 +67,8 @@ public class TestCounterReportsManager extends LockssTestCase {
     theDaemon = getMockLockssDaemon();
     theDaemon.setDaemonInited(true);
 
-    dbManager = getTestDbManager(tempDirPath);
+    dbManager = new LockCountingDbManager();
+    getTestDbManager(tempDirPath, dbManager);
 
     metadataManager = new MetadataManager();
     theDaemon.setMetadataManager(metadataManager);
@@ -88,6 +90,7 @@ public class TestCounterReportsManager extends LockssTestCase {
    */
   public void testAll() throws Exception {
     startService();
+    runTestStartServiceTakesTheMetadataWriteLock();
     runTestReady();
     runTestAllBooksAllJournalsTitles();
     runTestOutputDir();
@@ -100,6 +103,19 @@ public class TestCounterReportsManager extends LockssTestCase {
    * 
    * @throws Exception
    */
+  /**
+   * Tests that starting the service takes the metadata write lock before it
+   * creates the publisher and the publications used for the request totals.
+   * The COUNTER reports manager calls findOrCreateXxx() against the same
+   * metadata database that the reindexing task writes to, so those calls have
+   * to be serialized with it.
+   *
+   * @throws Exception
+   */
+  public void runTestStartServiceTakesTheMetadataWriteLock() throws Exception {
+    assertEquals(1, dbManager.getMetadataWriteLockCount());
+  }
+
   private void startService() throws Exception {
     counterReportsManager = new CounterReportsManager();
     theDaemon.setCounterReportsManager(counterReportsManager);
