@@ -407,7 +407,8 @@ public class AusApi {
       <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public okhttp3.Call getAllAuConfigCall(final ApiCallback _callback) throws ApiException {
+  public okhttp3.Call getAllAuConfigCall(Integer limit, String continuationToken,
+      final ApiCallback _callback) throws ApiException {
     String basePath = null;
 
     // Operation Servers
@@ -429,6 +430,13 @@ public class AusApi {
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    if (limit != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
+    }
+    if (continuationToken != null) {
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("continuationToken", continuationToken));
+    }
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
     Map<String, String> localVarCookieParams = new HashMap<String, String>();
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
@@ -455,16 +463,22 @@ public class AusApi {
   }
 
   @SuppressWarnings("rawtypes")
-  private okhttp3.Call getAllAuConfigValidateBeforeCall(final ApiCallback _callback)
-      throws ApiException {
-    okhttp3.Call localVarCall = getAllAuConfigCall(_callback);
+  private okhttp3.Call getAllAuConfigValidateBeforeCall(Integer limit,
+      String continuationToken, final ApiCallback _callback) throws ApiException {
+    okhttp3.Call localVarCall = getAllAuConfigCall(limit, continuationToken, _callback);
     return localVarCall;
   }
 
   /**
-   * Get the configurations of all AUs
-   * Get the configuration of all AUs
-   * @return List&lt;AuConfiguration&gt;
+   * Get the configurations of all AUs, one page at a time.  The service
+   * paginates this (laaws-configservice issue 569): request the first page
+   * with a null continuation token, the next with the token of the previous
+   * page's PageInfo, until that token is null.
+   * @param limit The requested maximum number of AU configurations per
+   *     response, or null for the service's default
+   * @param continuationToken The continuation token of the page to be
+   *     returned, or null for the first page
+   * @return AuConfigPageInfo
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    response body
    * @http.response.details
@@ -475,15 +489,16 @@ public class AusApi {
       <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public List<AuConfiguration> getAllAuConfig() throws ApiException {
-    ApiResponse<List<AuConfiguration>> localVarResp = getAllAuConfigWithHttpInfo();
+  public AuConfigPageInfo getAllAuConfig(Integer limit, String continuationToken)
+      throws ApiException {
+    ApiResponse<AuConfigPageInfo> localVarResp =
+        getAllAuConfigWithHttpInfo(limit, continuationToken);
     return localVarResp.getData();
   }
 
   /**
-   * Get the configurations of all AUs
-   * Get the configuration of all AUs
-   * @return ApiResponse&lt;List&lt;AuConfiguration&gt;&gt;
+   * Get a page of the configurations of all AUs
+   * @return ApiResponse&lt;AuConfigPageInfo&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    response body
    * @http.response.details
@@ -494,9 +509,11 @@ public class AusApi {
       <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public ApiResponse<List<AuConfiguration>> getAllAuConfigWithHttpInfo() throws ApiException {
-    okhttp3.Call localVarCall = getAllAuConfigValidateBeforeCall(null);
-    Type localVarReturnType = new TypeToken<List<AuConfiguration>>() {}.getType();
+  public ApiResponse<AuConfigPageInfo> getAllAuConfigWithHttpInfo(Integer limit,
+      String continuationToken) throws ApiException {
+    okhttp3.Call localVarCall =
+        getAllAuConfigValidateBeforeCall(limit, continuationToken, null);
+    Type localVarReturnType = new TypeToken<AuConfigPageInfo>() {}.getType();
     return apiClient.execute(localVarCall, localVarReturnType);
   }
 
@@ -514,10 +531,11 @@ public class AusApi {
       <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public okhttp3.Call getAllAuConfigAsync(final ApiCallback<List<AuConfiguration>> _callback)
-      throws ApiException {
-    okhttp3.Call localVarCall = getAllAuConfigValidateBeforeCall(_callback);
-    Type localVarReturnType = new TypeToken<List<AuConfiguration>>() {}.getType();
+  public okhttp3.Call getAllAuConfigAsync(Integer limit, String continuationToken,
+      final ApiCallback<AuConfigPageInfo> _callback) throws ApiException {
+    okhttp3.Call localVarCall =
+        getAllAuConfigValidateBeforeCall(limit, continuationToken, _callback);
+    Type localVarReturnType = new TypeToken<AuConfigPageInfo>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;
   }
