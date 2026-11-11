@@ -29,6 +29,7 @@
       au < zapped ; finished ; 2024 ; 98 Book Source Content 2024_01 ; 2024_01 >
       au < zapped ; finished ; 2025 ; 98 Book Source Content 2025_01 ; 2025_01 >
       au < readySource ; crawling ; 2026 ; 98 Book Source Content 2026_01 ; 2026_01 >
+      au < expected ; exists ; 2027 ; 98 Book Source Content 2027_01 ; 2027_01 >
 
     }
   }
@@ -53,6 +54,7 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/eastview-released/
 
       au < expected ; exists ; 2026 ; 98 Journal Source Content 2026_01 ; 2026_01 >
+      au < expected ; exists ; 2027 ; 98 Journal Source Content 2027_01 ; 2027_01 >
 
     }
   }
@@ -73,6 +75,7 @@
         au < zapped ; finished ; 2024 ; 98 UDB Source Content 2024_04 ; 2024_04 >
         au < zapped ; finished ; 2024 ; 98 UDB Source Content 2024_05 ; 2024_05 >
         au < zapped ; finished ; 2024 ; 98 UDB Source Content 2024_06 ; 2024_06 >
+      #No more AUs. One-time deposit.
       }
     }
 
@@ -88,6 +91,7 @@
 
         au < readySource ; finished ; 2025 ; 98 Database Source Content 2025_01 ; 2025_01 >
         au < expected ; exists ; 2026 ; 98 Database Source Content 2026_01 ; 2026_01 >
+        au < expected ; exists ; 2027 ; 98 Database Source Content 2027_01 ; 2027_01 >
 
     }
 

@@ -77,6 +77,12 @@
          au < doNotProcess ; exists ; 2026 ; Association for Computing Machinery Source Content 2026_07 ; 2026_07 >
          au < doNotProcess ; exists ; 2026 ; Association for Computing Machinery Source Content 2026_08 ; 2026_08 >
 
+         au < doNotProcess ; exists ; 2027 ; Association for Computing Machinery Source Content 2027_01 ; 2027_01 >
+         au < doNotProcess ; exists ; 2027 ; Association for Computing Machinery Source Content 2027_02 ; 2027_02 >
+         au < doNotProcess ; exists ; 2027 ; Association for Computing Machinery Source Content 2027_03 ; 2027_03 >
+         au < doNotProcess ; exists ; 2027 ; Association for Computing Machinery Source Content 2027_04 ; 2027_04 >
+         au < doNotProcess ; exists ; 2027 ; Association for Computing Machinery Source Content 2027_05 ; 2027_05 >
+
          #ACM delivers content in big batches, so AUs should never be added to clockss without review
        }
     }

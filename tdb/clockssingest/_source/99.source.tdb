@@ -19,6 +19,7 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/XXXXX-released/
 
       au < expected ; exists ; 2026 ; 99 Book Source Content 2026_01 ; 2026_01 >
+      au < expected ; exists ; 2027 ; 99 Book Source Content 2027_01 ; 2027_01 >
 
     }
   }
@@ -33,6 +34,7 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/XXXXX-released/
 
       au < expected ; exists ; 2026 ; 99 Journal Source Content 2026_01 ; 2026_01 >
+      au < expected ; exists ; 2027 ; 99 Journal Source Content 2027_01 ; 2027_01 >
 
     }
   }
