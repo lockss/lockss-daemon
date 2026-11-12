@@ -1780,11 +1780,14 @@ while (my $line = <>) {
         sleep(4);
 
 #PubFactory Journals GLN
-  } elsif (($plugin eq "BerghahnJournalsPlugin")   ||
+                    #/view/journals/jgme/1/2/jgme.1.issue-2.xml
+                    #https://jgme.kglmeridian.com/view/journals/jgme/1/2/jgme.1.issue-2.xml
+  } elsif (($plugin eq "BerghahnJournalsPlugin")    ||
            #($plugin eq "PubFactoryJournalsPlugin") ||
-           ($plugin eq "AjtmhPlugin")              ||
-           ($plugin eq "AMetSoc2021Plugin")        ||
-           ($plugin eq "BioscientificaPlugin")     ||
+           ($plugin eq "ACGMEJournalsPlugin")       ||
+           ($plugin eq "AjtmhPlugin")               ||
+           ($plugin eq "AMetSoc2021Plugin")         ||
+           ($plugin eq "BioscientificaPlugin")      ||
            ($plugin eq "ManchesterUniversityPressPlugin")) {
       $url = sprintf("%slockss-manifest/journal/%s/%s",
       $param{base_url}, $param{journal_id}, $param{volume_name});
@@ -1796,7 +1799,7 @@ while (my $line = <>) {
           if ($req->url ne $resp->request->uri) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
-          } elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) &&
+          } elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/i) &&
                   ($man_contents =~ m/\/journals\/$param{journal_id}\/$param{volume_name}\//))) {
               if ($man_contents =~ m/<h1>\s*(.*) LOCKSS Manifest Page\s*<\/h1>/si) {
                   $vol_title = $1;
@@ -1817,6 +1820,7 @@ while (my $line = <>) {
 
 #PubFactory Journals CLOCKSS
   } elsif (($plugin eq "ClockssBerghahnJournalsPlugin") ||
+           ($plugin eq "ClockssACGMEJournalsPlugin")    ||
            ($plugin eq "ClockssAjtmhPlugin")            ||
            ($plugin eq "ClockssAVMAJournalsPlugin")     ||
            ($plugin eq "ClockssAPMAJournalsPlugin")     ||
