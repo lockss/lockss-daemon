@@ -19,6 +19,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/bmpublisher-released/
 
     au < readySource ; crawling ; 2026 ; BM-Publisher Ltd Source Content 2026_01 ; 2026_01 >
+    au < expected ; exists ; 2027 ; BM-Publisher Ltd Source Content 2027_01 ; 2027_01 >
 
 
   }
