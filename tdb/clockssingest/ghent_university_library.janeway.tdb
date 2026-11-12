@@ -1761,6 +1761,7 @@
 
       #published 1998-present
       param[journal_id] = em
+      #No content for 2011. See https://www.ethiekenmaatschappij.ugent.be/archief
 
       au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Ethiek & Maatschappij Volume 1998 ; >
       au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Ethiek & Maatschappij Volume 1999 ; >
@@ -1775,7 +1776,7 @@
       au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Ethiek & Maatschappij Volume 2008 ; >
       au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Ethiek & Maatschappij Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Ethiek & Maatschappij Volume 2010 ; >
-      au < exists ; exists ; 2011 ; 2011 ; 2011 ; Ethiek & Maatschappij Volume 2011 ; >
+      au < doesNotExist ; doesNotExist ; 2011 ; 2011 ; 2011 ; Ethiek & Maatschappij Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Ethiek & Maatschappij Volume 2012 ; >
       au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Ethiek & Maatschappij Volume 2013 ; >
       au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Ethiek & Maatschappij Volume 2014 ; >
