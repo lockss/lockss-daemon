@@ -1138,6 +1138,10 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	getLastPeriodbyProvider(sortedTdbAus);
 
     try {
+      // Serialize this metadata write transaction against all the other
+      // metadata writers before creating anything.
+      dbManager.lockMetadataWrite(conn);
+
       // Find the publisher in the database or create it.
       Long publisherSeq = dbManager.findOrCreatePublisher(conn, publisher);
       if (log.isDebug3())
@@ -2419,6 +2423,10 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "publisherSubscription = "
 	+ publisherSubscription);
 
+    // Serialize this metadata write transaction against all the other metadata
+    // writers before creating anything.
+    dbManager.lockMetadataWrite(conn);
+
     Long publisherSeq = dbManager.findOrCreatePublisher(conn,
 	publisherSubscription.getPublisher().getPublisherName());
     if (log.isDebug3())
@@ -2480,6 +2488,10 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     SerialPublication publication = subscription.getPublication();
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "publication = " + publication);
+
+    // Serialize this metadata write transaction against all the other metadata
+    // writers before creating anything.
+    dbManager.lockMetadataWrite(conn);
 
     // Find the publisher in the database or create it.
     Long publisherSeq =
@@ -4050,6 +4062,10 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     String errorMessage = "Cannot get the identifier of the publisher used for "
 	+ "the Total Subscription feature";
+
+    // Serialize this metadata write transaction against all the other metadata
+    // writers before creating anything.
+    dbManager.lockMetadataWrite(conn);
 
     Long publisherSeq =
 	dbManager.findOrCreatePublisher(conn, ALL_PUBLISHERS_NAME);

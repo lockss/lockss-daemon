@@ -2108,6 +2108,22 @@ public class LockssTestCase extends TestCase {
    *         previously created.
    */
   protected DbManager getTestDbManager(String tempDirPath) {
+    // Create the database manager skipping the asynchronous updates.
+    return getTestDbManager(tempDirPath, new DbManager(true));
+  }
+
+  /**
+   * Provides a started database manager for a test, using the supplied
+   * instance, so that a test can install a DbManager subclass (for instance
+   * one that counts calls) and still get the standard test database.
+   *
+   * @param tempDirPath
+   *          A String with the path to the temporary directory.
+   * @param dbManager
+   *          A DbManager with the instance to initialize and start.
+   * @return the started DbManager.
+   */
+  protected DbManager getTestDbManager(String tempDirPath, DbManager dbManager) {
     // Set the database log.
     System.setProperty("derby.stream.error.file",
 	new File(tempDirPath, "derby.log").getAbsolutePath());
@@ -2121,8 +2137,6 @@ public class LockssTestCase extends TestCase {
 	  e);
     }
 
-    // Create the database manager skipping the asynchronous updates.
-    DbManager dbManager = new DbManager(true);
     mockDaemon.setDbManager(dbManager);
     dbManager.initService(mockDaemon);
     dbManager.startService();
