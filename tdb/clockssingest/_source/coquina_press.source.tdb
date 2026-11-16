@@ -2,7 +2,7 @@
   publisher <
     name = Coquina Press ;
     info[contract] = 2013 ;
-    info[tester] = S ;
+    info[tester] = 4 ;
     info[platform] = WARC
   >
     hidden[proxy] = DIRECT
@@ -31,7 +31,7 @@
     {
     param[base_url] = https://clockss-ingest.lockss.org/warcfiles/palaeontologia-electronica-released/
 
-    au < expected ; exists ; 2026 ; Palaeontologia Electronica WARC Content 2026 ; 2026 >
+    au < testing ; exists ; 2026 ; Palaeontologia Electronica WARC Content 2026 ; 2026 >
     au < expected ; exists ; 2027 ; Palaeontologia Electronica WARC Content 2027 ; 2027 >
 
     }
