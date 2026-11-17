@@ -4,7 +4,7 @@
     name = Nepal Medical Association ;
     info[contract] = 2026 ;
     info[back] = 2026 ;
-    info[tester] = 5 ;
+    info[tester] = 4 ;
     info[platform] = OJS3. Open Journal Systems 3.3.0.7
   >
 
@@ -30,7 +30,7 @@
       au < doesNotExist ; doesNotExist ; 1966 ; Journal of Nepal Medical Association Volume 4 ; 4 ; 1966 ; >
       au < manifest ; exists ; 1967 ; Journal of Nepal Medical Association Volume 5 ; 5 ; 1967 ; >
       au < manifest ; exists ; 1968 ; Journal of Nepal Medical Association Volume 6 ; 6 ; 1968 ; >
-      au < manifest ; exists ; 1969 ; Journal of Nepal Medical Association Volume 7 ; 7 ; 1969 ; >
+      au < testing ; exists ; 1969 ; Journal of Nepal Medical Association Volume 7 ; 7 ; 1969 ; >
       au < manifest ; exists ; 1970 ; Journal of Nepal Medical Association Volume 8 ; 8 ; 1970 ; >
       au < manifest ; exists ; 1971 ; Journal of Nepal Medical Association Volume 9 ; 9 ; 1971 ; >
       au < manifest ; exists ; 1972 ; Journal of Nepal Medical Association Volume 10 ; 10 ; 1972 ; >
@@ -39,7 +39,7 @@
       au < manifest ; exists ; 1975 ; Journal of Nepal Medical Association Volume 13 ; 13 ; 1975 ; >
       au < doesNotExist ; doesNotExist ; 1976 ; Journal of Nepal Medical Association Volume 14 ; 14 ; 1976 ; >
       au < manifest ; exists ; 1977 ; Journal of Nepal Medical Association Volume 15 ; 15 ; 1977 ; >
-      au < manifest ; exists ; 1978 ; Journal of Nepal Medical Association Volume 16 ; 16 ; 1978 ; >
+      au < testing ; exists ; 1978 ; Journal of Nepal Medical Association Volume 16 ; 16 ; 1978 ; >
       au < manifest ; exists ; 1979 ; Journal of Nepal Medical Association Volume 17 ; 17 ; 1979 ; >
       au < doesNotExist ; doesNotExist ; 1980 ; Journal of Nepal Medical Association Volume 18 ; 18 ; 1980 ; >
       au < manifest ; exists ; 1981 ; Journal of Nepal Medical Association Volume 19 ; 19 ; 1981 ; >
