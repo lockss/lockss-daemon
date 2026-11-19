@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>62</string>
+    <string>63</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -56,7 +56,7 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
       <entry>
         <string>Substance</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
     </map>
   </entry>
@@ -151,7 +151,9 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_substance_url_pattern</string>
       <list>
-        <string>"^https?://%s%sarticles/[^/?]+/files/[^?]+\.(xml|pdf|html)$",url_host(base_url), url_path(base_url)</string>
+        <!--Note that some AUs only have pdfs but these pdfs redirect to storage.googleapis URLs. The substnace checker only checks
+            the final URL in a redirect chain so that must be included in the substance url pattern. -->
+        <string>"(^https?://%s%sarticles/[^/?]+/files/[^?]+\.(xml|pdf|html)|^https://storage\.googleapis\.com/.*files/journals/[^/]/articles/.*\.pdf)$",url_host(base_url), url_path(base_url)</string>
       </list>
   </entry>
   <entry>
