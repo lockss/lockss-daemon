@@ -18,6 +18,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/euclidprime-released/
 
     au < readySource ; crawling ; 2026 ; Euclid Prime Journals Source Countent 2026_01 ; 2026_01 >
+    au < expected ; exists ; 2027 ; Euclid Prime Journals Source Countent 2027_01 ; 2027_01 >
 
     }
   }
