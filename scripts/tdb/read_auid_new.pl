@@ -1259,6 +1259,9 @@ while (my $line = <>) {
         } elsif (uri_unescape($param{base_url}) =~ m/emiratesscholar/) {
             $url = sprintf("%sdirectory/index.php/%s/issue/archive",
             $param{base_url}, $param{journal_id});
+        } elsif (uri_unescape($param{base_url}) =~ m/jimf-bi.org/) {
+            $url = sprintf("%s%s/gateway/clockss?year=%d",
+            $param{base_url}, $param{journal_id}, $param{year});
         } elsif (uri_unescape($param{base_url}) =~ m/tcsuckhoelaohoa/) {
             $url = sprintf("%s%s/gateway/clockss?year=%d",
             $param{base_url}, $param{journal_id}, $param{year});
