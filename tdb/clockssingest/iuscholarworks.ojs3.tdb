@@ -43,9 +43,9 @@
       #Missing years: 1970-1972
       param[journal_id] = iusbanalecta
 
-      au < frozen ; exists ; 1965 ; 1965 ; Realm Volume 1965 ; 1965 ; >
-      au < frozen ; exists ; 1966 ; 1966 ; Realm Volume 1966 ; 1966 ; >
-      au < frozen ; exists ; 1967 ; 1967 ; Realm Volume 1967 ; 1967 ; >
+      au < finished ; manifest ; 1965 ; 1965 ; Realm Volume 1965 ; 1965 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1966 ; 1966 ; Realm Volume 1966 ; 1966 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1967 ; 1967 ; Realm Volume 1967 ; 1967 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 1968 ; 1968 ; Analecta Volume 1968 ; 1968 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 1969 ; 1969 ; Analecta Volume 1969 ; 1969 ; reingest1.clockss.org:8082 >
 
@@ -138,7 +138,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Anthropology of East Europe Review Volume 33 ; 33 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Anthropology of East Europe Review Volume 34 ; 34 ; >
       au < finished ; finished ; 2017 ; 2017 ; Anthropology of East Europe Review Volume 35 ; 35 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2019 ; 2019 ; Anthropology of East Europe Review Volume 36 ; 36 ; >
+      au < finished ; manifest ; 2019 ; 2019 ; Anthropology of East Europe Review Volume 36 ; 36 ; reingest1.clockss.org:8082 >
       #no more published
 
   }
@@ -152,10 +152,10 @@
       param[journal_id] = bbsr
       #published 1958-2010
 
-      au < frozen ; exists ; 1958 ; 1958 ; Bulletin Bibliographique de la Société Rencesvals Volume 1 ; 1 ; >
-      au < frozen ; exists ; 1960 ; 1960 ; Bulletin Bibliographique de la Société Rencesvals Volume 2 ; 2 ; >
-      au < frozen ; exists ; 1963 ; 1963 ; Bulletin Bibliographique de la Société Rencesvals Volume 3 ; 3 ; >
-      au < frozen ; exists ; 1967 ; 1967 ; Bulletin Bibliographique de la Société Rencesvals Volume 4 ; 4 ; >
+      au < finished ; manifest ; 1958 ; 1958 ; Bulletin Bibliographique de la Société Rencesvals Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1960 ; 1960 ; Bulletin Bibliographique de la Société Rencesvals Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1963 ; 1963 ; Bulletin Bibliographique de la Société Rencesvals Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1967 ; 1967 ; Bulletin Bibliographique de la Société Rencesvals Volume 4 ; 4 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 1970 ; 1970 ; Bulletin Bibliographique de la Société Rencesvals Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 1971 ; 1971 ; Bulletin Bibliographique de la Société Rencesvals Volume 6 ; 6 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 1972 ; 1972 ; Bulletin Bibliographique de la Société Rencesvals Volume 7 ; 7 ; reingest2.clockss.org:8085 >
@@ -301,16 +301,16 @@
       param[journal_id] = digest
       #Still in publication 2021
 
-      au < frozen ; exists ; 2012 ; 2012 ; Digest: A Journal of Foodways and Culture Volume 1 ; 1 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; Digest: A Journal of Foodways and Culture Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; Digest: A Journal of Foodways and Culture Volume 2-3 ; 2-3 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; Digest: A Journal of Foodways and Culture Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Digest: A Journal of Foodways and Culture Volume 5 ; 5 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Digest: A Journal of Foodways and Culture Volume 6 ; 6 ; >
+      au < finished ; manifest ; 2012 ; 2012 ; Digest: A Journal of Foodways and Culture Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; Digest: A Journal of Foodways and Culture Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2014 ; 2014 ; Digest: A Journal of Foodways and Culture Volume 2-3 ; 2-3 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2015 ; 2015 ; Digest: A Journal of Foodways and Culture Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; Digest: A Journal of Foodways and Culture Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Digest: A Journal of Foodways and Culture Volume 6 ; 6 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 2019 ; Digest: A Journal of Foodways and Culture Volume 7 No 1; 7 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2020 ; 2020 ; Digest: A Journal of Foodways and Culture Volume 7 No 2; 7 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2021 ; 2021 ; Digest: A Journal of Foodways and Culture Volume 8 ; 8 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2022 ; 2022 ; Digest: A Journal of Foodways and Culture Volume 9 ; 9 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Digest: A Journal of Foodways and Culture Volume 9 ; 9 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; 2023 ; Digest: A Journal of Foodways and Culture Volume 10 ; 10 ; reingest5.clockss.org:8082 >
 
   }
@@ -357,9 +357,9 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Hindsight: Journal of Optemetry History Volume 48 ; 48 ; >
       au < finished ; finished ; 2018 ; 2018 ; Hindsight: Journal of Optemetry History Volume 49 ; 49 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2019 ; 2019 ; Hindsight: Journal of Optemetry History Volume 50 ; 50 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2020 ; 2020 ; Hindsight: Journal of Optemetry History Volume 51 ; 51 ; >
+      au < finished ; manifest ; 2020 ; 2020 ; Hindsight: Journal of Optemetry History Volume 51 ; 51 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2021 ; 2021 ; Hindsight: Journal of Optemetry History Volume 52 ; 52 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2022 ; 2022 ; Hindsight: Journal of Optemetry History Volume 53 ; 53 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Hindsight: Journal of Optemetry History Volume 53 ; 53 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Hindsight: Journal of Optemetry History Volume 54 ; 54 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Hindsight: Journal of Optemetry History Volume 55 ; 55 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Hindsight: Journal of Optemetry History Volume 56 ; 56 ; >
@@ -432,12 +432,12 @@
       au < finished ; finished ; 2017 ; 2017 ; The Hoosier Science Teacher Volume 40 ; 40 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018 ; 2018 ; The Hoosier Science Teacher Volume 41 ; 41 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2019 ; 2019 ; The Hoosier Science Teacher Volume 42 ; 42 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; 2020 ; The Hoosier Science Teacher Volume 43 ; 43 ; >
+      au < finished ; manifest ; 2020 ; 2020 ; The Hoosier Science Teacher Volume 43 ; 43 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2021 ; 2021 ; The Hoosier Science Teacher Volume 44 ; 44 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2022 ; 2022 ; The Hoosier Science Teacher Volume 45 ; 45 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; The Hoosier Science Teacher Volume 45 ; 45 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; The Hoosier Science Teacher Volume 46 ; 46 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; The Hoosier Science Teacher Volume 47 ; 47 ; >
-      au < frozen ; exists ; 2025 ; 2025 ; The Hoosier Science Teacher Volume 48 ; 48 ; >
+      au < finished ; manifest ; 2025 ; 2025 ; The Hoosier Science Teacher Volume 48 ; 48 ; reingest2.clockss.org:8085 >
       au < expected ; exists ; 2026 ; 2026 ; The Hoosier Science Teacher Volume 49 ; 49 ; >
 
   }
@@ -510,9 +510,9 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; InULA Notes: Indiana University Librarians Association Volume 29 ; 29 ; >
       au < finished ; finished ; 2018 ; 2018 ; InULA Notes: Indiana University Librarians Association Volume 30 ; 30 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2019 ; 2019 ; InULA Notes: Indiana University Librarians Association Volume 31 ; 31 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; 2020 ; InULA Notes: Indiana University Librarians Association Volume 32 ; 32 ; >
+      au < finished ; manifest ; 2020 ; 2020 ; InULA Notes: Indiana University Librarians Association Volume 32 ; 32 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; 2021 ; InULA Notes: Indiana University Librarians Association Volume 33 ; 33 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2022 ; 2022 ; InULA Notes: Indiana University Librarians Association Volume 34 ; 34 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; InULA Notes: Indiana University Librarians Association Volume 34 ; 34 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; InULA Notes: Indiana University Librarians Association Volume 35 ; 35 ; >
       au < finished ; manifest ; 2024 ; 2024 ; InULA Notes: Indiana University Librarians Association Volume 36 ; 36 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2025 ; 2025 ; InULA Notes: Indiana University Librarians Association Volume 37 ; 37 ; >
@@ -578,7 +578,7 @@
 
       au < finished ; finished ; 2016 ; 2016 ; Journal of Economic Development in Higher Education Volume 1 ; 1 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; 2019 ; Journal of Economic Development in Higher Education Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; 2020 ; Journal of Economic Development in Higher Education Volume 3 ; 3 ; >
+      au < finished ; manifest ; 2020 ; 2020 ; Journal of Economic Development in Higher Education Volume 3 ; 3 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -717,7 +717,7 @@
       au < finished ; finished ; 2019 ; 2019 ; Journal of the Indiana University Student Personnel Association Volume 2019 ; 2019 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; 2020 ; Journal of the Indiana University Student Personnel Association Volume 2020 ; 2020 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2021 ; 2021 ; Journal of the Indiana University Student Personnel Association Volume 2021 ; 2021 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2022 ; 2022 ; Journal of the Indiana University Student Personnel Association Volume 2022 ; 2022 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Journal of the Indiana University Student Personnel Association Volume 2022 ; 2022 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Journal of the Indiana University Student Personnel Association Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of the Indiana University Student Personnel Association Volume 2024 ; 2024 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Journal of the Indiana University Student Personnel Association Volume 2025 ; 2025 ; >
@@ -767,7 +767,7 @@
 
       au < finished ; finished ; 2017 ; 2017 ; Journal of Student Research at Indiana University East Volume 1 (2017) ; 1 ; reingest4.clockss.org:8082 >
       #no 2018
-      au < frozen ; exists ; 2019 ; 2019 ; Journal of Student Research at Indiana University East Volume 1 (2019) ; 1 ; >
+      au < finished ; manifest ; 2019 ; 2019 ; Journal of Student Research at Indiana University East Volume 1 (2019) ; 1 ; reingest1.clockss.org:8082 >
       #no 2020 as of 12/5/2020
   }
 
@@ -826,9 +826,9 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Museum Anthropology Review Volume 11 ; 11 ; >
       au < finished ; finished ; 2018 ; 2018 ; Museum Anthropology Review Volume 12 ; 12 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; 2019 ; Museum Anthropology Review Volume 13 ; 13 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2020 ; 2020 ; Museum Anthropology Review Volume 14 ; 14 ; >
+      au < finished ; manifest ; 2020 ; 2020 ; Museum Anthropology Review Volume 14 ; 14 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2021 ; 2021 ; Museum Anthropology Review Volume 15 ; 15 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2022 ; 2022 ; Museum Anthropology Review Volume 16 ; 16 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Museum Anthropology Review Volume 16 ; 16 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Museum Anthropology Review Volume 17 ; 17 ; >
 
   }
@@ -912,69 +912,69 @@
 
       param[journal_id] = imh
 
-      au < frozen ; exists ; 1905 ; 1905 ; Indiana Magazine of History Volume 1905 ; 1 ; >
-      au < frozen ; exists ; 1906 ; 1906 ; Indiana Magazine of History Volume 1906 ; 2 ; >
-      au < frozen ; exists ; 1907 ; 1907 ; Indiana Magazine of History Volume 1907 ; 3 ; >
-      au < frozen ; exists ; 1908 ; 1908 ; Indiana Magazine of History Volume 1908 ; 4 ; >
-      au < frozen ; exists ; 1909 ; 1909 ; Indiana Magazine of History Volume 1909 ; 5 ; >
-      au < frozen ; exists ; 1910 ; 1910 ; Indiana Magazine of History Volume 1910 ; 6 ; >
-      au < frozen ; exists ; 1911 ; 1911 ; Indiana Magazine of History Volume 1911 ; 7 ; >
-      au < frozen ; exists ; 1912 ; 1912 ; Indiana Magazine of History Volume 1912 ; 8 ; >
-      au < frozen ; exists ; 1913 ; 1913 ; Indiana Magazine of History Volume 1913 ; 9 ; >
-      au < frozen ; exists ; 1914 ; 1914 ; Indiana Magazine of History Volume 1914 ; 10 ; >
-      au < frozen ; exists ; 1915 ; 1915 ; Indiana Magazine of History Volume 1915 ; 11 ; >
-      au < frozen ; exists ; 1916 ; 1916 ; Indiana Magazine of History Volume 1916 ; 12 ; >
-      au < frozen ; exists ; 1917 ; 1917 ; Indiana Magazine of History Volume 1917 ; 13 ; >
-      au < frozen ; exists ; 1918 ; 1918 ; Indiana Magazine of History Volume 1918 ; 14 ; >
-      au < frozen ; exists ; 1919 ; 1919 ; Indiana Magazine of History Volume 1919 ; 15 ; >
-      au < frozen ; exists ; 1920 ; 1920 ; Indiana Magazine of History Volume 1920 ; 16 ; >
-      au < frozen ; exists ; 1921 ; 1921 ; Indiana Magazine of History Volume 1921 ; 17 ; >
-      au < frozen ; exists ; 1922 ; 1922 ; Indiana Magazine of History Volume 1922 ; 18 ; >
-      au < frozen ; exists ; 1923 ; 1923 ; Indiana Magazine of History Volume 1923 ; 19 ; >
-      au < frozen ; exists ; 1924 ; 1924 ; Indiana Magazine of History Volume 1924 ; 20 ; >
-      au < frozen ; exists ; 1925 ; 1925 ; Indiana Magazine of History Volume 1925 ; 21 ; >
-      au < frozen ; exists ; 1926 ; 1926 ; Indiana Magazine of History Volume 1926 ; 22 ; >
-      au < frozen ; exists ; 1927 ; 1927 ; Indiana Magazine of History Volume 1927 ; 23 ; >
-      au < frozen ; exists ; 1928 ; 1928 ; Indiana Magazine of History Volume 1928 ; 24 ; >
-      au < frozen ; exists ; 1929 ; 1929 ; Indiana Magazine of History Volume 1929 ; 25 ; >
-      au < frozen ; exists ; 1930 ; 1930 ; Indiana Magazine of History Volume 1930 ; 26 ; >
-      au < frozen ; exists ; 1931 ; 1931 ; Indiana Magazine of History Volume 1931 ; 27 ; >
-      au < frozen ; exists ; 1932 ; 1932 ; Indiana Magazine of History Volume 1932 ; 28 ; >
-      au < frozen ; exists ; 1933 ; 1933 ; Indiana Magazine of History Volume 1933 ; 29 ; >
-      au < frozen ; exists ; 1934 ; 1934 ; Indiana Magazine of History Volume 1934 ; 30 ; >
-      au < frozen ; exists ; 1935 ; 1935 ; Indiana Magazine of History Volume 1935 ; 31 ; >
-      au < frozen ; exists ; 1936 ; 1936 ; Indiana Magazine of History Volume 1936 ; 32 ; >
-      au < frozen ; exists ; 1937 ; 1937 ; Indiana Magazine of History Volume 1937 ; 33 ; >
-      au < frozen ; exists ; 1938 ; 1938 ; Indiana Magazine of History Volume 1938 ; 34 ; >
-      au < frozen ; exists ; 1939 ; 1939 ; Indiana Magazine of History Volume 1939 ; 35 ; >
-      au < frozen ; exists ; 1940 ; 1940 ; Indiana Magazine of History Volume 1940 ; 36 ; >
-      au < frozen ; exists ; 1941 ; 1941 ; Indiana Magazine of History Volume 1941 ; 37 ; >
-      au < frozen ; exists ; 1942 ; 1942 ; Indiana Magazine of History Volume 1942 ; 38 ; >
-      au < frozen ; exists ; 1943 ; 1943 ; Indiana Magazine of History Volume 1943 ; 39 ; >
-      au < frozen ; exists ; 1944 ; 1944 ; Indiana Magazine of History Volume 1944 ; 40 ; >
-      au < frozen ; exists ; 1945 ; 1945 ; Indiana Magazine of History Volume 1945 ; 41 ; >
-      au < frozen ; exists ; 1946 ; 1946 ; Indiana Magazine of History Volume 1946 ; 42 ; >
-      au < frozen ; exists ; 1947 ; 1947 ; Indiana Magazine of History Volume 1947 ; 43 ; >
-      au < frozen ; exists ; 1948 ; 1948 ; Indiana Magazine of History Volume 1948 ; 44 ; >
-      au < frozen ; exists ; 1949 ; 1949 ; Indiana Magazine of History Volume 1949 ; 45 ; >
-      au < frozen ; exists ; 1950 ; 1950 ; Indiana Magazine of History Volume 1950 ; 46 ; >
-      au < frozen ; exists ; 1951 ; 1951 ; Indiana Magazine of History Volume 1951 ; 47 ; >
-      au < frozen ; exists ; 1952 ; 1952 ; Indiana Magazine of History Volume 1952 ; 48 ; >
-      au < frozen ; exists ; 1953 ; 1953 ; Indiana Magazine of History Volume 1953 ; 49 ; >
-      au < frozen ; exists ; 1954 ; 1954 ; Indiana Magazine of History Volume 1954 ; 50 ; >
-      au < frozen ; exists ; 1955 ; 1955 ; Indiana Magazine of History Volume 1955 ; 51 ; >
-      au < frozen ; exists ; 1956 ; 1956 ; Indiana Magazine of History Volume 1956 ; 52 ; >
-      au < frozen ; exists ; 1957 ; 1957 ; Indiana Magazine of History Volume 1957 ; 53 ; >
-      au < frozen ; exists ; 1958 ; 1958 ; Indiana Magazine of History Volume 1958 ; 54 ; >
-      au < frozen ; exists ; 1959 ; 1959 ; Indiana Magazine of History Volume 1959 ; 55 ; >
-      au < frozen ; exists ; 1960 ; 1960 ; Indiana Magazine of History Volume 1960 ; 56 ; >
-      au < frozen ; exists ; 1961 ; 1961 ; Indiana Magazine of History Volume 1961 ; 57 ; >
-      au < frozen ; exists ; 1962 ; 1962 ; Indiana Magazine of History Volume 1962 ; 58 ; >
-      au < frozen ; exists ; 1963 ; 1963 ; Indiana Magazine of History Volume 1963 ; 59 ; >
-      au < frozen ; exists ; 1964 ; 1964 ; Indiana Magazine of History Volume 1964 ; 60 ; >
-      au < frozen ; exists ; 1965 ; 1965 ; Indiana Magazine of History Volume 1965 ; 61 ; >
-      au < frozen ; exists ; 1966 ; 1966 ; Indiana Magazine of History Volume 1966 ; 62 ; >
-      au < frozen ; exists ; 1967 ; 1967 ; Indiana Magazine of History Volume 1967 ; 63 ; >
+      au < finished ; manifest ; 1905 ; 1905 ; Indiana Magazine of History Volume 1905 ; 1 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1906 ; 1906 ; Indiana Magazine of History Volume 1906 ; 2 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1907 ; 1907 ; Indiana Magazine of History Volume 1907 ; 3 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1908 ; 1908 ; Indiana Magazine of History Volume 1908 ; 4 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1909 ; 1909 ; Indiana Magazine of History Volume 1909 ; 5 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1910 ; 1910 ; Indiana Magazine of History Volume 1910 ; 6 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1911 ; 1911 ; Indiana Magazine of History Volume 1911 ; 7 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1912 ; 1912 ; Indiana Magazine of History Volume 1912 ; 8 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1913 ; 1913 ; Indiana Magazine of History Volume 1913 ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1914 ; 1914 ; Indiana Magazine of History Volume 1914 ; 10 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1915 ; 1915 ; Indiana Magazine of History Volume 1915 ; 11 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1916 ; 1916 ; Indiana Magazine of History Volume 1916 ; 12 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1917 ; 1917 ; Indiana Magazine of History Volume 1917 ; 13 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1918 ; 1918 ; Indiana Magazine of History Volume 1918 ; 14 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1919 ; 1919 ; Indiana Magazine of History Volume 1919 ; 15 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1920 ; 1920 ; Indiana Magazine of History Volume 1920 ; 16 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1921 ; 1921 ; Indiana Magazine of History Volume 1921 ; 17 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1922 ; 1922 ; Indiana Magazine of History Volume 1922 ; 18 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1923 ; 1923 ; Indiana Magazine of History Volume 1923 ; 19 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1924 ; 1924 ; Indiana Magazine of History Volume 1924 ; 20 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1925 ; 1925 ; Indiana Magazine of History Volume 1925 ; 21 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1926 ; 1926 ; Indiana Magazine of History Volume 1926 ; 22 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1927 ; 1927 ; Indiana Magazine of History Volume 1927 ; 23 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1928 ; 1928 ; Indiana Magazine of History Volume 1928 ; 24 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1929 ; 1929 ; Indiana Magazine of History Volume 1929 ; 25 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1930 ; 1930 ; Indiana Magazine of History Volume 1930 ; 26 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1931 ; 1931 ; Indiana Magazine of History Volume 1931 ; 27 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1932 ; 1932 ; Indiana Magazine of History Volume 1932 ; 28 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1933 ; 1933 ; Indiana Magazine of History Volume 1933 ; 29 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1934 ; 1934 ; Indiana Magazine of History Volume 1934 ; 30 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1935 ; 1935 ; Indiana Magazine of History Volume 1935 ; 31 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1936 ; 1936 ; Indiana Magazine of History Volume 1936 ; 32 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1937 ; 1937 ; Indiana Magazine of History Volume 1937 ; 33 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1938 ; 1938 ; Indiana Magazine of History Volume 1938 ; 34 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1939 ; 1939 ; Indiana Magazine of History Volume 1939 ; 35 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1940 ; 1940 ; Indiana Magazine of History Volume 1940 ; 36 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1941 ; 1941 ; Indiana Magazine of History Volume 1941 ; 37 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1942 ; 1942 ; Indiana Magazine of History Volume 1942 ; 38 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1943 ; 1943 ; Indiana Magazine of History Volume 1943 ; 39 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1944 ; 1944 ; Indiana Magazine of History Volume 1944 ; 40 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1945 ; 1945 ; Indiana Magazine of History Volume 1945 ; 41 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1946 ; 1946 ; Indiana Magazine of History Volume 1946 ; 42 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1947 ; 1947 ; Indiana Magazine of History Volume 1947 ; 43 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1948 ; 1948 ; Indiana Magazine of History Volume 1948 ; 44 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1949 ; 1949 ; Indiana Magazine of History Volume 1949 ; 45 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1950 ; 1950 ; Indiana Magazine of History Volume 1950 ; 46 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1951 ; 1951 ; Indiana Magazine of History Volume 1951 ; 47 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1952 ; 1952 ; Indiana Magazine of History Volume 1952 ; 48 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1953 ; 1953 ; Indiana Magazine of History Volume 1953 ; 49 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1954 ; 1954 ; Indiana Magazine of History Volume 1954 ; 50 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1955 ; 1955 ; Indiana Magazine of History Volume 1955 ; 51 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1956 ; 1956 ; Indiana Magazine of History Volume 1956 ; 52 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1957 ; 1957 ; Indiana Magazine of History Volume 1957 ; 53 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1958 ; 1958 ; Indiana Magazine of History Volume 1958 ; 54 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1959 ; 1959 ; Indiana Magazine of History Volume 1959 ; 55 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1960 ; 1960 ; Indiana Magazine of History Volume 1960 ; 56 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1961 ; 1961 ; Indiana Magazine of History Volume 1961 ; 57 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1962 ; 1962 ; Indiana Magazine of History Volume 1962 ; 58 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1963 ; 1963 ; Indiana Magazine of History Volume 1963 ; 59 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1964 ; 1964 ; Indiana Magazine of History Volume 1964 ; 60 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1965 ; 1965 ; Indiana Magazine of History Volume 1965 ; 61 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1966 ; 1966 ; Indiana Magazine of History Volume 1966 ; 62 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1967 ; 1967 ; Indiana Magazine of History Volume 1967 ; 63 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 1968 ; 1968 ; Indiana Magazine of History Volume 1968 ; 64 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 1969 ; 1969 ; Indiana Magazine of History Volume 1969 ; 65 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 1970 ; 1970 ; Indiana Magazine of History Volume 1970 ; 66 ; reingest4.clockss.org:8082 >
@@ -1108,21 +1108,21 @@
 
       param[journal_id] = tmr
 
-      au < frozen ; exists ; 1993 ; 1993 ; The Medieval Review Volume 1993 ; 1 ; >
+      au < finished ; manifest ; 1993 ; 1993 ; The Medieval Review Volume 1993 ; 1 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 1994 ; 1994 ; The Medieval Review Volume 1994 ; 2 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 1995 ; 1995 ; The Medieval Review Volume 1995 ; 3 ; >
+      au < finished ; manifest ; 1995 ; 1995 ; The Medieval Review Volume 1995 ; 3 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 1996 ; 1996 ; The Medieval Review Volume 1996 ; 4 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 1997 ; 1997 ; The Medieval Review Volume 1997 ; 5 ; >
+      au < finished ; manifest ; 1997 ; 1997 ; The Medieval Review Volume 1997 ; 5 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 1998 ; 1998 ; The Medieval Review Volume 1998 ; 6 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 1999 ; 1999 ; The Medieval Review Volume 1999 ; 7 ; >
+      au < finished ; manifest ; 1999 ; 1999 ; The Medieval Review Volume 1999 ; 7 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2000 ; 2000 ; The Medieval Review Volume 2000 ; 8 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2001 ; 2001 ; The Medieval Review Volume 2001 ; 9 ; >
-      au < frozen ; exists ; 2002 ; 2002 ; The Medieval Review Volume 2002 ; 10 ; >
-      au < frozen ; exists ; 2003 ; 2003 ; The Medieval Review Volume 2003 ; 11 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; The Medieval Review Volume 2004 ; 12 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; The Medieval Review Volume 2005 ; 13 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; The Medieval Review Volume 2006 ; 14 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; The Medieval Review Volume 2007 ; 15 ; >
+      au < finished ; manifest ; 2001 ; 2001 ; The Medieval Review Volume 2001 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; 2002 ; The Medieval Review Volume 2002 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 2003 ; The Medieval Review Volume 2003 ; 11 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2004 ; 2004 ; The Medieval Review Volume 2004 ; 12 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2005 ; 2005 ; The Medieval Review Volume 2005 ; 13 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; 2006 ; The Medieval Review Volume 2006 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; 2007 ; The Medieval Review Volume 2007 ; 15 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2008 ; 2008 ; The Medieval Review Volume 2008 ; 16 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2009 ; 2009 ; The Medieval Review Volume 2009 ; 17 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2010 ; 2010 ; The Medieval Review Volume 2010 ; 18 ; reingest4.clockss.org:8082 >
@@ -1136,8 +1136,8 @@
       au < finished ; finished ; 2018 ; 2018 ; The Medieval Review Volume 2018 ; 26 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 2019 ; The Medieval Review Volume 2019 ; 27 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; 2020 ; The Medieval Review Volume 2020 ; 28 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; The Medieval Review Volume 2021 ; 29 ; > #has substance, but no metadata, no articles.
-      au < frozen ; exists ; 2022 ; 2022 ; The Medieval Review Volume 2022 ; 30 ; >
+      au < finished ; manifest ; 2021 ; 2021 ; The Medieval Review Volume 2021 ; 29 ; reingest2.clockss.org:8085 > #has substance, but no metadata, no articles.
+      au < finished ; manifest ; 2022 ; 2022 ; The Medieval Review Volume 2022 ; 30 ; reingest3.clockss.org:8083 >
       au < doesNotExist ; doesNotExist ; 2023 ; 2023 ; The Medieval Review Volume 2023 ; 31 ; >
       au < exists ; exists ; 2024 ; 2024 ; The Medieval Review Volume 2024 ; 32 ; >
       au < exists ; exists ; 2025 ; 2025 ; The Medieval Review Volume 2025 ; 33 ; >
@@ -1189,7 +1189,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2014 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2015 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2017 ; 9 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2019 ; 10 ; >
+      au < finished ; manifest ; 2019 ; 2019 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2019 ; 10 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -1202,12 +1202,12 @@
 
       param[journal_id] = sdh
 
-      au < frozen ; exists ; 2017 ; 2017 ; Studies in Digital Heritage Volume 1 ; 1 ; > #500 error on malformed url. https://scholarworks.iu.edu/journals/index.php/sdh/article/download/23331/%20/en.wikipedia.org/wiki/Goldilocks_principle
+      au < finished ; manifest ; 2017 ; 2017 ; Studies in Digital Heritage Volume 1 ; 1 ; reingest4.clockss.org:8082 > #500 error on malformed url. https://scholarworks.iu.edu/journals/index.php/sdh/article/download/23331/%20/en.wikipedia.org/wiki/Goldilocks_principle
       au < finished ; finished ; 2018 ; 2018 ; Studies in Digital Heritage Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 2019 ; Studies in Digital Heritage Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; 2020 ; Studies in Digital Heritage Volume 4 ; 4 ; >
+      au < finished ; manifest ; 2020 ; 2020 ; Studies in Digital Heritage Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2021 ; 2021 ; Studies in Digital Heritage Volume 5 ; 5 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2022 ; 2022 ; Studies in Digital Heritage Volume 6 ; 6 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Studies in Digital Heritage Volume 6 ; 6 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Studies in Digital Heritage Volume 7 ; 7 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Studies in Digital Heritage Volume 8 ; 8 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Studies in Digital Heritage Volume 9 ; 9 ; >
@@ -1242,15 +1242,15 @@
 
       param[journal_id] = tributaries
 
-      au < frozen ; exists ; 2011 ; 2011 ; Tributaries Volume 14 ; 14 ; > #0 article, 0 metadata
-      au < frozen ; exists ; 2012 ; 2012 ; Tributaries Volume 15 ; 15 ; > #0 article, 0 metadata
-      au < frozen ; exists ; 2013 ; 2013 ; Tributaries Volume 16 ; 16 ; > #0 article, 0 metadata
+      au < finished ; manifest ; 2011 ; 2011 ; Tributaries Volume 14 ; 14 ; reingest1.clockss.org:8082 > #0 article, 0 metadata
+      au < finished ; manifest ; 2012 ; 2012 ; Tributaries Volume 15 ; 15 ; reingest2.clockss.org:8085 > #0 article, 0 metadata
+      au < finished ; manifest ; 2013 ; 2013 ; Tributaries Volume 16 ; 16 ; reingest3.clockss.org:8083 > #0 article, 0 metadata
       au < finished ; finished ; 2014 ; 2014 ; Tributaries Volume 17 ; 17 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; 2015 ; Tributaries Volume 18 ; 18 ; reingest3.clockss.org:8083 > #no substance, but the single pdf is collected. https://scholarworks.iu.edu/journals/index.php/tributaries/issue/view/1243/pdf_8
       au < finished ; finished ; 2016 ; 2016 ; Tributaries Volume 19 ; 19 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 2017 ; Tributaries Volume 20 ; 20 ; reingest3.clockss.org:8083 > #no substance, but the two pdfs are collected. https://scholarworks.iu.edu/journals/index.php/tributaries/issue/view/1881/103 & 4
       au < crawling ; exists ; 2018 ; 2018 ; Tributaries Volume 21 ; 21 ; > #0 article, 0 metadata
-      au < frozen ; exists ; 2019 ; 2019 ; Tributaries Volume 22 ; 22 ; > #0 article, 0 metadata
+      au < finished ; manifest ; 2019 ; 2019 ; Tributaries Volume 22 ; 22 ; reingest4.clockss.org:8082 > #0 article, 0 metadata
 
   }
 
@@ -1278,7 +1278,7 @@
       param[journal_id] = jaa
 
       au < finished ; finished ; 2018 ; 2018 ; Journal of Academic Advising Volume 2018 ; 1 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; 2020 ; Journal of Academic Advising Volume 2020 ; 2 ; >
+      au < finished ; manifest ; 2020 ; 2020 ; Journal of Academic Advising Volume 2020 ; 2 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -1294,7 +1294,7 @@
 
       au < finished ; finished ; 2017 ; 2017 ; Global Engagement and Transformation Volume 2017 ; 1-2 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; 2018 ; Global Engagement and Transformation Volume 2018 ; 3 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2020 ; 2020 ; Global Engagement and Transformation Volume 2020 ; 4 ; >
+      au < finished ; manifest ; 2020 ; 2020 ; Global Engagement and Transformation Volume 2020 ; 4 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -1310,9 +1310,9 @@
 
       au < finished ; finished ; 2019 ; 2019 ; Global Journal of Transformative Education Volume 2018 ; 1 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; 2020 ; Global Journal of Transformative Education Volume 2020 ; 2 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2022 ; 2022 ; Global Journal of Transformative Education Volume 2022 ; 3 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Global Journal of Transformative Education Volume 2022 ; 3 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Global Journal of Transformative Education Volume 2024 ; 4 ; >
-      au < frozen ; exists ; 2025 ; 2025 ; Global Journal of Transformative Education Volume 2025 ; 5 ; >
+      au < finished ; manifest ; 2025 ; 2025 ; Global Journal of Transformative Education Volume 2025 ; 5 ; reingest3.clockss.org:8083 >
       au < expected ; exists ; 2026 ; 2026 ; Global Journal of Transformative Education Volume 2026 ; 6 ; >
 
   }
@@ -1363,10 +1363,10 @@
       au < finished ; finished ; 2019 ; 2019 ; IULC Working Papers  Volume 2019 ; 18 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; 2020 ; IULC Working Papers  Volume 2020 ; 19 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; 2021 ; IULC Working Papers  Volume 2021 ; 20 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2022 ; 2022 ; IULC Working Papers  Volume 2022 ; 21 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; IULC Working Papers  Volume 2022 ; 21 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; IULC Working Papers  Volume 2023 ; 22 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; IULC Working Papers  Volume 2024 ; 23 ; >
-      au < frozen ; exists ; 2025 ; 2025 ; IULC Working Papers  Volume 2025 ; 24 ; >
+      au < finished ; manifest ; 2025 ; 2025 ; IULC Working Papers  Volume 2025 ; 24 ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2026 ; 2026 ; IULC Working Papers  Volume 2026 ; 25 ; >
 
   }
@@ -1381,8 +1381,8 @@
       param[journal_id] = iwpsalc
 
       au < finished ; finished ; 2019 ; 2019 ; Indiana Working Papers in South Asian Languages and Cultures Volume 2019 ; 1 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; 2020 ; Indiana Working Papers in South Asian Languages and Cultures Volume 2020 ; 2 ; >
-      au < frozen ; exists ; 2022 ; 2022 ; Indiana Working Papers in South Asian Languages and Cultures Volume 2022 ; 3 ; >
+      au < finished ; manifest ; 2020 ; 2020 ; Indiana Working Papers in South Asian Languages and Cultures Volume 2020 ; 2 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; 2022 ; Indiana Working Papers in South Asian Languages and Cultures Volume 2022 ; 3 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -1424,7 +1424,7 @@
       au < finished ; finished ; 2019 ; 2019 ; Developmental Observer Volume 2019 ; 12 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; 2020 ; Developmental Observer Volume 2020 ; 13 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2021 ; 2021 ; Developmental Observer Volume 2021 ; 14 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2022 ; 2022 ; Developmental Observer Volume 2022 ; 15 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Developmental Observer Volume 2022 ; 15 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Developmental Observer Volume 2023 ; 16 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Developmental Observer Volume 2024 ; 17 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Developmental Observer Volume 2025 ; 18 ; >
@@ -1454,7 +1454,7 @@
       au < finished ; finished ; 2019 ; 2019 ; Indiana Journal of Earth Sciences Volume 2019 ; 11 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; 2020 ; Indiana Journal of Earth Sciences Volume 2020 ; 12 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2021 ; 2021 ; Indiana Journal of Earth Sciences Volume 2021 ; 13 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2022 ; 2022 ; Indiana Journal of Earth Sciences Volume 2022 ; 14 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Indiana Journal of Earth Sciences Volume 2022 ; 14 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Indiana Journal of Earth Sciences Volume 2023 ; 15 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Indiana Journal of Earth Sciences Volume 2024 ; 16 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Indiana Journal of Earth Sciences Volume 2025 ; 17 ; >
@@ -1487,7 +1487,7 @@
       au < finished ; finished ; 2019 ; 2019 ; Interdisciplinary Journal of Problem-Based Learning Volume 2019 ; 14 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; 2020 ; Interdisciplinary Journal of Problem-Based Learning Volume 2020 ; 15 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; 2021 ; Interdisciplinary Journal of Problem-Based Learning Volume 2021 ; 16 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2022 ; 2022 ; Interdisciplinary Journal of Problem-Based Learning Volume 2022 ; 17 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Interdisciplinary Journal of Problem-Based Learning Volume 2022 ; 17 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Interdisciplinary Journal of Problem-Based Learning Volume 2023 ; 18 ; >
       au < finished ; manifest ; 2024 ; 2024 ; Interdisciplinary Journal of Problem-Based Learning Volume 2024 ; 19 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Interdisciplinary Journal of Problem-Based Learning Volume 2025 ; 20 ; >
@@ -1545,16 +1545,16 @@
 
       param[journal_id] = ffma
 
-      au < frozen ; exists ; 1958 ; 1958 ; Folklore and Folk Music Archivist Volume 1958 ; 1 ; >
-      au < frozen ; exists ; 1959 ; 1959 ; Folklore and Folk Music Archivist Volume 1959 ; 2 ; >
-      au < frozen ; exists ; 1960 ; 1960 ; Folklore and Folk Music Archivist Volume 1960 ; 3 ; >
-      au < frozen ; exists ; 1961 ; 1961 ; Folklore and Folk Music Archivist Volume 1961 ; 4 ; >
-      au < frozen ; exists ; 1962 ; 1962 ; Folklore and Folk Music Archivist Volume 1962 ; 5 ; >
-      au < frozen ; exists ; 1963 ; 1963 ; Folklore and Folk Music Archivist Volume 1963 ; 6 ; >
-      au < frozen ; exists ; 1964 ; 1964 ; Folklore and Folk Music Archivist Volume 1964 ; 7 ; >
-      au < frozen ; exists ; 1965 ; 1965 ; Folklore and Folk Music Archivist Volume 1965 ; 8 ; >
-      au < frozen ; exists ; 1966 ; 1966 ; Folklore and Folk Music Archivist Volume 1966 ; 9 ; >
-      au < frozen ; exists ; 1967 ; 1967 ; Folklore and Folk Music Archivist Volume 1967 ; 10 ; >
+      au < finished ; manifest ; 1958 ; 1958 ; Folklore and Folk Music Archivist Volume 1958 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1959 ; 1959 ; Folklore and Folk Music Archivist Volume 1959 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1960 ; 1960 ; Folklore and Folk Music Archivist Volume 1960 ; 3 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1961 ; 1961 ; Folklore and Folk Music Archivist Volume 1961 ; 4 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1962 ; 1962 ; Folklore and Folk Music Archivist Volume 1962 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1963 ; 1963 ; Folklore and Folk Music Archivist Volume 1963 ; 6 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1964 ; 1964 ; Folklore and Folk Music Archivist Volume 1964 ; 7 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1965 ; 1965 ; Folklore and Folk Music Archivist Volume 1965 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1966 ; 1966 ; Folklore and Folk Music Archivist Volume 1966 ; 9 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1967 ; 1967 ; Folklore and Folk Music Archivist Volume 1967 ; 10 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 1968 ; 1968 ; Folklore and Folk Music Archivist Volume 1968 ; 11 ; reingest4.clockss.org:8082 >
       #no more published
 
@@ -1589,13 +1589,13 @@
       param[journal_id] = bookman
       # published from 1956 to 1988
 
-      au < frozen ; exists ; 1956 ; 1956 ; Indiana University Bookman Volume 1 ; 1 ; >
-      au < frozen ; exists ; 1957 ; 1957 ; Indiana University Bookman Volume 2 ; 2 ; >
-      au < frozen ; exists ; 1958 ; 1958 ; Indiana University Bookman Volume 3 ; 3 ; >
-      au < frozen ; exists ; 1960 ; 1960 ; Indiana University Bookman Volume 4-5 ; 4-5 ; >
-      au < frozen ; exists ; 1963 ; 1963 ; Indiana University Bookman Volume 6 ; 6 ; >
-      au < frozen ; exists ; 1965 ; 1965 ; Indiana University Bookman Volume 7 ; 7 ; >
-      au < frozen ; exists ; 1967 ; 1967 ; Indiana University Bookman Volume 8 ; 8 ; >
+      au < finished ; manifest ; 1956 ; 1956 ; Indiana University Bookman Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1957 ; 1957 ; Indiana University Bookman Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1958 ; 1958 ; Indiana University Bookman Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1960 ; 1960 ; Indiana University Bookman Volume 4-5 ; 4-5 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1963 ; 1963 ; Indiana University Bookman Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1965 ; 1965 ; Indiana University Bookman Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1967 ; 1967 ; Indiana University Bookman Volume 8 ; 8 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 1968 ; 1968 ; Indiana University Bookman Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 1969 ; 1969 ; Indiana University Bookman Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 1973 ; 1973 ; Indiana University Bookman Volume 11 ; 11 ; reingest2.clockss.org:8085 >
@@ -1731,10 +1731,10 @@
 
       param[journal_id] = psource
 
-      au < frozen ; exists ; 2011 ; 2011 ; Primary Source Volume 2011 ; 1 ; > #no metadata
-      au < frozen ; exists ; 2012 ; 2012 ; Primary Source Volume 2012 ; 2 ; > #no metadata
-      au < frozen ; exists ; 2013 ; 2013 ; Primary Source Volume 2013 ; 3 ; > #no metadata
-      au < frozen ; exists ; 2014 ; 2014 ; Primary Source Volume 2014 ; 4 ; > #no metadata
+      au < finished ; manifest ; 2011 ; 2011 ; Primary Source Volume 2011 ; 1 ; reingest3.clockss.org:8083 > #no metadata
+      au < finished ; manifest ; 2012 ; 2012 ; Primary Source Volume 2012 ; 2 ; reingest4.clockss.org:8082 > #no metadata
+      au < finished ; manifest ; 2013 ; 2013 ; Primary Source Volume 2013 ; 3 ; reingest5.clockss.org:8082 > #no metadata
+      au < finished ; manifest ; 2014 ; 2014 ; Primary Source Volume 2014 ; 4 ; reingest1.clockss.org:8082 > #no metadata
       au < finished ; crawling ; 2015 ; 2015 ; Primary Source Volume 2015 ; 5 ; reingest5.clockss.org:8082 >
       #no more published
 
@@ -1831,7 +1831,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Workshop Volume 2015 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Workshop Volume 2016 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Workshop Volume 2016 ; 4 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; The Workshop Volume 5 ; 5 ; >#Not a typo. Really 2018
+      au < finished ; manifest ; 2018 ; 2018 ; The Workshop Volume 5 ; 5 ; reingest2.clockss.org:8085 >#Not a typo. Really 2018
       au < finished ; finished ; 2017 ; 2017 ; The Workshop Volume 6 ; 6 ; reingest5.clockss.org:8082 >#Not a typo. Really 2017
       #no more published
 
