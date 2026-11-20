@@ -591,14 +591,14 @@
       param[journal_id] = jfrr
       #See LXPUB-697
 
-      au < frozen ; exists ; 2015 ; 2015 ; Journal of Folklore Research Reviews Volume 2015 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Journal of Folklore Research Reviews Volume 2016 ; 2016 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Journal of Folklore Research Reviews Volume 2017 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Journal of Folklore Research Reviews Volume 2018 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Journal of Folklore Research Reviews Volume 2019 ; 2019 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; Journal of Folklore Research Reviews Volume 2020 ; 2020 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; Journal of Folklore Research Reviews Volume 2021 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; 2022 ; Journal of Folklore Research Reviews Volume 2022 ; 2022 ; >
+      au < ingNotReady ; exists ; 2015 ; 2015 ; Journal of Folklore Research Reviews Volume 2015 ; 2015 ; > #0 metadata
+      au < ingNotReady ; exists ; 2016 ; 2016 ; Journal of Folklore Research Reviews Volume 2016 ; 2016 ; > #0 metadata
+      au < ingNotReady ; exists ; 2017 ; 2017 ; Journal of Folklore Research Reviews Volume 2017 ; 2017 ; > #0 metadata
+      au < ingNotReady ; exists ; 2018 ; 2018 ; Journal of Folklore Research Reviews Volume 2018 ; 2018 ; > #0 metadata
+      au < ingNotReady ; exists ; 2019 ; 2019 ; Journal of Folklore Research Reviews Volume 2019 ; 2019 ; > #0 metadata
+      au < ingNotReady ; exists ; 2020 ; 2020 ; Journal of Folklore Research Reviews Volume 2020 ; 2020 ; > #0 metadata
+      au < ingNotReady ; exists ; 2021 ; 2021 ; Journal of Folklore Research Reviews Volume 2021 ; 2021 ; > #0 metadata
+      au < ingNotReady ; exists ; 2022 ; 2022 ; Journal of Folklore Research Reviews Volume 2022 ; 2022 ; > #0 metadata
       au < deepCrawl ; exists ; 2023 ; 2023 ; Journal of Folklore Research Reviews Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Folklore Research Reviews Volume 2024 ; 2024 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Journal of Folklore Research Reviews Volume 2025 ; 2025 ; >
@@ -1135,7 +1135,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; The Medieval Review Volume 2017 ; 25 ; >
       au < finished ; finished ; 2018 ; 2018 ; The Medieval Review Volume 2018 ; 26 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 2019 ; The Medieval Review Volume 2019 ; 27 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; 2020 ; The Medieval Review Volume 2020 ; 28 ; >
+      au < ingNotReady ; exists ; 2020 ; 2020 ; The Medieval Review Volume 2020 ; 28 ; > #0 metadata
       au < finished ; manifest ; 2021 ; 2021 ; The Medieval Review Volume 2021 ; 29 ; reingest2.clockss.org:8085 > #has substance, but no metadata, no articles.
       au < finished ; manifest ; 2022 ; 2022 ; The Medieval Review Volume 2022 ; 30 ; reingest3.clockss.org:8083 >
       au < doesNotExist ; doesNotExist ; 2023 ; 2023 ; The Medieval Review Volume 2023 ; 31 ; >
