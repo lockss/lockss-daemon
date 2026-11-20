@@ -93,6 +93,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_start_url</string>
+    <string>"%sbooks/%s", del_www(base_url), book_doi</string>
     <!--
     They have different links
     https://utsepress.lib.uts.edu.au/site/books/10.5130/978-0-6481242-8-3
@@ -101,19 +102,18 @@ POSSIBILITY OF SUCH DAMAGE.
     Updated 2025, start links now look like this:
     https://luminosoa.org/books/m/10.1525/luminos.11
     https://utsepress.lib.uts.edu.au/books/e/10.5130/pmrp.ipmarc2017
-     -->
-    <string>"%s(site/)?books/%s", base_url, book_doi</string>
+    -->
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://%s%s(en/)?books/[a-z]/%s$", base_url_host, base_url_path, book_doi</string>
-      <string>1,"^https?://%s%s.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf|properties|pdf|mrc)", base_url_host, base_url_path</string>
-      <string>1,"^https?://%s%sapi/theme$",base_url_host, base_url_path</string>
+      <string>1,"^https?://(www\.)?%s%s([a-z]+/)?books/[a-z]/%s$", del_www_and_scheme(base_url), base_url_path, book_doi</string>
+      <string>1,"^https?://(www\.)?%s%s.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf|properties|pdf|mrc)", del_www_and_scheme(base_url), base_url_path</string>
+      <string>1,"^https?://(www\.)?%s%sapi/theme$",del_www_and_scheme(base_url), base_url_path</string>
       <string>1,"^https?://(maxcdn\.bootstrapcdn\.com|cdnjs\.cloudflare\.com|.+\.cloudfront\.net|cdn\.mathjax\.org|(fonts|ajax|storage)\.(gstatic|googleapis)\.com)/."</string>
-      <string>1,"^https?://%s%s(site/)?(en/)?books/.*\.(epub|mobi|pdf)$", base_url_host, base_url_path</string>
-      <string>1,"^https?://%s%sreader/books/(epub|pdf)/[0-9\.]+/[a-z0-9\.]+$", base_url_host, base_url_path</string>
-      <string>1,"^https?://%s/api/[0-9\.]+/spritesheet", url_host(base_url)</string>
+      <string>1,"^https?://(www\.)?%s%s(site/)?(en/)?books/.*\.(epub|mobi|pdf)$", del_www_and_scheme(base_url), base_url_path</string>
+      <string>1,"^https?://(www\.)?%s%s(en/)?reader/books/(epub|pdf)/[0-9\.]+/[a-z0-9\.]+$", del_www_and_scheme(base_url), base_url_path</string>
+      <string>1,"^https?://(www\.)?%s/api/[0-9\.]+/spritesheet", del_www_and_scheme(base_url)</string>
       <!--
       https://utsepress.lib.uts.edu.au/site/books/10.5130/aae/download/2946/
       https://utsepress.lib.uts.edu.au/site/books/10.5130/aae/download/2947/
@@ -121,13 +121,13 @@ POSSIBILITY OF SUCH DAMAGE.
       https://utsepress.lib.uts.edu.au/site/books/10.5130/aae/download_citation/ris/
       https://utsepress.lib.uts.edu.au/site/books/10.5130/aae/download_citation/bib/
       -->
-      <string>1,"^https?://%s(site/)?books/.*/(download|download_citation)/", base_url_host, base_url_path</string>
+      <string>1,"^https?://(www\.)?%s%s(site/)?books/.*/(download|download_citation)/", del_www_and_scheme(base_url), base_url_path</string>
     </list>
   </entry>
  <entry>
      <string>au_substance_url_pattern</string>
      <list>
-      <string>"%s(site/)?books/.*/files/.*\.(pdf|epub)$", base_url</string>
+     <string>"https://storage\.googleapis\.com/[a-z-]+/files/books/[0-9]+/[^/]+\.pdf"</string>
      </list>
   </entry>
   <entry>
@@ -137,6 +137,10 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>403=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
       <string>500=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_param_functor</string>
+    <string>org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkAuParamFunctor</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
