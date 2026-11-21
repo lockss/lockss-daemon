@@ -6,7 +6,7 @@
 // The status request is small and cheap, so it gets a short timeout; the
 // finished/errors page requests can legitimately take longer (a large
 // page, a busy server), so they get a longer one.
-const STATUS_FETCH_TIMEOUT_MS = 5000;
+const STATUS_FETCH_TIMEOUT_MS = 10000;
 const PAGE_FETCH_TIMEOUT_MS = 30000;
 
 // fetch() with a hard timeout: rejects if the request is still outstanding
