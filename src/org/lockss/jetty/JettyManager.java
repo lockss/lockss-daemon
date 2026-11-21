@@ -47,6 +47,12 @@ import org.lockss.util.*;
  */
 public abstract class JettyManager
   extends BaseLockssManager implements ConfigurableManager {
+
+  static {
+    // Suppress the Jetty version from being advertised in the response header
+    System.setProperty("org.mortbay.http.Version.paranoid", "true");
+  }
+
   static final String PREFIX = Configuration.PREFIX + "jetty.";
   static final String DEBUG_PREFIX = Configuration.PREFIX + "jetty.debug";
 
