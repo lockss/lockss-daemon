@@ -436,11 +436,13 @@ public class MigrateContent extends LockssServlet {
   private void doBuildArgsAndRun() {
     try {
       List <V2AuMover.Args> argses = new ArrayList<>();
-      argses.add(getArgsToMigrateSystemSettings());
-      if (!migrationMgr.isDryRun()) {
-        argses.add(getArgsToMigrateDatabase());
+      if (opType.isCopy()) {
+        argses.add(getArgsToMigrateSystemSettings());
+        if (!migrationMgr.isDryRun()) {
+          argses.add(getArgsToMigrateDatabase());
+        }
+        argses.add(getArgsToMigrateConfig());
       }
-      argses.add(getArgsToMigrateConfig());
       argses.add(getArgsToMigrateAus());
       startRunner(argses);
     } catch (Exception e) {

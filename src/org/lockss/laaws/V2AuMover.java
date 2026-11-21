@@ -1986,9 +1986,17 @@ public class V2AuMover {
           long startS = now();
           AuStateMover stateMover = new AuStateMover(v2Mover, task);
           AuStateChecker stateChecker = new AuStateChecker(v2Mover, task);
-          stateMover.moveAuStateObjects(auStat.getAu());
+          if (opType.isCopy()) {
+            stateMover.moveAuStateObjects(auStat.getAu());
+          } else {
+            log.debug2("Skipping AU state copy: " + auStat.getAuName());
+          }
           stateChecker.checkAuStateObjects(auStat.getAu());
-          stateMover.moveAuConfig(auStat.getAu());
+          if (opType.isCopy()) {
+            stateMover.moveAuConfig(auStat.getAu());
+          } else {
+            log.debug2("Skipping AU config copy: " + auStat.getAuName());
+          }
           stateChecker.checkAuConfig(auStat.getAu());
           task.getCounters().add(CounterType.STATE_TIME, now() - startS);
           log.debug2("Processed AU state: " + auStat.getAuName());
