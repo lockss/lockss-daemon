@@ -79,14 +79,15 @@ public class AuStateMover extends Worker {
    * Copy the AU state objects that must be stored before the AU config.
    */
   void moveAuStateObjects(ArchivalUnit au) {
+    // copy AuState first for AU creation date gets set correctly
+    log.info("Moving AU State: " + au.getName());
+    moveAuState(au);
     log.info("Moving AU Agreements: " + au.getName());
     moveAuAgreements(au);
     log.info("Moving AU Suspect Urls: " + au.getName());
     moveAuSuspectUrlVersions(au);
     log.info("Moving No AU Peer Set: " + au.getName());
     moveNoAuPeerSet(au);
-    log.info("Moving AU State: " + au.getName());
-    moveAuState(au);
   }
 
   /**
