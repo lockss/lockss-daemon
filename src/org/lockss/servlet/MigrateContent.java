@@ -436,7 +436,7 @@ public class MigrateContent extends LockssServlet {
   private void doBuildArgsAndRun() {
     try {
       List <V2AuMover.Args> argses = new ArrayList<>();
-      if (opType.isCopy()) {
+      if (opType.isCopy() && !migrationMgr.isSkipConfigCopy()) {
         argses.add(getArgsToMigrateSystemSettings());
         if (!migrationMgr.isDryRun()) {
           argses.add(getArgsToMigrateDatabase());

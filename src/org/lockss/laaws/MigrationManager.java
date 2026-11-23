@@ -118,6 +118,10 @@ public class MigrationManager extends BaseLockssDaemonManager
   public static final String PARAM_IS_DB_MOVED = PREFIX + "isDbMoved";
   public static final boolean DEFAULT_IS_DB_MOVED = false;
 
+  public static final String PARAM_SKIP_CONFIG_COPY =
+    PREFIX + "skipConfigCopy";
+  public static final boolean DEFAULT_SKIP_CONFIG_COPY = false;
+
   public static final String CONFIG_FILE_MIGRATION_HEADER = "Migration configuration";
 
   private V2AuMover mover;
@@ -133,6 +137,7 @@ public class MigrationManager extends BaseLockssDaemonManager
   private long generation = 0;
 
   boolean isDryRun;
+  boolean isSkipConfigCopy = DEFAULT_SKIP_CONFIG_COPY;
   boolean isInMigrationMode;
   boolean isMigrationInDebugMode;
   boolean isDeleteMigratedAus;
@@ -155,6 +160,10 @@ public class MigrationManager extends BaseLockssDaemonManager
 
   public boolean isDryRun() {
     return isDryRun;
+  }
+
+  public boolean isSkipConfigCopy() {
+    return isSkipConfigCopy;
   }
 
   public boolean isInMigrationMode() {
@@ -201,6 +210,10 @@ public class MigrationManager extends BaseLockssDaemonManager
           MigrateContent.PARAM_DELETE_AFTER_MIGRATION,
           MigrateContent.DEFAULT_DELETE_AFTER_MIGRATION);
       dsClassName = config.get(DbManager.PARAM_DATASOURCE_CLASSNAME);
+
+      isSkipConfigCopy = config.getBoolean(PARAM_SKIP_CONFIG_COPY,
+                                           DEFAULT_SKIP_CONFIG_COPY);
+
 
       if (isDryRun && isDeleteMigratedAus) {
         log.warning("isDryRun is true but isDeleteMigrateAus is true; setting it to false");
