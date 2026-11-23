@@ -2644,7 +2644,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 34,35 ; Journal of Technology Education Volume 2023 ; 2023 ; 34,35 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < finished ; manifest ; 2024 ; 35,36 ; Journal of Technology Education Volume 2024 ; 2024 ; 35,36 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 36,37 ; Journal of Technology Education Volume 2025 ; 2025 ; 36,37 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
-      au < manifest ; exists ; 2026 ; 38,39 ; Journal of Technology Education Volume 2026 ; 2026 ; 38,39 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
+      au < manifest ; exists ; 2026 ; 37,38 ; Journal of Technology Education Volume 2026 ; 2026 ; 37,38 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
 
   }
 
@@ -2826,7 +2826,7 @@
       au < doesNotExist ; doesNotExist ; 2023 ; 4 ; New Area Studies Volume 2023 ; 2023 ; 4 ; University of East Anglia ;  ; https://newareastudies.com/ ; >
       au < finished ; manifest ; 2024 ; 4 ; New Area Studies Volume 2024 ; 2024 ; 4 ; University of East Anglia ;  ; https://newareastudies.com/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 5 ; New Area Studies Volume 2025 ; 2025 ; 5 ; University of East Anglia ;  ; https://newareastudies.com/ ; >
-      au < manifest ; exists ; 2026 ; 6 ; New Area Studies Volume 2026 ; 2026 ; 6 ; University of East Anglia ;  ; https://newareastudies.com/ ; >
+      au < manifest ; exists ; 2026 ; 5 ; New Area Studies Volume 2026 ; 2026 ; 5 ; University of East Anglia ;  ; https://newareastudies.com/ ; >
 
   }
 
@@ -2841,8 +2841,8 @@
       #param[base_url] = https://ssol-journal.com/
       nondefparam[base_url2] = https://account.ssol-journal.com/
       nondefparam[journal_id] = isesl-j-ssl
-      #No articles
 
+      #No articles for volumes 2011 - 2022
       au < doNotProcess ; doNotProcess ; 2011 ; 1 ; Scientific Study of Literature Volume 2011 ; 2011 ; 1 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2 ; Scientific Study of Literature Volume 2012 ; 2012 ; 2 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 3 ; Scientific Study of Literature Volume 2013 ; 2013 ; 3 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
@@ -2853,7 +2853,10 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 8 ; Scientific Study of Literature Volume 2018 ; 2018 ; 8 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 9 ; Scientific Study of Literature Volume 2019 ; 2019 ; 9 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 10 ; Scientific Study of Literature Volume 2020 ; 2020 ; 10 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
-      au < manifest ; exists ; 2021 ; 11 ; Scientific Study of Literature Volume 2021 ; 2021 ; 11 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 11 ; Scientific Study of Literature Volume 2021 ; 2021 ; 11 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2022 ; 11 ; Scientific Study of Literature Volume 2022 ; 2022 ; 11 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
+
+      #These have content. 2023 previously processed
       au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Scientific Study of Literature Volume 2023 ; 2023 ; 12 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
       au < finished ; manifest ; 2024 ; 13 ; Scientific Study of Literature Volume 2024 ; 2024 ; 13 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2025 ; 14 ; Scientific Study of Literature Volume 2025 ; 2025 ; 14 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
@@ -2881,8 +2884,8 @@
       au < finished ; manifest ; 2022 ; 7 ; Journal of Historical Network Research Volume 2022 ; 2022 ; 7 ; Université du Luxembourg ;  ; https://jhnr.net/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 8,9 ; Journal of Historical Network Research Volume 2023 ; 2023 ; 8,9 ; Université du Luxembourg ;  ; https://jhnr.net/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 10 ; Journal of Historical Network Research Volume 2024 ; 2024 ; 10 ; Université du Luxembourg ;  ; https://jhnr.net/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2025 ; 11 ; Journal of Historical Network Research Volume 2025 ; 2025 ; 11 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
-      au < manifest ; exists ; 2026 ; 12 ; Journal of Historical Network Research Volume 2026 ; 2026 ; 12 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
+      au < deepCrawl ; exists ; 2025 ; 11,12 ; Journal of Historical Network Research Volume 2025 ; 2025 ; 11,12 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
+      au < manifest ; exists ; 2026 ; 13 ; Journal of Historical Network Research Volume 2026 ; 2026 ; 13 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
 
   }
 
