@@ -17047,8 +17047,6 @@
     au < doNotProcess ; 2022 ; 2022 ; PSU Research Review Volume 6 ; 6 >
     au < doNotProcess ; 2023 ; 2023 ; PSU Research Review Volume 7 ; 7 >
     au < doNotProcess ; 2024 ; 2024 ; PSU Research Review Volume 8 ; 8 >
-    au < expected ; 2025 ; 2025 ; PSU Research Review Volume 9 ; 9 >
-    au < expected ; 2026 ; 2026 ; PSU Research Review Volume 10 ; 10 >
 
   }
 
@@ -18465,13 +18463,21 @@
       param[journal_id] = tcj
 
       au < manifest ; 2004 ; 2004 ; The CASE Journal Volume 1 ; 1 >
-      au < manifest ; 2005 ; 2005 ; The CASE Journal Volume 2 ; 2 >
-      au < manifest ; 2006 ; 2006 ; The CASE Journal Volume 3 ; 3 >
-      au < manifest ; 2007 ; 2007 ; The CASE Journal Volume 4 ; 4 >
-      au < manifest ; 2008 ; 2008 ; The CASE Journal Volume 5 ; 5 >
-      au < manifest ; 2009 ; 2009 ; The CASE Journal Volume 6 ; 6 >
-      au < manifest ; 2010 ; 2010 ; The CASE Journal Volume 7 ; 7 >
-      au < manifest ; 2011 ; 2011 ; The CASE Journal Volume 8 ; 8 >
+      au < manifest ; 2005 ; 2005 ; The CASE Journal Volume 1 [2005] ; 1 >
+      au < manifest ; 2005 ; 2005 ; The CASE Journal Volume 2 [2005] ; 2 >
+      au < manifest ; 2006 ; 2006 ; The CASE Journal Volume 2 [2006] ; 2 >
+      au < manifest ; 2006 ; 2006 ; The CASE Journal Volume 3 [2006] ; 3 >
+      au < manifest ; 2007 ; 2007 ; The CASE Journal Volume 3 [2007] ; 3 >
+      au < manifest ; 2007 ; 2007 ; The CASE Journal Volume 4 [2007] ; 4 >
+      au < manifest ; 2008 ; 2008 ; The CASE Journal Volume 4 [2008] ; 4 >
+      au < manifest ; 2008 ; 2008 ; The CASE Journal Volume 5 [2008] ; 5 >
+      au < manifest ; 2009 ; 2009 ; The CASE Journal Volume 5 [2009] ; 5 >
+      au < manifest ; 2009 ; 2009 ; The CASE Journal Volume 6 [2009] ; 6 >
+      au < manifest ; 2010 ; 2010 ; The CASE Journal Volume 6 [2010] ; 6 >
+      au < manifest ; 2010 ; 2010 ; The CASE Journal Volume 7 [2010] ; 7 >
+      au < manifest ; 2011 ; 2011 ; The CASE Journal Volume 7 [2011] ; 7 >
+      au < manifest ; 2011 ; 2011 ; The CASE Journal Volume 8 [2011] ; 8 >
+      au < manifest ; 2012 ; 2012 ; The CASE Journal Volume 8 [2012] ; 8 >
       au < manifest ; 2012 ; 2012 ; The CASE Journal Volume 9 [2012] ; 9 >
       au < manifest ; 2013 ; 2013 ; The CASE Journal Volume 9 [2013] ; 9 >
       au < manifest ; 2014 ; 2014 ; The CASE Journal Volume 10 ; 10 >
