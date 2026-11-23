@@ -52,7 +52,7 @@
     param[journal_id] = jpc
     param[base_url] = https://becarispublishing.com/
 
-    au < ready ; exists ; 2026 ; Journal of Patient Centricity Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2026 ; Journal of Patient Centricity Volume 1 ; 1 ; >
 
   }
 
