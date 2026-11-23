@@ -3,7 +3,7 @@
     name = Bank Indonesia ;
     info[contract] = 2026 ;
     info[back] = 2015 ;
-    info[tester] = X ;
+    info[tester] = 4 ;
     info[platform] = BePress and OJS
   >
 
@@ -20,18 +20,18 @@
     implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
     attr[start_stem] = ""
 
-    au < manifest ; exists ; 2015 ; 2015 ; Journal of Islamic Monetary Economics and Finance Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Journal of Islamic Monetary Economics and Finance Volume 1-2 ; 1-2 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Journal of Islamic Monetary Economics and Finance Volume 2-3 ; 2-3 ; >
-    au < manifest ; exists ; 2018 ; 2018 ; Journal of Islamic Monetary Economics and Finance Volume 3-4 ; 3-4 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Journal of Islamic Monetary Economics and Finance Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Journal of Islamic Monetary Economics and Finance Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Journal of Islamic Monetary Economics and Finance Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; Journal of Islamic Monetary Economics and Finance Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2023 ; 2023 ; Journal of Islamic Monetary Economics and Finance Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2024 ; 2024 ; Journal of Islamic Monetary Economics and Finance Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Journal of Islamic Monetary Economics and Finance Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Journal of Islamic Monetary Economics and Finance Volume 12 ; 12 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Journal of Islamic Monetary Economics and Finance Volume 1 ; 1 ; >
+    au < testing ; exists ; 2016 ; 2016 ; Journal of Islamic Monetary Economics and Finance Volume 1-2 ; 1-2 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Journal of Islamic Monetary Economics and Finance Volume 2-3 ; 2-3 ; >
+    au < testing ; exists ; 2018 ; 2018 ; Journal of Islamic Monetary Economics and Finance Volume 3-4 ; 3-4 ; >
+    au < testing ; exists ; 2019 ; 2019 ; Journal of Islamic Monetary Economics and Finance Volume 5 ; 5 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Journal of Islamic Monetary Economics and Finance Volume 6 ; 6 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Journal of Islamic Monetary Economics and Finance Volume 7 ; 7 ; >
+    au < testing ; exists ; 2022 ; 2022 ; Journal of Islamic Monetary Economics and Finance Volume 8 ; 8 ; >
+    au < testing ; exists ; 2023 ; 2023 ; Journal of Islamic Monetary Economics and Finance Volume 9 ; 9 ; >
+    au < testing ; exists ; 2024 ; 2024 ; Journal of Islamic Monetary Economics and Finance Volume 10 ; 10 ; >
+    au < testing ; exists ; 2025 ; 2025 ; Journal of Islamic Monetary Economics and Finance Volume 11 ; 11 ; >
+    au < testing ; exists ; 2026 ; 2026 ; Journal of Islamic Monetary Economics and Finance Volume 12 ; 12 ; >
   }
 
   {
@@ -47,10 +47,10 @@
     implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
     attr[start_stem] = ""
 
-    au < manifest ; exists ; 2022 ; 2022 ; Journal of Central Banking Law and Institutions Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2023 ; 2023 ; Journal of Central Banking Law and Institutions Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2024 ; 2024 ; Journal of Central Banking Law and Institutions Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Journal of Central Banking Law and Institutions Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Journal of Central Banking Law and Institutions Volume 5 ; 5 ; >
+    au < testing ; exists ; 2022 ; 2022 ; Journal of Central Banking Law and Institutions Volume 1 ; 1 ; >
+    au < testing ; exists ; 2023 ; 2023 ; Journal of Central Banking Law and Institutions Volume 2 ; 2 ; >
+    au < testing ; exists ; 2024 ; 2024 ; Journal of Central Banking Law and Institutions Volume 3 ; 3 ; >
+    au < testing ; exists ; 2025 ; 2025 ; Journal of Central Banking Law and Institutions Volume 4 ; 4 ; >
+    au < testing ; exists ; 2026 ; 2026 ; Journal of Central Banking Law and Institutions Volume 5 ; 5 ; >
   }
 }
