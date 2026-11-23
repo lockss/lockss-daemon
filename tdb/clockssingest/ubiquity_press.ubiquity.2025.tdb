@@ -2173,7 +2173,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 3 ; Ubiquity Proceedings Volume 2023 ; 2023 ; 3 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
       au < ingNotReady ; exists ; 2024 ; 4,5 ; Ubiquity Proceedings Volume 2024 ; 2024 ; 4,5 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; > #LOCKSS-4973
       au < finished ; manifest ; 2025 ; 6 ; Ubiquity Proceedings Volume 2025 ; 2025 ; 6 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2026 ; 7 ; Ubiquity Proceedings Volume 2026 ; 2026 ; 7 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
+      au < ready ; exists ; 2026 ; 7 ; Ubiquity Proceedings Volume 2026 ; 2026 ; 7 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
 
   }
 
@@ -2235,7 +2235,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Journal of Philosophy in Schools Volume 2023 ; 2023 ; 10 ; University of Birmingham Library Services ;  ; https://jps.bham.ac.uk/ ; > #no substance
       au < finished ; manifest ; 2024 ; 11 ; Journal of Philosophy in Schools Volume 2024 ; 2024 ; 11 ; University of Birmingham Library Services ;  ; https://jps.bham.ac.uk/ ; reingest2.clockss.org:8085 > #no substance
       au < deepCrawl ; exists ; 2025 ; 12 ; Journal of Philosophy in Schools Volume 2025 ; 2025 ; 12 ; University of Birmingham Library Services ;  ; https://jps.bham.ac.uk/ ; > #no substance
-      au < manifest ; exists ; 2026 ; 13 ; Journal of Philosophy in Schools Volume 2026 ; 2026 ; 13 ; University of Birmingham Library Services ;  ; https://jps.bham.ac.uk/ ; > #no substance
+      au < ready ; exists ; 2026 ; 13 ; Journal of Philosophy in Schools Volume 2026 ; 2026 ; 13 ; University of Birmingham Library Services ;  ; https://jps.bham.ac.uk/ ; > #no substance
 
   }
 
@@ -2644,7 +2644,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 34,35 ; Journal of Technology Education Volume 2023 ; 2023 ; 34,35 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < finished ; manifest ; 2024 ; 35,36 ; Journal of Technology Education Volume 2024 ; 2024 ; 35,36 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; 36,37 ; Journal of Technology Education Volume 2025 ; 2025 ; 36,37 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
-      au < manifest ; exists ; 2026 ; 37,38 ; Journal of Technology Education Volume 2026 ; 2026 ; 37,38 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
+      au < ready ; exists ; 2026 ; 37,38 ; Journal of Technology Education Volume 2026 ; 2026 ; 37,38 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
 
   }
 
