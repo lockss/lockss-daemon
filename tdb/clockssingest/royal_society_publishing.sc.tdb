@@ -156,7 +156,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Biology Letters Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Biology Letters Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Biology Letters Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Biology Letters Volume 21 ; 21 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Biology Letters Volume 21 ; 21 ; >
     au < crawling ; exists ; 2026 ; 2026 ; Biology Letters Volume 22 ; 22 ; >
 
   }
@@ -337,7 +337,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Notes and Records the Royal Society Journal of the History of Science Volume 76 ; 76 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Notes and Records the Royal Society Journal of the History of Science Volume 77 ; 77 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Notes and Records the Royal Society Journal of the History of Science Volume 78 ; 78 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Notes and Records the Royal Society Journal of the History of Science Volume 79 ; 79 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Notes and Records the Royal Society Journal of the History of Science Volume 79 ; 79 ; >
     au < crawling ; exists ; 2026 ; 2026 ; Notes and Records the Royal Society Journal of the History of Science Volume 80 ; 80 ; >
 
     }
@@ -368,7 +368,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Open Biology Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Open Biology Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Open Biology Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Open Biology Volume 15 ; 15 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Open Biology Volume 15 ; 15 ; >
     au < manifest ; exists ; 2026 ; 2026 ; Open Biology Volume 16 ; 16 ; >
 
   }
@@ -864,7 +864,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 377 ; 377 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 378 ; 378 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 379 ; 379 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 380 ; 380 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 380 ; 380 ; >
     au < manifest ; exists ; 2026 ; 2026 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 381 ; 381 ; >
 
     }
@@ -1537,7 +1537,7 @@
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 479 ; 479 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 480 ; 480 ; >
     au < frozen ; exists ; 2025 ; 2025 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 481 ; 481 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 482 ; 482 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 482 ; 482 ; >
 
     }
   }
@@ -1790,8 +1790,8 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Proceedings of the Royal Society B: Biological Sciences Volume 289 ; 289 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Proceedings of the Royal Society B: Biological Sciences Volume 290 ; 290 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Proceedings of the Royal Society B: Biological Sciences Volume 291 ; 291 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Proceedings of the Royal Society B: Biological Sciences Volume 292 ; 292 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Proceedings of the Royal Society B: Biological Sciences Volume 293 ; 293 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Proceedings of the Royal Society B: Biological Sciences Volume 292 ; 292 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Proceedings of the Royal Society B: Biological Sciences Volume 293 ; 293 ; >
 
     }
   }
@@ -1917,8 +1917,8 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Royal Society Open Science Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Royal Society Open Science Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Royal Society Open Science Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Royal Society Open Science Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Royal Society Open Science Volume 13 ; 13 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Royal Society Open Science Volume 12 ; 12 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Royal Society Open Science Volume 13 ; 13 ; >
 
   }
 
