@@ -7947,12 +7947,12 @@
     au < released ; 2018 ; 2018 ; Gastroenterology Report Volume 6 ; 6 >
     au < released ; 2019 ; 2019 ; Gastroenterology Report Volume 7 ; 7 >
     au < released ; 2020 ; 2020 ; Gastroenterology Report Volume 8 ; 8 >
-    au < released ; 2021 ; 2021 ; Gastroenterology Report Volume 9 ; 9 >
+    au < released ; 2021 ; 2021 ; Gastroenterology Report Volume 9 ; 9 > #URLs for issues: <base_url>/<journal_id>/issue/<volume>/<issue>
     au < released ; 2022 ; 2022 ; Gastroenterology Report Volume 10 ; 10 >
     au < released ; 2023 ; 2023 ; Gastroenterology Report Volume 11 ; 11 >
-    au < manifest ; 2024 ; 2024 ; Gastroenterology Report Volume 12 ; 12 >
-    au < exists ; 2025 ; 2025 ; Gastroenterology Report Volume 13 ; 13 >
-    au < exists ; 2026 ; 2026 ; Gastroenterology Report Volume 14 ; 14 >
+    au < doesNotExist ; 2024 ; 2024 ; Gastroenterology Report Volume 12 ; 12 > #no content. See https://academic.oup.com/gastro/issue
+    au < manifest ; 2025 ; 2025 ; Gastroenterology Report Volume 13 ; 13 > #URLs for issues changed to <base_url>/<journal_id>/issue/volume/14
+    au < manifest ; 2026 ; 2026 ; Gastroenterology Report Volume 14 ; 14 > #
 
   }
 
@@ -12171,7 +12171,7 @@
     au < released ; 2021 ; 2021 ; Journal of European Competition Law & Practice Volume 12 ; 12 >
     au < released ; 2022 ; 2022 ; Journal of European Competition Law & Practice Volume 13 ; 13 >
     au < released ; 2023 ; 2023 ; Journal of European Competition Law & Practice Volume 14 ; 14 >
-    au < manifest ; 2024 ; 2024 ; Journal of European Competition Law & Practice Volume 15 ; 15 >
+    au < notReady ; 2024 ; 2024 ; Journal of European Competition Law & Practice Volume 15 ; 15 > # https://academic.oup.com/jeclap/article/13/5/336/6533512%3E,"400 Bad Request"
     au < released ; 2025 ; 2025 ; Journal of European Competition Law & Practice Volume 16 ; 16 >
     au < manifest ; 2026 ; 2026 ; Journal of European Competition Law & Practice Volume 17 ; 17 >
 
@@ -23358,12 +23358,12 @@
     au < released ; 2018 ; 2018 ; Journal of Mechanics Volume 34 ; 34 >
     au < released ; 2019 ; 2019 ; Journal of Mechanics Volume 35 ; 35 >
     au < released ; 2020 ; 2020 ; Journal of Mechanics Volume 36 ; 36 >
-    au < manifest ; 2021 ; 2021 ; Journal of Mechanics Volume 37 ; 37 >
+    au < doesNotExist ; 2021 ; 2021 ; Journal of Mechanics Volume 37 ; 37 >
     au < released ; 2022 ; 2022 ; Journal of Mechanics Volume 38 ; 38 >
     au < released ; 2023 ; 2023 ; Journal of Mechanics Volume 39 ; 39 >
     au < released ; 2024 ; 2024 ; Journal of Mechanics Volume 40 ; 40 >
-    au < exists ; 2025 ; 2025 ; Journal of Mechanics Volume 41 ; 41 >
-    au < expected ; 2026 ; 2026 ; Journal of Mechanics Volume 42 ; 42 >
+    au < manifest ; 2025 ; 2025 ; Journal of Mechanics Volume 41 ; 41 >
+    au < manifest ; 2026 ; 2026 ; Journal of Mechanics Volume 42 ; 42 >
 
   }
 

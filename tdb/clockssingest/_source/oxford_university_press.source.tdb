@@ -20,6 +20,7 @@
 
       au < readySource ; finished ; 2023 ; Oxford University Press Book Source Content 2023_01 ; 2023_01 >
       au < expected ; exists ; 2026 ; Oxford University Press Book Source Content 2026_01 ; 2026_01 >
+      au < expected ; exists ; 2027 ; Oxford University Press Book Source Content 2027_01 ; 2027_01 >
 
   }
 
@@ -67,7 +68,22 @@
       au < expected ; exists ; 2026 ; Oxford University Press Journal Source Content 2026_33 ; 2026_33 >
       au < expected ; exists ; 2026 ; Oxford University Press Journal Source Content 2026_34 ; 2026_34 >
       au < expected ; exists ; 2026 ; Oxford University Press Journal Source Content 2026_35 ; 2026_35 >
-      au < expected ; exists ; 2026 ; Oxford University Press Journal Source Content 2026_36 ; 2026_36 >
+
+      au < expected ; exists ; 2027 ; Oxford University Press Journal Source Content 2027_01 ; 2027_01 >
+      au < expected ; exists ; 2027 ; Oxford University Press Journal Source Content 2027_02 ; 2027_02 >
+      au < expected ; exists ; 2027 ; Oxford University Press Journal Source Content 2027_03 ; 2027_03 >
+      au < expected ; exists ; 2027 ; Oxford University Press Journal Source Content 2027_04 ; 2027_04 >
+      au < expected ; exists ; 2027 ; Oxford University Press Journal Source Content 2027_05 ; 2027_05 >
+      au < expected ; exists ; 2027 ; Oxford University Press Journal Source Content 2027_06 ; 2027_06 >
+      au < expected ; exists ; 2027 ; Oxford University Press Journal Source Content 2027_07 ; 2027_07 >
+      au < expected ; exists ; 2027 ; Oxford University Press Journal Source Content 2027_08 ; 2027_08 >
+      au < expected ; exists ; 2027 ; Oxford University Press Journal Source Content 2027_09 ; 2027_09 >
+      au < expected ; exists ; 2027 ; Oxford University Press Journal Source Content 2027_10 ; 2027_10 >
+      au < expected ; exists ; 2027 ; Oxford University Press Journal Source Content 2027_11 ; 2027_11 >
+      au < expected ; exists ; 2027 ; Oxford University Press Journal Source Content 2027_12 ; 2027_12 >
+      au < expected ; exists ; 2027 ; Oxford University Press Journal Source Content 2027_13 ; 2027_13 >
+      au < expected ; exists ; 2027 ; Oxford University Press Journal Source Content 2027_14 ; 2027_14 >
+      au < expected ; exists ; 2027 ; Oxford University Press Journal Source Content 2027_15 ; 2027_15 >
 
   }
 

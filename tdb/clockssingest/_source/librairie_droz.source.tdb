@@ -18,6 +18,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/droz-released/
 
     au < readySource ; crawling ; 2026 ; Librairie Droz Books Source Countent 2026_01 ; 2026_01 >
+    au < expected ; exists ; 2027 ; Librairie Droz Books Source Countent 2027_01 ; 2027_01 >
 
     }
   }
