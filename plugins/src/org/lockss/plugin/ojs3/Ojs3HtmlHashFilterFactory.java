@@ -288,6 +288,7 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "email-protection"),
       HtmlNodeFilters.tagWithAttributeRegex("li", "class", "most_read_article"),
       HtmlNodeFilters.tagWithAttributeRegex("span", "class", "summary_stat"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article_statistic"),
       HtmlNodeFilters.tagWithAttributeRegex("input",  "name", "csrfToken"),
       HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "metric-value"),
       HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "stat_counter"),

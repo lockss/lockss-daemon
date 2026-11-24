@@ -119,7 +119,7 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
             Elements articles = doc.select("div.article-summary:not(:has(div.article-summary)),article.article,ul.articles>li:not(:has(div.article-summary)),div.one-article-intoc,article.article_summary,div.article-sum,"
                 +"ul.it-list>li>div.it-right-zone,article.equal,div.grid-child:has(div>div.media-body),ul.row>li.issue__article,div.page-issue-galleys:has(div.h3:contains(Número completo)),"
                 +"div.galleys:has(h2:contains(Número completo)),div.galleys:has(h2:contains(Full Issue)),div.galleys:has(h2:contains(Весь випуск)),div.altex-issue-article,div.altex-issue-editorial," 
-                +"div.media-list>li, div.galleys:has(h3:contains(Full Issue)), div.axis-article-grid>article.axis-article-card,div.axis-issue-files");
+                +"div.media-list>li, div.galleys:has(h3:contains(Full Issue)), div.axis-article-grid>article.axis-article-card,div.axis-issue-files,div.media-list>div.obj_article_summary");
             ArrayList<String> rolesForFullText = new ArrayList<>();
             for (Element article : articles) {
                 ArticleFiles af = new ArticleFiles();
@@ -129,7 +129,8 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
                     +"div.galleryLinksWrp>div.btnsLink>a.galley-link:contains(PDF),ul.actions>li.galley-links-items>a:has(i.fa-file-pdf),div.row>div>a.galley-link:has(span.gallery_item_link:contains(PDF)),"
                     +"a[href*=issue/view].btn:contains(PDF),ul.galleys_links>li>a.pdf[href*=issue/view],a[href*=article]:has(span:contains(pdf)),"
                     +"div.galleys_links>div>a.pdf[href*=article],div.article-galleys>div.d-flex>div.galley-item>a[href*=article],div.btn-group>a[href*=issue].pdf,"
-                    +"div.axis-article-card__content>div.axis-article-card__footer>div.axis-article-card__buttons>a:contains(PDF),div.axis-issue-files__list>a[href*=issue]");
+                    +"div.axis-article-card__content>div.axis-article-card__footer>div.axis-article-card__buttons>a:contains(PDF),div.axis-issue-files__list>a[href*=issue],"
+                    +"a.pdf:contains(PDF)");
                 pdfUrl = au.makeCachedUrl(PDFs.attr("href").trim());
 
                 Elements HTMLs = article.select("ul.galleys_links>li>a:contains(HTML),ul.article__btn-group>li>a:contains(HTML),div.btn-group>a:contains(HTML),"
@@ -150,7 +151,7 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
                     +"a.summary_title,span.article-title>a[href*=article],div.obj_article_summary>div.title>a[href*=article],a:has(span.text>h6.article-title),"
                     +"ul.actions>li>a:contains(View Article),div.obj_article_summary>h4.title>a[href*=article],div.obj_article_summary>div.card-body>h3.card-title>a[href*=article],"
                     +"div.card-body>h4.issue-article-title>a,div.obj_article_summary>div.summary>h2.title>a[href*=article],h2.article__title>a[href*=article], h3.article-title>a[href*=article],"
-                    +"div.axis-article-card__content>div.axis-article-card__footer>div.axis-article-card__buttons>a:contains(VIEW)");
+                    +"div.axis-article-card__content>div.axis-article-card__footer>div.axis-article-card__buttons>a:contains(VIEW),h2.title>strong>a[href*=article]");
                 abstractsUrl = au.makeCachedUrl(abstracts.attr("href").trim());
 
                 /*
