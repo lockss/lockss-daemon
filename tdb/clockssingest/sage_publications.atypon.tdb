@@ -36,7 +36,7 @@
        au < ready ; exists ; 2021 ; 3D Printing and Additive Manufacturing Volume 8 ; 8 ; tdpa ; https://journals.sagepub.com/ ; >
        au < ready ; exists ; 2022 ; 3D Printing and Additive Manufacturing Volume 9 ; 9 ; tdpa ; https://journals.sagepub.com/ ; >
        au < ready ; exists ; 2023 ; 3D Printing and Additive Manufacturing Volume 10 ; 10 ; tdpa ; https://journals.sagepub.com/ ; >
-       au < crawling ; exists ; 2024 ; 3D Printing and Additive Manufacturing Volume 11 ; 11 ; tdpa ; https://journals.sagepub.com/ ; >
+       au < frozen ; exists ; 2024 ; 3D Printing and Additive Manufacturing Volume 11 ; 11 ; tdpa ; https://journals.sagepub.com/ ; >
        au < ready ; exists ; 2025 ; 3D Printing and Additive Manufacturing Volume 12 ; 12 ; tdpa ; https://journals.sagepub.com/ ; >
        au < crawling ; exists ; 2026 ; 3D Printing and Additive Manufacturing Volume 13 ; 13 ; tdpa ; https://journals.sagepub.com/ ; >
 
@@ -1089,7 +1089,7 @@
     >
       #param[base_url] = http://adh.sagepub.com/
 
-      au < crawling ; exists ; 1999 ; Advances in Developing Human Resources Volume 1 ; 1 ; adha ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1999 ; Advances in Developing Human Resources Volume 1 ; 1 ; adha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Advances in Developing Human Resources Volume 2 ; 2 ; adha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2001 ; Advances in Developing Human Resources Volume 3 ; 3 ; adha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Advances in Developing Human Resources Volume 4 ; 4 ; adha ; https://journals.sagepub.com/ ; >
@@ -1780,7 +1780,7 @@
       #continued_by = 0002-7642
 
       au < ready ; exists ; 1957-1958 ; Political Research, Organization and Design Volume 1 ; 1 ; absa ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1958-1959 ; Political Research, Organization and Design Volume 2 ; 2 ; absa ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1958-1959 ; Political Research, Organization and Design Volume 2 ; 2 ; absa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1959-1960 ; Political Research, Organization and Design Volume 3 ; 3 ; absa ; https://journals.sagepub.com/ ; >
 
   }
@@ -1799,7 +1799,7 @@
       au < ready ; exists ; 1961-1962 ; American Behavioral Scientist Volume 5 ; 5 ; absb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1962-1963 ; American Behavioral Scientist Volume 6 ; 6 ; absb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1963-1964 ; American Behavioral Scientist Volume 7 ; 7 ; absb ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1964-1965 ; American Behavioral Scientist Volume 8 ; 8 ; absb ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1964-1965 ; American Behavioral Scientist Volume 8 ; 8 ; absb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1965-1966 ; American Behavioral Scientist Volume 9 ; 9 ; absb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1966-1967 ; American Behavioral Scientist Volume 10 ; 10 ; absb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1967-1968 ; American Behavioral Scientist Volume 11 ; 11 ; absb ; https://journals.sagepub.com/ ; >
@@ -1819,14 +1819,14 @@
       au < ready ; exists ; 1981-1982 ; American Behavioral Scientist Volume 25 ; 25 ; absb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1982-1983 ; American Behavioral Scientist Volume 26 ; 26 ; absb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1983-1984 ; American Behavioral Scientist Volume 27 ; 27 ; absb ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1984-1985 ; American Behavioral Scientist Volume 28 ; 28 ; absb ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1985-1986 ; American Behavioral Scientist Volume 29 ; 29 ; absb ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1984-1985 ; American Behavioral Scientist Volume 28 ; 28 ; absb ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1985-1986 ; American Behavioral Scientist Volume 29 ; 29 ; absb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1986-1987 ; American Behavioral Scientist Volume 30 ; 30 ; absb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1987-1988 ; American Behavioral Scientist Volume 31 ; 31 ; absb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1988-1989 ; American Behavioral Scientist Volume 32 ; 32 ; absb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1989-1990 ; American Behavioral Scientist Volume 33 ; 33 ; absb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1990-1991 ; American Behavioral Scientist Volume 34 ; 34 ; absb ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1991-1992 ; American Behavioral Scientist Volume 35 ; 35 ; absb ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1991-1992 ; American Behavioral Scientist Volume 35 ; 35 ; absb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1992-1993 ; American Behavioral Scientist Volume 36 ; 36 ; absb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1993-1994 ; American Behavioral Scientist Volume 37 ; 37 ; absb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1994-1995 ; American Behavioral Scientist Volume 38 ; 38 ; absb ; https://journals.sagepub.com/ ; >
@@ -1892,7 +1892,7 @@
       au < ready ; exists ; 1975 ; The American Economist Volume 19 ; 19 ; aexb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1976 ; The American Economist Volume 20 ; 20 ; aexb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1977 ; The American Economist Volume 21 ; 21 ; aexb ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1978 ; The American Economist Volume 22 ; 22 ; aexb ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1978 ; The American Economist Volume 22 ; 22 ; aexb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1979 ; The American Economist Volume 23 ; 23 ; aexb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1980 ; The American Economist Volume 24 ; 24 ; aexb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1981 ; The American Economist Volume 25 ; 25 ; aexb ; https://journals.sagepub.com/ ; >
@@ -1910,7 +1910,7 @@
       au < ready ; exists ; 1993 ; The American Economist Volume 37 ; 37 ; aexb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1994 ; The American Economist Volume 38 ; 38 ; aexb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1995 ; The American Economist Volume 39 ; 39 ; aexb ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 1996 ; The American Economist Volume 40 ; 40 ; aexb ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 1996 ; The American Economist Volume 40 ; 40 ; aexb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1997 ; The American Economist Volume 41 ; 41 ; aexb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1998 ; The American Economist Volume 42 ; 42 ; aexb ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 1999 ; The American Economist Volume 43 ; 43 ; aexb ; https://journals.sagepub.com/ ; >
@@ -28780,7 +28780,7 @@
       au < manifest ; exists ; 2015 ; Journal of Adolescent and Young Adult Oncology Volume 4 ; 4 ; jaya ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2016 ; Journal of Adolescent and Young Adult Oncology Volume 5 ; 5 ; jaya ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2017 ; Journal of Adolescent and Young Adult Oncology Volume 6 ; 6 ; jaya ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2018 ; Journal of Adolescent and Young Adult Oncology Volume 7 ; 7 ; jaya ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2018 ; Journal of Adolescent and Young Adult Oncology Volume 7 ; 7 ; jaya ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Journal of Adolescent and Young Adult Oncology Volume 8 ; 8 ; jaya ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Journal of Adolescent and Young Adult Oncology Volume 9 ; 9 ; jaya ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Journal of Adolescent and Young Adult Oncology Volume 10 ; 10 ; jaya ; https://journals.sagepub.com/ ; >
@@ -61949,7 +61949,7 @@
       au < frozen ; exists ; 2016 ; Transgender Health Volume 1 ; 1 ; trga ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2017 ; Transgender Health Volume 2 ; 2 ; trga ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2018 ; Transgender Health Volume 3 ; 3 ; trga ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2019 ; Transgender Health Volume 4 ; 4 ; trga ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2019 ; Transgender Health Volume 4 ; 4 ; trga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Transgender Health Volume 5 ; 5 ; trga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Transgender Health Volume 6 ; 6 ; trga ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2022 ; Transgender Health Volume 7 ; 7 ; trga ; https://journals.sagepub.com/ ; >
@@ -62320,7 +62320,7 @@
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1821 ; 1821 ; trra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1822 ; 1822 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1823 ; 1823 ; trra ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2003 ; Transportation Research Record Volume 1824 ; 1824 ; trra ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2003 ; Transportation Research Record Volume 1824 ; 1824 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1825 ; 1825 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1826 ; 1826 ; trra ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2003 ; Transportation Research Record Volume 1827 ; 1827 ; trra ; https://journals.sagepub.com/ ; >
@@ -64645,7 +64645,7 @@
       au < manifest ; exists ; 2000 ; Waste Management & Research Volume 18 ; 18 ; wmra ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2001 ; Waste Management & Research Volume 19 ; 19 ; wmra ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2002 ; Waste Management & Research Volume 20 ; 20 ; wmra ; https://journals.sagepub.com/ ; >
-      au < crawling ; exists ; 2003 ; Waste Management & Research Volume 21 ; 21 ; wmra ; https://journals.sagepub.com/ ; >
+      au < frozen ; exists ; 2003 ; Waste Management & Research Volume 21 ; 21 ; wmra ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2004 ; Waste Management & Research Volume 22 ; 22 ; wmra ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2005 ; Waste Management & Research Volume 23 ; 23 ; wmra ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2006 ; Waste Management & Research Volume 24 ; 24 ; wmra ; https://journals.sagepub.com/ ; >
