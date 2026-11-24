@@ -1397,7 +1397,7 @@
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Built Environment Project and Asset Management Volume 13 ; 13 ; >
     au < frozen ; exists ; 2024 ; 2024 ; Built Environment Project and Asset Management Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Built Environment Project and Asset Management Volume 15 ; 15 ; >
-    au < ready ; exists ; 2026 ; 2026 ; Built Environment Project and Asset Management Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2026 ; 2026 ; Built Environment Project and Asset Management Volume 16 ; 16 ; >
 
   }
 
@@ -2229,7 +2229,7 @@
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Cross Cultural & Strategic Management Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Cross Cultural & Strategic Management Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Cross Cultural & Strategic Management Volume 32 ; 32 ; >
-    au < ready ; exists ; 2026 ; 2026 ; Cross Cultural & Strategic Management Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2026 ; 2026 ; Cross Cultural & Strategic Management Volume 33 ; 33 ; >
 
   }
 
@@ -8385,7 +8385,7 @@
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Financial Regulation and Compliance Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Financial Regulation and Compliance Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Journal of Financial Regulation and Compliance Volume 33 ; 33 ; >
-    au < ready ; exists ; 2026 ; 2026 ; Journal of Financial Regulation and Compliance Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2026 ; 2026 ; Journal of Financial Regulation and Compliance Volume 34 ; 34 ; >
 
   }
 
@@ -13233,7 +13233,7 @@
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Reference Services Review Volume 51 ; 51 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Reference Services Review Volume 52 ; 52 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Reference Services Review Volume 53 ; 53 ; >
-    au < ready ; exists ; 2026 ; 2026 ; Reference Services Review Volume 54 ; 54 ; >
+    au < crawling ; exists ; 2026 ; 2026 ; Reference Services Review Volume 54 ; 54 ; >
 
   }
 
@@ -17635,7 +17635,7 @@
       au < manifest ; exists ; 2023 ; 2023 ; IIM Ranchi Journal of Management Studies Volume 2 ; 2 ; >
       au < manifest ; exists ; 2024 ; 2024 ; IIM Ranchi Journal of Management Studies Volume 3 ; 3 ; >
       au < manifest ; exists ; 2025 ; 2025 ; IIM Ranchi Journal of Management Studies Volume 4 ; 4 ; >
-      au < ready ; exists ; 2026 ; 2026 ; IIM Ranchi Journal of Management Studies Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2026 ; 2026 ; IIM Ranchi Journal of Management Studies Volume 5 ; 5 ; >
 
   }
 
@@ -17721,7 +17721,7 @@
       au < manifest ; exists ; 2023 ; 2023 ; International Journal of Industrial Engineering and Operations Management Volume 5 ; 5 ; >
       au < manifest ; exists ; 2024 ; 2024 ; International Journal of Industrial Engineering and Operations Management Volume 6 ; 6 ; >
       au < manifest ; exists ; 2025 ; 2025 ; International Journal of Industrial Engineering and Operations Management Volume 7 ; 7 ; >
-      au < ready ; exists ; 2026 ; 2026 ; International Journal of Industrial Engineering and Operations Management Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2026 ; 2026 ; International Journal of Industrial Engineering and Operations Management Volume 8 ; 8 ; >
 
   }
 
@@ -17838,7 +17838,7 @@
       au < manifest ; exists ; 2023 ; 2023 ; Journal of Economics and Development Volume 25 ; 25 ; >
       au < manifest ; exists ; 2024 ; 2024 ; Journal of Economics and Development Volume 26 ; 26 ; >
       au < manifest ; exists ; 2025 ; 2025 ; Journal of Economics and Development Volume 27 ; 27 ; >
-      au < ready ; exists ; 2026 ; 2026 ; Journal of Economics and Development Volume 28 ; 28 ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Journal of Economics and Development Volume 28 ; 28 ; >
 
   }
 
@@ -18521,7 +18521,7 @@
 
       au < ready ; exists ; 2024 ; 2024 ; Urbanization, Sustainability and Society Volume 1 ; 1 ; >
       au < manifest ; exists ; 2025 ; 2025 ; Urbanization, Sustainability and Society Volume 2 ; 2 ; >
-      au < ready ; exists ; 2026 ; 2026 ; Urbanization, Sustainability and Society Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2026 ; 2026 ; Urbanization, Sustainability and Society Volume 3 ; 3 ; >
 
   }
 
