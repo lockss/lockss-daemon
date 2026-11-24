@@ -20,6 +20,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/medhyg-released/
 
     au < readySource ; crawling ; 2026 ; Revue Médicale Suisse Source Content 2026_01 ; 2026_01 >
+    au < expected ; exists ; 2027 ; Revue Médicale Suisse Source Content 2027_01 ; 2027_01 >
 
     }
   }

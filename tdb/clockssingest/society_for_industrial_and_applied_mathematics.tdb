@@ -842,7 +842,7 @@
   {
 
     title <
-      name = SIAM Journal on Uncertainty Quantification ;
+      name = SIAM/ASA Journal on Uncertainty Quantification ;
       eissn = 2166-2525 
         >
 
@@ -861,7 +861,7 @@
     au < deepCrawl ; exists ; 2023 ; Journal on Uncertainty Quantification Volume 11 ; 11 ; https://epubs.siam.org/ ; >
     au < deepCrawl ; exists ; 2024 ; Journal on Uncertainty Quantification Volume 12 ; 12 ; https://epubs.siam.org/ ; >
     au < deepCrawl ; exists ; 2025 ; Journal on Uncertainty Quantification Volume 13 ; 13 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 2026 ; Journal on Uncertainty Quantification Volume 14 ; 14 ; https://epubs.siam.org/ ; >
+    au < notReady ; exists ; 2026 ; Journal on Uncertainty Quantification Volume 14 ; 14 ; https://epubs.siam.org/ ; > # No metadata. ISSN is correct. RIS file does not have ISSN
 
   }
 

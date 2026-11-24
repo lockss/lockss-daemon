@@ -19,6 +19,7 @@
         param[base_url] = https://clockss-test.lockss.org/sourcefiles/opensciencepress-released/
 
         au < ready ; exists ; 2026 ; Open Science Press Source Content 2026_01 ; 2026_01 >
+        au < expected ; exists ; 2027 ; Open Science Press Source Content 2027_01 ; 2027_01 >
 
   }
 
