@@ -427,10 +427,10 @@
         au < readySource ; crawling ; 2026 ; Elsevier Source Content 2026_71 ; 2026_71 >
         au < readySource ; crawling ; 2026 ; Elsevier Source Content 2026_72 ; 2026_72 >
         au < readySource ; crawling ; 2026 ; Elsevier Source Content 2026_73 ; 2026_73 >
-        au < manifest ; exists ; 2026 ; Elsevier Source Content 2026_74 ; 2026_74 >
-        au < manifest ; exists ; 2026 ; Elsevier Source Content 2026_75 ; 2026_75 >
-        au < manifest ; exists ; 2026 ; Elsevier Source Content 2026_76 ; 2026_76 >
-        au < manifest ; exists ; 2026 ; Elsevier Source Content 2026_77 ; 2026_77 >
+        au < readySource ; crawling ; 2026 ; Elsevier Source Content 2026_74 ; 2026_74 >
+        au < readySource ; crawling ; 2026 ; Elsevier Source Content 2026_75 ; 2026_75 >
+        au < readySource ; crawling ; 2026 ; Elsevier Source Content 2026_76 ; 2026_76 >
+        au < readySource ; crawling ; 2026 ; Elsevier Source Content 2026_77 ; 2026_77 >
 
         au < expected ; exists ; 2027 ; Elsevier Source Content 2027_01 ; 2027_01 >
         au < expected ; exists ; 2027 ; Elsevier Source Content 2027_02 ; 2027_02 >
