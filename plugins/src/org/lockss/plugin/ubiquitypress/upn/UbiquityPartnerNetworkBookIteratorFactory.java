@@ -58,10 +58,10 @@ public class UbiquityPartnerNetworkBookIteratorFactory implements ArticleIterato
    */
 
   // Limit to just journal volume items
-  protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
+  protected static final String ROOT_TEMPLATE = "\"%s\", del_www(base_url)";
   // Match on only those patters that could be an article
   //protected static final String PATTERN_TEMPLATE = "\"%ssite/books/([^/]+/[^/]+([^/]+/)?)$\", base_url";
-  protected static final String PATTERN_TEMPLATE = "\"%s(site/)?books(/[^/(?:files)]+/[^/]+)$\", base_url";
+  protected static final String PATTERN_TEMPLATE = "\"%s(site/)?books(/[^/(?:files)]+/[^/]+)$\", del_www(base_url)";
 
   //public static final Pattern PDF_PATTERN = Pattern.compile("/(.*/download/\\d+)$", Pattern.CASE_INSENSITIVE);
   public static final Pattern ABSTRACT_PATTERN = Pattern.compile("/([^/]+)$", Pattern.CASE_INSENSITIVE);
