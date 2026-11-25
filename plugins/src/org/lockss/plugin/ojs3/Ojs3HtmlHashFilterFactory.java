@@ -351,6 +351,20 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
                 }
               }
             }
+            /* 
+              In the Journal of Islamic Monetary Economics and Finance, there is a side panel with a Read and Download counter.
+             */
+            else if(classattr != null && !classattr.isEmpty() && classattr.contains("list-group-item")){
+              Node[] children = ((Div) node).getChildrenAsNodeArray();
+              for (Node child: children) {
+                if (child instanceof Div) {
+                  String text = ((Div) child).getStringText();
+                  if(text != null && !text.isEmpty() && text.contains("Read Counter")){
+                    return true;
+                  }
+                }
+              }
+            }
           }
           return false;
         }
